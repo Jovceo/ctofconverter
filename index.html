@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C to F Converter | Celsius to Fahrenheit</title>
+    <meta name="description" content="Convert Celsius to Fahrenheit quickly with the C to F Converter. Get results instantly, learn the formula, and check the conversion chart.">
+    <link rel="canonical" href="https://ctofconverter.com"> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/favicon.ico">
+   <!--  <link rel="alternate" hreflang="zh" href="/zh/index.html">
+    <link rel="alternate" hreflang="es" href="/es/index.html">-->
+    <meta property="og:title" content="Celsius to Fahrenheit Converter"> <!-- Open Graph元数据，用于社交媒体分享 -->
+    <meta property="og:description" content="Convert Celsius to Fahrenheit quickly and easily."> <!-- Open Graph元数据，用于社交媒体分享 -->
+    <meta property="og:image" content="https://ctofconverter.com/converter.png"> <!-- Open Graph元数据，指定分享图像 -->
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+    <!-- 第一屏：导航和转换工具 -->
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo"><a href="https://ctofconverter.com" title="C to F Converter">C to F Converter</a></div>
+                <div class="nav-links">
+                  <!--  <a href="#converter">Converter</a>
+                    <a href="#about">Calculation Method</a>
+                    <a href="#examples">Examples</a> -->
+                    <div class="language-selector">
+                        <!--<a href="/zh/index.html">中文</a>
+                        <a href="/es/index.html">Español</a> -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="converter" class="hero">
+        <div class="container">
+            <h1>Celsius to Fahrenheit Converter</h1>
+            <div class="converter-box">
+                <div class="input-group">
+                    <input type="number" id="celsius" placeholder="Enter Celsius degree">
+                    <button id="convert" class="convert-btn">Convert</button>
+                </div>
+                <p class="input-hint">Tip: Enter a temperature in Celsius to convert it to Fahrenheit.</p>
+                <div id="result" class="result-box">
+                    <div id="fahrenheit-result"></div>
+                    <div id="calculation-steps"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="intro" class="tool-intro">
+        <div class="container">
+            <h2>Tool Introduction</h2>
+            <div class="intro-content">
+                <!--<p>This tool can convert Celsius to Fahrenheit.</p>-->
+                <p>This temperature converter helps you quickly and accurately convert temperatures from Celsius (°C) to Fahrenheit (°F). </p>
+                <p>Whether you're cooking, checking the weather, or doing scientific calculations, this tool provides instant results with detailed conversion steps.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第二屏：计算方法说明 -->
+    <section id="about" class="how-it-works">
+        <div class="container">
+            <h2>Calculation Method</h2>
+            <div class="formula-box">
+                <div class="formula-section">
+                    <h3 class="section-title">C to F Conversion Formula</h3>
+                    <div class="formula">
+                        <p>°F = (°C × 9/5) + 32</p>
+                    </div>
+                </div>
+                <div class="steps-section">
+                    <h3 class="section-title">Here are the steps to convert Celsius to Fahrenheit:</h3>
+                    <div class="steps-list">
+                        <p>Step 1: Multiply the Celsius temperature by <strong>9/5</strong>.</p>
+                        <p>Step 2: Add <strong>32</strong> to the result.</p>
+                        <p>Step 3: The final result is the temperature in Fahrenheit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第三屏：常用转换示例 -->
+    <section id="examples" class="common-conversions">
+        <div class="container">
+            <h2>C to F Conversion Chart</h2>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <a href="/0-c-to-f.html">0 c to f</a>
+                </div>
+                <!-- <div class="example-card">
+                    <a href="#">37 c to f</a>
+                </div>
+                <div class="example-card">
+                    <a href="#">17 c to f</a>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部导航 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <!--  <p class="footer-title">Quick Links</p>
+                    <a href="#converter">Converter</a>
+                    <a href="#about">Calculation Method</a>
+                    <a href="#examples">Examples</a>-->
+                </div>
+                <div class="footer-section">
+                  <!-- <p class="footer-title">Languages</p>
+                    <a href="/zh/index.html">中文</a>
+                    <a href="/es/index.html">Español</a>-->
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
