@@ -2,26 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
       <loc>https://ctofconverter.com</loc>
-      <lastmod>2025-01-23</lastmod>
+      <lastmod>2025-02-13</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
       <loc>https://ctofconverter.com/0-c-to-f.html</loc>
-      <lastmod>2025-01-23</lastmod>
+      <lastmod>2025-02-13</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
       <loc>https://ctofconverter.com/37-6-c-to-f.html</loc>
-      <lastmod>2025-01-23</lastmod>
+      <lastmod>2025-02-13</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
       <loc>https://ctofconverter.com/38-4-c-to-f.html</loc>
-      <lastmod>2025-01-23</lastmod>
+      <lastmod>2025-02-13</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
-</urlset> 
+   <url>
+      <loc>https://ctofconverter.com/19-c-to-f.html</loc>
+      <lastmod>2025-02-13</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://ctofconverter.com/41-c-to-f.html</loc>
+      <lastmod>2025-02-13</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://ctofconverter.com/43-c-to-f.html</loc>
+      <lastmod>2025-02-13</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+</urlset>
