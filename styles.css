@@ -671,3 +671,10 @@ a:hover {
         grid-template-columns: 1fr;
     }
 }
+.result-image {
+    text-align: center;
+}
+
+.result-image img {
+    display: inline-block;
+}
