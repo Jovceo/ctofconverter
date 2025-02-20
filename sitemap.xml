@@ -115,4 +115,23 @@
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
+   <!-- 新增页面 -->
+   <url>
+      <loc>https://ctofconverter.com/37-c-to-f.html</loc>
+      <lastmod>2025-02-18</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://ctofconverter.com/36-2-c-to-f.html</loc>
+      <lastmod>2025-02-18</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://ctofconverter.com/250-c-to-f.html</loc>
+      <lastmod>2025-02-18</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
 </urlset>
