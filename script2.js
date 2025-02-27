@@ -14,7 +14,7 @@ function convertToFahrenheit() {
       formattedCelsius = formattedCelsius.replace('-', 'minus'); // Replace negative sign with "minus"
     }
     formattedCelsius = formattedCelsius.replace('.', '-'); // Replace decimal point with hyphen
-    const link = `${formattedCelsius}-c-to-f.html`;
+    const link = `https://ctofconverter.com/${formattedCelsius}-c-to-f.html`;
 
     // Remove existing link if it exists
     const existingLink = document.getElementById('dynamicLink');
