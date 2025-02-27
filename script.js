@@ -1,8 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const celsiusInput = document.getElementById('celsiusInput');
+    const celsiusInput = document.getElementById('celsius');
     const convertBtn = document.getElementById('convert');
     const resultElement = document.getElementById('result');
-    const converterTool = document.getElementById('converterTool');
+    
+    // 添加调试信息
+    console.log('转换按钮元素:', convertBtn);
+    
+    if (!convertBtn) {
+        console.error('未找到转换按钮元素！');
+        return;
+    }
     
     // 输入验证
     celsiusInput.addEventListener('input', function(e) {
@@ -19,60 +26,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // 按钮点击事件
-    if (convertBtn) {
-        convertBtn.addEventListener('click', function() {
-            convertTemperature();
-        });
-    }
+    // 添加点击事件调试
+    convertBtn.addEventListener('click', function() {
+        console.log('按钮被点击');
+        convertTemperature();
+    });
     
     function convertTemperature() {
         const celsius = parseFloat(celsiusInput.value);
         
-        if (!isNaN(celsius)) {
-            // 计算华氏温度
-            const fahrenheit = (celsius * 9/5) + 32;
-            resultElement.textContent = `${celsius}°C = ${fahrenheit.toFixed(1)}°F`;
-            
-            // 生成动态链接
-            let formattedCelsius = celsius.toString();
-            if (formattedCelsius.includes('-')) {
-                formattedCelsius = formattedCelsius.replace('-', 'minus');
-            }
-            formattedCelsius = formattedCelsius.replace('.', '-');
-            const link = `${formattedCelsius}-c-to-f.html`;
-
-            // 移除已存在的链接
-            const existingLink = document.getElementById('dynamicLink');
-            if (existingLink) {
-                existingLink.remove();
-            }
-
-            // 创建并插入新链接
-            if (converterTool) {
-                const dynamicLink = document.createElement('p');
-                dynamicLink.id = 'dynamicLink';
-                dynamicLink.innerHTML = `More about Convert: <a href="${link}" target="_blank">${celsius}°C</a>`;
-                converterTool.appendChild(dynamicLink);
-            }
-
-            // 添加复制结果功能
-            const copyBtn = document.createElement('button');
-            copyBtn.textContent = '复制结果';
-            copyBtn.className = 'copy-btn';
-            copyBtn.onclick = () => {
-                navigator.clipboard.writeText(resultElement.textContent);
-                copyBtn.textContent = '已复制';
-                setTimeout(() => copyBtn.textContent = '复制结果', 2000);
-            };
-            resultElement.appendChild(copyBtn);
-        } else {
+        if (isNaN(celsius)) {
             resultElement.textContent = '请输入有效的数字';
-            // 移除已存在的链接
-            const existingLink = document.getElementById('dynamicLink');
-            if (existingLink) {
-                existingLink.remove();
-            }
+            return;
         }
+        
+        const fahrenheit = (celsius * 9/5) + 32;
+        resultElement.textContent = `${celsius}°C = ${fahrenheit.toFixed(1)}°F`;
+        
+        // 添加结果复制功能
+        const copyBtn = document.createElement('button');
+        copyBtn.textContent = '复制结果';
+        copyBtn.className = 'copy-btn';
+        copyBtn.onclick = () => {
+            navigator.clipboard.writeText(resultElement.textContent);
+            copyBtn.textContent = '已复制';
+            setTimeout(() => copyBtn.textContent = '复制结果', 2000);
+        };
+        resultElement.appendChild(copyBtn);
     }
-});
+}); 
