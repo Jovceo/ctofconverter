@@ -15,6 +15,28 @@ body {
     padding: 20px;
 }
 
+/* Chart Image Styles */
+.chart-image {
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.full-width-image:hover {
+    transform: scale(1.02);
+}
+
 /* Breadcrumb Navigation */
 .breadcrumb {
     background-color: #f1f1f1;
@@ -263,5 +285,10 @@ footer p {
 
     .example-card p {
         font-size: 14px;
+    }
+
+    .chart-image {
+        margin: 1.5rem auto;
+        padding: 0.5rem;
     }
 }
