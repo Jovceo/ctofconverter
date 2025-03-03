@@ -291,4 +291,9 @@ footer p {
         margin: 1.5rem auto;
         padding: 0.5rem;
     }
+    @media (max-width: 768px) {
+    /* 调整小屏幕设备的样式 */
+    .container {
+        padding: 0 15px;
+    }
 }
