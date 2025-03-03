@@ -286,14 +286,22 @@ footer p {
     .example-card p {
         font-size: 14px;
     }
-
+/* 优化后，将 .chart-image 样式合并 */
+@media (max-width: 768px) {
+    /* 调整小屏幕设备的样式 */
+    .container {
+        padding: 0 15px;
+    }
     .chart-image {
         margin: 1.5rem auto;
         padding: 0.5rem;
     }
-    @media (max-width: 768px) {
-    /* 调整小屏幕设备的样式 */
-    .container {
-        padding: 0 15px;
+    .example-card table caption {
+        font-size: 1.2em; /* 设置字体大小 */
+        font-weight: bold; /* 设置字体加粗 */
+        color: #333; /* 设置字体颜色 */
+        text-align: left; /* 设置文本左对齐 */
+        margin-bottom: 10px; /* 设置底部边距 */
+        padding-left: 5px; /* 设置左侧内边距 */
     }
 }
