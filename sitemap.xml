@@ -222,6 +222,12 @@
       <loc>https://ctofconverter.com/190-c-to-f.html</loc>
       <lastmod>2025-03-12</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.85</priority>
+      <priority>0.8</priority>
+    </url>
+       <url>
+      <loc>https://ctofconverter.com/22-c-to-f.html</loc>
+      <lastmod>2025-03-13</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
     </url>
 </urlset>
