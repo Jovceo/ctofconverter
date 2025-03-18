@@ -257,6 +257,10 @@ footer p {
     font-size: 14px;
 }
 
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero h1 {
@@ -304,12 +308,4 @@ footer p {
         margin-bottom: 10px; /* 设置底部边距 */
         padding-left: 5px; /* 设置左侧内边距 */
     }
-}
-
-/* 统一 .converter-box 的样式 */
-.converter-box {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
 }
