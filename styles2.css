@@ -359,3 +359,64 @@ footer a {
     border-radius: 3px;
     font-family: monospace;
 }
+
+/* 温度比较可视化 */
+.temp-scale {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background: linear-gradient(to top, #3498db, #e74c3c);
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.temp-point {
+    position: absolute;
+    left: 10px;
+    transform: translateY(50%);
+    background: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.temp-value {
+    font-weight: bold;
+    display: block;
+}
+
+/* FAQ样式增强 */
+.faq-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.faq-item h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .temp-comparison {
+        flex-direction: column;
+    }
+    
+    .temp-scale {
+        height: 200px;
+        margin-bottom: 30px;
+    }
+}
+
+/* 增强可访问性 */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
