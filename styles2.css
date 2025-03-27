@@ -309,3 +309,53 @@ footer a {
         padding-left: 5px; /* 设置左侧内边距 */
     }
 }
+
+/* 添加响应式设计 */
+@media (max-width: 768px) {
+    .formula-box {
+        flex-direction: column;
+    }
+    
+    .uses-grid, .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 增强视觉层次 */
+.highlight {
+    background-color: #f8f9fa;
+    border-left: 4px solid #4285f4;
+    padding: 15px;
+}
+
+.temp-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #4285f4;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.highlight .temp-circle {
+    background: #ea4335;
+    transform: scale(1.1);
+}
+
+/* 公式样式增强 */
+.formula-text {
+    font-size: 1.5rem;
+    color: #ea4335;
+    font-weight: bold;
+}
+
+.calculation {
+    background-color: #f1f3f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+}
