@@ -230,6 +230,58 @@
             </div>
         </section>
 
+        <section class="converter-tool" role="region" aria-labelledby="converter-title">
+            <h2 id="converter-title" class="converter-title">Celsius to Fahrenheit Converter</h2>
+            <p class="converter-description" aria-describedby="converter-title">
+                Instantly convert <span class="nowrap">℃ to ℉</span> for free. Ideal for cooking, travel, and science. Get accurate results in seconds!
+            </p>
+            
+            <div class="converter-form">
+                <div class="input-group">
+                    <div class="input-header">
+                        <label for="celsius">Celsius (°C)</label>
+                        <button class="info-btn" aria-label="About Celsius scale" data-tooltip="Water freezes at 0°C and boils at 100°C">
+                            ℹ️
+                        </button>
+                    </div>
+                    <input type="number" id="celsius" 
+                           inputmode="decimal"
+                           placeholder="Enter Celsius temperature (e.g., 160)" 
+                           step="0.1"
+                           min="-273.15"
+                           aria-describedby="celsius-help celsius-tooltip validation-message"
+                           pattern="[0-9]*"
+                           autocomplete="off"
+                           autocorrect="off"
+                           autocapitalize="off"
+                           spellcheck="false">
+                    <div id="celsius-help" class="sr-only">
+                        Enter temperature between -273.15°C (absolute zero) and 1,000,000°C
+                    </div>
+                </div>
+                
+                <div class="result-container" role="region" aria-live="polite" aria-atomic="true">
+                    <div class="result-header">
+                        <label id="fahrenheit-label">Fahrenheit (°F)</label>
+                        <button class="info-btn" aria-label="About Fahrenheit scale" data-tooltip="Water freezes at 32°F and boils at 212°F">
+                            ℹ️
+                        </button>
+                    </div>
+                    <output class="result-value" id="fahrenheit-result" aria-labelledby="fahrenheit-label" for="celsius">
+                        --
+                    </output>
+                    <button class="btn" id="copy-btn" aria-label="Copy temperature result to clipboard">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" fill="currentColor"/>
+                        </svg>
+                        <span class="btn-text">Copy</span>
+                        <span class="sr-only">temperature result</span>
+                    </button>
+                </div>
+            </div>
+            <div id="validation-message" class="validation-message"></div>
+        </section>
+
         <section class="conversion-chart-section" role="region" aria-labelledby="chart-title">
             <h2 id="chart-title">40°C to Fahrenheit Conversion Chart</h2>
             <table class="conversion-chart-table w-full border-collapse border border-gray-300">
@@ -285,55 +337,6 @@
             <div class="application-item">
                 <h3>Body Temperature</h3>
                 <p>A body temperature of 40°C (104°F) is considered a high fever in both children and adults. Immediate medical attention may be required in such cases.</p>
-            </div>
-        </section>
-
-        <section class="converter-tool" role="region" aria-labelledby="converter-title">
-            <h2 id="converter-title" class="converter-title">Celsius to Fahrenheit Converter</h2>
-            <p class="converter-description" aria-describedby="converter-title">
-                Instantly convert <span class="nowrap">℃ to ℉</span> for free. Ideal for cooking, travel, and science. Get accurate results in seconds!
-            </p>
-
-            <div class="converter-form">
-                <div class="input-group">
-                    <div class="input-header">
-                        <label for="celsius">Celsius (°C)</label>
-                        <button class="info-btn" aria-label="About Celsius scale" data-tooltip="Water freezes at 0°C and boils at 100°C">
-                            ℹ️
-                        </button>
-                    </div>
-                    <input type="number" id="celsius" 
-                           inputmode="decimal"
-                           placeholder="Enter Celsius temperature (e.g., 40)" 
-                           step="0.1"
-                           min="-273.15"
-                           aria-describedby="celsius-help celsius-tooltip validation-message"
-                           pattern="[0-9]*"
-                           autocomplete="off"
-                           autocorrect="off"
-                           autocapitalize="off"
-                           spellcheck="false">
-                    <div id="celsius-help" class="sr-only">
-                        Enter temperature between -273.15°C (absolute zero) and 1,000,000°C
-                    </div>
-                </div>
-
-                <div class="result-container" role="region" aria-live="polite" aria-atomic="true">
-                    <div class="result-header">
-                        <label id="fahrenheit-label">Fahrenheit (°F)</label>
-                        <button class="info-btn" aria-label="About Fahrenheit scale" data-tooltip="Water freezes at 32°F and boils at 212°F">
-                            ℹ️
-                        </button>
-                    </div>
-                    <output class="result-value" id="fahrenheit-result" aria-labelledby="fahrenheit-label" for="celsius">
-                        --
-                    </output>
-                    <button class="btn" id="copy-btn" aria-label="Copy temperature result to clipboard">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" fill="currentColor"/>
-                        </svg>
-                    </button>
-                </div>
             </div>
         </section>
 
