@@ -60,7 +60,7 @@
 <body>
     <h1>Temperature Conversion Image Generator</h1>
     <div class="input-section">
-        <textarea id="line1" placeholder="Enter temperature conversions (one per line, e.g., 27 degrees c to f)"></textarea>
+        <textarea id="line1" placeholder="Enter temperatures (one per line, e.g., 27 or 36.5)"></textarea>
         <div class="options">
             <button id="generate-png-btn">Download PNG</button>
             <button id="generate-webp-btn" class="secondary">Download WebP</button>
@@ -78,30 +78,29 @@
         }
 
         // 生成图片名称（格式：数字-celsius-to-fahrenheit-conversion.扩展名）
-        function generateFileName(inputText, fileExtension) {
-            // 提取温度值中的数字部分
-            const temperatureMatch = inputText.match(/(\d+\.?\d*)/);
-            if (temperatureMatch) {
-                const numberPart = temperatureMatch[1].replace('.', '-');
-                return `${numberPart}-celsius-to-fahrenheit-conversion.${fileExtension}`;
-            }
-            // 如果没有数字，使用默认名称
-            return `temperature-conversion.${fileExtension}`;
+        function generateFileName(celsius, fileExtension) {
+            const numberPart = celsius.toString().replace('.', '-');
+            return `${numberPart}-celsius-to-fahrenheit-conversion.${fileExtension}`;
         }
 
         // 生成并下载图片
         function generateAndDownloadImage(inputText, index, format = 'png') {
-            // 提取温度值（支持多种格式）
-            const temperatureMatch = inputText.match(/(\d+\.?\d*)\s*(degrees?\s*)?c\s*to\s*f/i);
-            if (!temperatureMatch) {
+            // 尝试提取数字
+            let celsius;
+            try {
+                celsius = parseFloat(inputText.trim());
+                if (isNaN(celsius)) {
+                    throw new Error("Not a number");
+                }
+            } catch (e) {
                 console.warn(`Invalid input at line ${index + 1}: ${inputText}`);
                 return;
             }
 
-            const celsius = parseFloat(temperatureMatch[1]);
             const fahrenheit = celsiusToFahrenheit(celsius);
 
-            // 生成转换等式
+            // 生成显示文本
+            const displayText = `${celsius}°C to °F`;
             const conversionText = `${celsius}°C = ${fahrenheit}°F`;
 
             // 创建 Canvas
@@ -119,9 +118,9 @@
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
 
-            // 绘制第一行文字（用户输入的内容）
+            // 绘制第一行文字（温度转换标题）
             ctx.font = 'bold 36px Arial'; // 稍小字体
-            ctx.fillText(inputText, 600, 150); // 居中显示
+            ctx.fillText(displayText, 600, 150); // 居中显示
 
             // 绘制第二行文字（转换结果）
             ctx.font = 'bold 48px Arial'; // 大字体，加粗
@@ -143,7 +142,7 @@
                 link.href = imageURL;
 
                 // 生成图片名称
-                const fileName = generateFileName(inputText, fileExtension);
+                const fileName = generateFileName(celsius, fileExtension);
                 link.download = fileName;
 
                 // 触发下载
@@ -171,7 +170,7 @@
             if (inputTexts.length > 0) {
                 generateAndDownloadImages(inputTexts, 'png');
             } else {
-                alert('Please enter temperature conversions.');
+                alert('Please enter temperatures.');
             }
         });
 
@@ -180,7 +179,7 @@
             if (inputTexts.length > 0) {
                 generateAndDownloadImages(inputTexts, 'webp');
             } else {
-                alert('Please enter temperature conversions.');
+                alert('Please enter temperatures.');
             }
         });
     </script>
