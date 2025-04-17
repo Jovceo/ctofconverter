@@ -1,0 +1,36 @@
+name: Submit URLs to IndexNow
+on:
+  push:
+    branches: [ main ]  # 触发条件：推送到 main 分支时运行
+
+jobs:
+  submit-to-indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v44
+        with:
+          since_last_commit: true  # 只检测上次提交后修改的文件
+
+      - name: Filter HTML files
+        id: filter-files
+        run: |
+          # 只保留 .html 文件，并生成 JSON 格式的 URL 列表
+          CHANGED_HTML_FILES=$(echo '${{ steps.changed-files.outputs.all_changed_files }}' | jq -R 'split(" ") | map(select(. | endswith(".html")))')
+          echo "urls=${CHANGED_HTML_FILES}" >> $GITHUB_OUTPUT
+
+      - name: Submit to IndexNow
+        if: ${{ steps.filter-files.outputs.urls != '[]' }}  # 如果有变更的 HTML 文件才执行
+        run: |
+          # 替换 YOUR_DOMAIN 和 YOUR_KEY
+          curl -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "host": "https://ctofconverter.com",
+              "key": "4adb6fe5710d4581aecf85769a317c7d",
+              "urlList": ${{ steps.filter-files.outputs.urls }}
+            }'
