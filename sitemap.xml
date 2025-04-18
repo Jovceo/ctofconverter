@@ -294,4 +294,16 @@
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
     </url>
+    <url>
+       <loc>https://ctofconverter.com/180-c-to-f.html</loc>
+       <lastmod>2025-04-18</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8</priority>
+    </url>
+    <url>
+       <loc>https://ctofconverter.com/200-c-to-f.html</loc>
+       <lastmod>2025-04-18</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8</priority>
+    </url>
 </urlset>
