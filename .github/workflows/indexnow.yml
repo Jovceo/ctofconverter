@@ -14,28 +14,31 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v44
         with:
-          since_last_commit: true
+          # 使用新版参数替代 since_last_commit
+          since_last_remote_commit: true
+          separator: " "
 
-      - name: Filter HTML files
-        id: filter-files
+      - name: Process HTML files
+        id: process-files
         run: |
+          # 处理文件列表，生成正确格式的JSON
           CHANGED_HTML_FILES=$(echo '${{ steps.changed-files.outputs.all_changed_files }}' | 
             jq -R 'split(" ") | 
                   map(select(. | endswith(".html"))) | 
-                  map("https://ctofconverter.com/" + .) | 
-                  join(",")' |
-            sed 's/,/","/g' |
-            sed 's/^/["/' |
-            sed 's/$/"]/')
+                  map("https://ctofconverter.com/" + .)' |
+            jq -c '.')  # 生成紧凑型JSON
+          
           echo "urls=${CHANGED_HTML_FILES}" >> $GITHUB_OUTPUT
+          echo "Processed files: ${CHANGED_HTML_FILES}"
 
       - name: Submit to IndexNow
-        if: ${{ steps.filter-files.outputs.urls != '[]' }}
+        if: ${{ steps.process-files.outputs.urls != '[]' }}
         run: |
+          echo "Submitting: ${{ steps.process-files.outputs.urls }}"
           curl -X POST "https://api.indexnow.org/indexnow" \
             -H "Content-Type: application/json" \
             -d '{
               "host": "https://ctofconverter.com",
               "key": "4adb6fe5710d4581aecf85769a317c7d",
-              "urlList": '${{ steps.filter-files.outputs.urls }}'
+              "urlList": ${{ steps.process-files.outputs.urls }}
             }'
