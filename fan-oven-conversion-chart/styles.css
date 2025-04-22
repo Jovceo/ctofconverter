@@ -166,3 +166,19 @@ footer {
         padding: 0.8rem;
     }
 }
+.faq-container {
+    margin-top: 20px;
+}
+.faq-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+.faq-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+.faq-item p {
+    color: #666;
+}
