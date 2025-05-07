@@ -182,3 +182,72 @@ footer {
 .faq-item p {
     color: #666;
 }
+.country-tip {
+    background-color: #f8f9fa; /* 浅灰色背景 */
+    border-left: 4px solid #007bff; /* 蓝色左边框 */
+    padding: 15px; /* 内边距 */
+    margin: 20px 0; /* 外边距 */
+    font-size: 16px; /* 字体大小 */
+    line-height: 1.6; /* 行高 */
+}
+
+.country-tip strong {
+    color: #007bff; /* 蓝色字体 */
+    margin-right: 5px; /* 右边距 */
+}
+
+
+/* 新增通知样式 */
+.notice {
+    background-color: #f0f8ff; /* 淡蓝色背景 */
+    border-left: 4px solid #1e90ff; /* 蓝色左边框 */
+    padding: 1rem; /* 内边距 */
+    margin-bottom: 1.5rem; /* 底部外边距 */
+    border-radius: 4px; /* 圆角 */
+}
+
+.notice p {
+    margin: 0; /* 去除段落的外边距 */
+}
+
+/* 新增转换表格样式 */
+.conversion-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.conversion-table th, .conversion-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.conversion-table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.conversion-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* 新增厨师提示样式 */
+.pro-tip {
+    background-color: #fff3cd; /* 淡黄色背景 */
+    border-left: 4px solid #ffc107; /* 黄色左边框 */
+    padding: 1rem; /* 内边距 */
+    margin-top: 1.5rem; /* 顶部外边距 */
+    border-radius: 4px; /* 圆角 */
+}
+
+.pro-tip p {
+    margin: 0; /* 去除段落的外边距 */
+    display: flex;
+    align-items: center;
+}
+
+.pro-tip p::before {
+    content: "💡";
+    margin-right: 0.5rem;
+}
