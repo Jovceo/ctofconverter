@@ -452,19 +452,49 @@
         </section>
         
     </main>
-    <footer>
+    <footer class="site-footer" role="contentinfo">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <p class="footer-title">Quick Links</p>
-                    <a href="https://ctofconverter.com/celsius-to-fahrenheit-chart/">Celsius to Fahrenheit Conversion Chart</a>
-                    <a href="https://ctofconverter.com/fan-oven-conversion-chart/">Fan Oven Temperature Conversion Chart</a>
+            <nav class="footer-navigation" aria-label="Footer navigation">
+                <div class="footer-links-grid">
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-nav-heading">Navigation</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-nav-heading">
+                            <li><a href="https://ctofconverter.com" class="footer-link">Celsius to Fahrenheit</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-chart-heading">Chart</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-chart-heading">
+                            <li><a href="https://ctofconverter.com/celsius-to-fahrenheit-chart/" class="footer-link">Celsius to Fahrenheit Conversion Chart</a></li>
+                            <li><a href="https://ctofconverter.com/fan-oven-conversion-chart/" class="footer-link">Fan Oven Temperature Conversion Chart</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-legal-heading">Legal</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-legal-heading">
+                            <li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <p>&copy; 2025 C to F Converter  <a href="/privacy-policy.html">Privacy Policy</a></p>
+            </nav>
+            
+            <div class="footer-extra">
+                <div class="copyright-notice">
+                    <p>© 2025 Ctofconverter. All rights reserved.</p>
+                </div>
+                
+                <div class="back-to-top">
+                    <a href="#top" class="back-to-top-link" aria-label="Back to top">
+                        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24">
+                            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="currentColor"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="scripts.min.js"></script>
 </body>
 </html>
