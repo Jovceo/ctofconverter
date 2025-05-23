@@ -384,4 +384,10 @@
        <changefreq>monthly</changefreq>
        <priority>0.8</priority>
     </url>
+    <url>
+       <loc>https://ctofconverter.com/35-c-to-f.html</loc>
+       <lastmod>2025-05-23</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8</priority>
+    </url>
 </urlset>
