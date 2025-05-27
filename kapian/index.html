@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Conversion Image Generator</title>
+    <title>Smart Temperature Conversion Image Generator</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -36,34 +36,62 @@
             margin-top: 10px;
             display: flex;
             gap: 10px;
+            width: 100%;
+            max-width: 300px;
         }
         button {
             padding: 10px 20px;
             font-size: 16px;
             color: #fff;
-            background-color: #007bff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            flex: 1;
         }
         button:hover {
-            background-color: #0056b3;
+            opacity: 0.9;
         }
-        button.secondary {
+        .png-btn {
+            background-color: #007bff;
+        }
+        .webp-btn {
             background-color: #6c757d;
         }
-        button.secondary:hover {
-            background-color: #5a6268;
+        .info-text {
+            margin-top: 10px;
+            color: #666;
+            font-size: 14px;
+            text-align: center;
+        }
+        .info-text ul {
+            text-align: left;
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        .info-text li {
+            margin-bottom: 3px;
         }
     </style>
 </head>
 <body>
-    <h1>Temperature Conversion Image Generator</h1>
+    <h1>Smart Temperature Conversion Image Generator</h1>
     <div class="input-section">
-        <textarea id="line1" placeholder="Enter temperatures (one per line, e.g., 27 or 36.5)"></textarea>
+        <textarea id="line1" placeholder="Enter temperatures (e.g., 100F, 100 f to c, 100 degrees f to c)"></textarea>
         <div class="options">
-            <button id="generate-png-btn">Download PNG</button>
-            <button id="generate-webp-btn" class="secondary">Download WebP</button>
+            <button id="generate-png-btn" class="png-btn">Download PNG</button>
+            <button id="generate-webp-btn" class="webp-btn">Download WebP</button>
+        </div>
+        <div class="info-text">
+            Tip: Supported formats: 
+            <ul>
+                <li>100F or 100 F</li>
+                <li>100 f to c</li>
+                <li>100 degrees fahrenheit to celsius</li>
+                <li>37C or 37 C</li>
+                <li>37 c to f</li>
+                <li>37 degrees celsius to fahrenheit</li>
+            </ul>
+            Plain numbers will be treated as Celsius to Fahrenheit
         </div>
     </div>
     <script>
@@ -74,34 +102,115 @@
 
         // 温度转换函数
         function celsiusToFahrenheit(celsius) {
-            return (celsius * 9 / 5 + 32).toFixed(2); // 保留两位小数
+            return (celsius * 9 / 5 + 32).toFixed(2);
         }
 
-        // 生成图片名称（格式：数字-celsius-to-fahrenheit-conversion.扩展名）
-        function generateFileName(celsius, fileExtension) {
-            const numberPart = celsius.toString().replace('.', '-');
-            return `${numberPart}-celsius-to-fahrenheit-conversion.${fileExtension}`;
+        function fahrenheitToCelsius(fahrenheit) {
+            return ((fahrenheit - 32) * 5 / 9).toFixed(2);
+        }
+
+        // 检测温度单位并转换（支持多种表达方式）
+        function detectAndConvert(tempStr) {
+            // 尝试匹配多种温度转换表达方式
+            const patterns = [
+                // 格式: 数字 + 单位 (如 100F, 100 F)
+                /^([-+]?\d*\.?\d+)\s*([CFcf])$/,
+                // 格式: 数字 + 单位 + to + 单位 (如 100F to C, 100 f to c)
+                /^([-+]?\d*\.?\d+)\s*([CFcf])\s*to\s*([CFcf])$/i,
+                // 格式: 数字 + "degrees" + 单位 + to + 单位 (如 100 degrees f to c)
+                /^([-+]?\d*\.?\d+)\s*degrees?\s*([CFcf])\s*to\s*([CFcf])$/i,
+                // 格式: 数字 + "degrees" + 单位全称 + to + 单位全称 (如 100 degrees fahrenheit to celsius)
+                /^([-+]?\d*\.?\d+)\s*degrees?\s*(fahrenheit|celsius)\s*to\s*(fahrenheit|celsius)$/i,
+                // 格式: 纯数字 (默认C转F)
+                /^([-+]?\d*\.?\d+)$/
+            ];
+            
+            let match;
+            for (const pattern of patterns) {
+                match = tempStr.match(pattern);
+                if (match) break;
+            }
+            
+            if (!match) return null;
+            
+            const value = parseFloat(match[1]);
+            let fromUnit, toUnit;
+            
+            // 处理不同匹配模式
+            if (match[2] && match[2].toLowerCase() === 'c') {
+                fromUnit = 'C';
+            } else if (match[2] && match[2].toLowerCase() === 'f') {
+                fromUnit = 'F';
+            } else if (match[2] && match[2].toLowerCase().includes('celsius')) {
+                fromUnit = 'C';
+            } else if (match[2] && match[2].toLowerCase().includes('fahrenheit')) {
+                fromUnit = 'F';
+            } else {
+                // 默认纯数字视为C转F
+                fromUnit = 'C';
+            }
+            
+            // 如果有指定目标单位
+            if (match[3]) {
+                if (match[3].toLowerCase() === 'c') {
+                    toUnit = 'C';
+                } else if (match[3].toLowerCase() === 'f') {
+                    toUnit = 'F';
+                } else if (match[3].toLowerCase().includes('celsius')) {
+                    toUnit = 'C';
+                } else if (match[3].toLowerCase().includes('fahrenheit')) {
+                    toUnit = 'F';
+                } else {
+                    // 如果没有明确指定，自动推断(与输入单位相反)
+                    toUnit = fromUnit === 'C' ? 'F' : 'C';
+                }
+            } else {
+                // 如果没有明确指定，自动推断(与输入单位相反)
+                toUnit = fromUnit === 'C' ? 'F' : 'C';
+            }
+            
+            if (fromUnit === 'C' && toUnit === 'F') {
+                return {
+                    fromUnit: '°C',
+                    toUnit: '°F',
+                    original: value,
+                    converted: celsiusToFahrenheit(value),
+                    type: 'c-to-f'
+                };
+            } else if (fromUnit === 'F' && toUnit === 'C') {
+                return {
+                    fromUnit: '°F',
+                    toUnit: '°C',
+                    original: value,
+                    converted: fahrenheitToCelsius(value),
+                    type: 'f-to-c'
+                };
+            }
+            
+            return null;
+        }
+
+        // 生成图片名称
+        function generateFileName(original, conversionType, fileExtension) {
+            const numberPart = original.toString().replace('.', '-');
+            if (conversionType === 'c-to-f') {
+                return `${numberPart}-celsius-to-fahrenheit-conversion.${fileExtension}`;
+            } else {
+                return `${numberPart}-fahrenheit-to-celsius-conversion.${fileExtension}`;
+            }
         }
 
         // 生成并下载图片
         function generateAndDownloadImage(inputText, index, format = 'png') {
-            // 尝试提取数字
-            let celsius;
-            try {
-                celsius = parseFloat(inputText.trim());
-                if (isNaN(celsius)) {
-                    throw new Error("Not a number");
-                }
-            } catch (e) {
+            const conversion = detectAndConvert(inputText.trim());
+            if (!conversion) {
                 console.warn(`Invalid input at line ${index + 1}: ${inputText}`);
                 return;
             }
 
-            const fahrenheit = celsiusToFahrenheit(celsius);
-
-            // 生成显示文本
-            const displayText = `${celsius}°C to °F`;
-            const conversionText = `${celsius}°C = ${fahrenheit}°F`;
+            const { fromUnit, toUnit, original, converted, type } = conversion;
+            const displayText = `${original}${fromUnit} to ${toUnit}`;
+            const conversionText = `${original}${fromUnit} = ${converted}${toUnit}`;
 
             // 创建 Canvas
             const canvas = document.createElement('canvas');
@@ -110,49 +219,36 @@
             const ctx = canvas.getContext('2d');
 
             // 设置背景颜色
-            ctx.fillStyle = '#ffffff'; // 白色背景
+            ctx.fillStyle = '#ffffff';
             ctx.fillRect(0, 0, 1200, 400);
 
             // 设置字体样式
-            ctx.fillStyle = '#000000'; // 黑色字体
+            ctx.fillStyle = '#000000';
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
 
             // 绘制第一行文字（温度转换标题）
-            ctx.font = 'bold 36px Arial'; // 稍小字体
-            ctx.fillText(displayText, 600, 150); // 居中显示
+            ctx.font = 'bold 36px Arial';
+            ctx.fillText(displayText, 600, 150);
 
             // 绘制第二行文字（转换结果）
-            ctx.font = 'bold 48px Arial'; // 大字体，加粗
-            ctx.fillText(conversionText, 600, 250); // 居中显示
+            ctx.font = 'bold 48px Arial';
+            ctx.fillText(conversionText, 600, 250);
 
             // 将 Canvas 转换为图片并触发下载
-            let mimeType, fileExtension;
-            if (format === 'webp') {
-                mimeType = 'image/webp';
-                fileExtension = 'webp';
-            } else {
-                mimeType = 'image/png';
-                fileExtension = 'png';
-            }
+            const mimeType = format === 'webp' ? 'image/webp' : 'image/png';
+            const fileExtension = format === 'webp' ? 'webp' : 'png';
 
             canvas.toBlob((blob) => {
                 const imageURL = URL.createObjectURL(blob);
                 const link = document.createElement('a');
                 link.href = imageURL;
-
-                // 生成图片名称
-                const fileName = generateFileName(celsius, fileExtension);
-                link.download = fileName;
-
-                // 触发下载
+                link.download = generateFileName(original, type, fileExtension);
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
-                
-                // 释放内存
                 setTimeout(() => URL.revokeObjectURL(imageURL), 100);
-            }, mimeType, 0.9); // WebP 质量设置为 0.9
+            }, mimeType, 0.9);
         }
 
         // 批量生成并下载图片
@@ -166,7 +262,7 @@
 
         // 绑定生成按钮点击事件
         generatePngBtn.addEventListener('click', () => {
-            const inputTexts = line1Input.value.split('\n'); // 按行分割输入内容
+            const inputTexts = line1Input.value.split('\n');
             if (inputTexts.length > 0) {
                 generateAndDownloadImages(inputTexts, 'png');
             } else {
@@ -175,7 +271,7 @@
         });
 
         generateWebpBtn.addEventListener('click', () => {
-            const inputTexts = line1Input.value.split('\n'); // 按行分割输入内容
+            const inputTexts = line1Input.value.split('\n');
             if (inputTexts.length > 0) {
                 generateAndDownloadImages(inputTexts, 'webp');
             } else {
