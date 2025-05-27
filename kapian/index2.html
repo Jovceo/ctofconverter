@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Conversion Image Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .input-section {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        textarea {
+            width: 300px;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+        .options {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button.secondary {
+            background-color: #6c757d;
+        }
+        button.secondary:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <h1>Temperature Conversion Image Generator</h1>
+    <div class="input-section">
+        <textarea id="line1" placeholder="Enter temperatures (one per line, e.g., 27 or 36.5)"></textarea>
+        <div class="options">
+            <button id="generate-png-btn">Download PNG</button>
+            <button id="generate-webp-btn" class="secondary">Download WebP</button>
+        </div>
+    </div>
+    <script>
+        // 获取元素
+        const line1Input = document.getElementById('line1');
+        const generatePngBtn = document.getElementById('generate-png-btn');
+        const generateWebpBtn = document.getElementById('generate-webp-btn');
+
+        // 温度转换函数
+        function celsiusToFahrenheit(celsius) {
+            return (celsius * 9 / 5 + 32).toFixed(2); // 保留两位小数
+        }
+
+        // 生成图片名称（格式：数字-celsius-to-fahrenheit-conversion.扩展名）
+        function generateFileName(celsius, fileExtension) {
+            const numberPart = celsius.toString().replace('.', '-');
+            return `${numberPart}-celsius-to-fahrenheit-conversion.${fileExtension}`;
+        }
+
+        // 生成并下载图片
+        function generateAndDownloadImage(inputText, index, format = 'png') {
+            // 尝试提取数字
+            let celsius;
+            try {
+                celsius = parseFloat(inputText.trim());
+                if (isNaN(celsius)) {
+                    throw new Error("Not a number");
+                }
+            } catch (e) {
+                console.warn(`Invalid input at line ${index + 1}: ${inputText}`);
+                return;
+            }
+
+            const fahrenheit = celsiusToFahrenheit(celsius);
+
+            // 生成显示文本
+            const displayText = `${celsius}°C to °F`;
+            const conversionText = `${celsius}°C = ${fahrenheit}°F`;
+
+            // 创建 Canvas
+            const canvas = document.createElement('canvas');
+            canvas.width = 1200;
+            canvas.height = 400;
+            const ctx = canvas.getContext('2d');
+
+            // 设置背景颜色
+            ctx.fillStyle = '#ffffff'; // 白色背景
+            ctx.fillRect(0, 0, 1200, 400);
+
+            // 设置字体样式
+            ctx.fillStyle = '#000000'; // 黑色字体
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            // 绘制第一行文字（温度转换标题）
+            ctx.font = 'bold 36px Arial'; // 稍小字体
+            ctx.fillText(displayText, 600, 150); // 居中显示
+
+            // 绘制第二行文字（转换结果）
+            ctx.font = 'bold 48px Arial'; // 大字体，加粗
+            ctx.fillText(conversionText, 600, 250); // 居中显示
+
+            // 将 Canvas 转换为图片并触发下载
+            let mimeType, fileExtension;
+            if (format === 'webp') {
+                mimeType = 'image/webp';
+                fileExtension = 'webp';
+            } else {
+                mimeType = 'image/png';
+                fileExtension = 'png';
+            }
+
+            canvas.toBlob((blob) => {
+                const imageURL = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = imageURL;
+
+                // 生成图片名称
+                const fileName = generateFileName(celsius, fileExtension);
+                link.download = fileName;
+
+                // 触发下载
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                // 释放内存
+                setTimeout(() => URL.revokeObjectURL(imageURL), 100);
+            }, mimeType, 0.9); // WebP 质量设置为 0.9
+        }
+
+        // 批量生成并下载图片
+        function generateAndDownloadImages(inputTexts, format) {
+            inputTexts.forEach((inputText, index) => {
+                if (inputText.trim()) {
+                    generateAndDownloadImage(inputText.trim(), index, format);
+                }
+            });
+        }
+
+        // 绑定生成按钮点击事件
+        generatePngBtn.addEventListener('click', () => {
+            const inputTexts = line1Input.value.split('\n'); // 按行分割输入内容
+            if (inputTexts.length > 0) {
+                generateAndDownloadImages(inputTexts, 'png');
+            } else {
+                alert('Please enter temperatures.');
+            }
+        });
+
+        generateWebpBtn.addEventListener('click', () => {
+            const inputTexts = line1Input.value.split('\n'); // 按行分割输入内容
+            if (inputTexts.length > 0) {
+                generateAndDownloadImages(inputTexts, 'webp');
+            } else {
+                alert('Please enter temperatures.');
+            }
+        });
+    </script>
+</body>
+</html>
