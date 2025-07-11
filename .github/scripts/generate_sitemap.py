@@ -44,7 +44,7 @@ def generate_sitemap():
 
             # 获取文件修改时间
             lastmod = datetime.fromtimestamp(os.path.getmtime(file))
-                      .strftime('%Y-%m-%d')
+            .strftime('%Y-%m-%d')
 
             sitemap += f'''  <url>
     <loc>{url}</loc>
