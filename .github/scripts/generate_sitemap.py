@@ -31,20 +31,24 @@ def generate_sitemap():
     sitemap = f'''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 '''
+    # 添加日期过滤 - 只包含今天修改的文件
+    today = datetime.today().date()
 
     for file in html_files:
-        # 跳过sitemap.xml本身
-        if file == OUTPUT_FILE:
-            continue
-
         try:
+            # 获取文件修改时间并转换为日期
+            file_mtime = datetime.fromtimestamp(os.path.getmtime(file)).date()
+            
+            # 只处理今天修改的文件
+            if file_mtime != today:
+                continue
+                
             # 转换路径格式
             path = file.replace(os.sep, '/')
             url = f"{BASE_URL}/{path}"
 
-            # 获取文件修改时间
-            lastmod = (datetime.fromtimestamp(os.path.getmtime(file))
-                      .strftime('%Y-%m-%d'))
+            # 使用已获取的日期
+            lastmod = file_mtime.strftime('%Y-%m-%d')
 
             sitemap += f'''  <url>
     <loc>{url}</loc>
