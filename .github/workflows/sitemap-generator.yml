@@ -9,8 +9,12 @@ on:
 jobs:
   generate-sitemap:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 添加写权限
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 确保获取完整历史
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
