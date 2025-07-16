@@ -83,7 +83,7 @@
             return `${numberPart}-celsius-to-fahrenheit-conversion.${fileExtension}`;
         }
 
-        // 生成并下载图片
+        // 生成并下载图�?
         function generateAndDownloadImage(inputText, index, format = 'png') {
             // 尝试提取数字
             let celsius;
@@ -118,15 +118,15 @@
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
 
-            // 绘制第一行文字（温度转换标题）
+            // 绘制第一行文字（温度转换标题�?
             ctx.font = 'bold 36px Arial'; // 稍小字体
             ctx.fillText(displayText, 600, 150); // 居中显示
 
-            // 绘制第二行文字（转换结果）
+            // 绘制第二行文字（转换结果�?
             ctx.font = 'bold 48px Arial'; // 大字体，加粗
             ctx.fillText(conversionText, 600, 250); // 居中显示
 
-            // 将 Canvas 转换为图片并触发下载
+            // �?Canvas 转换为图片并触发下载
             let mimeType, fileExtension;
             if (format === 'webp') {
                 mimeType = 'image/webp';
@@ -152,10 +152,10 @@
                 
                 // 释放内存
                 setTimeout(() => URL.revokeObjectURL(imageURL), 100);
-            }, mimeType, 0.9); // WebP 质量设置为 0.9
+            }, mimeType, 0.9); // WebP 质量设置�?0.9
         }
 
-        // 批量生成并下载图片
+        // 批量生成并下载图�?
         function generateAndDownloadImages(inputTexts, format) {
             inputTexts.forEach((inputText, index) => {
                 if (inputText.trim()) {
@@ -185,3 +185,5 @@
     </script>
 </body>
 </html>
+
+
