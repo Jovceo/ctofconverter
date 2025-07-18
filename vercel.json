@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "www.ctofconverter.com",
+      "destination": "https://ctofconverter.com",
+      "permanent": true,
+      "statusCode": 301
+    }
+  ]
+}
