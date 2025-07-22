@@ -113,15 +113,15 @@
         function detectAndConvert(tempStr) {
             // 尝试匹配多种温度转换表达方式
             const patterns = [
-                // 格式: 数字 + 单位 (�?100F, 100 F)
+                // 格式: 数字 + 单位 (�?100F, 100 F)
                 /^([-+]?\d*\.?\d+)\s*([CFcf])$/,
-                // 格式: 数字 + 单位 + to + 单位 (�?100F to C, 100 f to c)
+                // 格式: 数字 + 单位 + to + 单位 (�?100F to C, 100 f to c)
                 /^([-+]?\d*\.?\d+)\s*([CFcf])\s*to\s*([CFcf])$/i,
-                // 格式: 数字 + "degrees" + 单位 + to + 单位 (�?100 degrees f to c)
+                // 格式: 数字 + "degrees" + 单位 + to + 单位 (�?100 degrees f to c)
                 /^([-+]?\d*\.?\d+)\s*degrees?\s*([CFcf])\s*to\s*([CFcf])$/i,
-                // 格式: 数字 + "degrees" + 单位全称 + to + 单位全称 (�?100 degrees fahrenheit to celsius)
+                // 格式: 数字 + "degrees" + 单位全称 + to + 单位全称 (�?100 degrees fahrenheit to celsius)
                 /^([-+]?\d*\.?\d+)\s*degrees?\s*(fahrenheit|celsius)\s*to\s*(fahrenheit|celsius)$/i,
-                // 格式: 纯数�?(默认C转F)
+                // 格式: 纯数�?(默认C转F)
                 /^([-+]?\d*\.?\d+)$/
             ];
             
@@ -150,7 +150,7 @@
                 fromUnit = 'C';
             }
             
-            // 如果有指定目标单�?            if (match[3]) {
+            // 如果有指定目标单�?            if (match[3]) {
                 if (match[3].toLowerCase() === 'c') {
                     toUnit = 'C';
                 } else if (match[3].toLowerCase() === 'f') {
@@ -160,11 +160,11 @@
                 } else if (match[3].toLowerCase().includes('fahrenheit')) {
                     toUnit = 'F';
                 } else {
-                    // 如果没有明确指定，自动推�?与输入单位相�?
+                    // 如果没有明确指定，自动推�?与输入单位相�?
                     toUnit = fromUnit === 'C' ? 'F' : 'C';
                 }
             } else {
-                // 如果没有明确指定，自动推�?与输入单位相�?
+                // 如果没有明确指定，自动推�?与输入单位相�?
                 toUnit = fromUnit === 'C' ? 'F' : 'C';
             }
             
@@ -199,7 +199,7 @@
             }
         }
 
-        // 生成并下载图�?        function generateAndDownloadImage(inputText, index, format = 'png') {
+        // 生成并下载图�?        function generateAndDownloadImage(inputText, index, format = 'png') {
             const conversion = detectAndConvert(inputText.trim());
             if (!conversion) {
                 console.warn(`Invalid input at line ${index + 1}: ${inputText}`);
@@ -225,13 +225,13 @@
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
 
-            // 绘制第一行文字（温度转换标题�?            ctx.font = 'bold 36px Arial';
+            // 绘制第一行文字（温度转换标题�?            ctx.font = 'bold 36px Arial';
             ctx.fillText(displayText, 600, 150);
 
-            // 绘制第二行文字（转换结果�?            ctx.font = 'bold 48px Arial';
+            // 绘制第二行文字（转换结果�?            ctx.font = 'bold 48px Arial';
             ctx.fillText(conversionText, 600, 250);
 
-            // �?Canvas 转换为图片并触发下载
+            // �?Canvas 转换为图片并触发下载
             const mimeType = format === 'webp' ? 'image/webp' : 'image/png';
             const fileExtension = format === 'webp' ? 'webp' : 'png';
 
@@ -247,7 +247,7 @@
             }, mimeType, 0.9);
         }
 
-        // 批量生成并下载图�?        function generateAndDownloadImages(inputTexts, format) {
+        // 批量生成并下载图�?        function generateAndDownloadImages(inputTexts, format) {
             inputTexts.forEach((inputText, index) => {
                 if (inputText.trim()) {
                     generateAndDownloadImage(inputText.trim(), index, format);
