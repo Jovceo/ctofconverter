@@ -19,6 +19,15 @@
       }
     },
     {
+      "src": "**/*.js",
+      "use": "@vercel/static",
+      "config": {
+        "headers": {
+          "Content-Type": "application/javascript; charset=utf-8"
+        }
+      }
+    },
+    {
       "src": "**/*.txt",
       "use": "@vercel/static",
       "config": {
