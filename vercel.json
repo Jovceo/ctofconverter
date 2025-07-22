@@ -1,10 +1,20 @@
 {
-  "redirects": [
+  "version": 2,
+  "builds": [
     {
-      "source": "www.ctofconverter.com",
-      "destination": "https://ctofconverter.com",
-      "permanent": true,
-      "statusCode": 301
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "images/**/*",
+      "use": "@vercel/static"
     }
-  ]
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "outputDirectory": "."
 }
