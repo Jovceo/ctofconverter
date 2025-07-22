@@ -10,6 +10,15 @@
       "use": "@vercel/static"
     },
     {
+      "src": "**/*.css",
+      "use": "@vercel/static",
+      "config": {
+        "headers": {
+          "Content-Type": "text/css; charset=utf-8"
+        }
+      }
+    },
+    {
       "src": "**/*.txt",
       "use": "@vercel/static",
       "config": {
