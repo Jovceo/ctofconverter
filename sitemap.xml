@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ctofconverter.com</loc>
+    <lastmod>2025-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ctofconverter.com/1-c-to-f.html</loc>
+    <lastmod>2025-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ctofconverter.com/230-c-to-f.html</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -181,18 +193,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ctofconverter.com/404.html</loc>
-    <lastmod>2025-07-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ctofconverter.com/index.html</loc>
-    <lastmod>2025-07-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ctofconverter.com/32-c-to-f.html</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -224,12 +224,6 @@
   </url>
   <url>
     <loc>https://ctofconverter.com/36-7-c-to-f.html</loc>
-    <lastmod>2025-07-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ctofconverter.com/160-c-to-f-fuzhi.html</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -445,7 +439,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ctofconverter.com/fahrenheit-to-celsius/index.html</loc>
+    <loc>https://ctofconverter.com/fahrenheit-to-celsius/</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -487,25 +481,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ctofconverter.com/celsius-to-fahrenheit-chart/index.html</loc>
+    <loc>https://ctofconverter.com/celsius-to-fahrenheit-chart/</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ctofconverter.com/kapian/index2.html</loc>
-    <lastmod>2025-07-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ctofconverter.com/kapian/index.html</loc>
-    <lastmod>2025-07-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ctofconverter.com/fan-oven-conversion-chart/index.html</loc>
+    <loc>https://ctofconverter.com/fan-oven-conversion-chart/</loc>
     <lastmod>2025-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
