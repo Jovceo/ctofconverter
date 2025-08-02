@@ -10,6 +10,7 @@
     <meta property="og:description" content="Learn about Ctofconverter, your reliable resource for temperature conversion between Celsius and Fahrenheit.">
     <meta property="og:url" content="https://ctofconverter.com/about-us.html">
     <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles.min.css">
     <style>
         :root {
             --primary-color: #3498db;
@@ -175,20 +176,11 @@
             border-radius: 8px;
         }
 
-        .team-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 0 auto 15px;
-            object-fit: cover;
-            border: 5px solid var(--white);
-            box-shadow: var(--shadow);
-        }
-
         .team-name {
             font-weight: bold;
             margin-bottom: 5px;
             color: var(--secondary-color);
+            font-size: 1.2rem;
         }
 
         .team-role {
@@ -197,53 +189,20 @@
             font-style: italic;
         }
 
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: var(--light-gray);
+        .contact-info {
+            text-align: center;
             padding: 30px;
+            background-color: var(--light-gray);
             border-radius: 8px;
             box-shadow: var(--shadow);
         }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--dark-gray);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid var(--medium-gray);
-            border-radius: 4px;
-            font-size: 16px;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        .submit-btn {
-            background-color: var(--primary-color);
-            color: var(--white);
-            border: none;
-            padding: 12px 25px;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .submit-btn:hover {
-            background-color: var(--secondary-color);
+        .contact-email {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-top: 15px;
+            display: inline-block;
         }
 
         footer {
@@ -419,19 +378,16 @@
                     <h2>Meet Our Team</h2>
                     <div class="team-grid">
                         <div class="team-member">
-                            <img src="https://via.placeholder.com/150" alt="Team Member" class="team-photo">
                             <div class="team-name">Sarah Johnson</div>
                             <div class="team-role">Founder & Developer</div>
                             <p>Sarah has over 10 years of experience in web development and a passion for creating useful tools.</p>
                         </div>
                         <div class="team-member">
-                            <img src="https://via.placeholder.com/150" alt="Team Member" class="team-photo">
                             <div class="team-name">Michael Chen</div>
                             <div class="team-role">Designer</div>
                             <p>Michael specializes in user interface design and creating intuitive, visually appealing websites.</p>
                         </div>
                         <div class="team-member">
-                            <img src="https://via.placeholder.com/150" alt="Team Member" class="team-photo">
                             <div class="team-name">Emily Rodriguez</div>
                             <div class="team-role">Content Writer</div>
                             <p>Emily creates informative, easy-to-understand content that helps users make the most of our tools.</p>
@@ -441,22 +397,8 @@
 
                 <div class="about-card">
                     <h2>Contact Us</h2>
-                    <p>Have a question, suggestion, or feedback? We'd love to hear from you! Please fill out the form below, and we'll get back to you as soon as possible.</p>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+                    <p>Have a question, suggestion, or feedback? We'd love to hear from you! Feel free to reach out to us via email:</p>
+                    <a href="mailto:lhqlvp@gmail.com" class="contact-email">lhqlvp@gmail.com</a>
                 </div>
             </section>
         </div>
@@ -498,6 +440,7 @@
         </div>
     </footer>
 
+    <script src="scripts.min.js"></script>
     <script>
         // Mobile menu toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
