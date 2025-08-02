@@ -533,64 +533,51 @@
                 <a href="/220-c-to-f.html" class="temp-card" aria-label="Convert 220 Celsius to Fahrenheit">220°C to °F</a>
                 <a href="/250-c-to-f.html" class="temp-card" aria-label="Convert 250 Celsius to Fahrenheit">250°C to °F</a>
             </div>
-            <div class="related-guides">
-                <h3>Popular Oven Temperature Guides</h3>
-                <ul>
-                    <li><a href="/fan-oven-conversion-chart/" aria-label="Fan oven conversion chart guide">Fan Oven Conversion Chart</a></li>
-                    <li><a href="/celsius-to-fahrenheit-chart/" aria-label="Celsius to Fahrenheit conversion chart">Temperature Conversion Chart</a></li>
-                    <li><a href="/fahrenheit-to-celsius/" aria-label="Fahrenheit to Celsius converter">Fahrenheit to Celsius Converter</a></li>
-                </ul>
-            </div>
         </section>
     </main>
-
-    <script src="/scripts.min.js"></script>
-    <script>
-        // Temperature slider functionality
-        const tempSlider = document.getElementById('tempSlider');
-        const sliderCelsius = document.getElementById('sliderCelsius');
-        const sliderFahrenheit = document.getElementById('sliderFahrenheit');
-        
-        function updateSlider() {
-            const celsius = parseFloat(tempSlider.value);
-            const fahrenheit = (celsius * 9/5 + 32).toFixed(1);
-            sliderCelsius.textContent = `${celsius}°C`;
-            sliderFahrenheit.textContent = `${fahrenheit}°F`;
-        }
-        
-        tempSlider.addEventListener('input', updateSlider);
-        
-        // Initialize converter with 200°C
-        document.addEventListener('DOMContentLoaded', function() {
-            const celsiusInput = document.getElementById('celsius');
-            const fahrenheitResult = document.getElementById('fahrenheit-result');
-            const copyBtn = document.getElementById('copy-btn');
+<footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <nav class="footer-navigation" aria-label="Footer navigation">
+                <div class="footer-links-grid">
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-nav-heading">Navigation</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-nav-heading">
+                            <li><a href="https://ctofconverter.com" class="footer-link">Celsius to Fahrenheit</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-chart-heading">Chart</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-chart-heading">
+                            <li><a href="https://ctofconverter.com/celsius-to-fahrenheit-chart/" class="footer-link">Celsius to Fahrenheit Conversion Chart</a></li>
+                            <li><a href="https://ctofconverter.com/fan-oven-conversion-chart/" class="footer-link">Fan Oven Temperature Conversion Chart</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-legal-heading">Legal</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-legal-heading">
+                            <li><a href="https://ctofconverter.com/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             
-            function convertTemperature() {
-                const celsius = parseFloat(celsiusInput.value);
-                if (!isNaN(celsius) && celsius >= -273.15) {
-                    const fahrenheit = (celsius * 9/5 + 32).toFixed(1);
-                    fahrenheitResult.textContent = `${fahrenheit}°F`;
-                    document.getElementById('validation-message').textContent = '';
-                } else {
-                    fahrenheitResult.textContent = '--';
-                    document.getElementById('validation-message').textContent = 'Please enter a valid temperature (minimum -273.15°C)';
-                }
-            }
-            
-            celsiusInput.addEventListener('input', convertTemperature);
-            
-            copyBtn.addEventListener('click', function() {
-                const textToCopy = fahrenheitResult.textContent;
-                navigator.clipboard.writeText(textToCopy).then(function() {
-                    const originalText = copyBtn.innerHTML;
-                    copyBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg><span class="btn-text">Copied!</span><span class="sr-only">temperature result</span>';
-                    setTimeout(function() {
-                        copyBtn.innerHTML = originalText;
-                    }, 2000);
-                });
-            });
-        });
-    </script>
+            <div class="footer-extra">
+                <div class="copyright-notice">
+                    <p>© 2025 Ctofconverter. All rights reserved.</p>
+                </div>
+                
+                <div class="back-to-top">
+                    <a href="#top" class="back-to-top-link" aria-label="Back to top">
+                        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24">
+                            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts.min.js"></script>
 </body>
 </html>
