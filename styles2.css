@@ -210,7 +210,7 @@ table th, table td {
 
 table th {
     background-color: #007BFF;
-    color: #fff;
+    color: #000000;
     font-weight: normal;  /* 添加这一行来取消粗体 */
     font-family: Arial, sans-serif;  /* 明确指定字体 */
 }

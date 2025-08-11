@@ -163,13 +163,6 @@
                     <span>100°C = 212°F (Water Boiling Point) = 373.15 K</span>
                     <img src="/images/boiling-point-visual.png" alt="Water boiling temperature comparison" class="thermometer-comparison">
                 </div>
-
-                <div class="simple-calculator">
-                    <h3>Quick Conversion Calculator</h3>
-                    <input type="number" id="celsius-input" placeholder="Enter Celsius" value="100">
-                    <button onclick="convertCtoF()">Convert</button>
-                    <div id="conversion-result">212°F (Fahrenheit) | 373.15 K (Kelvin)</div>
-                </div>
             </div>
         </div>
     </section>
@@ -316,36 +309,6 @@
             </div>
         </div>
     </footer>
-<script>
-function convertCtoF() {
-    const celsius = parseFloat(document.getElementById('celsius-input').value);
-    if (isNaN(celsius)) {
-        document.getElementById('conversion-result').textContent = 'Please enter a valid number';
-        return;
-    }
-    const fahrenheit = (celsius * 9/5) + 32;
-    const kelvin = celsius + 273.15;
-    document.getElementById('conversion-result').textContent = 
-        `${fahrenheit.toFixed(2)}°F (Fahrenheit) | ${kelvin.toFixed(2)} K (Kelvin)`;
-    
-    // 添加结果高亮效果
-    const resultElement = document.getElementById('conversion-result');
-    resultElement.style.backgroundColor = '#e7f3e7';
-    setTimeout(() => {
-        resultElement.style.backgroundColor = 'transparent';
-    }, 1000);
-}
-// 页面加载时执行一次转换
-window.onload = function() {
-    convertCtoF();
-    // 确保计算器区域可见
-    const calculator = document.querySelector('.simple-calculator');
-    if (calculator) {
-        calculator.style.opacity = '1';
-        calculator.style.transform = 'translateY(0)';
-    }
-};
-</script>
 </body>
 </html>
 
