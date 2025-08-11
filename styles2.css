@@ -290,6 +290,22 @@ footer a {
     .example-card p {
         font-size: 14px;
     }
+    
+    /* 添加计算器响应式样式 */
+    .simple-calculator {
+        padding: 10px;
+    }
+    
+    #celsius-input {
+        width: 80px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+    
+    button {
+        width: 90px;
+        padding: 8px;
+    }
 }
 /* 优化后，将 .chart-image 样式合并 */
 @media (max-width: 768px) {

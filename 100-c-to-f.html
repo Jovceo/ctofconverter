@@ -93,27 +93,32 @@
         background-color: #f9f9f9;
         border-radius: 8px;
         text-align: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* 增加阴影提升可见性 */
+        z-index: 10; /* 确保在其他元素之上 */
     }
     #celsius-input {
         padding: 8px;
         width: 100px;
         margin-right: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
     }
     button {
         padding: 8px 15px;
-        background-color: #4CAF50;
-        color: white;
+        background-color: #4CAF50 !important; /* 使用!important覆盖外部样式 */
+        color: white !important;
         border: none;
         border-radius: 4px;
         cursor: pointer;
     }
     button:hover {
-        background-color: #45a049; /* 添加悬停效果 */
+        background-color: #45a049 !important; /* 添加悬停效果 */
     }
     #conversion-result {
         margin-top: 15px;
         font-weight: bold;
         color: #333; /* 确保结果文本颜色可见 */
+        font-size: 16px; /* 增大字体提高可读性 */
     }
     .oven-chart {
         width: 100%;
@@ -322,9 +327,24 @@ function convertCtoF() {
     const kelvin = celsius + 273.15;
     document.getElementById('conversion-result').textContent = 
         `${fahrenheit.toFixed(2)}°F (Fahrenheit) | ${kelvin.toFixed(2)} K (Kelvin)`;
+    
+    // 添加结果高亮效果
+    const resultElement = document.getElementById('conversion-result');
+    resultElement.style.backgroundColor = '#e7f3e7';
+    setTimeout(() => {
+        resultElement.style.backgroundColor = 'transparent';
+    }, 1000);
 }
 // 页面加载时执行一次转换
-window.onload = convertCtoF;
+window.onload = function() {
+    convertCtoF();
+    // 确保计算器区域可见
+    const calculator = document.querySelector('.simple-calculator');
+    if (calculator) {
+        calculator.style.opacity = '1';
+        calculator.style.transform = 'translateY(0)';
+    }
+};
 </script>
 </body>
 </html>
