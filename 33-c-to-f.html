@@ -134,19 +134,16 @@
             <p class="tagline">Beyond simple conversion - understand 33°C's impact on health, global weather patterns, and daily life with our expert analysis.</p>
             <div class="quick-facts">
                 <div class="fact-box">
-                    <div class="fact-icon">🌡️</div>
                     <div class="fact-content">
                         <strong>Exact Conversion:</strong> 33°C = 91.4°F
                     </div>
                 </div>
                 <div class="fact-box">
-                    <div class="fact-icon">⚠️</div>
                     <div class="fact-content">
                         <strong>Health Threshold:</strong> Heat exhaustion risk begins
                     </div>
                 </div>
                 <div class="fact-box">
-                    <div class="fact-icon">🌍</div>
                     <div class="fact-content">
                         <strong>Global Cities:</strong> Common in Bangkok, Miami, Delhi summers
                     </div>
@@ -219,9 +216,6 @@
                         </ol>
                     </div>
                 </div>
-                <div class="conversion-image">
-                    <img src="/images/33c-comparison-infographic.png" alt="Infographic comparing 33°C to common temperatures: cooler than body temp (37°C), hotter than room temp (21°C), similar to hot summer days in many cities" width="600" height="300" loading="lazy">
-                </div>
             </div>
         </section>
 
@@ -277,9 +271,7 @@
 
         <section class="global-context" role="region" aria-labelledby="global-title">
             <h2 id="global-title">33°C Around the World</h2>
-            <div class="map-container">
-                <img src="/images/33c-global-map.png" alt="World map highlighting regions where 33°C is common: Southeast Asia, Northern Australia, Southern Europe, Southern US, North Africa" width="800" height="400" loading="lazy">
-            </div>
+
             
             <div class="city-table-container">
                 <table class="city-table">
@@ -555,43 +547,48 @@
         </section>
     </main>
 
-    <footer>
+        <footer class="site-footer" role="contentinfo">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Celsius to Fahrenheit Converter</h3>
-                    <p>Trusted temperature conversion resource since 2020. Our team of meteorologists and health professionals ensure accurate, actionable information.</p>
-                    <div class="sources">
-                        <h4>Scientific Sources</h4>
-                        <ul>
-                            <li>World Health Organization Heat Guidelines</li>
-                            <li>National Weather Service Heat Index</li>
-                            <li>ASHRAE Thermal Comfort Standards</li>
+            <nav class="footer-navigation" aria-label="Footer navigation">
+                <div class="footer-links-grid">
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-nav-heading">Navigation</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-nav-heading">
+                            <li><a href="https://ctofconverter.com" class="footer-link">Celsius to Fahrenheit</a></li>
+                            <li><a href="https://ctofconverter.com/fahrenheit-to-celsius/" class="footer-link">Fahrenheit to Celsius</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-chart-heading">Chart</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-chart-heading">
+                            <li><a href="https://ctofconverter.com/celsius-to-fahrenheit-chart/" class="footer-link">Celsius to Fahrenheit Conversion Chart</a></li>
+                            <li><a href="https://ctofconverter.com/fan-oven-conversion-chart/" class="footer-link">Fan Oven Temperature Conversion Chart</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-legal-heading">Legal</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-legal-heading">
+                            <li><a href="https://ctofconverter.com/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                            <li><a href="https://ctofconverter.com/terms-of-service.html" class="footer-link">Terms of Service</a></li>
+                            <li><a href="https://ctofconverter.com/about-us.html" class="footer-link">About Us</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="https://ctofconverter.com">Celsius to Fahrenheit</a></li>
-                        <li><a href="https://ctofconverter.com/fahrenheit-to-celsius/">Fahrenheit to Celsius</a></li>
-                        <li><a href="https://ctofconverter.com/temperature-guides/">Temperature Guides</a></li>
-                        <li><a href="https://ctofconverter.com/heat-safety/">Heat Safety</a></li>
-                        <li><a href="https://ctofconverter.com/climate-data/">Climate Data</a></li>
-                    </ul>
+            </nav>
+            
+            <div class="footer-extra">
+                <div class="copyright-notice">
+                    <p>© 2025 Ctofconverter. All rights reserved.</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Connect</h3>
-                    <ul>
-                        <li><a href="https://ctofconverter.com/blog/">Temperature Blog</a></li>
-                        <li><a href="https://twitter.com/ctofconverter">Twitter Updates</a></li>
-                        <li><a href="https://ctofconverter.com/contact/">Contact Our Experts</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <p>&copy; 2025 ctofconverter.com. All rights reserved.</p>
-                    <p><a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms-of-service.html">Terms of Service</a></p>
-                    <p>Medical Disclaimer: Content not intended as health advice. Consult professionals for medical concerns.</p>
+                
+                <div class="back-to-top">
+                    <a href="#top" class="back-to-top-link" aria-label="Back to top">
+                        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24">
+                            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="currentColor"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
