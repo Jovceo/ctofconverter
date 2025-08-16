@@ -595,3 +595,274 @@ input[type="number"]:focus, select:focus {
         grid-template-columns: 1fr;
     }
 }
+
+/* 下载区域样式 */
+.download-section {
+    text-align: center;
+    margin: 40px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, var(--bg-light), #e8f4fd);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 15px 30px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 8px rgba(39,174,96,.3);
+}
+
+.download-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(39,174,96,.4);
+}
+
+.download-btn::before {
+    content: "📥 ";
+    margin-right: 8px;
+}
+
+/* 食品特定区域样式 */
+.food-specific {
+    margin: 40px 0;
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.food-specific h2 {
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.food-card {
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.food-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.1);
+}
+
+.food-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.food-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.food-card li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.food-card li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.food-card .tip {
+    margin-top: 15px;
+    padding: 10px;
+    background: #fff3cd;
+    border-left: 3px solid #ffc107;
+    border-radius: 4px;
+    font-style: italic;
+}
+
+/* 专业提示区域样式 */
+.pro-tips {
+    margin: 40px 0;
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.pro-tips h2 {
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.tip-card {
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    border-top: 4px solid var(--accent-color);
+    transition: var(--transition);
+}
+
+.tip-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,.1);
+}
+
+.tip-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.tip-card p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* FAQ手风琴样式 */
+.faq-section {
+    margin: 40px 0;
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.faq-section h2 {
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.accordion {
+    margin-top: 30px;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.accordion-btn {
+    width: 100%;
+    padding: 20px;
+    background: var(--bg-light);
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-btn:hover {
+    background: #e9ecef;
+}
+
+.accordion-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.accordion-btn .icon {
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.accordion-btn.active .icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: white;
+    padding: 0 20px;
+}
+
+.accordion-content p,
+.accordion-content ul,
+.accordion-content ol {
+    margin: 15px 0;
+}
+
+.accordion-content ul,
+.accordion-content ol {
+    padding-left: 30px;
+}
+
+.accordion-content li {
+    margin-bottom: 8px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .tab-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .tab-btn {
+        text-align: center;
+    }
+    
+    .food-grid,
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .accordion-btn {
+        font-size: 1rem;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .download-section,
+    .food-specific,
+    .pro-tips,
+    .faq-section {
+        padding: 20px;
+        margin: 20px 0;
+    }
+    
+    .food-card,
+    .tip-card {
+        padding: 20px;
+    }
+}
