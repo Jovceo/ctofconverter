@@ -1,4 +1,32 @@
-/* 全局样式 */
+/* e:/Trae-CN/ctofconverter/fan-oven-conversion-chart/styles.css */
+/* 整合主页样式的风扇烤箱转换专用样式 */
+
+/* 主页变量和基础样式 */
+:root {
+    --primary-color: #3498db;
+    --primary-dark: #2980b9;
+    --secondary-color: #2c3e50;
+    --accent-color: #27ae60;
+    --accent-hover: #219653;
+    --danger-color: #e74c3c;
+    --danger-hover: #c0392b;
+    --text-color: #333;
+    --text-light: #7f8c8d;
+    --text-dark: #2c3e50;
+    --bg-color: #f9f9f9;
+    --bg-light: #f8f9fa;
+    --bg-dark: #edf2f7;
+    --border-color: #ddd;
+    --border-radius: 8px;
+    --box-shadow: 0 6px 15px rgba(0,0,0,.1);
+    --transition: all .3s ease;
+    --container-width: 1200px;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --highlight-color: #f39c12;
+    --tooltip-bg: rgba(44,62,80,.95);
+}
+
+/* 全局重置和基础样式 */
 * {
     margin: 0;
     padding: 0;
@@ -6,248 +34,564 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-main);
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-header {
-    background: linear-gradient(135deg, #2c3e50, #3498db);
-    color: white;
+a:focus, button:focus, input:focus {
+    outline: 2px solid #06c;
+    outline-offset: 2px;
+}
+
+.sr-only, .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.sr-only-focusable:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: #fff;
+    z-index: 9999;
+    clip: auto;
+    white-space: normal;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* 主页导航样式 - 完全复制 */
+.site-logo {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+}
+
+.site-logo a {
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    transition: var(--transition);
+}
+
+.site-logo a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+}
+
+.site-header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 40px 0;
     text-align: center;
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+    position: relative;
 }
 
-h1 {
+.site-header h1 {
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.main-nav {
+    background-color: var(--secondary-color);
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    transition: var(--transition);
+}
+
+.main-nav.scrolled {
+    padding: 10px 0;
+    background-color: rgba(44,62,80,.95);
+    backdrop-filter: blur(10px);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 25px;
+    padding: 0 15px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: var(--transition);
+    font-weight: 500;
+    display: block;
+    letter-spacing: .3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+    transform: translateX(-50%);
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    width: 70%;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: rgba(52,152,219,.15);
+    color: #fff;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 1002;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.menu-icon {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+.mobile-menu-toggle.active .menu-icon:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active .menu-icon:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active .menu-icon:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* 面包屑导航 */
+.breadcrumb {
+    display: flex;
+    list-style: none;
+    margin: 20px 0;
+    padding: 10px 15px;
+    background-color: var(--bg-light);
+    border-radius: 4px;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span[aria-hidden="true"] {
+    margin: 0 10px;
+    color: #aaa;
+}
+
+/* 风扇烤箱转换页面特殊样式 */
+.intro-section {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.intro-section h1 {
+    color: var(--text-dark);
+    font-size: 2.8rem;
+    margin-bottom: 15px;
 }
 
 .subtitle {
-    font-size: 1.1rem;
-    opacity: 0.9;
+    font-size: 1.3rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
 }
 
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+.meta-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    color: var(--text-light);
+    font-size: 0.95rem;
 }
 
-section {
+.author {
+    font-weight: 600;
+}
+
+.conversion-tool {
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 2rem;
-    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    margin-bottom: 40px;
 }
 
-h2 {
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
+.tool-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
 }
 
-/* 转换计算器样式 */
-.calculator-container {
-    max-width: 600px;
-    margin: 0 auto;
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .input-group {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-dark);
 }
 
 input[type="number"], select {
-    flex: 1;
-    padding: 0.8rem;
-    border: 2px solid #ddd;
-    border-radius: 4px;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
     font-size: 1rem;
+    transition: var(--transition);
 }
 
-button {
-    width: 100%;
-    padding: 1rem;
-    background-color: #3498db;
+input[type="number"]:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52,152,219,.2);
+}
+
+.primary-btn {
+    background-color: var(--accent-color);
     color: white;
+    padding: 15px;
     border: none;
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: var(--transition);
 }
 
-button:hover {
-    background-color: #2980b9;
+.primary-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
 }
 
-.results {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background-color: #f8f9fa;
+.result-section {
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-color);
+}
+
+.result-box {
+    text-align: center;
+}
+
+.result-label {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.result-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.time-note {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
     border-radius: 4px;
-    min-height: 60px;
 }
 
 /* 转换表格样式 */
-.table-container {
-    margin-bottom: 2rem;
-    overflow-x: auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-
-th, td {
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-
-th {
-    background-color: #2c3e50;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background-color: #f8f9fa;
-}
-
-/* 烹饪提示样式 */
-.tips-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-
-.tip {
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 4px;
-    border-left: 4px solid #3498db;
-}
-
-.tip h3 {
-    color: #2c3e50;
-    margin-bottom: 0.8rem;
-}
-
-/* 页脚样式 */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #2c3e50;
-    color: white;
-    margin-top: 3rem;
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    .input-group {
-        flex-direction: column;
-    }
-
-    section {
-        padding: 1.5rem;
-    }
-
-    th, td {
-        padding: 0.8rem;
-    }
-}
-.faq-container {
-    margin-top: 20px;
-}
-.faq-item {
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
-}
-.faq-item h3 {
-    margin-top: 0;
-    color: #333;
-}
-.faq-item p {
-    color: #666;
-}
-.country-tip {
-    background-color: #f8f9fa; /* 浅灰色背景 */
-    border-left: 4px solid #007bff; /* 蓝色左边框 */
-    padding: 15px; /* 内边距 */
-    margin: 20px 0; /* 外边距 */
-    font-size: 16px; /* 字体大小 */
-    line-height: 1.6; /* 行高 */
-}
-
-.country-tip strong {
-    color: #007bff; /* 蓝色字体 */
-    margin-right: 5px; /* 右边距 */
-}
-
-
-/* 新增通知样式 */
-.notice {
-    background-color: #f0f8ff; /* 淡蓝色背景 */
-    border-left: 4px solid #1e90ff; /* 蓝色左边框 */
-    padding: 1rem; /* 内边距 */
-    margin-bottom: 1.5rem; /* 底部外边距 */
-    border-radius: 4px; /* 圆角 */
-}
-
-.notice p {
-    margin: 0; /* 去除段落的外边距 */
-}
-
-/* 新增转换表格样式 */
 .conversion-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
-}
-
-.conversion-table th, .conversion-table td {
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid #ddd;
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
 }
 
 .conversion-table th {
-    background-color: #2c3e50;
+    background-color: var(--secondary-color);
     color: white;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.conversion-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .conversion-table tr:nth-child(even) {
-    background-color: #f8f9fa;
+    background-color: var(--bg-light);
 }
 
-/* 新增厨师提示样式 */
-.pro-tip {
-    background-color: #fff3cd; /* 淡黄色背景 */
-    border-left: 4px solid #ffc107; /* 黄色左边框 */
-    padding: 1rem; /* 内边距 */
-    margin-top: 1.5rem; /* 顶部外边距 */
-    border-radius: 4px; /* 圆角 */
+.conversion-table tr:hover {
+    background-color: rgba(52,152,219,.05);
 }
 
-.pro-tip p {
-    margin: 0; /* 去除段落的外边距 */
+/* 标签页样式 */
+.tabbed-interface {
+    margin: 30px 0;
+}
+
+.tab-buttons {
     display: flex;
-    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
 }
 
-.pro-tip p::before {
-    content: "💡";
-    margin-right: 0.5rem;
+.tab-btn {
+    padding: 12px 24px;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.tab-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* 专业提示样式 */
+.pro-tip {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+}
+
+.country-tip {
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.notice {
+    background-color: #f0f8ff;
+    border-left: 4px solid #1e90ff;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+
+/* 主页页脚样式 - 完全复制 */
+.site-footer {
+    background-color: var(--secondary-color);
+    color: #ecf0f1;
+    padding: 3rem 0 2rem;
+    font-size: .95rem;
+    line-height: 1.6;
+    margin-top: auto;
+}
+
+.footer-navigation {
+    margin-bottom: 2.5rem;
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 2rem;
+}
+
+.footer-links-group {
+    margin-bottom: 1rem;
+}
+
+.footer-heading {
+    color: #bdc3c7;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.footer-link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link-list li {
+    margin-bottom: .7rem;
+}
+
+.footer-link {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color .2s ease;
+    display: inline-block;
+    padding: .2rem 0;
+}
+
+.footer-link:hover, .footer-link:focus {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.footer-extra {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,.1);
+    gap: 1.5rem;
+}
+
+.copyright-notice {
+    flex: 2;
+    text-align: center;
+    color: #bdc3c7;
+    font-size: .9rem;
+}
+
+/* 响应式设计 - 整合主页和媒体查询 */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px 15px;
+        padding: 0;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links li a {
+        display: block;
+        padding: 12px;
+        font-size: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .tool-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-links-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-extra {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-section h1 {
+        font-size: 2rem;
+    }
+    
+    .footer-links-grid {
+        grid-template-columns: 1fr;
+    }
 }
