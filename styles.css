@@ -704,3 +704,146 @@ a:hover {
 .result-image img {
     display: inline-block;
 }
+
+/* 在文件顶部添加媒体查询断点变量 */
+:root {
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+/* 完善移动优先的响应式设计 */
+
+/* 移动设备优先的基础样式 */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* 小屏幕设备 (576px及以上) */
+@media (min-width: 576px) {
+  body {
+    font-size: 17px;
+  }
+  
+  .input-group {
+    flex-direction: row;
+  }
+  
+  .input-group input {
+    width: 220px;
+  }
+  
+  .examples-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+/* 平板设备 (768px及以上) */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  
+  .nav-links {
+    display: flex;
+  }
+  
+  .mobile-menu-toggle {
+    display: none;
+  }
+  
+  .converter-box {
+    margin: 2rem;
+    padding: 2.5rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* 桌面设备 (992px及以上) */
+@media (min-width: 992px) {
+  .hero {
+    padding: 6rem 0;
+  }
+  
+  .converter-box {
+    margin: 3rem auto;
+    max-width: 800px;
+  }
+  
+  .tips-container {
+    flex-wrap: nowrap;
+  }
+}
+
+/* 大屏幕设备 (1200px及以上) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  
+  .big-result {
+    font-size: 4rem;
+  }
+}
+
+/* 改进移动导航 */
+.mobile-menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--text-color);
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+  .convert-btn, .copy-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+  
+  .input-group input {
+    font-size: 18px;
+    padding: 15px;
+  }
+  
+  a, button {
+    touch-action: manipulation;
+  }
+}
+
+/* 优化表单元素响应式行为 */
+.formula {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+}
+
+.big-result, #fahrenheit-result {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+/* 图片响应式调整 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 确保文本在小屏幕上不溢出 */
+.conversion-result h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* 优化表格响应式显示 */
+table {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
