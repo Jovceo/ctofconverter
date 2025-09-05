@@ -83,6 +83,10 @@ svg[aria-hidden="true"] {
   contain: layout style paint;
 }
 
+#history-section {
+  min-height: 200px; /* 根据您的实际历史列表高度调整此值 */
+}
+
 /* ===== 原有样式（保留） ===== */
 :root {
   --primary-color: #3498db;
