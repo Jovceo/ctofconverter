@@ -1,42 +1,80 @@
-/* ******* 新增：CLS 与性能优化 ******* */
-@font-face {
-  font-family: 'Segoe UI';
-  src: local('Segoe UI'), local('Helvetica'), local('Arial');
-  font-display: swap;
+/* ************ 新增：CLS & 性能优化 ************ */
+/* 1. 主区域固定高度占位，防止骨架屏撑开 */
+main#main-content {
+  min-height: 1200px;          /* 根据实际页面高度微调 */
+  display: block;
+  position: relative;
 }
-
-/* 骨架屏 */
-.skeleton {
+main#main-content.skeleton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
   animation: loading 1.5s infinite;
-  border-radius: 4px;
-  min-height: 20px;
+  z-index: 1;
+}
+main#main-content.skeleton > * {
+  position: relative;
+  z-index: 2;
 }
 @keyframes loading {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
 
-/* 预留空间：防止 CLS */
+/* 2. 字体度量统一，减少 swap 跳动 */
+body,
+input,
+button,
 .result-value,
-#history-list,
+.step-description {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  font-size-adjust: 0.54;   /* x 高度一致 */
+}
+
+/* 3. 按钮宽度锁定，文字变化不 reflow */
+#copy-btn {
+  min-width: 80px;
+  transition: background-color 0.3s ease;
+}
+
+/* 4. 图标固化尺寸，SVG 不撑开 */
+svg[aria-hidden="true"] {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* 5. 历史记录高度锁定，不撑父级 */
+#history-list {
+  min-height: 50px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: block;
+}
+
+/* 6. 结果/步骤预留空间 */
+.result-value,
 .step-visualization span {
   min-height: 40px;
   display: block;
 }
-#copy-btn {
-  min-width: 80px;
-}
 
-/* 限制重排范围 */
+/* 7. 限制重排范围 */
 .converter-tool,
 .formula-section,
 .faq-section {
   contain: layout style paint;
 }
 
-/* ******* 原有样式（保留） ******* */
+/* ************ 原有样式（保留） ************ */
 :root {
   --primary-color: #3498db;
   --primary-dark: #2980b9;
@@ -61,7 +99,7 @@
   --tooltip-bg: rgba(44, 62, 80, 0.95);
 }
 
-/* 日常温度转换页面样式 */
+/* 日常转换 & 更新卡片 */
 .daily-conversions {
   margin: 2rem 0;
   padding: 1.5rem;
@@ -131,7 +169,7 @@
   }
 }
 
-/* 每日更新样式 */
+/* 每日更新 */
 .daily-updates {
   margin: 2rem 0;
   padding: 1.5rem;
@@ -211,7 +249,7 @@
   }
 }
 
-/* 基础样式 */
+/* 基础与布局 */
 * {
   margin: 0;
   padding: 0;
@@ -1288,7 +1326,7 @@ footer {
   }
 }
 
-/* 增强的温度转换部分样式 */
+/* ************ 增强转换区域样式 ************ */
 .conversion-section {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   border-radius: 12px;
@@ -1379,7 +1417,7 @@ footer {
   }
 }
 
-/* 转换公式部分样式 */
+/* 转换公式 */
 .conversion-formula {
   background-color: white;
   border-radius: 10px;
@@ -1430,7 +1468,7 @@ footer {
   left: 100%;
 }
 
-/* 计算步骤部分样式 */
+/* 计算步骤 */
 .calculation-steps {
   background-color: #f8f9fa;
   border-radius: 8px;
@@ -1500,7 +1538,7 @@ footer {
   background-color: #27ae60;
 }
 
-/* 烤箱温度指南部分样式 */
+/* 烤箱温度对比表 */
 .temperature-comparison {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   border-radius: 12px;
@@ -1580,7 +1618,7 @@ footer {
   background-color: rgba(52, 152, 219, 0.1);
 }
 
-/* When to Use 部分样式 */
+/* When to Use 部分 */
 .temperature-comparison .use-case {
   background: linear-gradient(135deg, #fff8e1 0%, #fffde7 100%);
   border-radius: 10px;
@@ -1643,7 +1681,7 @@ footer {
   border-radius: 5px;
 }
 
-/* 转换等式图片样式 */
+/* 转换等式图片 */
 .conversion-equation-image {
   border-radius: 8px;
   border: 1px solid #e0e0e0;
@@ -1654,7 +1692,7 @@ footer {
   height: auto;
 }
 
-/* 温度转换图表部分 */
+/* 温度转换图表 */
 .temperature-conversion-chart {
   margin: 2rem 0;
   padding: 1rem;
