@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Celsius to Fahrenheit | °C to °F Converter</title>
     <meta name="description" content="Convert Celsius to Fahrenheit quickly with the C to F Converter. Get results instantly, learn the formula, and check the conversion chart.">
     <link rel="canonical" href="https://ctofconverter.com">
@@ -22,49 +22,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="application-name" content="C to F Converter">
     <meta name="theme-color" content="#3498db">
-
-    <!-- 字体显示优化：减少 CLS -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-        @font-face {
-            font-family: 'Segoe UI';
-            src: local('Segoe UI'), local('Helvetica'), local('Arial');
-            font-display: swap;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        /* 骨架屏 */
-        .skeleton {
-            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-            background-size: 200% 100%;
-            animation: loading 1.5s infinite;
-            border-radius: 4px;
-            min-height: 20px;
-        }
-        @keyframes loading {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-        /* 预留空间：防止 CLS */
-        .result-value, #history-list, .step-visualization span {
-            min-height: 40px;
-            display: block;
-        }
-        #copy-btn {
-            min-width: 80px;
-        }
-        /* 限制重排范围 */
-        .converter-tool, .formula-section, .faq-section {
-            contain: layout style paint;
-        }
-    </style>
-
-    <!-- 主样式 -->
-    <link rel="preload" href="styles.min.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
-
-    <!-- 结构化数据 -->
+    <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -85,16 +43,17 @@
 </head>
 
 <body>
-    <a class="sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
-    <div class="site-logo">
-        <a href="https://ctofconverter.com" aria-label="Home - Celsius to Fahrenheit Converter">
-            <span aria-hidden="true">C to F Converter</span>
-            <span class="sr-only">Celsius to Fahrenheit Converter</span>
-        </a>
-    </div>
-
-    <header>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    
+    <header class="site-header">
         <div class="container">
+            <div class="site-logo">
+                <a href="https://ctofconverter.com" aria-label="Home - Celsius to Fahrenheit Converter">
+                    <span aria-hidden="true">C to F Converter</span>
+                    <span class="sr-only">Celsius to Fahrenheit Converter</span>
+                </a>
+            </div>
+
             <h1>Celsius to Fahrenheit Converter (°C to °F)</h1>
             <p class="tagline">Free online temperature conversion tool that instantly converts degrees Celsius (°C) to degrees Fahrenheit (°F), with conversion formulas and detailed steps.</p>
         </div>
@@ -119,14 +78,14 @@
     </nav>
 
     <main id="main-content" class="container">
-        <nav aria-label="Breadcrumb navigation">
+        <nav aria-label="Breadcrumb navigation" class="breadcrumb-nav">
             <ol class="breadcrumb">
                 <li><a href="https://ctofconverter.com">Home</a></li>
                 <li aria-current="page">Celsius to Fahrenheit</li>
             </ol>
         </nav>
 
-        <section class="converter-tool skeleton" role="region" aria-labelledby="converter-title">
+        <section class="converter-tool" role="region" aria-labelledby="converter-title">
             <h2 id="converter-title" class="converter-title">Celsius to Fahrenheit Converter</h2>
             <p class="converter-description">Instantly convert <span class="nowrap">°C to °F</span> for free. Ideal for cooking, travel, and science. Get accurate results in seconds!</p>
 
@@ -147,8 +106,8 @@
                         <label id="fahrenheit-label">Fahrenheit (°F)</label>
                         <button class="info-btn" aria-label="About Fahrenheit scale" data-tooltip="Water freezes at 32°F and boils at 212°F">ℹ️</button>
                     </div>
-                    <output class="result-value" id="fahrenheit-result" style="min-height: 40px;">--</output>
-                    <button class="btn" id="copy-btn" style="min-width: 80px;" aria-label="Copy temperature result to clipboard">
+                    <output class="result-value" id="fahrenheit-result">--</output>
+                    <button class="btn" id="copy-btn" aria-label="Copy temperature result to clipboard">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" fill="currentColor"/>
                         </svg>
@@ -167,7 +126,7 @@
                         <span>Clear History</span>
                     </button>
                 </div>
-                <ul id="history-list" class="history-list" style="min-height: 50px;"></ul>
+                <ul id="history-list" class="history-list"></ul>
                 <p id="empty-history-message" class="sr-only" aria-live="polite">No conversion history available</p>
             </section>
 
@@ -190,7 +149,7 @@
                         <h4 class="step-title" itemprop="name">Multiply by 9/5</h4>
                         <div class="step-description" itemprop="text">Multiply the Celsius temperature by 9/5 (or 1.8)</div>
                         <div class="step-visualization" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                            <span itemprop="text" id="step1-viz" style="min-height: 30px; display: inline-block;" aria-live="polite"></span>
+                            <span itemprop="text" id="step1-viz" aria-live="polite"></span>
                         </div>
                     </div>
                 </div>
@@ -201,7 +160,7 @@
                         <h4 class="step-title" itemprop="name">Add 32</h4>
                         <div class="step-description" itemprop="text">Add 32 to the result from step 1</div>
                         <div class="step-visualization" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                            <span itemprop="text" id="step2-viz" style="min-height: 30px; display: inline-block;" aria-live="polite"></span>
+                            <span itemprop="text" id="step2-viz" aria-live="polite"></span>
                         </div>
                     </div>
                 </div>
@@ -212,7 +171,7 @@
                         <h4 class="step-title" itemprop="name">Final Result</h4>
                         <div class="step-description" itemprop="text">Get the final Fahrenheit temperature result</div>
                         <div class="step-visualization" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                            <span itemprop="text" id="step3-viz" style="min-height: 30px; display: inline-block;" aria-live="polite"></span>
+                            <span itemprop="text" id="step3-viz" aria-live="polite"></span>
                         </div>
                     </div>
                 </div>
@@ -463,13 +422,7 @@
             </div>
         </div>
     </footer>
-
-    <script defer>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-E3QWK9X5HG');
-    </script>
-        <script src="https://ctofconverter.com/scripts.min.js" defer></script>
+    
+    <script src="script.js" defer></script>
 </body>
 </html>
