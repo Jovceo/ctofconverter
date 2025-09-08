@@ -8,435 +8,660 @@
     <link rel="canonical" href="https://ctofconverter.com/c-to-f-calculator/" />
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0ea5e9">
-    
-    <link rel="preconnect" href="https://ctofconverter.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap">
+    <meta name="author" content="Temperature Conversion Experts">
+    <link rel="icon" href="https://ctofconverter.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://ctofconverter.com/apple-touch-icon.png">
+    <meta property="og:title" content="C to F Calculator: Fast & Accurate Temperature Conversion">
+    <meta property="og:description" content="Free mobile-friendly Celsius to Fahrenheit converter. Get instant, accurate results with fever guidance.">
+    <meta property="og:image" content="https://ctofconverter.com/converter.png">
+    <meta property="og:url" content="https://ctofconverter.com/c-to-f-calculator/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="C to F Calculator: Fast & Accurate">
+    <meta name="twitter:description" content="Free mobile-friendly Celsius to Fahrenheit converter with instant results.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="application-name" content="C to F Calculator">
     
     <style>
-        /* System fonts as fallback to prevent layout shifts during font loading */
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
-        
-        :root {
-            --primary: #0ea5e9;
-            --primary-dark: #0284c7;
-            --secondary: #f97316;
-            --light-bg: #f8fafc;
-            --dark-bg: #0f172a;
-            --text: #1e293b;
-            --text-light: #64748b;
-            --border: #e2e8f0;
-            --success: #22c55e;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --radius: 12px;
-            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
+        /* Reset and base styles */
+        *, *::before, *::after {
             box-sizing: border-box;
-        }
-        
-        body {
-            background: var(--light-bg);
-            color: var(--text);
-            line-height: 1.6;
-            padding: 0;
             margin: 0;
+            padding: 0;
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+
+        :root {
+            --primary-color: #3498db;
+            --primary-dark: #2980b9;
+            --secondary-color: #2ecc71;
+            --text-color: #333;
+            --text-light: #777;
+            --bg-light: #f9f9f9;
+            --border-color: #e0e0e0;
+            --error-color: #e74c3c;
+            --success-color: #2ecc71;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
         }
-        
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Skip link for accessibility */
         .skip-link {
             position: absolute;
             top: -40px;
             left: 0;
-            background: var(--primary);
+            background: var(--primary-color);
             color: white;
             padding: 8px;
-            z-index: 10000;
-            text-decoration: none;
+            z-index: 100;
+            transition: var(--transition);
         }
-        
+
         .skip-link:focus {
             top: 0;
         }
-        
-        /* Reserve space for dynamic content to prevent layout shifts */
-        .result {
-            min-height: 150px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            padding: 25px;
-            background: var(--light-bg);
-            border-radius: var(--radius);
-            margin: 20px 0;
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
         }
-        
-        .result-value {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin: 10px 0;
-            min-height: 60px;
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            color: var(--text-color);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Header */
+        .site-header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .site-logo a {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        /* Navigation */
+        .main-nav {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .main-nav .container {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
+            padding: 0 1rem;
         }
-        
-        #fever-indicator {
-            min-height: 30px;
-        }
-        
-        /* Additional critical CSS rules below */
-        .breadcrumb {
-            padding: 12px 0;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-        }
-        
-        .breadcrumb ol {
+
+        .nav-links {
             display: flex;
             list-style: none;
-            flex-wrap: wrap;
         }
-        
-        .breadcrumb li {
-            display: flex;
-            align-items: center;
+
+        .nav-links li {
+            margin: 0;
         }
-        
-        .breadcrumb li:not(:last-child)::after {
-            content: "/";
-            margin: 0 10px;
-            color: var(--text-light);
-        }
-        
-        .breadcrumb a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-        
-        .breadcrumb span[aria-current="page"] {
-            color: var(--text-light);
-            font-weight: 500;
-        }
-        
-        header {
-            text-align: center;
-            padding: 30px 0;
-            margin-bottom: 20px;
-        }
-        
-        .kicker {
-            display: inline-block;
-            background: rgba(14, 165, 233, 0.1);
-            color: var(--primary);
-            padding: 8px 16px;
-            border-radius: 100px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            border: 1px solid rgba(14, 165, 233, 0.2);
-        }
-        
-        h1 {
-            font-size: 2.8rem;
-            color: var(--dark-bg);
-            margin-bottom: 15px;
-            line-height: 1.2;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .card {
-            background: white;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            padding: 30px;
-            margin-bottom: 30px;
-            border: 1px solid var(--border);
-        }
-        
-        .converter {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        
-        @media (max-width: 768px) {
-            .converter {
-                grid-template-columns: 1fr;
-            }
-            
-            .breadcrumb {
-                font-size: 0.85rem;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .card {
-                padding: 20px;
-            }
-            
-            .result-value {
-                font-size: 2.8rem;
-            }
-            
-            .quick-buttons {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        .input-group {
-            margin-bottom: 20px;
-        }
-        
-        label {
+
+        .nav-links a {
+            color: white;
+            padding: 1rem;
             display: block;
-            font-weight: 600;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
         }
-        
-        input, select {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid var(--border);
-            border-radius: var(--radius);
-            font-size: 1.1rem;
-            transition: all 0.3s;
+
+        .nav-links a.active {
+            background-color: var(--primary-dark);
         }
-        
-        input:focus, select:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+
+        .nav-links a:hover {
+            background-color: var(--primary-dark);
         }
-        
-        .mode-toggle {
-            display: flex;
-            background: var(--light-bg);
-            border-radius: var(--radius);
-            padding: 5px;
-            margin-bottom: 20px;
-        }
-        
-        .mode-btn {
-            flex: 1;
-            padding: 12px;
-            text-align: center;
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 30px;
             background: transparent;
             border: none;
-            border-radius: 8px;
-            font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
+            padding: 0;
         }
-        
+
+        .menu-icon {
+            width: 30px;
+            height: 3px;
+            background: white;
+            border-radius: 5px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb-nav {
+            margin: 1rem 0;
+        }
+
+        .breadcrumb {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        .breadcrumb li {
+            margin-right: 0.5rem;
+        }
+
+        .breadcrumb li:not(:last-child)::after {
+            content: "/";
+            margin-left: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .breadcrumb a {
+            color: var(--text-light);
+        }
+
+        .breadcrumb [aria-current="page"] {
+            color: var(--text-color);
+        }
+
+        /* Card styles */
+        .card {
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        /* Converter styles */
+        .mode-toggle {
+            display: flex;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+            box-shadow: var(--shadow);
+        }
+
+        .mode-btn {
+            flex: 1;
+            padding: 0.75rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
         .mode-btn.active {
-            background: var(--primary);
+            background-color: var(--primary-color);
             color: white;
         }
-        
-        .badge {
-            display: inline-block;
-            padding: 6px 12px;
-            border-radius: 100px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            margin-left: 10px;
+
+        .converter {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
         }
-        
-        .badge.normal {
-            background: rgba(34, 197, 94, 0.15);
-            color: var(--success);
+
+        @media (min-width: 768px) {
+            .converter {
+                grid-template-columns: 1fr 1fr;
+            }
         }
-        
-        .badge.fever {
-            background: rgba(245, 158, 11, 0.15);
-            color: var(--warning);
+
+        .input-group {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
         }
-        
-        .badge.high {
-            background: rgba(239, 68, 68, 0.15);
-            color: var(--danger);
+
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
         }
-        
+
+        .input-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1.1rem;
+        }
+
+        .result {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .result-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
         .quick-buttons {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 10px;
-            margin: 20px 0;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.75rem;
+            margin: 1.5rem 0;
         }
-        
+
         .quick-btn {
-            padding: 12px;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
             background: white;
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: var(--transition);
         }
-        
+
         .quick-btn:hover {
-            background: var(--primary);
+            background-color: var(--primary-color);
             color: white;
-            border-color: var(--primary);
         }
-        
+
         .action-buttons {
             display: flex;
-            gap: 10px;
-            margin: 20px 0;
+            gap: 1rem;
+            justify-content: center;
         }
-        
+
         .btn {
-            padding: 14px 25px;
-            border-radius: var(--radius);
-            font-weight: 600;
-            cursor: pointer;
-            border: none;
-            font-size: 1rem;
-            transition: all 0.2s;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: var(--transition);
         }
-        
+
         .btn-primary {
-            background: var(--primary);
+            background-color: var(--primary-color);
             color: white;
         }
-        
+
         .btn-primary:hover {
-            background: var(--primary-dark);
+            background-color: var(--primary-dark);
         }
-        
+
         .btn-secondary {
-            background: white;
-            color: var(--text);
-            border: 1px solid var(--border);
+            background-color: #f1f1f1;
+            color: var(--text-color);
         }
-        
+
         .btn-secondary:hover {
-            background: var(--light-bg);
+            background-color: #e1e1e1;
         }
-        
-        .formula {
-            background: rgba(14, 165, 233, 0.05);
-            padding: 20px;
-            border-radius: var(--radius);
-            margin: 30px 0;
-            border-left: 4px solid var(--primary);
+
+        .btn svg {
+            margin-right: 0.5rem;
         }
-        
+
+        /* Formula styles */
         .formula-code {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
             font-family: monospace;
-            font-size: 1.3rem;
-            background: white;
-            padding: 15px;
-            border-radius: var(--radius);
-            display: inline-block;
-            margin: 15px 0;
-            border: 1px solid var(--border);
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 1rem 0;
+            box-shadow: var(--shadow);
         }
-        
+
+        /* Table styles */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            background: white;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
+            margin: 1.5rem 0;
         }
-        
+
         th, td {
-            padding: 15px;
+            padding: 0.75rem;
             text-align: left;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--border-color);
         }
-        
+
         th {
-            background: var(--light-bg);
-            font-weight: 700;
+            background-color: var(--bg-light);
+            font-weight: bold;
         }
-        
-        tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .faq {
-            margin: 40px 0;
-        }
-        
+
+        /* FAQ styles */
         .faq-item {
-            margin-bottom: 15px;
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
             overflow: hidden;
         }
-        
+
         .faq-question {
-            padding: 20px;
-            background: white;
-            font-weight: 700;
+            padding: 1.5rem;
+            font-weight: bold;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background-color: var(--bg-light);
         }
-        
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.5rem;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "-";
+        }
+
         .faq-answer {
-            padding: 0 20px 20px;
-            background: white;
-            border-top: 1px solid var(--border);
-            display: none;
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+
+        /* Fever indicator */
+        .fever-indicator {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .fever-normal {
+            background-color: #e6ffe6;
+            color: var(--success-color);
+        }
+
+        .fever-low {
+            background-color: #fff3e0;
+            color: #ff9800;
+        }
+
+        .fever-moderate {
+            background-color: #fff3e0;
+            color: #ff9800;
+        }
+
+        .fever-high {
+            background-color: #ffe6e6;
+            color: var(--error-color);
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+
+        .footer-navigation {
+            margin-bottom: 2rem;
+        }
+
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-links-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .footer-heading {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-link-list {
+            list-style: none;
+        }
+
+        .footer-link-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-link {
+            color: #ecf0f1;
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .footer-extra {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .copyright-notice {
+            color: #bdc3c7;
+        }
+
+        .back-to-top-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .back-to-top-link:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Utility classes */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        .kicker {
+            color: var(--primary-color);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 767px) {
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                display: none;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .footer-extra {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.25rem;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+            
+            .card {
+                padding: 1rem;
+            }
+            
+            .input-group {
+                padding: 1rem;
+            }
+            
+            .quick-buttons {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
-    
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Celsius to Fahrenheit Converter",
+      "name": "Celsius to Fahrenheit Calculator",
       "url": "https://ctofconverter.com/c-to-f-calculator/",
-      "applicationCategory": "Calculator",
-      "operatingSystem": "Any",
-      "description": "A free online tool to convert temperatures between Celsius and Fahrenheit quickly and accurately. Includes fever guidance, quick presets, and conversion formulas."
+      "description": "Free online tool to convert temperatures from Celsius to Fahrenheit with detailed calculation steps and fever guidance",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
     }
     </script>
-    
-    <link rel="preload" as="image" href="https://ctofconverter.com/converter.png">
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -512,7 +737,7 @@
             
             <div class="result">
                 <div class="result-value" id="main-result">--</div>
-                <div id="fever-indicator"></div>
+                <div id="fever-indicator" class="fever-indicator"></div>
             </div>
             
             <div class="quick-buttons">
@@ -734,26 +959,22 @@
             </div>
         </div>
     </footer>
-    
-    <link rel="stylesheet" href="https://ctofconverter.com/header-footer.css" media="print" onload="this.media='all'">
-    
+
     <script>
-        // Use requestIdleCallback to defer loading non-critical JavaScript
-        if ('requestIdleCallback' in window) {
-            window.requestIdleCallback(loadNonCriticalJS, { timeout: 2000 });
-        } else {
-            setTimeout(loadNonCriticalJS, 2000);
-        }
-        
-        function loadNonCriticalJS() {
-            var script = document.createElement('script');
-            script.src = '/path/to/non-critical.js';
-            script.async = true;
-            document.body.appendChild(script);
-        }
-        
-        // Inline critical JavaScript
         document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuToggle && navLinks) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Converter functionality
             const tempInput = document.getElementById('temp-input');
             const tempResult = document.getElementById('temp-result');
             const mainResult = document.getElementById('main-result');
@@ -765,125 +986,123 @@
             const copyBtn = document.getElementById('copy-btn');
             const clearBtn = document.getElementById('clear-btn');
             const quickButtons = document.querySelectorAll('.quick-btn');
+            const faqItems = document.querySelectorAll('.faq-item');
             
-            let conversionMode = 'c-to-f';
+            let conversionMode = 'c-to-f'; // Default mode
             
-            // Set labels based on mode
-            function updateLabels() {
-                if (conversionMode === 'c-to-f') {
+            // Set up mode toggle
+            modeCtoF.addEventListener('click', () => setMode('c-to-f'));
+            modeFtoC.addEventListener('click', () => setMode('f-to-c'));
+            
+            function setMode(mode) {
+                conversionMode = mode;
+                
+                if (mode === 'c-to-f') {
+                    modeCtoF.classList.add('active');
+                    modeFtoC.classList.remove('active');
                     inputLabel.textContent = 'Celsius (°C)';
                     resultLabel.textContent = 'Fahrenheit (°F)';
                 } else {
+                    modeCtoF.classList.remove('active');
+                    modeFtoC.classList.add('active');
                     inputLabel.textContent = 'Fahrenheit (°F)';
                     resultLabel.textContent = 'Celsius (°C)';
                 }
+                
+                // Recalculate if there's a value
+                if (tempInput.value) {
+                    convertTemperature();
+                }
             }
             
-            // Convert temperature based on mode
+            // Convert temperature on input
+            tempInput.addEventListener('input', convertTemperature);
+            
             function convertTemperature() {
-                const value = parseFloat(tempInput.value);
+                const inputValue = parseFloat(tempInput.value);
                 
-                if (isNaN(value)) {
+                if (isNaN(inputValue)) {
                     tempResult.value = '';
                     mainResult.textContent = '--';
-                    feverIndicator.innerHTML = '';
+                    feverIndicator.textContent = '';
+                    feverIndicator.className = 'fever-indicator';
                     return;
                 }
                 
-                let result, displayValue;
-                
+                let result;
                 if (conversionMode === 'c-to-f') {
-                    result = (value * 9/5) + 32;
-                    displayValue = `${value}°C = ${result.toFixed(1)}°F`;
-                    checkFever(value);
+                    result = (inputValue * 9/5) + 32;
+                    tempResult.value = result.toFixed(1) + ' °F';
+                    mainResult.textContent = result.toFixed(1) + ' °F';
+                    
+                    // Fever indicator for C to F conversion
+                    if (inputValue >= 36.5 && inputValue <= 37.2) {
+                        feverIndicator.textContent = 'Normal body temperature';
+                        feverIndicator.className = 'fever-indicator fever-normal';
+                    } else if (inputValue >= 37.3 && inputValue <= 38.0) {
+                        feverIndicator.textContent = 'Low-grade fever';
+                        feverIndicator.className = 'fever-indicator fever-low';
+                    } else if (inputValue >= 38.1 && inputValue <= 39.0) {
+                        feverIndicator.textContent = 'Moderate fever';
+                        feverIndicator.className = 'fever-indicator fever-moderate';
+                    } else if (inputValue > 39.0) {
+                        feverIndicator.textContent = 'High fever';
+                        feverIndicator.className = 'fever-indicator fever-high';
+                    } else {
+                        feverIndicator.textContent = '';
+                        feverIndicator.className = 'fever-indicator';
+                    }
                 } else {
-                    result = (value - 32) * 5/9;
-                    displayValue = `${value}°F = ${result.toFixed(1)}°C`;
-                    checkFever(result);
+                    result = (inputValue - 32) * 5/9;
+                    tempResult.value = result.toFixed(1) + ' °C';
+                    mainResult.textContent = result.toFixed(1) + ' °C';
+                    
+                    // Fever indicator for F to C conversion
+                    if (inputValue >= 97.7 && inputValue <= 99.0) {
+                        feverIndicator.textContent = 'Normal body temperature';
+                        feverIndicator.className = 'fever-indicator fever-normal';
+                    } else if (inputValue >= 99.1 && inputValue <= 100.4) {
+                        feverIndicator.textContent = 'Low-grade fever';
+                        feverIndicator.className = 'fever-indicator fever-low';
+                    } else if (inputValue >= 100.5 && inputValue <= 102.2) {
+                        feverIndicator.textContent = 'Moderate fever';
+                        feverIndicator.className = 'fever-indicator fever-moderate';
+                    } else if (inputValue > 102.2) {
+                        feverIndicator.textContent = 'High fever';
+                        feverIndicator.className = 'fever-indicator fever-high';
+                    } else {
+                        feverIndicator.textContent = '';
+                        feverIndicator.className = 'fever-indicator';
+                    }
                 }
-                
-                tempResult.value = result.toFixed(1);
-                mainResult.textContent = displayValue;
             }
-            
-            // Check for fever and display indicator
-            function checkFever(celsius) {
-                if (isNaN(celsius)) {
-                    feverIndicator.innerHTML = '';
-                    return;
-                }
-                
-                let badgeClass, badgeText;
-                
-                if (celsius >= 39.1) {
-                    badgeClass = 'high';
-                    badgeText = 'High Fever';
-                } else if (celsius >= 38.1) {
-                    badgeClass = 'fever';
-                    badgeText = 'Fever';
-                } else if (celsius >= 37.3) {
-                    badgeClass = 'fever';
-                    badgeText = 'Low-grade Fever';
-                } else if (celsius >= 36.5) {
-                    badgeClass = 'normal';
-                    badgeText = 'Normal';
-                } else {
-                    badgeClass = '';
-                    badgeText = '';
-                }
-                
-                if (badgeText) {
-                    feverIndicator.innerHTML = `<span class="badge ${badgeClass}">${badgeText}</span>`;
-                } else {
-                    feverIndicator.innerHTML = '';
-                }
-            }
-            
-            // Switch conversion mode
-            modeCtoF.addEventListener('click', function() {
-                modeCtoF.classList.add('active');
-                modeFtoC.classList.remove('active');
-                conversionMode = 'c-to-f';
-                updateLabels();
-                convertTemperature();
-            });
-            
-            modeFtoC.addEventListener('click', function() {
-                modeFtoC.classList.add('active');
-                modeCtoC.classList.remove('active');
-                conversionMode = 'f-to-c';
-                updateLabels();
-                convertTemperature();
-            });
             
             // Copy result to clipboard
             copyBtn.addEventListener('click', function() {
                 if (tempResult.value) {
-                    navigator.clipboard.writeText(tempResult.value).then(function() {
+                    navigator.clipboard.writeText(tempResult.value).then(() => {
+                        const originalText = copyBtn.textContent;
                         copyBtn.textContent = 'Copied!';
-                        setTimeout(function() {
-                            copyBtn.innerHTML = `
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
-                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
-                                </svg>
-                                Copy Result
-                            `;
+                        setTimeout(() => {
+                            copyBtn.textContent = originalText;
                         }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
                     });
                 }
             });
             
-            // Clear input and result
+            // Clear inputs
             clearBtn.addEventListener('click', function() {
                 tempInput.value = '';
                 tempResult.value = '';
                 mainResult.textContent = '--';
-                feverIndicator.innerHTML = '';
+                feverIndicator.textContent = '';
+                feverIndicator.className = 'fever-indicator';
                 tempInput.focus();
             });
             
-            // Quick temperature buttons
+            // Quick buttons
             quickButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     const temp = this.getAttribute('data-temp');
@@ -892,35 +1111,16 @@
                 });
             });
             
-            // Convert on input change
-            tempInput.addEventListener('input', convertTemperature);
-            
-            // FAQ toggle functionality
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', function() {
-                    const answer = this.nextElementSibling;
-                    const isOpen = answer.style.display === 'block';
-                    
-                    // Close all answers
-                    document.querySelectorAll('.faq-answer').forEach(ans => {
-                        ans.style.display = 'none';
-                    });
-                    
-                    document.querySelectorAll('.faq-question span').forEach(span => {
-                        span.textContent = '+';
-                    });
-                    
-                    // Open clicked answer if it was closed
-                    if (!isOpen) {
-                        answer.style.display = 'block';
-                        this.querySelector('span').textContent = '−';
-                    }
+            // FAQ accordion
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
                 });
             });
             
-            // Initialize
-            updateLabels();
+            // Focus management for accessibility
+            tempInput.focus();
         });
     </script>
 </body>
