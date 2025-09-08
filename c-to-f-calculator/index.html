@@ -9,17 +9,11 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0ea5e9">
     
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://ctofconverter.com/header-footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://ctofconverter.com/header-footer.css"></noscript>
-    
-    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://ctofconverter.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Preload fonts to prevent layout shifts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap">
     
-    <!-- Inline critical CSS -->
     <style>
         /* System fonts as fallback to prevent layout shifts during font loading */
         body {
@@ -430,7 +424,6 @@
         }
     </style>
     
-    <!-- Structured data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -443,7 +436,6 @@
     }
     </script>
     
-    <!-- Preload hero image if exists -->
     <link rel="preload" as="image" href="https://ctofconverter.com/converter.png">
 </head>
 <body>
@@ -743,12 +735,10 @@
         </div>
     </footer>
     
-    <!-- Defer non-critical CSS -->
     <link rel="stylesheet" href="https://ctofconverter.com/header-footer.css" media="print" onload="this.media='all'">
     
-    <!-- Async load JavaScript -->
     <script>
-        // 使用requestIdleCallback延迟加载非关键JavaScript
+        // Use requestIdleCallback to defer loading non-critical JavaScript
         if ('requestIdleCallback' in window) {
             window.requestIdleCallback(loadNonCriticalJS, { timeout: 2000 });
         } else {
@@ -762,7 +752,7 @@
             document.body.appendChild(script);
         }
         
-        // 内联关键JavaScript
+        // Inline critical JavaScript
         document.addEventListener('DOMContentLoaded', function() {
             const tempInput = document.getElementById('temp-input');
             const tempResult = document.getElementById('temp-result');
@@ -860,7 +850,7 @@
             
             modeFtoC.addEventListener('click', function() {
                 modeFtoC.classList.add('active');
-                modeCtoF.classList.remove('active');
+                modeCtoC.classList.remove('active');
                 conversionMode = 'f-to-c';
                 updateLabels();
                 convertTemperature();
@@ -875,7 +865,7 @@
                             copyBtn.innerHTML = `
                                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                                     <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
-                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 极 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
                                 </svg>
                                 Copy Result
                             `;
