@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C to F Calculator: Convert Fast & Accurate</title>
+    <meta name="description" content="Free mobile-friendly Celsius to Fahrenheit converter. Get instant, accurate results with fever guidance. No ads, just the tool you need.">
+    <link rel="canonical" href="https://ctofconverter.com/c-to-f-calculator/" />
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0ea5e9">
+    
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="C to F Calculator - Instant Celsius to Fahrenheit Converter">
+    <meta property="og:description" content="Free online Celsius to Fahrenheit calculator with fever ranges, charts and conversion formula.">
+    <meta property="og:url" content="https://ctofconverter.com/">
+    <meta property="og:image" content="https://ctofconverter.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --primary-dark: #0284c7;
+            --secondary: #f97316;
+            --light-bg: #f8fafc;
+            --dark-bg: #0f172a;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --radius: 12px;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        
+        body {
+            background: var(--light-bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 20px;
+        }
+        
+        .kicker {
+            display: inline-block;
+            background: rgba(14, 165, 233, 0.1);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            border: 1px solid rgba(14, 165, 233, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            color: var(--dark-bg);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border);
+        }
+        
+        .converter {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .converter {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        
+        input:focus, select:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+        }
+        
+        .mode-toggle {
+            display: flex;
+            background: var(--light-bg);
+            border-radius: var(--radius);
+            padding: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .mode-btn {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            background: transparent;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .mode-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .result {
+            text-align: center;
+            padding: 25px;
+            background: var(--light-bg);
+            border-radius: var(--radius);
+            margin: 20px 0;
+        }
+        
+        .result-value {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+        
+        .badge.normal {
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--success);
+        }
+        
+        .badge.fever {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--warning);
+        }
+        
+        .badge.high {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--danger);
+        }
+        
+        .quick-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .quick-btn {
+            padding: 12px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .quick-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .btn {
+            padding: 14px 25px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--light-bg);
+        }
+        
+        .formula {
+            background: rgba(14, 165, 233, 0.05);
+            padding: 20px;
+            border-radius: var(--radius);
+            margin: 30px 0;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .formula-code {
+            font-family: monospace;
+            font-size: 1.3rem;
+            background: white;
+            padding: 15px;
+            border-radius: var(--radius);
+            display: inline-block;
+            margin: 15px 0;
+            border: 1px solid var(--border);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        th {
+            background: var(--light-bg);
+            font-weight: 700;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .faq {
+            margin: 40px 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background: white;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 20px 20px;
+            background: white;
+            border-top: 1px solid var(--border);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+            color: var(--text-light);
+            border-top: 1px solid var(--border);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .result-value {
+                font-size: 2.8rem;
+            }
+            
+            .quick-buttons {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="kicker">Fast & Accurate</div>
+            <h1>Celsius to Fahrenheit Calculator</h1>
+            <p class="subtitle">Instantly convert temperatures between Celsius and Fahrenheit with our easy-to-use tool. Perfect for cooking, weather, and medical use.</p>
+        </header>
+        
+        <div class="card">
+            <h2>Temperature Converter</h2>
+            
+            <div class="mode-toggle">
+                <button class="mode-btn active" id="mode-c-to-f">°C to °F</button>
+                <button class="mode-btn" id="mode-f-to-c">°F to °C</button>
+            </div>
+            
+            <div class="converter">
+                <div class="input-group">
+                    <label for="temp-input" id="input-label">Celsius (°C)</label>
+                    <input type="number" id="temp-input" placeholder="Enter temperature" inputmode="decimal">
+                </div>
+                
+                <div class="input-group">
+                    <label for="temp-result" id="result-label">Fahrenheit (°F)</label>
+                    <input type="text" id="temp-result" readonly placeholder="Result will appear here">
+                </div>
+            </div>
+            
+            <div class="result">
+                <div class="result-value" id="main-result">--</div>
+                <div id="fever-indicator"></div>
+            </div>
+            
+            <div class="quick-buttons">
+                <button class="quick-btn" data-temp="0">0°C (Freezing)</button>
+                <button class="quick-btn" data-temp="20">20°C (Room)</button>
+                <button class="quick-btn" data-temp="37">37°C (Body)</button>
+                <button class="quick-btn" data-temp="100">100°C (Boiling)</button>
+                <button class="quick-btn" data-temp="-18">-18°C (Cold)</button>
+                <button class="quick-btn" data-temp="200">200°C (Oven)</button>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn btn-primary" id="copy-btn">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    </svg>
+                    Copy Result
+                </button>
+                <button class="btn btn-secondary" id="clear-btn">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                    </svg>
+                    Clear
+                </button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Conversion Formula</h2>
+            <div class="formula">
+                <p>The formula to convert Celsius to Fahrenheit is:</p>
+                <div class="formula-code">°F = (°C × 9/5) + 32</div>
+                <p>And to convert Fahrenheit to Celsius:</p>
+                <div class="formula-code">°C = (°F - 32) × 5/9</div>
+                <p><strong>Quick approximation:</strong> Double the Celsius temperature and add 30 to get a rough estimate in Fahrenheit.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Common Temperature Conversions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Celsius (°C)</th>
+                        <th>Fahrenheit (°F)</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>-40</td>
+                        <td>-40</td>
+                        <td>Extremely cold</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>32</td>
+                        <td>Water freezing point</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>68</td>
+                        <td>Room temperature</td>
+                    </tr>
+                    <tr>
+                        <td>37</td>
+                        <td>98.6</td>
+                        <td>Normal body temperature</td>
+                    </tr>
+                    <tr>
+                        <td>100</td>
+                        <td>212</td>
+                        <td>Water boiling point</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>Body Temperature Guide</h2>
+            <p>When converting body temperature for medical purposes, precision is important. Here are common fever reference points:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Celsius (°C)</th>
+                        <th>Fahrenheit (°F)</th>
+                        <th>Medical Indication</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>36.5 - 37.2</td>
+                        <td>97.7 - 99.0</td>
+                        <td>Normal range</td>
+                    </tr>
+                    <tr>
+                        <td>37.3 - 38.0</td>
+                        <td>99.1 - 100.4</td>
+                        <td>Low-grade fever</td>
+                    </tr>
+                    <tr>
+                        <td>38.1 - 39.0</td>
+                        <td>100.6 - 102.2</td>
+                        <td>Moderate fever</td>
+                    </tr>
+                    <tr>
+                        <td>39.1 - 41.0</td>
+                        <td>102.4 - 105.8</td>
+                        <td>High fever</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p class="disclaimer"><strong>Disclaimer:</strong> This information is for reference only. Always consult a healthcare professional for medical advice.</p>
+        </div>
+        
+        <div class="card faq">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I convert Celsius to Fahrenheit?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Use the formula: °F = (°C × 9/5) + 32. For example, to convert 20°C to Fahrenheit: (20 × 9/5) + 32 = 68°F. Our calculator above does this instantly for any temperature.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Why is the formula (°C × 9/5) + 32?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>The Fahrenheit and Celsius scales have different zero points and degree sizes. The ratio of degree sizes is 9/5 (each Fahrenheit degree is 5/9 of a Celsius degree), and the 32 accounts for the offset between the two scales at their zero points.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What is the easiest way to approximate Celsius to Fahrenheit conversion?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Double the Celsius temperature and add 30. This will give you an approximate Fahrenheit value that's fairly close for everyday temperatures (e.g., 20°C × 2 = 40, + 30 = 70°F, actual value is 68°F).</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    At what temperature are Celsius and Fahrenheit equal?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>At -40 degrees, the Celsius and Fahrenheit scales are equal: -40°C = -40°F.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 CtoFConverter.com - Celsius to Fahrenheit Temperature Converter</p>
+            <p>This tool provides accurate conversions but should not be used for critical applications without verification.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tempInput = document.getElementById('temp-input');
+            const tempResult = document.getElementById('temp-result');
+            const mainResult = document.getElementById('main-result');
+            const feverIndicator = document.getElementById('fever-indicator');
+            const inputLabel = document.getElementById('input-label');
+            const resultLabel = document.getElementById('result-label');
+            const modeCtoF = document.getElementById('mode-c-to-f');
+            const modeFtoC = document.getElementById('mode-f-to-c');
+            const copyBtn = document.getElementById('copy-btn');
+            const clearBtn = document.getElementById('clear-btn');
+            const quickButtons = document.querySelectorAll('.quick-btn');
+            
+            let conversionMode = 'c-to-f';
+            
+            // Set labels based on mode
+            function updateLabels() {
+                if (conversionMode === 'c-to-f') {
+                    inputLabel.textContent = 'Celsius (°C)';
+                    resultLabel.textContent = 'Fahrenheit (°F)';
+                } else {
+                    inputLabel.textContent = 'Fahrenheit (°F)';
+                    resultLabel.textContent = 'Celsius (°C)';
+                }
+            }
+            
+            // Convert temperature based on mode
+            function convertTemperature() {
+                const value = parseFloat(tempInput.value);
+                
+                if (isNaN(value)) {
+                    tempResult.value = '';
+                    mainResult.textContent = '--';
+                    feverIndicator.innerHTML = '';
+                    return;
+                }
+                
+                let result, displayValue;
+                
+                if (conversionMode === 'c-to-f') {
+                    result = (value * 9/5) + 32;
+                    displayValue = `${value}°C = ${result.toFixed(1)}°F`;
+                    checkFever(value);
+                } else {
+                    result = (value - 32) * 5/9;
+                    displayValue = `${value}°F = ${result.toFixed(1)}°C`;
+                    checkFever(result);
+                }
+                
+                tempResult.value = result.toFixed(1);
+                mainResult.textContent = displayValue;
+            }
+            
+            // Check for fever and display indicator
+            function checkFever(celsius) {
+                if (isNaN(celsius)) {
+                    feverIndicator.innerHTML = '';
+                    return;
+                }
+                
+                let badgeClass, badgeText;
+                
+                if (celsius >= 39.1) {
+                    badgeClass = 'high';
+                    badgeText = 'High Fever';
+                } else if (celsius >= 38.1) {
+                    badgeClass = 'fever';
+                    badgeText = 'Fever';
+                } else if (celsius >= 37.3) {
+                    badgeClass = 'fever';
+                    badgeText = 'Low-grade Fever';
+                } else if (celsius >= 36.5) {
+                    badgeClass = 'normal';
+                    badgeText = 'Normal';
+                } else {
+                    badgeClass = '';
+                    badgeText = '';
+                }
+                
+                if (badgeText) {
+                    feverIndicator.innerHTML = `<span class="badge ${badgeClass}">${badgeText}</span>`;
+                } else {
+                    feverIndicator.innerHTML = '';
+                }
+            }
+            
+            // Switch conversion mode
+            modeCtoF.addEventListener('click', function() {
+                modeCtoF.classList.add('active');
+                modeFtoC.classList.remove('active');
+                conversionMode = 'c-to-f';
+                updateLabels();
+                convertTemperature();
+            });
+            
+            modeFtoC.addEventListener('click', function() {
+                modeFtoC.classList.add('active');
+                modeCtoF.classList.remove('active');
+                conversionMode = 'f-to-c';
+                updateLabels();
+                convertTemperature();
+            });
+            
+            // Copy result to clipboard
+            copyBtn.addEventListener('click', function() {
+                if (tempResult.value) {
+                    navigator.clipboard.writeText(tempResult.value).then(function() {
+                        copyBtn.textContent = 'Copied!';
+                        setTimeout(function() {
+                            copyBtn.innerHTML = `
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                </svg>
+                                Copy Result
+                            `;
+                        }, 2000);
+                    });
+                }
+            });
+            
+            // Clear input and result
+            clearBtn.addEventListener('click', function() {
+                tempInput.value = '';
+                tempResult.value = '';
+                mainResult.textContent = '--';
+                feverIndicator.innerHTML = '';
+                tempInput.focus();
+            });
+            
+            // Quick temperature buttons
+            quickButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const temp = this.getAttribute('data-temp');
+                    tempInput.value = temp;
+                    convertTemperature();
+                });
+            });
+            
+            // Input event listener
+            tempInput.addEventListener('input', convertTemperature);
+            
+            // FAQ toggle
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const isOpen = answer.style.display === 'block';
+                    
+                    // Close all answers
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        ans.style.display = 'none';
+                    });
+                    
+                    document.querySelectorAll('.faq-question span').forEach(span => {
+                        span.textContent = '+';
+                    });
+                    
+                    // Open clicked answer if it was closed
+                    if (!isOpen) {
+                        answer.style.display = 'block';
+                        this.querySelector('span').textContent = '-';
+                    }
+                });
+            });
+            
+            // Initialize
+            updateLabels();
+            tempInput.focus();
+        });
+    </script>
+</body>
+</html>
