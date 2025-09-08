@@ -9,13 +9,92 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0ea5e9">
     
-    <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="C to F Calculator - Instant Celsius to Fahrenheit Converter">
     <meta property="og:description" content="Free online Celsius to Fahrenheit calculator with fever ranges, charts and conversion formula.">
     <meta property="og:url" content="https://ctofconverter.com/c-to-f-calculator/">
     <meta property="og:image" content="https://ctofconverter.com/converter.png">
     <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Celsius to Fahrenheit Converter",
+      "url": "https://ctofconverter.com/c-to-f-calculator/",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "Any",
+      "description": "A free online tool to convert temperatures between Celsius and Fahrenheit quickly and accurately. Includes fever guidance, quick presets, and conversion formulas."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ctofconverter.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "C to F Calculator",
+          "item": "https://ctofconverter.com/c-to-f-calculator/"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I convert Celsius to Fahrenheit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the formula: °F = (°C × 9/5) + 32. Our calculator above does this instantly for any temperature."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is the formula (°C × 9/5) + 32?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Fahrenheit and Celsius scales have different zero points and degree sizes. The ratio of degree sizes is 9/5 (each Fahrenheit degree is 5/9 of a Celsius degree), and the 32 accounts for the offset between the two scales at their zero points."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "At what temperature are Celsius and Fahrenheit equal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At -40 degrees, the Celsius and Fahrenheit scales are equal: -40°C = -40°F."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you convert C to F easily?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a quick approximation, double the Celsius temperature and add 30. This method gives you a close estimate for everyday temperatures. For example, 20°C × 2 = 40, + 30 = 70°F (actual value is 68°F). For precise conversion, use the exact formula: °F = (°C × 9/5) + 32."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you calculate C for F?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To convert Fahrenheit to Celsius, use the formula: °C = (°F - 32) × 5/9. For example, to convert 100°F to Celsius: (100 - 32) × 5/9 = 37.8°C. For a quick approximation, subtract 30 from the Fahrenheit temperature and divide by 2."
+          }
+        }
+      ]
+    }
+    </script>
     
     <style>
         :root {
@@ -53,6 +132,44 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+        }
+        
+        /* 面包屑导航样式 */
+        .breadcrumb {
+            padding: 12px 0;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb ol {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .breadcrumb li {
+            display: flex;
+            align-items: center;
+        }
+        
+        .breadcrumb li:not(:last-child)::after {
+            content: "/";
+            margin: 0 10px;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumb span[aria-current="page"] {
+            color: var(--text-light);
+            font-weight: 500;
         }
         
         header {
@@ -105,6 +222,10 @@
         @media (max-width: 768px) {
             .converter {
                 grid-template-columns: 1fr;
+            }
+            
+            .breadcrumb {
+                font-size: 0.85rem;
             }
         }
         
@@ -364,6 +485,18 @@
 </head>
 <body>
     <div class="container">
+        <!-- 面包屑导航 -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li>
+                    <a href="https://ctofconverter.com/">Home</a>
+                </li>
+                <li>
+                    <span aria-current="page">C to F Calculator</span>
+                </li>
+            </ol>
+        </nav>
+        
         <header>
             <div class="kicker">Fast & Accurate</div>
             <h1>Celsius to Fahrenheit Calculator</h1>
@@ -522,7 +655,7 @@
                     <span>+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Use the formula: °F = (°C × 9/5) + 32. For example, to convert <a href="https://ctofconverter.com/20-c-to-f.html" target="_blank">20°C to Fahrenheit</a>: (20 × 9/5) + 32 = 68°F. Our calculator above does this instantly for any temperature.</p>
+                    <p>Use the formula: °F = (°C × 9/5) + 32. For example, to convert <a href="https://ctofconverter.com/40-c-to-f.html" target="_blank">40°C to Fahrenheit</a>: (40 × 9/5) + 32 = 104°F. Our calculator above does this instantly for any temperature.</p>
                 </div>
             </div>
             
@@ -535,17 +668,7 @@
                     <p>The Fahrenheit and Celsius scales have different zero points and degree sizes. The ratio of degree sizes is 9/5 (each Fahrenheit degree is 5/9 of a Celsius degree), and the 32 accounts for the offset between the two scales at their zero points.</p>
                 </div>
             </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    What is the easiest way to approximate Celsius to Fahrenheit conversion?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Double the Celsius temperature and add 30. This will give you an approximate Fahrenheit value that's fairly close for everyday temperatures (e.g., 20°C × 2 = 40, + 30 = 70°F, actual value is 68°F).</p>
-                </div>
-            </div>
-            
+              
             <div class="faq-item">
                 <div class="faq-question">
                     At what temperature are Celsius and Fahrenheit equal?
@@ -555,12 +678,37 @@
                     <p>At -40 degrees, the Celsius and Fahrenheit scales are equal: -40°C = -40°F.</p>
                 </div>
             </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do you convert C to F easily?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>For a quick approximation, double the Celsius temperature and add 30. This method gives you a close estimate for everyday temperatures. For example, 20°C × 2 = 40, + 30 = 70°F (actual value is 68°F). For precise conversion, use the exact formula: °F = (°C × 9/5) + 32.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do you calculate C for F?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>To convert Fahrenheit to Celsius, use the formula: °C = (°F - 32) × 5/9. For example, to convert <a href="https://ctofconverter.com/100-f-to-c.html" target="_blank">100°F to Celsius</a>: (100 - 32) × 5/9 = 37.8°C. For a quick approximation, subtract 30 from the Fahrenheit temperature and divide by 2. This gives a close estimate for everyday temperatures.</p>
+                </div>
+            </div>
         </div>
     </div>
     
     <footer>
         <div class="container">
             <p>© 2025 CtoFConverter.com</p>
+            <p>
+                <a href="https://ctofconverter.com/about-us.html">About Us</a> | 
+                <a href="https://ctofconverter.com/privacy-policy.html">Privacy Policy</a> | 
+                <a href="https://ctofconverter.com/terms-of-service.html">Terms of Service</a>
+            </p>
         </div>
     </footer>
 
