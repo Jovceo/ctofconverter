@@ -96,6 +96,7 @@
     }
     </script>
     
+    <link rel="stylesheet" href="header-footer.css">
     <style>
         :root {
             --primary: #0ea5e9;
@@ -452,14 +453,6 @@
             border-top: 1px solid var(--border);
         }
         
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            margin-top: 50px;
-            color: var(--text-light);
-            border-top: 1px solid var(--border);
-        }
-        
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.2rem;
@@ -484,15 +477,48 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <ol>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    
+    <header class="site-header">
+        <div class="container">
+            <div class="site-logo">
+                <a href="https://ctofconverter.com" aria-label="Home - Celsius to Fahrenheit Converter">
+                    <span aria-hidden="true">C to F Converter</span>
+                    <span class="sr-only">Celsius to Fahrenheit Converter</span>
+                </a>
+            </div>
+
+            <h1>C to F Calculator: Convert Fast & Accurate</h1>
+            <p class="tagline">Free mobile-friendly Celsius to Fahrenheit converter. Get instant, accurate results with fever guidance.</p>
+        </div>
+    </header>
+
+    <nav class="main-nav" role="navigation" aria-label="Main temperature conversion navigation">
+        <div class="container">
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li>
-                    <a href="https://ctofconverter.com/">Home</a>
+                    <a href="https://ctofconverter.com" aria-label="Convert Celsius to Fahrenheit">Celsius to Fahrenheit</a>
                 </li>
                 <li>
-                    <span aria-current="page">C to F Calculator</span>
+                    <a href="https://ctofconverter.com/fahrenheit-to-celsius/" aria-label="Convert Fahrenheit to Celsius">Fahrenheit to Celsius</a>
                 </li>
+                <li>
+                    <a href="https://ctofconverter.com/c-to-f-calculator/" class="active" aria-current="page" aria-label="Fast Celsius to Fahrenheit calculator">Quick C to F Calculator</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="container">
+        <nav aria-label="Breadcrumb navigation" class="breadcrumb-nav">
+            <ol class="breadcrumb">
+                <li><a href="https://ctofconverter.com">Home</a></li>
+                <li aria-current="page">C to F Calculator</li>
             </ol>
         </nav>
         
@@ -698,19 +724,55 @@
                 </div>
             </div>
         </div>
-    </div>
-    
-    <footer>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
         <div class="container">
-            <p>© 2025 CtoFConverter.com</p>
-            <p>
-                <a href="https://ctofconverter.com/about-us.html">About Us</a> | 
-                <a href="https://ctofconverter.com/privacy-policy.html">Privacy Policy</a> | 
-                <a href="https://ctofconverter.com/terms-of-service.html">Terms of Service</a>
-            </p>
+            <nav class="footer-navigation" aria-label="Footer navigation">
+                <div class="footer-links-grid">
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-nav-heading">Navigation</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-nav-heading">
+                            <li><a href="https://ctofconverter.com" class="footer-link">Celsius to Fahrenheit</a></li>
+                            <li><a href="https://ctofconverter.com/fahrenheit-to-celsius/" class="footer-link">Fahrenheit to Celsius</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-chart-heading">Chart</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-chart-heading">
+                            <li><a href="https://ctofconverter.com/celsius-to-fahrenheit-chart/" class="footer-link">Celsius to Fahrenheit Conversion Chart</a></li>
+                            <li><a href="https://ctofconverter.com/fan-oven-conversion-chart/" class="footer-link">Fan Oven Temperature Conversion Chart</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-legal-heading">Legal</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-legal-heading">
+                            <li><a href="https://ctofconverter.com/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                            <li><a href="https://ctofconverter.com/terms-of-service.html" class="footer-link">Terms of Service</a></li>
+                            <li><a href="https://ctofconverter.com/about-us.html" class="footer-link">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="footer-extra">
+                <div class="copyright-notice">
+                    <p>© 2025 Ctofconverter. All rights reserved.</p>
+                    <p class="footer-meta">
+                        <span>Last updated: <time datetime="2025-09-08">September 8, 2025</time></span>
+                    </p>
+                </div>
+                <div class="back-to-top">
+                    <a href="#top" class="back-to-top-link" aria-label="Back to top">
+                        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24">
+                            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
-
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const tempInput = document.getElementById('temp-input');
