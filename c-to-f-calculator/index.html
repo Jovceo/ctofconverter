@@ -9,94 +9,14 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0ea5e9">
     
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="C to F Calculator - Instant Celsius to Fahrenheit Converter">
-    <meta property="og:description" content="Free online Celsius to Fahrenheit calculator with fever ranges, charts and conversion formula.">
-    <meta property="og:url" content="https://ctofconverter.com/c-to-f-calculator/">
-    <meta property="og:image" content="https://ctofconverter.com/converter.png">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Celsius to Fahrenheit Converter",
-      "url": "https://ctofconverter.com/c-to-f-calculator/",
-      "applicationCategory": "Calculator",
-      "operatingSystem": "Any",
-      "description": "A free online tool to convert temperatures between Celsius and Fahrenheit quickly and accurately. Includes fever guidance, quick presets, and conversion formulas."
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://ctofconverter.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "C to F Calculator",
-          "item": "https://ctofconverter.com/c-to-f-calculator/"
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How do I convert Celsius to Fahrenheit?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Use the formula: °F = (°C × 9/5) + 32. Our calculator above does this instantly for any temperature."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why is the formula (°C × 9/5) + 32?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Fahrenheit and Celsius scales have different zero points and degree sizes. The ratio of degree sizes is 9/5 (each Fahrenheit degree is 5/9 of a Celsius degree), and the 32 accounts for the offset between the two scales at their zero points."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "At what temperature are Celsius and Fahrenheit equal?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "At -40 degrees, the Celsius and Fahrenheit scales are equal: -40°C = -40°F."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you convert C to F easily?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For a quick approximation, double the Celsius temperature and add 30. This method gives you a close estimate for everyday temperatures. For example, 20°C × 2 = 40, + 30 = 70°F (actual value is 68°F). For precise conversion, use the exact formula: °F = (°C × 9/5) + 32."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you calculate C for F?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "To convert Fahrenheit to Celsius, use the formula: °C = (°F - 32) × 5/9. For example, to convert 100°F to Celsius: (100 - 32) × 5/9 = 37.8°C. For a quick approximation, subtract 30 from the Fahrenheit temperature and divide by 2."
-          }
-        }
-      ]
-    }
-    </script>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://ctofconverter.com/header-footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://ctofconverter.com/header-footer.css"></noscript>
     
-    <link rel="stylesheet" href="https://ctofconverter.com/header-footer.css">
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://ctofconverter.com">
+    
+    <!-- Inline critical CSS -->
     <style>
         :root {
             --primary: #0ea5e9;
@@ -133,6 +53,21 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: white;
+            padding: 8px;
+            z-index: 10000;
+            text-decoration: none;
+        }
+        
+        .skip-link:focus {
+            top: 0;
         }
         
         /* 面包屑导航样式 */
@@ -227,6 +162,26 @@
             
             .breadcrumb {
                 font-size: 0.85rem;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .result-value {
+                font-size: 2.8rem;
+            }
+            
+            .quick-buttons {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         
@@ -451,30 +406,27 @@
             padding: 0 20px 20px;
             background: white;
             border-top: 1px solid var(--border);
+            display: none;
         }
         
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .card {
-                padding: 20px;
-            }
-            
-            .result-value {
-                font-size: 2.8rem;
-            }
-            
-            .quick-buttons {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+        /* Critical above-the-fold styles only */
     </style>
+    
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Celsius to Fahrenheit Converter",
+      "url": "https://ctofconverter.com/c-to-f-calculator/",
+      "applicationCategory": "Calculator",
+      "operatingSystem": "Any",
+      "description": "A free online tool to convert temperatures between Celsius and Fahrenheit quickly and accurately. Includes fever guidance, quick presets, and conversion formulas."
+    }
+    </script>
+    
+    <!-- Preload hero image if exists -->
+    <link rel="preload" as="image" href="https://ctofconverter.com/converter.png">
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -773,7 +725,26 @@
         </div>
     </footer>
     
+    <!-- Defer non-critical CSS -->
+    <link rel="stylesheet" href="https://ctofconverter.com/header-footer.css" media="print" onload="this.media='all'">
+    
+    <!-- Async load JavaScript -->
     <script>
+        // 使用requestIdleCallback延迟加载非关键JavaScript
+        if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(loadNonCriticalJS, { timeout: 2000 });
+        } else {
+            setTimeout(loadNonCriticalJS, 2000);
+        }
+        
+        function loadNonCriticalJS() {
+            var script = document.createElement('script');
+            script.src = '/path/to/non-critical.js';
+            script.async = true;
+            document.body.appendChild(script);
+        }
+        
+        // 内联关键JavaScript
         document.addEventListener('DOMContentLoaded', function() {
             const tempInput = document.getElementById('temp-input');
             const tempResult = document.getElementById('temp-result');
@@ -913,10 +884,10 @@
                 });
             });
             
-            // Input event listener
+            // Convert on input change
             tempInput.addEventListener('input', convertTemperature);
             
-            // FAQ toggle
+            // FAQ toggle functionality
             const faqQuestions = document.querySelectorAll('.faq-question');
             faqQuestions.forEach(question => {
                 question.addEventListener('click', function() {
@@ -935,14 +906,13 @@
                     // Open clicked answer if it was closed
                     if (!isOpen) {
                         answer.style.display = 'block';
-                        this.querySelector('span').textContent = '-';
+                        this.querySelector('span').textContent = '−';
                     }
                 });
             });
             
             // Initialize
             updateLabels();
-            tempInput.focus();
         });
     </script>
 </body>
