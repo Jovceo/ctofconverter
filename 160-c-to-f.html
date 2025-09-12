@@ -95,25 +95,27 @@
       ]
     }
     </script>
-    <link rel="stylesheet" href="/styles.min.css">
-    <noscript><link rel="stylesheet" href="/styles.min.css"></noscript>
+    <link rel="stylesheet" href="header-footer.css">
+    <link rel="stylesheet" href="content.css">
 </head>
+
 <body>
-    <a class="sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
-    <div class="site-logo">
-        <a href="https://ctofconverter.com" aria-label="Home - Celsius to Fahrenheit Converter">
-            <span aria-hidden="true">C to F Converter</span>
-            <span class="sr-only">Celsius to Fahrenheit Converter</span>
-        </a>
-    </div>
-    <header>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    
+    <header class="site-header">
         <div class="container">
-            <h1>160°C to Fahrenheit (160 Degrees Celsius to °F)</h1>
-            <p class="tagline">Free online temperature conversion tool that instantly converts 160 degrees Celsius (160°C) to degrees Fahrenheit (°F), with conversion formulas and detailed steps.</p>
-            <p class="last-updated">Last updated: <time datetime="2025-08-02">August 2, 2025</time></p>
+            <div class="site-logo">
+                <a href="https://ctofconverter.com" aria-label="Home - Celsius to Fahrenheit Converter">
+                    <span aria-hidden="true">C to F Converter</span>
+                    <span class="sr-only">Celsius to Fahrenheit Converter</span>
+                </a>
+            </div>
+
+            <h1>Celsius to Fahrenheit Converter (°C to °F)</h1>
+            <p class="tagline">Free online temperature conversion tool that instantly converts degrees Celsius (°C) to degrees Fahrenheit (°F), with conversion formulas and detailed steps.</p>
         </div>
     </header>
-    
+
     <nav class="main-nav" role="navigation" aria-label="Main temperature conversion navigation">
         <div class="container">
             <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
@@ -123,28 +125,22 @@
             </button>
             <ul class="nav-links" id="nav-links">
                 <li>
-                    <a href="https://ctofconverter.com" 
-                       class="active" 
-                       aria-current="page"
-                       aria-label="Current page: Celsius to Fahrenheit Converter">
-                       Celsius to Fahrenheit
-                    </a>
+                    <a href="https://ctofconverter.com" class="active" aria-current="page">Celsius to Fahrenheit</a>
                 </li>
-                            <li>
-                    <a href="https://ctofconverter.com/fahrenheit-to-celsius/" 
-                       aria-label="Convert Fahrenheit to Celsius"
-                       title="Fahrenheit to Celsius Conversion">
-                       Fahrenheit to Celsius
-                    </a>
+                <li>
+                    <a href="https://ctofconverter.com/fahrenheit-to-celsius/" aria-label="Convert Fahrenheit to Celsius">Fahrenheit to Celsius</a>
+                </li>
+                <li>
+                    <a href="https://ctofconverter.com/c-to-f-calculator/" aria-label="Fast Celsius to Fahrenheit calculator">C to F Calculator</a>
                 </li>
             </ul>
         </div>
     </nav>
-    
+
     <main id="main-content" class="container">
-        <nav aria-label="Breadcrumb navigation">
+        <nav aria-label="Breadcrumb navigation" class="breadcrumb-nav">
             <ol class="breadcrumb">
-                <li><a href="https://ctofconverter.com">Celsius to Fahrenheit</a></li>
+                <li><a href="https://ctofconverter.com">Home</a></li>
                 <li aria-current="page">160°C to Fahrenheit</li>
             </ol>
         </nav>
@@ -173,52 +169,31 @@
                         <li>Result: 160°C = 320°F</li>
                     </ol>
                 </div>
-                
-                <div class="conversion-image">
-                    <img src="/images/160-celsius-to-fahrenheit-conversion.webp" alt="160°C to Fahrenheit result: 160 degrees Celsius equals 320°F" width="300" height="150" class="conversion-equation-image">
-                </div>
             </div>
         </section>
+
         <section class="converter-tool" role="region" aria-labelledby="converter-title">
             <h2 id="converter-title" class="converter-title">Celsius to Fahrenheit Converter</h2>
-            <p class="converter-description" aria-describedby="converter-title">
-                Instantly convert <span class="nowrap">°C to °F</span> for free. Ideal for cooking, travel, and science. Get accurate results in seconds!
-            </p>
-            
+            <p class="converter-description">Instantly convert <span class="nowrap">°C to °F</span> for free. Ideal for cooking, travel, and science. Get accurate results in seconds!</p>
+
             <div class="converter-form">
                 <div class="input-group">
                     <div class="input-header">
                         <label for="celsius">Celsius (°C)</label>
-                        <button class="info-btn" aria-label="About Celsius scale" data-tooltip="Water freezes at 0°C and boils at 100°C">
-                            ℹ️
-                        </button>
+                        <button class="info-btn" aria-label="About Celsius scale" data-tooltip="Water freezes at 0°C and boils at 100°C">ℹ️</button>
                     </div>
-                    <input type="number" id="celsius" 
-                           inputmode="decimal"
-                           placeholder="Enter Celsius temperature (e.g., 160)" 
-                           step="0.1"
-                           min="-273.15"
-                           aria-describedby="celsius-help celsius-tooltip validation-message"
-                           pattern="[0-9]*"
-                           autocomplete="off"
-                           autocorrect="off"
-                           autocapitalize="off"
-                           spellcheck="false">
-                    <div id="celsius-help" class="sr-only">
-                        Enter temperature between -273.15°C (absolute zero) and 1,000,000°C
-                    </div>
+                    <input type="number" id="celsius" inputmode="decimal" placeholder="e.g. 37.5" step="0.1" min="-273.15"
+                           aria-describedby="celsius-help validation-message"
+                           autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <div id="celsius-help" class="sr-only">Enter temperature between -273.15°C and 1,000,000°C</div>
                 </div>
-                
+
                 <div class="result-container" role="region" aria-live="polite" aria-atomic="true">
                     <div class="result-header">
                         <label id="fahrenheit-label">Fahrenheit (°F)</label>
-                        <button class="info-btn" aria-label="About Fahrenheit scale" data-tooltip="Water freezes at 32°F and boils at 212°F">
-                            ℹ️
-                        </button>
+                        <button class="info-btn" aria-label="About Fahrenheit scale" data-tooltip="Water freezes at 32°F and boils at 212°F">ℹ️</button>
                     </div>
-                    <output class="result-value" id="fahrenheit-result" aria-labelledby="fahrenheit-label" for="celsius">
-                        --
-                    </output>
+                    <output class="result-value" id="fahrenheit-result">--</output>
                     <button class="btn" id="copy-btn" aria-label="Copy temperature result to clipboard">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" fill="currentColor"/>
@@ -245,7 +220,7 @@
             </div>
         </section>
         
-        <section class="formula-section" role="region" aria-labelledby="practical-title">
+        <section class="practical-uses-section" role="region" aria-labelledby="practical-title">
             <h2 id="practical-title">Practical Applications of 160°C (320°F)</h2>
             <div class="practical-uses">
                 <div class="use-case">
@@ -339,100 +314,30 @@
             </ul>
         </section>
         
-        <section class="faq-section" role="region" aria-labelledby="faq-title">
-            <h2 id="faq-title">FAQs</h2>
-            <div class="faq-container">
-                <details class="faq-item" open>
-                    <summary class="faq-question">Is 160°C considered high temperature in cooking?</summary>
-                    <div class="faq-answer">
-                        <p>Yes, 160°C (320°F) is considered a medium-high cooking temperature. It is above the boiling point of water (100°C/212°F) and is suitable for baking crispy snacks, roasted vegetables and slow-cooked meats. However, for certain baking items that require higher temperatures (such as bread), a temperature of 180-200°C is usually required.</p>
-                    </div>
-                </details>
-            
-                <details class="faq-item">
-                    <summary class="faq-question">Is 160°C harmful?</summary>
-                    <div class="faq-answer">
-                        <p>Yes, temperatures of 160°C (320°F) are harmful to humans. Direct contact with this temperature can cause immediate and severe burns. Human skin begins to be damaged at approximately 44°C (111°F), and 160°C far exceeds this safety threshold. Proper safety precautions must be taken when using this temperature in cooking and industrial applications.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">Is 160°C a Fever? Understanding Body Temperature</summary>
-                    <div class="faq-answer">
-                        <p><strong>160°C is definitely not body temperature!</strong></p>
-                        <ul>
-                            <li>Normal human body temperature: 36.5°C-37.5°C (97.7°F-99.5°F)</li>
-                            <li>Fever: 38°C (100.4°F)</li>
-                            <li>160°C = 320°F, which is far beyond the human body's tolerance limit (human life is in danger above 42°C (107.6°F)).</li>
-                        </ul>
-                        <p><strong>Why do people search for "160 c to fever"?</strong></p>
-                        <p>It could be a typing error (e.g. trying to search for "38°C to F" but mistyping it as 160°C).</p>
-                        <p><strong>Humorous reminder:</strong></p>
-                        <p>"If your thermometer says 160°C (320°F), it must be broken or you're a walking oven!"</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">How do I convert 160 degrees celsius to Fahrenheit in my head?</summary>
-                    <div class="faq-answer">
-                        <p>A quick mental calculation: Multiply by 2 (160×2=320) then subtract 10% (320-32=288) and add 32 (288+32=320). This gives you the exact conversion of 320°F.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">Why is 160°C a common baking temperature?</summary>
-                    <div class="faq-answer">
-                        <p>160°C (320°F) is ideal for baking because it's hot enough to cook food thoroughly while allowing time for heat to penetrate evenly, preventing burnt exteriors and raw interiors.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">Can I use 160°C for sterilization?</summary>
-                    <div class="faq-answer">
-                        <p>While 160°C can kill many pathogens, most medical sterilization processes use higher temperatures (121°C-134°C) under pressure for complete effectiveness.</p>
-                    </div>
-                </details>
-            </div>
-        </section>
-        
-        <section class="reference-section" role="region" aria-labelledby="related-title">
+        <section class="related-conversions" role="region" aria-labelledby="related-title">
             <h2 id="related-title">Related Temperature Conversions</h2>
-            <div class="update-grid">
-                <article class="update-card">
-                    <p>160 Fahrenheit to Celsius</p>
-                    <p>160°F = 71.11°C</p>
-                </article>
-                
-                <article class="update-card">
-                    <p>160 Celsius to Kelvin</p>
-                    <p>160°C = 433.15K</p>
-                </article>
-                
-                <article class="update-card">
-                    <p>160 Kelvin to Celsius</p>
-                    <p>160K = -113.15°C</p>
-                </article>
-
-                <article class="update-card">
-                    <p>Minus 160 Celsius to Fahrenheit</p>
-                    <p>-160°C = -256°F</p>
-                </article>
+            <div class="related-links">
+                <a href="/100-c-to-f.html" class="related-link">100°C to Fahrenheit</a>
+                <a href="/180-c-to-f.html" class="related-link">180°C to Fahrenheit</a>
+                <a href="/200-c-to-f.html" class="related-link">200°C to Fahrenheit</a>
+                <a href="/220-c-to-f.html" class="related-link">220°C to Fahrenheit</a>
+                <a href="/250-c-to-f.html" class="related-link">250°C to Fahrenheit</a>
+                <a href="/fahrenheit-to-celsius/" class="related-link">Fahrenheit to Celsius</a>
             </div>
         </section>
     </main>
 
     <footer class="site-footer" role="contentinfo">
         <div class="container">
-            <nav class="footer-navigation" aria-label="Footer navigation">
-                <div class="footer-links-grid">
-                    <div class="footer-links-group">
-                        <h3 class="footer-heading" id="footer-nav-heading">Navigation</h3>
-                        <ul class="footer-link-list" aria-labelledby="footer-nav-heading">
-                            <li><a href="https://ctofconverter.com" class="footer-link">Celsius to Fahrenheit</a></li>
-                            <li><a href="https://ctofconverter.com/fahrenheit-to-celsius/" class="footer-link">Fahrenheit to Celsius</a></li>
-                        </ul>
-                    </div>
-                    
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Temperature Conversion</h3>
+                    <ul>
+                        <li><a href="https://ctofconverter.com">Celsius to Fahrenheit</a></li>
+                        <li><a href="https://ctofconverter.com/fahrenheit-to-celsius/">Fahrenheit to Celsius</a></li>
+                        <li><a href="https://ctofconverter.com/c-to-f-calculator/">C to F Calculator</a></li>
+                    </ul>
+                </div>
                     <div class="footer-links-group">
                         <h3 class="footer-heading" id="footer-chart-heading">Chart</h3>
                         <ul class="footer-link-list" aria-labelledby="footer-chart-heading">
@@ -440,33 +345,93 @@
                             <li><a href="https://ctofconverter.com/fan-oven-conversion-chart/" class="footer-link">Fan Oven Temperature Conversion Chart</a></li>
                         </ul>
                     </div>
-                    
-                    <div class="footer-links-group">
-                        <h3 class="footer-heading" id="footer-legal-heading">Legal</h3>
-                        <ul class="footer-link-list" aria-labelledby="footer-legal-heading">
-                            <li><a href="https://ctofconverter.com/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
-                            <li><a href="https://ctofconverter.com/terms-of-service.html" class="footer-link">Terms of Service</a></li>
-                           <li><a href="https://ctofconverter.com/about-us.html" class="footer-link">About Us</a></li>
-                        </ul>
-                    </div>
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="https://ctofconverter.com/about/">About</a></li>
+                        <li><a href="https://ctofconverter.com/contact/">Contact</a></li>
+                        <li><a href="https://ctofconverter.com/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="https://ctofconverter.com/terms-of-service/">Terms of Service</a></li>
+                    </ul>
                 </div>
-            </nav>
-            
-            <div class="footer-extra">
-                <div class="copyright-notice">
-                    <p>© 2025 Ctofconverter. All rights reserved.</p>
-                </div>
-                
-                <div class="back-to-top">
-                    <a href="#top" class="back-to-top-link" aria-label="Back to top">
-                        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24">
-                            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="currentColor"></path>
-                        </svg>
-                    </a>
-                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Celsius to Fahrenheit Converter. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <script src="scripts.min.js"></script>
+    
+    <script>
+        // Temperature conversion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const celsiusInput = document.getElementById('celsius');
+            const fahrenheitResult = document.getElementById('fahrenheit-result');
+            const copyBtn = document.getElementById('copy-btn');
+            const validationMessage = document.getElementById('validation-message');
+            
+            // Function to convert Celsius to Fahrenheit
+            function convertCtoF(celsius) {
+                return (celsius * 9/5) + 32;
+            }
+            
+            // Function to update the result
+            function updateResult() {
+                const celsiusValue = parseFloat(celsiusInput.value);
+                
+                // Clear previous validation message
+                validationMessage.textContent = '';
+                validationMessage.classList.remove('error');
+                
+                // Check if input is valid
+                if (isNaN(celsiusValue)) {
+                    fahrenheitResult.textContent = '--';
+                    return;
+                }
+                
+                // Validate temperature range
+                if (celsiusValue < -273.15) {
+                    validationMessage.textContent = 'Temperature cannot be below absolute zero (-273.15°C)';
+                    validationMessage.classList.add('error');
+                    fahrenheitResult.textContent = '--';
+                    return;
+                }
+                
+                if (celsiusValue > 1000000) {
+                    validationMessage.textContent = 'Temperature is too high for practical conversion';
+                    validationMessage.classList.add('error');
+                    fahrenheitResult.textContent = '--';
+                    return;
+                }
+                
+                // Convert and display
+                const fahrenheitValue = convertCtoF(celsiusValue);
+                fahrenheitResult.textContent = fahrenheitValue.toFixed(1) + '°F';
+            }
+            
+            // Event listeners
+            celsiusInput.addEventListener('input', updateResult);
+            
+            // Copy to clipboard functionality
+            copyBtn.addEventListener('click', function() {
+                if (fahrenheitResult.textContent !== '--') {
+                    navigator.clipboard.writeText(fahrenheitResult.textContent)
+                        .then(() => {
+                            const originalText = copyBtn.querySelector('.btn-text').textContent;
+                            copyBtn.querySelector('.btn-text').textContent = 'Copied!';
+                            setTimeout(() => {
+                                copyBtn.querySelector('.btn-text').textContent = originalText;
+                            }, 2000);
+                        })
+                        .catch(err => {
+                            console.error('Failed to copy: ', err);
+                        });
+                }
+            });
+            
+            // Initialize with 160°C
+            celsiusInput.value = '160';
+            updateResult();
+        });
+    </script>
 </body>
 </html>
