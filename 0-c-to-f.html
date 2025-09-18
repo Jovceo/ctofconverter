@@ -3,112 +3,581 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>0 C to F Converter</title>
-    <meta name="description" content="Convert 0°C to Fahrenheit (32°F) instantly. Learn the formula, understand its meaning (freezing point of water), and get cold-weather safety tips and clothing recommendations.">
-    <link rel="canonical" href="https://ctofconverter.com/0-c-to-f.html"> 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="/favicon.ico">
-   <!--  <link rel="alternate" hreflang="zh" href="/zh/index.html">
-    <link rel="alternate" hreflang="es" href="/es/index.html">-->
+    <title>0°C to °F: Temperature Conversion + Freezing Point Guide</title>
+    <meta name="description" content="Convert 0 degrees Celsius to Fahrenheit quickly. Learn that 0°C equals 32°F, see the calculation steps, and understand its significance as the freezing point of water.">
+    <link rel="canonical" href="https://ctofconverter.com/0-c-to-f.html" />
+    <meta name="author" content="Temperature Conversion Experts">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="https://ctofconverter.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://ctofconverter.com/apple-touch-icon.png">
+    <meta property="og:title" content="0°C to Fahrenheit (32°F) Converter">
+    <meta property="og:description" content="Convert 0 degrees Celsius to Fahrenheit instantly. 0°C equals 32°F - see the calculation steps and understand its relation to the freezing point of water.">
+    <meta property="og:image" content="https://ctofconverter.com/converter.png">
+    <meta property="og:url" content="https://ctofconverter.com/0-c-to-f.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="0°C to Fahrenheit (32°F) Converter">
+    <meta name="twitter:description" content="Convert 0 degrees Celsius to Fahrenheit instantly. 0°C equals 32°F - see the calculation steps and understand its relation to the freezing point of water.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="application-name" content="C to F Converter">
+    <meta name="theme-color" content="#3498db">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ctofconverter.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "0°C to Fahrenheit",
+          "item": "https://ctofconverter.com/0-c-to-f.html"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          "name": "How to Convert 0°C to Fahrenheit",
+          "description": "Step-by-step guide to convert Celsius to Fahrenheit",
+          "totalTime": "PT1M",
+          "estimatedCost": {
+            "@type": "MonetaryAmount",
+            "currency": "USD",
+            "value": "0"
+          },
+          "step": [
+            {
+              "@type": "HowToStep",
+              "text": "Start with the temperature in Celsius: 0°C",
+              "name": "Identify Celsius Value"
+            },
+            {
+              "@type": "HowToStep",
+              "text": "Multiply by 9/5: 0 × 9/5 = 0 × 1.8 = 0",
+              "name": "Multiply by Fraction"
+            },
+            {
+              "@type": "HowToStep",
+              "text": "Add 32 to the result: 0 + 32 = 32",
+              "name": "Add 32 Degrees"
+            },
+            {
+              "@type": "HowToStep",
+              "text": "The final result is 32°F",
+              "name": "Final Conversion"
+            }
+          ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is 0 degrees Celsius in Fahrenheit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "0 degrees Celsius equals 32 degrees Fahrenheit. To convert, use the formula: °F = (°C × 9/5) + 32",
+            "datePublished": "2025-09-18",
+            "author": {"@type": "Organization", "name": "Temperature Experts"}
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 0°C the same as 32°F?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, 0°C is exactly equal to 32°F. This is the freezing point of water and an important reference point in both temperature scales.",
+            "datePublished": "2025-09-18"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the formula for converting 0°C to Fahrenheit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The formula to convert Celsius to Fahrenheit is: °F = (°C × 9/5) + 32. For 0°C: (0 × 9/5) + 32 = 32°F.",
+            "datePublished": "2025-09-18"
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
+        /* Additional styles specific to this page */
+        .freezing-point-badge {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+        .temp-scale-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .temp-scale-table th, 
+        .temp-scale-table td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .temp-scale-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        .temp-scale-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .temp-scale-table tr.highlight {
+            background-color: #e8f5e9;
+        }
+        
+        .reference-note {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .comparison-chart {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .scale-point {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 10px;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .scale-point.celsius {
+            border-top: 4px solid #e74c3c;
+        }
+        
+        .scale-point.fahrenheit {
+            border-top: 4px solid #3498db;
+        }
+        
+        .scale-point.kelvin {
+            border-top: 4px solid #9b59b6;
+        }
+        
+        .scale-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .scale-label {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+    </style>
+    <link rel="stylesheet" href="/styles.min.css">
+    <noscript><link rel="stylesheet" href="/styles.min.css"></noscript>
 </head>
 <body>
-    <!-- 导航 -->
+    <a class="sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
+    <div class="site-logo">
+        <a href="https://ctofconverter.com" aria-label="Home - Celsius to Fahrenheit Converter">
+            <span aria-hidden="true">C to F Converter</span>
+            <span class="sr-only">Celsius to Fahrenheit Converter</span>
+        </a>
+    </div>
     <header>
-        <nav>
-            <div class="container">
-                <div class="logo"><a href="https://ctofconverter.com" title="C to F Converter">C to F Converter</a></div>
-                <div class="nav-links">
-                    <div class="language-selector">
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <div class="container">
+            <h1>0°C to Fahrenheit (0 Degrees Celsius to °F)</h1>
+            <p class="tagline">Free online temperature conversion tool that instantly converts 0 degrees Celsius (0°C) to degrees Fahrenheit (°F), with conversion formulas and detailed steps.</p>
+            <p class="last-updated">Last updated: <time datetime="2025-09-18">September 18, 2025</time></p>
+        </div>
     </header>
-
-    <!-- 第一屏：转换结果 -->
-    <section class="hero">
+    
+    <nav class="main-nav" role="navigation" aria-label="Main temperature conversion navigation">
         <div class="container">
-            <h1>0°C to °F Conversion</h1>
-            <div class="converter-box">
-                <div class="big-result">
-                    <span>0°C = 32°F</span>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="https://ctofconverter.com" class="active" aria-current="page" aria-label="Current page: Celsius to Fahrenheit Converter">Celsius to Fahrenheit</a></li>
+                <li><a href="https://ctofconverter.com/fahrenheit-to-celsius/" aria-label="Convert Fahrenheit to Celsius" title="Fahrenheit to Celsius Conversion">Fahrenheit to Celsius</a></li>
+                <li><a href="https://ctofconverter.com/c-to-f-calculator/" aria-label="Fast Celsius to Fahrenheit calculator" title="C to F Calculator">C to F Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main id="main-content" class="container">
+        <nav aria-label="Breadcrumb navigation">
+            <ol class="breadcrumb">
+                <li><a href="https://ctofconverter.com">Celsius to Fahrenheit</a></li>
+                <li aria-current="page">0°C to Fahrenheit</li>
+            </ol>
+        </nav>
+
+        <section class="conversion-section" role="region" aria-labelledby="conversion-title">
+            <h2 id="conversion-title">0 Degrees Celsius to Fahrenheit Conversion</h2>
+            
+            <div class="conversion-result">
+                <div class="result-box">
+                    <div class="result-header">0°C in Fahrenheit is:</div>
+                    <div class="result-value">32°F <span class="freezing-point-badge">Freezing Point</span></div>
                 </div>
             </div>
-            <div class="converter-link">
-                <a href="https://ctofconverter.com" title="C to F Converter">C to F Converter</a>
+            
+            <div class="conversion-formula">
+                <h3>How to Convert 0 Celsius to Fahrenheit: Exact Formula</h3>
+                <p>To convert from Celsius to Fahrenheit, use the following formula:</p>
+                <div class="formula">°F = (°C × 9/5) + 32</div>
+                
+                <div class="calculation-steps">
+                    <h4>Step-by-Step Calculation</h4>
+                    <ol>
+                        <li>Start with the temperature in Celsius: 0°C</li>
+                        <li>Multiply by 9/5: 0 × 9/5 = 0 × 1.8 = 0</li>
+                        <li>Add 32: 0 + 32 = 32</li>
+                        <li>Result: 0°C = 32°F</li>
+                    </ol>
+                </div>
+                
+                <div class="conversion-image">
+                    <img src="/images/0-celsius-to-fahrenheit-conversion.webp" alt="0°C to Fahrenheit result: 0 degrees Celsius equals 32°F" width="300" height="150" class="conversion-equation-image">
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 第二屏：计算方法 -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2>How to convert 0 degrees Celsius to Fahrenheit?</h2>
-            <div class="formula-box">
-                <div class="formula-section">
-                    <p class="section-title">To convert 0 degrees Celsius to Fahrenheit, you can use the formula:</p>
-                    <div class="formula">
-                        <p class="formula-text">°F = (°C × 9/5) + 32</p>
+        </section>
+        <section class="converter-tool" role="region" aria-labelledby="converter-title">
+            <h2 id="converter-title" class="converter-title">Celsius to Fahrenheit Converter</h2>
+            <p class="converter-description" aria-describedby="converter-title">
+                Instantly convert <span class="nowrap">°C to °F</span> for free. Ideal for cooking, travel, and science. Get accurate results in seconds!
+            </p>
+            
+            <div class="converter-form">
+                <div class="input-group">
+                    <div class="input-header">
+                        <label for="celsius">Celsius (°C)</label>
+                        <button class="info-btn" aria-label="About Celsius scale" data-tooltip="Water freezes at 0°C and boils at 100°C">
+                            ℹ️
+                        </button>
+                    </div>
+                    <input type="number" id="celsius" 
+                           inputmode="decimal"
+                           placeholder="Enter Celsius temperature (e.g., 0)" 
+                           step="0.1"
+                           min="-273.15"
+                           aria-describedby="celsius-help celsius-tooltip validation-message"
+                           pattern="[0-9]*"
+                           autocomplete="off"
+                           autocorrect="off"
+                           autocapitalize="off"
+                           spellcheck="false">
+                    <div id="celsius-help" class="sr-only">
+                        Enter temperature between -273.15°C (absolute zero) and 1,000,000°C
                     </div>
                 </div>
-                <div class="steps-section">
-                    <p class="section-title">So for 0 degrees Celsius:</p>
-                    <div class="steps-list">
-                        <p class="formula-text">°F = (0 × 9/5) + 32 = 32 degrees Fahrenheit.</p>
+                
+                <div class="result-container" role="region" aria-live="polite" aria-atomic="true">
+                    <div class="result-header">
+                        <label id="fahrenheit-label">Fahrenheit (°F)</label>
+                        <button class="info-btn" aria-label="About Fahrenheit scale" data-tooltip="Water freezes at 32°F and boils at 212°F">
+                            ℹ️
+                        </button>
+                    </div>
+                    <output class="result-value" id="fahrenheit-result" aria-labelledby="fahrenheit-label" for="celsius">
+                        --
+                    </output>
+                    <button class="btn" id="copy-btn" aria-label="Copy temperature result to clipboard">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" fill="currentColor"/>
+                        </svg>
+                        <span class="btn-text">Copy</span>
+                        <span class="sr-only">temperature result</span>
+                    </button>
+                </div>
+            </div>
+            <div id="validation-message" class="validation-message"></div>
+        </section>
+        
+        <section class="additional-info" role="region" aria-labelledby="additional-title">
+            <h2 id="additional-title">About 0°C / 32°F: Freezing Point of Water</h2>
+            <div class="faq-container">
+                <div class="faq-item" style="display: block;">
+                    <div class="faq-answer">
+                        <p>0°C (32°F) is the freezing point of water and one of the most important reference points in temperature measurement. This is the temperature at which pure water freezes under standard atmospheric conditions.</p>
+                        <p>The Celsius scale was originally defined based on the freezing and boiling points of water, with 0°C representing the freezing point and 100°C representing the boiling point. The Fahrenheit scale was later redefined to align with the Celsius scale at this crucial point.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 第三屏：温度含义 -->
-    <section class="common-conversions">
-        <div class="container">
-            <h2>About 0°C (32°F)</h2>
-            <div class="examples-grid">
-                <div class="example-card">
-                    <p class="card-title">0°C Concepts</p>
-                    <p>�?Water freezing point</p>
-                    <p>�?Ice formation temperature</p>
-                    <p>�?Common winter temperature</p>
-                </div>
-                <div class="example-card">
-                    <p class="card-title">Safety Tips</p>
-                    <p>�?Watch out for ice on roads</p>
-                    <p>�?Protect water pipes from freezing</p>
-                    <p>�?Be careful of slippery surfaces</p>
-                </div>
-                <div class="example-card">
-                    <p class="card-title">Recommended Clothing</p>
-                    <p>�?Warm winter coat</p>
-                    <p>�?Thermal underwear</p>
-                    <p>�?Winter boots and gloves</p>
+        </section>
+        
+        <section class="formula-section" role="region" aria-labelledby="practical-title">
+            <h2 id="practical-title">Temperature Scale Comparison</h2>
+            <div class="practical-uses">
+                <div class="use-case">
+                    <div class="use-case-header">Key Temperature Points Across Scales</div>
+                    <div class="use-case-body">
+                        <p>0°C (32°F) is a fundamental reference point across temperature scales. Here's how it compares to other important temperatures:</p>
+                         
+                        <div class="comparison-chart">
+                            <div class="scale-point celsius">
+                                <div class="scale-label">Celsius (°C)</div>
+                                <div class="scale-value">0°C</div>
+                                <div class="scale-desc">Water Freezes</div>
+                            </div>
+                             
+                            <div class="scale-point fahrenheit">
+                                <div class="scale-label">Fahrenheit (°F)</div>
+                                <div class="scale-value">32°F</div>
+                                <div class="scale-desc">Water Freezes</div>
+                            </div>
+                             
+                            <div class="scale-point kelvin">
+                                <div class="scale-label">Kelvin (K)</div>
+                                <div class="scale-value">273.15K</div>
+                                <div class="scale-desc">Water Freezes</div>
+                            </div>
+                        </div>
+                         
+                        <p>For a comprehensive view of temperature conversions across different values, check out our <a href="https://ctofconverter.com/celsius-to-fahrenheit-chart/" target="_blank" rel="noopener noreferrer">Celsius to Fahrenheit Chart</a>.</p>
+                         
+                        <table class="temp-scale-table">
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Celsius (°C)</th>
+                                    <th>Fahrenheit (°F)</th>
+                                    <th>Kelvin (K)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="highlight">
+                                    <td>Water Freezes</td>
+                                    <td>0°C</td>
+                                    <td>32°F</td>
+                                    <td>273.15K</td>
+                                </tr>
+                                <tr>
+                                    <td>Water Boils</td>
+                                    <td>100°C</td>
+                                    <td>212°F</td>
+                                    <td>373.15K</td>
+                                </tr>
+                                <tr>
+                                    <td>Absolute Zero</td>
+                                    <td>-273.15°C</td>
+                                    <td>-459.67°F</td>
+                                    <td>0K</td>
+                                </tr>
+                                <tr>
+                                    <td>Human Body Temperature</td>
+                                    <td><a href="/37-c-to-f.html">37°C</a></td>
+                                    <td>98.6°F</td>
+                                    <td>310.15K</td>
+                                </tr>
+                                <tr>
+                                    <td>Room Temperature</td>
+                                    <td>20-25°C</td>
+                                    <td>68-77°F</td>
+                                    <td>293-298K</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="reference-note">
+                            <p><strong>Conversion formulas:</strong></p>
+                            <p>°F = (°C × 9/5) + 32 &nbsp; | &nbsp; °C = (°F - 32) × 5/9 &nbsp; | &nbsp; K = °C + 273.15</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
+        <section class="faq-section" role="region" aria-labelledby="faq-title">
+            <h2 id="faq-title">FAQs</h2>
+            <div class="faq-container">
+                <details class="faq-item" open>
+                    <summary class="faq-question">Is 0°C the same as 32°F?</summary>
+                    <div class="faq-answer">
+                        <p>Yes, 0°C is exactly equal to 32°F. This is the freezing point of water and a fundamental reference point in both temperature scales.</p>
+                    </div>
+                </details>
+            
+                <details class="faq-item">
+                    <summary class="faq-question">What is the formula for converting 0°C to Fahrenheit?</summary>
+                    <div class="faq-answer">
+                        <p>The formula to convert Celsius to Fahrenheit is: °F = (°C × 9/5) + 32<br>
+                        For 0°C: (0 × 9/5) + 32 = 0 + 32 = 32°F</p>
+                    </div>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">What is 0°C in Kelvin?</summary>
+                    <div class="faq-answer">
+                        <p>0°C is equal to 273.15K. The conversion formula is: K = °C + 273.15<br>
+                        So 0 + 273.15 = 273.15K</p>
+                    </div>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">Is 0°C considered cold?</summary>
+                    <div class="faq-answer">
+                        <p>Yes, 0°C (32°F) is considered cold as it's the freezing point of water. At this temperature:</p>
+                        <ul>
+                            <li>Water turns to ice</li>
+                            <li>Frost can form on surfaces</li>
+                            <li>You would need warm clothing outdoors</li>
+                            <li>Plants may need protection from frost damage</li>
+                        </ul>
+                    </div>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">Is 0°C a fever temperature?</summary>
+                    <div class="faq-answer">
+                        <p>No, 0°C is not a fever temperature. In fact, it's far below normal body temperature (37°C or 98.6°F). A fever is typically considered to be 38°C (100.4°F) or higher. 0°C is the freezing point of water and would be extremely dangerous for human body temperature.</p>
+                    </div>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">Why is 0°C important?</summary>
+                    <div class="faq-answer">
+                        <p>0°C is important because:</p>
+                        <ul>
+                            <li>It's the freezing point of water under standard conditions</li>
+                            <li>It's a fundamental reference point for the Celsius scale</li>
+                            <li>It marks the transition between liquid and solid water</li>
+                            <li>It's used in meteorology for frost and freezing advisories</li>
+                            <li>It's crucial in food storage and safety guidelines</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </section>
+        
+        <section class="reference-section" role="region" aria-labelledby="related-title">
+            <h2 id="related-title">Related Temperature Conversions</h2>
+            <div class="update-grid">
+                <article class="update-card">
+                    <p><a href="/1-c-to-f.html">1 Celsius to Fahrenheit</a></p>
+                    <p>1°C = 33.8°F</p>
+                </article>
+                
+                <article class="update-card">
+                    <p>5 Celsius to Fahrenheit</p>
+                    <p>5°C = 41°F</p>
+                </article>
+                
+                <article class="update-card">
+                    <p><a href="/10-c-to-f.html">10 Celsius to Fahrenheit</a></p>
+                    <p>10°C = 50°F</p>
+                </article>
 
-    <!-- 底部导航 -->
-    <footer>
+                <article class="update-card">
+                    <p>32 Fahrenheit to Celsius</p>
+                    <p>32°F = 0°C</p>
+                </article>
+                
+                <article class="update-card">
+                    <p><a href="/100-c-to-f.html">100 Celsius to Fahrenheit</a></p>
+                    <p>100°C = 212°F</p>
+                </article>
+                
+                <article class="update-card">
+                    <p>273 Kelvin to Celsius</p>
+                    <p>273K = 0°C</p>
+                </article>
+
+                <article class="update-card">
+                    <p>Minus 40 Celsius to Fahrenheit</p>
+                    <p>-40°C = -40°F</p>
+                </article>
+                
+                <article class="update-card">
+                    <p><a href="/20-c-to-f.html">20 Celsius to Fahrenheit</a></p>
+                    <p>20°C = 68°F</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+ <footer class="site-footer" role="contentinfo">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+            <nav class="footer-navigation" aria-label="Footer navigation">
+                <div class="footer-links-grid">
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-nav-heading">Navigation</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-nav-heading">
+                            <li><a href="https://ctofconverter.com" class="footer-link">Celsius to Fahrenheit</a></li>
+                            <li><a href="https://ctofconverter.com/fahrenheit-to-celsius/" class="footer-link">Fahrenheit to Celsius</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-chart-heading">Chart</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-chart-heading">
+                            <li><a href="https://ctofconverter.com/celsius-to-fahrenheit-chart/" class="footer-link">Celsius to Fahrenheit Conversion Chart</a></li>
+                            <li><a href="https://ctofconverter.com/fan-oven-conversion-chart/" class="footer-link">Fan Oven Temperature Conversion Chart</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-legal-heading">Legal</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-legal-heading">
+                            <li><a href="https://ctofconverter.com/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                            <li><a href="https://ctofconverter.com/terms-of-service.html" class="footer-link">Terms of Service</a></li>
+                           <li><a href="https://ctofconverter.com/about-us.html" class="footer-link">About Us</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer-section">
+            </nav>
+            
+            <div class="footer-extra">
+                <div class="copyright-notice">
+                    <p>© 2025 Ctofconverter. All rights reserved.</p>
+                </div>
+                
+                <div class="back-to-top">
+                    <a href="#top" class="back-to-top-link" aria-label="Back to top">
+                        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24">
+                            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="currentColor"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
-<!-- Google tag (gtag.js) -->
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-E3QWK9X5HG');
-</script>
+    
+    <script src="scripts.min.js"></script>
 </body>
-</html> 
-
-
+</html>
