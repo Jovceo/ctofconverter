@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Temperature & Fever Guide: Celsius to Fahrenheit Chart for Adults and Children | CtoFConverter.com</title>
+    <meta name="description" content="Complete fever and body temperature guide with Celsius to Fahrenheit conversion charts. Learn normal ranges, fever thresholds, when to seek medical help, plus interactive tools.">
+    <link rel="canonical" href="https://ctofconverter.com/body-temperature-chart-fever-guide" />
+    <link rel="stylesheet" href="header-footer.css">
+    <link rel="stylesheet" href="content-styles.css">
+    <style>
+        /* 体温指南特有样式 */
+        :root {
+            --primary: #2c7fb8;
+            --primary-dark: #1c5a87;
+            --secondary: #41b6e6;
+            --success: #4CAF50;
+            --warning: #FF9800;
+            --danger: #F44336;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --gray: #6c757d;
+        }
+        
+        .key-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 1.8rem 0;
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .info-item {
+            flex: 1;
+            min-width: 200px;
+            padding: 1.2rem;
+            margin: 0.5rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .normal { background-color: rgba(76, 175, 80, 0.15); color: var(--success); border-left: 4px solid var(--success); }
+        .warning { background-color: rgba(255, 152, 0, 0.15); color: var(--warning); border-left: 4px solid var(--warning); }
+        .danger { background-color: rgba(244, 67, 54, 0.15); color: var(--danger); border-left: 4px solid var(--danger); }
+        
+        .converter-inputs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        input, select, button {
+            padding: 0.7rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        
+        input {
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .quick-temp {
+            background-color: var(--secondary);
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .quick-temp:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .interactive-tool {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .tool-controls {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .control-group {
+            margin-bottom: 1.2rem;
+        }
+        
+        .control-group label {
+            font-weight: 600;
+            margin-right: 1rem;
+        }
+        
+        .control-group input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+        
+        .slider-container {
+            margin: 1.2rem 0;
+        }
+        
+        .slider {
+            width: 100%;
+            margin: 0.8rem 0;
+        }
+        
+        .result-box {
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            display: none;
+            border-left: 5px solid;
+        }
+        
+        .guide-cards {
+            display: flex;
+            gap: 2rem;
+            margin: 2.5rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .card {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        
+        .card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-top: 0;
+        }
+        
+        .card ul {
+            margin: 1rem 0;
+            padding-left: 1.2rem;
+            flex-grow: 1;
+        }
+        
+        .card li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .table-scroll-hint {
+            text-align: center;
+            padding: 0.5rem;
+            background: var(--light);
+            font-style: italic;
+            color: var(--gray);
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .table-scroll-hint {
+                display: block;
+            }
+        }
+        
+        .disclaimer {
+            background-color: #fff3e0;
+            border-left: 5px solid var(--warning);
+            padding: 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .authority-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .download-section {
+            text-align: center;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #f5f7fa, #e3f2fd);
+            border-radius: 12px;
+            margin: 2.5rem 0;
+        }
+        
+        .btn-download {
+            background-color: var(--success);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .btn-download:hover {
+            background-color: #3d8b40;
+            transform: translateY(-2px);
+            color: white;
+        }
+        
+        .last-updated {
+            text-align: center;
+            font-style: italic;
+            color: var(--gray);
+            margin: 1rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .key-info {
+                flex-direction: column;
+            }
+            
+            .guide-cards {
+                flex-direction: column;
+            }
+            
+            .converter-inputs {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            input, select, button {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+        }
+        
+        /* 覆盖主站样式以匹配体温指南设计 */
+        .converter-tool {
+            background-color: var(--light);
+            padding: 1.8rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .converter-tool h2 {
+            margin-top: 0;
+        }
+        
+        .quick-buttons {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.8rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    
+    <header class="site-header">
+        <div class="container">
+            <div class="site-logo">
+                <a href="https://ctofconverter.com" aria-label="Home - Celsius to Fahrenheit Converter">
+                    <span aria-hidden="true">C to F Converter</span>
+                    <span class="sr-only">Celsius to Fahrenheit Converter</span>
+                </a>
+            </div>
+
+            <h1>Body Temperature & Fever Guide: Adults & Children</h1>
+            <p class="tagline">Your complete Celsius to Fahrenheit reference with fever thresholds, charts, and medical guidance.</p>
+            
+            <div class="key-info">
+                <div class="info-item normal">
+                    <div>✅ Normal Temperature</div>
+                    <div>36.5–37.5°C (97.7–99.5°F)</div>
+                </div>
+                <div class="info-item warning">
+                    <div>⚠️ Fever Threshold</div>
+                    <div>38.0°C (100.4°F)</div>
+                </div>
+                <div class="info-item danger">
+                    <div>🚨 High Fever</div>
+                    <div>39.0°C (102.2°F)+</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav" role="navigation" aria-label="Main temperature conversion navigation">
+        <div class="container">
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li>
+                    <a href="https://ctofconverter.com">Celsius to Fahrenheit</a>
+                </li>
+                <li>
+                    <a href="https://ctofconverter.com/fahrenheit-to-celsius/" aria-label="Convert Fahrenheit to Celsius">Fahrenheit to Celsius</a>
+                </li>
+                <li>
+                    <a href="https://ctofconverter.com/c-to-f-calculator/" aria-label="Fast Celsius to Fahrenheit calculator">C to F Calculator</a>
+                </li>
+                <li>
+                    <a href="https://ctofconverter.com/body-temperature-chart-fever-guide/" class="active" aria-current="page">Body Temperature Guide</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="container">
+        <nav aria-label="Breadcrumb navigation" class="breadcrumb-nav">
+            <ol class="breadcrumb">
+                <li><a href="https://ctofconverter.com">Home</a></li>
+                <li aria-current="page">Body Temperature Guide</li>
+            </ol>
+        </nav>
+
+        <section class="converter-tool" role="region" aria-labelledby="converter-title">
+            <h2 id="converter-title">Quick Celsius ↔ Fahrenheit Converter</h2>
+            <div class="converter-inputs">
+                <input type="number" id="tempInput" placeholder="Enter temperature" step="0.1">
+                <select id="unitFrom">
+                    <option value="c">Celsius (°C)</option>
+                    <option value="f">Fahrenheit (°F)</option>
+                </select>
+                <button id="convertBtn" class="btn">Convert</button>
+            </div>
+            <div id="conversionResult"></div>
+            <div class="quick-buttons">
+                <button class="quick-temp" data-temp="38">38°C</button>
+                <button class="quick-temp" data-temp="39">39°C</button>
+                <button class="quick-temp" data-temp="100">100°F</button>
+                <button class="quick-temp" data-temp="102">102°F</button>
+            </div>
+        </section>
+
+        <section class="interactive-tool" role="region" aria-labelledby="interactive-title">
+            <h2 id="interactive-title">Interactive Temperature Assessment</h2>
+            <div class="tool-controls">
+                <div class="control-group">
+                    <label>Select Person:</label>
+                    <input type="radio" id="adult" name="person" value="adult" checked>
+                    <label for="adult">Adult</label>
+                    <input type="radio" id="child" name="person" value="child">
+                    <label for="child">Child</label>
+                    <input type="radio" id="infant" name="person" value="infant">
+                    <label for="infant">Infant</label>
+                </div>
+                <div class="slider-container">
+                    <label for="tempSlider">Temperature: <span id="tempValue">37.0</span>°C</label>
+                    <input type="range" id="tempSlider" class="slider" min="35" max="42" step="0.1" value="37">
+                </div>
+                <div class="control-group">
+                    <input type="radio" id="unitC" name="unit" value="c" checked>
+                    <label for="unitC">Celsius (°C)</label>
+                    <input type="radio" id="unitF" name="unit" value="f">
+                    <label for="unitF">Fahrenheit (°F)</label>
+                </div>
+            </div>
+            <div id="assessmentResult" class="result-box"></div>
+        </section>
+
+        <section class="reference-section" role="region" aria-labelledby="reference-title">
+            <h2 id="reference-title">Comprehensive Temperature Reference Chart (Adults & Children)</h2>
+            <div class="table-scroll-hint">← Scroll horizontally for full table on mobile →</div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Celsius (°C)</th>
+                            <th>Fahrenheit (°F)</th>
+                            <th>Adult Advice</th>
+                            <th>Child Advice</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hypothermia</td>
+                            <td>&lt;36.0°C</td>
+                            <td>&lt;96.8°F</td>
+                            <td>Warm up, monitor</td>
+                            <td>Immediate warming, consult doctor</td>
+                        </tr>
+                        <tr>
+                            <td>Normal Range</td>
+                            <td>36.5–37.5°C</td>
+                            <td>97.7–99.5°F</td>
+                            <td>Healthy</td>
+                            <td>Healthy</td>
+                        </tr>
+                        <tr>
+                            <td>Slightly Elevated</td>
+                            <td>37.6–37.9°C</td>
+                            <td>99.7–100.2°F</td>
+                            <td>Observe, drink fluids</td>
+                            <td>Monitor, reduce activity</td>
+                        </tr>
+                        <tr>
+                            <td>Low-grade Fever</td>
+                            <td>38.0–38.9°C</td>
+                            <td>100.4–102.0°F</td>
+                            <td>Rest, consider medication</td>
+                            <td>Monitor closely, consult doctor</td>
+                        </tr>
+                        <tr>
+                            <td>Moderate Fever</td>
+                            <td>39.0–39.9°C</td>
+                            <td>102.2–103.8°F</td>
+                            <td>Seek medical advice</td>
+                            <td>See doctor immediately</td>
+                        </tr>
+                        <tr>
+                            <td>High Fever</td>
+                            <td>40.0–41.0°C</td>
+                            <td>104.0–105.8°F</td>
+                            <td>Emergency care</td>
+                            <td>Emergency care</td>
+                        </tr>
+                        <tr>
+                            <td>Dangerous Hyperpyrexia</td>
+                            <td>&gt;41.0°C</td>
+                            <td>&gt;105.8°F</td>
+                            <td>Medical emergency</td>
+                            <td>Medical emergency</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section role="region" aria-labelledby="guides-title">
+            <h2 id="guides-title">Fever Guides by Age Group</h2>
+            <div class="guide-cards">
+                <div class="card">
+                    <h3>👨‍⚕️ Adult Fever Guide</h3>
+                    <ul>
+                        <li>Normal adult body temperature variations</li>
+                        <li>Typical signs of fever in adults</li>
+                        <li>Clear indicators for when to seek medical care</li>
+                        <li>Fever management and medication guidelines</li>
+                    </ul>
+                    <a href="/adult-fever-guide" class="btn">View Adult Fever Temperature Chart & Guidelines</a>
+                </div>
+
+                <div class="card">
+                    <h3>👶 Child & Infant Fever Guide</h3>
+                    <ul>
+                        <li>Age-based fever thresholds (0–3 months, 3–12 months, 1–12 years)</li>
+                        <li>Special considerations for children</li>
+                        <li>Recognizing and managing febrile seizures</li>
+                        <li>When to call the pediatrician</li>
+                    </ul>
+                    <a href="/child-fever-guide" class="btn">View Child Fever Temperature Chart & Care Guide</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section" role="region" aria-labelledby="faq-title">
+            <h2 id="faq-title">Fever Temperature FAQs</h2>
+
+            <div class="faq-item">
+                <h3>What temperature is considered a fever?</h3>
+                <p>A body temperature of 38.0°C (100.4°F) or higher is generally considered a fever. Different measurement methods (oral, ear, rectal, forehead) may show slight variations.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is 37.5°C (99.5°F) a fever?</h3>
+                <p>This is a borderline temperature, sometimes called a "low-grade" rise. Monitor symptoms and watch for changes. It's not typically considered a true fever but may indicate the beginning of an illness.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>When should I see a doctor for fever?</h3>
+                <p><strong>Adults:</strong> fever lasting more than 3 days, temperature over 39.4°C (103°F), or accompanied by severe headache, rash, shortness of breath, or stiff neck.<br>
+                <strong>Children:</strong> any fever in infants under 3 months, high fever that doesn't respond to medication, or fever with lethargy, irritability, or unusual rash.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What is the normal body temperature for adults?</h3>
+                <p>The typical range is 36.5–37.5°C (97.7–99.5°F). Temperature can vary due to time of day, physical activity, hormonal changes, and individual differences.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I convert Celsius to Fahrenheit for fever?</h3>
+                <p>Formula: (°C × 9/5) + 32 = °F. Example: 38°C = (38 × 9/5) + 32 = 100.4°F. Use our <a href="/c-to-f-converter">Celsius to Fahrenheit Converter Tool</a> for quick conversions.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is 100.2°F a fever in adults?</h3>
+                <p>100.2°F (37.9°C) is slightly above normal body temperature but below the standard fever threshold of 100.4°F (38°C). It may indicate a low-grade fever or the beginning of an illness and should be monitored.</p>
+            </div>
+        </section>
+
+        <section role="region" aria-labelledby="measurement-title">
+            <h2 id="measurement-title">How to Measure Body Temperature Accurately</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>Normal Range</th>
+                            <th>Best For</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Oral</td>
+                            <td>36.5–37.5°C</td>
+                            <td>Adults, older children</td>
+                            <td>Avoid within 30 min after eating/drinking</td>
+                        </tr>
+                        <tr>
+                            <td>Axillary (armpit)</td>
+                            <td>35.9–36.7°C</td>
+                            <td>All ages</td>
+                            <td>Usually 0.5–1.0°C lower than core temperature</td>
+                        </tr>
+                        <tr>
+                            <td>Ear (tympanic)</td>
+                            <td>35.8–38.0°C</td>
+                            <td>6 months+</td>
+                            <td>Earwax may affect accuracy</td>
+                        </tr>
+                        <tr>
+                            <td>Forehead (temporal)</td>
+                            <td>35.8–37.8°C</td>
+                            <td>Quick screening</td>
+                            <td>May be influenced by environment</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="download-section" role="region" aria-labelledby="download-title">
+            <h2 id="download-title">Printable Fever Temperature Chart (PDF)</h2>
+            <p>Download our one-page quick reference guide for easy access at home or on your mobile device.</p>
+            <a href="/downloads/fever-temperature-chart.pdf" class="btn-download">Download PDF Chart</a>
+        </section>
+
+        <section class="disclaimer" role="region" aria-labelledby="disclaimer-title">
+            <h2 id="disclaimer-title">Important Medical Disclaimer</h2>
+            <p><strong>Disclaimer:</strong> This guide is for educational purposes only and should not replace professional medical advice, diagnosis, or treatment. If you or your child has a high fever, persistent fever, or symptoms like lethargy, difficulty breathing, or rash, consult a doctor or seek emergency medical care. This information is based on public medical guidelines, but individual circumstances may vary. Always follow the guidance of healthcare professionals.</p>
+        </section>
+
+        <section class="authority-section" role="region" aria-labelledby="authority-title">
+            <h3 id="authority-title">Medical Authority & Transparency</h3>
+            <p><strong>Content Review:</strong> This content is based on the latest medical guidelines and is regularly reviewed by our team.</p>
+            <p><strong>Last Updated:</strong> Last medically reviewed: September 2025</p>
+            <p><strong>Reference Sources:</strong> This guide synthesizes standards from authoritative organizations: Centers for Disease Control and Prevention (CDC) Fever Guidelines, World Health Organization (WHO) Child Fever Management, American Academy of Pediatrics (AAP) Infant Fever Clinical Reports, Mayo Clinic Fever Symptoms & Treatment.</p>
+        </section>
+
+        <p class="last-updated"><strong>Page last updated:</strong> September 28, 2025</p>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <nav class="footer-navigation" aria-label="Footer navigation">
+                <div class="footer-links-grid">
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-nav-heading">Navigation</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-nav-heading">
+                            <li><a href="https://ctofconverter.com" class="footer-link">Celsius to Fahrenheit</a></li>
+                            <li><a href="https://ctofconverter.com/fahrenheit-to-celsius/" class="footer-link">Fahrenheit to Celsius</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-chart-heading">Chart</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-chart-heading">
+                            <li><a href="https://ctofconverter.com/celsius-to-fahrenheit-chart/" class="footer-link">Celsius to Fahrenheit Conversion Chart</a></li>
+                            <li><a href="https://ctofconverter.com/fan-oven-conversion-chart/" class="footer-link">Fan Oven Temperature Conversion Chart</a></li>
+                            <li><a href="https://ctofconverter.com/body-temperature-chart-fever-guide/" class="footer-link">Body Temperature Guide</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h3 class="footer-heading" id="footer-legal-heading">Legal</h3>
+                        <ul class="footer-link-list" aria-labelledby="footer-legal-heading">
+                            <li><a href="https://ctofconverter.com/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                            <li><a href="https://ctofconverter.com/terms-of-service.html" class="footer-link">Terms of Service</a></li>
+                            <li><a href="https://ctofconverter.com/about-us.html" class="footer-link">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="footer-extra">
+                <div class="copyright-notice">
+                    <p>© 2025 Ctofconverter. All rights reserved.</p>
+                    <p class="footer-meta">
+                        <span>Last updated: <time datetime="2025-09-28">September 28, 2025</time></span>
+                    </p>
+                </div>
+                <div class="back-to-top">
+                    <a href="#top" class="back-to-top-link" aria-label="Back to top">
+                        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24">
+                            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Temperature conversion functionality
+        document.getElementById('convertBtn').addEventListener('click', function() {
+            const temp = parseFloat(document.getElementById('tempInput').value);
+            const unit = document.getElementById('unitFrom').value;
+            
+            if (isNaN(temp)) {
+                document.getElementById('conversionResult').innerHTML = '<p style="color: red;">Please enter a valid temperature value</p>';
+                return;
+            }
+            
+            let result, explanation;
+            if (unit === 'c') {
+                // Celsius to Fahrenheit
+                result = (temp * 9/5) + 32;
+                explanation = `${temp}°C = ${result.toFixed(1)}°F`;
+                
+                // Add health guidance
+                if (temp >= 38) {
+                    explanation += '<br><span style="color: var(--danger); font-weight: bold;">⚠️ This meets fever criteria. Consider rest and consulting a doctor.</span>';
+                } else if (temp >= 37.6) {
+                    explanation += '<br><span style="color: var(--warning);">⚠️ Slightly elevated temperature. Monitor symptoms and stay hydrated.</span>';
+                } else if (temp >= 36.5) {
+                    explanation += '<br><span style="color: var(--success);">✅ Normal temperature range.</span>';
+                } else if (temp >= 36) {
+                    explanation += '<br><span style="color: var(--primary);">ℹ️ Slightly below normal. Consider warming if uncomfortable.</span>';
+                } else {
+                    explanation += '<br><span style="color: var(--primary); font-weight: bold;">❄️ Low body temperature. Warm up and monitor.</span>';
+                }
+            } else {
+                // Fahrenheit to Celsius
+                result = (temp - 32) * 5/9;
+                explanation = `${temp}°F = ${result.toFixed(1)}°C`;
+                
+                // Add health guidance
+                if (temp >= 100.4) {
+                    explanation += '<br><span style="color: var(--danger); font-weight: bold;">⚠️ This meets fever criteria. Consider rest and consulting a doctor.</span>';
+                } else if (temp >= 99.7) {
+                    explanation += '<br><span style="color: var(--warning);">⚠️ Slightly elevated temperature. Monitor symptoms and stay hydrated.</span>';
+                } else if (temp >= 97.7) {
+                    explanation += '<br><span style="color: var(--success);">✅ Normal temperature range.</span>';
+                } else if (temp >= 96.8) {
+                    explanation += '<br><span style="color: var(--primary);">ℹ️ Slightly below normal. Consider warming if uncomfortable.</span>';
+                } else {
+                    explanation += '<br><span style="color: var(--primary); font-weight: bold;">❄️ Low body temperature. Warm up and monitor.</span>';
+                }
+            }
+            
+            document.getElementById('conversionResult').innerHTML = `<p>${explanation}</p>`;
+        });
+        
+        // Quick temperature buttons
+        document.querySelectorAll('.quick-temp').forEach(button => {
+            button.addEventListener('click', function() {
+                const temp = this.getAttribute('data-temp');
+                document.getElementById('tempInput').value = temp;
+                document.getElementById('convertBtn').click();
+            });
+        });
+        
+        // Interactive assessment tool
+        const tempSlider = document.getElementById('tempSlider');
+        const tempValue = document.getElementById('tempValue');
+        const assessmentResult = document.getElementById('assessmentResult');
+        
+        tempSlider.addEventListener('input', function() {
+            tempValue.textContent = this.value;
+            assessTemperature();
+        });
+        
+        document.querySelectorAll('input[name="person"], input[name="unit"]').forEach(input => {
+            input.addEventListener('change', assessTemperature);
+        });
+        
+        function assessTemperature() {
+            const person = document.querySelector('input[name="person"]:checked').value;
+            const unit = document.querySelector('input[name="unit"]:checked').value;
+            let temp = parseFloat(tempSlider.value);
+            
+            // Convert to Celsius if Fahrenheit is selected
+            if (unit === 'f') {
+                temp = (temp - 32) * 5/9;
+                tempValue.textContent = temp.toFixed(1);
+            }
+            
+            let status, advice, color, severity;
+            
+            if (temp < 36.0) {
+                status = "Hypothermia";
+                severity = "Low";
+                advice = person === 'infant' ? 
+                    "Infant hypothermia requires immediate medical attention." : 
+                    "Warm up gradually and monitor. If persistent, consult a doctor.";
+                color = "var(--primary)";
+            } else if (temp < 37.6) {
+                status = "Normal Temperature";
+                severity = "Normal";
+                advice = "Healthy temperature range. Maintain good habits.";
+                color = "var(--success)";
+            } else if (temp < 38.0) {
+                status = "Slightly Elevated";
+                severity = "Mild";
+                advice = "Monitor for other symptoms. Stay hydrated and rest.";
+                color = "var(--warning)";
+            } else if (temp < 39.0) {
+                status = "Low-Grade Fever";
+                severity = "Moderate";
+                advice = person === 'infant' ? 
+                    "Infant fever requires immediate medical consultation." : 
+                    "Rest and consider fever-reducing medication. Consult doctor if symptoms worsen.";
+                color = "var(--warning)";
+            } else if (temp < 40.0) {
+                status = "Moderate Fever";
+                severity = "High";
+                advice = "Seek medical advice, especially for children and infants.";
+                color = "var(--danger)";
+            } else {
+                status = "High Fever";
+                severity = "Severe";
+                advice = "Requires urgent medical care. Contact healthcare provider immediately.";
+                color = "var(--danger)";
+            }
+            
+            // Display assessment result
+            assessmentResult.style.display = 'block';
+            assessmentResult.style.backgroundColor = color + '20';
+            assessmentResult.style.borderLeftColor = color;
+            assessmentResult.innerHTML = `
+                <h4>Assessment Result: ${status} (${severity})</h4>
+                <p><strong>Recommendation:</strong> ${advice}</p>
+                <p><strong>Temperature:</strong> ${temp.toFixed(1)}°C / ${(temp * 9/5 + 32).toFixed(1)}°F</p>
+                <p><strong>Person:</strong> ${person.charAt(0).toUpperCase() + person.slice(1)}</p>
+            `;
+        }
+        
+        // Initial assessment
+        assessTemperature();
+        
+        // Mobile menu functionality (from main site)
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuToggle && navLinks) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+                    mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+                    navLinks.classList.toggle('active');
+                });
+                
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (navLinks.classList.contains('active') && 
+                        !e.target.closest('.nav-links') && 
+                        !e.target.closest('.mobile-menu-toggle')) {
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                        navLinks.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What temperature is considered a fever?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A body temperature of 38.0°C (100.4°F) or higher is generally considered a fever. Measurement methods may vary slightly."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is 37.5°C (99.5°F) a fever?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "37.5°C (99.5°F) is borderline and often called low-grade. It is not always a true fever but should be monitored with other symptoms."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "When should I see a doctor for fever?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Adults should see a doctor if fever lasts more than 3 days or comes with severe symptoms. Infants under 3 months with any fever should be seen immediately."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the normal body temperature for adults?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Normal adult body temperature is around 36.5–37.5°C (97.7–99.5°F). It can vary with activity, hormones, and time of day."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        "name": "Body Temperature & Fever Guide: Celsius to Fahrenheit Chart",
+        "description": "Complete fever and body temperature guide with Celsius to Fahrenheit conversion charts for adults and children.",
+        "medicalAudience": {
+            "@type": "MedicalAudience",
+            "audienceType": "Patients, Parents, Caregivers"
+        },
+        "lastReviewed": "2025-09-28"
+    }
+    </script>
+</body>
+</html>
