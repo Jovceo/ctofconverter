@@ -153,16 +153,6 @@
             background-color: #f9fafb;
         }
     </style>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7KGQPN84Z6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7KGQPN84Z6');
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1199889942562451"
-     crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -459,8 +449,59 @@
             </div>
         </div>
     </footer>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  let scriptsLoaded = false;
+
+  function loadExternalScripts() {
+    if (scriptsLoaded) return;
+    scriptsLoaded = true;
+
+    // Load Google Analytics (gtag.js)
+    const gaScript = document.createElement('script');
+    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-7KGQPN84Z6";
+    gaScript.async = true;
+    document.head.appendChild(gaScript);
+
+    gaScript.onload = function() {
+        gtag('config', 'G-7KGQPN84Z6');
+    };
+    
+    // Load Google AdSense (adsbygoogle.js)
+    const adsScript = document.createElement('script');
+    adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1199889942562451";
+    adsScript.async = true;
+    adsScript.crossOrigin = "anonymous";
+    document.head.appendChild(adsScript);
+    
+    // Push ad request after script loads
+    adsScript.onload = function() {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+    };
+  }
+
+  // Load scripts on first user interaction (scroll, click, mousemove, touch)
+  const loadOnInteraction = () => {
+    loadExternalScripts();
+    document.removeEventListener('scroll', loadOnInteraction);
+    document.removeEventListener('click', loadOnInteraction);
+    document.removeEventListener('mousemove', loadOnInteraction);
+    document.removeEventListener('touchstart', loadOnInteraction);
+  };
+  
+  document.addEventListener('scroll', loadOnInteraction, { once: true, passive: true });
+  document.addEventListener('click', loadOnInteraction, { once: true });
+  document.addEventListener('mousemove', loadOnInteraction, { once: true });
+  document.addEventListener('touchstart', loadOnInteraction, { once: true, passive: true });
+
+  // Fallback: Load after 5 seconds if no interaction occurs
+  window.addEventListener('load', () => {
+    setTimeout(loadExternalScripts, 5000);
+  });
+</script>
     <script src="scripts.min.js"></script>
 </body>
 </html>
-
-
