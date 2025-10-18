@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Conversion Image Generator</title>
+    <title>Temperature Conversion Image Generator2-2025-10-18</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -67,25 +67,25 @@
         </div>
     </div>
     <script>
-        // 获取元素
+        // èŽ·å–å…ƒç´ 
         const line1Input = document.getElementById('line1');
         const generatePngBtn = document.getElementById('generate-png-btn');
         const generateWebpBtn = document.getElementById('generate-webp-btn');
 
-        // 温度转换函数
+        // æ¸©åº¦è½¬æ¢å‡½æ•°
         function celsiusToFahrenheit(celsius) {
-            return (celsius * 9 / 5 + 32).toFixed(2); // 保留两位小数
+            return (celsius * 9 / 5 + 32).toFixed(2); // ä¿ç•™ä¸¤ä½å°æ•°
         }
 
-        // 生成图片名称（格式：数字-celsius-to-fahrenheit-conversion.扩展名）
+        // ç”Ÿæˆå›¾ç‰‡åç§°ï¼ˆæ ¼å¼ï¼šæ•°å­—-celsius-to-fahrenheit-conversion.æ‰©å±•åï¼‰
         function generateFileName(celsius, fileExtension) {
             const numberPart = celsius.toString().replace('.', '-');
             return `${numberPart}-celsius-to-fahrenheit-conversion.${fileExtension}`;
         }
 
-        // 生成并下载图�?
+        // ç”Ÿæˆå¹¶ä¸‹è½½å›¾ç‰?
         function generateAndDownloadImage(inputText, index, format = 'png') {
-            // 尝试提取数字
+            // å°è¯•æå–æ•°å­—
             let celsius;
             try {
                 celsius = parseFloat(inputText.trim());
@@ -99,34 +99,34 @@
 
             const fahrenheit = celsiusToFahrenheit(celsius);
 
-            // 生成显示文本
-            const displayText = `${celsius}°C to °F`;
-            const conversionText = `${celsius}°C = ${fahrenheit}°F`;
+            // ç”Ÿæˆæ˜¾ç¤ºæ–‡æœ¬
+            const displayText = `${celsius}Â°C to Â°F`;
+            const conversionText = `${celsius}Â°C = ${fahrenheit}Â°F`;
 
-            // 创建 Canvas
+            // åˆ›å»º Canvas
             const canvas = document.createElement('canvas');
             canvas.width = 1200;
             canvas.height = 400;
             const ctx = canvas.getContext('2d');
 
-            // 设置背景颜色
-            ctx.fillStyle = '#ffffff'; // 白色背景
+            // è®¾ç½®èƒŒæ™¯é¢œè‰²
+            ctx.fillStyle = '#ffffff'; // ç™½è‰²èƒŒæ™¯
             ctx.fillRect(0, 0, 1200, 400);
 
-            // 设置字体样式
-            ctx.fillStyle = '#000000'; // 黑色字体
+            // è®¾ç½®å­—ä½“æ ·å¼
+            ctx.fillStyle = '#000000'; // é»‘è‰²å­—ä½“
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
 
-            // 绘制第一行文字（温度转换标题�?
-            ctx.font = 'bold 36px Arial'; // 稍小字体
-            ctx.fillText(displayText, 600, 150); // 居中显示
+            // ç»˜åˆ¶ç¬¬ä¸€è¡Œæ–‡å­—ï¼ˆæ¸©åº¦è½¬æ¢æ ‡é¢˜ï¼?
+            ctx.font = 'bold 36px Arial'; // ç¨å°å­—ä½“
+            ctx.fillText(displayText, 600, 150); // å±…ä¸­æ˜¾ç¤º
 
-            // 绘制第二行文字（转换结果�?
-            ctx.font = 'bold 48px Arial'; // 大字体，加粗
-            ctx.fillText(conversionText, 600, 250); // 居中显示
+            // ç»˜åˆ¶ç¬¬äºŒè¡Œæ–‡å­—ï¼ˆè½¬æ¢ç»“æžœï¼?
+            ctx.font = 'bold 48px Arial'; // å¤§å­—ä½“ï¼ŒåŠ ç²—
+            ctx.fillText(conversionText, 600, 250); // å±…ä¸­æ˜¾ç¤º
 
-            // �?Canvas 转换为图片并触发下载
+            // å°?Canvas è½¬æ¢ä¸ºå›¾ç‰‡å¹¶è§¦å‘ä¸‹è½½
             let mimeType, fileExtension;
             if (format === 'webp') {
                 mimeType = 'image/webp';
@@ -141,21 +141,21 @@
                 const link = document.createElement('a');
                 link.href = imageURL;
 
-                // 生成图片名称
+                // ç”Ÿæˆå›¾ç‰‡åç§°
                 const fileName = generateFileName(celsius, fileExtension);
                 link.download = fileName;
 
-                // 触发下载
+                // è§¦å‘ä¸‹è½½
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
                 
-                // 释放内存
+                // é‡Šæ”¾å†…å­˜
                 setTimeout(() => URL.revokeObjectURL(imageURL), 100);
-            }, mimeType, 0.9); // WebP 质量设置�?0.9
+            }, mimeType, 0.9); // WebP è´¨é‡è®¾ç½®ä¸?0.9
         }
 
-        // 批量生成并下载图�?
+        // æ‰¹é‡ç”Ÿæˆå¹¶ä¸‹è½½å›¾ç‰?
         function generateAndDownloadImages(inputTexts, format) {
             inputTexts.forEach((inputText, index) => {
                 if (inputText.trim()) {
@@ -164,9 +164,9 @@
             });
         }
 
-        // 绑定生成按钮点击事件
+        // ç»‘å®šç”ŸæˆæŒ‰é’®ç‚¹å‡»äº‹ä»¶
         generatePngBtn.addEventListener('click', () => {
-            const inputTexts = line1Input.value.split('\n'); // 按行分割输入内容
+            const inputTexts = line1Input.value.split('\n'); // æŒ‰è¡Œåˆ†å‰²è¾“å…¥å†…å®¹
             if (inputTexts.length > 0) {
                 generateAndDownloadImages(inputTexts, 'png');
             } else {
@@ -175,7 +175,7 @@
         });
 
         generateWebpBtn.addEventListener('click', () => {
-            const inputTexts = line1Input.value.split('\n'); // 按行分割输入内容
+            const inputTexts = line1Input.value.split('\n'); // æŒ‰è¡Œåˆ†å‰²è¾“å…¥å†…å®¹
             if (inputTexts.length > 0) {
                 generateAndDownloadImages(inputTexts, 'webp');
             } else {
