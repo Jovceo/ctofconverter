@@ -8,9 +8,9 @@ export default function Analytics() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
+      const gtag = (...args: any[]) => {
         window.dataLayer.push(args);
-      }
+      };
       (window as any).gtag = gtag;
     }
   }, []);
