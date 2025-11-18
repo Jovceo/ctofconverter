@@ -4,10 +4,10 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: false,
   
-  // 启用国际化 - 支持中文、英文、西班牙文、法文、德文
+  // Enable internationalization - Support English, Spanish, French, German
   i18n: {
-    locales: ['zh', 'en', 'es', 'fr', 'de'],
-    defaultLocale: 'zh',
+    locales: ['en', 'es', 'fr', 'de'],
+    defaultLocale: 'en',
     localeDetection: false,
   },
   
