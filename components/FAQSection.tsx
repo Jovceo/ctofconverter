@@ -1,13 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslation } from '../utils/i18n';
 
 interface FAQItem {
   question: string;
   answer: string;
 }
 
-const faqData: FAQItem[] = [
+const fallbackFaqData: FAQItem[] = [
   {
     question: 'What is the difference between Celsius and Fahrenheit?',
     answer:
@@ -32,6 +33,10 @@ const faqData: FAQItem[] = [
 
 export default function FAQSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const { pageTranslation } = useTranslation('home');
+
+  const faqItems: FAQItem[] = pageTranslation?.faq?.items || fallbackFaqData;
+  const faqTitle = pageTranslation?.faq?.title || 'Frequently Asked Questions (FAQ)';
 
   const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -39,9 +44,9 @@ export default function FAQSection() {
 
   return (
     <section className="faq-section" role="region" aria-labelledby="faq-title">
-      <h2 id="faq-title">Frequently Asked Questions (FAQ)</h2>
+      <h2 id="faq-title">{faqTitle}</h2>
 
-      {faqData.map((faq, index) => (
+      {faqItems.map((faq, index) => (
         <div
           key={index}
           className={`faq-item ${activeIndex === index ? 'active' : ''}`}
@@ -61,9 +66,9 @@ export default function FAQSection() {
           >
             {faq.question}
           </div>
-          {activeIndex === index && (
-            <div className="faq-answer">{faq.answer}</div>
-          )}
+          <div className={`faq-answer ${activeIndex === index ? 'active' : ''}`}>
+            {faq.answer}
+          </div>
         </div>
       ))}
     </section>

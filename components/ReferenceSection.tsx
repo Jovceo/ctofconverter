@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useTranslation, getDisplayLocale } from '../utils/i18n';
 
 interface ConversionCard {
   title: string;
@@ -32,15 +33,27 @@ const conversionCards: ConversionCard[] = [
   { title: '36.7°C to Fahrenheit (98.06°F)', url: 'https://ctofconverter.com/36-7-c-to-f.html', date: '2025-04-14' },
 ];
 
-function formatDate(dateString: string): string {
+const formatDateForLocale = (dateString: string, locale: string) => {
   const date = new Date(dateString);
-  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-}
+  const formatter = new Intl.DateTimeFormat(getDisplayLocale(locale), {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+  return formatter.format(date);
+};
 
 export default function ReferenceSection() {
+  const { locale = 'en', pageTranslation } = useTranslation('home');
+  const reference = pageTranslation?.reference;
+
+  if (!reference) {
+    return null;
+  }
+
   return (
     <section className="reference-section" role="region" aria-labelledby="reference-title">
-      <h2 id="reference-title">Common Celsius to Fahrenheit Conversions</h2>
+      <h2 id="reference-title">{reference.title}</h2>
       <div className="update-grid">
         {conversionCards.map((card, index) => (
           <article key={index} className="update-card">
@@ -49,7 +62,9 @@ export default function ReferenceSection() {
                 {card.title}
               </Link>
             </p>
-            <time dateTime={card.date}>Updated: {formatDate(card.date)}</time>
+            <time dateTime={card.date}>
+              {reference.updatedLabel} {formatDateForLocale(card.date, locale)}
+            </time>
           </article>
         ))}
       </div>
@@ -58,22 +73,20 @@ export default function ReferenceSection() {
         href="https://ctofconverter.com/downloads/celsius-to-fahrenheit-chart.pdf"
         id="download-pdf-btn"
         className="pdf-download-btn"
+        aria-label={reference.downloadButton.aria}
       >
         <span className="btn-icon">📄</span>
-        <span className="btn-text">Download the Celsius to Fahrenheit Conversion Chart (PDF)</span>
+        <span className="btn-text">{reference.downloadButton.text}</span>
       </a>
 
       <div className="info-cards">
         <div className="info-card">
-          <h3>About Celsius and Fahrenheit Temperature Units</h3>
-          <p>
-            <strong>Celsius (°C)</strong> is widely used internationally. At standard atmospheric
-            pressure, water freezes at 0°C and boils at 100°C.
-          </p>
-          <p>
-            <strong>Fahrenheit (°F)</strong> is primarily used in the United States. At standard
-            atmospheric pressure, water freezes at 32°F and boils at 212°F.
-          </p>
+          <h3>{reference.infoCard.title}</h3>
+          {reference.infoCard.paragraphs.map((paragraph: string, idx: number) => (
+            <p key={idx}>
+              <span dangerouslySetInnerHTML={{ __html: paragraph }} />
+            </p>
+          ))}
         </div>
       </div>
     </section>

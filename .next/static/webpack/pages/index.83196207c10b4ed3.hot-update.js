@@ -1,0 +1,22 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("pages/index",{
+
+/***/ "./locales/es/common.json":
+/*!********************************!*\
+  !*** ./locales/es/common.json ***!
+  \********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = /*#__PURE__*/JSON.parse('{"nav":{"home":"Inicio","celsiusToFahrenheit":"Celsius a Fahrenheit","fahrenheitToCelsius":"Fahrenheit a Celsius","calculator":"Calculadora C a F","selectLanguage":"Selecciona el idioma"},"breadcrumb":{"home":"Inicio"},"converter":{"title":"Usa nuestro conversor de temperatura","description":"¿Necesitas convertir otras temperaturas? Usa el conversor interactivo para transformar cualquier valor en Celsius a Fahrenheit al instante."},"formula":{"title":"Fórmula para convertir Celsius a Fahrenheit","description":"Para convertir {celsius}°C a Fahrenheit, utiliza la fórmula estándar de Celsius a Fahrenheit:","formula":"°F = (°C × 9/5) + 32","applying":"Aplicando la fórmula a {celsius}°C:","step1":"Paso 1: Multiplica {celsius} por 9/5 (o 1.8)","step2":"Paso 2: Suma 32 al resultado"},"comparison":{"title":"Comparación de {celsius} Celsius vs Fahrenheit","description":"Comprender cómo se compara {celsius}°C en ambas escalas ayuda a poner el valor en contexto:","thisTemperature":"{celsius}°C (esta temperatura)","normalBody":"Temperatura corporal normal","boilingPoint":"Punto de ebullición del agua","roomTemp":"Temperatura ambiente"},"negative":{"title":"{celsius} Celsius negativos a Fahrenheit","description":"Para quienes buscan <strong>\\"menos {celsius} c a f\\"</strong> o <strong>\\"{celsius} celsius negativos a fahrenheit\\"</strong>:"},"faq":{"title":"Preguntas frecuentes"},"converterWidget":{"title":"Convertidor de Celsius a Fahrenheit","description":"Convierte al instante <span class=\\"nowrap\\">°C a °F</span> gratis. Ideal para cocina, viajes y ciencia. ¡Obtén resultados precisos en segundos!","historyTitle":"Conversiones recientes","clearHistory":"Borrar historial","historyEmpty":"Aún no hay conversiones","historyEmptyAria":"No hay historial de conversiones disponible","formulaTitle":"Fórmula de Celsius a Fahrenheit","equationTitle":"Ecuación para convertir Celsius a Fahrenheit","equationExample":"Ejemplo: 20°C = (20 × 9/5) + 32 = 68°F","howToTitle":"Cómo convertir Celsius a Fahrenheit","howToDescription":"Haz clic en cada paso para ver el cálculo detallado","steps":{"multiply":{"title":"Multiplica por 9/5","description":"Multiplica la temperatura en Celsius por 9/5 (o 1.8)"},"add":{"title":"Suma 32","description":"Suma 32 al resultado del paso anterior"},"result":{"title":"Resultado final","description":"Obtén la temperatura final en Fahrenheit"}},"commonMistakesTitle":"Errores comunes al convertir Celsius a Fahrenheit","commonMistakes":[{"title":"Olvidar sumar 32","description":"Solo multiplicar por 9/5 genera resultados incorrectos"},{"title":"Orden de operaciones incorrecto","description":"Sumar 32 primero y luego multiplicar por 9/5 está mal"},{"title":"Usar la fracción equivocada","description":"Usar 2/3 en vez de 9/5 es un error frecuente"},{"title":"Redondear demasiado pronto","description":"Redondear los valores intermedios puede introducir inexactitudes"}]},"footer":{"navigationHeading":"Navegación","chartHeading":"Gráficos","legalHeading":"Legal","links":{"celsiusToFahrenheit":"Celsius a Fahrenheit","fahrenheitToCelsius":"Fahrenheit a Celsius","celsiusToFahrenheitChart":"Tabla de conversión Celsius a Fahrenheit","fanOvenChart":"Tabla de conversión de hornos con ventilador","bodyTemperatureGuide":"Tabla de temperatura corporal y guía de fiebre","feverChart":"Tabla de temperatura para fiebre","privacyPolicy":"Política de privacidad","termsOfService":"Términos del servicio","aboutUs":"Sobre nosotros"},"copyright":"© {year} Ctofconverter. Todos los derechos reservados.","lastUpdated":"Última actualización:","backToTop":"Volver arriba"}}');
+
+/***/ })
+
+});
