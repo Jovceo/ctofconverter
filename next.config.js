@@ -4,9 +4,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: false,
   
-  // Enable internationalization - Support English, Spanish, French, German
+  // Enable internationalization - Support multiple locales
   i18n: {
-    locales: ['en', 'es', 'fr', 'de'],
+    locales: ['en', 'zh', 'es', 'hi', 'id', 'pt-br', 'fr', 'de'],
     defaultLocale: 'en',
     localeDetection: false,
   },

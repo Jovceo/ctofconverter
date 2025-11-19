@@ -1,25 +1,79 @@
+'use client';
+
 import Head from 'next/head';
-import { ReactNode } from 'react';
+import { ReactNode, useMemo } from 'react';
+import { useRouter } from 'next/router';
+import { useTranslation, DEFAULT_LOCALE, SUPPORTED_LOCALES, HREFLANG_MAP } from '../utils/i18n';
 
 interface LayoutProps {
   children: ReactNode;
 }
 
+const SITE_ORIGIN = 'https://ctofconverter.com';
+
+const stripQueryAndHash = (value: string): string => {
+  if (!value) return '/';
+  const [path] = value.split(/[?#]/);
+  if (!path) return '/';
+  return path.startsWith('/') ? path : `/${path}`;
+};
+
+const normalizeBasePath = (path: string, locale: string, defaultLocale: string): string => {
+  const cleanPath = stripQueryAndHash(path);
+  if (locale === defaultLocale) {
+    return cleanPath === '' ? '/' : cleanPath;
+  }
+  const localePrefix = `/${locale}`;
+  if (cleanPath.startsWith(localePrefix)) {
+    const nextPath = cleanPath.slice(localePrefix.length) || '/';
+    return nextPath.startsWith('/') ? nextPath : `/${nextPath}`;
+  }
+  return cleanPath || '/';
+};
+
+const buildLocalePath = (basePath: string, locale: string, defaultLocale: string): string => {
+  const normalizedBase = basePath === '/' ? '/' : basePath.replace(/\/+$/, '');
+  if (normalizedBase === '/') {
+    if (locale === defaultLocale) {
+      return '/';
+    }
+    return `/${locale}/`;
+  }
+
+  const suffix = normalizedBase.startsWith('/') ? normalizedBase : `/${normalizedBase}`;
+  const prefix = locale === defaultLocale ? '' : `/${locale}`;
+  return `${prefix}${suffix}`;
+};
+
 export default function Layout({ children }: LayoutProps) {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    name: 'Celsius to Fahrenheit Converter',
-    url: 'https://ctofconverter.com/',
-    description: 'Free online tool to convert temperatures from Celsius to Fahrenheit with detailed calculation steps',
-    applicationCategory: 'UtilityApplication',
-    operatingSystem: 'All',
-    browserRequirements: 'Requires JavaScript',
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-    },
+  const router = useRouter();
+  const { locale = DEFAULT_LOCALE, defaultLocale = DEFAULT_LOCALE, asPath = '/' } = router;
+  const { common } = useTranslation();
+  const meta = common?.meta || {};
+
+  const basePath = useMemo(
+    () => normalizeBasePath(asPath || '/', locale, defaultLocale || DEFAULT_LOCALE),
+    [asPath, locale, defaultLocale]
+  );
+
+  const canonical = useMemo(() => {
+    const localizedPath = buildLocalePath(basePath, locale, defaultLocale || DEFAULT_LOCALE);
+    return `${SITE_ORIGIN}${localizedPath === '/' ? '/' : localizedPath}`;
+  }, [basePath, locale, defaultLocale]);
+
+  const alternateLinks = SUPPORTED_LOCALES.map((supportedLocale) => {
+    const localizedPath = buildLocalePath(
+      basePath,
+      supportedLocale,
+      defaultLocale || DEFAULT_LOCALE
+    );
+    const href = `${SITE_ORIGIN}${localizedPath === '/' ? '/' : localizedPath}`;
+    return { locale: supportedLocale, href, hreflang: HREFLANG_MAP[supportedLocale] || supportedLocale };
+  });
+
+  const defaultAlternate = alternateLinks.find((link) => link.locale === DEFAULT_LOCALE) || {
+    locale: DEFAULT_LOCALE,
+    href: canonical,
   };
 
   return (
@@ -27,46 +81,56 @@ export default function Layout({ children }: LayoutProps) {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Celsius to Fahrenheit | °C to °F Converter</title>
+        <title>{meta.defaultTitle || 'Celsius to Fahrenheit | °C to °F Converter'}</title>
         <meta
           name="description"
-          content="Convert Celsius to Fahrenheit quickly with the C to F Converter. Get results instantly, learn the formula, and check the conversion chart."
+          content={
+            meta.defaultDescription ||
+            'Convert Celsius to Fahrenheit quickly with the C to F Converter. Get results instantly, learn the formula, and check the conversion chart.'
+          }
         />
-        <link rel="canonical" href="https://ctofconverter.com" />
-        <meta name="author" content="Temperature Conversion Experts" />
+        <meta name="author" content={meta.author || 'Temperature Conversion Experts'} />
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="https://ctofconverter.com/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="https://ctofconverter.com/apple-touch-icon.png" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Celsius to Fahrenheit Converter" />
+        <link rel="canonical" href={canonical} />
+
+        {alternateLinks.map((link) => (
+          <link key={link.locale} rel="alternate" hrefLang={link.hreflang} href={link.href} />
+        ))}
+        <link rel="alternate" hrefLang="x-default" href={defaultAlternate.href} />
+
+        <meta property="og:title" content={meta.ogTitle || meta.defaultTitle || 'Celsius to Fahrenheit Converter'} />
         <meta
           property="og:description"
-          content="Free Online Temperature Calculator for Instant Conversions. Instantly convert temperatures from Celsius (°C) to Fahrenheit (°F) with precise results and step-by-step details."
+          content={
+            meta.ogDescription ||
+            meta.defaultDescription ||
+            'Free Online Temperature Calculator for Instant Conversions. Instantly convert temperatures from Celsius (°C) to Fahrenheit (°F) with precise results and step-by-step details.'
+          }
         />
         <meta property="og:image" content="https://ctofconverter.com/converter.png" />
-        <meta property="og:url" content="https://ctofconverter.com/" />
+        <meta property="og:url" content={canonical} />
         <meta property="og:type" content="website" />
-        
-        {/* Twitter Card */}
+
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Celsius to Fahrenheit Converter" />
+        <meta
+          name="twitter:title"
+          content={meta.twitterTitle || meta.defaultTitle || 'Celsius to Fahrenheit Converter'}
+        />
         <meta
           name="twitter:description"
-          content="Free Online Temperature Calculator for Instant Conversions. Instantly convert temperatures from Celsius (°C) to Fahrenheit (°F) with precise results and step-by-step details."
+          content={
+            meta.twitterDescription ||
+            meta.defaultDescription ||
+            'Free Online Temperature Calculator for Instant Conversions. Instantly convert temperatures from Celsius (°C) to Fahrenheit (°F) with precise results and step-by-step details.'
+          }
         />
-        
-        {/* Mobile */}
+
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="application-name" content="C to F Converter" />
         <meta name="theme-color" content="#3498db" />
-        
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
       </Head>
       <a className="skip-link" href="#main-content">
         Skip to main content

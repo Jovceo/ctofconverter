@@ -154,6 +154,14 @@ a:hover {
     background-color: var(--primary-dark);
 }
 
+.nav-actions {
+    margin-left: auto;
+}
+
+.nav-actions .language-switcher {
+    margin-left: 1rem;
+}
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -330,6 +338,15 @@ a:hover {
     
     h3 {
         font-size: 1.25rem;
+    }
+    
+    .nav-actions {
+        margin-left: 0;
+    }
+    
+    .nav-actions .language-switcher {
+        margin-left: 0;
+        margin-top: 0.5rem;
     }
 }
 

@@ -2,9 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslation } from '../utils/i18n';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -48,26 +51,29 @@ export default function Navigation() {
         <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`} id="nav-links">
           <li>
             <Link href="https://ctofconverter.com" className="active" aria-current="page">
-              Celsius to Fahrenheit
+              {t('nav.celsiusToFahrenheit')}
             </Link>
           </li>
           <li>
             <Link
               href="https://ctofconverter.com/fahrenheit-to-celsius/"
-              aria-label="Convert Fahrenheit to Celsius"
+              aria-label={t('nav.fahrenheitToCelsius')}
             >
-              Fahrenheit to Celsius
+              {t('nav.fahrenheitToCelsius')}
             </Link>
           </li>
           <li>
             <Link
               href="https://ctofconverter.com/c-to-f-calculator/"
-              aria-label="Fast Celsius to Fahrenheit calculator"
+              aria-label={t('nav.calculator')}
             >
-              C to F Calculator
+              {t('nav.calculator')}
             </Link>
           </li>
         </ul>
+        <div className="nav-actions">
+          <LanguageSwitcher />
+        </div>
       </div>
     </nav>
   );

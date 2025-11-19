@@ -1,21 +1,27 @@
 import Link from 'next/link';
+import { useTranslation, getDisplayLocale } from '../utils/i18n';
 
-function getCurrentDate(): { dateTime: string; formatted: string } {
+function getCurrentDate(locale: string): { dateTime: string; formatted: string } {
   const now = new Date();
   const year = now.getFullYear();
-  const month = now.toLocaleDateString('en-US', { month: 'long' });
-  const day = now.getDate();
-  
-  // Format dateTime as YYYY-MM-DD
-  const dateTime = `${year}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-  // Format display as "Month Day, Year"
-  const formatted = `${month} ${day}, ${year}`;
-  
+  const normalizedLocale = getDisplayLocale(locale);
+
+  const formatted = now.toLocaleDateString(normalizedLocale, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
+  const dateTime = now.toISOString().split('T')[0];
+
   return { dateTime, formatted };
 }
 
 export default function Footer() {
-  const { dateTime, formatted } = getCurrentDate();
+  const { t, locale } = useTranslation();
+  const currentLocale = locale || 'en';
+  const { dateTime, formatted } = getCurrentDate(currentLocale);
+  const year = new Date().getFullYear();
 
   return (
     <footer className="site-footer" role="contentinfo">
@@ -24,12 +30,12 @@ export default function Footer() {
           <div className="footer-links-grid">
             <div className="footer-links-group">
               <h3 className="footer-heading" id="footer-nav-heading">
-                Navigation
+                {t('footer.navigationHeading')}
               </h3>
               <ul className="footer-link-list" aria-labelledby="footer-nav-heading">
                 <li>
                   <Link href="https://ctofconverter.com" className="footer-link">
-                    Celsius to Fahrenheit
+                    {t('footer.links.celsiusToFahrenheit')}
                   </Link>
                 </li>
                 <li>
@@ -37,14 +43,14 @@ export default function Footer() {
                     href="https://ctofconverter.com/fahrenheit-to-celsius/"
                     className="footer-link"
                   >
-                    Fahrenheit to Celsius
+                    {t('footer.links.fahrenheitToCelsius')}
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="footer-links-group">
               <h3 className="footer-heading" id="footer-chart-heading">
-                Chart
+                {t('footer.chartHeading')}
               </h3>
               <ul className="footer-link-list" aria-labelledby="footer-chart-heading">
                 <li>
@@ -52,7 +58,7 @@ export default function Footer() {
                     href="https://ctofconverter.com/celsius-to-fahrenheit-chart/"
                     className="footer-link"
                   >
-                    Celsius to Fahrenheit Conversion Chart
+                    {t('footer.links.celsiusToFahrenheitChart')}
                   </Link>
                 </li>
                 <li>
@@ -60,7 +66,7 @@ export default function Footer() {
                     href="https://ctofconverter.com/fan-oven-conversion-chart/"
                     className="footer-link"
                   >
-                    Fan Oven Temperature Conversion Chart
+                    {t('footer.links.fanOvenChart')}
                   </Link>
                 </li>
                 <li>
@@ -68,7 +74,7 @@ export default function Footer() {
                     href="https://ctofconverter.com/body-temperature-chart-fever-guide/"
                     className="footer-link"
                   >
-                    Body Temperature Chart & Fever Guide
+                    {t('footer.links.bodyTemperatureGuide')}
                   </Link>
                 </li>
                 <li>
@@ -76,14 +82,14 @@ export default function Footer() {
                     href="https://ctofconverter.com/fever-temperature-chart/"
                     className="footer-link"
                   >
-                    Fever Temperature Chart
+                    {t('footer.links.feverChart')}
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="footer-links-group">
               <h3 className="footer-heading" id="footer-legal-heading">
-                Legal
+                {t('footer.legalHeading')}
               </h3>
               <ul className="footer-link-list" aria-labelledby="footer-legal-heading">
                 <li>
@@ -91,7 +97,7 @@ export default function Footer() {
                     href="https://ctofconverter.com/privacy-policy.html"
                     className="footer-link"
                   >
-                    Privacy Policy
+                    {t('footer.links.privacyPolicy')}
                   </Link>
                 </li>
                 <li>
@@ -99,12 +105,12 @@ export default function Footer() {
                     href="https://ctofconverter.com/terms-of-service.html"
                     className="footer-link"
                   >
-                    Terms of Service
+                    {t('footer.links.termsOfService')}
                   </Link>
                 </li>
                 <li>
                   <Link href="https://ctofconverter.com/about-us.html" className="footer-link">
-                    About Us
+                    {t('footer.links.aboutUs')}
                   </Link>
                 </li>
               </ul>
@@ -114,21 +120,23 @@ export default function Footer() {
 
         <div className="footer-extra">
           <div className="copyright-notice">
-            <p>© 2025 Ctofconverter. All rights reserved.</p>
+            <p>{t('footer.copyright', { year })}</p>
             <p className="footer-meta">
               <span>
-                Last updated: <time dateTime={dateTime}>{formatted}</time>
+                {t('footer.lastUpdated')}{' '}
+                <time dateTime={dateTime}>{formatted}</time>
               </span>
             </p>
           </div>
           <div className="back-to-top">
-            <a href="#top" className="back-to-top-link" aria-label="Back to top">
+            <a href="#top" className="back-to-top-link" aria-label={t('footer.backToTop')}>
               <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24">
                 <path
                   d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
                   fill="currentColor"
                 ></path>
               </svg>
+              <span className="sr-only">{t('footer.backToTop')}</span>
             </a>
           </div>
         </div>

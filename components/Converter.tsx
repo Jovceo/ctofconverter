@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslation } from '../utils/i18n';
 
 const ABSOLUTE_ZERO = -273.15;
 const MAX_TEMP = 1000000;
@@ -182,15 +183,28 @@ export default function Converter() {
     return date.toLocaleDateString();
   };
 
+  const { common } = useTranslation();
+  const converterTexts = common?.converterWidget || {};
+  const mistakes = converterTexts.commonMistakes || [
+    { title: 'Forgetting to add 32', description: 'Only multiplying by 9/5 will give incorrect results' },
+    { title: 'Incorrect order of operations', description: 'Adding 32 first and then multiplying by 9/5 is incorrect' },
+    { title: 'Using the wrong fraction', description: 'Using 2/3 instead of 9/5 is a common error' },
+    { title: 'Rounding too early', description: 'Rounding intermediate results can lead to inaccuracies' },
+  ];
+
   return (
     <section className="converter-tool" role="region" aria-labelledby="converter-title">
       <h2 id="converter-title" className="converter-title">
-        Celsius to Fahrenheit Converter
+        {converterTexts.title || 'Celsius to Fahrenheit Converter'}
       </h2>
-      <p className="converter-description">
-        Instantly convert <span className="nowrap">°C to °F</span> for free. Ideal for cooking,
-        travel, and science. Get accurate results in seconds!
-      </p>
+      <p
+        className="converter-description"
+        dangerouslySetInnerHTML={{
+          __html:
+            converterTexts.description ||
+            'Instantly convert <span class="nowrap">°C to °F</span> for free. Ideal for cooking, travel, and science. Get accurate results in seconds!',
+        }}
+      />
 
       <div className="converter-form">
         <div className="input-group">
@@ -279,7 +293,7 @@ export default function Converter() {
 
       <section className="history-container" aria-labelledby="history-heading">
         <div className="history-header">
-          <h3 id="history-heading">Recent Conversions</h3>
+          <h3 id="history-heading">{converterTexts.historyTitle || 'Recent Conversions'}</h3>
           <button
             className="clear-history"
             id="clear-history"
@@ -287,12 +301,12 @@ export default function Converter() {
             aria-label="Clear all conversion history"
           >
             <span aria-hidden="true">🗑️</span>
-            <span>Clear History</span>
+            <span>{converterTexts.clearHistory || 'Clear History'}</span>
           </button>
         </div>
         <ul id="history-list" className="history-list">
           {history.length === 0 ? (
-            <li className="history-empty">No conversions yet</li>
+            <li className="history-empty">{converterTexts.historyEmpty || 'No conversions yet'}</li>
           ) : (
             history.map((conversion, index) => (
               <li key={index}>
@@ -308,7 +322,7 @@ export default function Converter() {
         </ul>
         {history.length === 0 && (
           <p id="empty-history-message" className="sr-only" aria-live="polite">
-            No conversion history available
+            {converterTexts.historyEmptyAria || 'No conversion history available'}
           </p>
         )}
       </section>
@@ -317,6 +331,8 @@ export default function Converter() {
         step1={stepVisualizations.step1}
         step2={stepVisualizations.step2}
         step3={stepVisualizations.step3}
+        texts={converterTexts}
+        mistakes={mistakes}
       />
     </section>
   );
@@ -326,34 +342,40 @@ function ConversionSteps({
   step1,
   step2,
   step3,
+  texts,
+  mistakes,
 }: {
   step1: string;
   step2: string;
   step3: string;
+  texts: any;
+  mistakes: { title: string; description: string }[];
 }) {
   return (
     <>
       <section className="formula-section" role="region" aria-labelledby="formula-title">
-        <h2 id="formula-title">Celsius to Fahrenheit Formula</h2>
+        <h2 id="formula-title">{texts.formulaTitle || 'Celsius to Fahrenheit Formula'}</h2>
         <div className="formula">
-          <h3>Equation to Convert Celsius to Fahrenheit</h3>
+          <h3>{texts.equationTitle || 'Equation to Convert Celsius to Fahrenheit'}</h3>
           <div className="formula-box">°F = (°C × 9/5) + 32</div>
-          <p className="example">Example: 20°C = (20 × 9/5) + 32 = 68°F</p>
+          <p className="example">{texts.equationExample || 'Example: 20°C = (20 × 9/5) + 32 = 68°F'}</p>
         </div>
       </section>
 
       <div className="conversion-steps" itemScope itemType="https://schema.org/HowTo">
-        <h3 itemProp="name">How to Convert Celsius to Fahrenheit</h3>
-        <p className="converter-description">Click each step to see detailed calculation</p>
+        <h3 itemProp="name">{texts.howToTitle || 'How to Convert Celsius to Fahrenheit'}</h3>
+        <p className="converter-description">
+          {texts.howToDescription || 'Click each step to see detailed calculation'}
+        </p>
         <div className="step" itemScope itemType="https://schema.org/HowToStep">
           <meta itemProp="position" content="1" />
           <div className="step-number">1</div>
           <div className="step-content">
             <h4 className="step-title" itemProp="name">
-              Multiply by 9/5
+              {texts.steps?.multiply?.title || 'Multiply by 9/5'}
             </h4>
             <div className="step-description" itemProp="text">
-              Multiply the Celsius temperature by 9/5 (or 1.8)
+              {texts.steps?.multiply?.description || 'Multiply the Celsius temperature by 9/5 (or 1.8)'}
             </div>
             <div
               className="step-visualization"
@@ -371,10 +393,10 @@ function ConversionSteps({
           <div className="step-number">2</div>
           <div className="step-content">
             <h4 className="step-title" itemProp="name">
-              Add 32
+              {texts.steps?.add?.title || 'Add 32'}
             </h4>
             <div className="step-description" itemProp="text">
-              Add 32 to the result from step 1
+              {texts.steps?.add?.description || 'Add 32 to the result from step 1'}
             </div>
             <div
               className="step-visualization"
@@ -392,10 +414,10 @@ function ConversionSteps({
           <div className="step-number">3</div>
           <div className="step-content">
             <h4 className="step-title" itemProp="name">
-              Final Result
+              {texts.steps?.result?.title || 'Final Result'}
             </h4>
             <div className="step-description" itemProp="text">
-              Get the final Fahrenheit temperature result
+              {texts.steps?.result?.description || 'Get the final Fahrenheit temperature result'}
             </div>
             <div
               className="step-visualization"
@@ -409,24 +431,13 @@ function ConversionSteps({
           </div>
         </div>
         <div className="common-errors">
-          <h4>Celsius to Fahrenheit Conversion Common Mistakes</h4>
+          <h4>{texts.commonMistakesTitle || 'Celsius to Fahrenheit Conversion Common Mistakes'}</h4>
           <ul>
-            <li>
-              <strong>Forgetting to add 32</strong> -{' '}
-              <span>Only multiplying by 9/5 will give incorrect results</span>
-            </li>
-            <li>
-              <strong>Incorrect order of operations</strong> -{' '}
-              <span>Adding 32 first and then multiplying by 9/5 is incorrect</span>
-            </li>
-            <li>
-              <strong>Using the wrong fraction</strong> -{' '}
-              <span>Using 2/3 instead of 9/5 is a common error</span>
-            </li>
-            <li>
-              <strong>Rounding too early</strong> -{' '}
-              <span>Rounding intermediate results can lead to inaccuracies</span>
-            </li>
+            {mistakes.map((mistake, index) => (
+              <li key={index}>
+                <strong>{mistake.title}</strong> - <span>{mistake.description}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

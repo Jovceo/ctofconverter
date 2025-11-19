@@ -1,0 +1,22 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(self["webpackChunk_N_E"] = self["webpackChunk_N_E"] || []).push([["locales_en_home_json"],{
+
+/***/ "./locales/en/home.json":
+/*!******************************!*\
+  !*** ./locales/en/home.json ***!
+  \******************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = /*#__PURE__*/JSON.parse('{"header":{"title":"Celsius to Fahrenheit Converter (°C to °F)","tagline":"Free online temperature conversion tool that instantly converts degrees Celsius (°C) to degrees Fahrenheit (°F) with formulas, detailed steps, and helpful explanations."},"breadcrumb":{"current":"Celsius to Fahrenheit"},"reference":{"title":"Common Celsius to Fahrenheit Conversions","updatedLabel":"Updated:","downloadButton":{"text":"Download the Celsius to Fahrenheit Conversion Chart (PDF)","aria":"Download Celsius to Fahrenheit conversion chart as PDF"},"infoCard":{"title":"About Celsius and Fahrenheit Temperature Units","paragraphs":["<strong>Celsius (°C)</strong> is widely used internationally. At standard atmospheric pressure, water freezes at 0°C and boils at 100°C.","<strong>Fahrenheit (°F)</strong> is primarily used in the United States. At standard atmospheric pressure, water freezes at 32°F and boils at 212°F."]}},"practical":{"title":"Practical Scenarios for Celsius to Fahrenheit Conversion","items":[{"title":"Cooking","description":"Oven temperature settings, recipe conversions, and controlling delicate cooking processes.","bullets":["<strong>Baking temperature:</strong> 180°C = 356°F (standard baking temperature)","<strong>Low temperature cooking:</strong> 65°C = 149°F (ideal for slow-cooking meat)","<strong>Chocolate melting:</strong> 45°C = 113°F (avoid overheating chocolate)"]},{"title":"Weather Forecast","description":"Understand local temperatures while traveling and adapt to different reporting systems.","bullets":["<strong>Summer comfort:</strong> 22-26°C = 72-79°F","<strong>Winter indoor comfort:</strong> 20-22°C = 68-72°F","<strong>Heat wave warning:</strong> &gt;35°C = &gt;95°F"]},{"title":"Medical","description":"Monitor body temperatures, calibrate medical devices, and handle medication storage.","bullets":["<strong>Normal body temperature:</strong> 36.5-37.5°C = 97.7-99.5°F","<strong>Fever threshold:</strong> &gt;38°C = &gt;100.4°F","<strong>Hypothermia risk:</strong> &lt;35°C = &lt;95°F"]},{"title":"Scientific Research","description":"Laboratory controls, data sharing, and international collaboration.","bullets":["<strong>Laboratory standard range:</strong> 20-25°C = 68-77°F","<strong>Ultra-low freezer:</strong> -80°C = -112°F","<strong>PCR reaction:</strong> 95°C = 203°F (DNA denaturation temperature)"]}]},"faq":{"title":"Frequently Asked Questions (FAQ)","items":[{"question":"What is the difference between Celsius and Fahrenheit?","answer":"Celsius and Fahrenheit are two different temperature scales. Celsius is widely used internationally, while Fahrenheit is common in the United States. They have different zero and boiling points: water freezes at 0°C / 32°F and boils at 100°C / 212°F."},{"question":"How can I quickly estimate the conversion between Celsius and Fahrenheit?","answer":"A quick estimation trick is Celsius × 2 + 30 ≈ Fahrenheit. For example, 20°C ≈ (20 × 2) + 30 = 70°F (actual 68°F). This mental math is useful for everyday approximations."},{"question":"At what temperature are Celsius and Fahrenheit equal?","answer":"Celsius and Fahrenheit intersect at -40. In other words, -40°C equals -40°F. This is the point where both scales show the same numeric value."},{"question":"Is Celsius temperature bad for you?","answer":"Celsius is simply a measurement unit. What matters is the actual temperature. For instance, 37°C is normal body temperature, while 60°C on skin can cause burns."}]}}');
+
+/***/ })
+
+}]);
