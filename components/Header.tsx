@@ -2,8 +2,6 @@ import Link from 'next/link';
 import { useTranslation } from '../utils/i18n';
 
 export default function Header() {
-  const { pageTranslation } = useTranslation('home');
-  const header = pageTranslation?.header;
 
   return (
     <header className="site-header">

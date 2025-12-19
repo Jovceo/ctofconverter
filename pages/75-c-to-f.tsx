@@ -4,11 +4,40 @@ import { useTranslation, replacePlaceholders } from '../utils/i18n';
 import { celsiusToFahrenheit, formatTemperature, generatePageUrl } from '../utils/temperaturePageHelpers';
 import { useMemo } from 'react';
 
+interface TranslationItem {
+    title?: string;
+    content?: string;
+    items?: string[];
+    question?: string;
+    answer?: string;
+    result?: string;
+    description?: string;
+}
+
+interface PageTranslation {
+    faq?: { items: TranslationItem[] };
+    warning?: TranslationItem;
+    context?: {
+        medical?: TranslationItem;
+        environmental?: TranslationItem;
+        cooking?: TranslationItem;
+        oven?: TranslationItem;
+        industrial?: TranslationItem;
+        safety?: TranslationItem;
+    };
+    negative?: TranslationItem;
+    page?: {
+        title?: string;
+        description?: string;
+        resultText?: string;
+    };
+}
+
 export default function Temperature75C() {
     const celsius = 75;
     const fahrenheit = celsiusToFahrenheit(celsius);
     const { locale, pageTranslation } = useTranslation('75-c-to-f');
-    const pageT = pageTranslation || {};
+    const pageT = useMemo(() => (pageTranslation as PageTranslation) || {}, [pageTranslation]);
 
     const replacements = useMemo(() => ({
         fahrenheit: formatTemperature(fahrenheit),
@@ -24,29 +53,29 @@ export default function Temperature75C() {
 
         // 注入 JSON 中的特定 FAQ
         if (pageT.faq && pageT.faq.items) {
-            s.faqs = pageT.faq.items.map((item: any) => ({
-                question: replace(item.question),
-                answer: replace(item.answer)
+            s.faqs = pageT.faq.items.map((item: TranslationItem) => ({
+                question: replace(item.question || ''),
+                answer: replace(item.answer || '')
             }));
         }
 
+        const insights: { type: 'warning' | 'tip' | 'fact'; title: string; content: string }[] = [];
+
         // 注入项目列表的辅助函数
-        const processContext = (context: any, type: 'warning' | 'tip' | 'fact') => {
+        const processContext = (context: TranslationItem | undefined, type: 'warning' | 'tip' | 'fact') => {
             if (!context) return;
-            let content = replace(context.content);
+            let content = replace(context.content || '');
             if (context.items && Array.isArray(context.items)) {
                 content += `<ul style="margin-top: 10px; padding-left: 20px;">${context.items.map((it: string) => `<li>${replace(it)}</li>`).join('')}</ul>`;
             }
-            insights.push({ type, title: replace(context.title), content });
+            insights.push({ type, title: replace(context.title || ''), content });
         };
 
-        // 注入工业/烘焙警告作为 Insights
-        const insights = [];
         if (pageT.warning) {
             insights.push({
                 type: 'warning' as const,
-                title: replace(pageT.warning.title),
-                content: replace(pageT.warning.content)
+                title: replace(pageT.warning.title || ''),
+                content: replace(pageT.warning.content || '')
             });
         }
 
@@ -58,8 +87,8 @@ export default function Temperature75C() {
         if (pageT.negative) {
             insights.push({
                 type: 'fact' as const,
-                title: replace(pageT.negative.result),
-                content: replace(pageT.negative.description)
+                title: replace(pageT.negative.result || ''),
+                content: replace(pageT.negative.description || '')
             });
         }
 

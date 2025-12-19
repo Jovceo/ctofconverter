@@ -3,7 +3,6 @@ import { useTranslation, getDisplayLocale } from '../utils/i18n';
 
 function getCurrentDate(locale: string): { dateTime: string; formatted: string } {
   const now = new Date();
-  const year = now.getFullYear();
   const normalizedLocale = getDisplayLocale(locale);
 
   const formatted = now.toLocaleDateString(normalizedLocale, {

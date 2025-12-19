@@ -9,11 +9,10 @@ interface FAQItem {
 
 interface FAQSection47CProps {
   fahrenheit: number;
-  locale?: string;
   faqItems?: FAQItem[];
 }
 
-export default function FAQSection47C({ fahrenheit, locale = 'en', faqItems }: FAQSection47CProps) {
+export default function FAQSection47C({ fahrenheit, faqItems }: FAQSection47CProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   // 如果提供了外部 FAQ 数据，使用外部数据；否则使用默认英文数据

@@ -148,7 +148,6 @@ export default function Converter() {
       setTimeout(() => setCopySuccess(false), 2000);
     } catch (err) {
       console.error('Failed to copy: ', err);
-      alert('Failed to copy to clipboard. Please try again.');
     }
   };
 
@@ -179,7 +178,7 @@ export default function Converter() {
   };
 
   const { common } = useTranslation();
-  const converterTexts = common?.converterWidget || {};
+  const converterTexts = (common?.converterWidget as ConverterTexts) || {};
   const mistakes = converterTexts.commonMistakes || [
     { title: 'Forgetting to add 32', description: 'Only multiplying by 9/5 will give incorrect results' },
     { title: 'Incorrect order of operations', description: 'Adding 32 first and then multiplying by 9/5 is incorrect' },
@@ -333,6 +332,27 @@ export default function Converter() {
   );
 }
 
+interface ConverterTexts {
+  title?: string;
+  description?: string;
+  historyTitle?: string;
+  clearHistory?: string;
+  historyEmpty?: string;
+  historyEmptyAria?: string;
+  formulaTitle?: string;
+  equationTitle?: string;
+  equationExample?: string;
+  howToTitle?: string;
+  howToDescription?: string;
+  steps?: {
+    multiply?: { title: string; description: string };
+    add?: { title: string; description: string };
+    result?: { title: string; description: string };
+  };
+  commonMistakesTitle?: string;
+  commonMistakes?: { title: string; description: string }[];
+}
+
 function ConversionSteps({
   step1,
   step2,
@@ -343,7 +363,7 @@ function ConversionSteps({
   step1: string;
   step2: string;
   step3: string;
-  texts: any;
+  texts: ConverterTexts;
   mistakes: { title: string; description: string }[];
 }) {
   return (

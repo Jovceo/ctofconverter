@@ -1,7 +1,13 @@
-'use client';
-
 import { useEffect } from 'react';
 import Script from 'next/script';
+
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+    adsbygoogle: any[];
+  }
+}
 
 export default function Analytics() {
   // Initialize Google Analytics dataLayer
@@ -11,7 +17,7 @@ export default function Analytics() {
       const gtag = (...args: any[]) => {
         window.dataLayer.push(args);
       };
-      (window as any).gtag = gtag;
+      window.gtag = gtag;
     }
   }, []);
 
@@ -38,8 +44,8 @@ export default function Analytics() {
           );
           if (uninitializedElements.length > 0) {
             try {
-              (window.adsbygoogle as any).push({});
-            } catch (e) {
+              window.adsbygoogle.push({});
+            } catch {
               // Silently ignore if already initialized
             }
           }
@@ -61,8 +67,8 @@ export default function Analytics() {
           const insElements = document.querySelectorAll('ins.adsbygoogle');
           if (insElements.length > 0) {
             try {
-              (window.adsbygoogle as any).push({});
-            } catch (e) {
+              window.adsbygoogle.push({});
+            } catch {
               // Silently ignore errors
             }
           }
@@ -107,9 +113,9 @@ export default function Analytics() {
         src="https://www.googletagmanager.com/gtag/js?id=G-7KGQPN84Z6"
         strategy="afterInteractive"
         onLoad={() => {
-          if (typeof window !== 'undefined' && (window as any).gtag) {
-            (window as any).gtag('js', new Date());
-            (window as any).gtag('config', 'G-7KGQPN84Z6');
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('js', new Date());
+            window.gtag('config', 'G-7KGQPN84Z6');
           }
         }}
       />
