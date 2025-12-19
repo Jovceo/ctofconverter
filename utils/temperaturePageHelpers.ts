@@ -14,11 +14,13 @@ export function celsiusToFahrenheit(celsius: number): number {
  * 格式化温度显示（保留1位小数）
  */
 export function formatTemperature(value: number, precision: number = 1): string {
-  return value.toFixed(precision);
+  const fixed = value.toFixed(precision);
+  return parseFloat(fixed).toString();
 }
 
 /**
  * 生成数字的英文单词（用于温度描述）
+ * TODO: 如果需要其他语言的单词生成，可以在此扩展
  */
 export function numberToWords(num: number): string {
   const ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
@@ -39,14 +41,14 @@ export function numberToWords(num: number): string {
 /**
  * 生成HowTo结构化数据
  */
-export function generateHowToStructuredData(celsius: number, fahrenheit: number) {
+export function generateHowToStructuredData(celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string) {
   const multiplied = celsius * 1.8;
-  
+
   return {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: `How to Convert ${celsius}°C to Fahrenheit`,
-    description: `Step-by-step guide to convert ${celsius} degrees Celsius to Fahrenheit`,
+    name: t('meta.pageTitle', { celsius, fahrenheit: formatTemperature(fahrenheit) }),
+    description: t('meta.description', { celsius, fahrenheit: formatTemperature(fahrenheit) }),
     totalTime: 'PT1M',
     estimatedCost: {
       '@type': 'MonetaryAmount',
@@ -56,23 +58,23 @@ export function generateHowToStructuredData(celsius: number, fahrenheit: number)
     step: [
       {
         '@type': 'HowToStep',
-        text: `Start with the temperature in Celsius: ${celsius}°C`,
-        name: 'Identify Celsius Value',
+        text: `Starting value: ${celsius}°C`, // Simplified for now
+        name: t('common.stepTitle'),
       },
       {
         '@type': 'HowToStep',
-        text: `Multiply by 9/5: ${celsius} × 9/5 = ${celsius} × 1.8 = ${formatTemperature(multiplied)}`,
-        name: 'Multiply by Fraction',
+        text: `${celsius} × 1.8 = ${formatTemperature(multiplied)}`,
+        name: t('common.step1'),
       },
       {
         '@type': 'HowToStep',
-        text: `Add 32 to the result: ${formatTemperature(multiplied)} + 32 = ${formatTemperature(fahrenheit)}`,
-        name: 'Add 32 Degrees',
+        text: `${formatTemperature(multiplied)} + 32 = ${formatTemperature(fahrenheit)}`,
+        name: t('common.step2'),
       },
       {
         '@type': 'HowToStep',
-        text: `The final result is ${formatTemperature(fahrenheit)}°F`,
-        name: 'Final Conversion',
+        text: t('common.stepResult') + `: ${formatTemperature(fahrenheit)}°F`,
+        name: t('common.stepResult'),
       },
     ],
   };
@@ -84,16 +86,17 @@ export function generateHowToStructuredData(celsius: number, fahrenheit: number)
 export function generateFAQStructuredData(
   celsius: number,
   fahrenheit: number,
+  t: (key: string, repl?: any) => string,
   customFAQs?: Array<{ question: string; answer: string }>
 ) {
   const defaultFAQs = [
     {
-      question: `What is ${celsius} degrees Celsius in Fahrenheit?`,
-      answer: `${celsius} degrees Celsius equals ${formatTemperature(fahrenheit)} degrees Fahrenheit. To convert, use the formula: °F = (°C × 9/5) + 32`,
+      question: t('faqs.core.q1', { celsius, fahrenheit: formatTemperature(fahrenheit) }),
+      answer: t('faqs.core.a1', { celsius, fahrenheit: formatTemperature(fahrenheit) }),
     },
     {
-      question: `What is minus ${celsius} Celsius to Fahrenheit?`,
-      answer: `Minus ${celsius} degrees Celsius equals ${formatTemperature(celsiusToFahrenheit(-celsius))} degrees Fahrenheit.`,
+      question: t('faqs.core.q3'),
+      answer: t('faqs.core.a3'),
     },
   ];
 
@@ -121,13 +124,13 @@ export function generateRelatedTemperatures(
   count: number = 4
 ): Array<{ celsius: number; fahrenheit: number; href: string }> {
   const related: Array<{ celsius: number; fahrenheit: number; href: string }> = [];
-  
+
   // 生成相邻的温度值
   const offsets = [-2, -1, 1, 2, -3, 3, -4, 4, -5, 5];
-  
+
   for (let i = 0; i < offsets.length && related.length < count; i++) {
     const relatedCelsius = celsius + offsets[i];
-    if (relatedCelsius > 0) { // 只包含正数温度
+    if (relatedCelsius > 0) {
       related.push({
         celsius: relatedCelsius,
         fahrenheit: celsiusToFahrenheit(relatedCelsius),
@@ -135,42 +138,37 @@ export function generateRelatedTemperatures(
       });
     }
   }
-  
+
   return related;
 }
 
 /**
  * 生成页面URL（用于canonical和og:url）
  */
-export function generatePageUrl(celsius: number, baseUrl: string = 'https://ctofconverter.com'): string {
-  return `${baseUrl}/${celsius}-c-to-f.html`;
+export function generatePageUrl(celsius: number, locale: string = 'en', baseUrl: string = 'https://ctofconverter.com'): string {
+  const localePath = locale === 'en' ? '' : `/${locale}`;
+  return `${baseUrl}${localePath}/${celsius}-c-to-f`;
 }
 
 /**
  * 生成页面标题
  */
-export function generatePageTitle(celsius: number, fahrenheit: number): string {
-  return `${celsius}°C to Fahrenheit (${formatTemperature(fahrenheit)}°F) | Conversion Guide & Calculator`;
+export function generatePageTitle(celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string): string {
+  return t('meta.pageTitle', { celsius, fahrenheit: formatTemperature(fahrenheit) });
 }
 
 /**
  * 生成Meta描述
  */
-export function generateMetaDescription(celsius: number, fahrenheit: number, customText?: string): string {
-  if (customText) {
-    return customText;
-  }
-  return `Convert ${celsius} degrees Celsius to Fahrenheit quickly. Learn that ${celsius}°C equals ${formatTemperature(fahrenheit)}°F, see the calculation steps, and understand temperature context.`;
+export function generateMetaDescription(celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string): string {
+  return t('meta.description', { celsius, fahrenheit: formatTemperature(fahrenheit) });
 }
 
 /**
  * 生成OG描述
  */
-export function generateOGDescription(celsius: number, fahrenheit: number, customText?: string): string {
-  if (customText) {
-    return customText;
-  }
-  return `Convert ${celsius} degrees Celsius to Fahrenheit instantly. ${celsius}°C equals ${formatTemperature(fahrenheit)}°F - see the calculation steps and practical applications.`;
+export function generateOGDescription(celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string): string {
+  return t('meta.ogDescription', { celsius, fahrenheit: formatTemperature(fahrenheit) });
 }
 
 /**
@@ -183,16 +181,81 @@ export interface TemperatureContext {
   isExtremeHeat: boolean;
   isCold: boolean;
   isExtremeCold: boolean;
+  categoryKeys: string[];
+  descriptionKey: string;
 }
 
+/**
+ * 分析温度并返回其上下文信息
+ */
 export function analyzeTemperature(celsius: number): TemperatureContext {
+  const isBodyTemperature = celsius >= 35 && celsius <= 42;
+  const isFever = celsius >= 38;
+  const isDangerousFever = celsius >= 41;
+  const isExtremeHeat = celsius >= 45;
+  const isCold = celsius < 10;
+  const isExtremeCold = celsius < -20;
+
+  const categoryKeys: string[] = [];
+  let descriptionKey = '';
+
+  if (isBodyTemperature) {
+    categoryKeys.push('body');
+    if (isFever) {
+      if (isDangerousFever) {
+        categoryKeys.push('dangerousFever');
+        descriptionKey = 'dangerousFever';
+      } else {
+        categoryKeys.push('fever');
+        descriptionKey = 'fever';
+      }
+    } else {
+      descriptionKey = 'elevated';
+    }
+  } else if (isExtremeHeat) {
+    categoryKeys.push('extremeHeat');
+    descriptionKey = 'extremeHeat';
+  } else if (celsius > 40) {
+    categoryKeys.push('veryHot');
+    descriptionKey = 'veryHot';
+  } else if (celsius > 30) {
+    categoryKeys.push('hot');
+    descriptionKey = 'hot';
+  } else if (celsius > 20) {
+    categoryKeys.push('warm');
+    descriptionKey = 'warm';
+  } else if (celsius > 15) {
+    categoryKeys.push('mild');
+    descriptionKey = 'mild';
+  } else if (celsius > 10) {
+    categoryKeys.push('cool');
+    descriptionKey = 'cool';
+  } else if (isExtremeCold) {
+    categoryKeys.push('extremeCold');
+    descriptionKey = 'extremeCold';
+  } else if (isCold) {
+    categoryKeys.push('cold');
+    descriptionKey = 'cold';
+  } else {
+    categoryKeys.push('moderate');
+    descriptionKey = 'moderate';
+  }
+
   return {
-    isBodyTemperature: celsius >= 35 && celsius <= 42,
-    isFever: celsius >= 38,
-    isDangerousFever: celsius >= 41,
-    isExtremeHeat: celsius >= 45,
-    isCold: celsius < 10,
-    isExtremeCold: celsius < -20,
+    isBodyTemperature,
+    isFever,
+    isDangerousFever,
+    isExtremeHeat,
+    isCold,
+    isExtremeCold,
+    categoryKeys,
+    descriptionKey
   };
 }
 
+/**
+ * 将华氏度转换为摄氏度
+ */
+export function fahrenheitToCelsius(fahrenheit: number): number {
+  return (fahrenheit - 32) * 5 / 9;
+}

@@ -12,7 +12,58 @@
     "tagline": "Free online temperature conversion tool that instantly converts degrees Celsius (°C) to degrees Fahrenheit (°F) with formulas, detailed steps, and helpful explanations."
   },
   "breadcrumb": {
+    "home": "Home",
     "current": "Celsius to Fahrenheit"
+  },
+  "converter": {
+    "title": "Celsius to Fahrenheit Converter",
+    "description": "Instantly convert <span class=\"nowrap\">°C to °F</span> for free. Ideal for cooking, travel, and science. Get accurate results in seconds!",
+    "inputLabel": "Celsius (°C)",
+    "inputPlaceholder": "e.g. 37.5",
+    "inputAria": "Enter temperature between -273.15°C and 1,000,000°C",
+    "resultLabel": "Fahrenheit (°F)",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "infoCelsius": "Water freezes at 0°C and boils at 100°C",
+    "infoFahrenheit": "Water freezes at 32°F and boils at 212°F"
+  },
+  "history": {
+    "title": "Recent Conversions",
+    "clearLabel": "Clear History",
+    "empty": "No conversions yet"
+  },
+  "formula": {
+    "title": "Celsius to Fahrenheit Formula",
+    "subtitle": "Equation to Convert Celsius to Fahrenheit",
+    "box": "°F = (°C × 9/5) + 32",
+    "example": "Example: 20°C = (20 × 9/5) + 32 = 68°F"
+  },
+  "steps": {
+    "title": "How to Convert Celsius to Fahrenheit",
+    "description": "Click each step to see detailed calculation",
+    "items": [
+      {
+        "title": "Multiply by 9/5",
+        "description": "Multiply the Celsius temperature by 9/5 (or 1.8)"
+      },
+      {
+        "title": "Add 32",
+        "description": "Add 32 to the result from step 1"
+      },
+      {
+        "title": "Final Result",
+        "description": "Get the final Fahrenheit temperature result"
+      }
+    ]
+  },
+  "commonMistakes": {
+    "title": "Celsius to Fahrenheit Conversion Common Mistakes",
+    "items": [
+      "<strong>Forgetting to add 32</strong> - <span>Only multiplying by 9/5 will give incorrect results</span>",
+      "<strong>Incorrect order of operations</strong> - <span>Adding 32 first and then multiplying by 9/5 is incorrect</span>",
+      "<strong>Using the wrong fraction</strong> - <span>Using 2/3 instead of 9/5 is a common error</span>",
+      "<strong>Rounding too early</strong> - <span>Rounding intermediate results can lead to inaccuracies</span>"
+    ]
   },
   "reference": {
     "title": "Common Celsius to Fahrenheit Conversions",
@@ -47,7 +98,7 @@
         "bullets": [
           "<strong>Summer comfort:</strong> 22-26°C = 72-79°F",
           "<strong>Winter indoor comfort:</strong> 20-22°C = 68-72°F",
-          "<strong>Heat wave warning:</strong> &gt;35°C = &gt;95°F"
+          "<strong>Heat wave warning:</strong> >35°C = >95°F"
         ]
       },
       {
@@ -55,8 +106,8 @@
         "description": "Monitor body temperatures, calibrate medical devices, and handle medication storage.",
         "bullets": [
           "<strong>Normal body temperature:</strong> 36.5-37.5°C = 97.7-99.5°F",
-          "<strong>Fever threshold:</strong> &gt;38°C = &gt;100.4°F",
-          "<strong>Hypothermia risk:</strong> &lt;35°C = &lt;95°F"
+          "<strong>Fever threshold:</strong> >38°C = >100.4°F",
+          "<strong>Hypothermia risk:</strong> <35°C = <95°F"
         ]
       },
       {
@@ -92,4 +143,3 @@
     ]
   }
 }
-

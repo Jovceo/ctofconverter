@@ -8,6 +8,10 @@ const LOCALES = [
   { code: 'zh', label: '中文' },
   { code: 'es', label: 'Español' },
   { code: 'hi', label: 'हिन्दी' },
+  { code: 'ar', label: 'العربية' },
+  { code: 'ja', label: '日本語' },
+  { code: 'fr', label: 'Français' },
+  { code: 'de', label: 'Deutsch' },
   { code: 'id', label: 'Bahasa Indonesia' },
   { code: 'pt-br', label: 'Português (Brasil)' },
 ];

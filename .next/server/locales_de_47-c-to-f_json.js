@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "locales_de_47-c-to-f_json";
+exports.ids = ["locales_de_47-c-to-f_json"];
+exports.modules = {
+
+/***/ "./locales/de/47-c-to-f.json":
+/*!***********************************!*\
+  !*** ./locales/de/47-c-to-f.json ***!
+  \***********************************/
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"meta":{"pageTitle":"47°C in Fahrenheit ({fahrenheit}°F) | Umrechnungsleitfaden & Rechner","description":"Konvertieren Sie schnell 47 Grad Celsius in Fahrenheit. Erfahren Sie, dass 47°C gleich {fahrenheit}°F sind, sehen Sie die Berechnungsschritte und verstehen Sie den Temperaturkontext.","ogTitle":"47°C in Fahrenheit ({fahrenheit}°F) Umrechner","ogDescription":"Konvertieren Sie 47 Grad Celsius sofort in Fahrenheit. 47°C entsprechen {fahrenheit}°F - sehen Sie die Rechenschritte und praktischen Anwendungen."},"page":{"title":"47°C in Fahrenheit ({fahrenheit}°F) - Vollständiger Leitfaden","description":"Konvertieren Sie <strong>47 Grad Celsius sofort in Fahrenheit</strong>. <strong>47°C entsprechen {fahrenheit}°F</strong>. Lernen Sie die exakte Formel, die schrittweise Berechnung und warum 47°C eine extrem gefährliche Körpertemperatur ist.","resultText":"Siebenundvierzig Grad Celsius entsprechen {fahrenheit} Grad Fahrenheit"},"warning":{"title":"⚠️ Kritisch: 47°C ({fahrenheit}°F) ist lebensgefährlich","content":"Wenn dies ein Körpertemperatur-Messwert ist, <strong>suchen Sie sofort medizinische Notfallhilfe auf</strong>. 47°C stellt eine schwere Hyperthermie dar, die tödlich sein kann."},"context":{"medical":{"title":"⚠️ Medizinische Warnung: 47°C Körpertemperatur","content":"<strong>47°C ({fahrenheit}°F) ist eine extrem gefährliche Körpertemperatur.</strong> Die normale menschliche Körpertemperatur liegt bei ca. 37°C. Eine Temperatur von 47°C ist lebensbedrohlich.","items":["<strong>Normaltemperatur:</strong> 36,5-37,5°C","<strong>Fieberschwelle:</strong> 38°C","<strong>Hohes Fieber:</strong> 39-40°C","<strong>Gefährliche Hyperthermie:</strong> 41°C+","<strong>47°C ({fahrenheit}°F):</strong> Lebensgefahr - sofort Hilfe suchen"]},"environmental":{"title":"Umgebungstemperatur: Wie heiß sind 47°C?","content":"Als Umgebungstemperatur sind <strong>47°C ({fahrenheit}°F) extrem heiß</strong> und stellen gefährliche Hitzebedingungen dar.","items":["Heißer als die meisten Wüstenklima","Kann Hitzschlag und Hitzeerschöpfung verursachen","Erfordert extreme Vorsichtsmaßnahmen bei Hitze","Ähnlich wie Temperaturen während Rekord-Hitzewellen"]},"cooking":{"title":"Anwendungen beim Kochen","content":"Beim Kochen werden 47°C ({fahrenheit}°F) verwendet für:","items":["<strong>Niedrigtemperaturgaren:</strong> Sous-vide-Techniken für empfindliche Proteine","<strong>Lebensmittelsicherheit:</strong> Oberhalb der Gefahrenzone für Bakterienwachstum","<strong>Warmhalten:</strong> Gekochte Speisen warm halten"]}},"negative":{"result":"-47°C = {negativeFahrenheit}°F","description":"Minus 47 Grad Celsius entsprechen <strong>{negativeFahrenheit} Grad Fahrenheit</strong>. Dies ist extrem kalt, ähnlich wie Temperaturen in Polarregionen im Winter."},"faq":{"items":[{"question":"Was sind 47 Grad Celsius in Fahrenheit?","answer":"47 Grad Celsius entsprechen {fahrenheit} Grad Fahrenheit. Umrechnungsformel: °F = (°C × 9/5) + 32. Also 47 × 1,8 + 32 = {fahrenheit}°F."},{"question":"Sind 47°C eine Fiebertemperatur?","answer":"Ja, 47°C ({fahrenheit}°F) ist eine extrem gefährliche Fiebertemperatur. Eine Temperatur von 47°C ist lebensbedrohlich und ein medizinischer Notfall."},{"question":"Wie heiß sind 47 Grad Celsius?","answer":"47°C ({fahrenheit}°F) ist extrem heiß. Als Umgebungstemperatur kann es Hitzschlag verursachen und ist heißer als die meisten Wüsten."},{"question":"Was sind minus 47 Celsius in Fahrenheit?","answer":"Minus 47 Grad Celsius entsprechen {negativeFahrenheit} Grad Fahrenheit. Die Formel ist dieselbe: °F = (-47 × 9/5) + 32 = {negativeFahrenheit}°F."}]}}');
+
+/***/ })
+
+};
+;

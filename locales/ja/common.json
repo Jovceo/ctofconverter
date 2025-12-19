@@ -1,0 +1,29 @@
+{
+    "nav": {
+        "celsiusToFahrenheit": "摂氏から華氏",
+        "fahrenheitToCelsius": "華氏から摂氏",
+        "calculator": "摂氏・華氏計算機",
+        "to": "から",
+        "selectLanguage": "言語を選択"
+    },
+    "breadcrumb": {
+        "home": "ホーム"
+    },
+    "footer": {
+        "title": "C to F Converter",
+        "description": "即座に変換できる無料のオンライン温度計算機。摂氏から華氏へ正確に温度を変換します。",
+        "quickLinks": "クイックリンク",
+        "conversions": "一般的な変換",
+        "legal": "法務",
+        "links": {
+            "celsiusToFahrenheit": "摂氏から華氏",
+            "fahrenheitToCelsius": "華氏から摂氏",
+            "privacyPolicy": "プライバシーポリシー",
+            "termsOfService": "利用規約",
+            "aboutUs": "私たちについて"
+        },
+        "copyright": "© {year} Ctofconverter. All rights reserved.",
+        "lastUpdated": "最終更新日：",
+        "backToTop": "トップに戻る"
+    }
+}

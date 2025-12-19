@@ -13,7 +13,8 @@
     "celsiusToFahrenheit": "摄氏度转华氏度",
     "fahrenheitToCelsius": "华氏度转摄氏度",
     "calculator": "C转F计算器",
-    "selectLanguage": "选择语言"
+    "selectLanguage": "选择语言",
+    "seoLinkText": "{celsius} 摄氏度等于多少华氏度？({fahrenheit}°F)"
   },
   "breadcrumb": {
     "home": "首页"
@@ -111,4 +112,3 @@
     "backToTop": "返回顶部"
   }
 }
-
