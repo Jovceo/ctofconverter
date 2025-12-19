@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { GetStaticProps } from 'next';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
@@ -16,7 +15,6 @@ interface ConversionHistoryItem {
 }
 
 export default function Home() {
-    const router = useRouter();
     const { t, locale } = useTranslation('home');
 
     // 转换器状态

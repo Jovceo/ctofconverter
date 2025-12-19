@@ -20,7 +20,7 @@ import {
   analyzeTemperature,
 } from '../utils/temperaturePageHelpers';
 
-import { generateContentStrategy, ContentStrategy } from '../utils/contentStrategy';
+import { ContentStrategy } from '../utils/contentStrategy';
 import { textSpinner } from '../utils/textSpinner';
 import { useTranslation } from '../utils/i18n';
 
@@ -172,7 +172,7 @@ const PracticalApplications: React.FC<{
     }
 
     return apps;
-  }, [celsius, fahrenheit, t, formattedF]);
+  }, [celsius, t, formattedF]);
 
   return (
     <div className="formula-section">

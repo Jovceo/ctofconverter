@@ -3,9 +3,9 @@ import Script from 'next/script';
 
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
-    adsbygoogle: any[];
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
+    adsbygoogle: unknown[];
   }
 }
 
@@ -14,7 +14,7 @@ export default function Analytics() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.dataLayer = window.dataLayer || [];
-      const gtag = (...args: any[]) => {
+      const gtag = (...args: unknown[]) => {
         window.dataLayer.push(args);
       };
       window.gtag = gtag;
