@@ -1,0 +1,30 @@
+{
+    "nav": {
+        "celsiusToFahrenheit": "Celsius in Fahrenheit",
+        "fahrenheitToCelsius": "Fahrenheit in Celsius",
+        "calculator": "C-F-Rechner",
+        "to": "zu",
+        "selectLanguage": "Sprache wählen",
+        "seoLinkText": "{celsius} Celsius in Fahrenheit ({fahrenheit}°F)"
+    },
+    "breadcrumb": {
+        "home": "Startseite"
+    },
+    "footer": {
+        "title": "C to F Converter",
+        "description": "Kostenloser Online-Temperaturrechner für sofortige Umrechnungen. Konvertieren Sie Temperaturen präzise von Celsius in Fahrenheit.",
+        "quickLinks": "Quicklinks",
+        "conversions": "Häufige Umrechnungen",
+        "legal": "Rechtliches",
+        "links": {
+            "celsiusToFahrenheit": "Celsius in Fahrenheit",
+            "fahrenheitToCelsius": "Fahrenheit in Celsius",
+            "privacyPolicy": "Datenschutzerklärung",
+            "termsOfService": "Nutzungsbedingungen",
+            "aboutUs": "Über uns"
+        },
+        "copyright": "© {year} Ctofconverter. Alle Rechte vorbehalten.",
+        "lastUpdated": "Zuletzt aktualisiert:",
+        "backToTop": "Nach oben"
+    }
+}

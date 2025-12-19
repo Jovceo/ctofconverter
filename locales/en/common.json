@@ -13,7 +13,9 @@
     "celsiusToFahrenheit": "Celsius to Fahrenheit",
     "fahrenheitToCelsius": "Fahrenheit to Celsius",
     "calculator": "C to F Calculator",
-    "selectLanguage": "Select language"
+    "to": "to",
+    "selectLanguage": "Select language",
+    "seoLinkText": "{celsius} Celsius to Fahrenheit ({fahrenheit}°F)"
   },
   "breadcrumb": {
     "home": "Home"
@@ -111,4 +113,3 @@
     "backToTop": "Back to top"
   }
 }
-

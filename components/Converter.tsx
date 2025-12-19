@@ -35,14 +35,7 @@ export default function Converter() {
   };
 
   const formatTemperature = (temp: number): string => {
-    const rounded = Math.round(temp * 10) / 10;
-    if (temp < 0 && temp > -1) {
-      return rounded.toFixed(1) + '°F';
-    }
-    if (rounded % 1 === 0) {
-      return rounded.toString() + '°F';
-    }
-    return rounded.toFixed(1) + '°F';
+    return parseFloat(temp.toFixed(1)).toString() + '°F';
   };
 
   const handleCelsiusChange = (value: string) => {
@@ -90,9 +83,11 @@ export default function Converter() {
     // Update step visualizations
     const step1 = celsiusValue * 9 / 5;
     const step2 = step1 + 32;
+    const cleanStep = (val: number) => parseFloat(val.toFixed(2)).toString();
+
     setStepVisualizations({
-      step1: `${celsiusValue} × 9/5 = ${step1.toFixed(2)}`,
-      step2: `${step1.toFixed(2)} + 32 = ${step2.toFixed(2)}`,
+      step1: `${celsiusValue} × 9/5 = ${cleanStep(step1)}`,
+      step2: `${cleanStep(step1)} + 32 = ${cleanStep(step2)}`,
       step3: `Result: ${formatTemperature(fahrenheitValue)}`,
     });
 
@@ -444,4 +439,3 @@ function ConversionSteps({
     </>
   );
 }
-

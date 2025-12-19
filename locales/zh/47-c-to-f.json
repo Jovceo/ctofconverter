@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "47°C 转华氏度 ({fahrenheit}°F) | 转换指南和计算器",
+    "pageTitle": "47°C 转华氏度 ({fahrenheit}°F) | 转换指南和计算器",
     "description": "快速将 47 摄氏度转换为华氏度。了解 47°C 等于 {fahrenheit}°F，查看计算步骤，并了解温度背景，包括发烧和环境高温。",
     "ogTitle": "47°C 转华氏度 ({fahrenheit}°F) 转换器",
     "ogDescription": "立即将 47 摄氏度转换为华氏度。47°C 等于 {fahrenheit}°F - 查看计算步骤和实际应用。"
@@ -71,4 +71,3 @@
     ]
   }
 }
-

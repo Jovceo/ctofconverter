@@ -3,20 +3,20 @@ const nextConfig = {
   // 基础配置
   reactStrictMode: true,
   swcMinify: false,
-  
+
   // Enable internationalization - Support multiple locales
   i18n: {
-    locales: ['en', 'zh', 'es', 'hi', 'id', 'pt-br', 'fr', 'de'],
+    locales: ['en', 'zh', 'es', 'hi', 'ar', 'ja', 'fr', 'de', 'id', 'pt-br'],
     defaultLocale: 'en',
     localeDetection: false,
   },
-  
+
   // 图片优化
   images: {
     domains: ['localhost'],
     unoptimized: true,
   },
-  
+
   // Webpack配置
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -27,6 +27,15 @@ const nextConfig = {
       };
     }
     return config;
+  },
+
+  async rewrites() {
+    return [
+      {
+        source: '/images/equation/:celsius-celsius-to-fahrenheit-conversion.png',
+        destination: '/api/og?c=:celsius',
+      },
+    ];
   },
 };
 

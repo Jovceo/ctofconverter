@@ -12,7 +12,58 @@
     "tagline": "免费的在线温度转换工具，可即时将摄氏度（°C）转换为华氏度（°F），并提供公式、详尽步骤与实用说明。"
   },
   "breadcrumb": {
+    "home": "首页",
     "current": "摄氏度转华氏度"
+  },
+  "converter": {
+    "title": "摄氏度转华氏度转换器",
+    "description": "免费即时将 <span class=\"nowrap\">°C 转换为 °F</span>。适合烹饪、旅行与科学实验。数秒内获得准确结果！",
+    "inputLabel": "摄氏度 (°C)",
+    "inputPlaceholder": "例如 37.5",
+    "inputAria": "输入 -273.15°C 到 1,000,000°C 之间的温度",
+    "resultLabel": "华氏度 (°F)",
+    "copy": "复制",
+    "copied": "已复制！",
+    "infoCelsius": "水在 0°C 结冰，100°C 沸腾",
+    "infoFahrenheit": "水在 32°F 结冰，212°F 沸腾"
+  },
+  "history": {
+    "title": "最近转换",
+    "clearLabel": "清除历史",
+    "empty": "暂无转换记录"
+  },
+  "formula": {
+    "title": "摄氏度转华氏度公式",
+    "subtitle": "摄氏度转华氏度的计算等式",
+    "box": "°F = (°C × 9/5) + 32",
+    "example": "示例：20°C = (20 × 9/5) + 32 = 68°F"
+  },
+  "steps": {
+    "title": "如何将摄氏度转换为华氏度",
+    "description": "点击每一步查看详细计算过程",
+    "items": [
+      {
+        "title": "乘以 9/5",
+        "description": "将摄氏温度乘以 9/5（或 1.8）"
+      },
+      {
+        "title": "加上 32",
+        "description": "将步骤1的结果加上 32"
+      },
+      {
+        "title": "最终结果",
+        "description": "获得最终的华氏温度映射结果"
+      }
+    ]
+  },
+  "commonMistakes": {
+    "title": "摄氏度转华氏度转换常见错误",
+    "items": [
+      "<strong>忘记加 32</strong> - <span>仅乘以 9/5 会得到错误的结果</span>",
+      "<strong>运算顺序错误</strong> - <span>先加 32 再乘以 9/5 是极其错误的</span>",
+      "<strong>使用错误的分数</strong> - <span>在公式中使用 2/3 而非 9/5 是常见笔误</span>",
+      "<strong>过早进行四舍五入</strong> - <span>中间计算过程太早约简会导致结果不精准</span>"
+    ]
   },
   "reference": {
     "title": "常见的摄氏度转华氏度换算",
@@ -47,7 +98,7 @@
         "bullets": [
           "<strong>夏季舒适区：</strong> 22-26°C = 72-79°F",
           "<strong>冬季室内舒适区：</strong> 20-22°C = 68-72°F",
-          "<strong>热浪警戒：</strong> &gt;35°C = &gt;95°F"
+          "<strong>热浪警戒：</strong> >35°C = >95°F"
         ]
       },
       {
@@ -55,8 +106,8 @@
         "description": "监测体温、校准医疗设备、药品储存温度等。",
         "bullets": [
           "<strong>正常体温：</strong> 36.5-37.5°C = 97.7-99.5°F",
-          "<strong>发烧阈值：</strong> &gt;38°C = &gt;100.4°F",
-          "<strong>失温风险：</strong> &lt;35°C = &lt;95°F"
+          "<strong>发烧阈值：</strong> >38°C = >100.4°F",
+          "<strong>失温风险：</strong> <35°C = <95°F"
         ]
       },
       {
@@ -92,4 +143,3 @@
     ]
   }
 }
-

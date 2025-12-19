@@ -132,7 +132,7 @@ export default function Layout({ children }: LayoutProps) {
         <meta name="application-name" content="C to F Converter" />
         <meta name="theme-color" content="#3498db" />
       </Head>
-      <a className="skip-link" href="#main-content">
+      <a className="sr-only sr-only-focusable" href="#main-content">
         Skip to main content
       </a>
       {children}

@@ -9,10 +9,14 @@ import commonEs from '../locales/es/common.json';
 import commonHi from '../locales/hi/common.json';
 import commonId from '../locales/id/common.json';
 import commonPtBr from '../locales/pt-br/common.json';
+import commonFr from '../locales/fr/common.json';
+import commonDe from '../locales/de/common.json';
+import commonAr from '../locales/ar/common.json';
+import commonJa from '../locales/ja/common.json';
 
 // 支持的语言
-export type Locale = 'en' | 'zh' | 'es' | 'hi' | 'id' | 'pt-br' | 'fr' | 'de';
-export const SUPPORTED_LOCALES: Locale[] = ['en', 'zh', 'es', 'hi', 'id', 'pt-br', 'fr', 'de'];
+export type Locale = 'en' | 'zh' | 'es' | 'hi' | 'ar' | 'ja' | 'fr' | 'de' | 'id' | 'pt-br';
+export const SUPPORTED_LOCALES: Locale[] = ['en', 'zh', 'es', 'hi', 'ar', 'ja', 'fr', 'de', 'id', 'pt-br'];
 export const DEFAULT_LOCALE: Locale = 'en';
 
 export const DATE_LOCALE_MAP: Record<string, string> = {
@@ -20,64 +24,93 @@ export const DATE_LOCALE_MAP: Record<string, string> = {
   zh: 'zh-CN',
   es: 'es-ES',
   hi: 'hi-IN',
+  ar: 'ar-SA',
+  ja: 'ja-JP',
   id: 'id-ID',
   'pt-br': 'pt-BR',
   fr: 'fr-FR',
   de: 'de-DE',
 };
 
-export const COMMON_TRANSLATIONS: Record<Locale, typeof commonEn> = {
+export const COMMON_TRANSLATIONS: Record<string, any> = {
   en: commonEn,
   zh: commonZh,
   es: commonEs,
   hi: commonHi,
+  ar: commonAr,
+  ja: commonJa,
   id: commonId,
   'pt-br': commonPtBr,
-  fr: commonEn,
-  de: commonEn,
+  fr: commonFr,
+  de: commonDe,
 };
 
-export const HREFLANG_MAP: Record<Locale, string> = {
+export const HREFLANG_MAP: Record<string, string> = {
   en: 'en',
   zh: 'zh-CN',
   es: 'es',
   hi: 'hi',
+  ar: 'ar',
+  ja: 'ja',
   id: 'id',
   'pt-br': 'pt-BR',
   fr: 'fr',
   de: 'de',
 };
 
-const PAGE_TRANSLATIONS: Record<Locale, Record<string, any>> = {
+const PAGE_TRANSLATIONS: Record<string, any> = {
   en: {
     '47-c-to-f': require('../locales/en/47-c-to-f.json'),
+    '75-c-to-f': require('../locales/en/75-c-to-f.json'),
     home: require('../locales/en/home.json'),
+    template: require('../locales/en/template.json'),
   },
   zh: {
     '47-c-to-f': require('../locales/zh/47-c-to-f.json'),
     home: require('../locales/zh/home.json'),
+    template: require('../locales/en/template.json'), // Fallback to EN for now
   },
   es: {
     '47-c-to-f': require('../locales/es/47-c-to-f.json'),
     home: require('../locales/es/home.json'),
+    template: require('../locales/en/template.json'), // Fallback
   },
   hi: {
     '47-c-to-f': require('../locales/hi/47-c-to-f.json'),
     home: require('../locales/hi/home.json'),
+    template: require('../locales/en/template.json'), // Fallback
+  },
+  ar: {
+    home: require('../locales/ar/home.json'),
+    template: require('../locales/en/template.json'), // Fallback
+  },
+  ja: {
+    home: require('../locales/ja/home.json'),
+    template: require('../locales/en/template.json'), // Fallback
   },
   id: {
     '47-c-to-f': require('../locales/id/47-c-to-f.json'),
     home: require('../locales/id/home.json'),
+    template: require('../locales/en/template.json'), // Fallback
   },
   'pt-br': {
     '47-c-to-f': require('../locales/pt-br/47-c-to-f.json'),
     home: require('../locales/pt-br/home.json'),
+    template: require('../locales/en/template.json'), // Fallback
   },
-  fr: {},
-  de: {},
+  fr: {
+    '47-c-to-f': require('../locales/fr/47-c-to-f.json'),
+    home: require('../locales/fr/home.json'),
+    template: require('../locales/fr/template.json'),
+  },
+  de: {
+    '47-c-to-f': require('../locales/de/47-c-to-f.json'),
+    home: require('../locales/de/home.json'),
+    template: require('../locales/en/template.json'), // Fallback
+  },
 };
 
-const getLocalePageTranslation = (locale: Locale, page: string) => {
+const getLocalePageTranslation = (locale: string, page: string) => {
   const map = PAGE_TRANSLATIONS[locale];
   if (map && map[page]) {
     return map[page];
@@ -89,7 +122,7 @@ const getLocalePageTranslation = (locale: Locale, page: string) => {
 /**
  * 加载页面特定的翻译文件
  */
-export async function loadPageTranslation(locale: Locale, page: string): Promise<any> {
+export async function loadPageTranslation(locale: string, page: string): Promise<any> {
   try {
     const translation = await import(`../locales/${locale}/${page}.json`);
     return translation.default;
@@ -102,7 +135,7 @@ export async function loadPageTranslation(locale: Locale, page: string): Promise
 /**
  * 同步加载页面特定的翻译文件（用于 getStaticProps）
  */
-export function getPageTranslation(locale: Locale, page: string): any {
+export function getPageTranslation(locale: string, page: string): any {
   try {
     return getLocalePageTranslation(locale, page);
   } catch (error) {
@@ -114,7 +147,7 @@ export function getPageTranslation(locale: Locale, page: string): any {
 /**
  * 获取通用翻译
  */
-export function getCommonTranslation(locale: Locale): typeof commonEn {
+export function getCommonTranslation(locale: string): any {
   return COMMON_TRANSLATIONS[locale] || commonEn;
 }
 
@@ -134,63 +167,83 @@ export function replacePlaceholders(
 }
 
 /**
- * Hook: 获取当前语言和翻译
+ * 创建翻译函数
  */
-export function useTranslation(page?: string) {
-  const router = useRouter();
-  const { locale = 'en' } = router;
+export function createTranslation(locale: string, page?: string) {
   const currentLocale = (locale as Locale) || 'en';
-
-  // 获取通用翻译
   const common = getCommonTranslation(currentLocale);
-
-  // 获取页面特定翻译
-  let pageTranslation: any = null;
-  if (page) {
-    pageTranslation = getLocalePageTranslation(currentLocale, page);
-  }
+  const pageTranslation = page ? getLocalePageTranslation(currentLocale, page) : null;
 
   return {
     locale: currentLocale,
     t: (key: string, replacements?: Record<string, string | number>) => {
-      // 先尝试从页面翻译获取
-      if (pageTranslation) {
-        const keys = key.split('.');
+      // 内部辅助函数：处理值
+      const processValue = (val: any) => {
+        if (typeof val === 'string') {
+          return replacements ? replacePlaceholders(val, replacements) : val;
+        }
+        return val;
+      };
+
+      // 处理显式的 common: 前缀
+      let lookupKey = key;
+      let forceCommon = false;
+      if (key.startsWith('common:')) {
+        lookupKey = key.substring(7); // "common:".length === 7
+        forceCommon = true;
+      }
+
+      const keys = lookupKey.split('.');
+
+      // 如果不是强制 common，先尝试从页面翻译获取
+      if (!forceCommon && pageTranslation) {
         let value: any = pageTranslation;
+        let found = true;
         for (const k of keys) {
           if (value && typeof value === 'object' && k in value) {
             value = value[k];
           } else {
-            value = null;
+            found = false;
             break;
           }
         }
-        if (value) {
-          const text = String(value);
-          return replacements ? replacePlaceholders(text, replacements) : text;
+        if (found && value !== null && value !== undefined) {
+          return processValue(value);
         }
       }
 
       // 然后尝试从通用翻译获取
-      const keys = key.split('.');
       let value: any = common;
+      let found = true;
       for (const k of keys) {
         if (value && typeof value === 'object' && k in value) {
           value = value[k];
         } else {
-          return key; // 如果找不到，返回key本身
+          found = false;
+          break;
         }
       }
 
-      const text = String(value);
-      return replacements ? replacePlaceholders(text, replacements) : text;
+      if (found && value !== null && value !== undefined) {
+        return processValue(value);
+      }
+
+      return key; // 如果找不到，返回原 key (带前缀)
     },
     common,
     pageTranslation,
   };
 }
 
+/**
+ * Hook: 获取当前语言和翻译
+ */
+export function useTranslation(page?: string) {
+  const router = useRouter();
+  const { locale = 'en' } = router;
+  return createTranslation(locale as string, page);
+}
+
 export function getDisplayLocale(locale: string): string {
   return DATE_LOCALE_MAP[locale] || 'en-US';
 }
-

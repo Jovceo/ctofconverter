@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "47°C a Fahrenheit ({fahrenheit}°F) | Guía y calculadora",
+    "pageTitle": "47°C a Fahrenheit ({fahrenheit}°F) | Guía y calculadora",
     "description": "Convierte rápidamente 47 grados Celsius a Fahrenheit. Descubre que 47°C equivalen a {fahrenheit}°F, revisa los pasos de cálculo y entiende el contexto del calor extremo y la fiebre.",
     "ogTitle": "Conversor de 47°C a Fahrenheit ({fahrenheit}°F)",
     "ogDescription": "Convierte 47 grados Celsius a Fahrenheit al instante. 47°C equivalen a {fahrenheit}°F: mira los pasos de cálculo y sus aplicaciones prácticas."
@@ -71,4 +71,3 @@
     ]
   }
 }
-
