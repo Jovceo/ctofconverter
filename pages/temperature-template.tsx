@@ -1,19 +1,18 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import Layout from '../components/Layout';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Analytics from '../components/Analytics';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // 导入工具函数
 import {
   celsiusToFahrenheit,
-  fahrenheitToCelsius,
   formatTemperature,
   generateHowToStructuredData,
   generateFAQStructuredData,
-  generateRelatedTemperatures,
   generatePageUrl,
   generatePageTitle,
   generateMetaDescription,
@@ -24,6 +23,11 @@ import {
 import { generateContentStrategy, ContentStrategy } from '../utils/contentStrategy';
 import { textSpinner } from '../utils/textSpinner';
 import { useTranslation } from '../utils/i18n';
+
+/**
+ * 翻译函数类型
+ */
+type TFunction = (key: string, replacements?: Record<string, string | number>) => string;
 
 /**
  * 温度转换页面Props接口
@@ -83,51 +87,12 @@ const DynamicInsightsSection: React.FC<{ insights: ContentStrategy['insights'] }
 };
 
 /**
- * 快速转换结果卡片组件
- */
-const QuickResultCard: React.FC<{
-  celsius: number;
-  formattedFahrenheit: string;
-  t: (key: string, repl?: any) => string;
-}> = React.memo(({ celsius, formattedFahrenheit, t }) => {
-  const [copySuccess, setCopySuccess] = useState(false);
-
-  const handleCopy = useCallback(() => {
-    navigator.clipboard.writeText(`${celsius}°C = ${formattedFahrenheit}°F`);
-    setCopySuccess(true);
-    setTimeout(() => setCopySuccess(false), 2000);
-  }, [celsius, formattedFahrenheit]);
-
-  return (
-    <div className="quick-result-card">
-      <div className="result-header">
-        <h2>{t('common.quickResult')}</h2>
-      </div>
-      <div className="result-display">
-        <div className="celsius-value">
-          <span className="value">{celsius}</span>
-          <span className="unit">°C</span>
-        </div>
-        <div className="equals-sign">=</div>
-        <div className="fahrenheit-value">
-          <span className="value">{formattedFahrenheit}</span>
-          <span className="unit">°F</span>
-        </div>
-      </div>
-      <button className="copy-btn" onClick={handleCopy}>
-        {copySuccess ? t('common.copied') : t('common.copyResult')}
-      </button>
-    </div>
-  );
-});
-
-/**
  * 实用场景应用组件
  */
 const PracticalApplications: React.FC<{
   celsius: number;
   fahrenheit: number;
-  t: (key: string, repl?: any) => string;
+  t: TFunction;
 }> = React.memo(({ celsius, fahrenheit, t }) => {
   const formattedF = formatTemperature(fahrenheit);
   const applications = useMemo(() => {
@@ -207,7 +172,7 @@ const PracticalApplications: React.FC<{
     }
 
     return apps;
-  }, [celsius, fahrenheit, t]);
+  }, [celsius, fahrenheit, t, formattedF]);
 
   return (
     <div className="formula-section">
@@ -220,7 +185,7 @@ const PracticalApplications: React.FC<{
               <p>{app.description}</p>
               {app.examples && (
                 <ul className="use-case-examples">
-                  {app.examples.map((ex: any, i: number) => (
+                  {app.examples.map((ex: { label: string; value: string }, i: number) => (
                     <li key={i}><strong>{ex.label}:</strong> {ex.value}</li>
                   ))}
                 </ul>
@@ -246,13 +211,15 @@ const PracticalApplications: React.FC<{
   );
 });
 
+PracticalApplications.displayName = 'PracticalApplications';
+
 /**
  * 详细转换公式和计算组件
  */
 const DetailedConversionGuide: React.FC<{
   celsius: number;
   fahrenheit: number;
-  t: (key: string, repl?: any) => string;
+  t: TFunction;
 }> = React.memo(({ celsius, fahrenheit, t }) => {
   const step1 = celsius * 9 / 5;
   const step1Text = textSpinner.getStep1(celsius, t);
@@ -274,70 +241,19 @@ const DetailedConversionGuide: React.FC<{
         </ol>
       </div>
 
-      <img
+      <Image
         src={`/images/equation/${celsius}-celsius-to-fahrenheit-conversion.png`}
         alt={t('meta.pageTitle', { celsius, fahrenheit: formatTemperature(fahrenheit) })}
         className="conversion-equation-image"
-        width="1200"
-        height="630"
+        width={1200}
+        height={630}
         style={{ maxWidth: '100%', height: 'auto', marginTop: '30px', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}
       />
     </div>
   );
 });
 
-/**
- * 温度比较和范围可视化组件
- */
-const TemperatureScale: React.FC<{
-  celsius: number;
-  fahrenheit: number;
-  t: (key: string, repl?: any) => string;
-}> = React.memo(({ celsius, fahrenheit, t }) => {
-  return (
-    <section className="temperature-comparison">
-      <h2>{t('common.tempComparison')}</h2>
-
-      <div className="comparison-cards">
-        <div className="comparison-card primary">
-          <div className="card-icon">🎯</div>
-          <div className="card-label">{t('common.yourTemp')}</div>
-          <div className="card-values">
-            <span className="celsius-value">{celsius}°C</span>
-            <span className="fahrenheit-value">{formatTemperature(fahrenheit)}°F</span>
-          </div>
-        </div>
-
-        <div className="comparison-card">
-          <div className="card-icon">❄️</div>
-          <div className="card-label">{t('common.freezingPoint')}</div>
-          <div className="card-values">
-            <span className="celsius-value">0°C</span>
-            <span className="fahrenheit-value">32°F</span>
-          </div>
-        </div>
-
-        <div className="comparison-card">
-          <div className="card-icon">🌡️</div>
-          <div className="card-label">{t('common.roomTemp')}</div>
-          <div className="card-values">
-            <span className="celsius-value">20°C</span>
-            <span className="fahrenheit-value">68°F</span>
-          </div>
-        </div>
-
-        <div className="comparison-card">
-          <div className="card-icon">💧</div>
-          <div className="card-label">{t('common.boilingPoint')}</div>
-          <div className="card-values">
-            <span className="celsius-value">100°C</span>
-            <span className="fahrenheit-value">212°F</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-});
+DetailedConversionGuide.displayName = 'DetailedConversionGuide';
 
 /**
  * 增强版FAQ组件
@@ -347,7 +263,7 @@ const EnhancedFAQ: React.FC<{
   fahrenheit: number;
   temperatureContext: ReturnType<typeof analyzeTemperature>;
   customFaqs?: { question: string; answer: string }[];
-  t: (key: string, repl?: any) => string;
+  t: TFunction;
 }> = React.memo(({ celsius, fahrenheit, temperatureContext, customFaqs = [], t }) => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
@@ -406,7 +322,9 @@ const EnhancedFAQ: React.FC<{
   );
 });
 
-const EnhancedConverter: React.FC<{ t: (key: string, repl?: any) => string }> = React.memo(({ t }) => {
+EnhancedFAQ.displayName = 'EnhancedFAQ';
+
+const EnhancedConverter: React.FC<{ t: TFunction }> = React.memo(({ t }) => {
   const [celsius, setCelsius] = useState('');
   const [fahrenheit, setFahrenheit] = useState<string | null>(null);
   const [copySuccess, setCopySuccess] = useState(false);
@@ -461,12 +379,14 @@ const EnhancedConverter: React.FC<{ t: (key: string, repl?: any) => string }> = 
   );
 });
 
+EnhancedConverter.displayName = 'EnhancedConverter';
+
 /**
  * 温度转换表格组件
  */
 const ConversionTable: React.FC<{
   celsius: number;
-  t: (key: string, repl?: any) => string;
+  t: TFunction;
 }> = React.memo(({ celsius, t }) => {
   const tableData = useMemo(() => {
     const data = [];
@@ -509,13 +429,15 @@ const ConversionTable: React.FC<{
   );
 });
 
+ConversionTable.displayName = 'ConversionTable';
+
 /**
  * 相关温度推荐组件
  */
 const RelatedTemperatures: React.FC<{
   celsius: number;
   extraConversions?: ConversionItem[];
-  t: (key: string, repl?: any) => string;
+  t: TFunction;
 }> = React.memo(({ celsius, extraConversions = [], t }) => {
   const relatedConversions = useMemo(() => {
     const val = celsius;
@@ -551,10 +473,12 @@ const RelatedTemperatures: React.FC<{
   );
 });
 
+RelatedTemperatures.displayName = 'RelatedTemperatures';
+
 /**
  * 健康预警组件
  */
-const HealthAlert: React.FC<{ celsius: number; t: (key: string, repl?: any) => string }> = ({ celsius, t }) => {
+const HealthAlert: React.FC<{ celsius: number; t: TFunction }> = ({ celsius, t }) => {
   const { message, color, icon } = useMemo(() => {
     if (celsius >= 38) return { message: t('health.highFever'), color: '#e74c3c', icon: '🩺' };
     if (celsius >= 37.5) return { message: t('health.lowFever'), color: '#f39c12', icon: '🩺' };
@@ -578,7 +502,7 @@ const HealthAlert: React.FC<{ celsius: number; t: (key: string, repl?: any) => s
 /**
  * 天气/体感组件
  */
-const WeatherWidget: React.FC<{ celsius: number; t: (key: string, repl?: any) => string }> = ({ celsius, t }) => {
+const WeatherWidget: React.FC<{ celsius: number; t: TFunction }> = ({ celsius, t }) => {
   const { tip, icon } = useMemo(() => {
     if (celsius <= 0) return { tip: t('weather.freezing'), icon: '❄️' };
     if (celsius <= 10) return { tip: t('weather.chilly'), icon: '🧥' };
@@ -626,7 +550,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   const { t: tTemplate, locale } = useTranslation('template');
   const { t: tPage } = useTranslation(customNamespace);
 
-  const t = useMemo(() => (key: string, repl?: any) => {
+  const t: TFunction = useMemo(() => (key: string, repl?: Record<string, string | number>) => {
     if (customNamespace) {
       const res = tPage(key, repl);
       if (res !== key) return res;
@@ -661,7 +585,6 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
 
   const { pageTitle, metaDescription, ogDescription } = useMemo(() => {
     const rawTitle = customTitle || generatePageTitle(celsius, fahrenheit, t);
-    const rawDesc = customDescription || generateMetaDescription(celsius, fahrenheit, t);
 
     // 移除 HTML 标签用于 meta 标签
     const stripHtml = (html: string) => html.replace(/<[^>]*>/g, '');
@@ -766,10 +689,6 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   );
 };
 
-const TemperatureTemplatePage: React.FC = () => {
-  const testCelsius = 37;
-  const strategy = generateContentStrategy(testCelsius);
-  return <TemperaturePage celsius={testCelsius} strategy={strategy} />;
-};
+TemperaturePage.displayName = 'TemperaturePage';
 
-export default TemperatureTemplatePage;
+export default TemperaturePage;

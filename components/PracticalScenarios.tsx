@@ -12,7 +12,7 @@ export default function PracticalScenarios() {
     <section className="formula-section" role="region" aria-labelledby="practical-title">
       <h2 id="practical-title">{practical.title}</h2>
       <div className="practical-uses">
-        {practical.items.map((item: any, index: number) => (
+        {practical.items.map((item: { title: string; description: string; bullets: string[] }, index: number) => (
           <div className="use-case" key={index}>
             <div className="use-case-header">{item.title}</div>
             <div className="use-case-body">

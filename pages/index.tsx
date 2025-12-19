@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { GetStaticProps } from 'next';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import { useTranslation, getCommonTranslation, getPageTranslation } from '../utils/i18n';
+import { useTranslation } from '../utils/i18n';
 import { celsiusToFahrenheit, formatTemperature } from '../utils/temperaturePageHelpers';
 
 // 历史记录类型定义
@@ -95,11 +95,6 @@ export default function Home() {
         }
     }, [celsius, fahrenheit]);
 
-    const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        const newLocale = e.target.value;
-        const { pathname, asPath, query } = router;
-        router.push({ pathname, query }, asPath, { locale: newLocale });
-    };
 
     // 静态数据配置
     const recentUpdates = [
@@ -242,7 +237,7 @@ export default function Home() {
                         <div className="conversion-steps">
                             <h3>{t('steps.title')}</h3>
                             <p className="converter-description">{t('steps.description')}</p>
-                            {(Array.isArray(t('steps.items')) ? t('steps.items') : []).map((step: any, idx: number) => (
+                            {(Array.isArray(t('steps.items')) ? t('steps.items') : []).map((step: { title: string; description: string }, idx: number) => (
                                 <div className="step" key={idx}>
                                     <div className="step-number">{idx + 1}</div>
                                     <div className="step-content">
@@ -255,7 +250,7 @@ export default function Home() {
                             <div className="common-errors">
                                 <h4>{t('commonMistakes.title')}</h4>
                                 <ul>
-                                    {(Array.isArray(t('commonMistakes.items')) ? t('commonMistakes.items') : []).map((item: any, idx: number) => (
+                                    {(Array.isArray(t('commonMistakes.items')) ? t('commonMistakes.items') : []).map((item: string, idx: number) => (
                                         <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
                                     ))}
                                 </ul>
@@ -296,7 +291,7 @@ export default function Home() {
                     <section className="formula-section">
                         <h2>{t('practical.title')}</h2>
                         <div className="practical-uses">
-                            {(Array.isArray(t('practical.items')) ? t('practical.items') : []).map((item: any, i: number) => (
+                            {(Array.isArray(t('practical.items')) ? t('practical.items') : []).map((item: { title: string; description: string; bullets: string[] }, i: number) => (
                                 <div className="use-case" key={i}>
                                     <div className="use-case-header">{item.title}</div>
                                     <div className="use-case-body">
@@ -314,7 +309,7 @@ export default function Home() {
 
                     <section className="faq-section">
                         <h2>{t('faq.title')}</h2>
-                        {(Array.isArray(t('faq.items')) ? t('faq.items') : []).map((item: any, i: number) => (
+                        {(Array.isArray(t('faq.items')) ? t('faq.items') : []).map((item: { question: string; answer: string }, i: number) => (
                             <div className="faq-item" key={i}>
                                 <div className="faq-question">{item.question}</div>
                                 <div className="faq-answer">{item.answer}</div>

@@ -18,7 +18,7 @@ interface TemperatureFAQSectionProps {
  */
 export default function TemperatureFAQSection({ faqs = [], className = '' }: TemperatureFAQSectionProps) {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-  
+
   // 默认FAQ问题，如果没有提供自定义FAQ
   const defaultFAQs: FAQItem[] = [
     {
@@ -42,24 +42,22 @@ export default function TemperatureFAQSection({ faqs = [], className = '' }: Tem
       answer: 'Yes, Celsius and Fahrenheit are equal at -40 degrees. That means -40°C = -40°F. This is the only temperature point where both scales have the same numerical value.'
     }
   ];
-  
+
   // 使用提供的FAQ或默认FAQ
   const displayFAQs = faqs.length > 0 ? faqs : defaultFAQs;
-  
+
   // 切换FAQ项目展开状态
   const toggleExpand = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
-  
+
   return (
     <div className={`temperature-faq-section ${className}`}>
       <div className="faq-container">
         {displayFAQs.map((faq, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className={`faq-item ${expandedIndex === index ? 'expanded' : ''}`}
-            aria-expanded={expandedIndex === index}
-            role="group"
           >
             <button
               className="faq-question"
@@ -73,7 +71,7 @@ export default function TemperatureFAQSection({ faqs = [], className = '' }: Tem
                 {expandedIndex === index ? '−' : '+'}
               </span>
             </button>
-            
+
             <div
               id={`faq-answer-${index}`}
               className="faq-answer"
