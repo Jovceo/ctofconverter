@@ -25,20 +25,20 @@ const TemperaturePageTemplate = ({
   const [fahrenheit, setFahrenheit] = useState<number>(
     temperatureUnit === 'fahrenheit' ? temperatureValue : celsiusToFahrenheit(temperatureValue)
   );
-  
+
   // 单位切换状态
   const [isCelsiusToFahrenheit, setIsCelsiusToFahrenheit] = useState<boolean>(initialUnit === 'celsius');
   const [inputValue, setInputValue] = useState<string>(temperatureValue.toString());
   const [result, setResult] = useState<string>(
     temperatureUnit === 'celsius' ? formatTemperature(celsiusToFahrenheit(temperatureValue)) : formatTemperature(fahrenheitToCelsius(temperatureValue))
   );
-  
+
   // 复制结果状态
   const [copySuccess, setCopySuccess] = useState<boolean>(false);
-  
+
   // 分析温度上下文
   const temperatureContext = analyzeTemperature(celsius);
-  
+
   // 处理单位切换
   const handleUnitToggle = () => {
     setIsCelsiusToFahrenheit(!isCelsiusToFahrenheit);
@@ -52,12 +52,12 @@ const TemperaturePageTemplate = ({
       setResult(formatTemperature(fahrenheit));
     }
   };
-  
+
   // 处理输入变化
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
-  
+
   // 处理转换计算
   const handleConvert = () => {
     const value = parseFloat(inputValue);
@@ -77,7 +77,7 @@ const TemperaturePageTemplate = ({
       }
     }
   };
-  
+
   // 处理复制结果
   const handleCopyResult = () => {
     const resultText = `${celsius}°C = ${fahrenheit}°F`;
@@ -86,7 +86,7 @@ const TemperaturePageTemplate = ({
       setTimeout(() => setCopySuccess(false), 2000);
     });
   };
-  
+
   // 响应式样式
   const styles = {
     container: {
@@ -122,10 +122,10 @@ const TemperaturePageTemplate = ({
       marginBottom: '1rem',
     },
     buttonGroup: {
-      display: 'flex',
-      justifyContent: 'center',
+      display: 'flex' as const,
+      justifyContent: 'center' as const,
       gap: '0.5rem',
-      flexWrap: 'wrap',
+      flexWrap: 'wrap' as const,
     },
     button: {
       padding: '0.5rem 1rem',
@@ -154,7 +154,7 @@ const TemperaturePageTemplate = ({
       color: '#2c3e50',
     },
     inputGroup: {
-      display: 'flex',
+      display: 'flex' as const,
       gap: '0.5rem',
       marginBottom: '1rem',
     },
@@ -166,9 +166,9 @@ const TemperaturePageTemplate = ({
       fontSize: '1rem',
     },
     unitLabel: {
-      display: 'flex',
-      alignItems: 'center',
-      fontWeight: 'bold',
+      display: 'flex' as const,
+      alignItems: 'center' as const,
+      fontWeight: 'bold' as const,
     },
     contextSection: {
       backgroundColor: '#ffffff',
@@ -185,10 +185,10 @@ const TemperaturePageTemplate = ({
       color: '#2c3e50',
     },
     contextCategories: {
-      display: 'flex',
+      display: 'flex' as const,
       gap: '0.5rem',
       marginBottom: '1rem',
-      flexWrap: 'wrap',
+      flexWrap: 'wrap' as const,
     },
     categoryBadge: {
       backgroundColor: '#007bff',
@@ -204,27 +204,27 @@ const TemperaturePageTemplate = ({
       lineHeight: '1.5',
     },
   };
-  
+
   return (
     <div style={styles.container}>
       <header style={styles.header}>
         <h1 style={styles.title}>{pageTitle}</h1>
         <p style={styles.description}>{pageDescription}</p>
       </header>
-      
+
       {/* 转换结果显示 */}
       <section style={styles.conversionResult}>
         <div style={styles.resultText}>
           {celsius}°C = {fahrenheit}°F
         </div>
         <div style={styles.buttonGroup}>
-          <button 
+          <button
             style={{ ...styles.button, ...styles.buttonSecondary }}
             onClick={handleCopyResult}
           >
             {copySuccess ? '已复制！' : '复制结果'}
           </button>
-          <button 
+          <button
             style={styles.button}
             onClick={handleUnitToggle}
           >
@@ -232,7 +232,7 @@ const TemperaturePageTemplate = ({
           </button>
         </div>
       </section>
-      
+
       {/* 交互式温度转换器 */}
       <section style={styles.converterContainer}>
         <h2 style={styles.converterTitle}>温度转换器</h2>
@@ -260,16 +260,16 @@ const TemperaturePageTemplate = ({
           {result} {isCelsiusToFahrenheit ? '°F' : '°C'}
         </div>
       </section>
-      
+
       {/* 温度上下文信息 */}
       <section style={styles.contextSection}>
         <h2 style={styles.contextTitle}>关于 {celsius}°C</h2>
         <div style={styles.contextCategories}>
-          {temperatureContext.categories.map((category, index) => (
+          {temperatureContext.categoryKeys.map((category: string, index: number) => (
             <span key={index} style={styles.categoryBadge}>{category}</span>
           ))}
         </div>
-        <p style={styles.contextDescription}>{temperatureContext.description}</p>
+        <p style={styles.contextDescription}>{temperatureContext.descriptionKey}</p>
       </section>
     </div>
   );

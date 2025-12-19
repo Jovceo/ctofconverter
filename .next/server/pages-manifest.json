@@ -3,6 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/temperature-template": "pages/temperature-template.js",
   "/75-c-to-f": "pages/75-c-to-f.js"
 }
