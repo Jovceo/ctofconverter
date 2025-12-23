@@ -1,187 +1,91 @@
-# 创建新温度转换页面指南
+# 添加新温度转换页面指南
 
-本指南将帮助你使用模板快速创建新的温度转换页面，同时保留完全自定义内容的能力。
+遵循本指南可以快速、规范地为项目添加新的特定温度转换页面（如 `100-c-to-f`）。
 
-## 📋 快速开始
+## 🚀 步骤 1：创建页面文件
 
-### 步骤 1: 复制模板文件
+在 `pages/` 目录下创建新的 `.tsx` 文件。建议直接从 `pages/75-c-to-f.tsx` 复制内容。
 
-1. 复制 `templates/temperature-page-template.tsx` 文件
-2. 重命名为 `pages/[温度值]-c-to-f.tsx`
-   - 例如：`47-c-to-f.tsx`、`36-5-c-to-f.tsx`（注意：小数点用横线表示）
+**命名规范**：
+- 整数：`100-c-to-f.tsx`
+- 小数：`36-5-c-to-f.tsx`（小数点使用横线 `-` 代替）
 
-### 步骤 2: 修改配置区域
+## 🚀 步骤 2：配置页面代码
 
-打开新文件，找到 `🔧 配置区域`，修改以下值：
+打开新创建的文件，主要修改以下部分：
 
-```typescript
-// 温度值（摄氏度）
-const celsius = 47; // ⚠️ 修改为你的目标温度值
+1.  **修改温度值**：
+    ```tsx
+    const celsius = 100; // 设置目标摄氏度
+    ```
 
-// 页面URL路径
-const pagePath = `${celsius}-c-to-f.html`; // ⚠️ 根据实际URL格式修改
-```
+2.  **配置内容策略 (Strategy)**：
+    `generateContentStrategy` 会根据温度自动生成百科内容。您可以传入触发关键词来精准控制内容逻辑：
+    ```tsx
+    // 常用触发词：tea, chicken, water, oven, baking, fever, cold
+    const s = generateContentStrategy(celsius, 'water boiling tea');
+    ```
 
-### 步骤 3: 自定义内容
+3.  **配置命名空间 (Namespace)**：
+    确保 `useTranslation` 和 `TemperaturePage` 使用正确的 JSON 命名空间：
+    ```tsx
+    const { locale, pageTranslation } = useTranslation('100-c-to-f');
+    // ...
+    return <TemperaturePage customNamespace="100-c-to-f" ... />;
+    ```
 
-在 `📝 内容自定义区域` 中，你可以自定义：
+## 🚀 步骤 3：准备翻译文件 (可选)
 
-- **headerDescription**: 页面标题下方的描述文本
-- **warningBox**: 警告框内容（如果不需要可以设为 `null`）
-- **temperatureContext**: 温度上下文描述（医疗、环境、烹饪等）
-- **customFAQs**: 自定义FAQ问题列表
-- **negativeTemperatureDescription**: 负数温度描述
+如果在代码中使用了逻辑注入（参考 `75-c-to-f.tsx` 的 `pageT`），您需要在各语言目录下创建对应的 JSON 文件：
 
-### 步骤 4: 自定义FAQ
+- 路径示例：`public/locales/zh/100-c-to-f.json`
+- 路径示例：`public/locales/en/100-c-to-f.json`
 
-在 `customFAQs` 数组中添加你的FAQ问题：
-
-```typescript
-const customFAQs: FAQItem[] = [
-  {
-    question: `What is ${celsius} degrees Celsius in Fahrenheit?`,
-    answer: `${celsius} degrees Celsius equals ${formatTemperature(fahrenheit)} degrees Fahrenheit...`,
+**推荐的 JSON 结构**：
+```json
+{
+  "page": {
+    "title": "100 Celsius to Fahrenheit - Boiling Point Guide",
+    "description": "Convert 100°C to Fahrenheit. 100 degrees Celsius is the boiling point of water..."
   },
-  {
-    question: '你的自定义问题',
-    answer: '你的自定义答案',
-  },
-];
+  "faq": {
+    "items": [
+      { "question": "Is 100°C boiling point?", "answer": "Yes, at standard sea level..." }
+    ]
+  }
+}
 ```
 
-### 步骤 5: 自定义相关温度链接
+## 🚀 步骤 4：注册到站点地图 (Sitemap)
 
-默认会自动生成相邻的温度链接，你也可以手动指定：
+为了让搜索引擎快速抓取新页面，必须手动将其添加到站点地图生成脚本中：
 
-```typescript
-const relatedTemperatures = [
-  { celsius: 46, fahrenheit: celsiusToFahrenheit(46), href: '/46-c-to-f' },
-  { celsius: 48, fahrenheit: celsiusToFahrenheit(48), href: '/48-c-to-f' },
-  // ... 更多相关温度
-];
+1.  打开 `scripts/generate-sitemap.js`。
+2.  在 `mainPages` 数组中添加新的 ID：
+    ```javascript
+    const mainPages = ['47-c-to-f', '75-c-to-f', '100-c-to-f']; // 添加 100-c-to-f
+    ```
+
+## 🚀 步骤 5：验证与构建
+
+1.  **开发环境验证**：
+    运行 `npm run dev`，访问 `http://localhost:3000/100-c-to-f` 查看效果。
+2.  **生成站点地图**：
+    运行 `npm run postbuild`。
+3.  **检查站点地图**：
+    打开 `public/sitemap.xml`，确认新页面已被正确包含。
+
+---
+
+## 💡 进阶：内容控制技巧
+
+在页面代码中，您可以通过 `s.modules` 对象精细化控制显示哪些板块：
+
+```tsx
+s.modules.showHealthAlert = false;    // 隐藏健康警告
+s.modules.showHumanFeel = false;     // 隐藏体感/天气板块
+s.modules.showPracticalApps = false; // 隐藏默认的应用场景（如果您已自定义注入）
 ```
 
-### 步骤 6: 测试页面
-
-1. 启动开发服务器：`npm run dev`
-2. 访问新页面：`http://localhost:3000/[温度值]-c-to-f`
-3. 检查所有内容是否正确显示
-
-## 🛠️ 工具函数说明
-
-模板使用了 `utils/temperaturePageHelpers.ts` 中的工具函数：
-
-### 主要函数
-
-- `celsiusToFahrenheit(celsius)`: 将摄氏度转换为华氏度
-- `formatTemperature(value, precision)`: 格式化温度显示
-- `generateHowToStructuredData(celsius, fahrenheit)`: 生成HowTo结构化数据
-- `generateFAQStructuredData(celsius, fahrenheit, customFAQs)`: 生成FAQ结构化数据
-- `generateRelatedTemperatures(celsius, count)`: 生成相关温度链接
-- `generatePageTitle(celsius, fahrenheit)`: 生成页面标题
-- `generateMetaDescription(celsius, fahrenheit, customText)`: 生成Meta描述
-
-### 使用示例
-
-```typescript
-import { celsiusToFahrenheit, formatTemperature } from '../utils/temperaturePageHelpers';
-
-const celsius = 47;
-const fahrenheit = celsiusToFahrenheit(celsius);
-const formatted = formatTemperature(fahrenheit); // "116.6"
-```
-
-## 📝 自定义内容指南
-
-### 1. 温度上下文描述
-
-根据温度值的特点，自定义医疗、环境、烹饪等描述：
-
-```typescript
-const temperatureContext = {
-  medical: {
-    title: `⚠️ Medical Warning: ${celsius}°C Body Temperature`,
-    content: `你的医疗描述...`,
-    list: [
-      `列表项1`,
-      `列表项2`,
-    ],
-  },
-  environmental: {
-    // ... 环境温度描述
-  },
-  cooking: {
-    // ... 烹饪应用描述
-  },
-};
-```
-
-### 2. 警告框
-
-如果温度值需要特殊警告，可以自定义警告框：
-
-```typescript
-const warningBox = {
-  title: `⚠️ Critical: ${celsius}°C is Life-Threatening`,
-  content: `警告内容...`,
-};
-```
-
-如果不需要警告框，设置为 `null`：
-
-```typescript
-const warningBox = null;
-```
-
-### 3. Meta信息
-
-可以自定义SEO相关的Meta描述：
-
-```typescript
-const customMetaDescription = `你的自定义meta描述...`;
-const customOGDescription = `你的自定义OG描述...`;
-```
-
-如果不提供，将使用工具函数自动生成。
-
-## 🎨 样式自定义
-
-如果需要自定义样式，可以在 `🎨 样式自定义区域` 中修改：
-
-```typescript
-const warningBoxStyle = {
-  background: 'linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)',
-  color: 'white',
-  // ... 更多样式
-};
-```
-
-## ⚠️ 注意事项
-
-1. **文件名格式**: 
-   - 整数温度：`47-c-to-f.tsx`
-   - 小数温度：`36-5-c-to-f.tsx`（小数点用横线）
-
-2. **URL路径**: 确保 `pagePath` 与实际URL格式一致
-
-3. **组件导入**: 确保所有导入路径正确（相对于 `pages` 目录）
-
-4. **结构化数据**: FAQ结构化数据会自动从 `customFAQs` 生成，确保FAQ内容完整
-
-5. **相关链接**: 确保相关温度链接的页面存在，否则链接会失效
-
-## 📚 完整示例
-
-参考 `pages/47-c-to-f.tsx` 查看完整实现示例。
-
-## 🔄 更新模板
-
-如果模板有更新，记得同步更新到所有使用模板的页面，或者考虑使用脚本批量更新。
-
-## 💡 提示
-
-- 使用工具函数可以减少重复代码
-- 保留模板文件作为参考
-- 每个页面都可以完全自定义，不受模板限制
-- 建议为每个温度值创建独特的、有价值的内容
-
+---
+*文档更新日期：2025-12-19*

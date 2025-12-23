@@ -16,11 +16,24 @@ function getCurrentDate(locale: string): { dateTime: string; formatted: string }
   return { dateTime, formatted };
 }
 
-export default function Footer() {
+interface FooterProps {
+  lastUpdated?: string;
+}
+
+export default function Footer({ lastUpdated }: FooterProps) {
   const { t, locale } = useTranslation();
   const currentLocale = locale || 'en';
-  const { dateTime, formatted } = getCurrentDate(currentLocale);
-  const year = new Date().getFullYear();
+  // Use provided lastUpdated, or fallback to a stable date/current date logic
+  const dateToUse = lastUpdated ? new Date(lastUpdated) : new Date();
+
+  const formatted = dateToUse.toLocaleDateString(getDisplayLocale(currentLocale), {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
+  const dateTime = dateToUse.toISOString().split('T')[0];
+  const year = dateToUse.getFullYear();
 
   return (
     <footer className="site-footer" role="contentinfo">

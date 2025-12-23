@@ -1,7 +1,9 @@
 {
+  "/api/og": "pages/api/og.js",
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
+  "/47-c-to-f": "pages/47-c-to-f.js",
   "/75-c-to-f": "pages/75-c-to-f.js"
 }

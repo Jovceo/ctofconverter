@@ -100,7 +100,7 @@ export function generateFAQStructuredData(
     },
   ];
 
-  const faqs = customFAQs || defaultFAQs;
+  const faqs = (customFAQs && customFAQs.length > 0) ? customFAQs : defaultFAQs;
 
   return {
     '@context': 'https://schema.org',
