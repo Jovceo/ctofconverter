@@ -760,7 +760,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
                 <strong>{celsius} degrees Celsius</strong> equals <strong>{formattedFahrenheit} degrees Fahrenheit</strong>.
                 This temperature conversion is commonly used in
                 {celsius >= 35 && celsius <= 42 ? <span> <Link href="/body-temperature-chart-fever-guide/">body temperature measurements</Link> and medical diagnostics. Check our <Link href="/fever-temperature-chart/">fever temperature chart</Link> for more details.</span> :
-                  celsius >= 0 && celsius <= 30 ? <span> <Link href="/celsius-to-fahrenheit-chart/">weather forecasts</Link> and daily temperature readings. See our complete <Link href="/celsius-to-fahrenheit-chart/">Celsius to Fahrenheit chart</Link> for quick reference.</span> :
+                  celsius >= 0 && celsius <= 30 ? <span> weather forecasts and daily temperature readings. See our complete <Link href="/celsius-to-fahrenheit-chart/">Celsius to Fahrenheit chart</Link> for quick reference.</span> :
                     celsius >= 100 && celsius <= 250 ? <span> <Link href="/fan-oven-conversion-chart/">cooking, baking, and oven temperature settings</Link>. Use our <Link href="/fan-oven-conversion-chart/">fan oven conversion chart</Link> for precise baking.</span> :
                       <span> scientific and industrial applications. Explore our <Link href="/celsius-to-fahrenheit-chart/">comprehensive temperature conversion chart</Link> for more conversions.</span>}
               </p>
