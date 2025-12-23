@@ -3,7 +3,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/47-c-to-f": "pages/47-c-to-f.js",
   "/": "pages/index.js",
+  "/47-c-to-f": "pages/47-c-to-f.js",
   "/75-c-to-f": "pages/75-c-to-f.js"
 }
