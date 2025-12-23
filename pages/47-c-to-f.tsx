@@ -114,7 +114,6 @@ export default function Temperature47C() {
       canonicalUrl={canonicalUrl}
       customTitle={replacePlaceholders(pageT.page?.title || '', replacements)}
       customDescription={replacePlaceholders(pageT.page?.description || '', replacements)}
-      customResultHeader={replacePlaceholders(pageT.page?.resultText || '', replacements)}
     />
   );
 }
