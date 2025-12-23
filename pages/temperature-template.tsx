@@ -11,7 +11,6 @@ import Image from 'next/image';
 import {
   celsiusToFahrenheit,
   formatTemperature,
-  generateHowToStructuredData,
   generateFAQStructuredData,
   generatePageUrl,
   generatePageTitle,
@@ -449,11 +448,6 @@ const ConversionTable: React.FC<{
 });
 
 ConversionTable.displayName = 'ConversionTable';
-
-/**
- * 相关温度推荐组件
- */
-import { generateRelatedTemperatures } from '../utils/temperaturePageHelpers';
 
 /**
  * 相关温度推荐组件

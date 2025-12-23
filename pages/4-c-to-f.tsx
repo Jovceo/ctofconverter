@@ -63,16 +63,6 @@ export default function Temperature4C() {
 
         const insights: { type: 'warning' | 'tip' | 'fact'; title: string; content: string }[] = [];
 
-        // 注入项目列表的辅助函数
-        const processContext = (context: TranslationItem | undefined, type: 'warning' | 'tip' | 'fact') => {
-            if (!context) return;
-            let content = replace(context.content || '');
-            if (context.items && Array.isArray(context.items)) {
-                content += `<ul style="margin-top: 10px; padding-left: 20px;">${context.items.map((it: string) => `<li>${replace(it)}</li>`).join('')}</ul>`;
-            }
-            insights.push({ type, title: replace(context.title || ''), content });
-        };
-
         // 添加天气相关的洞察
         if (pageT.context?.weather) {
             insights.push({

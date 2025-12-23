@@ -1,21 +1,6 @@
 import Link from 'next/link';
 import { useTranslation, getDisplayLocale } from '../utils/i18n';
 
-function getCurrentDate(locale: string): { dateTime: string; formatted: string } {
-  const now = new Date();
-  const normalizedLocale = getDisplayLocale(locale);
-
-  const formatted = now.toLocaleDateString(normalizedLocale, {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
-
-  const dateTime = now.toISOString().split('T')[0];
-
-  return { dateTime, formatted };
-}
-
 interface FooterProps {
   lastUpdated?: string;
 }
