@@ -131,7 +131,7 @@ export default function Temperature4C() {
             customNamespace="4-c-to-f"
             lastUpdated="2025-12-19"
             canonicalUrl={canonicalUrl}
-            customTitle={replacePlaceholders(pageT.page?.title || '', replacements)}
+            customTitle="4°C to Fahrenheit: The Perfect Refrigerator Temperature"
             customDescription={replacePlaceholders(pageT.page?.description || '', replacements)}
         />
     );

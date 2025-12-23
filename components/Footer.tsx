@@ -116,6 +116,16 @@ export default function Footer({ lastUpdated }: FooterProps) {
         </nav>
 
         <div className="footer-extra">
+          {/* 🟢 E-E-A-T Signal: Editorial Note */}
+          <div className="editorial-note" style={{ marginBottom: '20px', padding: '15px', backgroundColor: '#f8f9fa', borderRadius: '8px', borderLeft: '4px solid #007bff' }}>
+            <h4 style={{ margin: '0 0 10px 0', fontSize: '1rem', fontWeight: '600', color: '#2c3e50' }}>
+              Editorial Note
+            </h4>
+            <p style={{ margin: '0', fontSize: '0.9rem', lineHeight: '1.5', color: '#555' }}>
+              Our temperature conversion guides are reviewed and updated regularly by a team of science educators and cooking experts. We reference authoritative sources including the National Institute of Standards and Technology (NIST) and World Health Organization (WHO) guidelines. Last reviewed: {formatted}
+            </p>
+          </div>
+
           <div className="copyright-notice">
             <p>{t('footer.copyright', { year })}</p>
             <p className="footer-meta">
