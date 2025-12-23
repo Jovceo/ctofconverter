@@ -40,6 +40,7 @@ export interface TemperaturePageProps {
   customNamespace?: string;
   customTitle?: string;
   customDescription?: string;
+  customResultHeader?: string;
 }
 
 export interface ConversionItem {
@@ -611,7 +612,8 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   },
   customNamespace,
   customTitle,
-  customDescription
+  customDescription,
+  customResultHeader
 }) => {
   const { t: tTemplate, locale } = useTranslation('template');
   const { t: tPage } = useTranslation(customNamespace);
@@ -749,7 +751,9 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
 
           <div className="temperature-content-grid">
             <section className="converter-tool" style={{ marginBottom: '30px' }}>
-              <h2 id="conversion-title" style={{ marginBottom: '20px', fontSize: '1.5rem', fontWeight: 600 }}>Celsius to Fahrenheit Converter</h2>
+              <h2 id="conversion-title" style={{ marginBottom: '20px', fontSize: '1.5rem', fontWeight: 600 }}>
+                {customResultHeader || 'Celsius to Fahrenheit Converter'}
+              </h2>
 
               {/* 🟢 SEO: Natural language intro paragraph for indexability */}
               <p className="intro-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '20px', color: '#333' }}>
