@@ -235,9 +235,9 @@ const DetailedConversionGuide: React.FC<{
       <div className="calculation-steps">
         <h4>{t('common.stepTitle')}</h4>
         <ol>
-          <li><strong>{t('common.step1')}:</strong> <span dangerouslySetInnerHTML={{ __html: step1Text }} /> <br /> <em>Calculation:</em> {celsius} × 1.8 = {formatTemperature(step1)}</li>
-          <li><strong>{t('common.step2')}:</strong> <span dangerouslySetInnerHTML={{ __html: step2Text }} /> <br /> <em>Calculation:</em> {formatTemperature(step1)} + 32 = {formatTemperature(fahrenheit)}</li>
-          <li><strong>{t('common.stepResult')}:</strong> <span dangerouslySetInnerHTML={{ __html: conclusionText }} /></li>
+          <li><strong>Step 1:</strong> <span dangerouslySetInnerHTML={{ __html: step1Text }} /> <br /> <em>Calculation:</em> {celsius} × 1.8 = {formatTemperature(step1)}</li>
+          <li><strong>Step 2:</strong> <span dangerouslySetInnerHTML={{ __html: step2Text }} /> <br /> <em>Calculation:</em> {formatTemperature(step1)} + 32 = {formatTemperature(fahrenheit)}</li>
+          <li><strong>Result:</strong> <span dangerouslySetInnerHTML={{ __html: conclusionText }} /></li>
         </ol>
       </div>
 
@@ -715,7 +715,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
         <meta key="og:image" property="og:image" content={`${siteOrigin}/images/equation/c-to-f-conversion.png`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta key="twitter:title" name="twitter:title" content={pageTitle} />
-        <meta key="twitter:description" name="twitter:description" content={metaDescription} />
+        <meta key="twitter:description" name="twitter:description" content={ogDescription} />
         <meta name="twitter:image" content={`${siteOrigin}/images/equation/c-to-f-conversion.png`} />
 
 
@@ -759,10 +759,10 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
               <p className="intro-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '20px', color: '#333' }}>
                 <strong>{celsius} degrees Celsius</strong> equals <strong>{formattedFahrenheit} degrees Fahrenheit</strong>.
                 This temperature conversion is commonly used in
-                {celsius >= 35 && celsius <= 42 ? 'body temperature measurements and medical diagnostics' :
-                  celsius >= 0 && celsius <= 30 ? 'weather forecasts and daily temperature readings' :
-                    celsius >= 100 && celsius <= 250 ? 'cooking, baking, and oven temperature settings' :
-                      'scientific and industrial applications'}.
+                {celsius >= 35 && celsius <= 42 ? <span> <Link href="/body-temperature-chart-fever-guide/">body temperature measurements</Link> and medical diagnostics. Check our <Link href="/fever-temperature-chart/">fever temperature chart</Link> for more details.</span> :
+                  celsius >= 0 && celsius <= 30 ? <span> <Link href="/celsius-to-fahrenheit-chart/">weather forecasts</Link> and daily temperature readings. See our complete <Link href="/celsius-to-fahrenheit-chart/">Celsius to Fahrenheit chart</Link> for quick reference.</span> :
+                    celsius >= 100 && celsius <= 250 ? <span> <Link href="/fan-oven-conversion-chart/">cooking, baking, and oven temperature settings</Link>. Use our <Link href="/fan-oven-conversion-chart/">fan oven conversion chart</Link> for precise baking.</span> :
+                      <span> scientific and industrial applications. Explore our <Link href="/celsius-to-fahrenheit-chart/">comprehensive temperature conversion chart</Link> for more conversions.</span>}
               </p>
 
               <EnhancedConverter initialCelsius={celsius} t={t} />

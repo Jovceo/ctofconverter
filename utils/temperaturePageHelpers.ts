@@ -64,17 +64,17 @@ export function generateHowToStructuredData(celsius: number, fahrenheit: number,
       {
         '@type': 'HowToStep',
         text: `${celsius} × 1.8 = ${formatTemperature(multiplied)}`,
-        name: t('common.step1'),
+        name: 'Step 1',
       },
       {
         '@type': 'HowToStep',
         text: `${formatTemperature(multiplied)} + 32 = ${formatTemperature(fahrenheit)}`,
-        name: t('common.step2'),
+        name: 'Step 2',
       },
       {
         '@type': 'HowToStep',
-        text: t('common.stepResult') + `: ${formatTemperature(fahrenheit)}°F`,
-        name: t('common.stepResult'),
+        text: `Result: ${formatTemperature(fahrenheit)}°F`,
+        name: 'Result',
       },
     ],
   };
