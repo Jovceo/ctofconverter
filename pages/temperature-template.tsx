@@ -40,7 +40,6 @@ export interface TemperaturePageProps {
   customNamespace?: string;
   customTitle?: string;
   customDescription?: string;
-  customResultHeader?: string;
 }
 
 export interface ConversionItem {
@@ -500,9 +499,9 @@ const RelatedTemperatures: React.FC<{
     ];
 
     // Merge with extra conversions (these have explicit URLs)
-    const formattedExtras = extraConversions.map(item => ({
+    const formattedExtras = extraConversions.map((item): ConversionItem & { href?: string } => ({
       ...item,
-      href: (item as any).url || undefined
+      href: item.url || undefined
     }));
 
     // Combine: formula items first, then extras
@@ -612,8 +611,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   },
   customNamespace,
   customTitle,
-  customDescription,
-  customResultHeader
+  customDescription
 }) => {
   const { t: tTemplate, locale } = useTranslation('template');
   const { t: tPage } = useTranslation(customNamespace);
