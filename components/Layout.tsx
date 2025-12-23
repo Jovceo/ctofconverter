@@ -81,8 +81,9 @@ export default function Layout({ children }: LayoutProps) {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{meta.defaultTitle || 'Celsius to Fahrenheit | °C to °F Converter'}</title>
+        <title key="title">{meta.defaultTitle || 'Celsius to Fahrenheit | °C to °F Converter'}</title>
         <meta
+          key="description"
           name="description"
           content={
             meta.defaultDescription ||
@@ -93,15 +94,16 @@ export default function Layout({ children }: LayoutProps) {
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="https://ctofconverter.com/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="https://ctofconverter.com/apple-touch-icon.png" />
-        <link rel="canonical" href={canonical} />
+        <link key="canonical" rel="canonical" href={canonical} />
 
         {alternateLinks.map((link) => (
-          <link key={link.locale} rel="alternate" hrefLang={link.hreflang} href={link.href} />
+          <link key={`alternate-${link.locale}`} rel="alternate" hrefLang={link.hreflang} href={link.href} />
         ))}
-        <link rel="alternate" hrefLang="x-default" href={defaultAlternate.href} />
+        <link key="alternate-default" rel="alternate" hrefLang="x-default" href={defaultAlternate.href} />
 
-        <meta property="og:title" content={meta.ogTitle || meta.defaultTitle || 'Celsius to Fahrenheit Converter'} />
+        <meta key="og:title" property="og:title" content={meta.ogTitle || meta.defaultTitle || 'Celsius to Fahrenheit Converter'} />
         <meta
+          key="og:description"
           property="og:description"
           content={
             meta.ogDescription ||
@@ -109,16 +111,18 @@ export default function Layout({ children }: LayoutProps) {
             'Free Online Temperature Calculator for Instant Conversions. Instantly convert temperatures from Celsius (°C) to Fahrenheit (°F) with precise results and step-by-step details.'
           }
         />
-        <meta property="og:image" content="https://ctofconverter.com/converter.png" />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="website" />
+        <meta key="og:image" property="og:image" content="https://ctofconverter.com/converter.png" />
+        <meta key="og:url" property="og:url" content={canonical} />
+        <meta key="og:type" property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
+          key="twitter:title"
           name="twitter:title"
           content={meta.twitterTitle || meta.defaultTitle || 'Celsius to Fahrenheit Converter'}
         />
         <meta
+          key="twitter:description"
           name="twitter:description"
           content={
             meta.twitterDescription ||

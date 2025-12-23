@@ -14,6 +14,11 @@ self.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
+    "/47-c-to-f": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/47-c-to-f.js"
+    ],
     "/75-c-to-f": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

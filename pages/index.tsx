@@ -14,7 +14,14 @@ interface ConversionHistoryItem {
     timestamp: number;
 }
 
-export default function Home() {
+import fs from 'fs';
+import path from 'path';
+
+interface HomeProps {
+    dynamicRecentUpdates: Array<{ c: number; f: number; date: string; url: string }>;
+}
+
+export default function Home({ dynamicRecentUpdates = [] }: HomeProps) {
     const { t, locale } = useTranslation('home');
 
     // 转换器状态
@@ -94,10 +101,9 @@ export default function Home() {
     }, [celsius, fahrenheit]);
 
 
-    // 静态数据配置
-    const recentUpdates = [
-        { c: 75, f: 167, date: '2025-12-19', url: '/75-c-to-f' },
-        { c: 47, f: 116.6, date: '2025-12-19', url: '/47-c-to-f' },
+    // 使用动态获取的数据，如果未获取到则使用空数组 (SSR会填充它)
+    const recentUpdates = dynamicRecentUpdates.length > 0 ? dynamicRecentUpdates : [
+        // Fallback or empty if strictly dynamic
     ];
 
     return (
@@ -337,9 +343,33 @@ export default function Home() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
+    // 动态扫描pages目录下的温度转换页面
+    const pagesDir = path.join(process.cwd(), 'pages');
+    const filenames = fs.readdirSync(pagesDir);
+
+    const dynamicRecentUpdates = filenames
+        .filter(name => name.match(/^(-?\d+)-c-to-f\.tsx$/))
+        .map(name => {
+            const match = name.match(/^(-?\d+)-c-to-f\.tsx$/);
+            const c = parseInt(match![1], 10);
+            const f = celsiusToFahrenheit(c);
+            const filePath = path.join(pagesDir, name);
+            const stats = fs.statSync(filePath);
+
+            return {
+                c,
+                f: parseFloat(formatTemperature(f)),
+                date: stats.mtime.toISOString().split('T')[0], // 使用最后修改时间，或者这里也可以用固定的逻辑
+                url: `/${name.replace('.tsx', '')}`
+            };
+        })
+        .sort((a, b) => b.date.localeCompare(a.date));
+    // 核心逻辑：按修改时间倒序排列，模拟“最近更新”
+
     return {
         props: {
             locale,
+            dynamicRecentUpdates
         }
     };
 };

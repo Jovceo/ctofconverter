@@ -47,6 +47,7 @@ export interface TemperaturePageProps {
 export interface ConversionItem {
   title: string;
   equation: string;
+  url?: string;
 }
 
 /**
@@ -243,7 +244,7 @@ const DetailedConversionGuide: React.FC<{
 
       <Image
         src={`/images/equation/${celsius}-celsius-to-fahrenheit-conversion.png`}
-        alt={t('meta.pageTitle', { celsius, fahrenheit: formatTemperature(fahrenheit) })}
+        alt={`${celsius}°C to Fahrenheit Conversion Formula`}
         className="conversion-equation-image"
         width={1200}
         height={630}
@@ -265,7 +266,7 @@ const EnhancedFAQ: React.FC<{
   customFaqs?: { question: string; answer: string }[];
   t: TFunction;
 }> = React.memo(({ celsius, fahrenheit, temperatureContext, customFaqs = [], t }) => {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const faqs = useMemo(() => {
     const formattedF = formatTemperature(fahrenheit);
@@ -283,7 +284,8 @@ const EnhancedFAQ: React.FC<{
       }
     ];
 
-    return [coreFaqs[0], ...customFaqs, coreFaqs[1]];
+    // 🟢 SEO: Search-intent questions first (Google weights first 2 FAQs highest)
+    return [coreFaqs[0], coreFaqs[1], ...customFaqs];
 
   }, [celsius, fahrenheit, temperatureContext, customFaqs, t]);
 
@@ -324,9 +326,9 @@ const EnhancedFAQ: React.FC<{
 
 EnhancedFAQ.displayName = 'EnhancedFAQ';
 
-const EnhancedConverter: React.FC<{ t: TFunction }> = React.memo(({ t }) => {
-  const [celsius, setCelsius] = useState('');
-  const [fahrenheit, setFahrenheit] = useState<string | null>(null);
+const EnhancedConverter: React.FC<{ t: TFunction; initialCelsius?: number }> = React.memo(({ t, initialCelsius }) => {
+  const [celsius, setCelsius] = useState(initialCelsius !== undefined ? String(initialCelsius) : '');
+  const [fahrenheit, setFahrenheit] = useState<string | null>(initialCelsius !== undefined ? formatTemperature(celsiusToFahrenheit(initialCelsius)) : null);
   const [copySuccess, setCopySuccess] = useState(false);
 
   const handleCelsiusChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -368,7 +370,7 @@ const EnhancedConverter: React.FC<{ t: TFunction }> = React.memo(({ t }) => {
           <label>{t('common.fahrenheitLabel')}</label>
           <button className="info-btn" title="Water freezes at 32°F and boils at 212°F">ℹ️</button>
         </div>
-        <output className="result-value" style={{ display: 'block', fontSize: '2.5rem', fontWeight: 'bold', margin: '15px 0', minHeight: '60px', color: fahrenheit ? '#2c3e50' : '#bdc3c7' }}>
+        <output id="conversion-result" className="result-value" style={{ display: 'block', fontSize: '2.5rem', fontWeight: 'bold', margin: '15px 0', minHeight: '60px', color: fahrenheit ? '#2c3e50' : '#bdc3c7' }}>
           {fahrenheit ? fahrenheit : '--'}
         </output>
         <button className="btn" onClick={handleCopy} disabled={!fahrenheit} style={{ width: '100%', marginTop: '10px' }}>
@@ -414,8 +416,25 @@ const ConversionTable: React.FC<{
           <tbody>
             {tableData.map((row, index) => {
               const context = analyzeTemperature(row.celsius);
+
+              if (row.isHighlighted) {
+                return (
+                  <tr key={index} className="highlighted-row" aria-current="page">
+                    <td><strong>{row.celsius}°C</strong></td>
+                    <td><strong>{row.fahrenheit}°F</strong></td>
+                    <td>{t(`context.categories.${context.categoryKeys[0] || 'moderate'}`)}</td>
+                  </tr>
+                );
+              }
+
+              // 🟢 SEO: Proper HTML structure - use onClick for navigation
               return (
-                <tr key={index} className={row.isHighlighted ? 'highlighted-row' : ''}>
+                <tr
+                  key={index}
+                  onClick={() => { if (typeof window !== 'undefined') window.location.href = `/${row.celsius}-c-to-f`; }}
+                  style={{ cursor: 'pointer' }}
+                  className="linkable-row"
+                >
                   <td><strong>{row.celsius}°C</strong></td>
                   <td><strong>{row.fahrenheit}°F</strong></td>
                   <td>{t(`context.categories.${context.categoryKeys[0] || 'moderate'}`)}</td>
@@ -434,40 +453,92 @@ ConversionTable.displayName = 'ConversionTable';
 /**
  * 相关温度推荐组件
  */
+import { generateRelatedTemperatures } from '../utils/temperaturePageHelpers';
+
+/**
+ * 相关温度推荐组件
+ */
 const RelatedTemperatures: React.FC<{
   celsius: number;
   extraConversions?: ConversionItem[];
   t: TFunction;
 }> = React.memo(({ celsius, extraConversions = [], t }) => {
-  const relatedConversions = useMemo(() => {
+  const relatedItems = useMemo(() => {
     const val = celsius;
-    const fToC = (val - 32) * 5 / 9;
-    const cToK = val + 273.15;
-    const kToC = val - 273.15;
-    const minusCToF = (-val * 9 / 5) + 32;
 
-    const defaultItems = [
-      { title: `${val} Fahrenheit to Celsius`, equation: `${val}°F = ${formatTemperature(fToC)}°C` },
-      { title: `${val} Celsius to Kelvin`, equation: `${val}°C = ${formatTemperature(cToK)}K` },
-      { title: `${val} Kelvin to Celsius`, equation: `${val}K = ${formatTemperature(kToC)}°C` },
-      { title: `Minus ${val} Celsius to Fahrenheit`, equation: `-${val}°C = ${formatTemperature(minusCToF)}°F` }
+    // 1. Fahrenheit to Celsius: Treat 'val' as F, convert to C
+    const fVal = val;
+    const fToC = (fVal - 32) * 5 / 9;
+
+    // 2. Celsius to Kelvin: Treat 'val' as C
+    const cToK = val + 273.15;
+
+    // 3. Kelvin to Celsius: Treat 'val' as K
+    const kVal = val;
+    const kToC = kVal - 273.15;
+
+    // 4. Minus Celsius to Fahrenheit: Treat as -val
+    const minusC = -val;
+    const minusCToF = (minusC * 9 / 5) + 32;
+
+    // Formula-based conversions (always show, link only if page exists)
+    const formulaItems: ConversionItem[] = [
+      {
+        title: `${val} Fahrenheit to Celsius`,
+        equation: `${val}°F = ${formatTemperature(fToC)}°C`,
+        url: undefined // No internal link by default
+      },
+      {
+        title: `${val} Celsius to Kelvin`,
+        equation: `${val}°C = ${formatTemperature(cToK)}K`,
+        url: undefined
+      },
+      {
+        title: `${val} Kelvin to Celsius`,
+        equation: `${val}K = ${formatTemperature(kToC)}°C`,
+        url: undefined
+      },
+      {
+        title: `Minus ${val} Celsius to Fahrenheit`,
+        equation: `${minusC}°C = ${formatTemperature(minusCToF)}°F`,
+        url: undefined
+      }
     ];
 
-    return [...defaultItems, ...extraConversions];
+    // Merge with extra conversions (these have explicit URLs)
+    const formattedExtras = extraConversions.map(item => ({
+      ...item,
+      href: (item as any).url || undefined
+    }));
+
+    // Combine: formula items first, then extras
+    const allItems = [...formulaItems, ...formattedExtras];
+
+    // Return all items with href mapped from url
+    return allItems.map(item => ({
+      ...item,
+      href: item.url
+    }));
   }, [celsius, extraConversions]);
 
   return (
     <section className="related-conversions">
       <h2>{t('common.relatedTitle')}</h2>
       <div className="update-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginTop: '20px' }}>
-        {relatedConversions.map((item, index) => (
-          <article key={index} className="update-card" style={{ background: '#fff', borderRadius: '8px', padding: '20px', boxShadow: '0 2px 10px rgba(0,0,0,0.05)', borderLeft: '4px solid #3498db' }}>
-            <div>
+        {relatedItems.map((item, index) => {
+          const Card = (
+            <article className="update-card" style={{ background: '#fff', borderRadius: '8px', padding: '20px', boxShadow: '0 2px 5px rgba(0,0,0,0.05)', borderLeft: '4px solid #3498db', height: '100%', transition: 'transform 0.2s', cursor: item.href ? 'pointer' : 'default' }}>
               <h3 style={{ margin: '0 0 10px 0', fontSize: '1rem', color: '#2c3e50', fontWeight: 600 }}>{item.title}</h3>
               <p style={{ margin: 0, color: '#7f8c8d', fontSize: '1rem' }}>{item.equation}</p>
-            </div>
-          </article>
-        ))}
+            </article>
+          );
+
+          return item.href ? (
+            <Link key={index} href={item.href} style={{ textDecoration: 'none' }}>{Card}</Link>
+          ) : (
+            <div key={index}>{Card}</div>
+          );
+        })}
       </div>
     </section>
   );
@@ -487,15 +558,18 @@ const HealthAlert: React.FC<{ celsius: number; t: TFunction }> = ({ celsius, t }
   }, [celsius, t]);
 
   return (
-    <div style={{ padding: '20px', backgroundColor: `${color}15`, borderLeft: `5px solid ${color}`, borderRadius: '8px', margin: '0 0 30px 0', display: 'flex', alignItems: 'center', gap: '15px' }}>
+    <aside style={{ padding: '20px', backgroundColor: `${color}15`, borderLeft: `5px solid ${color}`, borderRadius: '8px', margin: '0 0 30px 0', display: 'flex', alignItems: 'center', gap: '15px' }} aria-label="Contextual Information">
       <div style={{ fontSize: '2rem' }}>{icon}</div>
       <div>
-        <h3 style={{ margin: '0 0 5px 0', color: color }}>{t('common.healthContextTitle')}</h3>
+        <span style={{ display: 'block', margin: '0 0 5px 0', color: color, fontSize: '0.95em', fontWeight: 600, opacity: 0.9, textTransform: 'uppercase', letterSpacing: '0.5px' }}>{t('common.healthContextTitle')}</span>
         <div style={{ margin: 0 }}>
           <span dangerouslySetInnerHTML={{ __html: message }} /> {t('common.healthContextFooter')}
+          <p style={{ marginTop: '10px', fontSize: '0.85em', color: '#666', fontStyle: 'italic' }}>
+            * This information is for general reference only and is not medical advice.
+          </p>
         </div>
       </div>
-    </div>
+    </aside>
   );
 };
 
@@ -513,13 +587,13 @@ const WeatherWidget: React.FC<{ celsius: number; t: TFunction }> = ({ celsius, t
   }, [celsius, t]);
 
   return (
-    <div style={{ padding: '20px', background: 'linear-gradient(to right, #f8f9fa, #e9ecef)', borderRadius: '8px', margin: '0 0 30px 0', display: 'flex', alignItems: 'center', gap: '15px', border: '1px solid #dee2e6' }}>
+    <aside style={{ padding: '20px', background: 'linear-gradient(to right, #f8f9fa, #e9ecef)', borderRadius: '8px', margin: '0 0 30px 0', display: 'flex', alignItems: 'center', gap: '15px', border: '1px solid #dee2e6' }} aria-label="Contextual Information">
       <div style={{ fontSize: '2rem' }}>{icon}</div>
       <div>
-        <h3 style={{ margin: '0 0 5px 0', color: '#2c3e50' }}>{t('common.weatherFeelTitle')}</h3>
+        <span style={{ display: 'block', margin: '0 0 5px 0', color: '#2c3e50', fontSize: '0.95em', fontWeight: 600, opacity: 0.9, textTransform: 'uppercase', letterSpacing: '0.5px' }}>{t('common.weatherFeelTitle')}</span>
         <div style={{ margin: 0 }} dangerouslySetInnerHTML={{ __html: t('common.weatherFeelIntro', { celsius }) + " " + tip }} />
       </div>
-    </div>
+    </aside>
   );
 };
 
@@ -558,72 +632,101 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
     return tTemplate(key, repl);
   }, [tPage, tTemplate, customNamespace]);
 
-  const { fahrenheit, formattedFahrenheit, temperatureContext, pageUrl, structuredData, displayDate } = useMemo(() => {
+  // 1. First: Calculate dates
+  const { displayDate, isoDate } = useMemo(() => {
+    const date = lastUpdated ? new Date(lastUpdated) : new Date();
+    return {
+      displayDate: date.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' }),
+      isoDate: date.toISOString().split('T')[0]
+    };
+  }, [lastUpdated, locale]);
+
+  // 2. Second: Calculate Titles & Meta (needed for Structured Data)
+  const { pageTitle, metaDescription, ogDescription } = useMemo(() => {
+    // Note: We need fahrenheit here but it's calculated in the next block.
+    // Circular dependency risk. Let's recalculate F simply here or merge blocks.
+    // Better strategy: Calculate F first.
+    const f = celsiusToFahrenheit(celsius);
+    const rawTitle = customTitle || generatePageTitle(celsius, f, t);
+
+    const stripHtml = (html: string) => html.replace(/<[^>]*>/g, '');
+    return {
+      pageTitle: stripHtml(rawTitle),
+      metaDescription: stripHtml(customDescription || generateMetaDescription(celsius, f, t)),
+      ogDescription: stripHtml(customDescription || generateOGDescription(celsius, f, t))
+    };
+  }, [celsius, t, customTitle, customDescription]);
+
+  // 3. Third: Main Data & Structured Data (depends on Date & Title)
+  const { fahrenheit, formattedFahrenheit, temperatureContext, pageUrl, structuredData } = useMemo(() => {
     const f = celsiusToFahrenheit(celsius);
     const formattedF = formatTemperature(f);
     const context = analyzeTemperature(celsius);
     const url = canonicalUrl || generatePageUrl(celsius, locale);
 
     // 生成结构化数据
-    const howToData = generateHowToStructuredData(celsius, f, t);
+    // const howToData = generateHowToStructuredData(celsius, f, t); // Deprecated
     const faqData = generateFAQStructuredData(celsius, f, t, strategy.faqs);
-
-    // 格式化日期
-    // 仅在明确提供 lastUpdated 时显示当天，否则显示稳定的历史日期
-    const date = lastUpdated ? new Date(lastUpdated) : new Date('2024-12-15T00:00:00Z');
-    const displayDateStr = date.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' });
 
     return {
       fahrenheit: f,
       formattedFahrenheit: formattedF,
       temperatureContext: context,
       pageUrl: url,
-      structuredData: { howTo: howToData, faq: faqData },
-      displayDate: displayDateStr
+      structuredData: {
+        // 🟢 SEO Strategy: Use Article schema instead of HowTo for tool pages
+        article: {
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: pageTitle,
+          image: `${new URL(url).origin}/images/equation/c-to-f-conversion.png`,
+          author: { '@type': 'Organization', name: 'C to F Converter Team' },
+          publisher: { '@type': 'Organization', name: 'C to F Converter', logo: { '@type': 'ImageObject', url: `${new URL(url).origin}/logo.png` } },
+
+          dateModified: isoDate,
+          description: metaDescription,
+          mainEntityOfPage: { '@type': 'WebPage', '@id': url }
+        },
+        faq: faqData
+      },
+
     };
-  }, [celsius, canonicalUrl, locale, t, lastUpdated, strategy.faqs]);
+  }, [celsius, canonicalUrl, locale, t, strategy.faqs, isoDate, pageTitle, metaDescription]);
 
-  const { pageTitle, metaDescription, ogDescription } = useMemo(() => {
-    const rawTitle = customTitle || generatePageTitle(celsius, fahrenheit, t);
-
-    // 移除 HTML 标签用于 meta 标签
-    const stripHtml = (html: string) => html.replace(/<[^>]*>/g, '');
-
-    return {
-      pageTitle: stripHtml(rawTitle),
-      metaDescription: stripHtml(customDescription || generateMetaDescription(celsius, fahrenheit, t)),
-      ogDescription: stripHtml(customDescription || generateOGDescription(celsius, fahrenheit, t))
-    };
-  }, [celsius, fahrenheit, t, customTitle, customDescription]);
+  // 🟢 Calculate site origin for consistent URL generation across environments
+  const siteOrigin = useMemo(() => new URL(pageUrl).origin, [pageUrl]);
 
   return (
     <Layout>
       <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={metaDescription} />
-        <link rel="canonical" href={pageUrl} />
+        <title key="title">{pageTitle}</title>
+        <meta key="description" name="description" content={metaDescription} />
+        <link key="canonical" rel="canonical" href={pageUrl} />
 
         {/* Multilingual SEO: hreflang tags */}
-        <link rel="alternate" hrefLang="x-default" href={generatePageUrl(celsius, 'en')} />
+        <link key="alternate-default" rel="alternate" hrefLang="x-default" href={generatePageUrl(celsius, 'en')} />
         {['en', 'zh', 'es', 'hi', 'ar', 'ja', 'fr', 'de', 'id', 'pt-br'].map(l => (
           <link
-            key={l}
+            key={`alternate-${l}`}
             rel="alternate"
             hrefLang={l === 'zh' ? 'zh-CN' : (l === 'pt-br' ? 'pt-BR' : l)}
             href={generatePageUrl(celsius, l)}
           />
         ))}
 
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={ogDescription} />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:type" content="article" />
-        <meta property="og:image" content={`https://ctofconverter.com/images/equation/${celsius}-celsius-to-fahrenheit-conversion.png`} />
+        <meta key="og:title" property="og:title" content={pageTitle} />
+        <meta key="og:description" property="og:description" content={ogDescription} />
+        <meta key="og:url" property="og:url" content={pageUrl} />
+        <meta key="og:type" property="og:type" content="article" />
+        <meta key="og:image" property="og:image" content={`${siteOrigin}/images/equation/c-to-f-conversion.png`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content={`https://ctofconverter.com/images/equation/${celsius}-celsius-to-fahrenheit-conversion.png`} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.howTo) }} />
+        <meta key="twitter:title" name="twitter:title" content={pageTitle} />
+        <meta key="twitter:description" name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={`${siteOrigin}/images/equation/c-to-f-conversion.png`} />
+
+
+        {/* 🟢 Schema: Article + FAQ (No HowTo) */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.article) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.faq) }} />
       </Head>
 
@@ -636,9 +739,9 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
                 <span className="sr-only">Celsius to Fahrenheit Converter</span>
               </Link>
             </div>
-            <h1 dangerouslySetInnerHTML={{ __html: customTitle || `${celsius}°C to Fahrenheit (${formattedFahrenheit}°F)` }} />
+            <h1>{customTitle || `Convert ${celsius} Degrees Celsius to Fahrenheit (${formattedFahrenheit}°F)`}</h1>
             <div className="tagline" style={{ marginBottom: '1.5rem', color: '#666' }} dangerouslySetInnerHTML={{ __html: customDescription || strategy.text.intro || t('meta.ogDescription', { celsius, fahrenheit: formattedFahrenheit }) }} />
-            <p className="last-updated">{t('common.lastUpdated')} <time dateTime={lastUpdated || '2025-12-19'}>{displayDate}</time></p>
+            <p className="last-updated">{t('common.lastUpdated')} <time dateTime={isoDate} suppressHydrationWarning>{displayDate}</time></p>
           </div>
         </header>
 
@@ -653,25 +756,30 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
           </nav>
 
           <div className="temperature-content-grid">
-            <section className="conversion-section">
-              <h2 id="conversion-title" dangerouslySetInnerHTML={{ __html: customResultHeader || t('common.resultHeader', { celsius }) }} />
-              <div className="conversion-result">
-                <div className="result-box">
-                  <output className="result-value">{formattedFahrenheit}°F</output>
-                </div>
-              </div>
+            <section className="converter-tool" style={{ marginBottom: '30px' }}>
+              <h2 id="conversion-title" style={{ marginBottom: '20px', fontSize: '1.5rem', fontWeight: 600 }}>Celsius to Fahrenheit Converter</h2>
 
-              {strategy.insights && <DynamicInsightsSection insights={strategy.insights} />}
-              {strategy.modules.showConversionGuide !== false && <DetailedConversionGuide celsius={celsius} fahrenheit={fahrenheit} t={t} />}
+              {/* 🟢 SEO: Natural language intro paragraph for indexability */}
+              <p className="intro-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '20px', color: '#333' }}>
+                <strong>{celsius} degrees Celsius</strong> equals <strong>{formattedFahrenheit} degrees Fahrenheit</strong>.
+                This temperature conversion is commonly used in
+                {celsius >= 35 && celsius <= 42 ? 'body temperature measurements and medical diagnostics' :
+                  celsius >= 0 && celsius <= 30 ? 'weather forecasts and daily temperature readings' :
+                    celsius >= 100 && celsius <= 250 ? 'cooking, baking, and oven temperature settings' :
+                      'scientific and industrial applications'}.
+              </p>
+
+              <EnhancedConverter initialCelsius={celsius} t={t} />
             </section>
 
-            {strategy.modules.showHealthAlert && <HealthAlert celsius={celsius} t={t} />}
-            {strategy.modules.showHumanFeel && <WeatherWidget celsius={celsius} t={t} />}
+            {strategy.insights && <DynamicInsightsSection insights={strategy.insights} />}
 
-            <section className="converter-tool">
-              <h2 className="converter-title">{t('common.quickResult')}</h2>
-              <EnhancedConverter t={t} />
-            </section>
+            <div className="context-widgets" style={{ display: 'grid', gap: '20px', margin: '20px 0' }}>
+              {strategy.modules.showHealthAlert && <HealthAlert celsius={celsius} t={t} />}
+              {strategy.modules.showHumanFeel && <WeatherWidget celsius={celsius} t={t} />}
+            </div>
+
+            {strategy.modules.showConversionGuide !== false && <DetailedConversionGuide celsius={celsius} fahrenheit={fahrenheit} t={t} />}
 
             {strategy.modules.showPracticalApps !== false && <PracticalApplications celsius={celsius} fahrenheit={fahrenheit} t={t} />}
 
@@ -682,7 +790,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
             <RelatedTemperatures celsius={celsius} extraConversions={extraConversions} t={t} />
           </div>
         </main>
-        <Footer />
+        <Footer lastUpdated={isoDate} />
         <Analytics />
       </div>
     </Layout>
