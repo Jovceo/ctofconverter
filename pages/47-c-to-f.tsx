@@ -29,11 +29,28 @@ interface PageTranslation {
   page?: {
     title?: string;
     description?: string;
+    intro?: string;
     resultText?: string;
   };
 }
 
-export default function Temperature47C() {
+import { getLatestModifiedDate } from '../utils/dateHelpers';
+import { GetStaticProps } from 'next';
+
+export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
+  const lastUpdatedIso = getLatestModifiedDate([
+    'pages/47-c-to-f.tsx',
+    `locales/${locale}/47-c-to-f.json`
+  ]);
+
+  return {
+    props: {
+      lastUpdatedIso
+    }
+  };
+};
+
+export default function Temperature47C({ lastUpdatedIso }: { lastUpdatedIso: string }) {
   const celsius = 47;
   const fahrenheit = celsiusToFahrenheit(celsius);
   const { locale, pageTranslation } = useTranslation('47-c-to-f');
@@ -83,7 +100,7 @@ export default function Temperature47C() {
     processContext(pageT.context?.environmental, 'tip');
     processContext(pageT.context?.cooking, 'fact');
 
-    // 注入负温描述以确保内容完整
+    //注入负温描述以确保内容完整
     if (pageT.negative) {
       insights.push({
         type: 'fact' as const,
@@ -100,6 +117,9 @@ export default function Temperature47C() {
     s.modules.showConversionGuide = false;
     s.modules.showPracticalApps = false;
 
+    // 🟢 SEO Optimization: Use localized unique text
+    s.text.intro = replace(pageT.page?.intro || '');
+
     return s;
   }, [celsius, pageT, replacements]);
 
@@ -110,7 +130,7 @@ export default function Temperature47C() {
       celsius={celsius}
       strategy={strategy}
       customNamespace="47-c-to-f"
-      lastUpdated="2025-12-19"
+      lastUpdated={lastUpdatedIso}
       canonicalUrl={canonicalUrl}
       customTitle={replacePlaceholders(pageT.page?.title || '', replacements)}
       customDescription={replacePlaceholders(pageT.page?.description || '', replacements)}

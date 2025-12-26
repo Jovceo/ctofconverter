@@ -1,0 +1,108 @@
+{
+    "meta": {
+        "title": "4°C en Fahrenheit ({fahrenheit}°F) | Guide de conversion et tableau de température",
+        "description": "Convertissez rapidement 4 degrés Celsius en Fahrenheit. Apprenez que 4°C égale {fahrenheit}°F, consultez la formule exacte, le calcul étape par étape et les utilisations courantes en réfrigération et météo.",
+        "ogTitle": "Convertisseur et Guide 4°C en Fahrenheit ({fahrenheit}°F)",
+        "ogDescription": "4°C égale exactement {fahrenheit}°F. C'est la température idéale pour un réfrigérateur ! Découvrez pourquoi avec notre guide complet."
+    },
+    "page": {
+        "title": "4°C en Fahrenheit ({fahrenheit}°F) - Guide de conversion complet",
+        "description": "Convertissez <strong>4 degrés Celsius en Fahrenheit</strong> instantanément. <strong>4°C égale {fahrenheit}°F</strong>. Que vous vérifiiez <strong>4 Celsius en Fahrenheit pour un réfrigérateur</strong>, la météo ou le stockage des aliments, ce guide fournit les calculs exacts et le contexte. Utilisez notre <strong>tableau 4 C vers F</strong> et notre formule pour comprendre cette température froide.",
+        "intro": "4°C (39,2°F) est une température scientifiquement significative où l'eau atteint sa densité maximale. Dans la vie quotidienne, c'est la référence absolue pour le réglage des réfrigérateurs, garantissant que les aliments restent frais et sûrs sans geler.",
+        "resultText": "Quatre degrés Celsius égalent {fahrenheit} degrés Fahrenheit"
+    },
+    "warning": {
+        "title": "❄️ Alerte météo froide : 4°C ({fahrenheit}°F) est glacial",
+        "content": "<strong>Les températures de 4°C nécessitent des vêtements appropriés</strong>. C'est une température froide qui peut mener à l'hypothermie en cas d'exposition prolongée. Elle est nettement plus froide que la température ambiante (20-25°C). 4°C est souvent utilisé dans les <strong>réglages de réfrigérateur</strong>."
+    },
+    "context": {
+        "weather": {
+            "title": "🌡️ Météo & Température (4°C / {fahrenheit}°F)",
+            "content": "En termes météorologiques, 4°C ({fahrenheit}°F) est considéré comme <strong>froid</strong>. Cette température est typique de la fin de l'automne, du début du printemps ou des journées d'hiver dans les climats tempérés. Elle est proche du point de congélation de l'eau (0°C/32°F).",
+            "items": [
+                "Nécessite des vêtements chauds comme des vestes et des pulls",
+                "De la glace fine peut commencer à se former dans les zones ombragées",
+                "Température typique des compartiments de réfrigérateur",
+                "Confortable pour les activités de plein air avec une tenue appropriée"
+            ]
+        },
+        "storage": {
+            "title": "📦 Réfrigération & Stockage des aliments (4°C / {fahrenheit}°F)",
+            "content": "4°C est la <strong>température idéale pour la conservation au réfrigérateur</strong>. La plupart des réfrigérateurs modernes maintiennent des températures entre 3 et 5°C (37-41°F) pour garder les aliments frais.",
+            "items": [
+                "Parfait pour conserver les produits laitiers, les œufs et les légumes",
+                "Ralentit la croissance bactérienne tout en préservant la qualité des aliments",
+                "Température standard pour la plupart des réfrigérateurs domestiques",
+                "Garde les aliments frais pendant 3 à 7 jours selon l'article"
+            ]
+        },
+        "safety": {
+            "title": "⚠️ Conseils de sécurité contre le froid (4°C / {fahrenheit}°F)",
+            "content": "Bien que 4°C ne soit pas dangereusement froid, il est important de comprendre la <strong>sécurité par temps froid</strong>. Cette température peut être inconfortable et potentiellement entraîner des problèmes de santé.",
+            "items": [
+                "Habillez-vous en couches pour maintenir la chaleur corporelle",
+                "Limitez l'exposition extérieure à 1-2 heures maximum",
+                "Surveillez les signes d'hypothermie chez les personnes vulnérables",
+                "Gardez les animaux à l'intérieur ou offrez-leur un abri chaud"
+            ]
+        },
+        "environmental": {
+            "title": "🌍 Contexte environnemental (4°C / {fahrenheit}°F)",
+            "content": "4°C a des implications environnementales importantes. C'est <strong>proche du point de congélation</strong> et représente un seuil de température critique dans de nombreux processus naturels.",
+            "items": [
+                "La densité de l'eau est maximale à 4°C (avant de geler)",
+                "De nombreuses plantes entrent en dormance à cette température",
+                "Important pour la stratification thermique des lacs et des rivières",
+                "Affecte les cycles d'hibernation et les modèles de migration des animaux"
+            ]
+        }
+    },
+    "negative": {
+        "result": "Tableau de -4°C en Fahrenheit",
+        "description": "Moins 4 degrés Celsius égalent <strong>{negativeFahrenheit} degrés Fahrenheit</strong>. C'est en dessous de zéro et représente des conditions hivernales froides."
+    },
+    "faq": {
+        "items": [
+            {
+                "question": "Combien font 4 degrés Celsius en Fahrenheit (4 C vers F) ?",
+                "answer": "4 degrés Celsius égalent <strong>{fahrenheit} degrés Fahrenheit</strong> ({fahrenheit}°F). La formule est : °F = (4 × 9/5) + 32."
+            },
+            {
+                "question": "Comment convertir 4 F en C ?",
+                "answer": "Pour convertir <strong>4 Fahrenheit en Celsius</strong>, soustrayez 32 et multipliez par 5/9. 4°F égale environ <strong>-15,6°C</strong>, ce qui est très froid."
+            },
+            {
+                "question": "Est-ce que 4 degrés Celsius est froid ou chaud ?",
+                "answer": "4°C est considéré comme <strong>froid</strong>. C'est en dessous de la température ambiante typique (20-25°C) et proche du point de congélation de l'eau (0°C)."
+            },
+            {
+                "question": "Combien font 4 Celsius en Kelvin (4 C vers K) ?",
+                "answer": "Pour convertir Celsius en Kelvin, ajoutez 273,15. 4°C font <strong>277,15 Kelvin</strong>."
+            },
+            {
+                "question": "Est-ce que 4 degrés Celsius est le point de congélation ?",
+                "answer": "Non, 4°C <strong>n'est pas le point de congélation</strong>. L'eau gèle à 0°C (32°F). Cependant, 4°C est proche du gel."
+            },
+            {
+                "question": "Que porter à 4 degrés Celsius ?",
+                "answer": "À 4°C, portez des <strong>couches chaudes</strong> : sous-vêtements thermiques, pull, veste, bonnet et gants."
+            },
+            {
+                "question": "Quelle est la formule pour 4 Celsius en Fahrenheit ?",
+                "answer": "Multipliez la température Celsius (4) par 1,8 (9/5) et ajoutez 32. Calcul : (4 × 1,8) + 32 = {fahrenheit}°F."
+            },
+            {
+                "question": "Est-ce que 4°C est bon pour la température du réfrigérateur ?",
+                "answer": "Oui, 4°C est la <strong>température idéale d'un réfrigérateur</strong>. Ils doivent être réglés entre 3 et 5°C (37-41°F)."
+            },
+            {
+                "question": "Combien font 0 à 4 degrés Celsius en Fahrenheit ?",
+                "answer": "Une plage de <strong>0°C à 4°C</strong> correspond à <strong>32°F à {fahrenheit}°F</strong>. C'est la zone juste au-dessus du gel."
+            },
+            {
+                "question": "Quelle est la froideur de 4 degrés Celsius par rapport à la température corporelle ?",
+                "answer": "4°C est <strong>bien plus froid que la température corporelle normale</strong> (37°C). C'est 33 degrés de moins que votre corps."
+            }
+        ]
+    }
+}

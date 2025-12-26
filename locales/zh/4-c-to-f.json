@@ -8,6 +8,7 @@
   "page": {
     "title": "4°C 转华氏度 ({fahrenheit}°F) - 完整转换指南",
     "description": "立即将 <strong>4 摄氏度转换为华氏度</strong>。<strong>4°C 等于 {fahrenheit}°F</strong>。无论您是在查询 <strong>4 摄氏度对应的冰箱华氏温度</strong>、天气状况还是食品储存条件，本指南都能提供精确的数学计算和背景知识。使用我们的 <strong>4 C 转 F 图表</strong>和公式来深入了解这一低温数值。",
+    "intro": "4°C (39.2°F) 是一个具有科学意义的温度，此时水的密度达到最大。在日常生活中，这是冰箱设置的金标准，可确保食物保持新鲜安全且不结冰。",
     "resultText": "4 摄氏度等于 {fahrenheit} 华氏度"
   },
   "warning": {

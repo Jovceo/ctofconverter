@@ -23,6 +23,9 @@
         "fahrenheitLabel": "Fahrenheit (°F)",
         "tableTitle": "Tableau de conversion Celsius en Fahrenheit",
         "descriptionCol": "Description",
+        "tempCol": "Température",
+        "celsiusCol": "Celsius",
+        "fahrenheitCol": "Fahrenheit",
         "lastUpdated": "Dernière mise à jour :",
         "breadcrumbCurrent": "{celsius} Celsius en Fahrenheit",
         "resultHeader": "{celsius}°C en Fahrenheit est :",
@@ -38,7 +41,37 @@
             "bodyTemp": "Temp. corporelle",
             "veryHot": "Très chaud",
             "boiling": "L'eau bout"
-        }
+        },
+        "headerTitle": "Convertir {celsius} degrés Celsius en Fahrenheit ({fahrenheit}°F)",
+        "resultHeaderDefault": "Convertisseur Celsius en Fahrenheit",
+        "logoText": "Convertisseur Celsius en Fahrenheit",
+        "introValue": "<strong>{celsius} degrés Celsius</strong> est égal à <strong>{fahrenheit} degrés Fahrenheit</strong>.",
+        "introConnect": "Cette conversion de température est couramment utilisée pour",
+        "linkBodyTemp": "les mesures de température corporelle",
+        "linkFeverChart": "tableau des températures de fièvre",
+        "linkCtoFChart": "tableau Celsius en Fahrenheit",
+        "linkOvenChart": "tableau de conversion pour four",
+        "linkCooking": "les réglages de cuisine, de pâtisserie et de four",
+        "linkGeneral": "tableau complet de conversion de température",
+        "introMedicalPart2": " et les diagnostics médicaux. Consultez notre ",
+        "introMedicalPart3": " pour plus de détails.",
+        "introWeatherPart1": " les prévisions météorologiques et les lectures de température quotidiennes. Consultez notre ",
+        "introWeatherPart3": " pour une référence rapide.",
+        "introCookingPart2": ". Utilisez notre ",
+        "introCookingPart3": " pour une cuisson précise.",
+        "introGeneralPart1": " les applications scientifiques et industrielles. Explorez notre ",
+        "introGeneralPart3": " pour plus de conversions.",
+        "step1": "Étape 1",
+        "step2": "Étape 2",
+        "calculation": "Calcul",
+        "result": "Résultat",
+        "medicalAdviceNote": "* Ces informations sont fournies à titre indicatif uniquement et ne constituent pas un avis médical.",
+        "fToC": "Fahrenheit en Celsius",
+        "cToK": "Celsius en Kelvin",
+        "kToC": "Kelvin en Celsius",
+        "minusCToF": "Celsius négatif en Fahrenheit",
+        "freezingTooltip": "L'eau gèle à 0°C et bout à 100°C",
+        "fahrenheitTooltip": "L'eau gèle à 32°F et bout à 212°F"
     },
     "practical": {
         "title": "Applications pratiques de {celsius}°C ({fahrenheit}°F)",
@@ -182,5 +215,10 @@
             "cold": "Froid",
             "moderate": "Modéré"
         }
+    },
+    "editorial": {
+        "title": "Note éditoriale",
+        "note": "Note éditoriale : Ce contenu de conversion de température est révisé par des experts météorologiques et des éducateurs scientifiques pour garantir la précision des calculs physiques. Les contextes d'application pratique comme la température corporelle ou le ressenti météo suivent les directives standard du NIST et de l'Organisation mondiale de la santé (OMS).",
+        "sources": "Sources : NIST, Physical Science Center, USDA."
     }
 }

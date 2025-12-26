@@ -6,14 +6,20 @@
     "ogDescription": "नि:शुल्क ऑनलाइन टूल जो ℃ को ℉ में सटीकता से बदलता है और चरण-दर-चरण विवरण देता है।",
     "twitterTitle": "सेल्सियस से फ़ारेनहाइट कनवर्टर",
     "twitterDescription": "नि:शुल्क ऑनलाइन टूल, एक ही स्थान पर °C से °F रूपांतरण।",
-    "author": "Ctofconverter टीम"
+    "author": "Ctofconverter टीम",
+    "keywords": "सेल्सियस से फ़ारेनहाइट, तापमान कनवर्टर, सेल्सियस से फ़ारेनहाइट सूत्र, तापमान रूपांतरण"
   },
   "nav": {
     "home": "होम",
     "celsiusToFahrenheit": "सेल्सियस से फ़ारेनहाइट",
     "fahrenheitToCelsius": "फ़ारेनहाइट से सेल्सियस",
     "calculator": "C से F कैलकुलेटर",
-    "selectLanguage": "भाषा चुनें"
+    "to": "तक",
+    "selectLanguage": "भाषा चुनें",
+    "logoText": "सेल्सियस से फ़ारेनहाइट कनवर्टर",
+    "languageSelector": "भाषा चयनकर्ता",
+    "toggleMenu": "नेविगेशन मेनू टॉगल करें",
+    "seoLinkText": "{celsius} सेल्सियस से फ़ारेनहाइट ({fahrenheit}°F)"
   },
   "breadcrumb": {
     "home": "होम"
@@ -108,7 +114,7 @@
     },
     "copyright": "© {year} Ctofconverter. सर्वाधिकार सुरक्षित.",
     "lastUpdated": "अंतिम अपडेट:",
-    "backToTop": "शीर्ष पर वापस जाएं"
+    "backToTop": "शीर्ष पर वापस जाएं",
+    "footerNavigation": "फुटर नेविगेशन"
   }
 }
-

@@ -30,7 +30,7 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="language-switcher" aria-label="Language selector">
+    <div className="language-switcher" aria-label={t('nav.languageSelector')}>
       <label htmlFor="language-select" className="sr-only">
         {t('nav.selectLanguage')}
       </label>

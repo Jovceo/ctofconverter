@@ -31,11 +31,28 @@ interface PageTranslation {
     page?: {
         title?: string;
         description?: string;
+        intro?: string;
         resultText?: string;
     };
 }
 
-export default function Temperature4C() {
+import { getLatestModifiedDate } from '../utils/dateHelpers';
+import { GetStaticProps } from 'next';
+
+export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
+    const lastUpdatedIso = getLatestModifiedDate([
+        'pages/4-c-to-f.tsx',
+        `locales/${locale}/4-c-to-f.json`
+    ]);
+
+    return {
+        props: {
+            lastUpdatedIso
+        }
+    };
+};
+
+export default function Temperature4C({ lastUpdatedIso }: { lastUpdatedIso: string }) {
     const celsius = 4;
     const fahrenheit = celsiusToFahrenheit(celsius);
     const { locale, pageTranslation } = useTranslation('4-c-to-f');
@@ -63,12 +80,30 @@ export default function Temperature4C() {
 
         const insights: { type: 'warning' | 'tip' | 'fact'; title: string; content: string }[] = [];
 
+        const formatInsightContent = (item: TranslationItem) => {
+            let content = replace(item.content || '');
+            if (item.items && item.items.length > 0) {
+                const list = item.items.map(i => `<li>${replace(i)}</li>`).join('');
+                content += `<ul style="margin-top: 10px; padding-left: 20px;">${list}</ul>`;
+            }
+            return content;
+        };
+
+        // 添加预警洞察
+        if (pageT.warning) {
+            insights.push({
+                type: 'warning' as const,
+                title: replace(pageT.warning.title || ''),
+                content: formatInsightContent(pageT.warning)
+            });
+        }
+
         // 添加天气相关的洞察
         if (pageT.context?.weather) {
             insights.push({
                 type: 'tip' as const,
                 title: replace(pageT.context.weather.title || ''),
-                content: replace(pageT.context.weather.content || '')
+                content: formatInsightContent(pageT.context.weather)
             });
         }
 
@@ -77,7 +112,7 @@ export default function Temperature4C() {
             insights.push({
                 type: 'tip' as const,
                 title: replace(pageT.context.storage.title || ''),
-                content: replace(pageT.context.storage.content || '')
+                content: formatInsightContent(pageT.context.storage)
             });
         }
 
@@ -86,7 +121,7 @@ export default function Temperature4C() {
             insights.push({
                 type: 'warning' as const,
                 title: replace(pageT.context.safety.title || ''),
-                content: replace(pageT.context.safety.content || '')
+                content: formatInsightContent(pageT.context.safety)
             });
         }
 
@@ -95,7 +130,7 @@ export default function Temperature4C() {
             insights.push({
                 type: 'fact' as const,
                 title: replace(pageT.context.environmental.title || ''),
-                content: replace(pageT.context.environmental.content || '')
+                content: formatInsightContent(pageT.context.environmental)
             });
         }
 
@@ -116,8 +151,8 @@ export default function Temperature4C() {
         s.modules.showConversionGuide = true; // 显示转换指南
         s.modules.showPracticalApps = true; // 显示实用应用场景
 
-        // 🟢 SEO Optimization: Add unique, non-templated text for 4°C
-        s.text.intro = "4°C (39.2°F) is a scientifically significant temperature where water reaches its maximum density. In daily life, this is the gold standard for refrigerator settings, ensuring food stays fresh and safe without freezing.";
+        // 🟢 SEO Optimization: Use localized unique text for 4°C
+        s.text.intro = replace(pageT.page?.intro || '');
 
         return s;
     }, [celsius, pageT, replacements]);
@@ -129,9 +164,9 @@ export default function Temperature4C() {
             celsius={celsius}
             strategy={strategy}
             customNamespace="4-c-to-f"
-            lastUpdated="2025-12-19"
+            lastUpdated={lastUpdatedIso}
             canonicalUrl={canonicalUrl}
-            customTitle="4°C to Fahrenheit: The Perfect Refrigerator Temperature"
+            customTitle={replacePlaceholders(pageT.page?.title || '', replacements)}
             customDescription={replacePlaceholders(pageT.page?.description || '', replacements)}
         />
     );

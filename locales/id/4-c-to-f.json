@@ -1,0 +1,108 @@
+{
+    "meta": {
+        "title": "4°C ke Fahrenheit ({fahrenheit}°F) | Panduan Konversi & Tabel Suhu",
+        "description": "Konversikan 4 derajat Celsius ke Fahrenheit dengan cepat. Pelajari bahwa 4°C sama dengan {fahrenheit}°F, lihat rumus tepat, langkah perhitungan, serta penggunaan umum di kulkas dan cuaca.",
+        "ogTitle": "Konverter & Panduan 4°C ke Fahrenheit ({fahrenheit}°F)",
+        "ogDescription": "4°C sama dengan tepat {fahrenheit}°F. Ini adalah suhu ideal untuk kulkas! Pelajari alasannya dengan panduan lengkap kami."
+    },
+    "page": {
+        "title": "4°C ke Fahrenheit ({fahrenheit}°F) - Panduan Konversi Lengkap",
+        "description": "Konversikan <strong>4 derajat Celsius ke Fahrenheit</strong> secara instan. <strong>4°C sama dengan {fahrenheit}°F</strong>. Baik Anda memeriksa <strong>4 Celsius ke Fahrenheit untuk pengaturan kulkas</strong>, kondisi cuaca, atau penyimpanan makanan, panduan ini menyediakan perhitungan matematis dan konteks yang tepat. Gunakan <strong>tabel 4 C ke F</strong> dan rumus kami untuk memahami suhu dingin ini.",
+        "intro": "4°C (39,2°F) adalah suhu yang signifikan secara ilmiah di mana air mencapai densitas maksimumnya. Dalam kehidupan sehari-hari, ini adalah standar utama untuk pengaturan kulkas, memastikan makanan tetap segar dan aman tanpa membeku.",
+        "resultText": "Empat derajat Celsius sama dengan {fahrenheit} derajat Fahrenheit"
+    },
+    "warning": {
+        "title": "❄️ Peringatan Cuaca Dingin: 4°C ({fahrenheit}°F) Itu Dingin",
+        "content": "<strong>Suhu 4°C memerlukan pakaian yang memadai</strong>. Ini adalah suhu dingin yang dapat menyebabkan hipotermia jika terpapar dalam waktu lama. Suhu ini jauh lebih dingin daripada suhu ruangan (20-25°C). 4°C sering digunakan dalam <strong>pengaturan kulkas</strong>."
+    },
+    "context": {
+        "weather": {
+            "title": "🌡️ Cuaca & Suhu (4°C / {fahrenheit}°F)",
+            "content": "Dalam istilah cuaca, 4°C ({fahrenheit}°F) dianggap <strong>dingin</strong>. Suhu ini tipikal untuk akhir musim gugur, awal musim semi, atau hari-hari musim dingin di iklim sedang. Suhu ini mendekati titik beku air (0°C/32°F).",
+            "items": [
+                "Memerlukan pakaian hangat seperti jaket dan sweter",
+                "Air mungkin mulai membentuk lapisan es tipis di tempat teduh",
+                "Suhu tipikal untuk kompartemen kulkas",
+                "Nyaman untuk aktivitas luar ruangan dengan pakaian yang tepat"
+            ]
+        },
+        "storage": {
+            "title": "📦 Pendinginan & Penyimpanan Makanan (4°C / {fahrenheit}°F)",
+            "content": "4°C adalah <strong>suhu ideal untuk penyimpanan kulkas</strong>. Kebanyakan kulkas modern menjaga suhu antara 3-5°C (37-41°F) agar makanan tetap segar dan aman.",
+            "items": [
+                "Sangat cocok untuk menyimpan produk susu, telur, dan sayuran",
+                "Memperlambat pertumbuhan bakteri sekaligus menjaga kualitas makanan",
+                "Suhu standar untuk sebagian besar kulkas rumah tangga",
+                "Menjaga makanan tetap segar selama 3-7 hari tergantung jenisnya"
+            ]
+        },
+        "safety": {
+            "title": "⚠️ Tips Keamanan Cuaca Dingin (4°C / {fahrenheit}°F)",
+            "content": "Meskipun 4°C tidak sedingin yang berbahaya, penting untuk memahami <strong>keamanan cuaca dingin</strong>. Suhu ini bisa membuat tidak nyaman dan berisiko menimbulkan masalah kesehatan jika terpapar lama.",
+            "items": [
+                "Berpakaian berlapis untuk menjaga panas tubuh",
+                "Batasi paparan luar ruangan maksimal 1-2 jam",
+                "Pantau tanda hipotermia pada individu yang rentan",
+                "Jaga hewan peliharaan tetap di dalam ruangan atau beri tempat berteduh hangat"
+            ]
+        },
+        "environmental": {
+            "title": "🌍 Konteks Lingkungan (4°C / {fahrenheit}°F)",
+            "content": "4°C memiliki implikasi lingkungan yang signifikan. Suhu ini <strong>mendekati titik beku</strong> dan mewakili ambang batas suhu kritis dalam banyak proses alami.",
+            "items": [
+                "Densitas air mencapai maksimum pada 4°C (sebelum membeku)",
+                "Banyak tanaman memasuki masa dormansi pada suhu ini",
+                "Penting untuk stratifikasi suhu danau dan sungai",
+                "Mempengaruhi pola hibernasi dan migrasi hewan"
+            ]
+        }
+    },
+    "negative": {
+        "result": "Tabel -4°C ke Fahrenheit",
+        "description": "Minus 4 derajat Celsius sama dengan <strong>{negativeFahrenheit} derajat Fahrenheit</strong>. Ini di bawah titik beku dan mewakili kondisi musim dingin yang dingin."
+    },
+    "faq": {
+        "items": [
+            {
+                "question": "Berapa 4 derajat Celsius dalam Fahrenheit (4 C ke F)?",
+                "answer": "4 derajat Celsius sama dengan <strong>{fahrenheit} derajat Fahrenheit</strong> ({fahrenheit}°F). Rumusnya adalah: °F = (4 × 9/5) + 32."
+            },
+            {
+                "question": "Bagaimana cara mengubah 4 F ke C?",
+                "answer": "Untuk mengubah <strong>4 Fahrenheit ke Celsius</strong>, kurangi 32 dan kalikan dengan 5/9. 4°F sama dengan sekitar <strong>-15,6°C</strong>, yang sangat dingin."
+            },
+            {
+                "question": "Apakah 4 derajat Celsius dingin atau panas?",
+                "answer": "4°C dianggap <strong>dingin</strong>. Suhu ini di bawah suhu ruangan rata-rata (20-25°C) dan mendekati titik beku air (0°C). Perlu pakaian hangat agar nyaman."
+            },
+            {
+                "question": "Berapa 4 Celsius dalam Kelvin (4 C ke K)?",
+                "answer": "Untuk mengubah Celsius ke Kelvin, tambahkan 273,15. 4°C adalah <strong>277,15 Kelvin</strong>."
+            },
+            {
+                "question": "Apakah 4 derajat Celsius itu membeku?",
+                "answer": "Tidak, 4°C <strong>tidak membeku</strong>. Air membeku pada 0°C (32°F). Namun, 4°C dekat dengan titik beku."
+            },
+            {
+                "question": "Apa yang harus dipakai pada suhu 4 derajat Celsius?",
+                "answer": "Pada suhu 4°C, pakailah <strong>pakaian berlapis yang hangat</strong>: pakaian dalam termal, sweter, jaket, topi, dan sarung tangan."
+            },
+            {
+                "question": "Apa rumus untuk 4 Celsius ke Fahrenheit?",
+                "answer": "Kalikan suhu Celsius (4) dengan 1,8 dan tambahkan 32. Perhitungan: (4 × 1,8) + 32 = {fahrenheit}°F."
+            },
+            {
+                "question": "Apakah 4°C bagus untuk suhu kulkas?",
+                "answer": "Ya, 4°C adalah <strong>suhu kulkas yang ideal</strong>. Kulkas harus diatur antara 3-5°C (37-41°F)."
+            },
+            {
+                "question": "Berapa 0 sampai 4 derajat Celsius dalam Fahrenheit?",
+                "answer": "Rentang <strong>0°C sampai 4°C</strong> setara dengan <strong>32°F sampai {fahrenheit}°F</strong>. Ini adalah rentang suhu tepat di atas titik beku."
+            },
+            {
+                "question": "Seberapa dingin 4 derajat Celsius dibanding suhu tubuh?",
+                "answer": "4°C <strong>jauh lebih dingin dari suhu tubuh normal</strong> (37°C). Suhu ini 33 derajat Celsius lebih rendah dari tubuh Anda."
+            }
+        ]
+    }
+}

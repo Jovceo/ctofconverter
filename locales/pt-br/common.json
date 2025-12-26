@@ -6,14 +6,20 @@
     "ogDescription": "Calculadora online gratuita que converte °C em °F com precisão e explica cada etapa.",
     "twitterTitle": "Conversor de Celsius para Fahrenheit",
     "twitterDescription": "Ferramenta gratuita para converter temperaturas °C em °F instantaneamente.",
-    "author": "Equipe Ctofconverter"
+    "author": "Equipe Ctofconverter",
+    "keywords": "celsius para fahrenheit, conversor de temperatura, fórmula celsius para fahrenheit, conversão de temperatura"
   },
   "nav": {
     "home": "Início",
     "celsiusToFahrenheit": "Celsius para Fahrenheit",
     "fahrenheitToCelsius": "Fahrenheit para Celsius",
     "calculator": "Calculadora C para F",
-    "selectLanguage": "Selecione o idioma"
+    "to": "para",
+    "selectLanguage": "Selecione o idioma",
+    "logoText": "Conversor de Celsius para Fahrenheit",
+    "toggleMenu": "Alternar menu de navegação",
+    "languageSelector": "Seletor de idioma",
+    "seoLinkText": "{celsius} Celsius para Fahrenheit ({fahrenheit}°F)"
   },
   "breadcrumb": {
     "home": "Início"
@@ -108,7 +114,7 @@
     },
     "copyright": "© {year} Ctofconverter. Todos os direitos reservados.",
     "lastUpdated": "Última atualização:",
-    "backToTop": "Voltar ao topo"
+    "backToTop": "Volver ao topo",
+    "footerNavigation": "Navegação do rodapé"
   }
 }
-

@@ -1,0 +1,346 @@
+{
+  "meta": {
+    "title": "Tabla y Calculadora de Conversión de Temperatura para Horno de Convección",
+    "description": "Domina las conversiones de horno de convección con nuestra guía experta. Obtén tablas de temperatura precisas, ajustes de horneado por tipo de alimento y consejos profesionales para resultados perfectos siempre.",
+    "ogTitle": "Tabla y Calculadora de Conversión de Temperatura para Horno de Convección",
+    "ogDescription": "Domina las conversiones de horno de convección con nuestra guía experta. Obtén tablas de temperatura precisas, ajustes de horneado por tipo de alimento y consejos profesionales para resultados perfectos siempre.",
+    "ogImage": "https://ctofconverter.com/converter.png",
+    "ogUrl": "https://ctofconverter.com/fan-oven-conversion-chart",
+    "ogType": "website",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "Tabla y Calculadora de Conversión de Temperatura para Horno de Convección",
+    "twitterDescription": "Domina las conversiones de horno de convección con nuestra guía experta. Obtén tablas de temperatura precisas, ajustes de horneado por tipo de alimento y consejos profesionales para resultados perfectos siempre.",
+    "twitterImage": "https://ctofconverter.com/converter.png",
+    "author": "Panadera Profesional Sarah Johnson",
+    "robots": "index, follow",
+    "keywords": "conversión horno convección, temperatura horno convección, conversión gas mark, tabla temperatura horno, guía temperatura horneado"
+  },
+  "breadcrumb": {
+    "home": "Inicio",
+    "current": "Conversión Horno de Convección"
+  },
+  "intro": {
+    "title": "Tabla y Calculadora de Conversión de Temperatura para Horno de Convección",
+    "subtitle": "Tabla de conversión precisa para hornos de convección en Reino Unido, Australia y todo el mundo. Convierte temperaturas entre hornos convencionales, de convección y de gas al instante. Conversión de temperatura para hornos de convección fácil para hornear pasteles, asar carnes y más.",
+    "author": "Por la Panadera Profesional Sarah Johnson",
+    "lastUpdated": "Última actualización:",
+    "lastUpdatedDate": "15 de septiembre de 2025"
+  },
+  "quickConversions": {
+    "title": "Conversiones Populares de Horno de Convección",
+    "generalRule": "Regla general: Reduce las temperaturas del horno convencional en 20°C (o 25-30°F) para hornos de convección.",
+    "items": [
+      {
+        "text": "Gas Mark 4 = 180°C horno de convección"
+      },
+      {
+        "text": "450°F = 230°C convencional → 210°C convección"
+      },
+      {
+        "text": "350°F = 175°C convencional → 155°C convección"
+      },
+      {
+        "text": "180°C convencional = 160°C convección"
+      },
+      {
+        "text": "Gas Mark 6 = 200°C horno de convección"
+      },
+      {
+        "text": "400°F = 200°C convencional → 180°C convección"
+      },
+      {
+        "text": "Gas Mark 2 = 150°C horno de convección"
+      },
+      {
+        "text": "425°F = 220°C convencional → 200°C convección"
+      }
+    ]
+  },
+  "calculator": {
+    "title": "Calculadora de Conversión Interactiva",
+    "temperatureLabel": "Temperatura",
+    "temperaturePlaceholder": "Ingresa la temperatura",
+    "fromLabel": "Desde",
+    "toLabel": "Hacia",
+    "convertButton": "Convertir",
+    "resultLabel": "Temperatura Convertida",
+    "resultDefault": "--",
+    "timeNote": "Recuerda: Al usar un horno de convección, también puedes necesitar <strong>reducir el tiempo de cocción en un 10-15%</strong>.",
+    "errorInvalidNumber": "Por favor ingresa un número válido",
+    "errorNotSupported": "Conversión no soportada",
+    "errorGasMarkRange": "Gas Mark debe estar entre 0.5 y 10 (solo números enteros)",
+    "errorTemperatureRange": "La temperatura está fuera de rango. Por favor ingresa una temperatura de horno válida.",
+    "options": {
+      "conventional": "Horno Convencional (°C)",
+      "conventionalF": "Horno Convencional (°F)",
+      "fan": "Horno de Convección (°C)",
+      "gas": "Gas Mark"
+    }
+  },
+  "navigation": {
+    "title": "Navegación Rápida",
+    "links": [
+      {
+        "text": "Tabla de Conversión °C",
+        "anchor": "#celsius-conversions"
+      },
+      {
+        "text": "Tabla de Conversión °F",
+        "anchor": "#fahrenheit-conversions"
+      },
+      {
+        "text": "Conversiones Gas Mark",
+        "anchor": "#gas-mark-conversions"
+      },
+      {
+        "text": "Guía por Tipo de Alimento",
+        "anchor": "#food-guide"
+      },
+      {
+        "text": "Consejos Profesionales",
+        "anchor": "#pro-tips"
+      },
+      {
+        "text": "Preguntas Frecuentes",
+        "anchor": "#faqs"
+      }
+    ]
+  },
+  "charts": {
+    "title": "Tablas de Conversión de Temperatura Completas",
+    "gasMark4Title": "¿Qué es Gas Mark 4 en un horno de convección?",
+    "gasMark4Text": "Gas Mark 4 equivale a <strong>180°C</strong> en un horno de convección. Esta temperatura es perfecta para hornear pasteles, galletas y asar verduras.",
+    "fahrenheit450Title": "Conversión de 450 fahrenheit a celsius en horno de convección",
+    "fahrenheit450Text": "450°F se convierte aproximadamente a <strong>230°C</strong> en un horno convencional. Para un horno de convección, reduce 20°C para obtener <strong>210°C</strong>.",
+    "conventional180Title": "Cómo convertir 180°C convencional a horno de convección",
+    "conventional180Text": "Para convertir 180°C de convencional a horno de convección, reduce la temperatura en 20°C. El equivalente en horno de convección es <strong>160°C</strong>.",
+    "gasMark6Title": "¿Qué es Gas Mark 6 en un horno de convección?",
+    "gasMark6Text": "Gas Mark 6 equivale a <strong>200°C</strong> en un horno de convección. Esta temperatura es perfecta para asar carnes y hornear pan.",
+    "fahrenheit350Title": "350 fahrenheit a celsius en horno de convección",
+    "fahrenheit350Text": "350°F se convierte aproximadamente a <strong>175°C</strong> en un horno convencional. Para un horno de convección, reduce 20°C para obtener <strong>155°C</strong>.",
+    "tabs": {
+      "celsius": "Conversiones °C",
+      "fahrenheit": "Conversiones °F",
+      "gasMark": "Gas Marks"
+    },
+    "tableHeaders": {
+      "conventionalC": "Horno Convencional (°C)",
+      "fanC": "Horno de Convección (°C)",
+      "conventionalF": "Horno Convencional (°F)",
+      "fanF": "Horno de Convección (°F)",
+      "gasMark": "Gas Mark",
+      "commonUses": "Usos Comunes",
+      "proTips": "Consejos Profesionales"
+    },
+    "download": {
+      "text": "Descargar Tabla Imprimible (PDF)"
+    }
+  },
+  "foodGuide": {
+    "title": "Guía de Conversión por Tipo de Alimento",
+    "breads": {
+      "title": "Panes y Pizza",
+      "items": [
+        {
+          "text": "Pan artesanal: 230°C convección (250°C convencional)"
+        },
+        {
+          "text": "Pizza: 220-240°C convección, hornear directamente en piedra"
+        },
+        {
+          "text": "Panes rápidos: Reduce el tiempo en 15%"
+        }
+      ],
+      "tip": "Consejo: La inyección de vapor ayuda al desarrollo de la corteza en hornos de convección"
+    },
+    "cakes": {
+      "title": "Pasteles y Masas",
+      "items": [
+        {
+          "text": "Bizcochos: 160°C convección, revisa 5 min antes"
+        },
+        {
+          "text": "Pasteles de mantequilla: 170°C convección, usa el estante medio"
+        },
+        {
+          "text": "Hojaldre: 200°C convección para máxima elevación"
+        }
+      ],
+      "tip": "Consejo: Reduce ligeramente el azúcar ya que los hornos de convección promueven el dorado"
+    },
+    "meats": {
+      "title": "Carnes y Asados",
+      "items": [
+        {
+          "text": "Pollo entero: 180°C convección, 20% menos tiempo"
+        },
+        {
+          "text": "Asado de res: 160°C convección para término medio"
+        },
+        {
+          "text": "Pescado: 150°C convección, observa cuidadosamente"
+        }
+      ],
+      "tip": "Consejo: Siempre usa un termómetro de carne para resultados perfectos"
+    }
+  },
+  "proTips": {
+    "title": "Consejos Profesionales de Horneado para Hornos de Convección",
+    "tips": [
+      {
+        "title": "1. El Termómetro de Horno es Esencial",
+        "text": "La mayoría de los hornos funcionan más calientes o más fríos. Para horneado preciso, coloca un termómetro de horno independiente en el centro de tu horno para verificar la temperatura real."
+      },
+      {
+        "title": "2. Ajusta los Tiempos de Horneado",
+        "text": "Como regla general, reduce los tiempos de horneado en un 10-15% cuando uses el modo de convección. Comienza a revisar si está listo antes de lo que sugiere la receta."
+      },
+      {
+        "title": "3. La Posición del Estante Importa",
+        "text": "El estante medio funciona mejor para la mayoría del horneado. Para múltiples estantes, rota las bandejas a la mitad del horneado para resultados uniformes."
+      },
+      {
+        "title": "4. Evita el Hacinamiento",
+        "text": "Los hornos de convección necesitan buena circulación de aire. Deja al menos 2 pulgadas entre las bandejas y evita cubrir los estantes del horno con papel de aluminio."
+      },
+      {
+        "title": "5. Control de Humedad",
+        "text": "Los hornos de convección pueden secar los alimentos más rápido. Para pasteles húmedos, coloca una bandeja con agua en el fondo del horno durante el horneado."
+      },
+      {
+        "title": "6. Ajustes de Gran Altitud",
+        "text": "En elevaciones superiores a 900m (3000 pies), puedes necesitar reducciones adicionales de temperatura de 5-10°C en hornos de convección."
+      }
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes sobre Conversión de Horno de Convección",
+    "items": [
+      {
+        "question": "¿Por qué los hornos de convección necesitan temperaturas más bajas?",
+        "answer": "Los hornos de convección hacen circular aire caliente continuamente, creando una transferencia de calor más eficiente a tu comida. La reducción de 20°C compensa esta mayor eficiencia, evitando sobrecocción o quemado."
+      },
+      {
+        "question": "¿Cómo sé si mi horno de convección funciona más caliente o más frío?",
+        "answer": "Coloca un termómetro de horno en el centro de tu horno. Configura a 180°C convección y deja precalentar durante 20 minutos. Revisa la lectura del termómetro a través de la ventana. Si es más de 10°C diferente, puedes necesitar ajustar tu configuración."
+      },
+      {
+        "question": "¿Debo reducir tanto la temperatura como el tiempo?",
+        "answer": "Sí, para la mayoría de las recetas debes reducir la temperatura en 20°C (de convencional a convección) y reducir el tiempo en un 10-15% (comienza a revisar temprano)."
+      },
+      {
+        "question": "¿Todos los hornos de convección son iguales?",
+        "answer": "Aunque la regla de 20°C funciona para la mayoría de los hornos de convección, puede haber variaciones. Los hornos de convección estándar típicamente necesitan un ajuste de -20°C, mientras que los hornos multifunción/combi pueden necesitar ajustes de -10 a -30°C."
+      },
+      {
+        "question": "¿Qué es 425°F en un horno de convección?",
+        "answer": "425°F se convierte aproximadamente a 220°C en un horno convencional. Para un horno de convección, reduce 20°C para obtener 200°C."
+      },
+      {
+        "question": "¿Cómo convertir Gas Mark a horno de convección?",
+        "answer": "Usa nuestra tabla de conversión arriba. Generalmente, Gas Mark 4 = 180°C convección, Gas Mark 6 = 200°C convección, y Gas Mark 2 = 150°C convección."
+      }
+    ],
+    "accordion": [
+      {
+        "question": "¿Por qué los hornos de convección necesitan temperaturas más bajas?",
+        "answer": "Los hornos de convección hacen circular aire caliente continuamente, creando una transferencia de calor más eficiente a tu comida. Esto significa:",
+        "points": [
+          "El calor llega a todas las superficies de la comida de manera más uniforme",
+          "No hay puntos fríos en la cavidad del horno",
+          "Tiempos de cocción más rápidos en general"
+        ],
+        "conclusion": "La reducción de 20°C compensa esta mayor eficiencia, evitando sobrecocción o quemado."
+      },
+      {
+        "question": "¿Cómo sé si mi horno de convección funciona más caliente o más frío?",
+        "answer": "Sigue esta prueba simple:",
+        "steps": [
+          "Coloca un termómetro de horno en el centro de tu horno",
+          "Configura a 180°C convección y deja precalentar durante 20 minutos",
+          "Revisa la lectura del termómetro a través de la ventana"
+        ],
+        "conclusion": "Si es más de 10°C diferente de la temperatura configurada, puedes necesitar ajustar tu configuración o calibrar tu horno."
+      },
+      {
+        "question": "¿Debo reducir tanto la temperatura como el tiempo?",
+        "answer": "Sí, para la mayoría de las recetas debes:",
+        "points": [
+          "Reducir la temperatura en 20°C (de convencional a convección)",
+          "Reducir el tiempo en un 10-15% (comienza a revisar temprano)"
+        ],
+        "conclusion": "Sin embargo, algunos artículos delicados como soufflés o natillas pueden necesitar solo ajuste de temperatura. La experiencia te ayudará a juzgar mejor."
+      },
+      {
+        "question": "¿Todos los hornos de convección son iguales?",
+        "answer": "Aunque la regla de 20°C funciona para la mayoría de los hornos de convección, puede haber variaciones:",
+        "table": {
+          "headers": [
+            "Tipo de Horno",
+            "Ajuste Típico"
+          ],
+          "rows": [
+            [
+              "Horno de convección estándar",
+              "-20°C"
+            ],
+            [
+              "Hornos multifunción/combi",
+              "-10 a -30°C (consulta el manual)"
+            ],
+            [
+              "Hornos de convección profesionales",
+              "-25 a -30°C"
+            ]
+          ]
+        },
+        "conclusion": "Siempre consulta el manual de tu horno para recomendaciones específicas."
+      }
+    ]
+  },
+  "editorialNote": {
+    "title": "Nota editorial",
+    "content": "Nuestras tablas de conversión de temperatura del horno están calibradas meticulosamente por <strong>profesionales culinarios</strong> y <strong>expertos en seguridad alimentaria</strong>. Cruzamos las pautas del <strong>USDA (Departamento de Agricultura de los EE. UU.)</strong> para temperaturas de cocción seguras y <strong>NIST</strong> para estándares de medición térmica para garantizar que sus resultados de horneado sean consistentes, profesionales y seguros."
+  },
+  "structuredData": {
+    "howTo": {
+      "name": "Cómo Convertir Temperaturas de Horno para Hornos de Convección",
+      "description": "Guía completa para ajustar temperaturas de horneado para hornos de convección",
+      "totalTime": "PT5M",
+      "supplies": [
+        "Termómetro de horno",
+        "Receta de horneado"
+      ],
+      "steps": [
+        {
+          "name": "Determinar temperatura original",
+          "text": "Identifica el tipo de horno original de tu receta (convencional, convección o Gas Mark)"
+        },
+        {
+          "name": "Ajustar temperatura",
+          "text": "Reduce las temperaturas del horno convencional en 20°C (40°F) para hornos de convección"
+        },
+        {
+          "name": "Ajustar tiempo",
+          "text": "Reduce el tiempo de cocción en un 10-15% para la mayoría de las recetas"
+        },
+        {
+          "name": "Consultar tablas",
+          "text": "Usa nuestras tablas detalladas para tipos específicos de alimentos y conversiones internacionales"
+        }
+      ]
+    },
+    "breadcrumb": {
+      "items": [
+        {
+          "name": "Inicio",
+          "url": "https://ctofconverter.com"
+        },
+        {
+          "name": "Conversión Horno de Convección",
+          "url": "https://ctofconverter.com/fan-oven-conversion-chart"
+        }
+      ]
+    }
+  }
+}

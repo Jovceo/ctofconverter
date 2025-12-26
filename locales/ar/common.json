@@ -1,10 +1,25 @@
 {
+    "meta": {
+        "defaultTitle": "من مئوية إلى فهرنهايت | محول °C إلى °F",
+        "defaultDescription": "حول من درجة مئوية إلى فهرنهايت بسرعة باستخدام محول C to F. احصل على النتائج فوراً، وتعرف على الصيغة، وتحقق من جدول التحويل.",
+        "ogTitle": "محول مئوية إلى فهرنهايت",
+        "ogDescription": "حاسبة درجة حرارة مجانية عبر الإنترنت لتحويلات فورية. تحويل درجات الحرارة من مئوية إلى فهرنهايت بدقة مع شرح الخطوات.",
+        "twitterTitle": "محول مئوية إلى فهرنهايت",
+        "twitterDescription": "أداة مجانية لتحويل درجات الحرارة من مئوية إلى فهرنهايت فوراً.",
+        "author": "فريق Ctofconverter",
+        "keywords": "من مئوية إلى فهرنهايت, محول درجة الحرارة, صيغة التحويل من مئوية إلى فهرنهايت, تحويل الحرارة"
+    },
     "nav": {
+        "home": "الرئيسية",
         "celsiusToFahrenheit": "من مئوية إلى فهرنهايت",
         "fahrenheitToCelsius": "من فهرنهايت إلى مئوية",
         "calculator": "حاسبة C إلى F",
         "to": "إلى",
-        "selectLanguage": "اختر اللغة"
+        "selectLanguage": "اختر اللغة",
+        "logoText": "محول السيلسيوس إلى الفهرنهايت",
+        "toggleMenu": "تبديل قائمة التنقل",
+        "languageSelector": "محدد اللغة",
+        "seoLinkText": "{celsius} درجة مئوية كم تساوي فهرنهايت؟ ({fahrenheit}°F)"
     },
     "breadcrumb": {
         "home": "الرئيسية"
@@ -15,15 +30,23 @@
         "quickLinks": "روابط سريعة",
         "conversions": "تحويلات شائعة",
         "legal": "قانوني",
+        "navigationHeading": "التنقل",
+        "chartHeading": "المخططات",
+        "legalHeading": "قانوني",
         "links": {
             "celsiusToFahrenheit": "من مئوية إلى فهرنهايت",
             "fahrenheitToCelsius": "من فهرنهايت إلى مئوية",
+            "celsiusToFahrenheitChart": "جدول تحويل مئوية إلى فهرنهايت",
+            "fanOvenChart": "جدول تحويل درجة حرارة الفرن المروحي",
+            "bodyTemperatureGuide": "جدول درجة حرارة الجسم ودليل الحمى",
+            "feverChart": "جدول درجة حرارة الحمى",
             "privacyPolicy": "سياسة الخصوصية",
             "termsOfService": "شروط الخدمة",
             "aboutUs": "اتصل بنا"
         },
         "copyright": "© {year} Ctofconverter. جميع الحقوق محفوظة.",
         "lastUpdated": "آخر تحديث:",
-        "backToTop": "العودة للأعلى"
+        "backToTop": "العودة للأعلى",
+        "footerNavigation": "تنقل التذييل"
     }
 }

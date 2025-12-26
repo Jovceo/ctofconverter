@@ -21,7 +21,7 @@ import {
 
 import { ContentStrategy } from '../utils/contentStrategy';
 import { textSpinner } from '../utils/textSpinner';
-import { useTranslation } from '../utils/i18n';
+import { useTranslation, getLocalizedLink } from '../utils/i18n';
 
 /**
  * 翻译函数类型
@@ -214,6 +214,43 @@ const PracticalApplications: React.FC<{
 PracticalApplications.displayName = 'PracticalApplications';
 
 /**
+ * Editorial Note for EEAT
+ */
+const EditorialNote: React.FC<{ t: TFunction }> = ({ t }) => {
+  return (
+    <section className="editorial-note" style={{
+      marginTop: '40px',
+      padding: '25px',
+      backgroundColor: '#f8fafc',
+      borderRadius: '12px',
+      border: '1px solid #e2e8f0',
+      fontSize: '0.95rem',
+      lineHeight: '1.6',
+      color: '#475569'
+    }}>
+      <h4 style={{
+        margin: '0 0 10px 0',
+        color: '#1e293b',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '8px',
+        fontSize: '1.1rem'
+      }}>
+        <span style={{ fontSize: '1.2rem' }}>🛡️</span> {t('editorial.title')}
+      </h4>
+      <p style={{ margin: 0 }}>
+        {t('editorial.note')}
+      </p>
+      <p style={{ marginTop: '10px', fontSize: '0.85em', opacity: 0.8 }}>
+        {t('editorial.sources')}
+      </p>
+    </section>
+  );
+};
+
+EditorialNote.displayName = 'EditorialNote';
+
+/**
  * 详细转换公式和计算组件
  */
 const DetailedConversionGuide: React.FC<{
@@ -235,15 +272,15 @@ const DetailedConversionGuide: React.FC<{
       <div className="calculation-steps">
         <h4>{t('common.stepTitle')}</h4>
         <ol>
-          <li><strong>Step 1:</strong> <span dangerouslySetInnerHTML={{ __html: step1Text }} /> <br /> <em>Calculation:</em> {celsius} × 1.8 = {formatTemperature(step1)}</li>
-          <li><strong>Step 2:</strong> <span dangerouslySetInnerHTML={{ __html: step2Text }} /> <br /> <em>Calculation:</em> {formatTemperature(step1)} + 32 = {formatTemperature(fahrenheit)}</li>
-          <li><strong>Result:</strong> <span dangerouslySetInnerHTML={{ __html: conclusionText }} /></li>
+          <li><strong>{t('common.step1')}:</strong> <span dangerouslySetInnerHTML={{ __html: step1Text }} /> <br /> <em>{t('common.calculation')}:</em> {celsius} × 1.8 = {formatTemperature(step1)}</li>
+          <li><strong>{t('common.step2')}:</strong> <span dangerouslySetInnerHTML={{ __html: step2Text }} /> <br /> <em>{t('common.calculation')}:</em> {formatTemperature(step1)} + 32 = {formatTemperature(fahrenheit)}</li>
+          <li><strong>{t('common.result')}:</strong> <span dangerouslySetInnerHTML={{ __html: conclusionText }} /></li>
         </ol>
       </div>
 
       <Image
         src={`/images/equation/${celsius}-celsius-to-fahrenheit-conversion.png`}
-        alt={`${celsius}°C to Fahrenheit Conversion Formula`}
+        alt={t('common.headerTitle', { celsius, fahrenheit: formatTemperature(fahrenheit) })}
         className="conversion-equation-image"
         width={1200}
         height={630}
@@ -356,7 +393,7 @@ const EnhancedConverter: React.FC<{ t: TFunction; initialCelsius?: number }> = R
       <div className="input-group">
         <div className="input-header">
           <label htmlFor="celsius-input">{t('common.celsiusLabel')}</label>
-          <button className="info-btn" title="Water freezes at 0°C and boils at 100°C">ℹ️</button>
+          <button className="info-btn" title={t('common.freezingTooltip')}>ℹ️</button>
         </div>
         <input
           id="celsius-input" type="number" value={celsius} onChange={handleCelsiusChange}
@@ -367,7 +404,7 @@ const EnhancedConverter: React.FC<{ t: TFunction; initialCelsius?: number }> = R
       <div className="result-container" role="region" aria-live="polite">
         <div className="result-header">
           <label>{t('common.fahrenheitLabel')}</label>
-          <button className="info-btn" title="Water freezes at 32°F and boils at 212°F">ℹ️</button>
+          <button className="info-btn" title={t('common.fahrenheitTooltip')}>ℹ️</button>
         </div>
         <output id="conversion-result" className="result-value" style={{ display: 'block', fontSize: '2.5rem', fontWeight: 'bold', margin: '15px 0', minHeight: '60px', color: fahrenheit ? '#2c3e50' : '#bdc3c7' }}>
           {fahrenheit ? fahrenheit : '--'}
@@ -388,7 +425,8 @@ EnhancedConverter.displayName = 'EnhancedConverter';
 const ConversionTable: React.FC<{
   celsius: number;
   t: TFunction;
-}> = React.memo(({ celsius, t }) => {
+  locale: string;
+}> = React.memo(({ celsius, t, locale }) => {
   const tableData = useMemo(() => {
     const data = [];
     const start = Math.max(-10, Math.floor(celsius / 10) * 10 - 10);
@@ -430,7 +468,7 @@ const ConversionTable: React.FC<{
               return (
                 <tr
                   key={index}
-                  onClick={() => { if (typeof window !== 'undefined') window.location.href = `/${row.celsius}-c-to-f`; }}
+                  onClick={() => { if (typeof window !== 'undefined') window.location.href = getLocalizedLink(`/${row.celsius}-c-to-f`, locale); }}
                   style={{ cursor: 'pointer' }}
                   className="linkable-row"
                 >
@@ -456,7 +494,8 @@ const RelatedTemperatures: React.FC<{
   celsius: number;
   extraConversions?: ConversionItem[];
   t: TFunction;
-}> = React.memo(({ celsius, extraConversions = [], t }) => {
+  locale: string;
+}> = React.memo(({ celsius, extraConversions = [], t, locale }) => {
   const relatedItems = useMemo(() => {
     const val = celsius;
 
@@ -478,22 +517,22 @@ const RelatedTemperatures: React.FC<{
     // Formula-based conversions (always show, link only if page exists)
     const formulaItems: ConversionItem[] = [
       {
-        title: `${val} Fahrenheit to Celsius`,
+        title: t('common.fToC'),
         equation: `${val}°F = ${formatTemperature(fToC)}°C`,
         url: undefined // No internal link by default
       },
       {
-        title: `${val} Celsius to Kelvin`,
+        title: t('common.cToK'),
         equation: `${val}°C = ${formatTemperature(cToK)}K`,
         url: undefined
       },
       {
-        title: `${val} Kelvin to Celsius`,
+        title: t('common.kToC'),
         equation: `${val}K = ${formatTemperature(kToC)}°C`,
         url: undefined
       },
       {
-        title: `Minus ${val} Celsius to Fahrenheit`,
+        title: t('common.minusCToF'),
         equation: `${minusC}°C = ${formatTemperature(minusCToF)}°F`,
         url: undefined
       }
@@ -511,9 +550,9 @@ const RelatedTemperatures: React.FC<{
     // Return all items with href mapped from url
     return allItems.map(item => ({
       ...item,
-      href: item.url
+      href: item.url ? getLocalizedLink(item.url, locale) : undefined
     }));
-  }, [celsius, extraConversions]);
+  }, [celsius, extraConversions, locale]);
 
   return (
     <section className="related-conversions">
@@ -559,7 +598,7 @@ const HealthAlert: React.FC<{ celsius: number; t: TFunction }> = ({ celsius, t }
         <div style={{ margin: 0 }}>
           <span dangerouslySetInnerHTML={{ __html: message }} /> {t('common.healthContextFooter')}
           <p style={{ marginTop: '10px', fontSize: '0.85em', color: '#666', fontStyle: 'italic' }}>
-            * This information is for general reference only and is not medical advice.
+            {t('common.medicalAdviceNote')}
           </p>
         </div>
       </div>
@@ -618,6 +657,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   const { t: tTemplate, locale } = useTranslation('template');
   const { t: tPage } = useTranslation(customNamespace);
 
+  // 🟢 Enhanced Translation: Check page-specific namespace first, then fallback to template
   const t: TFunction = useMemo(() => (key: string, repl?: Record<string, string | number>) => {
     if (customNamespace) {
       const res = tPage(key, repl);
@@ -628,7 +668,9 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
 
   // 1. First: Calculate dates
   const { displayDate, isoDate } = useMemo(() => {
-    const date = lastUpdated ? new Date(lastUpdated) : new Date();
+    // 只有在明确传入 lastUpdated 时才使用它，否则使用默认的基准日期
+    const dateSource = lastUpdated ? new Date(lastUpdated) : new Date('2025-09-15');
+    const date = dateSource;
     return {
       displayDate: date.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' }),
       isoDate: date.toISOString().split('T')[0]
@@ -674,8 +716,8 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
           '@type': 'Article',
           headline: pageTitle,
           image: `${new URL(url).origin}/images/equation/c-to-f-conversion.png`,
-          author: { '@type': 'Organization', name: 'C to F Converter Team' },
-          publisher: { '@type': 'Organization', name: 'C to F Converter', logo: { '@type': 'ImageObject', url: `${new URL(url).origin}/logo.png` } },
+          author: { '@type': 'Organization', name: t('meta.author') },
+          publisher: { '@type': 'Organization', name: t('common.logoText'), logo: { '@type': 'ImageObject', url: `${new URL(url).origin}/logo.png` } },
 
           dateModified: isoDate,
           description: metaDescription,
@@ -691,14 +733,23 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   const siteOrigin = useMemo(() => new URL(pageUrl).origin, [pageUrl]);
 
   return (
-    <Layout>
+    <Layout seo={{
+      title: pageTitle,
+      description: metaDescription,
+      canonical: pageUrl,
+      ogTitle: pageTitle,
+      ogDescription: ogDescription,
+      ogUrl: pageUrl,
+      ogType: 'article',
+      ogImage: `${siteOrigin}/images/equation/c-to-f-conversion.png`,
+      twitterCard: 'summary_large_image',
+      twitterTitle: pageTitle,
+      twitterDescription: ogDescription,
+      twitterImage: `${siteOrigin}/images/equation/c-to-f-conversion.png`
+    }}>
       <Head>
-        <title key="title">{pageTitle}</title>
-        <meta key="description" name="description" content={metaDescription} />
-        <link key="canonical" rel="canonical" href={pageUrl} />
-
         {/* Multilingual SEO: hreflang tags */}
-        <link key="alternate-default" rel="alternate" hrefLang="x-default" href={generatePageUrl(celsius, 'en')} />
+        <link rel="alternate" hrefLang="x-default" href={generatePageUrl(celsius, 'en')} />
         {['en', 'zh', 'es', 'hi', 'ar', 'ja', 'fr', 'de', 'id', 'pt-br'].map(l => (
           <link
             key={`alternate-${l}`}
@@ -707,17 +758,6 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
             href={generatePageUrl(celsius, l)}
           />
         ))}
-
-        <meta key="og:title" property="og:title" content={pageTitle} />
-        <meta key="og:description" property="og:description" content={ogDescription} />
-        <meta key="og:url" property="og:url" content={pageUrl} />
-        <meta key="og:type" property="og:type" content="article" />
-        <meta key="og:image" property="og:image" content={`${siteOrigin}/images/equation/c-to-f-conversion.png`} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta key="twitter:title" name="twitter:title" content={pageTitle} />
-        <meta key="twitter:description" name="twitter:description" content={ogDescription} />
-        <meta name="twitter:image" content={`${siteOrigin}/images/equation/c-to-f-conversion.png`} />
-
 
         {/* 🟢 Schema: Article + FAQ (No HowTo) */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.article) }} />
@@ -729,13 +769,12 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
           <div className="container">
             <div className="site-logo">
               <Link href="/">
-                <span aria-hidden="true">C to F Converter</span>
-                <span className="sr-only">Celsius to Fahrenheit Converter</span>
+                <span aria-hidden="true">{t('common.logoText')}</span>
+                <span className="sr-only">{t('common.logoText')}</span>
               </Link>
             </div>
-            <h1>{customTitle || `Convert ${celsius} Degrees Celsius to Fahrenheit (${formattedFahrenheit}°F)`}</h1>
+            <h1>{customTitle || t('common.headerTitle', { celsius, fahrenheit: formattedFahrenheit })}</h1>
             <div className="tagline" style={{ marginBottom: '1.5rem', color: '#666' }} dangerouslySetInnerHTML={{ __html: customDescription || strategy.text.intro || t('meta.ogDescription', { celsius, fahrenheit: formattedFahrenheit }) }} />
-            <p className="last-updated">{t('common.lastUpdated')} <time dateTime={isoDate} suppressHydrationWarning>{displayDate}</time></p>
           </div>
         </header>
 
@@ -752,17 +791,21 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
           <div className="temperature-content-grid">
             <section className="converter-tool" style={{ marginBottom: '30px' }}>
               <h2 id="conversion-title" style={{ marginBottom: '20px', fontSize: '1.5rem', fontWeight: 600 }}>
-                {customResultHeader || 'Celsius to Fahrenheit Converter'}
+                {customResultHeader || t('common.resultHeaderDefault')}
               </h2>
 
               {/* 🟢 SEO: Natural language intro paragraph for indexability */}
               <p className="intro-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '20px', color: '#333' }}>
-                <strong>{celsius} degrees Celsius</strong> equals <strong>{formattedFahrenheit} degrees Fahrenheit</strong>.
-                This temperature conversion is commonly used in
-                {celsius >= 35 && celsius <= 42 ? <span> <Link href="/body-temperature-chart-fever-guide/">body temperature measurements</Link> and medical diagnostics. Check our <Link href="/fever-temperature-chart/">fever temperature chart</Link> for more details.</span> :
-                  celsius >= 0 && celsius <= 30 ? <span> weather forecasts and daily temperature readings. See our complete <Link href="/celsius-to-fahrenheit-chart/">Celsius to Fahrenheit chart</Link> for quick reference.</span> :
-                    celsius >= 100 && celsius <= 250 ? <span> <Link href="/fan-oven-conversion-chart/">cooking, baking, and oven temperature settings</Link>. Use our <Link href="/fan-oven-conversion-chart/">fan oven conversion chart</Link> for precise baking.</span> :
-                      <span> scientific and industrial applications. Explore our <Link href="/celsius-to-fahrenheit-chart/">comprehensive temperature conversion chart</Link> for more conversions.</span>}
+                <span dangerouslySetInnerHTML={{ __html: t('common.introValue', { celsius, fahrenheit: formattedFahrenheit }) + " " + t('common.introConnect') }} />
+                {celsius >= 35 && celsius <= 42 ? (
+                  <span> <Link href={getLocalizedLink('/body-temperature-chart-fever-guide/', locale)}>{t('common.linkBodyTemp')}</Link>{t('common.introMedicalPart2')}<Link href={getLocalizedLink('/fever-temperature-chart/', locale)}>{t('common.linkFeverChart')}</Link>{t('common.introMedicalPart3')}</span>
+                ) : celsius >= 0 && celsius <= 30 ? (
+                  <span> {t('common.introWeatherPart1')}<Link href={getLocalizedLink('/celsius-to-fahrenheit-chart/', locale)}>{t('common.linkCtoFChart')}</Link>{t('common.introWeatherPart3')}</span>
+                ) : celsius >= 100 && celsius <= 250 ? (
+                  <span> <Link href={getLocalizedLink('/fan-oven-conversion-chart', locale)}>{t('common.linkCooking')}</Link>{t('common.introCookingPart2')}<Link href={getLocalizedLink('/fan-oven-conversion-chart', locale)}>{t('common.linkOvenChart')}</Link>{t('common.introCookingPart3')}</span>
+                ) : (
+                  <span> {t('common.introGeneralPart1')}<Link href={getLocalizedLink('/celsius-to-fahrenheit-chart/', locale)}>{t('common.linkGeneral')}</Link>{t('common.introGeneralPart3')}</span>
+                )}
               </p>
 
               <EnhancedConverter initialCelsius={celsius} t={t} />
@@ -779,11 +822,13 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
 
             {strategy.modules.showPracticalApps !== false && <PracticalApplications celsius={celsius} fahrenheit={fahrenheit} t={t} />}
 
-            {strategy.modules.showOvenGuide && <ConversionTable celsius={celsius} t={t} />}
+            {strategy.modules.showOvenGuide && <ConversionTable celsius={celsius} t={t} locale={locale} />}
 
             <EnhancedFAQ celsius={celsius} fahrenheit={fahrenheit} temperatureContext={temperatureContext} customFaqs={strategy.faqs} t={t} />
 
-            <RelatedTemperatures celsius={celsius} extraConversions={extraConversions} t={t} />
+            <EditorialNote t={t} />
+
+            <RelatedTemperatures celsius={celsius} extraConversions={extraConversions} t={t} locale={locale} />
           </div>
         </main>
         <Footer lastUpdated={isoDate} />

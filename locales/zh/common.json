@@ -6,7 +6,8 @@
     "ogDescription": "免费在线温度换算工具，精确转换摄氏度（°C）和华氏度（°F），并提供详细步骤。",
     "twitterTitle": "摄氏度转华氏度转换器",
     "twitterDescription": "免费在线温度换算工具，快速完成 °C 与 °F 的转换。",
-    "author": "Ctofconverter 团队"
+    "author": "Ctofconverter 团队",
+    "keywords": "摄氏度转华氏度, 温度换算, 4c转f, 4摄氏度等于多少华氏度"
   },
   "nav": {
     "home": "首页",
@@ -14,6 +15,9 @@
     "fahrenheitToCelsius": "华氏度转摄氏度",
     "calculator": "C转F计算器",
     "selectLanguage": "选择语言",
+    "logoText": "摄氏度转华氏度转换器",
+    "toggleMenu": "切换导航菜单",
+    "languageSelector": "语言选择器",
     "seoLinkText": "{celsius} 摄氏度等于多少华氏度？({fahrenheit}°F)"
   },
   "breadcrumb": {
@@ -109,6 +113,7 @@
     },
     "copyright": "© {year} Ctofconverter。保留所有权利。",
     "lastUpdated": "最后更新：",
-    "backToTop": "返回顶部"
+    "backToTop": "返回顶部",
+    "footerNavigation": "页脚导航"
   }
 }

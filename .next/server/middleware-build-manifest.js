@@ -9,15 +9,15 @@ self.__BUILD_MANIFEST = {
   "lowPriorityFiles": [],
   "rootMainFiles": [],
   "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
     "/47-c-to-f": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/47-c-to-f.js"
-    ],
-    "/75-c-to-f": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/75-c-to-f.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
@@ -28,6 +28,11 @@ self.__BUILD_MANIFEST = {
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
+    ],
+    "/fan-oven-conversion-chart": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/fan-oven-conversion-chart.js"
     ]
   },
   "ampFirstPages": []
