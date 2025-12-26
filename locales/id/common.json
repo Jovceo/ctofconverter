@@ -6,14 +6,20 @@
     "ogDescription": "Kalkulator suhu gratis untuk mengonversi °C ke °F secara akurat dengan langkah terperinci.",
     "twitterTitle": "Konverter Celsius ke Fahrenheit",
     "twitterDescription": "Alat gratis untuk mengubah suhu °C menjadi °F secara instan.",
-    "author": "Tim Ctofconverter"
+    "author": "Tim Ctofconverter",
+    "keywords": "celsius ke fahrenheit, konverter suhu, rumus celsius ke fahrenheit, konversi suhu"
   },
   "nav": {
     "home": "Beranda",
     "celsiusToFahrenheit": "Celsius ke Fahrenheit",
     "fahrenheitToCelsius": "Fahrenheit ke Celsius",
     "calculator": "Kalkulator C ke F",
-    "selectLanguage": "Pilih bahasa"
+    "to": "ke",
+    "selectLanguage": "Pilih bahasa",
+    "logoText": "Konverter Celsius ke Fahrenheit",
+    "toggleMenu": "Beralih menu navigasi",
+    "languageSelector": "Pemilih bahasa",
+    "seoLinkText": "{celsius} Celsius ke Fahrenheit ({fahrenheit}°F)"
   },
   "breadcrumb": {
     "home": "Beranda"
@@ -108,7 +114,7 @@
     },
     "copyright": "© {year} Ctofconverter. Hak cipta dilindungi.",
     "lastUpdated": "Terakhir diperbarui:",
-    "backToTop": "Kembali ke atas"
+    "backToTop": "Kembali ke atas",
+    "footerNavigation": "Navigasi footer"
   }
 }
-

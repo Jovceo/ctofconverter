@@ -62,51 +62,82 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
   en: {
     '47-c-to-f': require('../locales/en/47-c-to-f.json'),
     '75-c-to-f': require('../locales/en/75-c-to-f.json'),
+    '4-c-to-f': require('../locales/en/4-c-to-f.json'),
     home: require('../locales/en/home.json'),
     template: require('../locales/en/template.json'),
+    'fan-oven-conversion-chart': require('../locales/en/fan-oven-conversion-chart.json'),
   },
   zh: {
     '47-c-to-f': require('../locales/zh/47-c-to-f.json'),
+    '75-c-to-f': require('../locales/zh/75-c-to-f.json'),
+    '4-c-to-f': require('../locales/zh/4-c-to-f.json'),
     home: require('../locales/zh/home.json'),
-    template: require('../locales/en/template.json'), // Fallback to EN for now
+    template: require('../locales/zh/template.json'),
+    'fan-oven-conversion-chart': require('../locales/zh/fan-oven-conversion-chart.json'),
   },
   es: {
     '47-c-to-f': require('../locales/es/47-c-to-f.json'),
+    '75-c-to-f': require('../locales/es/75-c-to-f.json'),
+    '4-c-to-f': require('../locales/es/4-c-to-f.json'),
     home: require('../locales/es/home.json'),
-    template: require('../locales/en/template.json'), // Fallback
+    template: require('../locales/es/template.json'),
+    'fan-oven-conversion-chart': require('../locales/es/fan-oven-conversion-chart.json'),
   },
   hi: {
     '47-c-to-f': require('../locales/hi/47-c-to-f.json'),
+    '75-c-to-f': require('../locales/hi/75-c-to-f.json'),
+    '4-c-to-f': require('../locales/hi/4-c-to-f.json'),
     home: require('../locales/hi/home.json'),
-    template: require('../locales/en/template.json'), // Fallback
+    template: require('../locales/hi/template.json'),
+    'fan-oven-conversion-chart': require('../locales/hi/fan-oven-conversion-chart.json'),
   },
   ar: {
+    '47-c-to-f': require('../locales/ar/47-c-to-f.json'),
+    '75-c-to-f': require('../locales/ar/75-c-to-f.json'),
+    '4-c-to-f': require('../locales/ar/4-c-to-f.json'),
     home: require('../locales/ar/home.json'),
-    template: require('../locales/en/template.json'), // Fallback
+    template: require('../locales/ar/template.json'),
+    'fan-oven-conversion-chart': require('../locales/ar/fan-oven-conversion-chart.json'),
   },
   ja: {
+    '47-c-to-f': require('../locales/ja/47-c-to-f.json'),
+    '75-c-to-f': require('../locales/ja/75-c-to-f.json'),
+    '4-c-to-f': require('../locales/ja/4-c-to-f.json'),
     home: require('../locales/ja/home.json'),
-    template: require('../locales/en/template.json'), // Fallback
+    template: require('../locales/ja/template.json'),
+    'fan-oven-conversion-chart': require('../locales/ja/fan-oven-conversion-chart.json'),
   },
   id: {
     '47-c-to-f': require('../locales/id/47-c-to-f.json'),
+    '75-c-to-f': require('../locales/id/75-c-to-f.json'),
+    '4-c-to-f': require('../locales/id/4-c-to-f.json'),
     home: require('../locales/id/home.json'),
-    template: require('../locales/en/template.json'), // Fallback
+    template: require('../locales/id/template.json'),
+    'fan-oven-conversion-chart': require('../locales/id/fan-oven-conversion-chart.json'),
   },
   'pt-br': {
     '47-c-to-f': require('../locales/pt-br/47-c-to-f.json'),
+    '75-c-to-f': require('../locales/pt-br/75-c-to-f.json'),
+    '4-c-to-f': require('../locales/pt-br/4-c-to-f.json'),
     home: require('../locales/pt-br/home.json'),
-    template: require('../locales/en/template.json'), // Fallback
+    template: require('../locales/pt-br/template.json'),
+    'fan-oven-conversion-chart': require('../locales/pt-br/fan-oven-conversion-chart.json'),
   },
   fr: {
     '47-c-to-f': require('../locales/fr/47-c-to-f.json'),
+    '75-c-to-f': require('../locales/fr/75-c-to-f.json'),
+    '4-c-to-f': require('../locales/fr/4-c-to-f.json'),
     home: require('../locales/fr/home.json'),
     template: require('../locales/fr/template.json'),
+    'fan-oven-conversion-chart': require('../locales/fr/fan-oven-conversion-chart.json'),
   },
   de: {
     '47-c-to-f': require('../locales/de/47-c-to-f.json'),
+    '75-c-to-f': require('../locales/de/75-c-to-f.json'),
+    '4-c-to-f': require('../locales/de/4-c-to-f.json'),
     home: require('../locales/de/home.json'),
-    template: require('../locales/en/template.json'), // Fallback
+    template: require('../locales/de/template.json'),
+    'fan-oven-conversion-chart': require('../locales/de/fan-oven-conversion-chart.json'),
   },
 };
 
@@ -242,6 +273,14 @@ export function useTranslation(page?: string) {
   const router = useRouter();
   const { locale = 'en' } = router;
   return createTranslation(locale as string, page);
+}
+
+export function getLocalizedLink(path: string, locale: string): string {
+  if (locale === DEFAULT_LOCALE) {
+    return path.startsWith('/') ? path : `/${path}`;
+  }
+  const cleanPath = path.startsWith('/') ? path.substring(1) : path;
+  return `/${locale}/${cleanPath}`;
 }
 
 export function getDisplayLocale(locale: string): string {

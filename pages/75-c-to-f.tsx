@@ -29,11 +29,28 @@ interface PageTranslation {
     page?: {
         title?: string;
         description?: string;
+        intro?: string;
         resultText?: string;
     };
 }
 
-export default function Temperature75C() {
+import { getLatestModifiedDate } from '../utils/dateHelpers';
+import { GetStaticProps } from 'next';
+
+export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
+    const lastUpdatedIso = getLatestModifiedDate([
+        'pages/75-c-to-f.tsx',
+        `locales/${locale}/75-c-to-f.json`
+    ]);
+
+    return {
+        props: {
+            lastUpdatedIso
+        }
+    };
+};
+
+export default function Temperature75C({ lastUpdatedIso }: { lastUpdatedIso: string }) {
     const celsius = 75;
     const fahrenheit = celsiusToFahrenheit(celsius);
     const { locale, pageTranslation } = useTranslation('75-c-to-f');
@@ -100,6 +117,9 @@ export default function Temperature75C() {
         s.modules.showConversionGuide = false; // 隐藏默认公式说明，保持简洁
         s.modules.showPracticalApps = false; // 已在 insights 中包含特定应用场景
 
+        // 🟢 SEO Optimization: Use localized unique text
+        s.text.intro = replace(pageT.page?.intro || '');
+
         return s;
     }, [celsius, pageT, replacements]);
 
@@ -110,7 +130,7 @@ export default function Temperature75C() {
             celsius={celsius}
             strategy={strategy}
             customNamespace="75-c-to-f"
-            lastUpdated="2025-12-19"
+            lastUpdated={lastUpdatedIso}
             canonicalUrl={canonicalUrl}
             customTitle={replacePlaceholders(pageT.page?.title || '', replacements)}
             customDescription={replacePlaceholders(pageT.page?.description || '', replacements)}

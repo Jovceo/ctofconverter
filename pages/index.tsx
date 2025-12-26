@@ -14,14 +14,16 @@ interface ConversionHistoryItem {
     timestamp: number;
 }
 
+import { getLatestModifiedDate } from '../utils/dateHelpers';
 import fs from 'fs';
 import path from 'path';
 
 interface HomeProps {
     dynamicRecentUpdates: Array<{ c: number; f: number; date: string; url: string }>;
+    lastUpdatedIso: string;
 }
 
-export default function Home({ dynamicRecentUpdates = [] }: HomeProps) {
+export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: HomeProps) {
     const { t, locale } = useTranslation('home');
 
     // 转换器状态
@@ -322,7 +324,7 @@ export default function Home({ dynamicRecentUpdates = [] }: HomeProps) {
                     </section>
                 </main>
 
-                <Footer />
+                <Footer lastUpdated={lastUpdatedIso} />
 
             </div>
 
@@ -366,10 +368,16 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
         .sort((a, b) => b.date.localeCompare(a.date));
     // 核心逻辑：按修改时间倒序排列，模拟“最近更新”
 
+    const lastUpdatedIso = getLatestModifiedDate([
+        'pages/index.tsx',
+        'locales/en/home.json'
+    ]);
+
     return {
         props: {
             locale,
-            dynamicRecentUpdates
+            dynamicRecentUpdates,
+            lastUpdatedIso
         }
     };
 };

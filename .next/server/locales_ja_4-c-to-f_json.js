@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "locales_ja_4-c-to-f_json";
+exports.ids = ["locales_ja_4-c-to-f_json"];
+exports.modules = {
+
+/***/ "./locales/ja/4-c-to-f.json":
+/*!**********************************!*\
+  !*** ./locales/ja/4-c-to-f.json ***!
+  \**********************************/
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"meta":{"title":"4°Cから華氏({fahrenheit}°F)への変換 | 変換ガイドと温度チャート","description":"4摂氏を華氏に素早く変換。4°Cが{fahrenheit}°Fに相当することを学び、正確な公式、ステップバイステップの計算、冷蔵や気象での一般的な用途を確認しましょう。","ogTitle":"4°Cから華氏({fahrenheit}°F)への変換機とガイド","ogDescription":"4°Cは正確に{fahrenheit}°Fです。これは冷蔵庫に最適な温度です！食品保存や水の密度に最適な理由を完全ガイドで学びましょう。"},"page":{"title":"4°Cから華氏({fahrenheit}°F)への変換 - 完全ガイド","description":"<strong>4摂氏を華氏</strong>に即座に変換します。<strong>4°Cは{fahrenheit}°Fに等しい</strong>です。冷蔵庫の設定、気象条件、食品保存のために<strong>4摂氏から華氏</strong>を調べている場合でも、このガイドは正確な数学的根拠と背景情報を提供します。この低温を理解するために、当サイトの<strong>4 CからFへのチャート</strong>と公式をご活用ください。","intro":"4°C (39.2°F) は、水の密度が最大になる科学的に重要な温度です。日常生活では、食品を凍らせることなく新鮮で安全に保つための冷蔵庫設定のゴールドスタンダード（標準）です。","resultText":"4摂氏は{fahrenheit}華氏に相当します"},"warning":{"title":"❄️ 寒冷注意：4°C ({fahrenheit}°F) は冷え込みます","content":"<strong>4°Cの温度では適切な服装が必要です</strong>。これは、長時間さらされると低体温症につながる可能性のある低い温度です。室温（20-25°C）よりもかなり低いです。4°Cはよく<strong>冷蔵庫の設定</strong>に使用され、寒い気象条件を表します。"},"context":{"weather":{"title":"🌡️ 天気と温度 (4°C / {fahrenheit}°F)","content":"気象用語では、4°C ({fahrenheit}°F) は<strong>寒い</strong>と見なされます。この温度は、温帯気候における晩秋、早春、または冬の日に典型的です。水の氷点 (0°C/32°F) に近いです。","items":["ジャケットやセーターなどの温かい服装が必要","日陰の場所では水に薄い氷が張り始めることがある","冷蔵室の典型的な温度","適切な服装があれば屋外活動も可能"]},"storage":{"title":"📦 冷蔵と食品保存 (4°C / {fahrenheit}°F)","content":"4°Cは<strong>冷蔵庫保存に理想的な温度</strong>です。最新の冷蔵庫の多くは、食品を新鮮で安全に保つために3〜5°C (37〜41°F) の間に温度を維持しています。","items":["乳製品、卵、野菜の保存に最適","食品の品質を保ちながら細菌の増殖を抑える","ほとんどの家庭用冷蔵庫の標準的な温度","食品の種類により3〜7日間新鮮さを保つ"]},"safety":{"title":"⚠️ 寒さの安全ヒント (4°C / {fahrenheit}°F)","content":"4°Cは危険なほどの寒さではありませんが、<strong>寒い天候下での安全</strong>を理解することは重要です。この温度は不快に感じることがあり、長時間さらされると健康問題につながる可能性があります。","items":["体温を維持するために重ね着をする","屋外での活動は最大1〜2時間に制限する","高齢者などの低体温症の兆候に注意する","ペットは室内に入れるか、温かいシェルターを用意する"]},"environmental":{"title":"🌍 環境的背景 (4°C / {fahrenheit}°F)","content":"4°Cは重要な環境的意味を持っています。<strong>氷点に近い</strong>温度であり、多くの自然プロセスにおいて重要な温度の閾値（しきい値）を表します。","items":["水の密度は4°Cで最大になる（凍る前）","多くの植物はこの温度で休眠状態に入る","湖や河川の温度成層にとって重要","動物の冬眠や移動パターンに影響を与える"]}},"negative":{"result":"-4°Cから華氏へのチャート","description":"マイナス4摂氏は<strong>{negativeFahrenheit}華氏</strong>に等しいです。これは氷点下であり、寒い冬の条件を表します。"},"faq":{"items":[{"question":"4摂氏は華氏で何度ですか (4 C to F)？","answer":"4摂氏は<strong>{fahrenheit}華氏</strong> ({fahrenheit}°F) に等しいです。公式は：°F = (4 × 9/5) + 32 です。"},{"question":"4°Fを摂氏に直すには？","answer":"<strong>4華氏を摂氏</strong>に変換するには、32を引いて5/9を掛けます。4°Fは約<strong>-15.6°C</strong>になり、非常に寒いです。"},{"question":"4摂氏は寒いですか、暑いですか？","answer":"4°Cは<strong>寒い</strong>と見なされます。典型的な室温（20-25°C）よりも低く、水の氷点 (0°C) に近いです。快適に過ごすには温かい服装が必要です。"},{"question":"4摂氏はケルビンで何度ですか (4 C to K)？","answer":"摂氏をケルビンに変換するには、273.15を加えます。4°Cは<strong>277.15ケルビン</strong>です。"},{"question":"4摂氏は氷点ですか？","answer":"いいえ、4°Cは<strong>氷点ではありません</strong>。水は0°C (32°F) で凍ります。ただし、4°Cは氷点に近く、条件によっては氷ができ始めることがあります。"},{"question":"4摂氏では何を着るべきですか？","answer":"4°Cでは<strong>暖かい重ね着</strong>をしてください：厚手のアンダーウェア、セーター、ジャケット、帽子、手袋などの冬服が必要です。"},{"question":"4摂氏から華氏への公式は？","answer":"摂氏温度 (4) に1.8 (9/5) を掛け、32を加えます。計算：(4 × 1.8) + 32 = {fahrenheit}°F です。"},{"question":"4°Cは冷蔵庫の温度として適切ですか？","answer":"はい、4°Cは<strong>理想的な冷蔵庫の温度</strong>です。食品の鮮度と安全を保つため、ほとんどの冷蔵庫は3〜5°C (37〜41°F) の間に設定すべきです。"},{"question":"0〜4摂氏は華氏で何度ですか？","answer":"<strong>0°Cから4°C</strong>の範囲は、<strong>32°Fから{fahrenheit}°F</strong>に相当します。これは氷点直上の温度範囲です。"},{"question":"4摂氏は体温と比べてどのくらい冷たいですか？","answer":"4°Cは<strong>平熱（37°C / 98.6°F）よりもかなり冷たい</strong>です。体温より33度低いため、非常に寒く感じられます。"}]}}');
+
+/***/ })
+
+};
+;

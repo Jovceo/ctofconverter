@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useTranslation } from '../utils/i18n';
+import { useTranslation, getLocalizedLink } from '../utils/i18n';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
+  const currentLocale = locale || 'en';
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -35,11 +36,11 @@ export default function Navigation() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="main-nav" role="navigation" aria-label="Main temperature conversion navigation">
+    <nav className="main-nav" role="navigation" aria-label={t('nav.logoText')}>
       <div className="container">
         <button
           className="mobile-menu-toggle"
-          aria-label="Toggle navigation menu"
+          aria-label={t('nav.toggleMenu')}
           aria-expanded={isMenuOpen}
           aria-controls="nav-links"
           onClick={toggleMenu}
@@ -50,24 +51,24 @@ export default function Navigation() {
         </button>
         <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`} id="nav-links">
           <li>
-            <Link href="/" className="active" aria-current="page" aria-label="Current page: Celsius to Fahrenheit Converter">
+            <Link href={getLocalizedLink('/', currentLocale)} className="active" aria-current="page" aria-label={t('nav.celsiusToFahrenheit')}>
               {t('nav.celsiusToFahrenheit')}
             </Link>
           </li>
           <li>
             <Link
-              href="/fahrenheit-to-celsius/"
+              href={getLocalizedLink('/fahrenheit-to-celsius/', currentLocale)}
               aria-label={t('nav.fahrenheitToCelsius')}
-              title="Fahrenheit to Celsius Conversion"
+              title={t('nav.fahrenheitToCelsius')}
             >
               {t('nav.fahrenheitToCelsius')}
             </Link>
           </li>
           <li>
             <Link
-              href="/c-to-f-calculator/"
+              href={getLocalizedLink('/c-to-f-calculator/', currentLocale)}
               aria-label={t('nav.calculator')}
-              title="C to F Calculator"
+              title={t('nav.calculator')}
             >
               {t('nav.calculator')}
             </Link>

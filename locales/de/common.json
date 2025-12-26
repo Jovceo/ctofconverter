@@ -1,10 +1,24 @@
 {
+    "meta": {
+        "defaultTitle": "Celsius in Fahrenheit | °C in °F Umrechner",
+        "defaultDescription": "Rechnen Sie Celsius schnell in Fahrenheit um mit dem C to F Converter. Erhalten Sie sofort Ergebnisse, lernen Sie die Formel und prüfen Sie die Umrechnungstabelle.",
+        "ogTitle": "Celsius in Fahrenheit Umrechner",
+        "ogDescription": "Kostenloser Online-Temperaturrechner für sofortige Umrechnungen. Konvertieren Sie Temperaturen präzise von Celsius (°C) in Fahrenheit (°F) mit Schritt-für-Schritt-Details.",
+        "twitterTitle": "Celsius in Fahrenheit Umrechner",
+        "twitterDescription": "Kostenloser Online-Temperaturrechner für sofortige Umrechnungen. Konvertieren Sie Temperaturen von Celsius (°C) in Fahrenheit (°F).",
+        "author": "Ctofconverter Team",
+        "keywords": "celsius in fahrenheit, temperaturumrechner, celsius in fahrenheit formel, temperatur umrechnen"
+    },
     "nav": {
+        "home": "Startseite",
         "celsiusToFahrenheit": "Celsius in Fahrenheit",
         "fahrenheitToCelsius": "Fahrenheit in Celsius",
         "calculator": "C-F-Rechner",
         "to": "zu",
         "selectLanguage": "Sprache wählen",
+        "logoText": "Celsius in Fahrenheit Umrechner",
+        "toggleMenu": "Navigationsmenü umschalten",
+        "languageSelector": "Sprachauswahl",
         "seoLinkText": "{celsius} Celsius in Fahrenheit ({fahrenheit}°F)"
     },
     "breadcrumb": {
@@ -16,15 +30,23 @@
         "quickLinks": "Quicklinks",
         "conversions": "Häufige Umrechnungen",
         "legal": "Rechtliches",
+        "navigationHeading": "Navigation",
+        "chartHeading": "Diagramme",
+        "legalHeading": "Rechtliches",
         "links": {
             "celsiusToFahrenheit": "Celsius in Fahrenheit",
             "fahrenheitToCelsius": "Fahrenheit in Celsius",
+            "celsiusToFahrenheitChart": "Celsius-zu-Fahrenheit-Umrechnungstabelle",
+            "fanOvenChart": "Umluftofen-Temperatur-Umrechnungstabelle",
+            "bodyTemperatureGuide": "Körpertemperatur-Tabelle & Fieberleitfaden",
+            "feverChart": "Fieber-Temperatur-Tabelle",
             "privacyPolicy": "Datenschutzerklärung",
             "termsOfService": "Nutzungsbedingungen",
             "aboutUs": "Über uns"
         },
         "copyright": "© {year} Ctofconverter. Alle Rechte vorbehalten.",
         "lastUpdated": "Zuletzt aktualisiert:",
-        "backToTop": "Nach oben"
+        "backToTop": "Nach oben",
+        "footerNavigation": "Fußzeilen-Navigation"
     }
 }

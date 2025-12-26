@@ -37,6 +37,16 @@ const nextConfig = {
       },
     ];
   },
+
+  async redirects() {
+    return [
+      {
+        source: '/fan-oven-conversion-chart/',
+        destination: '/fan-oven-conversion-chart',
+        permanent: true, // 301 redirect
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

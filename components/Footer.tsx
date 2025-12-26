@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useTranslation, getDisplayLocale } from '../utils/i18n';
+import { useTranslation, getDisplayLocale, getLocalizedLink } from '../utils/i18n';
 
 interface FooterProps {
   lastUpdated?: string;
@@ -21,9 +21,9 @@ export default function Footer({ lastUpdated }: FooterProps) {
   const year = dateToUse.getFullYear();
 
   return (
-    <footer className="site-footer" role="contentinfo">
+    <footer className="site-footer" role="contentinfo" id="footer">
       <div className="container">
-        <nav className="footer-navigation" aria-label="Footer navigation">
+        <nav className="footer-navigation" aria-label={t('footer.footerNavigation')}>
           <div className="footer-links-grid">
             <div className="footer-links-group">
               <h3 className="footer-heading" id="footer-nav-heading">
@@ -31,13 +31,13 @@ export default function Footer({ lastUpdated }: FooterProps) {
               </h3>
               <ul className="footer-link-list" aria-labelledby="footer-nav-heading">
                 <li>
-                  <Link href="https://ctofconverter.com" className="footer-link">
+                  <Link href={getLocalizedLink('/', currentLocale)} className="footer-link">
                     {t('footer.links.celsiusToFahrenheit')}
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="https://ctofconverter.com/fahrenheit-to-celsius/"
+                    href={getLocalizedLink('/fahrenheit-to-celsius/', currentLocale)}
                     className="footer-link"
                   >
                     {t('footer.links.fahrenheitToCelsius')}
@@ -52,7 +52,7 @@ export default function Footer({ lastUpdated }: FooterProps) {
               <ul className="footer-link-list" aria-labelledby="footer-chart-heading">
                 <li>
                   <Link
-                    href="https://ctofconverter.com/celsius-to-fahrenheit-chart/"
+                    href={getLocalizedLink('/celsius-to-fahrenheit-chart/', currentLocale)}
                     className="footer-link"
                   >
                     {t('footer.links.celsiusToFahrenheitChart')}
@@ -60,7 +60,7 @@ export default function Footer({ lastUpdated }: FooterProps) {
                 </li>
                 <li>
                   <Link
-                    href="https://ctofconverter.com/fan-oven-conversion-chart/"
+                    href={getLocalizedLink('/fan-oven-conversion-chart', currentLocale)}
                     className="footer-link"
                   >
                     {t('footer.links.fanOvenChart')}
@@ -68,7 +68,7 @@ export default function Footer({ lastUpdated }: FooterProps) {
                 </li>
                 <li>
                   <Link
-                    href="https://ctofconverter.com/body-temperature-chart-fever-guide/"
+                    href={getLocalizedLink('/body-temperature-chart-fever-guide/', currentLocale)}
                     className="footer-link"
                   >
                     {t('footer.links.bodyTemperatureGuide')}
@@ -76,7 +76,7 @@ export default function Footer({ lastUpdated }: FooterProps) {
                 </li>
                 <li>
                   <Link
-                    href="https://ctofconverter.com/fever-temperature-chart/"
+                    href={getLocalizedLink('/fever-temperature-chart/', currentLocale)}
                     className="footer-link"
                   >
                     {t('footer.links.feverChart')}
@@ -91,7 +91,7 @@ export default function Footer({ lastUpdated }: FooterProps) {
               <ul className="footer-link-list" aria-labelledby="footer-legal-heading">
                 <li>
                   <Link
-                    href="https://ctofconverter.com/privacy-policy.html"
+                    href={getLocalizedLink('/privacy-policy.html', currentLocale)}
                     className="footer-link"
                   >
                     {t('footer.links.privacyPolicy')}
@@ -99,14 +99,14 @@ export default function Footer({ lastUpdated }: FooterProps) {
                 </li>
                 <li>
                   <Link
-                    href="https://ctofconverter.com/terms-of-service.html"
+                    href={getLocalizedLink('/terms-of-service.html', currentLocale)}
                     className="footer-link"
                   >
                     {t('footer.links.termsOfService')}
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://ctofconverter.com/about-us.html" className="footer-link">
+                  <Link href={getLocalizedLink('/about-us.html', currentLocale)} className="footer-link">
                     {t('footer.links.aboutUs')}
                   </Link>
                 </li>
@@ -116,16 +116,6 @@ export default function Footer({ lastUpdated }: FooterProps) {
         </nav>
 
         <div className="footer-extra">
-          {/* 🟢 E-E-A-T Signal: Editorial Note */}
-          <div className="editorial-note" style={{ marginBottom: '20px', padding: '15px', backgroundColor: '#f8f9fa', borderRadius: '8px', borderLeft: '4px solid #007bff' }}>
-            <h4 style={{ margin: '0 0 10px 0', fontSize: '1rem', fontWeight: '600', color: '#2c3e50' }}>
-              Editorial Note
-            </h4>
-            <p style={{ margin: '0', fontSize: '0.9rem', lineHeight: '1.5', color: '#555' }}>
-              Our temperature conversion guides are reviewed and updated regularly by a team of science educators and cooking experts. We reference authoritative sources including the National Institute of Standards and Technology (NIST) and World Health Organization (WHO) guidelines. Last reviewed: {formatted}
-            </p>
-          </div>
-
           <div className="copyright-notice">
             <p>{t('footer.copyright', { year })}</p>
             <p className="footer-meta">

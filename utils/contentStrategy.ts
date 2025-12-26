@@ -102,8 +102,8 @@ export function generateContentStrategy(celsius: number, keyword: string = ''): 
                 showHealthAlert: true, // Show fever warning
             },
             text: {
-                intro: `Converting ${celsius}°C to Fahrenheit is essential for monitoring body temperature and checking for fever.`,
-                description: `Check if ${celsius}°C indicates a fever. Accurate conversion for adults, children, and babies.`
+                intro: '',
+                description: ''
             },
             insights: detectedInsights,
             faqs: detectedFaqs
@@ -130,8 +130,8 @@ export function generateContentStrategy(celsius: number, keyword: string = ''): 
                 showHealthAlert: false,
             },
             text: {
-                intro: `${celsius}°C is a common temperature in cooking and food safety. Convert it to Fahrenheit for baking or checking meat doneness.`,
-                description: `Cooking calculator: Convert ${celsius}°C to °F for baking, roasting, and food safety checks.`,
+                intro: '',
+                description: ''
             },
             insights: detectedInsights,
             faqs: detectedFaqs
@@ -154,8 +154,8 @@ export function generateContentStrategy(celsius: number, keyword: string = ''): 
                 showHealthAlert: false,
             },
             text: {
-                intro: `Understanding ${celsius}°C in Fahrenheit helps you dress appropriately for the weather and plan outdoor activities.`,
-                description: `Weather conversion: See what ${celsius}°C feels like in Fahrenheit.`
+                intro: '',
+                description: ''
             },
             insights: detectedInsights,
             faqs: detectedFaqs
@@ -171,8 +171,8 @@ export function generateContentStrategy(celsius: number, keyword: string = ''): 
             showHealthAlert: false,
         },
         text: {
-            intro: `Free online temperature conversion tool that instantly converts ${celsius} degrees Celsius (${celsius}°C) to degrees Fahrenheit (°F).`,
-            description: `Instantly convert ${celsius}°C to °F for free. Ideal for science and general calculations.`
+            intro: '',
+            description: ''
         },
         insights: detectedInsights,
         faqs: detectedFaqs

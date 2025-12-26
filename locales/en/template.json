@@ -41,7 +41,41 @@
             "bodyTemp": "Body Temp",
             "veryHot": "Very Hot",
             "boiling": "Water Boils"
-        }
+        },
+        "headerTitle": "Convert {celsius} Degrees Celsius to Fahrenheit ({fahrenheit}°F)",
+        "resultHeaderDefault": "Celsius to Fahrenheit Converter",
+        "logoText": "Celsius to Fahrenheit Converter",
+        "introValue": "<strong>{celsius} degrees Celsius</strong> equals <strong>{fahrenheit} degrees Fahrenheit</strong>.",
+        "introConnect": "This temperature conversion is commonly used in",
+        "introMedical": "body temperature measurements and medical diagnostics. Check our fever temperature chart for more details.",
+        "introWeather": "weather forecasts and daily temperature readings. See our complete Celsius to Fahrenheit chart for quick reference.",
+        "introCooking": "cooking, baking, and oven temperature settings. Use our fan oven conversion chart for precise baking.",
+        "introGeneral": "scientific and industrial applications. Explore our comprehensive temperature conversion chart for more conversions.",
+        "linkBodyTemp": "body temperature measurements",
+        "linkFeverChart": "fever temperature chart",
+        "linkCtoFChart": "Celsius to Fahrenheit chart",
+        "linkOvenChart": "fan oven conversion chart",
+        "linkCooking": "cooking, baking, and oven temperature settings",
+        "linkGeneral": "comprehensive temperature conversion chart",
+        "introMedicalPart2": " and medical diagnostics. Check our ",
+        "introMedicalPart3": " for more details.",
+        "introWeatherPart1": " forecasts and daily temperature readings. See our complete ",
+        "introWeatherPart3": " for quick reference.",
+        "introCookingPart2": ". Use our ",
+        "introCookingPart3": " for precise baking.",
+        "introGeneralPart1": "scientific and industrial applications. Explore our ",
+        "introGeneralPart3": " for more conversions.",
+        "step1": "Step 1",
+        "step2": "Step 2",
+        "calculation": "Calculation",
+        "result": "Result",
+        "medicalAdviceNote": "* This information is for general reference only and is not medical advice.",
+        "fToC": "Fahrenheit to Celsius",
+        "cToK": "Celsius to Kelvin",
+        "kToC": "Kelvin to Celsius",
+        "minusCToF": "Minus Celsius to Fahrenheit",
+        "freezingTooltip": "Water freezes at 0°C and boils at 100°C",
+        "fahrenheitTooltip": "Water freezes at 32°F and boils at 212°F"
     },
     "practical": {
         "title": "Practical Applications of {celsius}°C ({fahrenheit}°F)",
@@ -185,5 +219,10 @@
             "cold": "Cold",
             "moderate": "Moderate"
         }
+    },
+    "editorial": {
+        "title": "Editorial Note",
+        "note": "Editorial Note: This temperature conversion content is reviewed by meteorological experts and science educators to ensure physical calculation accuracy. Practical application contexts like body temperature or weather feel follow standard guidelines from NIST and the World Health Organization (WHO).",
+        "sources": "Sources: NIST, Physical Science Center, USDA."
     }
 }

@@ -1,10 +1,24 @@
 {
+    "meta": {
+        "defaultTitle": "Celsius en Fahrenheit | Convertisseur °C en °F",
+        "defaultDescription": "Convertissez rapidement Celsius en Fahrenheit avec le convertisseur C to F. Obtenez des résultats instantanés, apprenez la formule et consultez le tableau de conversion.",
+        "ogTitle": "Convertisseur Celsius en Fahrenheit",
+        "ogDescription": "Calculateur de température en ligne gratuit pour des conversions instantanées. Convertissez instantanément les températures de Celsius (°C) en Fahrenheit (°F) avec des résultats précis et des détails étape par étape.",
+        "twitterTitle": "Convertisseur Celsius en Fahrenheit",
+        "twitterDescription": "Calculateur de température en ligne gratuit pour des conversions instantanées. Convertissez instantanément les températures de Celsius (°C) en Fahrenheit (°F).",
+        "author": "L'équipe Ctofconverter",
+        "keywords": "celsius en fahrenheit, convertisseur de température, formule celsius en fahrenheit, conversion thermique"
+    },
     "nav": {
+        "home": "Accueil",
         "celsiusToFahrenheit": "Celsius en Fahrenheit",
         "fahrenheitToCelsius": "Fahrenheit en Celsius",
         "calculator": "Calculatrice C vers F",
         "to": "vers",
         "selectLanguage": "Choisir la langue",
+        "logoText": "Convertisseur Celsius en Fahrenheit",
+        "toggleMenu": "Basculer le menu de navigation",
+        "languageSelector": "Sélecteur de langue",
         "seoLinkText": "{celsius} Celsius en Fahrenheit ({fahrenheit}°F)"
     },
     "breadcrumb": {
@@ -16,15 +30,23 @@
         "quickLinks": "Liens rapides",
         "conversions": "Conversions courantes",
         "legal": "Mentions légales",
+        "navigationHeading": "Navigation",
+        "chartHeading": "Graphiques",
+        "legalHeading": "Mentions légales",
         "links": {
             "celsiusToFahrenheit": "Celsius en Fahrenheit",
             "fahrenheitToCelsius": "Fahrenheit en Celsius",
+            "celsiusToFahrenheitChart": "Tableau de conversion Celsius en Fahrenheit",
+            "fanOvenChart": "Tableau de conversion four à convection",
+            "bodyTemperatureGuide": "Tableau de température corporelle et guide de fièvre",
+            "feverChart": "Tableau de température de fièvre",
             "privacyPolicy": "Politique de confidentialité",
             "termsOfService": "Conditions d'utilisation",
             "aboutUs": "À propos"
         },
         "copyright": "© {year} Ctofconverter. Tous droits réservés.",
         "lastUpdated": "Dernière mise à jour :",
-        "backToTop": "Retour en haut"
+        "backToTop": "Retour en haut",
+        "footerNavigation": "Navigation de pied de page"
     }
 }

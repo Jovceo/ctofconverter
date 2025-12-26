@@ -1,10 +1,25 @@
 {
+    "meta": {
+        "defaultTitle": "摂氏から華氏 | °Cから°Fへの変換機",
+        "defaultDescription": "C to F Converterを使用して摂氏から華氏に素早く変換。即座に結果を取得し、公式や変換表を確認できます。",
+        "ogTitle": "摂氏から華氏への変換機",
+        "ogDescription": "即座に変換できる無料のオンライン温度計算機。摂氏（°C）から華氏（°F）へ正確に、ステップごとの詳細付きで変換します。",
+        "twitterTitle": "摂氏から華氏への変換機",
+        "twitterDescription": "摂氏から華氏へ温度を即座に変換できる無料のオンラインツール。",
+        "author": "Ctofconverter チーム",
+        "keywords": "摂氏 華氏 変換, 温度 変換, 摂氏 華氏 公式, 温度 計算"
+    },
     "nav": {
+        "home": "ホーム",
         "celsiusToFahrenheit": "摂氏から華氏",
         "fahrenheitToCelsius": "華氏から摂氏",
         "calculator": "摂氏・華氏計算機",
         "to": "から",
-        "selectLanguage": "言語を選択"
+        "selectLanguage": "言語を選択",
+        "logoText": "摂氏から華氏へのコンバーター",
+        "toggleMenu": "ナビゲーションメニューの切り替え",
+        "languageSelector": "言語選択",
+        "seoLinkText": "{celsius} 摂氏から華氏への変換（{fahrenheit}°F）"
     },
     "breadcrumb": {
         "home": "ホーム"
@@ -15,15 +30,23 @@
         "quickLinks": "クイックリンク",
         "conversions": "一般的な変換",
         "legal": "法務",
+        "navigationHeading": "ナビゲーション",
+        "chartHeading": "チャート",
+        "legalHeading": "法的情報",
         "links": {
             "celsiusToFahrenheit": "摂氏から華氏",
             "fahrenheitToCelsius": "華氏から摂氏",
+            "celsiusToFahrenheitChart": "摂氏から華氏への変換チャート",
+            "fanOvenChart": "ファンオーブン温度変換チャート",
+            "bodyTemperatureGuide": "体温チャートと発熱ガイド",
+            "feverChart": "発熱温度チャート",
             "privacyPolicy": "プライバシーポリシー",
             "termsOfService": "利用規約",
             "aboutUs": "私たちについて"
         },
         "copyright": "© {year} Ctofconverter. All rights reserved.",
         "lastUpdated": "最終更新日：",
-        "backToTop": "トップに戻る"
+        "backToTop": "トップに戻る",
+        "footerNavigation": "フッターナビゲーション"
     }
 }
