@@ -71,13 +71,13 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
       const filePath = path.join(process.cwd(), 'locales', currentLocale, p);
       const fileContent = fs.readFileSync(filePath, 'utf8');
       return JSON.parse(fileContent);
-    } catch (e) {
+    } catch {
       // Fallback to en
       try {
         const filePathEn = path.join(process.cwd(), 'locales', 'en', p);
         const fileContentEn = fs.readFileSync(filePathEn, 'utf8');
         return JSON.parse(fileContentEn);
-      } catch (err) {
+      } catch {
         return {};
       }
     }
@@ -107,7 +107,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   };
 };
 
-export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { lastUpdatedIso: string, pageTrans: any }) {
+export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { lastUpdatedIso: string, pageTrans: Record<string, unknown> }) {
   const router = useRouter(); // Use router for locale
   const locale = router.locale || 'en';
   // Use lightweight translation for this page's content
