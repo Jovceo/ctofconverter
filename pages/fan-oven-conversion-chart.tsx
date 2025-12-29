@@ -6,9 +6,13 @@ import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Analytics from '../components/Analytics';
-import { useTranslation } from '../utils/i18n';
+// import { useTranslation } from '../utils/i18n'; // Removed to reduce bundle size
 import styles from '../styles/fan-oven-conversion-chart.module.css';
 import { GetStaticProps } from 'next';
+import { useLightTranslation } from '../utils/i18n-lite';
+import fs from 'fs';
+import path from 'path';
+import { useRouter } from 'next/router';
 
 type StructuredHowToStep = {
   name: string;
@@ -54,22 +58,62 @@ type FaqAccordionItem = {
 
 import { getLatestModifiedDate } from '../utils/dateHelpers';
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const currentLocale = locale || 'en';
   const lastUpdatedIso = getLatestModifiedDate([
     'pages/fan-oven-conversion-chart.tsx',
-    'locales/en/fan-oven-conversion-chart.json'
+    `locales/${currentLocale}/fan-oven-conversion-chart.json`
   ]);
+
+  // Load translations manually to avoid bundling all locales
+  const loadJSON = (p: string) => {
+    try {
+      const filePath = path.join(process.cwd(), 'locales', currentLocale, p);
+      const fileContent = fs.readFileSync(filePath, 'utf8');
+      return JSON.parse(fileContent);
+    } catch (e) {
+      // Fallback to en
+      try {
+        const filePathEn = path.join(process.cwd(), 'locales', 'en', p);
+        const fileContentEn = fs.readFileSync(filePathEn, 'utf8');
+        return JSON.parse(fileContentEn);
+      } catch (err) {
+        return {};
+      }
+    }
+  };
+
+  const pageTrans = loadJSON('fan-oven-conversion-chart.json');
+  // We might not need common if keys are full? But let's load it just in case if keys use 'common:' prefix or similar?
+  // Looking at the code, it uses 't' with keys like 'intro.title'.
+  // But wait, Layout/Header/Footer might use common translations.
+  // The 't' passed to children is usually from global context or they use their own useTranslation.
+  // Header/Footer import 'useTranslation' from 'utils/i18n' internally.
+  // So WE are optimizing the Page content, but Header/Footer will still pull in the big bundle?
+  // YES. Because Header imports utils/i18n.
+
+  // To truly fix the bundle, we need Header/Footer to NOT import utils/i18n.
+  // That's a larger refactor.
+  // BUT, by not importing it HERE, we save some, but if 'Header' is imported, 'utils/i18n' is imported.
+  // So the 'utils/i18n' module is EVALUATED.
+
+  // So the ONLY way to fix this "Reduce unused JS" properly is to fix 'utils/i18n.ts' itself.
 
   return {
     props: {
-      lastUpdatedIso
+      lastUpdatedIso,
+      pageTrans
     }
   };
 };
 
-export default function FanOvenConversionChart({ lastUpdatedIso }: { lastUpdatedIso: string }) {
-  const { t, locale } = useTranslation('fan-oven-conversion-chart');
-  const currentLocale = locale || 'en';
+export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { lastUpdatedIso: string, pageTrans: any }) {
+  const router = useRouter(); // Use router for locale
+  const locale = router.locale || 'en';
+  // Use lightweight translation for this page's content
+  const { t } = useLightTranslation(pageTrans, locale);
+
+  const currentLocale = locale;
   const pagePath = currentLocale === 'en' ? '/fan-oven-conversion-chart' : `/${currentLocale}/fan-oven-conversion-chart`;
   const homePath = currentLocale === 'en' ? '/' : `/${currentLocale}/`;
 

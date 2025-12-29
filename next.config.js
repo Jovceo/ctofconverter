@@ -2,7 +2,7 @@
 const nextConfig = {
   // 基础配置
   reactStrictMode: true,
-  swcMinify: false,
+  swcMinify: true,
 
   // Enable internationalization - Support multiple locales
   i18n: {
@@ -43,7 +43,7 @@ const nextConfig = {
       {
         source: '/fan-oven-conversion-chart/',
         destination: '/fan-oven-conversion-chart',
-        permanent: true, // 301 redirect
+        statusCode: 301,
       },
     ];
   },

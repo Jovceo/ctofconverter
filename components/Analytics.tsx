@@ -111,7 +111,7 @@ export default function Analytics() {
       {/* Google Analytics */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-7KGQPN84Z6"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         onLoad={() => {
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('js', new Date());
