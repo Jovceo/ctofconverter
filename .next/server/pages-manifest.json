@@ -1,9 +1,7 @@
 {
-  "/api/og": "pages/api/og.js",
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/fan-oven-conversion-chart": "pages/fan-oven-conversion-chart.js",
-  "/47-c-to-f": "pages/47-c-to-f.js",
-  "/": "pages/index.js"
+  "/": "pages/index.js",
+  "/fan-oven-conversion-chart": "pages/fan-oven-conversion-chart.js"
 }

@@ -552,7 +552,7 @@ const RelatedTemperatures: React.FC<{
       ...item,
       href: item.url ? getLocalizedLink(item.url, locale) : undefined
     }));
-  }, [celsius, extraConversions, locale]);
+  }, [celsius, extraConversions, locale, t]);
 
   return (
     <section className="related-conversions">
@@ -667,7 +667,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   }, [tPage, tTemplate, customNamespace]);
 
   // 1. First: Calculate dates
-  const { displayDate, isoDate } = useMemo(() => {
+  const { isoDate } = useMemo(() => {
     // 只有在明确传入 lastUpdated 时才使用它，否则使用默认的基准日期
     const dateSource = lastUpdated ? new Date(lastUpdated) : new Date('2025-09-15');
     const date = dateSource;
