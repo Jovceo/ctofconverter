@@ -821,10 +821,9 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   }, [celsius, t, customTitle, customDescription]);
 
   // 3. Third: Main Data & Structured Data (depends on Date & Title)
-  const { fahrenheit, formattedFahrenheit, temperatureContext, pageUrl, structuredData } = useMemo(() => {
+  const { fahrenheit, formattedFahrenheit, pageUrl, structuredData } = useMemo(() => {
     const f = celsiusToFahrenheit(celsius);
     const formattedF = formatTemperature(f);
-    const context = analyzeTemperature(celsius);
     const url = canonicalUrl || generatePageUrl(celsius, locale);
 
     // 生成结构化数据    // const howToData = generateHowToStructuredData(celsius, f, t); // Deprecated
@@ -833,7 +832,6 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
     return {
       fahrenheit: f,
       formattedFahrenheit: formattedF,
-      temperatureContext: context,
       pageUrl: url,
       structuredData: {
         // 🚀 SEO Strategy: Use Article schema instead of HowTo for tool pages
