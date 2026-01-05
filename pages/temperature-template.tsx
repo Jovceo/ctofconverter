@@ -8,8 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // 导入工具函数
-import {
-  celsiusToFahrenheit,
+celsiusToFahrenheit,
   formatTemperature,
   generateFAQStructuredData,
   generatePageUrl,
@@ -18,7 +17,6 @@ import {
   generateOGDescription,
   analyzeTemperature,
   getTemperatureScene,
-  fahrenheitToCelsius,
 } from '../utils/temperaturePageHelpers';
 
 import { ContentStrategy } from '../utils/contentStrategy';
@@ -324,10 +322,6 @@ const EnhancedFAQ: React.FC<{
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const faqs = useMemo(() => {
-    const formattedF = formatTemperature(fahrenheit);
-    const contextDescription = t(`context.descriptions.${temperatureContext.descriptionKey}`);
-    const contextCategories = temperatureContext.categoryKeys.map(k => t(`context.categories.${k}`)).join(', ');
-
     // 🚀 Smart FAQ System (2025 Strategy)
     // Replaces static "What is X?" with intent-driven questions.
     const smartFaqs = disableSmartFaqs ? [] : textSpinner.getSmartFAQ(celsius, fahrenheit, t);
@@ -520,7 +514,7 @@ const RelatedTemperatures: React.FC<{
       return availablePages.includes(num);
     };
 
-    const createItem = (targetC: number, label: string = '', type: 'close' | 'ref' | 'bench' | 'reverse'): ConversionItem & { href?: string } | null => {
+    const createItem = (targetC: number, label: string = '', _type: 'close' | 'ref' | 'bench' | 'reverse'): ConversionItem & { href?: string } | null => {
       if (Math.abs(targetC - val) < 0.01) return null;
       if (targetC === 0) targetC = 0;
 
@@ -545,9 +539,9 @@ const RelatedTemperatures: React.FC<{
       };
     };
 
-    const closest: any[] = [];
-    const benchmarks: any[] = [];
-    const extras: any[] = [];
+    const closest: (ConversionItem & { href?: string })[] = [];
+    const benchmarks: (ConversionItem & { href?: string })[] = [];
+    const extras: (ConversionItem & { href?: string })[] = [];
 
     // 1. Zone B: Precision Neighbors (Max 4)
     if (scene.precisionSteps) {
@@ -562,8 +556,8 @@ const RelatedTemperatures: React.FC<{
     // 2. Zone A: Anchors (Top 3 Closest)
     if (scene.anchors) {
       const sortedAnchors = [...scene.anchors].sort((a, b) => {
-        const aVal = (a as any).val;
-        const bVal = (b as any).val;
+        const aVal = (a as unknown as { val: number }).val;
+        const bVal = (b as unknown as { val: number }).val;
         return Math.abs(aVal - val) - Math.abs(bVal - val);
       });
       const topAnchors = sortedAnchors.slice(0, 3);
@@ -581,7 +575,6 @@ const RelatedTemperatures: React.FC<{
     const cToK = val + 273.15;
     // Fallback translation for Kelvin if not in JSON (it isn't yet, let's simple string or t('common.cToK')?)
     // t('common.cToK') exists: "Celsius to Kelvin" or "摄氏度转开尔文"
-    const kTitle = `${t('common.cToK')} (${formatTemperature(cToK)}K)`;
     // Wait, English was "4 Celsius to Kelvin (277.1K)".
     // Chinese "4 摄氏度转开尔文 (277.1K)"?
     // Let's construct it: "{celsius} {t('common.cToK')} ({K}K)"
@@ -601,7 +594,7 @@ const RelatedTemperatures: React.FC<{
 
     return [...closest, ...benchmarks, ...extras];
 
-  }, [celsius, availablePages, extraConversions, locale]);
+  }, [celsius, availablePages, extraConversions, locale, t]);
 
   // Single Flat Grid Render - User Layout + Polished Link Guide
   return (

@@ -56,6 +56,22 @@ type FaqAccordionItem = {
   conclusion?: string;
 };
 
+type ConversionRow = {
+  temp: string | number;
+  fanTemp: string;
+  uses: string;
+  tip: string;
+  link?: string;
+  ariaLabel?: string;
+};
+
+type GasMarkRow = {
+  mark: string | number;
+  fanC: string;
+  fanF: string;
+  uses: string;
+};
+
 import { getLatestModifiedDate } from '../utils/dateHelpers';
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
@@ -66,6 +82,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   ]);
 
   // Helper to deep merge objects
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const deepMerge = (target: any, source: any) => {
     for (const key of Object.keys(source)) {
       if (source[key] instanceof Object && key in target) {
@@ -616,7 +633,7 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
                       </tr>
                     </thead>
                     <tbody>
-                      {(t('charts.tableRows.celsius') as any[] || []).map((row, i) => (
+                      {(t('charts.tableRows.celsius') as unknown as ConversionRow[] || []).map((row, i) => (
                         <tr key={i}>
                           <td>
                             {row.link ? (
@@ -661,7 +678,7 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
                       </tr>
                     </thead>
                     <tbody>
-                      {(t('charts.tableRows.fahrenheit') as any[] || []).map((row, i) => (
+                      {(t('charts.tableRows.fahrenheit') as unknown as ConversionRow[] || []).map((row, i) => (
                         <tr key={i}>
                           <td>{row.temp}</td>
                           <td>{row.fanTemp}</td>
@@ -694,7 +711,7 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
                       </tr>
                     </thead>
                     <tbody>
-                      {(t('charts.tableRows.gasMark') as any[] || []).map((row, i) => (
+                      {(t('charts.tableRows.gasMark') as unknown as GasMarkRow[] || []).map((row, i) => (
                         <tr key={i}>
                           <td>{row.mark}</td>
                           <td>{row.fanC}</td>
