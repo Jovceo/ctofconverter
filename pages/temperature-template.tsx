@@ -315,11 +315,10 @@ DetailedConversionGuide.displayName = 'DetailedConversionGuide';
 const EnhancedFAQ: React.FC<{
   celsius: number;
   fahrenheit: number;
-  temperatureContext: ReturnType<typeof analyzeTemperature>;
   customFaqs?: { question: string; answer: string }[];
   disableSmartFaqs?: boolean;
   t: TFunction;
-}> = React.memo(({ celsius, fahrenheit, temperatureContext, customFaqs = [], disableSmartFaqs = false, t }) => {
+}> = React.memo(({ celsius, fahrenheit, customFaqs = [], disableSmartFaqs = false, t }) => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const faqs = useMemo(() => {
@@ -989,7 +988,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
 
             {strategy.modules.showOvenGuide && <ConversionTable celsius={celsius} t={t} locale={locale} />}
 
-            <EnhancedFAQ celsius={celsius} fahrenheit={fahrenheit} temperatureContext={temperatureContext} customFaqs={strategy.faqs} disableSmartFaqs={disableSmartFaqs} t={t} />
+            <EnhancedFAQ celsius={celsius} fahrenheit={fahrenheit} customFaqs={strategy.faqs} disableSmartFaqs={disableSmartFaqs} t={t} />
 
             {showEditorialNote && <EditorialNote t={t} celsius={celsius} />}
 
