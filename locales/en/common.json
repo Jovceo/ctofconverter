@@ -21,6 +21,11 @@
     "languageSelector": "Language selector",
     "seoLinkText": "{celsius} Celsius to Fahrenheit ({fahrenheit}°F)"
   },
+  "related": {
+    "closest": "Closest Temperatures to {val}°C",
+    "benchmarks": "Important Temperature Benchmarks",
+    "otherUnits": "Other Temperature Units"
+  },
   "breadcrumb": {
     "home": "Home"
   },

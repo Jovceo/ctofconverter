@@ -1,11 +1,8 @@
 {
     "meta": {
         "title": "摂氏・華氏 変換 | 瞬間 °C to °F ツール",
-        "description": "多言語対応の摂氏・華氏（C to F）変換ツール。正確な計算結果、具体例、FAQ、ダウンロード可能なチャートを提供。",
-        "ogTitle": "摂氏・華氏 変換ツール",
-        "ogDescription": "摂氏から華氏へ瞬時に変換。計算手順、チャート、実例を詳しく解説。",
-        "twitterTitle": "摂氏・華氏 変換ツール",
-        "twitterDescription": "計算式、チップス、PDFチャート付きの無料多言語対応 °C → °F 変換器。"
+        "description": "摂氏・華氏（C to F）変換ツール。正確な計算結果、具体例、FAQ、ダウンロード可能なチャートを提供。",
+        "twitterDescription": "計算式、チップス、PDFチャート付きの無料 °C → °F 変換器。"
     },
     "header": {
         "title": "摂氏・華氏 変換器 (°C to °F)",
@@ -66,12 +63,13 @@
         ]
     },
     "reference": {
-        "title": "よく使われる摂氏・華氏変換",
+        "title": "最新の温度変換",
         "updatedLabel": "更新日:",
         "downloadButton": {
             "text": "摂氏・華氏 変換チャート (PDF) をダウンロード",
             "aria": "摂氏・華氏 変換チャートのPDFをダウンロード"
         },
+        "itemFormat": "{c}°C を 華氏に変換 ({f}°F)",
         "infoCard": {
             "title": "摂氏と華氏の温度単位について",
             "paragraphs": [

@@ -15,12 +15,13 @@
     "current": "Celsius para Fahrenheit"
   },
   "reference": {
-    "title": "Conversões comuns de Celsius para Fahrenheit",
+    "title": "Últimas Conversões de Temperatura",
     "updatedLabel": "Atualizado:",
     "downloadButton": {
       "text": "Baixar a tabela de conversão Celsius para Fahrenheit (PDF)",
       "aria": "Baixar a tabela de conversão Celsius para Fahrenheit em PDF"
     },
+    "itemFormat": "{c}°C para Fahrenheit ({f}°F)",
     "infoCard": {
       "title": "Sobre as escalas Celsius e Fahrenheit",
       "paragraphs": [
@@ -92,4 +93,3 @@
     ]
   }
 }
-

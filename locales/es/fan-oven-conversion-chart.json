@@ -210,6 +210,14 @@
       {
         "title": "6. Ajustes de Gran Altitud",
         "text": "En elevaciones superiores a 900m (3000 pies), puedes necesitar reducciones adicionales de temperatura de 5-10°C en hornos de convección."
+      },
+      {
+        "title": "7. Considera las Variaciones de Marca",
+        "text": "Cada marca de horno tiene una velocidad de ventilador ligeramente diferente. Si tu horno de convección es particularmente potente (como algunos modelos profesionales), es posible que debas reducir la temperatura en 25°C en lugar de los 20°C estándar."
+      },
+      {
+        "title": "8. Precalienta Siempre Completamente",
+        "text": "Los hornos de convección alcanzan la temperatura más rápido, pero para hornear artículos delicados como suflés o pasteles, espera al menos 15 minutos después de que se apague la luz de 'temperatura alcanzada' para asegurar que las paredes del horno estén completamente calientes."
       }
     ]
   },

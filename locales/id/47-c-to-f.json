@@ -7,7 +7,8 @@
   },
   "page": {
     "title": "47°C ke Fahrenheit ({fahrenheit}°F) - Panduan Konversi Lengkap",
-    "description": "Konversikan <strong>47 derajat Celsius ke Fahrenheit</strong> secara instan. <strong>47°C sama dengan {fahrenheit}°F</strong>. Pelajari rumusnya, langkah perhitungan, dan mengapa 47°C sangat berbahaya bagi tubuh serta menandakan panas lingkungan ekstrem.",
+    "description": "Konversikan <strong>47 derajat Celsius ke Fahrenheit</strong> secara instan. <strong>47°C sama dengan {fahrenheit}°F</strong>. Pelajari rumus konversi yang tepat, perhitungan langkah demi langkah, dan pahami mengapa 47°C adalah suhu yang sangat berbahaya bagi tubuh dan mewakili panas ekstrem dalam kondisi lingkungan.",
+    "intro": "47°C ({fahrenheit}°F) adalah suhu yang sangat panas, jauh di atas suhu tubuh normal dan mewakili panas lingkungan yang berbahaya.",
     "resultText": "Empat puluh tujuh derajat Celsius sama dengan {fahrenheit} derajat Fahrenheit"
   },
   "warning": {

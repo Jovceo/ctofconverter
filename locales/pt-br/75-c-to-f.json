@@ -8,6 +8,7 @@
   "page": {
     "title": "75°C para Fahrenheit ({fahrenheit}°F) - Guia Completo de Conversão",
     "description": "Converta <strong>75 graus Celsius para Fahrenheit</strong> instantaneamente. <strong>75°C equivalem a {fahrenheit}°F</strong>. Se você está verificando <strong>75 Celsius para Fahrenheit para configurações de forno</strong>, secagem industrial ou pesquisa científica, este guia fornece o cálculo exato e o contexto necessário. Use nossa <strong>tabela de 75 C para F</strong> e a fórmula para entender esta alta temperatura.",
+    "intro": "75°C ({fahrenheit}°F) é uma temperatura extremamente quente, muito acima do limite seguro para a água, causando queimaduras graves instantâneas.",
     "resultText": "Setenta e cinco graus Celsius equivalem a {fahrenheit} graus Fahrenheit"
   },
   "warning": {

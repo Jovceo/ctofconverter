@@ -64,10 +64,6 @@
   "faq": {
     "items": [
       {
-        "question": "What is 4 degrees Celsius in Fahrenheit (4 C to F)?",
-        "answer": "4 degrees Celsius is equal to <strong>{fahrenheit} degrees Fahrenheit</strong> ({fahrenheit}°F). The formula is: °F = (4 × 9/5) + 32."
-      },
-      {
         "question": "How do I convert 4 F to C?",
         "answer": "To convert <strong>4 Fahrenheit to Celsius</strong>, subtract 32 and multiply by 5/9. 4°F equals approximately <strong>-15.6°C</strong>, which is very cold."
       },

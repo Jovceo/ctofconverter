@@ -4,6 +4,34 @@
         "description": "{celsius}摂氏を華氏に素早く変換。{celsius}°Cが{fahrenheit}°Fに相当することを学び、計算手順を確認し、温度の背景知識を理解しましょう。",
         "ogDescription": "{celsius}摂氏を華氏に即座に変換。{celsius}°Cは{fahrenheit}°Fに等しい。計算手順と実用的な用途を確認してください。"
     },
+    "related": {
+        "conversionTitle": "{celsius} 摂氏から華氏へ ({fahrenheit}°F)",
+        "labels": {
+            "freezingPoint": "氷点",
+            "coolWeather": "涼しい",
+            "roomTemp": "室温",
+            "warm": "暖かい",
+            "hotWeather": "暑い",
+            "normalLow": "平熱（低め）",
+            "normalBodyTemp": "平熱",
+            "feverThreshold": "発熱の境目",
+            "highFever": "高熱",
+            "dangerousFever": "危険な高熱",
+            "criticalLimit": "生命の危険",
+            "extremeHotBath": "激熱の風呂",
+            "hotWater": "お湯",
+            "greenTea": "緑茶",
+            "coffeeBrewing": "コーヒー抽出",
+            "boilingPoint": "沸点",
+            "slowBake": "低温焼き",
+            "moderateOven": "中温",
+            "hotOven": "高温",
+            "veryHot": "非常に高温",
+            "absoluteZero": "絶対零度",
+            "dryIce": "ドライアイス",
+            "goldMelting": "金の融点"
+        }
+    },
     "common": {
         "quickResult": "クイック変換結果",
         "copyResult": "📋 結果をコピー",
@@ -218,7 +246,21 @@
     },
     "editorial": {
         "title": "編集注記",
-        "note": "編集注記：本温度変換コンテンツは、物理的計算の正確性を期すため、気象専門家および科学教育者によって校閲されています。体温や天気予報などの実用的応用コンテキストは、NISTおよび世界保健機関（WHO）の標準ガイドラインに従っています。",
-        "sources": "出典：NIST, Physical Science Center, USDA."
+        "medical": {
+            "note": "編集注記：本温度変換コンテンツは、物理的計算の正確性を期すため、気象専門家および科学教育者によって校閲されています。体温などの実用的応用コンテキストは、NISTおよび世界保健機関（WHO）の標準ガイドラインに従っています。",
+            "sources": "出典：NIST, Physical Science Center, USDA."
+        },
+        "weather": {
+            "note": "編集注記：本温度変換コンテンツは、物理的計算の正確性を期すため、気象専門家および科学教育者によって校閲されています。天気予報などの実用的応用コンテキストは、NISTの標準ガイドラインに従っています。",
+            "sources": "出典：NIST, Physical Science Center, USDA."
+        },
+        "cooking": {
+            "note": "編集注記：本温度変換コンテンツは、物理的計算の正確性を期すため、気象専門家および科学教育者によって校閲されています。調理などの実用的応用コンテキストは、NISTの標準ガイドラインに従っています。",
+            "sources": "出典：NIST, Physical Science Center, USDA."
+        },
+        "general": {
+            "note": "編集注記：本温度変換コンテンツは、物理的計算の正確性を期すため、気象専門家および科学教育者によって校閲されています。",
+            "sources": "出典：NIST, Physical Science Center, USDA."
+        }
     }
 }

@@ -1,8 +1,54 @@
 {
     "meta": {
-        "pageTitle": "{celsius}°C 转华氏度 ({fahrenheit}°F) | 转换指南与计算器",
-        "description": "快速将 {celsius} 摄氏度转换为华氏度。了解 {celsius}°C 等于 {fahrenheit}°F，查看计算步骤并了解温度背景知识。",
+        "titles": {
+            "google": "{celsius}°C = {fahrenheit}°F | {celsius} 摄氏度转华氏度 {context}",
+            "bing": "将 {celsius} 摄氏度转换为华氏度 ({fahrenheit}°F)",
+            "sameValue": "{celsius}°C 转华氏度：数值相同 ({fahrenheit}°F)"
+        },
+        "descriptions": {
+            "googleContext": "{celsius} 摄氏度 = {fahrenheit} 华氏度。精确换算公式：{celsius}°C × 9/5 + 32。适用于{weather_context}。",
+            "googleGeneral": "{celsius} 摄氏度 = {fahrenheit} 华氏度。使用我们的精确计算器立即转换任意温度。",
+            "bing": "{celsius} 摄氏度等于 {fahrenheit} 华氏度。精确公式：°F = {celsius} * 1.8 + 32。查看完整对照表。",
+            "sameValue": "{celsius} 摄氏度 = {fahrenheit} 华氏度。这是摄氏温标和华氏温标重合的唯一温度点。"
+        },
         "ogDescription": "立即将 {celsius} 摄氏度转换为华氏度。{celsius}°C 等于 {fahrenheit}°F - 查看计算步骤与实用场景应用。"
+    },
+    "seo": {
+        "contextCredits": {
+            "medical": "体温参考",
+            "cooking": "烤箱温度",
+            "weather": "天气参考",
+            "science": "科学场景",
+            "liquid": "水温"
+        }
+    },
+    "related": {
+        "conversionTitle": "{celsius} 摄氏度转华氏度 ({fahrenheit}°F)",
+        "labels": {
+            "freezingPoint": "冰点",
+            "coolWeather": "凉爽天气",
+            "roomTemp": "室温",
+            "warm": "温暖",
+            "hotWeather": "炎热天气",
+            "normalLow": "正常偏低",
+            "normalBodyTemp": "正常体温",
+            "feverThreshold": "发烧临界点",
+            "highFever": "高烧",
+            "dangerousFever": "危险高烧",
+            "criticalLimit": "生命极限",
+            "extremeHotBath": "极热洗澡水",
+            "hotWater": "热水",
+            "greenTea": "绿茶冲泡温度",
+            "coffeeBrewing": "咖啡冲泡温度",
+            "boilingPoint": "沸点",
+            "slowBake": "慢烤",
+            "moderateOven": "中温烘烤",
+            "hotOven": "高温烘烤",
+            "veryHot": "极热",
+            "absoluteZero": "绝对零度",
+            "dryIce": "干冰",
+            "goldMelting": "黄金熔点"
+        }
     },
     "common": {
         "quickResult": "快速转换结果",
@@ -218,7 +264,21 @@
     },
     "editorial": {
         "title": "编辑说明",
-        "note": "编辑说明：本温度转换内容由气象专家和科学教育者审核，确保物理计算的精确性。实用的应用场景（如人体体温或天气体感）遵循 NIST 和世界卫生组织 (WHO) 的标准指南。",
-        "sources": "来源：NIST, 物理科学中心, USDA。"
+        "medical": {
+            "note": "编辑说明：本温度转换内容由气象专家和科学教育者审核，确保物理计算的精确性。实用的应用场景（如人体体温）遵循 NIST 和世界卫生组织 (WHO) 的标准指南。",
+            "sources": "来源：NIST, 物理科学中心, USDA。"
+        },
+        "cooking": {
+            "note": "编辑说明：本温度转换内容由气象专家和科学教育者审核，确保物理计算的精确性。实用的应用场景（如烹饪温度）遵循 NIST 和专业烹饪标准指南。",
+            "sources": "来源：NIST, 物理科学中心, USDA。"
+        },
+        "weather": {
+            "note": "编辑说明：本温度转换内容由气象专家和科学教育者审核，确保物理计算的精确性。实用的应用场景（如天气体感）遵循 NIST 和气象局的标准指南。",
+            "sources": "来源：NIST, 物理科学中心, USDA。"
+        },
+        "general": {
+            "note": "编辑说明：本温度转换内容由气象专家和科学教育者审核，确保物理计算的精确性。遵循 NIST 标准指南。",
+            "sources": "来源：NIST, 物理科学中心, USDA。"
+        }
     }
 }

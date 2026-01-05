@@ -1,0 +1,34 @@
+{
+    "page": {
+        "title": "37.5 Grad C in F (99.5 F) - Fieber-Umrechnung für Baby & Erwachsene",
+        "description": "Rechnen Sie 37.5 Celsius in Fahrenheit um (99.5°F). Erfahren Sie, ob 37.5°C bei Babys, Kleinkindern und Erwachsenen als Fieber gilt (Messung unter der Achsel).",
+        "intro": "37.5°C entspricht <strong>99.5°F</strong>. Dies ist ein wichtiger Schwellenwert. Während dies für Erwachsene oft noch im Normalbereich liegt, kann 37.5°C bei <strong>Babys und Kleinkindern</strong> (insbesondere bei Messung unter der Achsel) auf leichtes Fieber oder erhöhte Temperatur hinweisen.",
+        "resultText": "37.5°C ist gleich 99.5°F"
+    },
+    "faq": {
+        "items": [
+            {
+                "question": "Ist 37.5 Grad Fieber bei einem Baby?",
+                "answer": "Es kann sein. Bei einer <strong>rektalen</strong> Messung gilt 37.5°C (99.5°F) meist noch als normal (Grenzwert). Bei einer Messung <strong>unter der Achsel (axillar)</strong> kann 37.5°C jedoch einer Kerntemperatur von ca. 38°C (100.4°F) entsprechen, was als Fieber gilt. Bei Neugeborenen, Säuglingen und <strong>Kleinkindern</strong> sollten Sie dies genau beobachten."
+            },
+            {
+                "question": "37.5 C in F unter der Achsel (Axillar)?",
+                "answer": "37.5°C sind <strong>99.5°F</strong>. Bei der axillaren Temperaturmessung wird oft empfohlen, etwa 0.5°C bis 1°C hinzuzurechnen, um die Körperkerntemperatur zu schätzen. Ein Achselwert von 37.5°C könnte also bedeuten, dass das Kind tatsächlich fast 38°C Fieber hat."
+            },
+            {
+                "question": "Was ist 37.5 Celsius in Kelvin?",
+                "answer": "37.5 Grad Celsius entsprechen <strong>310.65 Kelvin</strong>."
+            }
+        ]
+    },
+    "warning": {
+        "title": "Medizinischer Hinweis für Babys",
+        "content": "Für Säuglinge unter 3 Monaten ist jede rektale Temperatur über 38°C (100.4°F) ein Notfall. 37.5°C liegt nahe an dieser Grenze. Messen Sie genau nach."
+    },
+    "context": {
+        "medical": {
+            "title": "Fieberstatus",
+            "content": "37.5°C (99.5°F) wird je nach Alter und Messmethode als <strong>Erhöhte Temperatur / Leichtes Fieber</strong> eingestuft."
+        }
+    }
+}

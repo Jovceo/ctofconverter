@@ -8,6 +8,7 @@
   "page": {
     "title": "75°C ke Fahrenheit ({fahrenheit}°F) - Panduan Konversi Lengkap",
     "description": "Konversikan <strong>75 derajat Celsius ke Fahrenheit</strong> secara instan. <strong>75°C sama dengan {fahrenheit}°F</strong>. Baik Anda memeriksa <strong>75 Celsius ke Fahrenheit untuk pengaturan oven</strong>, pengeringan industri, atau penelitian ilmiah, panduan ini menyediakan matematika dan konteks yang tepat. Gunakan <strong>tabel 75 C ke F</strong> dan rumus kami untuk memahami suhu tinggi ini.",
+    "intro": "75°C ({fahrenheit}°F) adalah suhu yang sangat panas, jauh di atas batas aman untuk air dan menyebabkan luka bakar parah secara instan.",
     "resultText": "Tujuh puluh lima derajat Celsius sama dengan {fahrenheit} derajat Fahrenheit"
   },
   "warning": {

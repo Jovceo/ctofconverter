@@ -8,6 +8,7 @@
   "page": {
     "title": "47°C 转华氏度 ({fahrenheit}°F) - 完整转换指南",
     "description": "立即将 <strong>47 摄氏度转换为华氏度</strong>。<strong>47°C 等于 {fahrenheit}°F</strong>。学习精确的转换公式、逐步计算，并了解为什么 47°C 对于体温来说是极其危险的温度，在环境条件下代表极端高温。",
+    "intro": "47°C ({fahrenheit}°F) 是一个极高的温度，远高于人体正常体温，在环境温度中代表危险的高温天气。",
     "resultText": "四十七摄氏度等于 {fahrenheit} 华氏度"
   },
   "warning": {

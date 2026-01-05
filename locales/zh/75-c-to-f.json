@@ -7,8 +7,9 @@
   },
   "page": {
     "title": "75°C 转华氏度 ({fahrenheit}°F) - 完整转换指南",
-    "description": "立即将 <strong>75 摄氏度转换为华氏度</strong>。<strong>75°C 等于 {fahrenheit}°F</strong>。无论您是在查询 <strong>75 摄氏度对应的烤箱华氏温度</strong>、工业干燥参数还是科学研究数据，本指南都能提供精确的数学计算和背景知识。使用我们的 <strong>75 C 转 F 图表</strong>和公式来深入了解这一高温数值。",
-    "resultText": "75 摄氏度等于 {fahrenheit} 华氏度"
+    "description": "立即将 <strong>75 摄氏度转换为华氏度</strong>。<strong>75°C เท่ากับ {fahrenheit}°F</strong>。无论是为了以检查 <strong>75 摄氏度转华氏度用于烤箱设置</strong>、工业干燥还是科学研究，本指南都提供精确计算和必要的背景知识。使用我们的 <strong>75 C 转 F 图表</strong>和公式了解这一高温。",
+    "intro": "75°C ({fahrenheit}°F) 是一个极高的温度，远超过水的安全温度限制，接触会导致瞬间严重烫伤。",
+    "resultText": "七十五摄氏度等于 {fahrenheit} 华氏度"
   },
   "warning": {
     "title": "⚠️ 安全警告：75°C ({fahrenheit}°F) 非常烫",

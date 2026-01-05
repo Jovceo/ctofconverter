@@ -1,0 +1,22 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("pages/fan-oven-conversion-chart",{
+
+/***/ "./locales/pt-br/home.json":
+/*!*********************************!*\
+  !*** ./locales/pt-br/home.json ***!
+  \*********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = /*#__PURE__*/JSON.parse('{"meta":{"title":"Conversor de Celsius para Fahrenheit | Ferramenta instantânea °C para °F","description":"Use nosso conversor multilíngue para obter resultados precisos, exemplos reais, FAQ e gráficos para download.","ogTitle":"Conversor de Celsius para Fahrenheit","ogDescription":"Converta °C em °F instantaneamente com passos detalhados e cenários práticos.","twitterTitle":"Conversor de Celsius para Fahrenheit","twitterDescription":"Ferramenta gratuita e multilíngue de °C → °F com fórmulas e gráficos em PDF."},"header":{"title":"Conversor de Celsius para Fahrenheit (°C para °F)","tagline":"Ferramenta online gratuita que converte graus Celsius (°C) para Fahrenheit (°F) instantaneamente, com fórmulas, passos detalhados e explicações úteis."},"breadcrumb":{"current":"Celsius para Fahrenheit"},"reference":{"title":"Últimas Conversões de Temperatura","updatedLabel":"Atualizado:","downloadButton":{"text":"Baixar a tabela de conversão Celsius para Fahrenheit (PDF)","aria":"Baixar a tabela de conversão Celsius para Fahrenheit em PDF"},"itemFormat":"{{c}}°C para Fahrenheit ({{f}}°F)","infoCard":{"title":"Sobre as escalas Celsius e Fahrenheit","paragraphs":["<strong>Celsius (°C)</strong> é amplamente utilizado no mundo inteiro. Em pressão atmosférica padrão, a água congela a 0°C e ferve a 100°C.","<strong>Fahrenheit (°F)</strong> é comum nos Estados Unidos. Em pressão padrão, a água congela a 32°F e ferve a 212°F."]}},"practical":{"title":"Cenários práticos para converter Celsius em Fahrenheit","items":[{"title":"Culinária","description":"Configurar fornos, adaptar receitas e controlar processos delicados.","bullets":["<strong>Temperatura de assar:</strong> 180°C = 356°F","<strong>Cocção em baixa temperatura:</strong> 65°C = 149°F","<strong>Derreter chocolate:</strong> 45°C = 113°F"]},{"title":"Previsão do tempo","description":"Entender o clima local em viagens e adaptar-se a diferentes sistemas de medição.","bullets":["<strong>Conforto no verão:</strong> 22-26°C = 72-79°F","<strong>Conforto interno no inverno:</strong> 20-22°C = 68-72°F","<strong>Alerta de onda de calor:</strong> &gt;35°C = &gt;95°F"]},{"title":"Uso médico","description":"Monitorar temperatura corporal, calibrar equipamentos e armazenar medicamentos.","bullets":["<strong>Temperatura corporal normal:</strong> 36,5-37,5°C = 97,7-99,5°F","<strong>Febre:</strong> &gt;38°C = &gt;100,4°F","<strong>Risco de hipotermia:</strong> &lt;35°C = &lt;95°F"]},{"title":"Pesquisa científica","description":"Controle de laboratório, publicações e colaboração internacional.","bullets":["<strong>Faixa padrão de laboratório:</strong> 20-25°C = 68-77°F","<strong>Freezer ultrabaixo:</strong> -80°C = -112°F","<strong>Reação de PCR:</strong> 95°C = 203°F"]}]},"faq":{"title":"Perguntas frequentes","items":[{"question":"Qual a diferença entre Celsius e Fahrenheit?","answer":"São escalas diferentes. Celsius é padrão internacional; Fahrenheit é comum nos EUA. Seus pontos de congelamento e ebulição não coincidem."},{"question":"Como estimar a conversão de forma rápida?","answer":"Use a regra mental: (°C × 2) + 30 ≈ °F. Ex.: 20°C ≈ 70°F (valor real 68°F)."},{"question":"Em que temperatura as escalas são iguais?","answer":"Em -40. Portanto, -40°C = -40°F."},{"question":"Temperatura em Celsius faz mal?","answer":"Celsius é apenas uma unidade. O que importa é o valor: 37°C é normal, enquanto 60°C na pele pode causar queimaduras."}]}}');
+
+/***/ })
+
+});

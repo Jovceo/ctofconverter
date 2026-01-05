@@ -266,18 +266,19 @@ export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: Home
 
                     <section className="reference-section">
                         <h2>{t('reference.title')}</h2>
-                        <div className="update-grid">
+                        <ul className="temperature-list">
                             {recentUpdates.map((item, i) => (
-                                <article className="update-card" key={i}>
-                                    <p>
-                                        <Link href={item.url} className="update-title" title={`${item.c}°C to ${item.f}°F`}>
-                                            {t('common:nav.seoLinkText', { celsius: item.c, fahrenheit: item.f })}
-                                        </Link>
-                                    </p>
-                                    <time>{t('reference.updatedLabel')} {new Date(item.date).toLocaleDateString(locale)}</time>
-                                </article>
+                                <li key={i} className="temperature-list-item">
+                                    <div className="temp-card-content">
+                                        <div className="temp-info">
+                                            <Link href={item.url} className="temp-title-link" title={t('reference.itemFormat', { c: item.c, f: item.f })}>
+                                                <div className="temp-title">{t('reference.itemFormat', { c: item.c, f: item.f })}</div>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </li>
                             ))}
-                        </div>
+                        </ul>
 
                         <a href="/downloads/celsius-to-fahrenheit-chart.pdf" className="pdf-download-btn">
                             <span className="btn-icon">📄</span>
@@ -338,7 +339,103 @@ export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: Home
         .update-title { color: inherit; text-decoration: none; }
         .update-title:hover { text-decoration: underline; }
         .history-item { cursor: pointer; }
-        @media (max-width: 768px) { .language-switcher { margin-top: 10px; } }
+        
+        /* Temperature List - Modern Card Style */
+        .temperature-list { 
+          list-style: none; 
+          padding: 0; 
+          margin: 1.5rem 0;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+          gap: 1.25rem;
+        }
+        .temperature-list-item { 
+          background: #fff;
+          border-radius: 8px;
+          border-left: 5px solid #3498db;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+          transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+          overflow: hidden;
+        }
+        .temperature-list-item:hover { 
+          transform: translateY(-4px);
+          box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.1);
+        }
+        .temperature-link { 
+          display: block;
+          padding: 0;
+          text-decoration: none !important;
+          color: inherit;
+        }
+        .temperature-link:hover,
+        .temperature-link:focus,
+        .temperature-link:active {
+          text-decoration: none !important;
+        }
+        .temp-title-link {
+          text-decoration: none !important;
+          color: inherit;
+          display: block;
+        }
+        .temp-title-link:hover,
+        .temp-title-link:focus,
+        .temp-title-link:active {
+          text-decoration: none !important;
+        }
+        .temp-card-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 24px;
+          position: relative;
+        }
+        .temp-info {
+          flex: 1;
+          padding-right: 20px;
+        }
+        .temp-title {
+          fontWeight: 600;
+          color: #2c3e50;
+          font-size: 1.05rem;
+          margin-bottom: 8px;
+          line-height: 1.4;
+          text-decoration: none !important;
+        }
+        .temp-title:hover,
+        .temp-title:focus,
+        .temp-title:active {
+          text-decoration: none !important;
+        }
+        .temp-equation {
+          color: #7f8c8d;
+          font-size: 0.9rem;
+          font-weight: 500;
+          text-decoration: none !important;
+        }
+        .temp-arrow {
+          color: #3498db;
+          font-size: 1.2rem;
+          opacity: 0.6;
+          transform: translateX(-2px);
+          transition: opacity 0.2s, transform 0.2s;
+          flex-shrink: 0;
+          line-height: 1;
+        }
+        .temperature-list-item:hover .temp-arrow {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        
+        @media (max-width: 768px) { 
+          .language-switcher { margin-top: 10px; }
+          .temperature-list { 
+            grid-template-columns: 1fr; 
+            gap: 1rem;
+          }
+          .temp-card-content { padding: 16px 20px; }
+          .temp-title { font-size: 1rem; }
+          .temp-equation { font-size: 0.85rem; }
+        }
       `}</style>
         </>
     );
@@ -350,23 +447,31 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     const filenames = fs.readdirSync(pagesDir);
 
     const dynamicRecentUpdates = filenames
-        .filter(name => name.match(/^(-?\d+)-c-to-f\.tsx$/))
+        .filter(name => name.match(/^(-?\d+(?:-\d+)?)-c-to-f\.tsx$/))
         .map(name => {
-            const match = name.match(/^(-?\d+)-c-to-f\.tsx$/);
-            const c = parseInt(match![1], 10);
+            const match = name.match(/^(-?\d+(?:-\d+)?)-c-to-f\.tsx$/);
+            // Replace hyphen between digits with dot to handle "37-5" -> "37.5"
+            const numStr = match![1].replace(/(\d)-(\d)/, '$1.$2');
+            const c = parseFloat(numStr);
             const f = celsiusToFahrenheit(c);
             const filePath = path.join(pagesDir, name);
-            const stats = fs.statSync(filePath);
+
+            // Use getLatestModifiedDate to check both the page file and its locale JSON
+            const lastUpdatedIso = getLatestModifiedDate([
+                filePath,
+                path.join(process.cwd(), `locales/${locale}/${match![1]}-c-to-f.json`)
+            ]);
 
             return {
                 c,
                 f: parseFloat(formatTemperature(f)),
-                date: stats.mtime.toISOString().split('T')[0], // 使用最后修改时间，或者这里也可以用固定的逻辑
+                date: lastUpdatedIso,
                 url: `/${name.replace('.tsx', '')}`
             };
         })
-        .sort((a, b) => b.date.localeCompare(a.date));
-    // 核心逻辑：按修改时间倒序排列，模拟“最近更新”
+        .sort((a, b) => b.date.localeCompare(a.date))
+        .slice(0, 12); // 只显示最新的 12 个
+    // 核心逻辑：按修改时间倒序排列，取最新的 12 个”
 
     const lastUpdatedIso = getLatestModifiedDate([
         'pages/index.tsx',

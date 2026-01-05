@@ -35,7 +35,10 @@ interface PageTranslation {
 }
 
 import { getLatestModifiedDate } from '../utils/dateHelpers';
+import { getAvailableTemperaturePages } from '../utils/serverHelpers';
 import { GetStaticProps } from 'next';
+import fs from 'fs';
+import path from 'path';
 
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     const lastUpdatedIso = getLatestModifiedDate([
@@ -43,18 +46,55 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
         `locales/${locale}/75-c-to-f.json`
     ]);
 
+    // Auto-detect existing pages for smart linking
+    const availablePages = getAvailableTemperaturePages();
+
+    // Helper to deep merge objects
+    const deepMerge = (target: any, source: any) => {
+        for (const key of Object.keys(source)) {
+            if (source[key] instanceof Object && key in target) {
+                Object.assign(source[key], deepMerge(target[key], source[key]));
+            }
+        }
+        Object.assign(target || {}, source);
+        return target;
+    };
+
+    const loadJSON = (loc: string, p: string) => {
+        try {
+            const filePath = path.join(process.cwd(), 'locales', loc, p);
+            const fileContent = fs.readFileSync(filePath, 'utf8');
+            return JSON.parse(fileContent);
+        } catch {
+            return {};
+        }
+    };
+
+    // 1. Load English (Base)
+    const enTrans = loadJSON('en', '75-c-to-f.json');
+
+    // 2. Load Current Locale (if different)
+    let pageTrans = enTrans;
+    if (locale !== 'en') {
+        const locTrans = loadJSON(locale, '75-c-to-f.json');
+        pageTrans = deepMerge(JSON.parse(JSON.stringify(enTrans)), locTrans);
+    }
+
     return {
         props: {
-            lastUpdatedIso
+            lastUpdatedIso,
+            availablePages,
+            pageTrans
         }
     };
 };
 
-export default function Temperature75C({ lastUpdatedIso }: { lastUpdatedIso: string }) {
+export default function Temperature75C({ lastUpdatedIso, availablePages = [], pageTrans }: { lastUpdatedIso: string, availablePages?: number[], pageTrans: any }) {
     const celsius = 75;
     const fahrenheit = celsiusToFahrenheit(celsius);
-    const { locale, pageTranslation } = useTranslation('75-c-to-f');
-    const pageT = useMemo(() => (pageTranslation as PageTranslation) || {}, [pageTranslation]);
+    const { locale } = useTranslation('75-c-to-f');
+    // Use passed translations directly
+    const pageT = useMemo(() => (pageTrans as PageTranslation) || {}, [pageTrans]);
 
     const replacements = useMemo(() => ({
         fahrenheit: formatTemperature(fahrenheit),
@@ -134,6 +174,11 @@ export default function Temperature75C({ lastUpdatedIso }: { lastUpdatedIso: str
             canonicalUrl={canonicalUrl}
             customTitle={replacePlaceholders(pageT.page?.title || '', replacements)}
             customDescription={replacePlaceholders(pageT.page?.description || '', replacements)}
+            // 🔒 Content Locking: Prevent template updates from changing this refined page
+            customIntro={replacePlaceholders(pageT.page?.intro || '', replacements)}
+            disableSmartFaqs={true} // Only show our refined custom FAQs, no auto-generated ones
+            showEditorialNote={true} // Keep editorial note but control it explicitly
+            availablePages={availablePages}
         />
     );
 }

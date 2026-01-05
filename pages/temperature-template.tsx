@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback } from 'react';
+﻿import React, { useState, useMemo, useCallback } from 'react';
 import Layout from '../components/Layout';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -17,11 +17,13 @@ import {
   generateMetaDescription,
   generateOGDescription,
   analyzeTemperature,
+  getTemperatureScene,
+  fahrenheitToCelsius,
 } from '../utils/temperaturePageHelpers';
 
 import { ContentStrategy } from '../utils/contentStrategy';
 import { textSpinner } from '../utils/textSpinner';
-import { useTranslation, getLocalizedLink } from '../utils/i18n';
+import { useTranslation, getLocalizedLink, SUPPORTED_LOCALES, HREFLANG_MAP } from '../utils/i18n';
 
 /**
  * 翻译函数类型
@@ -41,17 +43,21 @@ export interface TemperaturePageProps {
   customTitle?: string;
   customDescription?: string;
   customResultHeader?: string;
+  availablePages?: number[];
+  customIntro?: string;
+  disableSmartFaqs?: boolean;
+  showEditorialNote?: boolean;
 }
 
 export interface ConversionItem {
   title: string;
   equation: string;
   url?: string;
+  isContextual?: boolean;
 }
 
 /**
- * 动态洞察展示组件
- */
+ * 动态洞察展示组件 */
 const DynamicInsightsSection: React.FC<{ insights: ContentStrategy['insights'] }> = ({ insights }) => {
   if (!insights || insights.length === 0) return null;
 
@@ -60,7 +66,7 @@ const DynamicInsightsSection: React.FC<{ insights: ContentStrategy['insights'] }
       <div style={{ display: 'grid', gap: '20px' }}>
         {insights.map((insight, idx) => {
           const styles = {
-            warning: { border: '#e74c3c', bg: '#fdezea', icon: '⚠️' },
+            warning: { border: '#e74c3c', bg: '#fde2e2', icon: '⚠️' },
             tip: { border: '#27ae60', bg: '#d4edda', icon: '💡' },
             fact: { border: '#3498db', bg: '#d1ecf1', icon: 'ℹ️' }
           }[insight.type] || { border: '#ccc', bg: '#f8f9fa', icon: '📌' };
@@ -116,7 +122,7 @@ const PracticalApplications: React.FC<{
     if (celsius >= -10 && celsius <= 45) {
       const conditionKey = celsius < 0 ? 'freezing' : celsius < 15 ? 'cold' : celsius < 25 ? 'comfortable' : 'hot';
       apps.push({
-        icon: '🌡️',
+        icon: '🌤️',
         title: t('practical.weather.title'),
         description: t('practical.weather.description', {
           celsius,
@@ -132,7 +138,7 @@ const PracticalApplications: React.FC<{
       const conditionKey = celsius < 36.5 ? 'below' : celsius < 37.5 ? 'normal' : celsius < 38 ? 'elevated' : celsius < 39 ? 'lowGrade' : celsius < 40 ? 'moderate' : 'high';
       const tipKey = celsius >= 38 ? 'fever' : 'normal';
       apps.push({
-        icon: '🏥',
+        icon: '🌡️',
         title: t('practical.body.title'),
         description: t('practical.body.description', {
           celsius,
@@ -147,7 +153,7 @@ const PracticalApplications: React.FC<{
     if (celsius === 0 || celsius === 100 || (celsius > 0 && celsius < 100)) {
       const contextKey = celsius === 0 ? 'freezing' : celsius === 100 ? 'boiling' : 'general';
       apps.push({
-        icon: '🔬',
+        icon: '🧪',
         title: t('practical.science.title'),
         description: t('practical.science.description', {
           celsius,
@@ -214,9 +220,22 @@ const PracticalApplications: React.FC<{
 PracticalApplications.displayName = 'PracticalApplications';
 
 /**
- * Editorial Note for EEAT
+ * Editorial Note for EEAT - Context Aware
  */
-const EditorialNote: React.FC<{ t: TFunction }> = ({ t }) => {
+const EditorialNote: React.FC<{ t: TFunction; celsius: number }> = ({ t, celsius }) => {
+  const noteData = useMemo(() => {
+    let context = 'general';
+    // Refined logic matching textSpinner priorities
+    if (celsius >= 35 && celsius <= 42.5) context = 'medical';
+    else if (celsius >= 60) context = 'cooking';
+    else if (celsius >= -60 && celsius <= 55) context = 'weather';
+
+    return {
+      note: t(`editorial.${context}.note`),
+      sources: t(`editorial.${context}.sources`)
+    };
+  }, [celsius, t]);
+
   return (
     <section className="editorial-note" style={{
       marginTop: '40px',
@@ -236,13 +255,13 @@ const EditorialNote: React.FC<{ t: TFunction }> = ({ t }) => {
         gap: '8px',
         fontSize: '1.1rem'
       }}>
-        <span style={{ fontSize: '1.2rem' }}>🛡️</span> {t('editorial.title')}
+        <span style={{ fontSize: '1.2rem' }}>ℹ️</span> {t('editorial.title')}
       </h4>
       <p style={{ margin: 0 }}>
-        {t('editorial.note')}
+        {noteData.note}
       </p>
       <p style={{ marginTop: '10px', fontSize: '0.85em', opacity: 0.8 }}>
-        {t('editorial.sources')}
+        {noteData.sources}
       </p>
     </section>
   );
@@ -251,8 +270,7 @@ const EditorialNote: React.FC<{ t: TFunction }> = ({ t }) => {
 EditorialNote.displayName = 'EditorialNote';
 
 /**
- * 详细转换公式和计算组件
- */
+ * 详细转换公式和计算组件 */
 const DetailedConversionGuide: React.FC<{
   celsius: number;
   fahrenheit: number;
@@ -265,7 +283,7 @@ const DetailedConversionGuide: React.FC<{
 
   return (
     <div className="conversion-formula">
-      <h3>{t('common.formulaTitle', { celsius, fahrenheit: formatTemperature(fahrenheit) })}</h3>
+      <h3>{textSpinner.getFormulaTitle(celsius, fahrenheit, t)}</h3>
       <p>{t('common.formulaIntro')}</p>
       <div className="formula">°F = (°C × 9/5) + 32</div>
 
@@ -293,15 +311,16 @@ const DetailedConversionGuide: React.FC<{
 DetailedConversionGuide.displayName = 'DetailedConversionGuide';
 
 /**
- * 增强版FAQ组件
+ * 增强FAQ组件
  */
 const EnhancedFAQ: React.FC<{
   celsius: number;
   fahrenheit: number;
   temperatureContext: ReturnType<typeof analyzeTemperature>;
   customFaqs?: { question: string; answer: string }[];
+  disableSmartFaqs?: boolean;
   t: TFunction;
-}> = React.memo(({ celsius, fahrenheit, temperatureContext, customFaqs = [], t }) => {
+}> = React.memo(({ celsius, fahrenheit, temperatureContext, customFaqs = [], disableSmartFaqs = false, t }) => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const faqs = useMemo(() => {
@@ -309,21 +328,14 @@ const EnhancedFAQ: React.FC<{
     const contextDescription = t(`context.descriptions.${temperatureContext.descriptionKey}`);
     const contextCategories = temperatureContext.categoryKeys.map(k => t(`context.categories.${k}`)).join(', ');
 
-    const coreFaqs = [
-      {
-        question: t('faqs.core.q1', { celsius, fahrenheit: formattedF }),
-        answer: t('faqs.core.a1', { celsius, fahrenheit: formattedF })
-      },
-      {
-        question: t('faqs.core.q2', { celsius }),
-        answer: t('faqs.core.a2', { celsius, categories: contextCategories, description: contextDescription })
-      }
-    ];
+    // 🚀 Smart FAQ System (2025 Strategy)
+    // Replaces static "What is X?" with intent-driven questions.
+    const smartFaqs = disableSmartFaqs ? [] : textSpinner.getSmartFAQ(celsius, fahrenheit, t);
 
-    // 🟢 SEO: Search-intent questions first (Google weights first 2 FAQs highest)
-    return [coreFaqs[0], coreFaqs[1], ...customFaqs];
-
-  }, [celsius, fahrenheit, temperatureContext, customFaqs, t]);
+    // Merge Smart FAQs (Tier 3/2) with Custom FAQs (Tier 1)
+    // Smart FAQs go first as they cover critical PAA intents (Safety/Health etc.)
+    return [...smartFaqs, ...customFaqs];
+  }, [celsius, fahrenheit, temperatureContext, customFaqs, t, disableSmartFaqs]);
 
   const toggleFAQ = useCallback((index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
@@ -464,7 +476,7 @@ const ConversionTable: React.FC<{
                 );
               }
 
-              // 🟢 SEO: Proper HTML structure - use onClick for navigation
+              // 🚀 SEO: Proper HTML structure - use onClick for navigation
               return (
                 <tr
                   key={index}
@@ -488,91 +500,205 @@ const ConversionTable: React.FC<{
 ConversionTable.displayName = 'ConversionTable';
 
 /**
- * 相关温度推荐组件
+ * 相关温度推荐组件 (Flat Layout)
  */
 const RelatedTemperatures: React.FC<{
   celsius: number;
+  availablePages?: number[];
   extraConversions?: ConversionItem[];
   t: TFunction;
   locale: string;
-}> = React.memo(({ celsius, extraConversions = [], t, locale }) => {
-  const relatedItems = useMemo(() => {
+}> = React.memo(({ celsius, availablePages = [], extraConversions = [], t, locale }) => {
+  // Data Generation (Preserving Strict Filter Logic)
+  const allItems = useMemo(() => {
     const val = celsius;
+    const scene = getTemperatureScene(val);
 
-    // 1. Fahrenheit to Celsius: Treat 'val' as F, convert to C
-    const fVal = val;
-    const fToC = (fVal - 32) * 5 / 9;
+    // Check if link valid
+    const isPageAvailable = (num: number) => {
+      if (!availablePages || availablePages.length === 0) return false;
+      return availablePages.includes(num);
+    };
 
-    // 2. Celsius to Kelvin: Treat 'val' as C
-    const cToK = val + 273.15;
+    const createItem = (targetC: number, label: string = '', type: 'close' | 'ref' | 'bench' | 'reverse'): ConversionItem & { href?: string } | null => {
+      if (Math.abs(targetC - val) < 0.01) return null;
+      if (targetC === 0) targetC = 0;
 
-    // 3. Kelvin to Celsius: Treat 'val' as K
-    const kVal = val;
-    const kToC = kVal - 273.15;
+      const exists = isPageAvailable(targetC);
+      const f = celsiusToFahrenheit(targetC);
 
-    // 4. Minus Celsius to Fahrenheit: Treat as -val
-    const minusC = -val;
-    const minusCToF = (minusC * 9 / 5) + 32;
+      // Localized Title Generation
+      // 1. Base: "{celsius} Celsius to Fahrenheit ({fahrenheit}°F)"
+      let title = t('related.conversionTitle', { celsius: targetC, fahrenheit: formatTemperature(f) });
 
-    // Formula-based conversions (always show, link only if page exists)
-    const formulaItems: ConversionItem[] = [
-      {
-        title: t('common.fToC'),
-        equation: `${val}°F = ${formatTemperature(fToC)}°C`,
-        url: undefined // No internal link by default
-      },
-      {
-        title: t('common.cToK'),
-        equation: `${val}°C = ${formatTemperature(cToK)}K`,
-        url: undefined
-      },
-      {
-        title: t('common.kToC'),
-        equation: `${val}K = ${formatTemperature(kToC)}°C`,
-        url: undefined
-      },
-      {
-        title: t('common.minusCToF'),
-        equation: `${minusC}°C = ${formatTemperature(minusCToF)}°F`,
-        url: undefined
+      // 2. Add Label: " - Freezing Point" -> localized
+      if (label) {
+        title += ` - ${label}`;
       }
-    ];
 
-    // Merge with extra conversions (these have explicit URLs)
-    const formattedExtras = extraConversions.map((item): ConversionItem & { href?: string } => ({
-      ...item,
-      href: item.url || undefined
-    }));
+      return {
+        title: title,
+        equation: `${targetC}°C = ${formatTemperature(f)}°F`,
+        url: `/${targetC}-c-to-f`,
+        href: exists ? getLocalizedLink(`/${targetC}-c-to-f`, locale) : undefined,
+        isContextual: true
+      };
+    };
 
-    // Combine: formula items first, then extras
-    const allItems = [...formulaItems, ...formattedExtras];
+    const closest: any[] = [];
+    const benchmarks: any[] = [];
+    const extras: any[] = [];
 
-    // Return all items with href mapped from url
-    return allItems.map(item => ({
-      ...item,
-      href: item.url ? getLocalizedLink(item.url, locale) : undefined
-    }));
-  }, [celsius, extraConversions, locale, t]);
+    // 1. Zone B: Precision Neighbors (Max 4)
+    if (scene.precisionSteps) {
+      const steps = scene.precisionSteps.slice(0, 4);
+      steps.forEach(step => {
+        const neighbor = parseFloat((val + step).toFixed(2));
+        const item = createItem(neighbor, '', 'close');
+        if (item) closest.push(item);
+      });
+    }
 
+    // 2. Zone A: Anchors (Top 3 Closest)
+    if (scene.anchors) {
+      const sortedAnchors = [...scene.anchors].sort((a, b) => {
+        const aVal = (a as any).val;
+        const bVal = (b as any).val;
+        return Math.abs(aVal - val) - Math.abs(bVal - val);
+      });
+      const topAnchors = sortedAnchors.slice(0, 3);
+
+      topAnchors.forEach(anchor => {
+        const anchorObj = anchor as unknown as { val: number, labelKey?: string };
+        // Localize Label Key
+        const label = anchorObj.labelKey ? t(`related.labels.${anchorObj.labelKey}`) : '';
+        const item = createItem(anchorObj.val, label, 'bench');
+        if (item) benchmarks.push(item);
+      });
+    }
+
+    // 3. Extras
+    const cToK = val + 273.15;
+    // Fallback translation for Kelvin if not in JSON (it isn't yet, let's simple string or t('common.cToK')?)
+    // t('common.cToK') exists: "Celsius to Kelvin" or "摄氏度转开尔文"
+    const kTitle = `${t('common.cToK')} (${formatTemperature(cToK)}K)`;
+    // Wait, English was "4 Celsius to Kelvin (277.1K)".
+    // Chinese "4 摄氏度转开尔文 (277.1K)"?
+    // Let's construct it: "{celsius} {t('common.cToK')} ({K}K)"
+
+    extras.push({
+      title: `${val} ${t('common.cToK')} (${formatTemperature(cToK)}K)`,
+      equation: `${val}°C = ${formatTemperature(cToK)}K`,
+      url: undefined
+    });
+
+    extraConversions.forEach(ex => {
+      extras.push({
+        ...ex,
+        href: ex.url ? getLocalizedLink(ex.url, locale) : undefined
+      });
+    });
+
+    return [...closest, ...benchmarks, ...extras];
+
+  }, [celsius, availablePages, extraConversions, locale]);
+
+  // Single Flat Grid Render - User Layout + Polished Link Guide
   return (
-    <section className="related-conversions">
-      <h2>{t('common.relatedTitle')}</h2>
-      <div className="update-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginTop: '20px' }}>
-        {relatedItems.map((item, index) => {
-          const Card = (
-            <article className="update-card" style={{ background: '#fff', borderRadius: '8px', padding: '20px', boxShadow: '0 2px 5px rgba(0,0,0,0.05)', borderLeft: '4px solid #3498db', height: '100%', transition: 'transform 0.2s', cursor: item.href ? 'pointer' : 'default' }}>
-              <h3 style={{ margin: '0 0 10px 0', fontSize: '1rem', color: '#2c3e50', fontWeight: 600 }}>{item.title}</h3>
-              <p style={{ margin: 0, color: '#7f8c8d', fontSize: '1rem' }}>{item.equation}</p>
-            </article>
+    <section className="related-conversions" style={{ marginTop: '50px', marginBottom: '40px' }}>
+      {/* Centered Title Style (User Screenshot) - Cleaned up */}
+      <div style={{ textAlign: 'center', marginBottom: '35px' }}>
+        <h2 style={{
+          fontSize: '1.8rem',
+          color: '#2c3e50',
+          marginBottom: '15px',
+          fontWeight: '700',
+          display: 'inline-block',
+          position: 'relative'
+        }}>
+          {t('common.relatedTitle')} {celsius}°C
+        </h2>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '20px' }}>
+        {allItems.map((item, idx) => {
+          const isClickable = !!item.href;
+
+          const CardContent = (
+            <div className="conversion-card" style={{
+              background: '#fff',
+              borderRadius: '8px',
+              padding: '20px 24px',
+              // Left border style from user screenshot - UNIFIED PRIMARY BLUE
+              borderLeft: `5px solid #3498db`,
+              boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
+              height: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              transition: 'all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1)',
+              position: 'relative',
+              overflow: 'hidden'
+            }}>
+              <div style={{ width: '100%', paddingRight: isClickable ? '20px' : '0' }}>
+                <div style={{
+                  fontWeight: 600,
+                  color: '#2c3e50',
+                  fontSize: '1.05rem',
+                  marginBottom: '8px',
+                  lineHeight: '1.4'
+                }}>
+                  {item.title}
+                </div>
+                <div style={{
+                  color: '#7f8c8d',
+                  fontSize: '0.9rem',
+                  fontWeight: 500
+                }}>
+                  {item.equation}
+                </div>
+              </div>
+
+              {/* Refined Arrow for Clickable Items (Polished) */}
+              {isClickable && (
+                <div className="card-arrow" style={{
+                  position: 'absolute',
+                  top: '20px',
+                  right: '15px',
+                  color: '#3498db',
+                  opacity: 0.5,
+                  transform: 'translateX(-3px)',
+                  transition: 'opacity 0.2s, transform 0.2s'
+                }}>
+                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              )}
+            </div>
           );
 
-          return item.href ? (
-            <Link key={index} href={item.href} style={{ textDecoration: 'none' }}>{Card}</Link>
+          return isClickable ? (
+            <Link key={idx} href={item.href} passHref legacyBehavior>
+              <a style={{ textDecoration: 'none', display: 'block' }} className="card-link">
+                {CardContent}
+              </a>
+            </Link>
           ) : (
-            <div key={index}>{Card}</div>
+            <div key={idx} style={{ opacity: 0.85 }}>{CardContent}</div>
           );
         })}
       </div>
+      <style jsx global>{`
+        .card-link:hover .conversion-card {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.1) !important;
+        }
+        .card-link:hover .card-arrow {
+          opacity: 1 !important;
+          transform: translateX(0) !important;
+        }
+      `}</style>
     </section>
   );
 });
@@ -607,16 +733,16 @@ const HealthAlert: React.FC<{ celsius: number; t: TFunction }> = ({ celsius, t }
 };
 
 /**
- * 天气/体感组件
+ * Weather/Feel Component
  */
 const WeatherWidget: React.FC<{ celsius: number; t: TFunction }> = ({ celsius, t }) => {
   const { tip, icon } = useMemo(() => {
-    if (celsius <= 0) return { tip: t('weather.freezing'), icon: '❄️' };
-    if (celsius <= 10) return { tip: t('weather.chilly'), icon: '🧥' };
-    if (celsius <= 20) return { tip: t('weather.cool'), icon: '🍂' };
-    if (celsius <= 25) return { tip: t('weather.warm'), icon: '👕' };
-    if (celsius <= 30) return { tip: t('weather.hot'), icon: '☀️' };
-    return { tip: t('weather.veryHot'), icon: '🔥' };
+    if (celsius <= 0) return { tip: t('weather.freezing'), color: '#3498db', icon: '❄️' };
+    if (celsius <= 10) return { tip: t('weather.chilly'), color: '#5dade2', icon: '🧥' };
+    if (celsius <= 20) return { tip: t('weather.cool'), color: '#85c1e9', icon: '🍂' };
+    if (celsius <= 25) return { tip: t('weather.warm'), color: '#f4d03f', icon: '👕' };
+    if (celsius <= 30) return { tip: t('weather.hot'), color: '#f5b041', icon: '☀️' };
+    return { tip: t('weather.veryHot'), color: '#e67e22', icon: '🔥' };
   }, [celsius, t]);
 
   return (
@@ -652,12 +778,16 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   customNamespace,
   customTitle,
   customDescription,
-  customResultHeader
+  customResultHeader,
+  availablePages,
+  customIntro,
+  disableSmartFaqs = false,
+  showEditorialNote = true
 }) => {
   const { t: tTemplate, locale } = useTranslation('template');
   const { t: tPage } = useTranslation(customNamespace);
 
-  // 🟢 Enhanced Translation: Check page-specific namespace first, then fallback to template
+  // 🚀 Enhanced Translation: Check page-specific namespace first, then fallback to template
   const t: TFunction = useMemo(() => (key: string, repl?: Record<string, string | number>) => {
     if (customNamespace) {
       const res = tPage(key, repl);
@@ -668,12 +798,12 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
 
   // 1. First: Calculate dates
   const { isoDate } = useMemo(() => {
-    // 只有在明确传入 lastUpdated 时才使用它，否则使用默认的基准日期
+    // Use lastUpdated if provided, otherwise default base date
     const dateSource = lastUpdated ? new Date(lastUpdated) : new Date('2025-09-15');
     const date = dateSource;
     return {
       displayDate: date.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' }),
-      isoDate: date.toISOString().split('T')[0]
+      isoDate: date.toISOString() // Return full ISO string with time and timezone
     };
   }, [lastUpdated, locale]);
 
@@ -682,14 +812,18 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
     // Note: We need fahrenheit here but it's calculated in the next block.
     // Circular dependency risk. Let's recalculate F simply here or merge blocks.
     // Better strategy: Calculate F first.
+    // Better strategy: Calculate F first.
     const f = celsiusToFahrenheit(celsius);
-    const rawTitle = customTitle || generatePageTitle(celsius, f, t);
+    // 🚀 SEO: Calculate context early for dynamic titles
+    const context = analyzeTemperature(celsius);
+
+    const rawTitle = customTitle || generatePageTitle(celsius, f, t, context);
 
     const stripHtml = (html: string) => html.replace(/<[^>]*>/g, '');
     return {
       pageTitle: stripHtml(rawTitle),
-      metaDescription: stripHtml(customDescription || generateMetaDescription(celsius, f, t)),
-      ogDescription: stripHtml(customDescription || generateOGDescription(celsius, f, t))
+      metaDescription: stripHtml(customDescription || generateMetaDescription(celsius, f, t, context)),
+      ogDescription: stripHtml(customDescription || generateOGDescription(celsius, f, t)) // OG usually follows Meta or Title
     };
   }, [celsius, t, customTitle, customDescription]);
 
@@ -700,8 +834,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
     const context = analyzeTemperature(celsius);
     const url = canonicalUrl || generatePageUrl(celsius, locale);
 
-    // 生成结构化数据
-    // const howToData = generateHowToStructuredData(celsius, f, t); // Deprecated
+    // 生成结构化数据    // const howToData = generateHowToStructuredData(celsius, f, t); // Deprecated
     const faqData = generateFAQStructuredData(celsius, f, t, strategy.faqs);
 
     return {
@@ -710,7 +843,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
       temperatureContext: context,
       pageUrl: url,
       structuredData: {
-        // 🟢 SEO Strategy: Use Article schema instead of HowTo for tool pages
+        // 🚀 SEO Strategy: Use Article schema instead of HowTo for tool pages
         article: {
           '@context': 'https://schema.org',
           '@type': 'Article',
@@ -729,8 +862,28 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
     };
   }, [celsius, canonicalUrl, locale, t, strategy.faqs, isoDate, pageTitle, metaDescription]);
 
-  // 🟢 Calculate site origin for consistent URL generation across environments
+  // 🚀 Calculate site origin for consistent URL generation across environments
   const siteOrigin = useMemo(() => new URL(pageUrl).origin, [pageUrl]);
+
+  // 🚀 SEO: Generate explicit alternates for Layout to render
+  const alternates = useMemo(() => {
+    // Add x-default (pointing to English/Default URL)
+    const links = [
+      {
+        href: generatePageUrl(celsius, 'en'),
+        hreflang: 'x-default'
+      }
+    ];
+
+    SUPPORTED_LOCALES.forEach(l => {
+      links.push({
+        href: generatePageUrl(celsius, l),
+        hreflang: HREFLANG_MAP[l] || l
+      });
+    });
+
+    return links;
+  }, [celsius]);
 
   return (
     <Layout seo={{
@@ -745,21 +898,11 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
       twitterCard: 'summary_large_image',
       twitterTitle: pageTitle,
       twitterDescription: ogDescription,
-      twitterImage: `${siteOrigin}/images/equation/c-to-f-conversion.png`
+      twitterImage: `${siteOrigin}/images/equation/c-to-f-conversion.png`,
+      alternates: alternates
     }}>
       <Head>
-        {/* Multilingual SEO: hreflang tags */}
-        <link rel="alternate" hrefLang="x-default" href={generatePageUrl(celsius, 'en')} />
-        {['en', 'zh', 'es', 'hi', 'ar', 'ja', 'fr', 'de', 'id', 'pt-br'].map(l => (
-          <link
-            key={`alternate-${l}`}
-            rel="alternate"
-            hrefLang={l === 'zh' ? 'zh-CN' : (l === 'pt-br' ? 'pt-BR' : l)}
-            href={generatePageUrl(celsius, l)}
-          />
-        ))}
-
-        {/* 🟢 Schema: Article + FAQ (No HowTo) */}
+        {/* 🚀 Schema: Article + FAQ (No HowTo) */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.article) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.faq) }} />
       </Head>
@@ -791,25 +934,53 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
           <div className="temperature-content-grid">
             <section className="converter-tool" style={{ marginBottom: '30px' }}>
               <h2 id="conversion-title" style={{ marginBottom: '20px', fontSize: '1.5rem', fontWeight: 600 }}>
-                {customResultHeader || t('common.resultHeaderDefault')}
+                {customResultHeader || textSpinner.getConverterTitle(celsius, fahrenheit, t)}
               </h2>
 
-              {/* 🟢 SEO: Natural language intro paragraph for indexability */}
-              <p className="intro-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '20px', color: '#333' }}>
-                <span dangerouslySetInnerHTML={{ __html: t('common.introValue', { celsius, fahrenheit: formattedFahrenheit }) + " " + t('common.introConnect') }} />
-                {celsius >= 35 && celsius <= 42 ? (
-                  <span> <Link href={getLocalizedLink('/body-temperature-chart-fever-guide/', locale)}>{t('common.linkBodyTemp')}</Link>{t('common.introMedicalPart2')}<Link href={getLocalizedLink('/fever-temperature-chart/', locale)}>{t('common.linkFeverChart')}</Link>{t('common.introMedicalPart3')}</span>
-                ) : celsius >= 0 && celsius <= 30 ? (
-                  <span> {t('common.introWeatherPart1')}<Link href={getLocalizedLink('/celsius-to-fahrenheit-chart/', locale)}>{t('common.linkCtoFChart')}</Link>{t('common.introWeatherPart3')}</span>
-                ) : celsius >= 100 && celsius <= 250 ? (
-                  <span> <Link href={getLocalizedLink('/fan-oven-conversion-chart', locale)}>{t('common.linkCooking')}</Link>{t('common.introCookingPart2')}<Link href={getLocalizedLink('/fan-oven-conversion-chart', locale)}>{t('common.linkOvenChart')}</Link>{t('common.introCookingPart3')}</span>
-                ) : (
-                  <span> {t('common.introGeneralPart1')}<Link href={getLocalizedLink('/celsius-to-fahrenheit-chart/', locale)}>{t('common.linkGeneral')}</Link>{t('common.introGeneralPart3')}</span>
-                )}
-              </p>
+              {/* 🚀 SEO: Natural language intro paragraph for indexability */}
+              {customIntro ? (
+                <p className="intro-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '20px', color: '#333' }} dangerouslySetInnerHTML={{ __html: customIntro }} />
+              ) : (
+                <p className="intro-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '20px', color: '#333' }}>
+                  <span dangerouslySetInnerHTML={{ __html: t('common.introValue', { celsius, fahrenheit: formattedFahrenheit }) + " " + t('common.introConnect') }} />
+                  {" "}
+                  {/* Dynamic Intro Text Part with Embedded Natural Link */}
+                  {(() => {
+                    const introData = textSpinner.getIntroText(celsius, formattedFahrenheit, locale, getLocalizedLink, t);
+                    const textWithTags = typeof introData === 'string' ? introData : introData.textWithTags;
+                    const linkUrl = typeof introData === 'string' ? '' : introData.linkUrl;
+
+                    // Split by <link>...</link> tags
+                    if (!textWithTags) return null;
+
+                    // Use a simple regex to capture the content inside <link> tags
+                    // The split will result in [text_before, match_content, text_after, ...]
+                    const parts = textWithTags.split(/<link>(.*?)<\/link>/);
+
+                    return (
+                      <>
+                        {parts.map((part: string, i: number) => {
+                          // Odd indices are the matches (the text inside tags)
+                          if (i % 2 === 1) {
+                            return (
+                              <Link key={i} href={linkUrl} style={{ textDecoration: 'underline', color: '#3498db', fontWeight: 500 }}>
+                                {part}
+                              </Link>
+                            );
+                          }
+                          // Even indices are simple text
+                          return <span key={i}>{part}</span>;
+                        })}
+                      </>
+                    );
+                  })()}
+                </p>
+              )}
 
               <EnhancedConverter initialCelsius={celsius} t={t} />
             </section>
+
+            {strategy.modules.showConversionGuide !== false && <DetailedConversionGuide celsius={celsius} fahrenheit={fahrenheit} t={t} />}
 
             {strategy.insights && <DynamicInsightsSection insights={strategy.insights} />}
 
@@ -818,17 +989,17 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
               {strategy.modules.showHumanFeel && <WeatherWidget celsius={celsius} t={t} />}
             </div>
 
-            {strategy.modules.showConversionGuide !== false && <DetailedConversionGuide celsius={celsius} fahrenheit={fahrenheit} t={t} />}
+
 
             {strategy.modules.showPracticalApps !== false && <PracticalApplications celsius={celsius} fahrenheit={fahrenheit} t={t} />}
 
             {strategy.modules.showOvenGuide && <ConversionTable celsius={celsius} t={t} locale={locale} />}
 
-            <EnhancedFAQ celsius={celsius} fahrenheit={fahrenheit} temperatureContext={temperatureContext} customFaqs={strategy.faqs} t={t} />
+            <EnhancedFAQ celsius={celsius} fahrenheit={fahrenheit} temperatureContext={temperatureContext} customFaqs={strategy.faqs} disableSmartFaqs={disableSmartFaqs} t={t} />
 
-            <EditorialNote t={t} />
+            {showEditorialNote && <EditorialNote t={t} celsius={celsius} />}
 
-            <RelatedTemperatures celsius={celsius} extraConversions={extraConversions} t={t} locale={locale} />
+            <RelatedTemperatures celsius={celsius} extraConversions={extraConversions} t={t} locale={locale} availablePages={availablePages} />
           </div>
         </main>
         <Footer lastUpdated={isoDate} />
@@ -841,3 +1012,4 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
 TemperaturePage.displayName = 'TemperaturePage';
 
 export default TemperaturePage;
+

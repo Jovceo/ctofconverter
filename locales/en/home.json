@@ -66,12 +66,13 @@
     ]
   },
   "reference": {
-    "title": "Common Celsius to Fahrenheit Conversions",
+    "title": "Latest Temperature Conversions",
     "updatedLabel": "Updated:",
     "downloadButton": {
       "text": "Download the Celsius to Fahrenheit Conversion Chart (PDF)",
       "aria": "Download Celsius to Fahrenheit conversion chart as PDF"
     },
+    "itemFormat": "{c}°C to Fahrenheit ({f}°F)",
     "infoCard": {
       "title": "About Celsius and Fahrenheit Temperature Units",
       "paragraphs": [

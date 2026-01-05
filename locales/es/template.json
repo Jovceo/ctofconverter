@@ -4,6 +4,34 @@
         "description": "Convierte rápidamente {celsius} grados Celsius a Fahrenheit. Aprende que {celsius}°C equivale a {fahrenheit}°F, consulta los pasos del cálculo.",
         "ogDescription": "Convierte {celsius} grados Celsius a Fahrenheit al instante. {celsius}°C equivale a {fahrenheit}°F - consulta los pasos y usos prácticos."
     },
+    "related": {
+        "conversionTitle": "{celsius} grados Celsius a Fahrenheit ({fahrenheit}°F)",
+        "labels": {
+            "freezingPoint": "Punto de congelación",
+            "coolWeather": "Clima fresco",
+            "roomTemp": "Temperatura ambiente",
+            "warm": "Cálido",
+            "hotWeather": "Clima caluroso",
+            "normalLow": "Normal bajo",
+            "normalBodyTemp": "Temperatura corporal normal",
+            "feverThreshold": "Umbral de fiebre",
+            "highFever": "Fiebre alta",
+            "dangerousFever": "Fiebre peligrosa",
+            "criticalLimit": "Límite crítico",
+            "extremeHotBath": "Baño muy caliente",
+            "hotWater": "Agua caliente",
+            "greenTea": "Té verde",
+            "coffeeBrewing": "Café",
+            "boilingPoint": "Punto de ebullición",
+            "slowBake": "Horneado lento",
+            "moderateOven": "Horno moderado",
+            "hotOven": "Horno caliente",
+            "veryHot": "Muy caliente",
+            "absoluteZero": "Cero absoluto",
+            "dryIce": "Hielo seco",
+            "goldMelting": "Fusión del oro"
+        }
+    },
     "common": {
         "quickResult": "Resultado rápido",
         "copyResult": "📋 Copiar",
@@ -194,7 +222,21 @@
     },
     "editorial": {
         "title": "Nota editorial",
-        "note": "Nota editorial: revisado para exactitud científica. Los contextos de aplicación práctica como la temperatura corporal o la sensación térmica siguen las pautas estándar del NIST y la Organización Mundial de la Salud (OMS).",
-        "sources": "Fuentes: NIST, Centro de Ciencias Físicas, USDA."
+        "medical": {
+            "note": "Nota editorial: revisado para exactitud científica. Los contextos de aplicación práctica como la temperatura corporal siguen las pautas estándar del NIST y la Organización Mundial de la Salud (OMS).",
+            "sources": "Fuentes: NIST, Centro de Ciencias Físicas, USDA."
+        },
+        "weather": {
+            "note": "Nota editorial: revisado para exactitud científica. Los contextos de aplicación práctica como la sensación térmica siguen las pautas estándar del NIST.",
+            "sources": "Fuentes: NIST, Centro de Ciencias Físicas, USDA."
+        },
+        "cooking": {
+            "note": "Nota editorial: revisado para exactitud científica. Los contextos de aplicación práctica siguen las pautas estándar del NIST.",
+            "sources": "Fuentes: NIST, Centro de Ciencias Físicas, USDA."
+        },
+        "general": {
+            "note": "Nota editorial: revisado para exactitud científica. Siguen las pautas estándar del NIST.",
+            "sources": "Fuentes: NIST, Centro de Ciencias Físicas, USDA."
+        }
     }
 }
