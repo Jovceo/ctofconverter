@@ -8,7 +8,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // 导入工具函数
-celsiusToFahrenheit,
+import {
+  celsiusToFahrenheit,
   formatTemperature,
   generateFAQStructuredData,
   generatePageUrl,
