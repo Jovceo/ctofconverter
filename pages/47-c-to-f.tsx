@@ -90,7 +90,7 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
   };
 };
 
-export default function Temperature47C({ lastUpdatedIso, pageTrans }: { lastUpdatedIso: string, pageTrans: PageTranslation }) {
+export default function Temperature47C({ lastUpdatedIso, pageTrans, availablePages }: { lastUpdatedIso: string, pageTrans: PageTranslation, availablePages: number[] }) {
   const celsius = 47;
   const fahrenheit = celsiusToFahrenheit(celsius);
   const { locale } = useTranslation('47-c-to-f');
