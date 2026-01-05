@@ -57,6 +57,7 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     const availablePages = getAvailableTemperaturePages();
 
     // Helper to deep merge objects
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const deepMerge = (target: any, source: any) => {
         for (const key of Object.keys(source)) {
             if (source[key] instanceof Object && key in target) {
@@ -96,7 +97,7 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     };
 };
 
-export default function Temperature37_5C({ lastUpdatedIso, availablePages = [], pageTrans }: { lastUpdatedIso: string, availablePages?: number[], pageTrans: any }) {
+export default function Temperature37_5C({ lastUpdatedIso, pageTrans }: { lastUpdatedIso: string, pageTrans: PageTranslation }) {
     const celsius = 37.5;
     const fahrenheit = celsiusToFahrenheit(celsius);
 
