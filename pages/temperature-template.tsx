@@ -330,7 +330,7 @@ const EnhancedFAQ: React.FC<{
     // Merge Smart FAQs (Tier 3/2) with Custom FAQs (Tier 1)
     // Smart FAQs go first as they cover critical PAA intents (Safety/Health etc.)
     return [...smartFaqs, ...customFaqs];
-  }, [celsius, fahrenheit, temperatureContext, customFaqs, t, disableSmartFaqs]);
+  }, [celsius, fahrenheit, customFaqs, t, disableSmartFaqs]);
 
   const toggleFAQ = useCallback((index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
@@ -515,7 +515,7 @@ const RelatedTemperatures: React.FC<{
       return availablePages.includes(num);
     };
 
-    const createItem = (targetC: number, label: string = '', _type: 'close' | 'ref' | 'bench' | 'reverse'): ConversionItem & { href?: string } | null => {
+    const createItem = (targetC: number, label: string = ''): ConversionItem & { href?: string } | null => {
       if (Math.abs(targetC - val) < 0.01) return null;
       if (targetC === 0) targetC = 0;
 
@@ -549,7 +549,7 @@ const RelatedTemperatures: React.FC<{
       const steps = scene.precisionSteps.slice(0, 4);
       steps.forEach(step => {
         const neighbor = parseFloat((val + step).toFixed(2));
-        const item = createItem(neighbor, '', 'close');
+        const item = createItem(neighbor, '');
         if (item) closest.push(item);
       });
     }
@@ -567,7 +567,7 @@ const RelatedTemperatures: React.FC<{
         const anchorObj = anchor as unknown as { val: number, labelKey?: string };
         // Localize Label Key
         const label = anchorObj.labelKey ? t(`related.labels.${anchorObj.labelKey}`) : '';
-        const item = createItem(anchorObj.val, label, 'bench');
+        const item = createItem(anchorObj.val, label);
         if (item) benchmarks.push(item);
       });
     }
