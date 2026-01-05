@@ -672,7 +672,7 @@ const RelatedTemperatures: React.FC<{
           );
 
           return isClickable ? (
-            <Link key={idx} href={item.href} passHref legacyBehavior>
+            <Link key={idx} href={item.href || ''} passHref legacyBehavior>
               <a style={{ textDecoration: 'none', display: 'block' }} className="card-link">
                 {CardContent}
               </a>
