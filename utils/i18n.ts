@@ -47,7 +47,7 @@ export const COMMON_TRANSLATIONS: Record<string, any> = {
 
 export const HREFLANG_MAP: Record<string, string> = {
   en: 'en',
-  zh: 'zh-CN',
+  zh: 'zh',
   es: 'es',
   hi: 'hi',
   ar: 'ar',
@@ -66,6 +66,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     home: require('../locales/en/home.json'),
     template: require('../locales/en/template.json'),
     'fan-oven-conversion-chart': require('../locales/en/fan-oven-conversion-chart.json'),
+    '37-5-c-to-f': require('../locales/en/37-5-c-to-f.json'),
   },
   zh: {
     '47-c-to-f': require('../locales/zh/47-c-to-f.json'),

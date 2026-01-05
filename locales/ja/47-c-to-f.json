@@ -7,8 +7,9 @@
     },
     "page": {
         "title": "摂氏47度から華氏 ({fahrenheit}°F) - 完全変換ガイド",
-        "description": "<strong>摂氏47度を華氏</strong>に即座に変換します。<strong>47°Cは{fahrenheit}°F</strong>に相当します。正確な変換公式、ステップごとの計算を学び、なぜ47°Cが体温において極めて危険な温度であり、環境条件における極度の暑さを表すのかを理解しましょう。",
-        "resultText": "摂氏47度は{fahrenheit}度華氏に相当します"
+        "description": "<strong>47摂氏を華氏に</strong>即座に変換します。<strong>47°Cは{fahrenheit}°Fに相当します</strong>。正確な変換式、ステップごとの計算方法、そしてなぜ47°Cが体温にとって非常に危険な温度であり、環境条件において極度の暑さを表すのかを理解しましょう。",
+        "intro": "47°C ({fahrenheit}°F) は極めて高温であり、通常の体温を大きく上回る危険な環境熱を表しています。",
+        "resultText": "47摂氏は{fahrenheit}華氏に相当します"
     },
     "warning": {
         "title": "⚠️ 重要：47°C ({fahrenheit}°F) は生命に関わります",

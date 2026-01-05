@@ -4,6 +4,34 @@
         "description": "Convertissez rapidement {celsius} degrés Celsius en Fahrenheit. Apprenez que {celsius}°C est égal à {fahrenheit}°F, consultez les étapes de calcul et comprenez le contexte de la température.",
         "ogDescription": "Convertissez instantanément {celsius} degrés Celsius en Fahrenheit. {celsius}°C est égal à {fahrenheit}°F - étapes de calcul et applications pratiques."
     },
+    "related": {
+        "conversionTitle": "{celsius} Celsius en Fahrenheit ({fahrenheit}°F)",
+        "labels": {
+            "freezingPoint": "Point de congélation",
+            "coolWeather": "Temps frais",
+            "roomTemp": "Température ambiante",
+            "warm": "Chaud",
+            "hotWeather": "Temps chaud",
+            "normalLow": "Normale basse",
+            "normalBodyTemp": "Température corporelle normale",
+            "feverThreshold": "Seuil de fièvre",
+            "highFever": "Fièvre élevée",
+            "dangerousFever": "Fièvre dangereuse",
+            "criticalLimit": "Limite critique",
+            "extremeHotBath": "Bain très chaud",
+            "hotWater": "Eau chaude",
+            "greenTea": "Thé vert",
+            "coffeeBrewing": "Préparation du café",
+            "boilingPoint": "Point d'ébullition",
+            "slowBake": "Cuisson lente",
+            "moderateOven": "Four moyen",
+            "hotOven": "Four chaud",
+            "veryHot": "Très chaud",
+            "absoluteZero": "Zéro absolu",
+            "dryIce": "Glace sèche",
+            "goldMelting": "Fusion de l'or"
+        }
+    },
     "common": {
         "quickResult": "Résultat de conversion rapide",
         "copyResult": "📋 Copier le résultat",
@@ -218,7 +246,21 @@
     },
     "editorial": {
         "title": "Note éditoriale",
-        "note": "Note éditoriale : Ce contenu de conversion de température est révisé par des experts météorologiques et des éducateurs scientifiques pour garantir la précision des calculs physiques. Les contextes d'application pratique comme la température corporelle ou le ressenti météo suivent les directives standard du NIST et de l'Organisation mondiale de la santé (OMS).",
-        "sources": "Sources : NIST, Physical Science Center, USDA."
+        "medical": {
+            "note": "Note éditoriale : Ce contenu de conversion de température est révisé pour garantir la précision. Les contextes d'application pratique comme la température corporelle suivent les directives standard du NIST et de l'Organisation mondiale de la santé (OMS).",
+            "sources": "Sources : NIST, Physical Science Center, USDA."
+        },
+        "weather": {
+            "note": "Note éditoriale : Ce contenu de conversion de température est révisé pour garantir la précision. Les contextes d'application pratique comme le ressenti météo suivent les directives standard du NIST.",
+            "sources": "Sources : NIST, Physical Science Center, USDA."
+        },
+        "cooking": {
+            "note": "Note éditoriale : Ce contenu de conversion de température est révisé pour garantir la précision. Les contextes d'application pratique suivent les directives standard du NIST.",
+            "sources": "Sources : NIST, Physical Science Center, USDA."
+        },
+        "general": {
+            "note": "Note éditoriale : Ce contenu de conversion de température est révisé pour garantir la précision. Suit les directives standard du NIST.",
+            "sources": "Sources : NIST, Physical Science Center, USDA."
+        }
     }
 }

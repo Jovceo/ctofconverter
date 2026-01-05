@@ -7,8 +7,9 @@
     },
     "page": {
         "title": "75°C en Fahrenheit ({fahrenheit}°F) - Guide de Conversion Complet",
-        "description": "Convertissez <strong>75 degrés Celsius en Fahrenheit</strong> instantanément. <strong>75°C égale {fahrenheit}°F</strong>. Que vous cherchiez <strong>75 Celsius en Fahrenheit pour un four</strong>, le séchage industriel ou la recherche scientifique, ce guide fournit le calcul exact et le contexte nécessaire. Utilisez notre <strong>tableau 75 C en F</strong> et notre formule pour comprendre cette température élevée.",
-        "resultText": "Soixante-quinze degrés Celsius valent {fahrenheit} degrés Fahrenheit"
+        "description": "Convertissez instantanément <strong>75 degrés Celsius en Fahrenheit</strong>. <strong>75°C est égal à {fahrenheit}°F</strong>. Que vous vérifiiez <strong>75 Celsius en Fahrenheit pour les réglages du four</strong>, le séchage industriel ou la recherche scientifique, ce guide fournit le calcul exact et le contexte nécessaire. Utilisez notre <strong>tableau de 75 C à F</strong> et la formule pour comprendre cette température élevée.",
+        "intro": "75°C ({fahrenheit}°F) est une température extrêmement chaude, bien au-dessus de la limite de sécurité pour l'eau, provoquant des brûlures graves instantanées.",
+        "resultText": "Soixante-quinze degrés Celsius égalent {fahrenheit} degrés Fahrenheit"
     },
     "warning": {
         "title": "⚠️ Avertissement : 75°C ({fahrenheit}°F) est une température très élevée",

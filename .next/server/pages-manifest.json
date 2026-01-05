@@ -1,1 +1,9 @@
-{"/_error":"pages/_error.js","/_app":"pages/_app.js","/_document":"pages/_document.js","/4-c-to-f":"pages/4-c-to-f.js","/47-c-to-f":"pages/47-c-to-f.js","/75-c-to-f":"pages/75-c-to-f.js","/":"pages/index.js","/fan-oven-conversion-chart":"pages/fan-oven-conversion-chart.js","/api/og":"pages/api/og.js","/en/404":"pages/en/404.html","/zh/404":"pages/zh/404.html","/es/404":"pages/es/404.html","/hi/404":"pages/hi/404.html","/ar/404":"pages/ar/404.html","/ja/404":"pages/ja/404.html","/fr/404":"pages/fr/404.html","/de/404":"pages/de/404.html","/id/404":"pages/id/404.html","/pt-br/404":"pages/pt-br/404.html","/en/500":"pages/en/500.html","/zh/500":"pages/zh/500.html","/es/500":"pages/es/500.html","/hi/500":"pages/hi/500.html","/ar/500":"pages/ar/500.html","/ja/500":"pages/ja/500.html","/fr/500":"pages/fr/500.html","/de/500":"pages/de/500.html","/id/500":"pages/id/500.html","/pt-br/500":"pages/pt-br/500.html","/en/temperature-template":"pages/en/temperature-template.html","/zh/temperature-template":"pages/zh/temperature-template.html","/es/temperature-template":"pages/es/temperature-template.html","/hi/temperature-template":"pages/hi/temperature-template.html","/ar/temperature-template":"pages/ar/temperature-template.html","/ja/temperature-template":"pages/ja/temperature-template.html","/fr/temperature-template":"pages/fr/temperature-template.html","/de/temperature-template":"pages/de/temperature-template.html","/id/temperature-template":"pages/id/temperature-template.html","/pt-br/temperature-template":"pages/pt-br/temperature-template.html"}
+{
+  "/api/og": "pages/api/og.js",
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/47-c-to-f": "pages/47-c-to-f.js",
+  "/fan-oven-conversion-chart": "pages/fan-oven-conversion-chart.js",
+  "/": "pages/index.js"
+}

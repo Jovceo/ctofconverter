@@ -7,8 +7,9 @@
     },
     "page": {
         "title": "75°Cを華氏に ({fahrenheit}°F) - 完全変換ガイド",
-        "description": "<strong>75度(摂氏)を華氏に</strong>即座に変換します。<strong>75°Cは{fahrenheit}°Fに等しい</strong>です。オーブン設定、工業用乾燥、または科学研究で沸点に近い<strong>75度(Celsius)を華氏</strong>で確認したい場合、このガイドが正確な計算と背景を提供します。<strong>75 C F 変換チャート</strong>と公式をご活用ください。",
-        "resultText": "摂氏75度は華氏{fahrenheit}度です"
+        "description": "<strong>75摂氏を華氏に</strong>即座に変換します。<strong>75°Cは{fahrenheit}°Fに相当します</strong>。<strong>オーブン設定のための75摂氏は華氏で何度か</strong>、工業的乾燥、または科学研究のいずれを確認している場合でも、このガイドは正確な計算と必要な背景情報を提供します。この高温を理解するために、当サイトの<strong>75 CからFへの換算表</strong>と公式を使用してください。",
+        "intro": "75°C ({fahrenheit}°F) は極めて高温であり、水の安全な温度制限を大きく超えており、接触すると即座に重度の火傷を引き起こします。",
+        "resultText": "75摂氏は{fahrenheit}華氏に相当します"
     },
     "warning": {
         "title": "⚠️ 安全上の注意：75°C ({fahrenheit}°F) は非常に高温です",

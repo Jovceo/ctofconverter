@@ -7,7 +7,8 @@
   },
   "page": {
     "title": "75°C to Fahrenheit ({fahrenheit}°F) - Complete Conversion Guide",
-    "description": "Convert <strong>75 degrees Celsius to Fahrenheit</strong> instantly. <strong>75°C equals {fahrenheit}°F</strong>. Whether you're checking <strong>75 Celsius to Fahrenheit for oven</strong> settings, industrial drying, or scientific research, this guide provides the exact math and context. Use our <strong>75 C to F chart</strong> and formula to understand this high temperature.",
+    "description": "Convert <strong>75 degrees Celsius to Fahrenheit</strong> instantly. <strong>75°C equals {fahrenheit}°F</strong>. Whether you're checking <strong>75 Celsius to Fahrenheit for oven settings</strong>, industrial drying, or scientific research, this guide provides the exact calculation and necessary context. Use our <strong>75 C to F chart</strong> and formula to understand this high temperature.",
+    "intro": "75°C ({fahrenheit}°F) is an extremely hot temperature, well above the safe limit for water and causing instant severe burns.",
     "resultText": "Seventy-five degrees Celsius equals {fahrenheit} degrees Fahrenheit"
   },
   "warning": {
@@ -52,10 +53,6 @@
   },
   "faq": {
     "items": [
-      {
-        "question": "What is 75 degrees Celsius in Fahrenheit (75 C to F)?",
-        "answer": "75 degrees Celsius is equal to <strong>{fahrenheit} degrees Fahrenheit</strong> ({fahrenheit}°F). The formula is: °F = (75 × 9/5) + 32."
-      },
       {
         "question": "How do I convert 75 F to C?",
         "answer": "To convert <strong>75 Fahrenheit to Celsius</strong>, subtract 32 and multiply by 5/9. 75°F equals approximately <strong>23.9°C</strong>, which is a comfortable room temperature."

@@ -11,6 +11,8 @@ function getVariantIndex(seed: number, length: number): number {
     return Math.abs(Math.round(seed)) % length;
 }
 
+import { formatTemperature } from './temperatureCore';
+
 export const textSpinner = {
     getStep1: (celsius: number, t: (key: string, replacements?: any) => any) => {
         const variants = t('spinner.step1');
@@ -24,7 +26,7 @@ export const textSpinner = {
         const variants = t('spinner.step2');
         if (!Array.isArray(variants)) return `Add 32 to the result`;
         const idx = getVariantIndex(celsius + 1, variants.length);
-        const formattedVal = Number.isInteger(step1Result) ? step1Result.toString() : step1Result.toFixed(1);
+        const formattedVal = formatTemperature(step1Result);
         const text = variants[idx];
         return typeof text === 'string' ? text.replace('{val}', formattedVal) : text;
     },
@@ -33,9 +35,198 @@ export const textSpinner = {
         const variants = t('spinner.conclusion');
         if (!Array.isArray(variants)) return `${celsius}°C = ${fahrenheit}°F`;
         const idx = getVariantIndex(celsius + 2, variants.length);
-        const formattedF = Number.isInteger(fahrenheit) ? fahrenheit.toString() : fahrenheit.toFixed(2);
+        const formattedF = formatTemperature(fahrenheit);
         const text = variants[idx];
         if (typeof text !== 'string') return text;
         return text.replace('{celsius}', celsius.toString()).replace('{fahrenheit}', formattedF);
+    },
+
+    getFormulaTitle: (celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string) => {
+        const variants = t('spinner.formulaTitle');
+        // Fallback for languages without variants
+        if (!Array.isArray(variants)) {
+            return t('common.formulaTitle', { celsius, fahrenheit: formatTemperature(fahrenheit) });
+        }
+
+        const idx = getVariantIndex(celsius + 3, variants.length); // Offset seed for variety
+        const text = variants[idx];
+        const formattedF = formatTemperature(fahrenheit);
+        return text.replace(/{celsius}/g, celsius.toString())
+            .replace(/{fahrenheit}/g, formattedF)
+            .replace(/{c}/g, celsius.toString()) // Short code support
+            .replace(/{f}/g, formattedF);
+    },
+
+    getPageTitle: (celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string) => {
+        const variants = t('meta.pageTitle');
+        // Fallback or static string handling
+        if (!Array.isArray(variants)) {
+            // Check if it's a string (standard case for non-en)
+            if (typeof variants === 'string') {
+                return t('meta.pageTitle', { celsius, fahrenheit: formatTemperature(fahrenheit) });
+            }
+            return `${celsius}°C to Fahrenheit`; // Emergency fallback
+        }
+
+        const idx = getVariantIndex(celsius + 4, variants.length);
+        const text = variants[idx];
+        const formattedF = formatTemperature(fahrenheit);
+        return text.replace(/{celsius}/g, celsius.toString())
+            .replace(/{fahrenheit}/g, formattedF);
+    },
+
+    getMetaDescription: (celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string) => {
+        const variants = t('meta.description');
+        if (!Array.isArray(variants)) {
+            if (typeof variants === 'string') {
+                return t('meta.description', { celsius, fahrenheit: formatTemperature(fahrenheit) });
+            }
+            return `Convert ${celsius} Celsius to Fahrenheit.`;
+        }
+
+        const idx = getVariantIndex(celsius + 5, variants.length);
+        const text = variants[idx];
+        const formattedF = formatTemperature(fahrenheit);
+        return text.replace(/{celsius}/g, celsius.toString())
+            .replace(/{fahrenheit}/g, formattedF);
+    },
+
+    getConverterTitle: (celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string) => {
+        const variants = t('common.resultHeaderDefault');
+        if (!Array.isArray(variants)) {
+            if (typeof variants === 'string') {
+                return t('common.resultHeaderDefault', { celsius, fahrenheit: formatTemperature(fahrenheit) });
+            }
+            return "Celsius to Fahrenheit Converter";
+        }
+
+        const idx = getVariantIndex(celsius + 6, variants.length);
+        const text = variants[idx];
+        const formattedF = formatTemperature(fahrenheit);
+        return text.replace(/{celsius}/g, celsius.toString())
+            .replace(/{fahrenheit}/g, formattedF);
+    },
+
+    getIntroText: (celsius: number, formattedFahrenheit: string, locale: string, getLocalizedLink: any, t: (key: string, repl?: any) => any) => {
+        // Determine context type
+        let type = 'General';
+        let key = 'introGeneral';
+        let url = '/celsius-to-fahrenheit-chart/';
+
+        if (celsius >= 35 && celsius <= 42) {
+            type = 'Medical';
+            key = 'introMedical';
+            url = '/body-temperature-chart-fever-guide/';
+        }
+        else if (celsius >= -20 && celsius <= 40) {
+            type = 'Weather';
+            key = 'introWeather';
+            url = '/celsius-to-fahrenheit-chart/';
+        } // Broad weather range
+        else if (celsius >= 100 && celsius <= 250) {
+            type = 'Cooking';
+            key = 'introCooking';
+            url = '/fan-oven-conversion-chart';
+        }
+
+        // Fetch variants using the specific key
+        const variants = t(`common.${key}`);
+
+        // Handle Fallback
+        if (!Array.isArray(variants)) {
+            return {
+                textWithTags: typeof variants === 'string' ? variants : "scientific applications.",
+                linkUrl: getLocalizedLink(url, locale)
+            };
+        }
+
+        const idx = getVariantIndex(celsius + 7, variants.length);
+
+        return {
+            textWithTags: variants[idx],
+            linkUrl: getLocalizedLink(url, locale)
+        };
+    },
+
+    /**
+     * Smart FAQ Generation System (2025 Strategy)
+     * Replaces redundant "What is X?" questions with context-aware, intent-driven Q&A.
+     * Uses 6-Template System: Safety, Normalcy, Suitability, Health, Importance, Device.
+     */
+    getSmartFAQ: (celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string) => {
+        const faqs = [];
+        const formattedF = formatTemperature(fahrenheit);
+        const cVal = celsius.toString();
+
+        // Template 1: Safety/Danger (Freezing)
+        if (celsius < 0) {
+            faqs.push({
+                question: `Is ${cVal}°C considered freezing?`,
+                answer: `<strong>Yes, water freezes at 0°C.</strong> ${cVal}°C is below the freezing point. Expect ice, frost, and potential pipe bursts if not insulated.`
+            });
+        }
+
+        // Template 3: Suitability (Cold Weather)
+        if (celsius >= 0 && celsius <= 10) {
+            faqs.push({
+                question: `Do I need a winter coat for ${cVal}°C?`,
+                answer: `<strong>Yes, ${cVal}°C is considered chilly.</strong> A warm coat, gloves, and a hat are recommended for prolonged outdoor exposure.`
+            });
+        }
+
+        // Template 2: Normalcy (Comfort)
+        if (celsius >= 20 && celsius <= 25) {
+            faqs.push({
+                question: `Is ${cVal}°C good room temperature?`,
+                answer: `<strong>Yes, in most cases.</strong> ${cVal}°C falls within the ideal "Comfort Zone" for living spaces (20-22°C), though personal preference varies.`
+            });
+        }
+
+        // Template 4: Health (Fever)
+        if (celsius >= 36 && celsius <= 38) {
+            faqs.push({
+                question: `Is ${cVal}°C a fever for adults?`,
+                answer: `<strong>No, ${cVal}°C is typically not a fever.</strong> Normal body temperature is around 37°C. A fever is usually defined as 38°C (100.4°F) or higher.`
+            });
+        }
+
+        // Template 1: Safety (Cooking)
+        if (celsius >= 60 && celsius <= 85) {
+            const isSafe = celsius >= 74 ? "Yes" : "Not necessarily";
+            const safeContext = celsius >= 74
+                ? `${cVal}°C exceeds the USDA safety threshold (74°C) for poultry.`
+                : `${cVal}°C is below the recommended 74°C for immediate safety.`;
+
+            faqs.push({
+                question: `Is chicken safe at ${cVal}°C?`,
+                answer: `<strong>${isSafe}, depending on time.</strong> ${safeContext} Salmonella is killed instantly at 74°C, but lower temperatures can be safe with longer holding times.`
+            });
+        }
+
+        // Template 3: Suitability (Baking)
+        if (celsius >= 160 && celsius <= 220) {
+            faqs.push({
+                question: `What can I bake at ${cVal}°C?`,
+                answer: `<strong>Many standard recipes.</strong> ${cVal}°C is a common setting for baking cakes, cookies, and roasting vegetables, promoting the Maillard reaction.`
+            });
+        }
+
+        // Template 5: Importance (Boiling)
+        if (celsius === 100) {
+            faqs.push({
+                question: `What is special about ${cVal}°C?`,
+                answer: `<strong>It is the boiling point of water.</strong> At standard sea-level pressure, water transitions from liquid to gas (steam) at exactly ${cVal}°C.`
+            });
+        }
+
+        // Fallback for ranges not covered above (Generic "Method" Intent)
+        if (faqs.length === 0) {
+            faqs.push({
+                question: `How do I convert ${cVal}°C to Fahrenheit manually?`,
+                answer: `<strong>Multiply by 1.8, then add 32.</strong> The formula is: (${cVal} × 9/5) + 32 = ${formattedF}°F. This gives you the exact result.`
+            });
+        }
+
+        return faqs;
     }
 };

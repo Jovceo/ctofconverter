@@ -3,40 +3,21 @@
  * 用于生成温度转换页面的结构化数据、Meta信息等
  */
 
-/**
- * 将摄氏度转换为华氏度
- */
-export function celsiusToFahrenheit(celsius: number): number {
-  return (celsius * 9 / 5) + 32;
-}
+import {
+  celsiusToFahrenheit,
+  formatTemperature,
+  fahrenheitToCelsius,
+  numberToWords
+} from './temperatureCore';
 
-/**
- * 格式化温度显示（保留1位小数）
- */
-export function formatTemperature(value: number, precision: number = 1): string {
-  const fixed = value.toFixed(precision);
-  return parseFloat(fixed).toString();
-}
+export {
+  celsiusToFahrenheit,
+  formatTemperature,
+  fahrenheitToCelsius,
+  numberToWords
+};
 
-/**
- * 生成数字的英文单词（用于温度描述）
- * TODO: 如果需要其他语言的单词生成，可以在此扩展
- */
-export function numberToWords(num: number): string {
-  const ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
-  const teens = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
-  const tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 
-  if (num === 0) return 'zero';
-  if (num < 10) return ones[num];
-  if (num < 20) return teens[num - 10];
-  if (num < 100) {
-    const ten = Math.floor(num / 10);
-    const one = num % 10;
-    return tens[ten] + (one > 0 ? '-' + ones[one] : '');
-  }
-  return num.toString();
-}
 
 /**
  * 生成HowTo结构化数据
@@ -147,32 +128,277 @@ export function generateRelatedTemperatures(
  */
 export function generatePageUrl(celsius: number, locale: string = 'en', baseUrl: string = 'https://ctofconverter.com'): string {
   const localePath = locale === 'en' ? '' : `/${locale}`;
-  return `${baseUrl}${localePath}/${celsius}-c-to-f`;
+  // Force dash format for decimals (e.g. 37.5 -> 37-5)
+  const celsiusSlug = String(celsius).replace('.', '-');
+  return `${baseUrl}${localePath}/${celsiusSlug}-c-to-f`;
+}
+
+import { textSpinner } from './textSpinner';
+
+/**
+ * SEO 策略枚举
+ */
+export type SeoStrategy = 'GOOGLE_MOBILE' | 'BING_DESKTOP';
+
+/**
+ * 获取温度对应的 SEO 策略 (Deterministic Diversification + Keyword Intelligence)
+ * 逻辑：
+ * 1. 关键词强匹配： 'search'/'quick' -> Google, 'chart'/'table' -> Bing
+ * 2. 特殊物理点 (-40, 0, 100) -> 强制通用全能模式 (HYBRID) -> 但此处简化为根据 ID 分配
+ * 3. 偶数/整十数 -> BING (更传统，适合桌面搜索)
+ * 4. 奇数/非整十数 -> GOOGLE (更现代，适合移动端快速结果)
+ * 5. 强 Context (37, 180) -> GOOGLE (Answer First)
+ */
+export function getSeoStrategy(celsius: number, keywords: string[] = []): SeoStrategy {
+  // 0. Keyword Intelligence (Explicit Overrides)
+  const k = keywords.join(' ').toLowerCase();
+
+  if (k.includes('search') || k.includes('quick') || k.includes('answer') || k.includes('mobile') || k.includes('what is')) {
+    return 'GOOGLE_MOBILE';
+  }
+
+  if (k.includes('chart') || k.includes('table') || k.includes('list') || k.includes('pdf') || k.includes('desktop') || k.includes('bing')) {
+    return 'BING_DESKTOP';
+  }
+
+  // 1. 强 Context 优先给 Google (移动端场景多)
+  // (Unless explicit keyword override above)
+  const context = analyzeTemperature(celsius);
+  if (celsius === 37 || celsius === 180 || Math.abs(celsius + 40) < 0.1) {
+    return 'GOOGLE_MOBILE';
+  }
+
+  // 2. 简单确定性哈希：整数位偶数给 Bing，奇数给 Google
+  // 30 -> Bing, 25 -> Google
+  // 这样保证全站分布约 50/50
+  const integerPart = Math.floor(Math.abs(celsius));
+  return integerPart % 2 === 0 ? 'BING_DESKTOP' : 'GOOGLE_MOBILE';
 }
 
 /**
- * 生成页面标题
+ * 生成页面标题 (Strategy Aware)
  */
-export function generatePageTitle(celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string): string {
-  return t('meta.pageTitle', { celsius, fahrenheit: formatTemperature(fahrenheit) });
+export function generatePageTitle(
+  celsius: number,
+  fahrenheit: number,
+  t: (key: string, repl?: any) => string,
+  context?: TemperatureContext,
+  keywords?: string[]
+): string {
+  // 1. 获取策略 (with keywords)
+  const strategy = getSeoStrategy(celsius, keywords);
+
+  // 2. 获取场景关键词 (Oven, Body etc.)
+  // 仅在明确匹配时返回，否则为空字符串
+  const contextKey = context?.scene?.intentType || '';
+  const contextLabel = contextKey ? t(`seo.contextCredits.${contextKey}`, { defaultValue: '' }) : '';
+
+  // 3. -40 特例
+  if (Math.abs(celsius + 40) < 0.1) {
+    return t('meta.titles.sameValue', { celsius, fahrenheit });
+  }
+
+  // 4. BING 策略：传统的 "Convert X to Y" + 完整句子
+  if (strategy === 'BING_DESKTOP') {
+    // 优先：Convert {C} Celsius to Fahrenheit ({F}°F)
+    // 备选：{C}°C to Fahrenheit Conversion | {F}°F
+    return t('meta.titles.bing', { celsius, fahrenheit, context: contextLabel }).trim();
+  }
+
+  // 5. GOOGLE 策略：结果前置 + 紧凑
+  // 优先：{c}°C = {f}°F | {c} to Fahrenheit
+  // 备选 ({context} valid only): {c}°C = {f}°F | {ContextLabel}
+  return t('meta.titles.google', { celsius, fahrenheit, context: contextLabel }).trim();
 }
 
 /**
- * 生成Meta描述
+ * 生成 Meta 描述 (Strategy Aware)
  */
-export function generateMetaDescription(celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string): string {
-  return t('meta.description', { celsius, fahrenheit: formatTemperature(fahrenheit) });
+export function generateMetaDescription(
+  celsius: number,
+  fahrenheit: number,
+  t: (key: string, repl?: any) => string,
+  context?: TemperatureContext,
+  keywords?: string[]
+): string {
+  const strategy = getSeoStrategy(celsius, keywords);
+
+  // -40 特例
+  if (Math.abs(celsius + 40) < 0.1) {
+    return t('meta.descriptions.sameValue', { celsius, fahrenheit });
+  }
+
+  // 构造 Gas Mark 字符串 (Strict)
+  let gasMarkStr = '';
+  if (celsius >= 130 && celsius <= 240) { // Common Gas Mark Range
+    // 简单的 Look-up 模拟，实际应调用 getOvenGasMark
+    // 这里暂用通用占位，由 locale 处理
+  }
+
+  // BING: 强调 Formula, Exact Value
+  if (strategy === 'BING_DESKTOP') {
+    return t('meta.descriptions.bing', { celsius, fahrenheit });
+  }
+
+  // GOOGLE: Answer First, Context Driven
+  // 如果有 Context (Body/Cooking)，使用场景描述
+  if (context?.scene) {
+    return t('meta.descriptions.googleContext', {
+      celsius,
+      fahrenheit,
+      contextType: context.scene.intentType
+    });
+  }
+
+  // Google Fallback (无场景): 简洁转换
+  return t('meta.descriptions.googleGeneral', { celsius, fahrenheit });
 }
 
 /**
  * 生成OG描述
+ * (Typically same as Meta Description for consistency, or can have its own variant logic)
  */
 export function generateOGDescription(celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string): string {
-  return t('meta.ogDescription', { celsius, fahrenheit: formatTemperature(fahrenheit) });
+  return textSpinner.getMetaDescription(celsius, fahrenheit, t);
 }
 
 /**
  * 温度范围判断工具
+ */
+/**
+ * 温度场景枚举
+ */
+export type SceneType = 'BODY' | 'WEATHER' | 'OVEN' | 'WATER' | 'EXTREME_COLD' | 'EXTREME_HOT';
+
+/**
+ * 场景配置接口 (Enhanced for Grouped Rendering)
+ */
+interface SceneConfig {
+  name: SceneType;
+  range: [number, number]; // [min, max] inclusive
+  precisionSteps: number[]; // e.g. [-1, 1] for neighbors
+  anchors: { val: number; labelKey?: string }[]; // Benchmarks with semantic labels
+  reverseRoundTo?: number; // Round Fahrenheit to nearest X
+  intentType?: string;
+}
+
+/**
+ * 全局温度场景配置表
+ * SYSTEM CORE: 定义了整个网站的温度世界观
+ */
+const SCENE_CONFIGS: Record<SceneType, SceneConfig> = {
+  // 1. BODY: 32.0 <= T <= 42.9 (Medical Context Dominates)
+  // Fix: Extended slightly to cover 42.x, but explicitly stop before 43.
+  // 43 is technically survivable short term but usually transitions to "HOT WATER" in common perception unless specifically medical.
+  // Let's keep BODY focused. 35-42 is the core.
+  BODY: {
+    name: 'BODY',
+    range: [32.0, 42.99],
+    precisionSteps: [-0.5, -0.1, 0.1, 0.5], // Micro-adjustments
+    anchors: [
+      { val: 36.5, labelKey: 'normalLow' },
+      { val: 37.0, labelKey: 'normalBodyTemp' },
+      { val: 38.0, labelKey: 'feverThreshold' },
+      { val: 39.0, labelKey: 'highFever' },
+      { val: 40.0, labelKey: 'dangerousFever' }, // 40 is key
+      { val: 42.0, labelKey: 'criticalLimit' }   // 42 is boundary
+    ],
+    reverseRoundTo: 1, // 98, 99...
+    intentType: 'medical'
+  },
+  // 2. WEATHER: -50.0 <= T < 32.0
+  // Refined: Focused on Human-scale weather (-20 to 40), removed excessive noise
+  WEATHER: {
+    name: 'WEATHER',
+    range: [-50.0, 31.99],
+    precisionSteps: [-2, -1, 1, 2], // Close neighbors
+    anchors: [
+      { val: 0, labelKey: 'freezingPoint' },
+      { val: 10, labelKey: 'coolWeather' },
+      { val: 20, labelKey: 'roomTemp' },
+      { val: 25, labelKey: 'warm' },
+      { val: 30, labelKey: 'hotWeather' }
+    ],
+    reverseRoundTo: 10, // 0, 10, 20...
+    intentType: 'weather'
+  },
+  // 3. WATER: 43.0 <= T < 100.0
+  // Fix: Starts at 43.0. 
+  // Anchor Fix: 47 is WATER scene. 
+  // But wait, 47C is "Painful Hot Water" or "Extreme Weather". 
+  // The user concern was 47C showing "Green Tea".
+  // Green Tea is 70C. 
+  // The problem was 47C seeing distant anchors like 70/80.
+  // We need Closest logic to handle that (which we did).
+  // But also, we need anchors relevant to 40-50 range if possible?
+  // 50C is Hot Bath limit.
+  WATER: {
+    name: 'WATER',
+    range: [43.0, 99.99],
+    precisionSteps: [-1, 1, 2], // Tighter steps. Removed +5.
+    anchors: [
+      { val: 50, labelKey: 'extremeHotBath' },
+      { val: 60, labelKey: 'hotWater' },
+      { val: 70, labelKey: 'greenTea' },
+      { val: 80, labelKey: 'coffeeBrewing' },
+      { val: 100, labelKey: 'boilingPoint' }
+    ],
+    reverseRoundTo: 10,
+    intentType: 'liquid'
+  },
+  // 4. OVEN: 100.0 <= T <= 300.0
+  OVEN: {
+    name: 'OVEN',
+    range: [100.0, 300.0],
+    precisionSteps: [-10, -5, 5, 10], // Knobs usually 10-20 diff, but we want close neighbors
+    anchors: [
+      { val: 160, labelKey: 'slowBake' },
+      { val: 180, labelKey: 'moderateOven' },
+      { val: 200, labelKey: 'hotOven' },
+      { val: 220, labelKey: 'veryHot' }
+    ],
+    reverseRoundTo: 25, // 325, 350, 375
+    intentType: 'cooking'
+  },
+  // 5a. EXTREME_COLD
+  EXTREME_COLD: {
+    name: 'EXTREME_COLD',
+    range: [-Number.MAX_VALUE, -50.01],
+    precisionSteps: [-10, 10],
+    anchors: [
+      { val: -273.15, labelKey: 'absoluteZero' },
+      { val: -78.5, labelKey: 'dryIce' }
+    ],
+    reverseRoundTo: 50,
+    intentType: 'science'
+  },
+  // 5b. EXTREME_HOT
+  EXTREME_HOT: {
+    name: 'EXTREME_HOT',
+    range: [300.01, Number.MAX_VALUE],
+    precisionSteps: [-50, 50],
+    anchors: [
+      { val: 1064, labelKey: 'goldMelting' }
+    ],
+    reverseRoundTo: 100,
+    intentType: 'industrial'
+  }
+};
+
+/**
+ * 获取温度对应的场景配置
+ */
+export function getTemperatureScene(celsius: number): SceneConfig {
+  if (celsius >= 32.0 && celsius <= 43.0) return SCENE_CONFIGS.BODY;
+  if (celsius >= 100.0 && celsius <= 300.0) return SCENE_CONFIGS.OVEN; // Check OVEN before WATER edge case if overlapped (not overlapping here)
+  if (celsius > 43.0 && celsius < 100.0) return SCENE_CONFIGS.WATER;
+  if (celsius >= -50.0 && celsius < 32.0) return SCENE_CONFIGS.WEATHER;
+  if (celsius < -50.0) return SCENE_CONFIGS.EXTREME_COLD;
+  return SCENE_CONFIGS.EXTREME_HOT;
+}
+
+/**
+ * 温度范围判断工具 (Enhanced with Scene)
  */
 export interface TemperatureContext {
   isBodyTemperature: boolean;
@@ -183,12 +409,16 @@ export interface TemperatureContext {
   isExtremeCold: boolean;
   categoryKeys: string[];
   descriptionKey: string;
+  scene?: SceneConfig; // New field
 }
 
 /**
  * 分析温度并返回其上下文信息
+ * (Legacy + New Scene Logic)
  */
 export function analyzeTemperature(celsius: number): TemperatureContext {
+  const scene = getTemperatureScene(celsius);
+
   const isBodyTemperature = celsius >= 35 && celsius <= 42;
   const isFever = celsius >= 38;
   const isDangerousFever = celsius >= 41;
@@ -199,6 +429,7 @@ export function analyzeTemperature(celsius: number): TemperatureContext {
   const categoryKeys: string[] = [];
   let descriptionKey = '';
 
+  // Legacy mappings (preserving existing UI logic)
   if (isBodyTemperature) {
     categoryKeys.push('body');
     if (isFever) {
@@ -249,13 +480,9 @@ export function analyzeTemperature(celsius: number): TemperatureContext {
     isCold,
     isExtremeCold,
     categoryKeys,
-    descriptionKey
+    descriptionKey,
+    scene // Attach new scene config
   };
 }
 
-/**
- * 将华氏度转换为摄氏度
- */
-export function fahrenheitToCelsius(fahrenheit: number): number {
-  return (fahrenheit - 32) * 5 / 9;
-}
+

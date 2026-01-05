@@ -8,6 +8,7 @@
   "page": {
     "title": "47°C to Fahrenheit ({fahrenheit}°F) - Complete Conversion Guide",
     "description": "Convert <strong>47 degrees Celsius to Fahrenheit</strong> instantly. <strong>47°C equals {fahrenheit}°F</strong>. Learn the exact conversion formula, step-by-step calculation, and understand why 47°C is an extremely dangerous temperature for body temperature and represents extreme heat in environmental conditions.",
+    "intro": "47°C ({fahrenheit}°F) is an extremely hot temperature, significantly above normal body temperature and representing dangerous environmental heat.",
     "resultText": "Forty-seven degrees Celsius equals {fahrenheit} degrees Fahrenheit"
   },
   "warning": {
@@ -52,10 +53,6 @@
   },
   "faq": {
     "items": [
-      {
-        "question": "What is 47 degrees Celsius in Fahrenheit?",
-        "answer": "47 degrees Celsius equals {fahrenheit} degrees Fahrenheit. To convert, use the formula: °F = (°C × 9/5) + 32. So 47 × 1.8 + 32 = {fahrenheit}°F."
-      },
       {
         "question": "Is 47°C a fever temperature?",
         "answer": "Yes, 47°C ({fahrenheit}°F) is an extremely dangerous fever temperature. Normal body temperature is around 37°C (98.6°F), and 47°C represents life-threatening hyperthermia that requires immediate medical emergency attention. This is not a typical fever but a medical emergency."

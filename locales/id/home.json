@@ -15,12 +15,13 @@
     "current": "Celsius ke Fahrenheit"
   },
   "reference": {
-    "title": "Konversi Celsius ke Fahrenheit yang umum",
+    "title": "Konversi Suhu Terbaru",
     "updatedLabel": "Diperbarui:",
     "downloadButton": {
       "text": "Unduh tabel konversi Celsius ke Fahrenheit (PDF)",
       "aria": "Unduh tabel konversi Celsius ke Fahrenheit dalam format PDF"
     },
+    "itemFormat": "{c}°C ke Fahrenheit ({f}°F)",
     "infoCard": {
       "title": "Tentang satuan Celsius dan Fahrenheit",
       "paragraphs": [
@@ -92,4 +93,3 @@
     ]
   }
 }
-

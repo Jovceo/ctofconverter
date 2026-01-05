@@ -7,7 +7,8 @@
     },
     "page": {
         "title": "47°C in Fahrenheit ({fahrenheit}°F) - Vollständiger Leitfaden",
-        "description": "Konvertieren Sie <strong>47 Grad Celsius sofort in Fahrenheit</strong>. <strong>47°C entsprechen {fahrenheit}°F</strong>. Lernen Sie die exakte Formel, die schrittweise Berechnung und warum 47°C eine extrem gefährliche Körpertemperatur ist.",
+        "description": "Rechnen Sie sofort <strong>47 Grad Celsius in Fahrenheit</strong> um. <strong>47°C entspricht {fahrenheit}°F</strong>. Lernen Sie die genaue Umrechnungsformel, die schrittweise Berechnung und verstehen Sie, warum 47°C eine extrem gefährliche Temperatur für den Körper ist und extreme Hitze in der Umgebung darstellt.",
+        "intro": "47°C ({fahrenheit}°F) ist eine extrem heiße Temperatur, die deutlich über der normalen Körpertemperatur liegt und gefährliche Umgebungshitze darstellt.",
         "resultText": "Siebenundvierzig Grad Celsius entsprechen {fahrenheit} Grad Fahrenheit"
     },
     "warning": {

@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": "Convertidor de Celsius a Fahrenheit | Herramienta instantánea °C a °F",
-    "description": "Utiliza nuestro convertidor multilingüe de Celsius a Fahrenheit para obtener resultados precisos, ejemplos prácticos, preguntas frecuentes y tablas descargables.",
+    "description": "Utiliza nuestro convertidor de Celsius a Fahrenheit para obtener resultados precisos, ejemplos prácticos, preguntas frecuentes y tablas descargables.",
     "ogTitle": "Convertidor de Celsius a Fahrenheit",
     "ogDescription": "Convierte °C a °F al instante con pasos detallados, tablas y escenarios reales.",
     "twitterTitle": "Convertidor de Celsius a Fahrenheit",
-    "twitterDescription": "Convertidor gratuito y multilingüe de °C → °F con fórmulas, consejos y tablas PDF."
+    "twitterDescription": "Convertidor gratuito de °C → °F con fórmulas, consejos y tablas PDF."
   },
   "header": {
     "title": "Convertidor de Celsius a Fahrenheit (°C a °F)",
@@ -66,12 +66,13 @@
     ]
   },
   "reference": {
-    "title": "Conversiones Comunes de Celsius a Fahrenheit",
+    "title": "Últimas Conversiones de Temperatura",
     "updatedLabel": "Actualizado el:",
     "downloadButton": {
       "text": "Descarga la tabla de conversión de Celsius a Fahrenheit (PDF)",
       "aria": "Descargar tabla de conversión de Celsius a Fahrenheit en formato PDF"
     },
+    "itemFormat": "{c}°C a Fahrenheit ({f}°F)",
     "infoCard": {
       "title": "Sobre las unidades Celsius y Fahrenheit",
       "paragraphs": [

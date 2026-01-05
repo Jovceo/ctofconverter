@@ -7,7 +7,8 @@
     },
     "page": {
         "title": "75°C in Fahrenheit ({fahrenheit}°F) - Komplette Umrechnungs-Anleitung",
-        "description": "Rechnen Sie <strong>75 Grad Celsius sofort in Fahrenheit</strong> um. <strong>75°C entsprechen {fahrenheit}°F</strong>. Egal ob Sie <strong>75 Grad Celsius für den Backofen</strong> suchen, Industrietrocknung oder wissenschaftliche Forschung – dieser Guide bietet die exakte Mathematik und den Kontext. Nutzen Sie unsere <strong>75 C in F Tabelle</strong> und Formel, um diese hohe Temperatur zu verstehen.",
+        "description": "Rechnen Sie sofort <strong>75 Grad Celsius in Fahrenheit</strong> um. <strong>75°C entspricht {fahrenheit}°F</strong>. Egal, ob Sie <strong>75 Celsius in Fahrenheit für Ofeneinstellungen</strong>, Industrietrocknung oder wissenschaftliche Forschung suchen, dieser Leitfaden liefert die genaue Berechnung und den erforderlichen Kontext. Nutzen Sie unsere <strong>75 C in F Tabelle</strong> und Formel, um diese hohe Temperatur zu verstehen.",
+        "intro": "75°C ({fahrenheit}°F) ist eine extrem heiße Temperatur, die weit über der sicheren Grenze für Wasser liegt und sofortige schwere Verbrennungen verursacht.",
         "resultText": "Fünfundsiebzig Grad Celsius entsprechen {fahrenheit} Grad Fahrenheit"
     },
     "warning": {

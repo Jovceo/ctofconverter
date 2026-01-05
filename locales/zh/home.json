@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "摄氏度转华氏度转换器 | 多语言 °C 转 °F 工具",
-    "description": "使用我们的多语言摄氏度转华氏度转换器获取准确结果、实用示例、常见问题与可下载图表。",
+    "title": "摄氏度转华氏度转换器 | °C 转 °F 工具",
+    "description": "使用我们的摄氏度转华氏度转换器获取准确结果、实用示例、常见问题与可下载图表。",
     "ogTitle": "摄氏度转华氏度转换器",
     "ogDescription": "秒级完成 °C → °F 换算，并附公式、步骤与真实场景。",
     "twitterTitle": "摄氏度转华氏度转换器",
-    "twitterDescription": "免费多语言 °C → °F 转换器，提供公式、提示与 PDF 图表。"
+    "twitterDescription": "免费 °C → °F 转换器，提供公式、提示与 PDF 图表。"
   },
   "header": {
     "title": "摄氏度转华氏度转换器（°C 转 °F）",
@@ -66,12 +66,13 @@
     ]
   },
   "reference": {
-    "title": "常见的摄氏度转华氏度换算",
+    "title": "最新温度转换",
     "updatedLabel": "更新日期：",
     "downloadButton": {
       "text": "下载摄氏度转华氏度转换图表（PDF）",
       "aria": "下载摄氏度转华氏度转换图表 PDF 文件"
     },
+    "itemFormat": "{c}°C 转 华氏度 ({f}°F)",
     "infoCard": {
       "title": "关于摄氏度与华氏度",
       "paragraphs": [

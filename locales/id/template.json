@@ -4,6 +4,34 @@
         "description": "Konversikan {celsius} derajat Celsius ke Fahrenheit dengan cepat. Pelajari bahwa {celsius}°C sama dengan {fahrenheit}°F, lihat langkah perhitungan, dan pahami konteks suhu.",
         "ogDescription": "Konversikan {celsius} derajat Celsius ke Fahrenheit secara instan. {celsius}°C sama dengan {fahrenheit}°F - lihat langkah perhitungan dan aplikasi praktis."
     },
+    "related": {
+        "conversionTitle": "{celsius} Celcius ke Fahrenheit ({fahrenheit}°F)",
+        "labels": {
+            "freezingPoint": "Titik Beku",
+            "coolWeather": "Cuaca Sejuk",
+            "roomTemp": "Suhu Ruangan",
+            "warm": "Hangat",
+            "hotWeather": "Cuaca Panas",
+            "normalLow": "Normal Rendah",
+            "normalBodyTemp": "Suhu Tubuh Normal",
+            "feverThreshold": "Ambang Demam",
+            "highFever": "Demam Tinggi",
+            "dangerousFever": "Demam Berbahaya",
+            "criticalLimit": "Batas Kritis",
+            "extremeHotBath": "Mandi Sangat Panas",
+            "hotWater": "Air Panas",
+            "greenTea": "Teh Hijau",
+            "coffeeBrewing": "Menyeduh Kopi",
+            "boilingPoint": "Titik Didih",
+            "slowBake": "Panggang Lambat",
+            "moderateOven": "Oven Sedang",
+            "hotOven": "Oven Panas",
+            "veryHot": "Sangat Panas",
+            "absoluteZero": "Nol Mutlak",
+            "dryIce": "Es Kering",
+            "goldMelting": "Titik Leleh Emas"
+        }
+    },
     "common": {
         "quickResult": "Hasil Konversi Cepat",
         "copyResult": "📋 Salin Hasil",
@@ -218,7 +246,21 @@
     },
     "editorial": {
         "title": "Catatan Editor",
-        "note": "Catatan Editor: Konten konversi suhu ini ditinjau oleh pakar meteorologi dan pendidik sains untuk memastikan keakuratan perhitungan fisik. Konteks aplikasi praktis seperti suhu tubuh atau rasa cuaca mengikuti pedoman standar dari NIST dan Organisasi Kesehatan Dunia (WHO).",
-        "sources": "Sumber: NIST, Physical Science Center, USDA."
+        "medical": {
+            "note": "Catatan Editor: Konten ditinjau untuk keakuratan. Konteks aplikasi praktis seperti suhu tubuh mengikuti pedoman NIST dan Organisasi Kesehatan Dunia (WHO).",
+            "sources": "Sumber: NIST, Physical Science Center, USDA."
+        },
+        "weather": {
+            "note": "Catatan Editor: Konten ditinjau untuk keakuratan. Konteks aplikasi praktis seperti rasa cuaca mengikuti pedoman NIST.",
+            "sources": "Sumber: NIST, Physical Science Center, USDA."
+        },
+        "cooking": {
+            "note": "Catatan Editor: Konten ditinjau untuk keakuratan. Konteks aplikasi praktis mengikuti pedoman NIST.",
+            "sources": "Sumber: NIST, Physical Science Center, USDA."
+        },
+        "general": {
+            "note": "Catatan Editor: Konten ditinjau untuk keakuratan. Mengikuti pedoman NIST.",
+            "sources": "Sumber: NIST, Physical Science Center, USDA."
+        }
     }
 }

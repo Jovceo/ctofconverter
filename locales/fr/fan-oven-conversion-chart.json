@@ -209,7 +209,15 @@
       },
       {
         "title": "6. Ajustements en Haute Altitude",
-        "text": "À des altitudes supérieures à 900m (3000 pieds), vous pourriez avoir besoin de réductions de température supplémentaires de 5 à 10°C dans les fours à convection."
+        "text": "À des altitudes supérieures à 900m (3000 pieds), vous devrez peut-être réduire la température de 5 à 10°C supplémentaires dans les fours à chaleur tournante."
+      },
+      {
+        "title": "7. Tenir compte des variations de marque",
+        "text": "Chaque marque de four a une vitesse de ventilateur légèrement différente. Si votre four à chaleur tournante est particulièrement puissant (comme certains modèles professionnels), vous devrez peut-être réduire la température de 25°C au lieu des 20°C standard."
+      },
+      {
+        "title": "8. Toujours préchauffer complètement",
+        "text": "Les fours à chaleur tournante atteignent la température plus rapidement, mais pour cuire des articles délicats comme des soufflés ou des gâteaux, attendez au moins 15 minutes après l'extinction du voyant 'température atteinte' pour vous assurer que les parois du four sont entièrement chauffées."
       }
     ]
   },

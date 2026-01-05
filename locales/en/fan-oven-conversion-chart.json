@@ -134,6 +134,108 @@
     },
     "download": {
       "text": "Download Printable Chart (PDF)"
+    },
+    "tableRows": {
+      "celsius": [
+        {
+          "temp": "250°C",
+          "fanTemp": "230°C",
+          "uses": "Pizza, artisan bread",
+          "tip": "Use pizza stone for crispier crust",
+          "link": "/250-c-to-f.html",
+          "ariaLabel": "Convert 250 Celsius to Fahrenheit"
+        },
+        {
+          "temp": "220°C",
+          "fanTemp": "200°C",
+          "uses": "Roasting meats, puff pastry",
+          "tip": "Rotate pans halfway for even browning",
+          "link": "/220-c-to-f.html",
+          "ariaLabel": "Convert 220 Celsius to Fahrenheit"
+        },
+        {
+          "temp": "200°C",
+          "fanTemp": "180°C",
+          "uses": "Cookies, cupcakes",
+          "tip": "Bake one tray at a time for best results",
+          "link": "/200-c-to-f.html",
+          "ariaLabel": "Convert 200 Celsius to Fahrenheit"
+        },
+        {
+          "temp": "180°C",
+          "fanTemp": "160°C",
+          "uses": "Sponge cakes, muffins",
+          "tip": "Don't open oven during first 3/4 of bake time",
+          "link": "/180-c-to-f.html",
+          "ariaLabel": "Convert 180 Celsius to Fahrenheit"
+        },
+        {
+          "temp": "160°C",
+          "fanTemp": "140°C",
+          "uses": "Cheesecakes, meringues",
+          "tip": "Use water bath for delicate desserts",
+          "link": "/160-c-to-f.html",
+          "ariaLabel": "Convert 160 Celsius to Fahrenheit"
+        }
+      ],
+      "fahrenheit": [
+        {
+          "temp": "475°F",
+          "fanTemp": "425°F",
+          "uses": "Pizza, crusty bread",
+          "tip": "Preheat baking stone for 30+ minutes"
+        },
+        {
+          "temp": "425°F",
+          "fanTemp": "375°F",
+          "uses": "Roast chicken, flaky pastries",
+          "tip": "Use meat thermometer for perfect doneness"
+        },
+        {
+          "temp": "350°F",
+          "fanTemp": "320°F",
+          "uses": "Most cakes, cookies",
+          "tip": "Check for doneness 5 minutes early"
+        }
+      ],
+      "gasMark": [
+        {
+          "mark": "9",
+          "fanC": "240°C",
+          "fanF": "465°F",
+          "uses": "Searing meats, pizza"
+        },
+        {
+          "mark": "7",
+          "fanC": "200°C",
+          "fanF": "400°F",
+          "uses": "Roasting vegetables"
+        },
+        {
+          "mark": "5",
+          "fanC": "170°C",
+          "fanF": "340°F",
+          "uses": "Fruit cakes, casseroles"
+        },
+        {
+          "mark": "4",
+          "fanC": "180°C",
+          "fanF": "350°F",
+          "uses": "Cakes, cookies, roasting"
+        },
+        {
+          "mark": "3",
+          "fanC": "140°C",
+          "fanF": "275°F",
+          "uses": "Meringues, delicate baking"
+        },
+        {
+          "mark": "2",
+          "fanC": "150°C",
+          "fanF": "300°F",
+          "uses": "Slow cooking, casseroles"
+        }
+      ]
     }
   },
   "foodGuide": {

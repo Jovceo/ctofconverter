@@ -4,6 +4,34 @@
         "description": "Converta {celsius} graus Celsius para Fahrenheit rapidamente. Aprenda que {celsius}°C é igual a {fahrenheit}°F, veja os passos do cálculo e entenda o contexto da temperatura.",
         "ogDescription": "Converta {celsius} graus Celsius para Fahrenheit instantaneamente. {celsius}°C é igual a {fahrenheit}°F - veja os passos do cálculo e aplicações práticas."
     },
+    "related": {
+        "conversionTitle": "{celsius} Celsius para Fahrenheit ({fahrenheit}°F)",
+        "labels": {
+            "freezingPoint": "Ponto de Congelamento",
+            "coolWeather": "Clima Fresco",
+            "roomTemp": "Temperatura Ambiente",
+            "warm": "Morno",
+            "hotWeather": "Clima Quente",
+            "normalLow": "Normal Baixo",
+            "normalBodyTemp": "Temperatura Corporal Normal",
+            "feverThreshold": "Limiar de Febre",
+            "highFever": "Febre Alta",
+            "dangerousFever": "Febre Perigosa",
+            "criticalLimit": "Limite Crítico",
+            "extremeHotBath": "Banho Muito Quente",
+            "hotWater": "Água Quente",
+            "greenTea": "Chá Verde",
+            "coffeeBrewing": "Preparar Café",
+            "boilingPoint": "Ponto de Ebulição",
+            "slowBake": "Assar Lentamente",
+            "moderateOven": "Forno Moderado",
+            "hotOven": "Forno Quente",
+            "veryHot": "Muito Quente",
+            "absoluteZero": "Zero Absoluto",
+            "dryIce": "Gelo Seco",
+            "goldMelting": "Fusão do Ouro"
+        }
+    },
     "common": {
         "quickResult": "Resultado da Conversão Rápida",
         "copyResult": "📋 Copiar Resultado",
@@ -218,7 +246,21 @@
     },
     "editorial": {
         "title": "Nota Editorial",
-        "note": "Nota Editorial: Este conteúdo de conversão de temperatura foi revisado por especialistas em meteorologia e educadores científicos para garantir a precisão dos cálculos físicos. Os contextos de aplicação prática, como temperatura corporal ou sensação térmica, seguem as diretrizes padrão do NIST e da Organização Mundial da Saúde (OMS).",
-        "sources": "Fontes: NIST, Physical Science Center, USDA."
+        "medical": {
+            "note": "Nota Editorial: Conteúdo revisado para precisão. Os contextos de aplicação prática, como temperatura corporal seguem as diretrizes padrão do NIST e da Organização Mundial da Saúde (OMS).",
+            "sources": "Fontes: NIST, Physical Science Center, USDA."
+        },
+        "weather": {
+            "note": "Nota Editorial: Conteúdo revisado para precisão. Os contextos de aplicação prática como sensação térmica seguem as diretrizes padrão do NIST.",
+            "sources": "Fontes: NIST, Physical Science Center, USDA."
+        },
+        "cooking": {
+            "note": "Nota Editorial: Conteúdo revisado para precisão. Os contextos de aplicação prática seguem as diretrizes padrão do NIST.",
+            "sources": "Fontes: NIST, Physical Science Center, USDA."
+        },
+        "general": {
+            "note": "Nota Editorial: Conteúdo revisado para precisão. Segue as diretrizes padrão do NIST.",
+            "sources": "Fontes: NIST, Physical Science Center, USDA."
+        }
     }
 }

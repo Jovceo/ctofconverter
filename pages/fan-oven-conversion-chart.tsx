@@ -65,25 +65,38 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     `locales/${currentLocale}/fan-oven-conversion-chart.json`
   ]);
 
-  // Load translations manually to avoid bundling all locales
-  const loadJSON = (p: string) => {
+  // Helper to deep merge objects
+  const deepMerge = (target: any, source: any) => {
+    for (const key of Object.keys(source)) {
+      if (source[key] instanceof Object && key in target) {
+        Object.assign(source[key], deepMerge(target[key], source[key]));
+      }
+    }
+    Object.assign(target || {}, source);
+    return target;
+  };
+
+  const loadJSON = (loc: string, p: string) => {
     try {
-      const filePath = path.join(process.cwd(), 'locales', currentLocale, p);
+      const filePath = path.join(process.cwd(), 'locales', loc, p);
       const fileContent = fs.readFileSync(filePath, 'utf8');
       return JSON.parse(fileContent);
     } catch {
-      // Fallback to en
-      try {
-        const filePathEn = path.join(process.cwd(), 'locales', 'en', p);
-        const fileContentEn = fs.readFileSync(filePathEn, 'utf8');
-        return JSON.parse(fileContentEn);
-      } catch {
-        return {};
-      }
+      return {};
     }
   };
 
-  const pageTrans = loadJSON('fan-oven-conversion-chart.json');
+  // 1. Load English (Base)
+  const enTrans = loadJSON('en', 'fan-oven-conversion-chart.json');
+
+  // 2. Load Current Locale (if different)
+  let pageTrans = enTrans;
+  if (currentLocale !== 'en') {
+    const locTrans = loadJSON(currentLocale, 'fan-oven-conversion-chart.json');
+    // Simple deep merge or spread for critical sections
+    // Given the structure, a recursive merge is safest to ensure 'tableRows' are preserved if missing in target
+    pageTrans = deepMerge(JSON.parse(JSON.stringify(enTrans)), locTrans);
+  }
   // We might not need common if keys are full? But let's load it just in case if keys use 'common:' prefix or similar?
   // Looking at the code, it uses 't' with keys like 'intro.title'.
   // But wait, Layout/Header/Footer might use common translations.
@@ -373,7 +386,6 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
       title: t('meta.title'),
       description: t('meta.description'),
       author: t('meta.author'),
-      keywords: t('meta.keywords'),
       ogTitle: t('meta.ogTitle'),
       ogDescription: t('meta.ogDescription'),
       ogImage: `${siteOrigin}${t('meta.ogImage')}`,
@@ -604,76 +616,26 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          <a
-                            href="/250-c-to-f.html"
-                            title="Convert 250 Celsius to Fahrenheit"
-                            aria-label="Convert 250 Celsius to Fahrenheit"
-                          >
-                            250°C
-                          </a>
-                        </td>
-                        <td>230°C</td>
-                        <td>Pizza, artisan bread</td>
-                        <td>Use pizza stone for crispier crust</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <a
-                            href="/220-c-to-f.html"
-                            title="Convert 220 Celsius to Fahrenheit"
-                            aria-label="Convert 220 Celsius to Fahrenheit"
-                          >
-                            220°C
-                          </a>
-                        </td>
-                        <td>200°C</td>
-                        <td>Roasting meats, puff pastry</td>
-                        <td>Rotate pans halfway for even browning</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <a
-                            href="/200-c-to-f.html"
-                            title="Convert 200 Celsius to Fahrenheit"
-                            aria-label="Convert 200 Celsius to Fahrenheit"
-                          >
-                            200°C
-                          </a>
-                        </td>
-                        <td>180°C</td>
-                        <td>Cookies, cupcakes</td>
-                        <td>Bake one tray at a time for best results</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <a
-                            href="/180-c-to-f.html"
-                            title="Convert 180 Celsius to Fahrenheit"
-                            aria-label="Convert 180 Celsius to Fahrenheit"
-                          >
-                            180°C
-                          </a>
-                        </td>
-                        <td>160°C</td>
-                        <td>Sponge cakes, muffins</td>
-                        <td>Don&apos;t open oven during first 3/4 of bake time</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <a
-                            href="/160-c-to-f.html"
-                            title="Convert 160 Celsius to Fahrenheit"
-                            aria-label="Convert 160 Celsius to Fahrenheit"
-                          >
-                            160°C
-                          </a>
-                        </td>
-                        <td>140°C</td>
-                        <td>Cheesecakes, meringues</td>
-                        <td>Use water bath for delicate desserts</td>
-                      </tr>
+                      {(t('charts.tableRows.celsius') as any[] || []).map((row, i) => (
+                        <tr key={i}>
+                          <td>
+                            {row.link ? (
+                              <a
+                                href={row.link}
+                                title={row.ariaLabel}
+                                aria-label={row.ariaLabel}
+                              >
+                                {row.temp}
+                              </a>
+                            ) : (
+                              row.temp
+                            )}
+                          </td>
+                          <td>{row.fanTemp}</td>
+                          <td>{row.uses}</td>
+                          <td>{row.tip}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -699,24 +661,14 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>475°F</td>
-                        <td>425°F</td>
-                        <td>Pizza, crusty bread</td>
-                        <td>Preheat baking stone for 30+ minutes</td>
-                      </tr>
-                      <tr>
-                        <td>425°F</td>
-                        <td>375°F</td>
-                        <td>Roast chicken, flaky pastries</td>
-                        <td>Use meat thermometer for perfect doneness</td>
-                      </tr>
-                      <tr>
-                        <td>350°F</td>
-                        <td>320°F</td>
-                        <td>Most cakes, cookies</td>
-                        <td>Check for doneness 5 minutes early</td>
-                      </tr>
+                      {(t('charts.tableRows.fahrenheit') as any[] || []).map((row, i) => (
+                        <tr key={i}>
+                          <td>{row.temp}</td>
+                          <td>{row.fanTemp}</td>
+                          <td>{row.uses}</td>
+                          <td>{row.tip}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -742,42 +694,14 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>9</td>
-                        <td>240°C</td>
-                        <td>465°F</td>
-                        <td>Searing meats, pizza</td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td>200°C</td>
-                        <td>400°F</td>
-                        <td>Roasting vegetables</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>170°C</td>
-                        <td>340°F</td>
-                        <td>Fruit cakes, casseroles</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>180°C</td>
-                        <td>350°F</td>
-                        <td>Cakes, cookies, roasting</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>140°C</td>
-                        <td>275°F</td>
-                        <td>Meringues, delicate baking</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>150°C</td>
-                        <td>300°F</td>
-                        <td>Slow cooking, casseroles</td>
-                      </tr>
+                      {(t('charts.tableRows.gasMark') as any[] || []).map((row, i) => (
+                        <tr key={i}>
+                          <td>{row.mark}</td>
+                          <td>{row.fanC}</td>
+                          <td>{row.fanF}</td>
+                          <td>{row.uses}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>

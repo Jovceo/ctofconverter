@@ -12,6 +12,8 @@ export interface ContentStrategy {
         intro: string;
         description: string;
     };
+    // 🏷️ 原始关键词 (用于 SEO 策略)
+    keywords?: string[];
     // 🧠 动态洞察
     insights?: {
         title: string;
@@ -174,6 +176,7 @@ export function generateContentStrategy(celsius: number, keyword: string = ''): 
             intro: '',
             description: ''
         },
+        keywords: k.split(' '),
         insights: detectedInsights,
         faqs: detectedFaqs
     };

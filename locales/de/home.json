@@ -66,12 +66,13 @@
         ]
     },
     "reference": {
-        "title": "Häufige Celsius-in-Fahrenheit-Umrechnungen",
+        "title": "Neueste Temperaturumrechnungen",
         "updatedLabel": "Aktualisiert am:",
         "downloadButton": {
             "text": "Celsius-in-Fahrenheit-Umrechnungstabelle herunterladen (PDF)",
             "aria": "Celsius-in-Fahrenheit-Umrechnungstabelle als PDF herunterladen"
         },
+        "itemFormat": "{c}°C in Fahrenheit ({f}°F)",
         "infoCard": {
             "title": "Über Celsius- und Fahrenheit-Temperatureinheiten",
             "paragraphs": [

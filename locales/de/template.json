@@ -4,6 +4,34 @@
         "description": "Rechnen Sie {celsius} Grad Celsius schnell in Fahrenheit um. Erfahren Sie, dass {celsius}°C gleich {fahrenheit}°F ist.",
         "ogDescription": "Celsius in Fahrenheit Umrechnung: {celsius}°C = {fahrenheit}°F. Sehen Sie sich die Berechnungsschritte an."
     },
+    "related": {
+        "conversionTitle": "{celsius} Celsius in Fahrenheit ({fahrenheit}°F)",
+        "labels": {
+            "freezingPoint": "Gefrierpunkt",
+            "coolWeather": "Kühles Wetter",
+            "roomTemp": "Zimmertemperatur",
+            "warm": "Warm",
+            "hotWeather": "Heißes Wetter",
+            "normalLow": "Normal niedrig",
+            "normalBodyTemp": "Normale Körpertemperatur",
+            "feverThreshold": "Fieberschwelle",
+            "highFever": "Hohes Fieber",
+            "dangerousFever": "Gefährliches Fieber",
+            "criticalLimit": "Kritische Grenze",
+            "extremeHotBath": "Extrem heißes Bad",
+            "hotWater": "Heißes Wasser",
+            "greenTea": "Grüner Tee",
+            "coffeeBrewing": "Kaffee kochen",
+            "boilingPoint": "Siedepunkt",
+            "slowBake": "Langsames Backen",
+            "moderateOven": "Mäßiger Ofen",
+            "hotOven": "Heißer Ofen",
+            "veryHot": "Sehr heiß",
+            "absoluteZero": "Absoluter Nullpunkt",
+            "dryIce": "Trockeneis",
+            "goldMelting": "Goldschmelze"
+        }
+    },
     "common": {
         "quickResult": "Schnelles Ergebnis",
         "copyResult": "📋 Kopieren",
@@ -188,7 +216,21 @@
     },
     "editorial": {
         "title": "Redaktioneller Hinweis",
-        "note": "Redaktioneller Hinweis: Auf wissenschaftliche Genauigkeit geprüft. Praktische Anwendungskontexte wie Körpertemperatur oder Wettergefühl folgen den Standardrichtlinien des NIST und der Weltgesundheitsorganisation (WHO).",
-        "sources": "Quellen: NIST, Physical Science Center, USDA."
+        "medical": {
+            "note": "Redaktioneller Hinweis: Auf wissenschaftliche Genauigkeit geprüft. Praktische Anwendungskontexte wie Körpertemperatur folgen den Standardrichtlinien des NIST und der Weltgesundheitsorganisation (WHO).",
+            "sources": "Quellen: NIST, Physical Science Center, USDA."
+        },
+        "weather": {
+            "note": "Redaktioneller Hinweis: Auf wissenschaftliche Genauigkeit geprüft. Praktische Anwendungskontexte wie Wettergefühl folgen den Standardrichtlinien des NIST.",
+            "sources": "Quellen: NIST, Physical Science Center, USDA."
+        },
+        "cooking": {
+            "note": "Redaktioneller Hinweis: Auf wissenschaftliche Genauigkeit geprüft. Praktische Anwendungskontexte folgen den Standardrichtlinien des NIST.",
+            "sources": "Quellen: NIST, Physical Science Center, USDA."
+        },
+        "general": {
+            "note": "Redaktioneller Hinweis: Auf wissenschaftliche Genauigkeit geprüft. Folgt den Standardrichtlinien des NIST.",
+            "sources": "Quellen: NIST, Physical Science Center, USDA."
+        }
     }
 }

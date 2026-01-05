@@ -209,7 +209,15 @@
       },
       {
         "title": "6. Höhenanpassungen",
-        "text": "In Höhen über 900m (3000 Fuß) benötigen Sie möglicherweise zusätzliche Temperaturreduzierungen von 5-10°C in Umluftöfen."
+        "text": "In Höhen über 900m (3000 Fuß) müssen Sie die Temperatur bei Umluftöfen möglicherweise um weitere 5-10°C reduzieren."
+      },
+      {
+        "title": "7. Markenunterschiede berücksichtigen",
+        "text": "Jede Ofenmarke hat eine etwas andere Lüftergeschwindigkeit. Wenn Ihr Umluftofen besonders leistungsstark ist (wie einige Profimodelle), müssen Sie die Temperatur möglicherweise um 25°C statt der üblichen 20°C reduzieren."
+      },
+      {
+        "title": "8. Immer vollständig vorheizen",
+        "text": "Umluftöfen erreichen die Temperatur schneller, aber warten Sie bei empfindlichen Speisen wie Soufflés oder Kuchen mindestens 15 Minuten, nachdem die 'Temperatur erreicht'-Leuchte erloschen ist, um sicherzustellen, dass die Ofenwände vollständig aufgeheizt sind."
       }
     ]
   },

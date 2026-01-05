@@ -209,7 +209,15 @@
       },
       {
         "title": "6. Ajustes de Alta Altitude",
-        "text": "Em altitudes acima de 900m (3000 pés), você pode precisar de reduções adicionais de temperatura de 5-10°C em fornos de convecção."
+        "text": "Em elevações acima de 900m (3000 pés), você pode precisar de reduções adicionais de temperatura de 5-10°C em fornos com ventilador."
+      },
+      {
+        "title": "7. Considere Variações de Marca",
+        "text": "Cada marca de forno tem uma velocidade de ventilador ligeiramente diferente. Se seu forno com ventilador for particularmente potente (como alguns modelos profissionais), você pode precisar reduzir a temperatura em 25°C em vez dos 20°C padrão."
+      },
+      {
+        "title": "8. Sempre Pré-aqueça Totalmente",
+        "text": "Fornos com ventilador atingem a temperatura mais rápido, mas para assar itens delicados como suflês ou bolos, espere pelo menos 15 minutos após a luz de 'temperatura atingida' apagar para garantir que as paredes do forno estejam totalmente aquecidas."
       }
     ]
   },

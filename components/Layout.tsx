@@ -8,7 +8,7 @@ import { useTranslation, DEFAULT_LOCALE, SUPPORTED_LOCALES, HREFLANG_MAP } from 
 export interface SEOProps {
   title?: string;
   description?: string;
-  keywords?: string;
+
   author?: string;
   robots?: string;
   ogTitle?: string;
@@ -21,6 +21,7 @@ export interface SEOProps {
   twitterImage?: string;
   twitterCard?: string;
   canonical?: string;
+  alternates?: { href: string; hreflang: string; locale?: string }[];
 }
 
 interface LayoutProps {
@@ -99,7 +100,7 @@ export default function Layout({ children, seo }: LayoutProps) {
   // SEO Helpers: Prioritize props over default translations
   const title = seo?.title || meta.defaultTitle || 'Celsius to Fahrenheit | °C to °F Converter';
   const description = seo?.description || meta.defaultDescription || 'Convert Celsius to Fahrenheit quickly with the C to F Converter.';
-  const keywords = seo?.keywords || meta.keywords || 'celsius to fahrenheit, temp converter, temperature converter';
+
   const author = seo?.author || meta.author || 'Temperature Conversion Experts';
   const robots = seo?.robots || 'index, follow';
 
@@ -123,17 +124,26 @@ export default function Layout({ children, seo }: LayoutProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" key="viewport" />
         <title key="title">{title}</title>
         <meta key="description" name="description" content={description} />
-        <meta key="keywords" name="keywords" content={keywords} />
+
         <meta key="author" name="author" content={author} />
         <meta key="robots" name="robots" content={robots} />
         <link rel="icon" href="https://ctofconverter.com/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="https://ctofconverter.com/apple-touch-icon.png" />
         <link key="canonical" rel="canonical" href={canonicalUrl} />
 
-        {alternateLinks.map((link) => (
-          <link key={`alternate-${link.locale}`} rel="alternate" hrefLang={link.hreflang} href={link.href} />
-        ))}
-        <link key="alternate-default" rel="alternate" hrefLang="x-default" href={defaultAlternate.href} />
+        {/* Priority: Explicit alternates from props, otherwise verify auto-generated ones */}
+        {seo?.alternates ? (
+          seo.alternates.map((link) => (
+            <link key={`alternate-${link.hreflang}`} rel="alternate" hrefLang={link.hreflang} href={link.href} />
+          ))
+        ) : (
+          <>
+            {alternateLinks.map((link) => (
+              <link key={`alternate-${link.locale}`} rel="alternate" hrefLang={link.hreflang} href={link.href} />
+            ))}
+            <link key="alternate-default" rel="alternate" hrefLang="x-default" href={defaultAlternate.href} />
+          </>
+        )}
 
         <meta key="og:title" property="og:title" content={ogTitle} />
         <meta key="og:description" property="og:description" content={ogDescription} />

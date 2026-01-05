@@ -7,7 +7,8 @@
     },
     "page": {
         "title": "47°C en Fahrenheit ({fahrenheit}°F) - Guide de conversion complet",
-        "description": "Convertissez instantanément <strong>47 degrés Celsius en Fahrenheit</strong>. <strong>47°C égalent {fahrenheit}°F</strong>. Apprenez la formule de conversion exacte, le calcul étape par étape et comprenez pourquoi 47°C est une température extrêmement dangereuse pour le corps humain et représente une chaleur extrême dans l'environnement.",
+        "description": "Convertissez instantanément <strong>47 degrés Celsius en Fahrenheit</strong>. <strong>47°C est égal à {fahrenheit}°F</strong>. Apprenez la formule de conversion exacte, le calcul étape par étape et comprenez pourquoi 47°C est une température extrêmement dangereuse pour le corps et représente une chaleur extrême dans l'environnement.",
+        "intro": "47°C ({fahrenheit}°F) est une température extrêmement chaude, nettement supérieure à la température corporelle normale et représentant une chaleur environnementale dangereuse.",
         "resultText": "Quarante-sept degrés Celsius égalent {fahrenheit} degrés Fahrenheit"
     },
     "warning": {
