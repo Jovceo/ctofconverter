@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[310],{2614:function(n,_,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/temperature-template",function(){return e(5625)}])}},function(n){n.O(0,[930,890,476,518,625,888,774,179],function(){return n(n.s=2614)}),_N_E=n.O()}]);
