@@ -14,9 +14,30 @@ export function getLatestModifiedDate(filePaths: string[]): string {
             : path.join(process.cwd(), filePath);
 
         if (fs.existsSync(fullPath)) {
-            const stats = fs.statSync(fullPath);
-            if (stats.mtime > latestMtime) {
-                latestMtime = stats.mtime;
+            try {
+                // Determine relative path for git command
+                const relPath = path.relative(process.cwd(), fullPath);
+                // Use git log to get the commit date
+                const gitDateStr = require('child_process').execSync(`git log -1 --format=%cI "${relPath}"`, { encoding: 'utf-8' }).trim();
+
+                if (gitDateStr) {
+                    const gitDate = new Date(gitDateStr);
+                    if (gitDate > latestMtime) {
+                        latestMtime = gitDate;
+                    }
+                } else {
+                    // Fallback to fs.statSync if git returns empty (e.g. untracked file)
+                    const stats = fs.statSync(fullPath);
+                    if (stats.mtime > latestMtime) {
+                        latestMtime = stats.mtime;
+                    }
+                }
+            } catch (e) {
+                // Fallback if git command fails (e.g. no git installed or not a repo)
+                const stats = fs.statSync(fullPath);
+                if (stats.mtime > latestMtime) {
+                    latestMtime = stats.mtime;
+                }
             }
         }
     });
