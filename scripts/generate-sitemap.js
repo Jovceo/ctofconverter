@@ -4,20 +4,39 @@ const path = require('path');
 const SITE_URL = 'https://ctofconverter.com';
 const FALLBACK_DATE = '2025-09-15';
 
-// Helper: 获取文件或目录列表中最新的修改日期
+const { execSync } = require('child_process');
+
+// Helper: 获取文件或目录列表中最新的修改日期 (优先使用 Git 提交时间)
 function getLatestModifiedDate(paths) {
-    let latestMtime = 0;
+    let latestDate = 0;
+
     paths.forEach(p => {
         const fullPath = path.isAbsolute(p) ? p : path.join(process.cwd(), p);
         if (fs.existsSync(fullPath)) {
-            const stats = fs.statSync(fullPath);
-            if (stats.mtimeMs > latestMtime) {
-                latestMtime = stats.mtimeMs;
+            try {
+                // 尝试从 Git 获取最后修改时间
+                // 使用 relative path 给 git 命令，避免绝对路径问题
+                const relPath = path.relative(process.cwd(), fullPath);
+                const gitDateStr = execSync(`git log -1 --format=%cI "${relPath}"`, { encoding: 'utf-8' }).trim();
+
+                if (gitDateStr) {
+                    const gitDate = new Date(gitDateStr).getTime();
+                    if (gitDate > latestDate) latestDate = gitDate;
+                } else {
+                    // Fallback: 如果 Git 没有记录 (例如新文件未提交)，使用文件系统时间
+                    const stats = fs.statSync(fullPath);
+                    if (stats.mtimeMs > latestDate) latestDate = stats.mtimeMs;
+                }
+            } catch (e) {
+                // Git 命令失败 (例如非 git 环境)，回退到文件系统时间
+                const stats = fs.statSync(fullPath);
+                if (stats.mtimeMs > latestDate) latestDate = stats.mtimeMs;
             }
         }
     });
-    return latestMtime > 0
-        ? new Date(latestMtime).toISOString().split('T')[0]
+
+    return latestDate > 0
+        ? new Date(latestDate).toISOString().split('T')[0]
         : FALLBACK_DATE;
 }
 
