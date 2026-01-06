@@ -2,7 +2,6 @@
 const nextConfig = {
   // 基础配置
   reactStrictMode: true,
-  swcMinify: true,
 
   // Enable internationalization - Support multiple locales
   i18n: {
@@ -13,7 +12,12 @@ const nextConfig = {
 
   // 图片优化
   images: {
-    domains: ['localhost'],
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
+    ],
     unoptimized: true,
   },
 

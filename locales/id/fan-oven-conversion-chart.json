@@ -350,5 +350,10 @@
         }
       ]
     }
+  },
+  "gameBanner": {
+    "title": "🌡️ Kuasai Panasnya!",
+    "description": "Jangan hanya membaca tabel—hafalkan dengan tantangan \"Lebih Panas atau Lebih Dingin\" kami. Cepat, seru, dan gratis!",
+    "button": "Mulai Tantangan →"
   }
 }

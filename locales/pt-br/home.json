@@ -91,5 +91,10 @@
         "answer": "Celsius é apenas uma unidade. O que importa é o valor: 37°C é normal, enquanto 60°C na pele pode causar queimaduras."
       }
     ]
+  },
+  "gameBanner": {
+    "title": "🌡️ Desafio de Temperatura",
+    "description": "Entediado com fórmulas? Teste sua intuição em nosso jogo <strong>Mais Quente ou Mais Frio</strong>!",
+    "button": "Iniciar Desafio →"
   }
 }

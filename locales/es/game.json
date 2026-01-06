@@ -1,0 +1,111 @@
+{
+    "meta": {
+        "title": "Desafío de Conversión de Temperatura: Juego Más Caliente o Más Frío | CtoFConverter",
+        "description": "¡Pon a prueba tus instintos de temperatura en la cocina! Juega al juego Más Caliente o Más Frío para dominar Celsius, Fahrenheit y Gas Marks rápidamente.",
+        "ogTitle": "Desafío de Temperatura: ¿Más Caliente o Más Frío?",
+        "ogDescription": "¿Crees que conoces tu horno? ¡Prueba tu instinto en nuestro rápido cuestionario de temperatura! 60 segundos para demostrar tu maestría."
+    },
+    "hero": {
+        "title": "Desafío de Conversión de Temperatura",
+        "subtitle": "¡Deja de calcular, empieza a sentir el calor! Pon a prueba tus instintos de cocina en nuestro desafío arcade de 60 segundos."
+    },
+    "gameSchema": {
+        "name": "Desafío de Conversión de Temperatura",
+        "description": "Compara temperaturas y adivina cuál es más caliente o más fría para entrenar tu intuición culinaria.",
+        "genre": {
+            "educational": "Educativo",
+            "quiz": "Cuestionario",
+            "arcade": "Arcade"
+        }
+    },
+    "game": {
+        "loading": "Cargando motor del juego...",
+        "score": "Puntuación",
+        "timeLeft": "Tiempo",
+        "gameOver": "¡Juego Terminado!",
+        "finalScore": "¡Has conseguido {score} puntos!",
+        "playAgain": "Jugar de nuevo",
+        "startTitle": "🔥 ¿Más Caliente o Más Frío? 🧊",
+        "startDescription": "¡Compara las temperaturas y adivina si la segunda es MÁS CALIENTE o MÁS FRÍA que la primera!",
+        "startGame": "Empezar Juego",
+        "baseTemp": "Temp. Base",
+        "challengeTemp": "Temp. Desafío",
+        "hotter": "🔥 Más Caliente",
+        "colder": "🧊 Más Frío",
+        "timeUp": "¡Se acabó el tiempo!",
+        "points": "Puntos",
+        "secondsShort": "s",
+        "ariaHotter": "Adivinar Más Caliente",
+        "ariaColder": "Adivinar Más Frío",
+        "ariaStart": "Empezar juego Más Caliente o Más Frío"
+    },
+    "howTo": {
+        "title": "Cómo Jugar",
+        "sixtySeconds": "60 Segundos",
+        "sixtySecondsDesc": "Carrera contra el reloj. ¿Puedes superar tu puntuación más alta?",
+        "compare": "Compara",
+        "compareDesc": "Mira la <strong>Temp. Base</strong> y la <strong>Temp. Desafío</strong>.",
+        "decide": "Decide",
+        "decideDesc": "¡Toca <strong>MÁS CALIENTE</strong> o <strong>MÁS FRÍO</strong> al instante!"
+    },
+    "educational": {
+        "title": "¿Por qué entrenar tu intuición?",
+        "text": "Los chefs profesionales no sacan una calculadora cuando ven \"350°F\" en una receta pero tienen un horno en Celsius. Simplemente <em>saben</em> que es aproximadamente 180°C.<br /><br />Este juego entrena ese mismo instinto. Al comparar valores repetidamente, memorizarás subconscientemente los \"hitos\" clave:",
+        "points": {
+            "simmering": "<strong>Hervir a fuego lento:</strong> ~85°C / 185°F",
+            "lowBake": "<strong>Horneado bajo:</strong> 150°C / 300°F",
+            "standardBake": "<strong>Horneado estándar:</strong> 180°C / 350°F / Gas 4",
+            "roasting": "<strong>Asado:</strong> 220°C / 425°F / Gas 7"
+        }
+    },
+    "faq": {
+        "title": "Preguntas Frecuentes",
+        "howToPlay": {
+            "question": "¿Cómo juego?",
+            "answer": "Tienes 60 segundos para comparar dos temperaturas y adivinar si la segunda es más caliente o más fría."
+        },
+        "ovenSettings": {
+            "question": "¿Esto ayuda con la configuración del horno?",
+            "answer": "Sí, te ayuda a convertir intuitivamente entre Celsius, Fahrenheit y Gas Marks."
+        },
+        "gasMarks": {
+            "question": "¿Incluye Gas Marks?",
+            "answer": "¡Sí! Incluimos Gas Marks del 1 al 9 para ayudarte a dominar esas recetas británicas complicadas."
+        },
+        "exact": {
+            "question": "¿Es exacto?",
+            "answer": "El juego permite pequeños márgenes. Si las temperaturas son teóricamente idénticas, las ajustamos ligeramente para que siempre haya una respuesta correcta."
+        },
+        "logic": {
+            "question": "¿Cuál es la lógica?",
+            "answer": "Generamos miles de pares. ¿200°C vs 400°F? 400°F (204°C) es más caliente. ¿Gas Mark 6 vs 350°F? Gas Mark 6 (200°C) es más caliente que 350°F (177°C)."
+        }
+    },
+    "cheatSheet": {
+        "title": "Hoja de Referencia Rápida",
+        "caption": "Referencia rápida para conversión de Gas Mark a Celsius y Fahrenheit",
+        "headers": {
+            "gasMark": "Gas Mark",
+            "fahrenheit": "Fahrenheit (°F)",
+            "celsius": "Celsius (°C)",
+            "description": "Descripción"
+        },
+        "note": "*Nota: Los hornos de ventilador suelen ser 20°C más bajos que estos valores.",
+        "rows": {
+            "verySlow": "Muy Lento / Merengues",
+            "slow": "Lento /isos",
+            "moderate": "Moderado / Pasteles",
+            "moderateBaking": "Moderado / Hornear",
+            "modHot": "Mod. Caliente / Asar",
+            "hot": "Caliente / Pastelería",
+            "hotRoast": "Caliente / Asado Rápido",
+            "veryHot": "Muy Caliente / Sellado"
+        }
+    },
+    "links": {
+        "home": "Inicio",
+        "challenge": "Desafío de Temperatura",
+        "conversionChart": "Tabla de Conversión de Horno y Guía Gas Mark →",
+        "needReference": "¿Necesitas una referencia precisa?"
+    }
+}

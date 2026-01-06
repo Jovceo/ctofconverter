@@ -350,5 +350,10 @@
         }
       ]
     }
+  },
+  "gameBanner": {
+    "title": "🌡️ Meistern Sie die Hitze!",
+    "description": "Lesen Sie nicht nur die Tabelle – prägen Sie sie sich ein mit unserer \"Heißer oder Kälter\"-Herausforderung. Schnell, spaßig und kostenlos!",
+    "button": "Herausforderung starten →"
   }
 }

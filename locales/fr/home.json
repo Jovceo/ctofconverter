@@ -142,5 +142,10 @@
                 "answer": "Le Celsius est simplement une unité de mesure. Ce qui compte, c'est la température réelle. Par exemple, 37°C est une température corporelle normale, tandis que 60°C sur la peau peut causer des brûlures."
             }
         ]
+    },
+    "gameBanner": {
+        "title": "🌡️ Défi de Température",
+        "description": "Lassé des formules ? Testez votre intuition avec notre jeu <strong>Plus Chaud ou Plus Froid</strong> !",
+        "button": "Commencer le Défi →"
     }
 }

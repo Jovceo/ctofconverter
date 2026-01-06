@@ -350,5 +350,10 @@
         }
       ]
     }
+  },
+  "gameBanner": {
+    "title": "🌡️ Domine o Calor!",
+    "description": "Não apenas leia a tabela—memorize-a com nosso desafio \"Mais Quente ou Mais Frio\". É rápido, divertido e grátis!",
+    "button": "Começar o Desafio →"
   }
 }

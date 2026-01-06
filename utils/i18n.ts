@@ -67,6 +67,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     template: require('../locales/en/template.json'),
     'fan-oven-conversion-chart': require('../locales/en/fan-oven-conversion-chart.json'),
     '37-5-c-to-f': require('../locales/en/37-5-c-to-f.json'),
+    game: require('../locales/en/game.json'),
   },
   zh: {
     '47-c-to-f': require('../locales/zh/47-c-to-f.json'),
@@ -75,6 +76,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     home: require('../locales/zh/home.json'),
     template: require('../locales/zh/template.json'),
     'fan-oven-conversion-chart': require('../locales/zh/fan-oven-conversion-chart.json'),
+    game: require('../locales/zh/game.json'),
   },
   es: {
     '47-c-to-f': require('../locales/es/47-c-to-f.json'),
@@ -83,6 +85,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     home: require('../locales/es/home.json'),
     template: require('../locales/es/template.json'),
     'fan-oven-conversion-chart': require('../locales/es/fan-oven-conversion-chart.json'),
+    game: require('../locales/es/game.json'),
   },
   hi: {
     '47-c-to-f': require('../locales/hi/47-c-to-f.json'),
@@ -91,6 +94,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     home: require('../locales/hi/home.json'),
     template: require('../locales/hi/template.json'),
     'fan-oven-conversion-chart': require('../locales/hi/fan-oven-conversion-chart.json'),
+    game: require('../locales/hi/game.json'),
   },
   ar: {
     '47-c-to-f': require('../locales/ar/47-c-to-f.json'),
@@ -99,6 +103,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     home: require('../locales/ar/home.json'),
     template: require('../locales/ar/template.json'),
     'fan-oven-conversion-chart': require('../locales/ar/fan-oven-conversion-chart.json'),
+    game: require('../locales/ar/game.json'),
   },
   ja: {
     '47-c-to-f': require('../locales/ja/47-c-to-f.json'),
@@ -107,6 +112,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     home: require('../locales/ja/home.json'),
     template: require('../locales/ja/template.json'),
     'fan-oven-conversion-chart': require('../locales/ja/fan-oven-conversion-chart.json'),
+    game: require('../locales/ja/game.json'),
   },
   id: {
     '47-c-to-f': require('../locales/id/47-c-to-f.json'),
@@ -115,6 +121,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     home: require('../locales/id/home.json'),
     template: require('../locales/id/template.json'),
     'fan-oven-conversion-chart': require('../locales/id/fan-oven-conversion-chart.json'),
+    game: require('../locales/id/game.json'),
   },
   'pt-br': {
     '47-c-to-f': require('../locales/pt-br/47-c-to-f.json'),
@@ -123,6 +130,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     home: require('../locales/pt-br/home.json'),
     template: require('../locales/pt-br/template.json'),
     'fan-oven-conversion-chart': require('../locales/pt-br/fan-oven-conversion-chart.json'),
+    game: require('../locales/pt-br/game.json'),
   },
   fr: {
     '47-c-to-f': require('../locales/fr/47-c-to-f.json'),
@@ -131,6 +139,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     home: require('../locales/fr/home.json'),
     template: require('../locales/fr/template.json'),
     'fan-oven-conversion-chart': require('../locales/fr/fan-oven-conversion-chart.json'),
+    game: require('../locales/fr/game.json'),
   },
   de: {
     '47-c-to-f': require('../locales/de/47-c-to-f.json'),
@@ -139,6 +148,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     home: require('../locales/de/home.json'),
     template: require('../locales/de/template.json'),
     'fan-oven-conversion-chart': require('../locales/de/fan-oven-conversion-chart.json'),
+    game: require('../locales/de/game.json'),
   },
 };
 

@@ -91,5 +91,10 @@
         "answer": "Celsius hanyalah satuan. Yang penting adalah nilai suhu: 37°C normal, sedangkan 60°C pada kulit bisa menyebabkan luka bakar."
       }
     ]
+  },
+  "gameBanner": {
+    "title": "🌡️ Tantangan Suhu",
+    "description": "Bosan dengan rumus? Uji intuisi Anda dalam permainan <strong>Lebih Panas atau Lebih Dingin</strong> kami!",
+    "button": "Mulai Tantangan →"
   }
 }

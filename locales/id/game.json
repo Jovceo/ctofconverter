@@ -1,0 +1,111 @@
+{
+    "meta": {
+        "title": "Tantangan Konversi Suhu: Game Lebih Panas atau Lebih Dingin | CtoFConverter",
+        "description": "Uji insting suhu memasak Anda! Mainkan game Lebih Panas atau Lebih Dingin untuk menguasai Celsius, Fahrenheit, dan Gas Mark dengan cepat.",
+        "ogTitle": "Tantangan Suhu: Lebih Panas atau Lebih Dingin?",
+        "ogDescription": "Merasa tahu oven Anda? Uji insting Anda dalam kuis suhu cepat kami! 60 detik untuk membuktikan keahlian Anda."
+    },
+    "hero": {
+        "title": "Tantangan Konversi Suhu",
+        "subtitle": "Berhenti menghitung, mulailah merasakan panasnya! Uji insting memasak Anda dalam tantangan arcade 60 detik kami."
+    },
+    "gameSchema": {
+        "name": "Tantangan Konversi Suhu",
+        "description": "Bandingkan suhu dan tebak mana yang lebih tinggi atau lebih rendah untuk melatih intuisi memasak Anda.",
+        "genre": {
+            "educational": "Pendidikan",
+            "quiz": "Kuis",
+            "arcade": "Arcade"
+        }
+    },
+    "game": {
+        "loading": "Memuat Mesin Game...",
+        "score": "Skor",
+        "timeLeft": "Sisa Waktu",
+        "gameOver": "Permainan Berakhir!",
+        "finalScore": "Anda mencetak {score} poin!",
+        "playAgain": "Main Lagi",
+        "startTitle": "🔥 Lebih Panas atau Lebih Dingin? 🧊",
+        "startDescription": "Bandingkan suhu dan tebak apakah yang kedua LEBIH PANAS (HOTTER) atau LEBIH DINGIN (COLDER) dari yang pertama!",
+        "startGame": "Mulai Game",
+        "baseTemp": "Suhu Dasar",
+        "challengeTemp": "Suhu Tantangan",
+        "hotter": "🔥 Lebih Panas",
+        "colder": "🧊 Lebih Dingin",
+        "timeUp": "Waktu Habis!",
+        "points": "Poin",
+        "secondsShort": "d",
+        "ariaHotter": "Tebak Lebih Panas",
+        "ariaColder": "Tebak Lebih Dingin",
+        "ariaStart": "Mulai Game Lebih Panas atau Lebih Dingin"
+    },
+    "howTo": {
+        "title": "Cara Bermain",
+        "sixtySeconds": "60 Detik",
+        "sixtySecondsDesc": "Berpacu dengan waktu. Bisakah Anda mengalahkan skor tertinggi Anda?",
+        "compare": "Bandingkan",
+        "compareDesc": "Lihat <strong>Suhu Dasar</strong> dan <strong>Suhu Tantangan</strong>.",
+        "decide": "Putuskan",
+        "decideDesc": "Ketuk <strong>LEBIH PANAS</strong> atau <strong>LEBIH DINGIN</strong> seketika!"
+    },
+    "educational": {
+        "title": "Mengapa Melatih Intuisi Anda?",
+        "text": "Koki profesional tidak mengeluarkan kalkulator saat melihat \"350°F\" dalam resep tetapi memiliki oven Celsius. Mereka hanya <em>tahu</em> itu sekitar 180°C.<br /><br />Game ini melatih insting yang sama. Dengan membandingkan nilai berulang kali, Anda akan secara tidak sadar mengingat \"tanda\" utama suhu memasak:",
+        "points": {
+            "simmering": "<strong>Mendidih Perlahan:</strong> ~85°C / 185°F",
+            "lowBake": "<strong>Panggang Rendah:</strong> 150°C / 300°F",
+            "standardBake": "<strong>Panggang Standar:</strong> 180°C / 350°F / Gas 4",
+            "roasting": "<strong>Memanggang:</strong> 220°C / 425°F / Gas 7"
+        }
+    },
+    "faq": {
+        "title": "FAQ",
+        "howToPlay": {
+            "question": "Bagaimana cara bermain?",
+            "answer": "Anda memiliki 60 detik untuk membandingkan dua suhu dan menebak apakah yang kedua lebih panas atau lebih dingin."
+        },
+        "ovenSettings": {
+            "question": "Apakah ini membantu pengaturan oven?",
+            "answer": "Ya, ini membantu Anda secara intuitif mengonversi antara Celsius, Fahrenheit, dan Gas Marks."
+        },
+        "gasMarks": {
+            "question": "Termasuk Gas Mark?",
+            "answer": "Ya! Kami menyertakan Gas Mark 1 hingga 9 untuk membantu Anda dengan resep Inggris yang rumit itu."
+        },
+        "exact": {
+            "question": "Apakah tepat?",
+            "answer": "Game ini memungkinkan margin kecil. Jika suhu secara teoritis identik, kami menyesuaikannya sedikit sehingga selalu ada jawaban yang benar."
+        },
+        "logic": {
+            "question": "Apa logikanya?",
+            "answer": "Kami menghasilkan ribuan pasangan. 200°C vs 400°F? 400°F (204°C) Lebih Panas. Gas Mark 6 vs 350°F? Gas Mark 6 (200°C) Lebih Panas dari 350°F (177°C)."
+        }
+    },
+    "cheatSheet": {
+        "title": "Lembar Contekan Referensi Cepat",
+        "caption": "Referensi cepat untuk konversi Gas Mark ke Celsius dan Fahrenheit",
+        "headers": {
+            "gasMark": "Gas Mark",
+            "fahrenheit": "Fahrenheit (°F)",
+            "celsius": "Celsius (°C)",
+            "description": "Deskripsi"
+        },
+        "note": "*Catatan: Oven dengan kipas biasanya 20°C lebih rendah dari nilai-nilai ini.",
+        "rows": {
+            "verySlow": "Sangat Lambat / Meringue",
+            "slow": "Lambat / Rebusan",
+            "moderate": "Sedang / Kue",
+            "moderateBaking": "Sedang / Terbaik untuk Memanggang",
+            "modHot": "Agak Panas / Memanggang Daging",
+            "hot": "Panas / Kue Kering",
+            "hotRoast": "Panas / Panggang Cepat",
+            "veryHot": "Sangat Panas / Menumis"
+        }
+    },
+    "links": {
+        "home": "Beranda",
+        "challenge": "Tantangan Suhu",
+        "conversionChart": "Bagan Konversi Oven Kipas & Panduan Gas Mark →",
+        "needReference": "Butuh referensi yang tepat?"
+    }
+}

@@ -18,7 +18,8 @@
     "logoText": "摄氏度转华氏度转换器",
     "toggleMenu": "切换导航菜单",
     "languageSelector": "语言选择器",
-    "seoLinkText": "{celsius} 摄氏度等于多少华氏度？({fahrenheit}°F)"
+    "seoLinkText": "{celsius} 摄氏度等于多少华氏度？({fahrenheit}°F)",
+    "game": "挑战 🔥"
   },
   "breadcrumb": {
     "home": "首页"
