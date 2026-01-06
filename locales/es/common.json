@@ -19,7 +19,8 @@
     "logoText": "Convertidor de Celsius a Fahrenheit",
     "toggleMenu": "Alternar menú de navegación",
     "languageSelector": "Selector de idioma",
-    "seoLinkText": "{celsius} grados Celsius a Fahrenheit ({fahrenheit}°F)"
+    "seoLinkText": "{celsius} grados Celsius a Fahrenheit ({fahrenheit}°F)",
+    "game": "Juego 🔥"
   },
   "breadcrumb": {
     "home": "Inicio"

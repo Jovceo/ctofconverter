@@ -452,5 +452,10 @@
         }
       ]
     }
+  },
+  "gameBanner": {
+    "title": "🌡️ Master the Heat!",
+    "description": "Don't just read the chart—memorize it with our \"Hotter or Colder\" challenge. It's fast, fun, and free!",
+    "button": "Start the Challenge →"
   }
 }

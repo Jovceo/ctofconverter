@@ -350,5 +350,10 @@
         }
       ]
     }
+  },
+  "gameBanner": {
+    "title": "🌡️ Maîtrisez la Chaleur !",
+    "description": "Ne vous contentez pas de lire le tableau : mémorisez-le avec notre défi \"Plus Chaud ou Plus Froid\". C'est rapide, amusant et gratuit !",
+    "button": "Commencer le Défi →"
   }
 }

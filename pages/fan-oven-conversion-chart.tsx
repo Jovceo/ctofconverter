@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Analytics from '../components/Analytics';
-// import { useTranslation } from '../utils/i18n'; // Removed to reduce bundle size
+import { getLocalizedLink } from '../utils/i18n';
 import styles from '../styles/fan-oven-conversion-chart.module.css';
 import { GetStaticProps } from 'next';
 import { useLightTranslation } from '../utils/i18n-lite';
@@ -770,6 +770,14 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
               <p className={styles.tip}>{t('foodGuide.meats.tip')}</p>
             </div>
           </div>
+        </section>
+
+        <section className="game-banner" style={{ marginTop: '4rem', padding: '3rem 1rem', background: '#f0fdf4', borderRadius: '16px', textAlign: 'center', border: '2px dashed #4ade80' }}>
+          <h2 style={{ fontSize: '2rem', color: '#166534', marginBottom: '1rem' }}>{t('gameBanner.title')}</h2>
+          <p style={{ fontSize: '1.2rem', color: '#15803d', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem' }} dangerouslySetInnerHTML={{ __html: t('gameBanner.description') }} />
+          <Link href={getLocalizedLink('/temperature-conversion-challenge', locale)} style={{ display: 'inline-block', padding: '1rem 2.5rem', background: '#22c55e', color: 'white', borderRadius: '50px', fontWeight: 'bold', fontSize: '1.2rem', textDecoration: 'none', boxShadow: '0 4px 6px rgba(34, 197, 94, 0.3)' }}>
+            {t('gameBanner.button')}
+          </Link>
         </section>
 
         <section className={styles.proTips} id="pro-tips">

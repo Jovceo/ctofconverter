@@ -19,7 +19,8 @@
     "logoText": "Konverter Celsius ke Fahrenheit",
     "toggleMenu": "Beralih menu navigasi",
     "languageSelector": "Pemilih bahasa",
-    "seoLinkText": "{celsius} Celsius ke Fahrenheit ({fahrenheit}°F)"
+    "seoLinkText": "{celsius} Celsius ke Fahrenheit ({fahrenheit}°F)",
+    "game": "Game 🔥"
   },
   "breadcrumb": {
     "home": "Beranda"

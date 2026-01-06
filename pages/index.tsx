@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import { useTranslation } from '../utils/i18n';
+import { useTranslation, getLocalizedLink } from '../utils/i18n';
 import { celsiusToFahrenheit, formatTemperature } from '../utils/temperaturePageHelpers';
 
 // 历史记录类型定义
@@ -231,6 +231,8 @@ export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: Home
                             </ul>
                         </section>
 
+
+
                         <section className="formula-section">
                             <h2>{t('formula.title')}</h2>
                             <div className="formula">
@@ -238,6 +240,14 @@ export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: Home
                                 <div className="formula-box">{t('formula.box')}</div>
                                 <p className="example">{t('formula.example')}</p>
                             </div>
+                        </section>
+
+                        <section className="game-banner-section" id="challenge-banner" style={{ margin: '3rem 0', textAlign: 'center', background: 'linear-gradient(135deg, #dcfce7 0%, #f0fdf4 100%)', padding: '2rem', borderRadius: '12px', border: '2px solid #86efac' }}>
+                            <h2 style={{ color: '#15803d', marginBottom: '1rem' }}>{t('gameBanner.title')}</h2>
+                            <p style={{ color: '#166534', marginBottom: '1.5rem', fontSize: '1.1rem' }} dangerouslySetInnerHTML={{ __html: t('gameBanner.description') }} />
+                            <Link href={getLocalizedLink('/temperature-conversion-challenge', locale)} className="btn" style={{ display: 'inline-block', textDecoration: 'none', background: '#22c55e', color: 'white', border: 'none', padding: '0.8rem 2rem', fontSize: '1.2rem', borderRadius: '50px', boxShadow: '0 4px 6px rgba(34, 197, 94, 0.2)' }}>
+                                {t('gameBanner.button')}
+                            </Link>
                         </section>
 
                         <div className="conversion-steps">

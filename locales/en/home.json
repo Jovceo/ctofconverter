@@ -142,5 +142,10 @@
         "answer": "Celsius is simply a measurement unit. What matters is the actual temperature. For instance, 37°C is normal body temperature, while 60°C on skin can cause burns."
       }
     ]
+  },
+  "gameBanner": {
+    "title": "🌡️ Temperature Challenge",
+    "description": "Bored of formulas? Test your intuition in our <strong>Hotter or Colder</strong> game!",
+    "button": "Start Challenge →"
   }
 }

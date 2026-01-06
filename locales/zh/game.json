@@ -1,0 +1,111 @@
+{
+    "meta": {
+        "title": "温度转换大挑战：冷热大挑战游戏 | CtoFConverter",
+        "description": "测试你的烹饪温度直觉！玩“冷热大挑战”游戏，快速掌握摄氏度、华氏度和燃气刻度的换算技巧。",
+        "ogTitle": "温度转换大挑战：更热还是更冷？",
+        "ogDescription": "觉得自己很懂烤箱温度？来我们的快节奏温度测试中挑战直觉！60秒证明你是大师。"
+    },
+    "hero": {
+        "title": "温度转换大挑战",
+        "subtitle": "别再按计算器了，凭感觉来！在60秒的街机挑战中测试你的烹饪温度直觉。"
+    },
+    "gameSchema": {
+        "name": "温度转换大挑战",
+        "description": "比较两个温度，猜哪个更高或更低，训练烹饪温度直觉。",
+        "genre": {
+            "educational": "教育",
+            "quiz": "测验",
+            "arcade": "街机"
+        }
+    },
+    "game": {
+        "loading": "游戏引擎加载中...",
+        "score": "得分",
+        "timeLeft": "剩余时间",
+        "gameOver": "游戏结束！",
+        "finalScore": "你的得分是 {score} 分！",
+        "playAgain": "再玩一次",
+        "startTitle": "🔥 Hotter or Colder? 🧊",
+        "startDescription": "比较两个温度，猜猜第二个温度比第一个 更高 (HOTTER) 还是 更低 (COLDER)！",
+        "startGame": "开始游戏",
+        "baseTemp": "基准温度",
+        "challengeTemp": "挑战温度",
+        "hotter": "🔥 更热 (Hotter)",
+        "colder": "🧊 更冷 (Colder)",
+        "timeUp": "时间到！",
+        "points": "分",
+        "secondsShort": "秒",
+        "ariaHotter": "猜更热",
+        "ariaColder": "猜更冷",
+        "ariaStart": "开始冷热大挑战游戏"
+    },
+    "howTo": {
+        "title": "怎么玩",
+        "sixtySeconds": "60 秒",
+        "sixtySecondsDesc": "与时间赛跑。你能打破自己的最高分吗？",
+        "compare": "比较",
+        "compareDesc": "观察 <strong>基准温度</strong> 和 <strong>挑战温度</strong>。",
+        "decide": "决策",
+        "decideDesc": "快速点击 <strong>更热 (HOTTER)</strong> 或 <strong>更冷 (COLDER)</strong>！"
+    },
+    "educational": {
+        "title": "为什么要训练直觉？",
+        "text": "专业厨师在菜谱上看到 \"350°F\" 而自己用的是摄氏度烤箱时，通过不会掏出计算器。他们 *凭直觉* 就知道这大约是 180°C。<br /><br />这个游戏就是用来训练这种直觉的。通过反复比较，你会潜意识地记住烹饪温度的关键“地标”：",
+        "points": {
+            "simmering": "<strong>微炖 (Simmering):</strong> ~85°C / 185°F",
+            "lowBake": "<strong>低温烘焙:</strong> 150°C / 300°F",
+            "standardBake": "<strong>标准烘焙:</strong> 180°C / 350°F / Gas 4",
+            "roasting": "<strong>烤肉 (Roasting):</strong> 220°C / 425°F / Gas 7"
+        }
+    },
+    "faq": {
+        "title": "常见问题",
+        "howToPlay": {
+            "question": "怎么玩？",
+            "answer": "你有60秒的时间比较两个温度，猜第二个温度是更热还是更冷。"
+        },
+        "ovenSettings": {
+            "question": "这对烤箱设置有帮助吗？",
+            "answer": "是的，它可以帮助你直观地在摄氏度、华氏度和燃气刻度之间进行转换。"
+        },
+        "gasMarks": {
+            "question": "包含燃气刻度 (Gas Marks) 吗？",
+            "answer": "是的！我们包含 Gas Mark 1 到 9，帮你搞定那些棘手的英式食谱。"
+        },
+        "exact": {
+            "question": "数值精确吗？",
+            "answer": "游戏允许微小的偏差。如果两个温度理论上完全相等，我们会微调数值，确保总有一个正确答案。"
+        },
+        "logic": {
+            "question": "逻辑是什么？",
+            "answer": "我们生成了数千对数据。200°C 对比 400°F？因为 400°F (204°C) 更高，所以选 Hotter。Gas 6 对比 350°F？Gas 6 (200°C) 比 350°F (177°C) 更高。"
+        }
+    },
+    "cheatSheet": {
+        "title": "快速参考对照表",
+        "caption": "Gas Mark、摄氏度与华氏度快速对照表",
+        "headers": {
+            "gasMark": "Gas Mark",
+            "fahrenheit": "华氏度 (°F)",
+            "celsius": "摄氏度 (°C)",
+            "description": "描述"
+        },
+        "note": "*注意：风炉（Fan oven）通常比这些数值低 20°C。",
+        "rows": {
+            "verySlow": "极慢 / 蛋白脆饼 (Very Slow)",
+            "slow": "慢火 / 炖菜 (Slow)",
+            "moderate": "中火 / 蛋糕 (Moderate)",
+            "moderateBaking": "中火 / 最佳烘焙 (Moderate)",
+            "modHot": "中高火 / 烤肉 (Mod. Hot)",
+            "hot": "高火 / 酥皮 (Hot)",
+            "hotRoast": "高火 / 快烤 (Hot)",
+            "veryHot": "极高火 / 煎封 (Very Hot)"
+        }
+    },
+    "links": {
+        "home": "首页",
+        "challenge": "温度挑战",
+        "conversionChart": "风炉温度转换表与燃气刻度指南 →",
+        "needReference": "需要精确的参考？"
+    }
+}

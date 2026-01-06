@@ -19,7 +19,8 @@
         "logoText": "Celsius in Fahrenheit Umrechner",
         "toggleMenu": "Navigationsmenü umschalten",
         "languageSelector": "Sprachauswahl",
-        "seoLinkText": "{celsius} Celsius in Fahrenheit ({fahrenheit}°F)"
+        "seoLinkText": "{celsius} Celsius in Fahrenheit ({fahrenheit}°F)",
+        "game": "Spiel 🔥"
     },
     "breadcrumb": {
         "home": "Startseite"

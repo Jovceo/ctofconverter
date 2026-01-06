@@ -1,0 +1,111 @@
+{
+    "meta": {
+        "title": "Temperatur-Umrechnungs-Challenge: Heißer oder Kälter Spiel | CtoFConverter",
+        "description": "Teste deinen Temperatur-Instinkt beim Kochen! Spiele das Heißer oder Kälter Spiel, um Celsius, Fahrenheit und Gas Marks schnell zu meistern.",
+        "ogTitle": "Temperatur-Challenge: Heißer oder Kälter?",
+        "ogDescription": "Denkst du, du kennst deinen Ofen? Teste deinen Instinkt in unserem schnellen Temperatur-Quiz! 60 Sekunden, um dein Können zu beweisen."
+    },
+    "hero": {
+        "title": "Temperatur-Umrechnungs-Challenge",
+        "subtitle": "Hör auf zu rechnen, fang an zu fühlen! Teste deine Koch-Instinkte in unserer 60-Sekunden-Arcade-Challenge."
+    },
+    "gameSchema": {
+        "name": "Temperatur-Umrechnungs-Challenge",
+        "description": "Vergleichen Sie Temperaturen und raten Sie, welche höher oder niedriger ist, um Ihre Kochintuition zu trainieren.",
+        "genre": {
+            "educational": "Bildung",
+            "quiz": "Quiz",
+            "arcade": "Arcade"
+        }
+    },
+    "game": {
+        "loading": "Lade Spiel-Engine...",
+        "score": "Punktzahl",
+        "timeLeft": "Zeit",
+        "gameOver": "Spiel Vorbei!",
+        "finalScore": "Du hast {score} Punkte erzielt!",
+        "playAgain": "Nochmal Spielen",
+        "startTitle": "🔥 Heißer oder Kälter? 🧊",
+        "startDescription": "Vergleiche die Temperaturen und rate, ob die zweite HEISSER oder KÄLTER als die erste ist!",
+        "startGame": "Spiel Starten",
+        "baseTemp": "Basis-Temp.",
+        "challengeTemp": "Challenge-Temp.",
+        "hotter": "🔥 Heißer",
+        "colder": "🧊 Kälter",
+        "timeUp": "Die Zeit ist um!",
+        "points": "Punkte",
+        "secondsShort": "s",
+        "ariaHotter": "Rate Heißer",
+        "ariaColder": "Rate Kälter",
+        "ariaStart": "Starte Heißer oder Kälter Spiel"
+    },
+    "howTo": {
+        "title": "Spielanleitung",
+        "sixtySeconds": "60 Sekunden",
+        "sixtySecondsDesc": "Kampf gegen die Uhr. Kannst du deinen Highscore schlagen?",
+        "compare": "Vergleiche",
+        "compareDesc": "Schau dir die <strong>Basis-Temp.</strong> und die <strong>Challenge-Temp.</strong> an.",
+        "decide": "Entscheide",
+        "decideDesc": "Tippe sofort auf <strong>HEISSER</strong> oder <strong>KÄLTER</strong>!"
+    },
+    "educational": {
+        "title": "Warum deine Intuition trainieren?",
+        "text": "Profiköche zücken keinen Taschenrechner, wenn sie \"350°F\" in einem Rezept sehen, aber einen Celsius-Ofen haben. Sie <em>wissen</em> einfach, dass es ungefähr 180°C sind.<br /><br />Dieses Spiel trainiert genau diesen Instinkt. Durch wiederholtes Vergleichen wirst du dir unterbewusst die wichtigsten \"Meilensteine\" merken:",
+        "points": {
+            "simmering": "<strong>Köcheln:</strong> ~85°C / 185°F",
+            "lowBake": "<strong>Niedrig backen:</strong> 150°C / 300°F",
+            "standardBake": "<strong>Standard backen:</strong> 180°C / 350°F / Gas 4",
+            "roasting": "<strong>Braten:</strong> 220°C / 425°F / Gas 7"
+        }
+    },
+    "faq": {
+        "title": "FAQ",
+        "howToPlay": {
+            "question": "Wie spiele ich?",
+            "answer": "Sie haben 60 Sekunden Zeit, um zwei Temperaturen zu vergleichen und zu erraten, ob die zweite heißer oder kälter ist."
+        },
+        "ovenSettings": {
+            "question": "Hilft das bei Ofeneinstellungen?",
+            "answer": "Ja, es hilft Ihnen, intuitiv zwischen Celsius, Fahrenheit und Gas Marks umzurechnen."
+        },
+        "gasMarks": {
+            "question": "Inklusive Gas Marks?",
+            "answer": "Ja! Wir schließen Gas Marks 1 bis 9 ein, um dir bei kniffligen britischen Rezepten zu helfen."
+        },
+        "exact": {
+            "question": "Ist es exakt?",
+            "answer": "Das Spiel erlaubt kleine Toleranzen. Wenn Temperaturen theoretisch identisch sind, passen wir sie leicht an, damit es immer eine richtige Antwort gibt."
+        },
+        "logic": {
+            "question": "Was ist die Logik?",
+            "answer": "Wir haben tausende Paare generiert. 200°C vs 400°F? 400°F (204°C) ist heißer. Gas Mark 6 vs 350°F? Gas Mark 6 (200°C) ist heißer als 350°F (177°C)."
+        }
+    },
+    "cheatSheet": {
+        "title": "Schnellreferenz-Spickzettel",
+        "caption": "Schnellreferenz für Gas Mark Umrechnung in Celsius und Fahrenheit",
+        "headers": {
+            "gasMark": "Gas Mark",
+            "fahrenheit": "Fahrenheit (°F)",
+            "celsius": "Celsius (°C)",
+            "description": "Beschreibung"
+        },
+        "note": "*Hinweis: Umluftöfen sind typischerweise 20°C niedriger als diese Werte.",
+        "rows": {
+            "verySlow": "Sehr Langsam / Baisers",
+            "slow": "Langsam / Eintöpfe",
+            "moderate": "Mittel / Kuchen",
+            "moderateBaking": "Mittel / Backen",
+            "modHot": "Mittel-Heiß / Braten",
+            "hot": "Heiß / Gebäck",
+            "hotRoast": "Heiß / Schnellbraten",
+            "veryHot": "Sehr Heiß / Anbraten"
+        }
+    },
+    "links": {
+        "home": "Startseite",
+        "challenge": "Temperatur-Challenge",
+        "conversionChart": "Ofen-Umrechnungstabelle & Gas Mark Guide →",
+        "needReference": "Brauchst du eine genaue Referenz?"
+    }
+}

@@ -1,0 +1,111 @@
+{
+    "meta": {
+        "title": "温度変換チャレンジ：ホット・オア・コールド ゲーム | CtoFConverter",
+        "description": "料理の温度感覚をテストしよう！「ホット・オア・コールド」ゲームをプレイして、摂氏、華氏、ガスマークを素早くマスター。",
+        "ogTitle": "温度変換チャレンジ：もっと熱い？もっと冷たい？",
+        "ogDescription": "オーブンの温度に自信がある？60秒のクイッククイズであなたの直感をテストしよう！"
+    },
+    "hero": {
+        "title": "温度変換チャレンジ",
+        "subtitle": "計算はやめて、熱を感じよう！60秒のアーケードチャレンジで料理の温度直感をテスト。"
+    },
+    "gameSchema": {
+        "name": "温度変換チャレンジ",
+        "description": "温度を比較して、どちらが高いか低いかを推測し、料理の直感を鍛えましょう。",
+        "genre": {
+            "educational": "教育",
+            "quiz": "クイズ",
+            "arcade": "アーケード"
+        }
+    },
+    "game": {
+        "loading": "ゲームエンジン読み込み中...",
+        "score": "スコア",
+        "timeLeft": "残り時間",
+        "gameOver": "ゲームオーバー！",
+        "finalScore": "あなたのスコアは {score} 点です！",
+        "playAgain": "もう一度プレイ",
+        "startTitle": "🔥 Hotter or Colder? 🧊",
+        "startDescription": "温度を比較して、2つ目が1つ目より「熱い (HOTTER)」か「冷たい (COLDER)」か当てよう！",
+        "startGame": "ゲーム開始",
+        "baseTemp": "基準温度",
+        "challengeTemp": "比較温度",
+        "hotter": "🔥 熱い (Hotter)",
+        "colder": "🧊 冷たい (Colder)",
+        "timeUp": "時間切れ！",
+        "points": "点",
+        "secondsShort": "秒",
+        "ariaHotter": "熱いと予想",
+        "ariaColder": "冷たいと予想",
+        "ariaStart": "ホット・オア・コールドゲームを開始"
+    },
+    "howTo": {
+        "title": "遊び方",
+        "sixtySeconds": "60秒",
+        "sixtySecondsDesc": "時間との勝負。ハイスコアを更新できるか？",
+        "compare": "比較",
+        "compareDesc": "<strong>基準温度</strong>と<strong>比較温度</strong>を見比べる。",
+        "decide": "決断",
+        "decideDesc": "瞬時に<strong>熱い (HOTTER)</strong>か<strong>冷たい (COLDER)</strong>をタップ！"
+    },
+    "educational": {
+        "title": "なぜ直感を鍛えるのか？",
+        "text": "プロのシェフはレシピに「350°F」とあっても、摂氏のオーブンを使う時に電卓を取り出しません。彼らはそれが約180°Cであることを<em>感覚で知っている</em>のです。<br /><br />このゲームはその直感を鍛えます。繰り返し比較することで、料理温度の重要な「ランドマーク」を無意識に記憶できます：",
+        "points": {
+            "simmering": "<strong>とろ火 (Simmering):</strong> ~85°C / 185°F",
+            "lowBake": "<strong>低温焼き:</strong> 150°C / 300°F",
+            "standardBake": "<strong>標準焼き:</strong> 180°C / 350°F / Gas 4",
+            "roasting": "<strong>ロースト:</strong> 220°C / 425°F / Gas 7"
+        }
+    },
+    "faq": {
+        "title": "よくある質問",
+        "howToPlay": {
+            "question": "遊び方は？",
+            "answer": "60秒以内に2つの温度を比較し、2つ目がより熱いか冷たいかを当ててください。"
+        },
+        "ovenSettings": {
+            "question": "オーブンの設定に役立ちますか？",
+            "answer": "はい、摂氏、華氏、ガスマークを直感的に変換するのに役立ちます。"
+        },
+        "gasMarks": {
+            "question": "ガスマーク (Gas Marks) は含まれますか？",
+            "answer": "はい！イギリスのレシピでよく見るガスマーク1から9まで対応しています。"
+        },
+        "exact": {
+            "question": "正確ですか？",
+            "answer": "ゲームはわずかな誤差を許容します。理論的に温度が同一の場合、常に正解が存在するように数値を微調整しています。"
+        },
+        "logic": {
+            "question": "ロジックは何ですか？",
+            "answer": "数千のペアを生成しています。200°C 対 400°F？ 400°F (204°C) の方が熱いです。Gas 6 対 350°F？ Gas 6 (200°C) は 350°F (177°C) より熱いです。"
+        }
+    },
+    "cheatSheet": {
+        "title": "クイックリファレンス表",
+        "caption": "ガスマーク、摂氏、華氏の早見表",
+        "headers": {
+            "gasMark": "Gas Mark",
+            "fahrenheit": "華氏 (°F)",
+            "celsius": "摂氏 (°C)",
+            "description": "説明"
+        },
+        "note": "*注：ファンオーブンは通常、これらの値より20°C低くなります。",
+        "rows": {
+            "verySlow": "極弱火 / メレンゲ",
+            "slow": "弱火 / シチュー",
+            "moderate": "中火 / ケーキ",
+            "moderateBaking": "中火 / ベーキング最適",
+            "modHot": "中強火 / ロースト",
+            "hot": "強火 / ペストリー",
+            "hotRoast": "強火 / 急速ロースト",
+            "veryHot": "極強火 / 焼き色"
+        }
+    },
+    "links": {
+        "home": "ホーム",
+        "challenge": "温度チャレンジ",
+        "conversionChart": "オーブン換算表 & ガスマークガイド →",
+        "needReference": "正確な参照が必要ですか？"
+    }
+}

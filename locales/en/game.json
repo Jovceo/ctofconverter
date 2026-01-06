@@ -1,0 +1,111 @@
+{
+    "meta": {
+        "title": "Temperature Conversion Challenge: Hotter or Colder Game | CtoFConverter",
+        "description": "Test your cooking temperature skills! Play the Hotter or Colder game to master Celsius, Fahrenheit, and Gas Marks quickly.",
+        "ogTitle": "Temperature Conversion Challenge: Hotter or Colder?",
+        "ogDescription": "Think you know your ovens? Test your instinct in our rapid-fire temperature quiz! 60 seconds to prove your mastery."
+    },
+    "hero": {
+        "title": "Temperature Conversion Challenge",
+        "subtitle": "Stop calculating, start feeling the heat! Test your cooking temperature instincts in our 60-second arcade challenge."
+    },
+    "gameSchema": {
+        "name": "Temperature Conversion Challenge",
+        "description": "Compare temperatures and guess which is higher or lower to train your cooking intuition.",
+        "genre": {
+            "educational": "Educational",
+            "quiz": "Quiz",
+            "arcade": "Arcade"
+        }
+    },
+    "game": {
+        "loading": "Loading Game Engine...",
+        "score": "Score",
+        "timeLeft": "Time Left",
+        "gameOver": "Game Over!",
+        "finalScore": "You scored {score} points!",
+        "playAgain": "Play Again",
+        "startTitle": "🔥 Hotter or Colder? 🧊",
+        "startDescription": "Compare the temperatures and guess if the second one is HOTTER or COLDER than the first!",
+        "startGame": "Start Game",
+        "baseTemp": "Base Temp",
+        "challengeTemp": "Challenge Temp",
+        "hotter": "🔥 Hotter",
+        "colder": "🧊 Colder",
+        "timeUp": "Time's Up!",
+        "points": "Points",
+        "secondsShort": "s",
+        "ariaHotter": "Guess Hotter",
+        "ariaColder": "Guess Colder",
+        "ariaStart": "Start Hotter or Colder Game"
+    },
+    "howTo": {
+        "title": "How to Play",
+        "sixtySeconds": "60 Seconds",
+        "sixtySecondsDesc": "Race against the clock. Can you beat your high score?",
+        "compare": "Compare",
+        "compareDesc": "Look at the <strong>Base Temp</strong> and the <strong>Challenge Temp</strong>.",
+        "decide": "Decide",
+        "decideDesc": "Tap <strong>HOTTER</strong> or <strong>COLDER</strong> instantly!"
+    },
+    "educational": {
+        "title": "Why Train Your Intuition?",
+        "text": "Professional chefs don't pull out a calculator when they see \"350°F\" in a recipe but have a Celsius oven. They just <em>know</em> it's roughly 180°C.<br /><br />This game trains that same instinct. By repeatedly comparing values, you'll subconsciously memorize the key \"landmarks\" of cooking temperatures:",
+        "points": {
+            "simmering": "<strong>Simmering:</strong> ~85°C / 185°F",
+            "lowBake": "<strong>Low Bake:</strong> 150°C / 300°F",
+            "standardBake": "<strong>Standard Bake:</strong> 180°C / 350°F / Gas 4",
+            "roasting": "<strong>Roasting:</strong> 220°C / 425°F / Gas 7"
+        }
+    },
+    "faq": {
+        "title": "FAQ",
+        "howToPlay": {
+            "question": "How do I play?",
+            "answer": "You have 60 seconds to compare two temperatures and guess if the second one is hotter or colder."
+        },
+        "ovenSettings": {
+            "question": "Does this help with oven settings?",
+            "answer": "Yes, it helps you intuitively convert between Celsius, Fahrenheit, and Gas Marks."
+        },
+        "gasMarks": {
+            "question": "Includes Gas Marks?",
+            "answer": "Yes! We include Gas Marks 1 through 9 to help you master those tricky British recipes."
+        },
+        "exact": {
+            "question": "Is it exact?",
+            "answer": "The game allows for small margins. If temperatures are theoretically identical, we adjust them slightly so there is always a correct 'Hotter' or 'Colder' answer."
+        },
+        "logic": {
+            "question": "What is the logic?",
+            "answer": "We generated thousands of pairs. 200°C vs 400°F? 400°F (204°C) is Hotter. Gas Mark 6 vs 350°F? Gas Mark 6 (200°C) is Hotter than 350°F (177°C)."
+        }
+    },
+    "cheatSheet": {
+        "title": "Quick Reference Cheat Sheet",
+        "caption": "Quick reference for Gas Mark to Celsius and Fahrenheit conversions",
+        "headers": {
+            "gasMark": "Gas Mark",
+            "fahrenheit": "Fahrenheit (°F)",
+            "celsius": "Celsius (°C)",
+            "description": "Description"
+        },
+        "note": "*Note: Fan assisted ovens are typically 20°C lower than these values.",
+        "rows": {
+            "verySlow": "Very Slow / Meringues",
+            "slow": "Slow / Stews",
+            "moderate": "Moderate / Cakes",
+            "moderateBaking": "Moderate / Best for Baking",
+            "modHot": "Mod. Hot / Roasting",
+            "hot": "Hot / Pastry",
+            "hotRoast": "Hot / Quick Roast",
+            "veryHot": "Very Hot / Searing"
+        }
+    },
+    "links": {
+        "home": "Home",
+        "challenge": "Temperature Challenge",
+        "conversionChart": "Fan Oven Conversion Chart & Gas Mark Guide →",
+        "needReference": "Need a precise reference?"
+    }
+}

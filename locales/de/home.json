@@ -142,5 +142,10 @@
                 "answer": "Celsius ist lediglich eine Maßeinheit. Was zählt, ist die tatsächliche Temperatur. Zum Beispiel sind 37°C normale Körpertemperatur, während 60°C auf der Haut Verbrennungen verursachen können."
             }
         ]
+    },
+    "gameBanner": {
+        "title": "🌡️ Temperatur-Herausforderung",
+        "description": "Gelangweilt von Formeln? Testen Sie Ihre Intuition in unserem Spiel <strong>Heißer oder Kälter</strong>!",
+        "button": "Herausforderung starten →"
     }
 }

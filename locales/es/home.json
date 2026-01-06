@@ -142,5 +142,10 @@
         "answer": "Celsius es solo una unidad. Lo que importa es el valor real. 37°C es normal, mientras que 60°C en la piel puede causar quemaduras."
       }
     ]
+  },
+  "gameBanner": {
+    "title": "🌡️ Desafío de Temperatura",
+    "description": "¿Aburrido de las fórmulas? ¡Pon a prueba tu intuición en nuestro juego <strong>Más Caliente o Más Frío</strong>!",
+    "button": "Iniciar Desafío →"
   }
 }

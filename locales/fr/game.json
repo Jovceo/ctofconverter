@@ -1,0 +1,111 @@
+{
+    "meta": {
+        "title": "Défi de Conversion de Température : Jeu Plus Chaud ou Plus Froid | CtoFConverter",
+        "description": "Testez votre instinct de température en cuisine ! Jouez au jeu Plus Chaud ou Plus Froid pour maîtriser rapidement Celsius, Fahrenheit et Thermostat (Gas Mark).",
+        "ogTitle": "Défi de Température : Plus Chaud ou Plus Froid ?",
+        "ogDescription": "Vous pensez connaître votre four ? Testez votre instinct dans notre quiz rapide ! 60 secondes pour prouver votre maîtrise."
+    },
+    "hero": {
+        "title": "Défi de Conversion de Température",
+        "subtitle": "Arrêtez de calculer, commencez à ressentir la chaleur ! Testez vos instincts culinaires dans ce défi arcade de 60 secondes."
+    },
+    "gameSchema": {
+        "name": "Défi de Conversion de Température",
+        "description": "Comparez les températures et devinez laquelle est la plus chaude ou la plus froide pour entraîner votre intuition culinaire.",
+        "genre": {
+            "educational": "Éducatif",
+            "quiz": "Quiz",
+            "arcade": "Arcade"
+        }
+    },
+    "game": {
+        "loading": "Chargement du jeu...",
+        "score": "Score",
+        "timeLeft": "Temps Restant",
+        "gameOver": "Partie Terminée !",
+        "finalScore": "Vous avez marqué {score} points !",
+        "playAgain": "Rejouer",
+        "startTitle": "🔥 Plus Chaud ou Plus Froid ? 🧊",
+        "startDescription": "Comparez les températures et devinez si la seconde est PLUS CHAUDE ou PLUS FROIDE que la première !",
+        "startGame": "Commencer le Jeu",
+        "baseTemp": "Temp. de Base",
+        "challengeTemp": "Temp. Défi",
+        "hotter": "🔥 Plus Chaud",
+        "colder": "🧊 Plus Froid",
+        "timeUp": "Temps écoulé !",
+        "points": "Points",
+        "secondsShort": "s",
+        "ariaHotter": "Deviner Plus Chaud",
+        "ariaColder": "Deviner Plus Froid",
+        "ariaStart": "Démarrer le jeu Plus Chaud ou Plus Froid"
+    },
+    "howTo": {
+        "title": "Comment Jouer",
+        "sixtySeconds": "60 Secondes",
+        "sixtySecondsDesc": "Course contre la montre. Pouvez-vous battre votre meilleur score ?",
+        "compare": "Comparez",
+        "compareDesc": "Regardez la <strong>Temp. de Base</strong> et la <strong>Temp. Défi</strong>.",
+        "decide": "Décidez",
+        "decideDesc": "Appuyez sur <strong>PLUS CHAUD</strong> ou <strong>PLUS FROID</strong> instantanément !"
+    },
+    "educational": {
+        "title": "Pourquoi entraîner votre intuition ?",
+        "text": "Les chefs professionnels ne sortent pas de calculatrice quand ils voient \"350°F\" dans une recette mais ont un four en Celsius. Ils <em>savent</em> juste que c'est environ 180°C.<br /><br />Ce jeu entraîne ce même instinct. En comparant les valeurs, vous mémoriserez inconsciemment les repères clés :",
+        "points": {
+            "simmering": "<strong>Mijoter :</strong> ~85°C / 185°F",
+            "lowBake": "<strong>Cuisson douce :</strong> 150°C / 300°F",
+            "standardBake": "<strong>Cuisson standard :</strong> 180°C / 350°F / Gas 4",
+            "roasting": "<strong>Rôtissage :</strong> 220°C / 425°F / Gas 7"
+        }
+    },
+    "faq": {
+        "title": "FAQ",
+        "howToPlay": {
+            "question": "Comment jouer?",
+            "answer": "Vous avez 60 secondes pour comparer deux températures et deviner si la seconde est plus chaude ou plus froide."
+        },
+        "ovenSettings": {
+            "question": "Cela aide-t-il pour les réglages du four?",
+            "answer": "Oui, cela vous aide à convertir intuitivement entre Celsius, Fahrenheit et Thermostat."
+        },
+        "gasMarks": {
+            "question": "Inclut les Thermostats gaz ?",
+            "answer": "Oui ! Nous incluons les Gas Marks 1 à 9 pour vous aider avec ces recettes britanniques."
+        },
+        "exact": {
+            "question": "Est-ce exact ?",
+            "answer": "Le jeu permet de petites marges. Si les températures sont théoriquement identiques, nous les ajustons légèrement pour qu'il y ait toujours une réponse correcte."
+        },
+        "logic": {
+            "question": "Quelle est la logique ?",
+            "answer": "Nous avons généré des milliers de paires. 200°C vs 400°F ? 400°F (204°C) est plus chaud. Gas Mark 6 vs 350°F ? Gas Mark 6 (200°C) est plus chaud que 350°F (177°C)."
+        }
+    },
+    "cheatSheet": {
+        "title": "Tableau de Référence Rapide",
+        "caption": "Référence rapide pour la conversion Gas Mark, Celsius et Fahrenheit",
+        "headers": {
+            "gasMark": "Gas Mark",
+            "fahrenheit": "Fahrenheit (°F)",
+            "celsius": "Celsius (°C)",
+            "description": "Description"
+        },
+        "note": "*Note : Les fours à chaleur tournante sont généralement 20°C plus bas que ces valeurs.",
+        "rows": {
+            "verySlow": "Très Doux / Meringues",
+            "slow": "Doux / Ragoûts",
+            "moderate": "Modéré / Gâteaux",
+            "moderateBaking": "Modéré / Cuisson",
+            "modHot": "Moy. Chaud / Rôtir",
+            "hot": "Chaud / Pâtisserie",
+            "hotRoast": "Chaud / Rôtir Vite",
+            "veryHot": "Très Chaud / Saisir"
+        }
+    },
+    "links": {
+        "home": "Accueil",
+        "challenge": "Défi Température",
+        "conversionChart": "Tableau de Conversion Four & Guide Gas Mark →",
+        "needReference": "Besoin d'une référence précise ?"
+    }
+}
