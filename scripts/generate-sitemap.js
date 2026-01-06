@@ -28,16 +28,14 @@ const LOCALES = fs.readdirSync(localesDir).filter(f =>
 );
 
 function generateSitemap() {
-    const urls = [];
+    const allEntries = [];
 
     // 1. 首页及其多语言版本
     const homepageDeps = ['pages/index.tsx', ...LOCALES.map(l => `locales/${l}/home.json`)];
     const homepageDate = getLatestModifiedDate(homepageDeps);
-    urls.push('  <!-- Homepage -->');
-    generateLocales('/', 1.0, 'daily', homepageDate, urls);
+    addLocales('/', 1.0, 'daily', homepageDate, allEntries);
 
     // 2. 动态扫描 pages 目录获取所有 Next.js 页面
-    urls.push('\n  <!-- Main dynamic pages from /pages directory -->');
     const pagesDir = path.join(process.cwd(), 'pages');
     const pageFiles = fs.readdirSync(pagesDir);
 
@@ -48,7 +46,7 @@ function generateSitemap() {
         })
         .map(file => file.replace('.tsx', ''));
 
-    mainPages.sort().forEach(page => {
+    mainPages.forEach(page => {
         const pageDeps = [
             `pages/${page}.tsx`,
             'pages/temperature-template.tsx',
@@ -56,11 +54,10 @@ function generateSitemap() {
             ...LOCALES.map(l => `locales/${l}/template.json`)
         ];
         const pageDate = getLatestModifiedDate(pageDeps);
-        generateLocales(`/${page}`, 0.9, 'weekly', pageDate, urls);
+        addLocales(`/${page}`, 0.9, 'weekly', pageDate, allEntries);
     });
 
     // 3. 公共 HTML 页面 (Legacy/Static)
-    urls.push('\n  <!-- Static HTML Pages from /public -->');
     const publicDir = path.join(process.cwd(), 'public');
     const publicFiles = fs.readdirSync(publicDir);
 
@@ -70,50 +67,75 @@ function generateSitemap() {
         !['about-us.html', 'privacy-policy.html', 'terms-of-service.html'].includes(f)
     );
 
-    legacyPages.sort().forEach(file => {
+    legacyPages.forEach(file => {
         const fileDate = getLatestModifiedDate([path.join('public', file)]);
-        urls.push(formatUrl(`/${file}`, 0.8, 'monthly', fileDate));
+        allEntries.push({
+            loc: `${SITE_URL}/${file}`,
+            lastmod: fileDate,
+            changefreq: 'monthly',
+            priority: 0.8
+        });
     });
 
     // 4. 法律与信息类页面
-    urls.push('\n  <!-- Legal and Info Pages -->');
     const infoPages = ['about-us.html', 'privacy-policy.html', 'terms-of-service.html'];
     infoPages.forEach(page => {
         if (fs.existsSync(path.join(publicDir, page))) {
             const fileDate = getLatestModifiedDate([path.join('public', page)]);
-            urls.push(formatUrl(`/${page}`, 0.5, 'monthly', fileDate));
+            allEntries.push({
+                loc: `${SITE_URL}/${page}`,
+                lastmod: fileDate,
+                changefreq: 'monthly',
+                priority: 0.5
+            });
         }
     });
+
+    // 排序：按 lastmod 倒序（最新的在最前）
+    allEntries.sort((a, b) => {
+        const dateA = new Date(a.lastmod);
+        const dateB = new Date(b.lastmod);
+        return dateB - dateA;
+    });
+
+    // 生成 XML
+    const xmlRows = allEntries.map(entry => `  <url>
+    <loc>${entry.loc}</loc>
+    <lastmod>${entry.lastmod}</lastmod>
+    <changefreq>${entry.changefreq}</changefreq>
+    <priority>${entry.priority.toFixed(1)}</priority>
+  </url>`);
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${urls.join('\n')}
+${xmlRows.join('\n')}
 </urlset>`;
 
     fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap);
-    console.log(`Successfully generated dynamic sitemap.xml with actual modification dates.`);
+    console.log(`Successfully generated dynamic sitemap.xml sorted by date.`);
 }
 
-function generateLocales(basePath, priority, changefreq, lastmod, urls) {
+function addLocales(basePath, priority, changefreq, lastmod, entriesList) {
     // 默认英文
-    urls.push(formatUrl(basePath, priority, changefreq, lastmod));
+    entriesList.push({
+        loc: `${SITE_URL}${basePath}`,
+        lastmod,
+        changefreq,
+        priority
+    });
 
     // 其他语言版本
     LOCALES.filter(l => l !== 'en').forEach(locale => {
         const localePath = `/${locale}`;
         const fullPath = (basePath === '/' ? localePath : `${localePath}${basePath}`);
-        urls.push(formatUrl(fullPath, priority, changefreq, lastmod));
+        entriesList.push({
+            loc: `${SITE_URL}${fullPath}`,
+            lastmod,
+            changefreq,
+            priority
+        });
     });
-}
-
-function formatUrl(relPath, priority, changefreq, lastmod) {
-    return `  <url>
-    <loc>${SITE_URL}${relPath}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority.toFixed(1)}</priority>
-  </url>`;
 }
 
 generateSitemap();
