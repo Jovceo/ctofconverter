@@ -10,6 +10,9 @@ const nextConfig = {
     localeDetection: false,
   },
 
+  // Silence Turbopack/Webpack conflict error by acknowledging Turbopack usage
+  turbopack: {},
+
   // 图片优化
   images: {
     remotePatterns: [
