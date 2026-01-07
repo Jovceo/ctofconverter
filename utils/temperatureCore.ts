@@ -23,7 +23,7 @@ export function fahrenheitToCelsius(fahrenheit: number): number {
  * 99.50 -> "99.5"
  * 50.00 -> "50"
  */
-export function formatTemperature(value: number, precision: number = 1): string {
+export function formatTemperature(value: number, precision: number = 2): string {
     const fixed = value.toFixed(precision);
     return parseFloat(fixed).toString();
 }

@@ -3,7 +3,11 @@
         "titles": {
             "google": "{celsius}°C = {fahrenheit}°F | {celsius} to Fahrenheit {context}",
             "bing": "Convert {celsius} Celsius to Fahrenheit ({fahrenheit}°F)",
-            "sameValue": "{celsius}°C to Fahrenheit: Same Value ({fahrenheit}°F)"
+            "sameValue": "{celsius}°C to Fahrenheit: Same Value ({fahrenheit}°F)",
+            "fever": "{celsius}°C to Fahrenheit ({fahrenheit}°F) – Is It a Fever or Normal?",
+            "weather": "{celsius}°C to Fahrenheit ({fahrenheit}°F) – Weather & Feeling Guide",
+            "cooking": "{celsius}°C to Fahrenheit ({fahrenheit}°F) – Oven Temp & Gas Mark",
+            "general": "{celsius}°C to Fahrenheit ({fahrenheit}°F) Conversion Calculator"
         },
         "descriptions": {
             "googleContext": "{celsius} degrees Celsius = {fahrenheit} degrees Fahrenheit. Exact conversion formula: {celsius}°C × 9/5 + 32. Perfect for {weather_context}.",
@@ -78,7 +82,7 @@
         "healthContextTitle": "Health Context",
         "healthContextFooter": "Please consult a medical professional for advice.",
         "weatherFeelTitle": "How it feels outside",
-        "weatherFeelIntro": "At <strong>{celsius}°C</strong>:",
+        "weatherFeelIntro": "As an <strong>outdoor temperature</strong> of <strong>{celsius}°C</strong>:",
         "scale": {
             "extremeCold": "Extreme Cold",
             "freezing": "Water Freezes",
@@ -269,7 +273,7 @@
         "cool": "Cool to Mild. A sweater or light jacket is recommended.",
         "warm": "Warm and pleasant. T-shirt weather!",
         "hot": "Hot! Light clothing, stay hydrated.",
-        "veryHot": "Very Hot / Extreme Heat. Limit outdoor activity and seek shade."
+        "veryHot": "If referring to outdoor temperature, this is Very Hot / Extreme Heat. Limit outdoor activity."
     },
     "context": {
         "descriptions": {
@@ -308,7 +312,7 @@
             "sources": "Sources: NIST, Physical Science Center."
         },
         "medical": {
-            "note": "Medical temperature data is reviewed against clinical guidelines. Fever thresholds and body temperature interpretations align with standards from major health organizations.",
+            "note": "Medical temperature data is reviewed against clinical guidelines. Fever thresholds and body temperature interpretations align with standards from major health organizations. Content is compiled based on publicly available clinical guidelines.",
             "sources": "Sources: World Health Organization (WHO), CDC, Medical Literature."
         },
         "weather": {

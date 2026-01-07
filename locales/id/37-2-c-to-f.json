@@ -1,0 +1,58 @@
+{
+    "meta": {
+        "title": "37.2°C ke Fahrenheit ({fahrenheit}°F) | Apakah Demam?",
+        "description": "Konversi 37.2°C ke {fahrenheit}°F secara instan. Apakah 37.2 derajat demam? Cari tahu apakah ini normal untuk orang dewasa, bayi, atau di malam hari.",
+        "ogTitle": "Apakah 37.2°C ({fahrenheit}°F) Demam? Konversi & Panduan",
+        "ogDescription": "37.2°C sama dengan {fahrenheit}°F. Apakah suhu ini normal? Tergantung! Pelajari tentang 37.2°C pada orang dewasa vs bayi."
+    },
+    "page": {
+        "title": "37.2°C ke Fahrenheit ({fahrenheit}°F) – Apakah Demam atau Normal?",
+        "description": "Konversi <strong>37.2 derajat Celsius ke Fahrenheit</strong>. Hasilnya adalah <strong>{fahrenheit}°F</strong>. Banyak yang bertanya: <strong>Apakah 37.2°C demam?</strong> Panduan ini menjelaskan arti 37.2°C bagi orang dewasa dan bayi.",
+        "intro": "37.2°C ({fahrenheit}°F) adalah suhu batas. Bagi kebanyakan orang dewasa, ini sedikit di atas 'rata-rata' tetapi biasanya dianggap dalam <strong>kisaran normal</strong>, terutama di malam hari.",
+        "resultText": "37.2 derajat Celsius sama dengan {fahrenheit} derajat Fahrenheit"
+    },
+    "warning": {
+        "title": "🩺 Wawasan Kesehatan: 37.2°C ({fahrenheit}°F)",
+        "content": "<strong>37.2°C umumnya TIDAK dianggap demam</strong> pada orang dewasa. Secara medis, demam biasanya mulai dari 38.0°C (100.4°F). Namun, 37.2°C bisa berarti:"
+    },
+    "context": {
+        "medical": {
+            "title": "🌡️ Apakah 37.2°C Normal? (Konteks Penting)",
+            "content": "Menafsirkan 37.2°C ({fahrenheit}°F) tergantung pada beberapa faktor:",
+            "items": [
+                "<strong>Waktu:</strong> Suhu tubuh memuncak di malam hari. 37.2°C sangat umum pada jam 6 sore.",
+                "<strong>Metode Pengukuran:</strong> Pengukuran ketiak (aksila) 37.2°C kira-kira setara dengan 37.7°C oral, yang mungkin merupakan demam ringan.",
+                "<strong>Untuk Bayi:</strong> 37.2°C adalah suhu rektal yang sangat normal untuk bayi baru lahir.",
+                "<strong>Aktivitas:</strong> Olahraga atau cuaca panas dapat menaikkan suhu sementara ke 37.2°C."
+            ]
+        }
+    },
+    "faq": {
+        "items": [
+            {
+                "question": "Berapa 37.2 Celsius dalam Fahrenheit?",
+                "answer": "37.2 derajat Celsius sama dengan <strong>{fahrenheit} derajat Fahrenheit</strong>."
+            },
+            {
+                "question": "Apakah 37.2 C demam pada orang dewasa?",
+                "answer": "Secara umum, <strong>tidak</strong>. Bagi orang dewasa, 37.2°C dianggap normal-tinggi. Biasanya tidak diklasifikasikan sebagai demam kecuali disertai gejala lain."
+            },
+            {
+                "question": "Apakah 37.2 derajat demam pada bayi?",
+                "answer": "Tidak, <strong>37.2°C normal untuk bayi dan balita</strong>. Mereka cenderung memiliki suhu tubuh rata-rata yang lebih tinggi. Demam pada bayi biasanya didefinisikan sebagai 38°C atau lebih tinggi."
+            },
+            {
+                "question": "Apakah 37.2 C normal di malam hari?",
+                "answer": "<strong>Ya, tentu saja.</strong> Suhu tubuh Anda berfluktuasi secara alami dan paling tinggi di sore/malam hari."
+            },
+            {
+                "question": "Apa arti 37.2°C di ketiak?",
+                "answer": "Jika Anda mengukur <strong>37.2°C di ketiak</strong>, suhu inti Anda mungkin lebih tinggi (sekitar 37.7°C). Meskipun 37.2 itu sendiri bukan demam tinggi, pembacaan ketiak pada tingkat ini dianggap sedikit meningkat dan perlu dipantau."
+            },
+            {
+                "question": "Apakah 37.2°C suhu tubuh normal?",
+                "answer": "Ya, 37.2°C termasuk dalam definisi luas <strong>suhu tubuh manusia normal</strong>, yang berkisar dari sekitar 36.1°C hingga 37.2°C."
+            }
+        ]
+    }
+}

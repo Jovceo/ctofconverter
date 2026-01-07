@@ -185,30 +185,42 @@ export function generatePageTitle(
   context?: TemperatureContext,
   keywords?: string[]
 ): string {
-  // 1. 获取策略 (with keywords)
-  const strategy = getSeoStrategy(celsius, keywords);
-
-  // 2. 获取场景关键词 (Oven, Body etc.)
-  // 仅在明确匹配时返回，否则为空字符串
-  const contextKey = context?.scene?.intentType || '';
-  const contextLabel = contextKey ? t(`seo.contextCredits.${contextKey}`, { defaultValue: '' }) : '';
-
-  // 3. -40 特例
+  // 1. -40 Exception (Scientific curiosity)
   if (Math.abs(celsius + 40) < 0.1) {
-    return t('meta.titles.sameValue', { celsius, fahrenheit });
+    return t('meta.titles.sameValue', { celsius, fahrenheit: formatTemperature(fahrenheit) });
   }
 
-  // 4. BING 策略：传统的 "Convert X to Y" + 完整句子
-  if (strategy === 'BING_DESKTOP') {
-    // 优先：Convert {C} Celsius to Fahrenheit ({F}°F)
-    // 备选：{C}°C to Fahrenheit Conversion | {F}°F
-    return t('meta.titles.bing', { celsius, fahrenheit, context: contextLabel }).trim();
+  // 2. Identify Zone/Scene
+  const scene = getTemperatureScene(celsius);
+
+  // 3. Select Template Key based on Zone
+  let titleKey = 'meta.titles.general';
+
+  switch (scene.name) {
+    case 'BODY':
+      // Zone A: Fever / Body Temp -> Question-Based
+      titleKey = 'meta.titles.fever';
+      break;
+    case 'WEATHER':
+      // Zone B: Weather -> Guide-Based
+      titleKey = 'meta.titles.weather';
+      break;
+    case 'OVEN':
+      // Zone C: Cooking -> Utility-Based
+      titleKey = 'meta.titles.cooking';
+      break;
+    default:
+      // Zone D: General / Water / Extreme -> Utility-Based
+      titleKey = 'meta.titles.general';
+      break;
   }
 
-  // 5. GOOGLE 策略：结果前置 + 紧凑
-  // 优先：{c}°C = {f}°F | {c} to Fahrenheit
-  // 备选 ({context} valid only): {c}°C = {f}°F | {ContextLabel}
-  return t('meta.titles.google', { celsius, fahrenheit, context: contextLabel }).trim();
+  // 4. Generate Title with Exact Precision
+  // formatTemperature(fahrenheit) now defaults to 2 decimals, ensuring "Always Exact"
+  return t(titleKey, {
+    celsius,
+    fahrenheit: formatTemperature(fahrenheit)
+  }).trim();
 }
 
 /**
@@ -221,37 +233,30 @@ export function generateMetaDescription(
   context?: TemperatureContext,
   keywords?: string[]
 ): string {
-  const strategy = getSeoStrategy(celsius, keywords);
-
-  // -40 特例
+  // -40 Exception
   if (Math.abs(celsius + 40) < 0.1) {
-    return t('meta.descriptions.sameValue', { celsius, fahrenheit });
+    return t('meta.descriptions.sameValue', { celsius, fahrenheit: formatTemperature(fahrenheit) });
   }
 
-  // 构造 Gas Mark 字符串 (Strict)
-  let gasMarkStr = '';
-  if (celsius >= 130 && celsius <= 240) { // Common Gas Mark Range
-    // 简单的 Look-up 模拟，实际应调用 getOvenGasMark
-    // 这里暂用通用占位，由 locale 处理
-  }
+  // Format Fahrenheit to ensure "Always Exact" (2 decimal places)
+  const formattedF = formatTemperature(fahrenheit);
 
-  // BING: 强调 Formula, Exact Value
-  if (strategy === 'BING_DESKTOP') {
-    return t('meta.descriptions.bing', { celsius, fahrenheit });
-  }
-
-  // GOOGLE: Answer First, Context Driven
-  // 如果有 Context (Body/Cooking)，使用场景描述
+  // Context Driven (Body/Cooking/Weather)
   if (context?.scene) {
     return t('meta.descriptions.googleContext', {
       celsius,
-      fahrenheit,
-      contextType: context.scene.intentType
+      fahrenheit: formattedF,
+      contextType: context.scene.intentType || 'measurement',
+      // Pass formattedF for any formula placeholders if needed
+      weather_context: context.scene.intentType // mapping might need adjustment but 'intentType' is distinct string like 'medical'
     });
   }
 
-  // Google Fallback (无场景): 简洁转换
-  return t('meta.descriptions.googleGeneral', { celsius, fahrenheit });
+  // General Fallback
+  return t('meta.descriptions.googleGeneral', {
+    celsius,
+    fahrenheit: formattedF
+  });
 }
 
 /**
