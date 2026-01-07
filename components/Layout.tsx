@@ -57,7 +57,7 @@ const buildLocalePath = (basePath: string, locale: string, defaultLocale: string
     if (locale === defaultLocale) {
       return '/';
     }
-    return `/${locale}/`;
+    return `/${locale}`;
   }
 
   const suffix = normalizedBase.startsWith('/') ? normalizedBase : `/${normalizedBase}`;
@@ -79,7 +79,7 @@ export default function Layout({ children, seo }: LayoutProps) {
   const canonicalUrl = useMemo(() => {
     if (seo?.canonical) return seo.canonical;
     const localizedPath = buildLocalePath(basePath, locale, defaultLocale || DEFAULT_LOCALE);
-    return `${SITE_ORIGIN}${localizedPath === '/' ? '/' : localizedPath}`;
+    return `${SITE_ORIGIN}${localizedPath}`;
   }, [basePath, locale, defaultLocale, seo?.canonical]);
 
   const alternateLinks = SUPPORTED_LOCALES.map((supportedLocale) => {
@@ -88,7 +88,7 @@ export default function Layout({ children, seo }: LayoutProps) {
       supportedLocale,
       defaultLocale || DEFAULT_LOCALE
     );
-    const href = `${SITE_ORIGIN}${localizedPath === '/' ? '/' : localizedPath}`;
+    const href = `${SITE_ORIGIN}${localizedPath}`;
     return { locale: supportedLocale, href, hreflang: HREFLANG_MAP[supportedLocale] || supportedLocale };
   });
 

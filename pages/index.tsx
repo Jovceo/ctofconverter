@@ -118,14 +118,14 @@ export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: Home
                 <meta name="robots" content="index, follow" />
 
                 {/* SEO Multi-language Linking */}
-                <link rel="canonical" href={`https://ctofconverter.com${locale === 'en' ? '/' : '/' + locale + '/'}`} />
+                <link rel="canonical" href={`https://ctofconverter.com${locale === 'en' ? '/' : '/' + locale}`} />
                 <link rel="alternate" hrefLang="x-default" href="https://ctofconverter.com/" />
                 {['en', 'zh', 'es', 'hi', 'ar', 'ja', 'fr', 'de', 'id', 'pt-br'].map(l => (
                     <link
                         key={l}
                         rel="alternate"
                         hrefLang={l === 'zh' ? 'zh-CN' : (l === 'pt-br' ? 'pt-BR' : l)}
-                        href={`https://ctofconverter.com${l === 'en' ? '' : '/' + l}/`}
+                        href={`https://ctofconverter.com${l === 'en' ? '/' : '/' + l}`}
                     />
                 ))}
 
