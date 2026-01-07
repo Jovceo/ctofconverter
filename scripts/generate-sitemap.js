@@ -76,39 +76,10 @@ function generateSitemap() {
         addLocales(`/${page}`, 0.9, 'weekly', pageDate, allEntries);
     });
 
-    // 3. 公共 HTML 页面 (Legacy/Static)
-    const publicDir = path.join(process.cwd(), 'public');
-    const publicFiles = fs.readdirSync(publicDir);
+    // 3. 公共 HTML 页面 (Legacy/Static) & 4. 法律与信息类页面
+    // Removed as per user request to only include Next.js dynamic pages
+    // and exclude all static files from the public directory.
 
-    const legacyPages = publicFiles.filter(f =>
-        f.endsWith('.html') &&
-        !['404.html', 'index.html', 'google4cefee41ce49f67b.html', 'ctof.html'].includes(f) &&
-        !['about-us.html', 'privacy-policy.html', 'terms-of-service.html'].includes(f)
-    );
-
-    legacyPages.forEach(file => {
-        const fileDate = getLatestModifiedDate([path.join('public', file)]);
-        allEntries.push({
-            loc: `${SITE_URL}/${file}`,
-            lastmod: fileDate,
-            changefreq: 'monthly',
-            priority: 0.8
-        });
-    });
-
-    // 4. 法律与信息类页面
-    const infoPages = ['about-us.html', 'privacy-policy.html', 'terms-of-service.html'];
-    infoPages.forEach(page => {
-        if (fs.existsSync(path.join(publicDir, page))) {
-            const fileDate = getLatestModifiedDate([path.join('public', page)]);
-            allEntries.push({
-                loc: `${SITE_URL}/${page}`,
-                lastmod: fileDate,
-                changefreq: 'monthly',
-                priority: 0.5
-            });
-        }
-    });
 
     // 排序：按 lastmod 倒序（最新的在最前）
     allEntries.sort((a, b) => {
