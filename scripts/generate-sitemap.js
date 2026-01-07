@@ -6,31 +6,41 @@ const FALLBACK_DATE = '2025-09-15';
 
 const { execSync } = require('child_process');
 
-// Helper: 获取文件或目录列表中最新的修改日期 (优先使用 Git 提交时间)
+// Helper: 获取文件或目录列表中最新的修改日期 (优先使用最新时间：Git 或 本地文件系统)
 function getLatestModifiedDate(paths) {
     let latestDate = 0;
 
     paths.forEach(p => {
         const fullPath = path.isAbsolute(p) ? p : path.join(process.cwd(), p);
         if (fs.existsSync(fullPath)) {
-            try {
-                // 尝试从 Git 获取最后修改时间
-                // 使用 relative path 给 git 命令，避免绝对路径问题
-                const relPath = path.relative(process.cwd(), fullPath);
-                const gitDateStr = execSync(`git log -1 --format=%cI "${relPath}"`, { encoding: 'utf-8' }).trim();
+            let fileDate = 0;
 
+            // 1. 尝试获取 Git 提交时间
+            try {
+                const relPath = path.relative(process.cwd(), fullPath);
+                // 使用 git log -1 获取最后提交时间
+                const gitDateStr = execSync(`git log -1 --format=%cI "${relPath}"`, { encoding: 'utf-8', stdio: ['pipe', 'pipe', 'ignore'] }).trim();
                 if (gitDateStr) {
-                    const gitDate = new Date(gitDateStr).getTime();
-                    if (gitDate > latestDate) latestDate = gitDate;
-                } else {
-                    // Fallback: 如果 Git 没有记录 (例如新文件未提交)，使用文件系统时间
-                    const stats = fs.statSync(fullPath);
-                    if (stats.mtimeMs > latestDate) latestDate = stats.mtimeMs;
+                    fileDate = new Date(gitDateStr).getTime();
                 }
             } catch (e) {
-                // Git 命令失败 (例如非 git 环境)，回退到文件系统时间
+                // Git 命令失败，忽略
+            }
+
+            // 2. 获取本地文件系统修改时间 (处理未提交的修改)
+            try {
                 const stats = fs.statSync(fullPath);
-                if (stats.mtimeMs > latestDate) latestDate = stats.mtimeMs;
+                // 如果本地修改时间比 Git 时间新，使用本地时间
+                if (stats.mtimeMs > fileDate) {
+                    fileDate = stats.mtimeMs;
+                }
+            } catch (e) {
+                // stat 失败
+            }
+
+            // 更新整体最新时间
+            if (fileDate > latestDate) {
+                latestDate = fileDate;
             }
         }
     });
