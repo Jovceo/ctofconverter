@@ -22,8 +22,32 @@ export function getLatestModifiedDate(filePaths: string[]): string {
 
                 if (gitDateStr) {
                     const gitDate = new Date(gitDateStr);
-                    if (gitDate > latestMtime) {
-                        latestMtime = gitDate;
+                    // Determine which date to use based on environment
+                    const isCI = process.env.CI || process.env.VERCEL || process.env.NETLIFY;
+
+                    if (isCI) {
+                        // In CI, trust Git date strictly to avoid build-time mtime reset
+                        if (gitDate > latestMtime) {
+                            latestMtime = gitDate;
+                        }
+                    } else {
+                        // In Local, check if file system is newer (uncommitted changes)
+                        // This logic is slightly different structure but same goal as sitemap script
+                        // Check FS stats for this file specifically
+                        try {
+                            const stats = fs.statSync(fullPath);
+                            const fsDate = stats.mtime;
+                            // Use the newer of Git or FS
+                            const newerDate = fsDate > gitDate ? fsDate : gitDate;
+                            if (newerDate > latestMtime) {
+                                latestMtime = newerDate;
+                            }
+                        } catch (e) {
+                            // If stat fails, just use git date
+                            if (gitDate > latestMtime) {
+                                latestMtime = gitDate;
+                            }
+                        }
                     }
                 } else {
                     // Fallback to fs.statSync if git returns empty (e.g. untracked file)
