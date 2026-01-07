@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/:locale(zh|es|hi|ar|ja|fr|de|id|pt-br)/:path*.html",
-      "destination": "/404"
-    }
-  ]
-}

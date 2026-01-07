@@ -37,22 +37,12 @@ const nextConfig = {
   },
 
   async rewrites() {
-    return {
-      beforeFiles: [
-        // 在 i18n 路由处理之前拦截语言前缀的 .html 文件
-        // 将它们重写到一个不存在的路径，从而返回 404
-        {
-          source: '/:locale(zh|es|hi|ar|ja|fr|de|id|pt-br)/:path*.html',
-          destination: '/api/404-not-found',
-        },
-      ],
-      afterFiles: [
-        {
-          source: '/images/equation/:celsius-celsius-to-fahrenheit-conversion.png',
-          destination: '/api/og?c=:celsius',
-        },
-      ],
-    };
+    return [
+      {
+        source: '/images/equation/:celsius-celsius-to-fahrenheit-conversion.png',
+        destination: '/api/og?c=:celsius',
+      },
+    ];
   },
 
   async redirects() {
