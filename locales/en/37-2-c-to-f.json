@@ -1,0 +1,58 @@
+{
+    "meta": {
+        "title": "37.2°C to Fahrenheit ({fahrenheit}°F) | Normal, Fever, or Elevated?",
+        "description": "Convert 37.2°C to {fahrenheit}°F instantly. Is 37.2 Celsius a fever? Find out if this is normal for adults, babies, or in the evening. Complete body temperature guide.",
+        "ogTitle": "Is 37.2°C ({fahrenheit}°F) a Fever? Conversion & Guide",
+        "ogDescription": "37.2°C equals {fahrenheit}°F. Is this temperature normal? It depends! Learn about 37.2°C in adults vs babies, evening spikes, and underarm measurements."
+    },
+    "page": {
+        "title": "37.2°C to Fahrenheit ({fahrenheit}°F) – Is It a Fever or Normal?",
+        "description": "Convert <strong>37.2 degrees Celsius to Fahrenheit</strong>. The result is <strong>{fahrenheit}°F</strong>. Many people ask: <strong>Is 37.2°C a fever?</strong> This guide explains what 37.2°C means for adults, babies, and toddlers.",
+        "intro": "37.2°C ({fahrenheit}°F) is a borderline temperature. For most adults, it is slightly above the textbook 'average' but typically considered within the <strong>normal range</strong>, especially in the evening. However, it can indicate a low-grade fever depending on age and measurement method.",
+        "resultText": "37.2 degrees Celsius equals {fahrenheit} degrees Fahrenheit"
+    },
+    "warning": {
+        "title": "🩺 Health Insight: 37.2°C ({fahrenheit}°F)",
+        "content": "<strong>37.2°C is generally NOT considered a fever</strong> for adults. Medically, a fever usually starts at 38.0°C (100.4°F). However, 37.2°C can be:"
+    },
+    "context": {
+        "medical": {
+            "title": "🌡️ Is 37.2°C Normal? (Context Matters)",
+            "content": "Interpreting 37.2°C ({fahrenheit}°F) depends on several factors:",
+            "items": [
+                "<strong>Time of Day:</strong> Body temperature peaks in the evening. 37.2°C is very common at 6 PM.",
+                "<strong>Measurement Method:</strong> An underarm (axillary) reading of 37.2°C is roughly equivalent to 37.7°C orally, which might be a low-grade fever.",
+                "<strong>For Babies:</strong> 37.2°C is a perfectly normal rectal temperature for newborns and infants.",
+                "<strong>Activity:</strong> Exercise or hot weather can easily raise body temp to 37.2°C temporarily."
+            ]
+        }
+    },
+    "faq": {
+        "items": [
+            {
+                "question": "What is 37.2 Celsius in Fahrenheit?",
+                "answer": "37.2 degrees Celsius equals <strong>{fahrenheit} degrees Fahrenheit</strong> (often rounded to 99°F)."
+            },
+            {
+                "question": "Is 37.2 C a fever for adults?",
+                "answer": "Generally, <strong>no</strong>. For adults, 37.2°C is considered within the high-normal range, especially in the late afternoon. It is typically not classified as a fever unless accompanied by other symptoms, although some may call it a 'low-grade' temperature."
+            },
+            {
+                "question": "Is 37.2 Celsius a fever in a baby or toddler?",
+                "answer": "No, <strong>37.2°C is normal for babies and toddlers</strong>. Infants tend to have higher average body temperatures than adults. A fever in a baby is usually defined as a rectal temperature of 38°C (100.4°F) or higher."
+            },
+            {
+                "question": "Is 37.2 C normal in the evening?",
+                "answer": "<strong>Yes, absolutely.</strong> Your body temperature naturally fluctuates (circadian rhythm) and is highest in the late afternoon/evening. A reading of 37.2°C at 7 PM is consistent with a healthy adult baseline."
+            },
+            {
+                "question": "What does 37.2°C mean for an underarm measurement?",
+                "answer": "If you measured <strong>37.2°C under the arm (axillary)</strong>, your core temperature is likely higher (around 37.7°C or 100°F). While 37.2 itself isn't a fever, an underarm reading of this level is considered 'elevated' and warrants monitoring."
+            },
+            {
+                "question": "Is 37.2°C normal body temperature?",
+                "answer": "Yes, 37.2°C falls within the wider definition of <strong>normal human body temperature</strong>, which ranges from roughly 36.1°C to 37.2°C (97°F to 99°F)."
+            }
+        ]
+    }
+}

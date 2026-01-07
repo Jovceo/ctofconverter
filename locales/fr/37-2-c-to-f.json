@@ -1,0 +1,58 @@
+{
+    "meta": {
+        "title": "37.2°C en Fahrenheit ({fahrenheit}°F) | Est-ce de la fièvre ?",
+        "description": "Convertissez 37.2°C en {fahrenheit}°F. 37.2°C est-il considéré comme de la fièvre ? Découvrez si c'est normal pour les adultes, les bébés ou le soir.",
+        "ogTitle": "37.2°C ({fahrenheit}°F) Est-ce de la fièvre ? Guide de Conversion",
+        "ogDescription": "37.2°C équivaut à {fahrenheit}°F. Est-ce normal ? Cela dépend ! Apprenez-en plus sur 37.2°C chez l'adulte vs le bébé."
+    },
+    "page": {
+        "title": "37.2°C en Fahrenheit ({fahrenheit}°F) – Est-ce de la fièvre ?",
+        "description": "Convertissez <strong>37.2 degrés Celsius en Fahrenheit</strong>. Le résultat est <strong>{fahrenheit}°F</strong>. Beaucoup demandent : <strong>37.2°C est-ce de la fièvre ?</strong> Ce guide explique ce que signifie 37.2°C pour les adultes et les bébés.",
+        "intro": "37.2°C ({fahrenheit}°F) est une température limite. Pour la plupart des adultes, c'est légèrement au-dessus de la \"moyenne\" mais généralement considéré dans la <strong>plage normale</strong>, surtout le soir.",
+        "resultText": "37.2 degrés Celsius égalent {fahrenheit} degrés Fahrenheit"
+    },
+    "warning": {
+        "title": "🩺 Aperçu Santé : 37.2°C ({fahrenheit}°F)",
+        "content": "<strong>37.2°C n'est généralement PAS considéré comme de la fièvre</strong> chez l'adulte. Médicalement, la fièvre commence souvent à 38.0°C. Cependant, 37.2°C peut indiquer :"
+    },
+    "context": {
+        "medical": {
+            "title": "🌡️ 37.2°C est-ce normal ? (Le contexte compte)",
+            "content": "L'interprétation de 37.2°C ({fahrenheit}°F) dépend de plusieurs facteurs :",
+            "items": [
+                "<strong>Moment de la journée :</strong> La température corporelle culmine le soir. 37.2°C est très courant à 18h.",
+                "<strong>Méthode :</strong> Une mesure axillaire (sous le bras) de 37.2°C équivaut à environ 37.7°C en rectal/buccal.",
+                "<strong>Pour les bébés :</strong> 37.2°C est une température rectale parfaitement normale pour les nourrissons.",
+                "<strong>Activité :</strong> L'exercice ou la chaleur peuvent temporairement élever la température à 37.2°C."
+            ]
+        }
+    },
+    "faq": {
+        "items": [
+            {
+                "question": "Combien font 37.2 Celsius en Fahrenheit ?",
+                "answer": "37.2 degrés Celsius égalent <strong>{fahrenheit} degrés Fahrenheit</strong>."
+            },
+            {
+                "question": "Est-ce que 37.2 C est de la fièvre chez l'adulte ?",
+                "answer": "Généralement, <strong>non</strong>. Pour un adulte, 37.2°C est considéré comme une normale haute. Ce n'est pas classé comme fièvre sans autres symptômes, bien que certains l'appellent \"fébricule\". "
+            },
+            {
+                "question": "Est-ce que 37.2 C est de la fièvre pour un bébé ?",
+                "answer": "Non, <strong>37.2°C est normal pour les bébés</strong>. Ils ont tendance à avoir une température moyenne plus élevée. La fièvre chez un bébé commence généralement à 38°C."
+            },
+            {
+                "question": "Est-ce normal d'avoir 37.2 C le soir ?",
+                "answer": "<strong>Oui, absolument.</strong> Votre température fluctue naturellement et est plus élevée en fin d'après-midi."
+            },
+            {
+                "question": "Que signifie 37.2°C sous le bras ?",
+                "answer": "Si vous mesurez <strong>37.2°C sous l'aisselle</strong>, votre température centrale est probablement plus élevée (environ 37.7°C). C'est considéré comme légèrement élevé."
+            },
+            {
+                "question": "37.2°C est-elle une température corporelle normale ?",
+                "answer": "Oui, 37.2°C se situe dans la définition large de la <strong>température corporelle normale</strong>, qui va d'environ 36.1°C à 37.2°C."
+            }
+        ]
+    }
+}

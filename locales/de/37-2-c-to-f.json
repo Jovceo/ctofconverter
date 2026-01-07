@@ -1,0 +1,58 @@
+{
+    "meta": {
+        "title": "37,2°C in Fahrenheit ({fahrenheit}°F) | Ist das Fieber?",
+        "description": "Rechnen Sie 37,2°C sofort in {fahrenheit}°F um. Ist 37,2 Grad Fieber? Erfahren Sie, ob dies für Erwachsene, Babys oder am Abend normal ist.",
+        "ogTitle": "Ist 37,2°C ({fahrenheit}°F) Fieber? Umrechnung & Ratgeber",
+        "ogDescription": "37,2°C entspricht {fahrenheit}°F. Ist diese Temperatur normal? Das hängt ab! Erfahren Sie mehr über 37,2°C bei Erwachsenen vs. Babys."
+    },
+    "page": {
+        "title": "37,2°C in Fahrenheit ({fahrenheit}°F) – Ist das Fieber oder Normal?",
+        "description": "Konvertieren Sie <strong>37,2 Grad Celsius in Fahrenheit</strong>. Das Ergebnis ist <strong>{fahrenheit}°F</strong>. Viele fragen: <strong>Ist 37,2°C Fieber?</strong>",
+        "intro": "37,2°C ({fahrenheit}°F) ist eine Grenztemperatur. Für die meisten Erwachsenen liegt sie leicht über dem „Durchschnitt“, gilt aber oft noch als <strong>normal</strong>, besonders am Abend.",
+        "resultText": "37,2 Grad Celsius entsprechen {fahrenheit} Grad Fahrenheit"
+    },
+    "warning": {
+        "title": "🩺 Gesundheits-Info: 37,2°C ({fahrenheit}°F)",
+        "content": "<strong>37,2°C gilt bei Erwachsenen normalerweise NICHT als Fieber</strong>. Medizinisch beginnt Fieber oft erst ab 38,0°C. 37,2°C kann jedoch bedeuten:"
+    },
+    "context": {
+        "medical": {
+            "title": "🌡️ Ist 37,2°C normal?",
+            "content": "Die Interpretation von 37,2°C ({fahrenheit}°F) hängt von Faktoren ab:",
+            "items": [
+                "<strong>Tageszeit:</strong> Die Körpertemperatur ist abends am höchsten. 37,2°C um 18 Uhr ist sehr üblich.",
+                "<strong>Messmethode:</strong> 37,2°C unter der Achsel entsprechen etwa 37,7°C oral/rektal (leicht erhöht).",
+                "<strong>Bei Babys:</strong> 37,2°C ist eine völlig normale Temperatur für Säuglinge.",
+                "<strong>Aktivität:</strong> Sport oder Hitze können die Temperatur vorübergehend erhöhen."
+            ]
+        }
+    },
+    "faq": {
+        "items": [
+            {
+                "question": "Wie viel sind 37,2 Celsius in Fahrenheit?",
+                "answer": "37,2 Grad Celsius entsprechen <strong>{fahrenheit} Grad Fahrenheit</strong>."
+            },
+            {
+                "question": "Ist 37,2 C Fieber bei Erwachsenen?",
+                "answer": "Generell <strong>nein</strong>. Für Erwachsene gilt 37,2°C als hochnormal. Es wird selten als Fieber eingestuft, es sei denn, es treten andere Symptome auf (erhöhte Temperatur)."
+            },
+            {
+                "question": "Ist 37,2 Grad Fieber bei einem Baby?",
+                "answer": "Nein, <strong>37,2°C ist für Babys normal</strong>. Fieber bei Babys beginnt meist ab 38°C."
+            },
+            {
+                "question": "Ist 37,2 C am Abend normal?",
+                "answer": "<strong>Ja, absolut.</strong> Ihre Körpertemperatur schwankt und ist abends am höchsten. Ein Wert von 37,2°C am Abend ist für gesunde Erwachsene normal."
+            },
+            {
+                "question": "Was bedeutet 37,2°C unter der Achsel?",
+                "answer": "Wenn Sie <strong>37,2°C unter der Achsel</strong> messen, ist Ihre Kerntemperatur wahrscheinlich höher (ca. 37,7°C). Dies gilt als leicht erhöht."
+            },
+            {
+                "question": "Ist 37,2°C normale Körpertemperatur?",
+                "answer": "Ja, 37,2°C liegt innerhalb des breiten Bereichs der <strong>normalen menschlichen Körpertemperatur</strong> (ca. 36,1°C bis 37,2°C)."
+            }
+        ]
+    }
+}

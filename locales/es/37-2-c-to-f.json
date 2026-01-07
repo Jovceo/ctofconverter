@@ -1,0 +1,58 @@
+{
+    "meta": {
+        "title": "37.2°C a Fahrenheit ({fahrenheit}°F) | ¿Es Fiebre o Normal?",
+        "description": "Convierte 37.2°C a {fahrenheit}°F al instante. ¿Es fiebre tener 37.2 grados? Descubre si es normal para adultos, bebés o por la tarde.",
+        "ogTitle": "¿Es 37.2°C ({fahrenheit}°F) Fiebre? Conversión y Guía",
+        "ogDescription": "37.2°C equivale a {fahrenheit}°F. ¿Es normal esta temperatura? Depende. Aprende sobre 37.2°C en adultos vs bebés y picos vespertinos."
+    },
+    "page": {
+        "title": "37.2°C a Fahrenheit ({fahrenheit}°F) – ¿Es Fiebre o Normal?",
+        "description": "Convierte <strong>37.2 grados Celsius a Fahrenheit</strong>. El resultado es <strong>{fahrenheit}°F</strong>. Muchos preguntan: <strong>¿Es fiebre 37.2°C?</strong> Esta guía explica qué significa 37.2°C para adultos y bebés.",
+        "intro": "37.2°C ({fahrenheit}°F) es una temperatura límite. Para la mayoría de los adultos, es ligeramente superior al 'promedio', pero generalmente se considera dentro del <strong>rango normal</strong>, especialmente por la tarde.",
+        "resultText": "37.2 grados Celsius es igual a {fahrenheit} grados Fahrenheit"
+    },
+    "warning": {
+        "title": "🩺 Información de Salud: 37.2°C ({fahrenheit}°F)",
+        "content": "<strong>37.2°C generalmente NO se considera fiebre</strong> en adultos. Médicamente, la fiebre suele comenzar a partir de 38.0°C (100.4°F). Sin embargo, 37.2°C puede ser:"
+    },
+    "context": {
+        "medical": {
+            "title": "🌡️ ¿Es Normal 37.2°C? (El Contexto Importa)",
+            "content": "Interpretar 37.2°C ({fahrenheit}°F) depende de varios factores:",
+            "items": [
+                "<strong>Hora del día:</strong> La temperatura corporal alcanza su pico por la tarde. 37.2°C es muy común a las 6 PM.",
+                "<strong>Método de medición:</strong> 37.2°C axilar (bajo el brazo) equivale a unos 37.7°C orales, lo que podría ser febrícula.",
+                "<strong>Para bebés:</strong> 37.2°C es una temperatura rectal perfectamente normal para recién nacidos.",
+                "<strong>Actividad:</strong> El ejercicio o el calor pueden elevar fácilmente la temperatura a 37.2°C temporalmente."
+            ]
+        }
+    },
+    "faq": {
+        "items": [
+            {
+                "question": "¿Cuánto es 37.2 grados Celsius en Fahrenheit?",
+                "answer": "37.2 grados Celsius equivalen a <strong>{fahrenheit} grados Fahrenheit</strong>."
+            },
+            {
+                "question": "¿Es fiebre 37.2 C en adultos?",
+                "answer": "Generalmente, <strong>no</strong>. Para adultos, 37.2°C se considera un rango normal-alto. No suele clasificarse como fiebre a menos que haya otros síntomas, aunque algunos lo llamen 'febrícula'."
+            },
+            {
+                "question": "¿Es fiebre 37.2 grados en un bebé?",
+                "answer": "No, <strong>37.2°C es normal para bebés y niños pequeños</strong>. Tienden a tener temperaturas promedio más altas. La fiebre en un bebé suele definirse como 38°C rectales o más."
+            },
+            {
+                "question": "¿Es normal tener 37.2 C por la tarde?",
+                "answer": "<strong>Sí, absolutamente.</strong> Tu temperatura corporal fluctúa naturalmente y es más alta por la tarde/noche."
+            },
+            {
+                "question": "¿Qué significa 37.2°C en la axila?",
+                "answer": "Si mides <strong>37.2°C en la axila</strong>, tu temperatura central es probablemente mayor (unos 37.7°C). Aunque 37.2 en sí no es fiebre alta, una lectura axilar de este nivel se considera algo elevada y debe vigilarse."
+            },
+            {
+                "question": "¿Es 37.2°C temperatura corporal normal?",
+                "answer": "Sí, 37.2°C cae dentro de la definición amplia de <strong>temperatura corporal humana normal</strong>, que va de 36.1°C a 37.2°C (97°F a 99°F)."
+            }
+        ]
+    }
+}
