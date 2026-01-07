@@ -8,60 +8,44 @@ import path from 'path';
 export function getLatestModifiedDate(filePaths: string[]): string {
     let latestMtime = new Date(0);
 
+    const isCI = process.env.CI || process.env.VERCEL || process.env.NETLIFY;
+
     filePaths.forEach((filePath) => {
         const fullPath = path.isAbsolute(filePath)
             ? filePath
             : path.join(process.cwd(), filePath);
 
         if (fs.existsSync(fullPath)) {
+            let fileDate = 0;
+            let gitDate = 0;
+
+            // 1. Try Git Date
             try {
-                // Determine relative path for git command
                 const relPath = path.relative(process.cwd(), fullPath);
-                // Use git log to get the commit date
-                const gitDateStr = require('child_process').execSync(`git log -1 --format=%cI "${relPath}"`, { encoding: 'utf-8' }).trim();
-
+                const gitDateStr = require('child_process').execSync(`git log -1 --format=%cI "${relPath}"`, { encoding: 'utf-8', stdio: ['pipe', 'pipe', 'ignore'] }).trim();
                 if (gitDateStr) {
-                    const gitDate = new Date(gitDateStr);
-                    // Determine which date to use based on environment
-                    const isCI = process.env.CI || process.env.VERCEL || process.env.NETLIFY;
+                    gitDate = new Date(gitDateStr).getTime();
+                }
+            } catch (e) { /* ignore */ }
 
-                    if (isCI) {
-                        // In CI, trust Git date strictly to avoid build-time mtime reset
-                        if (gitDate > latestMtime) {
-                            latestMtime = gitDate;
-                        }
-                    } else {
-                        // In Local, check if file system is newer (uncommitted changes)
-                        // This logic is slightly different structure but same goal as sitemap script
-                        // Check FS stats for this file specifically
-                        try {
-                            const stats = fs.statSync(fullPath);
-                            const fsDate = stats.mtime;
-                            // Use the newer of Git or FS
-                            const newerDate = fsDate > gitDate ? fsDate : gitDate;
-                            if (newerDate > latestMtime) {
-                                latestMtime = newerDate;
-                            }
-                        } catch (e) {
-                            // If stat fails, just use git date
-                            if (gitDate > latestMtime) {
-                                latestMtime = gitDate;
-                            }
-                        }
-                    }
-                } else {
-                    // Fallback to fs.statSync if git returns empty (e.g. untracked file)
-                    const stats = fs.statSync(fullPath);
-                    if (stats.mtime > latestMtime) {
-                        latestMtime = stats.mtime;
-                    }
-                }
-            } catch (e) {
-                // Fallback if git command fails (e.g. no git installed or not a repo)
+            // 2. Try FS Date
+            let fsDate = 0;
+            try {
                 const stats = fs.statSync(fullPath);
-                if (stats.mtime > latestMtime) {
-                    latestMtime = stats.mtime;
-                }
+                fsDate = stats.mtime.getTime();
+            } catch (e) { /* ignore */ }
+
+            // 3. Decision Logic
+            if (isCI) {
+                // CI: Trust Git only. Fallback to FS only if Git failed/missing.
+                fileDate = gitDate > 0 ? gitDate : fsDate;
+            } else {
+                // Local: Trust newer (allows uncommitted previews)
+                fileDate = Math.max(gitDate, fsDate);
+            }
+
+            if (fileDate > latestMtime.getTime()) {
+                latestMtime = new Date(fileDate);
             }
         }
     });
