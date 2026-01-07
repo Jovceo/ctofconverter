@@ -6,39 +6,44 @@ const FALLBACK_DATE = '2025-09-15';
 
 const { execSync } = require('child_process');
 
-// Helper: 获取文件或目录列表中最新的修改日期 (优先使用最新时间：Git 或 本地文件系统)
+// Helper: 获取文件或目录列表中最新的修改日期
+// Local 环境: 优先取 Git 和 FS 中较新的一个 (支持未提交的修改)
+// CI/Prod 环境: 严格使用 Git 时间 (防止 CI checkout 导致 FS 时间刷新为"当前")
 function getLatestModifiedDate(paths) {
     let latestDate = 0;
+    const isCI = process.env.CI || process.env.VERCEL || process.env.NETLIFY;
 
     paths.forEach(p => {
         const fullPath = path.isAbsolute(p) ? p : path.join(process.cwd(), p);
         if (fs.existsSync(fullPath)) {
             let fileDate = 0;
+            let gitDate = 0;
 
             // 1. 尝试获取 Git 提交时间
             try {
                 const relPath = path.relative(process.cwd(), fullPath);
-                // 使用 git log -1 获取最后提交时间
                 const gitDateStr = execSync(`git log -1 --format=%cI "${relPath}"`, { encoding: 'utf-8', stdio: ['pipe', 'pipe', 'ignore'] }).trim();
                 if (gitDateStr) {
-                    fileDate = new Date(gitDateStr).getTime();
+                    gitDate = new Date(gitDateStr).getTime();
                 }
-            } catch (e) {
-                // Git 命令失败，忽略
-            }
+            } catch (e) { /* ignore */ }
 
-            // 2. 获取本地文件系统修改时间 (处理未提交的修改)
+            // 2. 获取本地文件系统时间
+            let fsDate = 0;
             try {
                 const stats = fs.statSync(fullPath);
-                // 如果本地修改时间比 Git 时间新，使用本地时间
-                if (stats.mtimeMs > fileDate) {
-                    fileDate = stats.mtimeMs;
-                }
-            } catch (e) {
-                // stat 失败
+                fsDate = stats.mtimeMs;
+            } catch (e) { /* ignore */ }
+
+            // 3. 决策逻辑
+            if (isCI) {
+                // CI 环境：只信赖 Git。只有 Git 拿不到才回退到 FS (例如生成的文件)
+                fileDate = gitDate > 0 ? gitDate : fsDate;
+            } else {
+                // 本地环境：取较新者 (兼容未提交修改)
+                fileDate = Math.max(gitDate, fsDate);
             }
 
-            // 更新整体最新时间
             if (fileDate > latestDate) {
                 latestDate = fileDate;
             }
