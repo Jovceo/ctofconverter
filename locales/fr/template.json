@@ -81,6 +81,22 @@
         "linkOvenChart": "tableau de conversion pour four",
         "linkCooking": "les réglages de cuisine, de pâtisserie et de four",
         "linkGeneral": "tableau complet de conversion de température",
+        "introMedical": [
+            "Utilisé pour la température corporelle. Voir notre <link>guide de la fièvre</link>.",
+            "Courant dans les diagnostics de santé. Consultez le <link>tableau des températures</link>."
+        ],
+        "introWeather": [
+            "Utilisé dans les prévisions météo. Voir notre <link>tableau des températures</link>.",
+            "Standard en météorologie. Voir le <link>guide de conversion</link>."
+        ],
+        "introCooking": [
+            "Couramment utilisé en cuisine. Consultez notre <link>tableau de conversion</link>.",
+            "Idéal pour la cuisson. Utilisez notre <link>guide de cuisson</link>."
+        ],
+        "introGeneral": [
+            "Utilisé dans les applications scientifiques. Voir notre <link>tableau de conversion</link>.",
+            "Standard dans l'industrie. Consultez le <link>guide des unités</link>."
+        ],
         "introMedicalPart2": " et les diagnostics médicaux. Consultez notre ",
         "introMedicalPart3": " pour plus de détails.",
         "introWeatherPart1": " les prévisions météorologiques et les lectures de température quotidiennes. Consultez notre ",

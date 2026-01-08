@@ -1,0 +1,53 @@
+{
+    "page": {
+        "title": "100°C to Fahrenheit (212°F) – Water Boiling Point Explained",
+        "description": "Convert 100 degrees Celsius to Fahrenheit (212°F). Learn about water boiling point, oven temperature conversions, fever implications, and conversion formula."
+    },
+    "faq": {
+        "item3": {
+            "question": "Is 100°C a fever temperature?",
+            "answer": "No, 100°C (212°F) is not a human body temperature. There's often confusion with 100°F (37.8°C), which is a slightly elevated body temperature. Normal body temperature is around 37°C. Exposure to 100°C temperatures would cause severe burns and is incompatible with human survival."
+        },
+        "item4": {
+            "question": "What is 100°C in Kelvin?",
+            "answer": "100°C equals 373.15 Kelvin (K). The conversion formula is K = °C + 273.15."
+        },
+        "item5": {
+            "question": "How does altitude affect the boiling point of water?",
+            "answer": "Boiling point decreases with altitude due to lower pressure. At sea level, water boils at 100°C (212°F). At 3,000 meters, it boils at only 90°C (194°F). This requires adjustments for cooking and baking at high elevations."
+        },
+        "item6": {
+            "question": "What is 100°F in Celsius?",
+            "answer": "100°F equals 37.78°C. This is calculated using the formula: °C = (100 - 32) × 5/9."
+        }
+    },
+    "boilingPointFeature": {
+        "title": "Water Boiling Point Reference",
+        "description": "100°C (212°F) is the standard boiling point of water at sea level. This fundamental temperature reference is used worldwide in cooking, science, and industry.",
+        "cards": {
+            "boiling": "Water Boils",
+            "freezing": "Water Freezes",
+            "baking": "Baking Temp",
+            "body": "Body Temp"
+        }
+    },
+    "practical": {
+        "cooking": {
+            "title": "Boiling & Food Preparation",
+            "description": "At 100°C (212°F), this temperature is primarily used for boiling, poaching, blanching, and sterilization — not baking or roasting.",
+            "pastries": "Boiling pasta and vegetables",
+            "pastriesDesc": "Standard water boiling point for cooking pasta, rice, and vegetables",
+            "roasting": "Blanching",
+            "roastingDesc": "Briefly submersing food in boiling water",
+            "slowRoast": "Sterilization",
+            "slowRoastDesc": "Killing bacteria on utensils and baby bottles"
+        }
+    },
+    "editorial": {
+        "title": "Editorial Note",
+        "doc": {
+            "note": "This content is compiled and reviewed based on publicly available food safety and scientific references.",
+            "sources": "Sources: NIST, Physical Science Center, USDA."
+        }
+    }
+}

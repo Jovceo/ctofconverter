@@ -1,0 +1,53 @@
+{
+    "page": {
+        "title": "100°C in Fahrenheit (212°F) – Siedepunkt von Wasser erklärt",
+        "description": "100 Grad Celsius in Fahrenheit (212°F) umrechnen. Alles über Siedepunkt, Backofentemperaturen, Fieber und Formeln."
+    },
+    "faq": {
+        "item3": {
+            "question": "Ist 100°C Fieber?",
+            "answer": "Nein, 100°C (212°F) ist keine menschliche Körpertemperatur. Es besteht oft Verwechslung mit 100°F (37,8°C), was leichtes Fieber ist. Die normale Körpertemperatur liegt bei etwa 37°C. Die Exposition gegenüber 100°C würde schwere Verbrennungen verursachen und ist mit dem menschlichen Überleben nicht vereinbar."
+        },
+        "item4": {
+            "question": "Was sind 100°C in Kelvin?",
+            "answer": "100°C entsprechen 373,15 Kelvin (K). Die Formel lautet K = °C + 273,15."
+        },
+        "item5": {
+            "question": "Wie beeinflusst die Höhe den Siedepunkt?",
+            "answer": "Der Siedepunkt sinkt mit der Höhe aufgrund des geringeren Drucks. Auf Meereshöhe kocht Wasser bei 100°C. Auf 3.000 Metern kocht es bereits bei 90°C. Dies erfordert Anpassungen beim Kochen in der Höhe."
+        },
+        "item6": {
+            "question": "Was sind 100°F in Celsius?",
+            "answer": "100°F entsprechen 37,78°C. Formel: °C = (100 - 32) × 5/9."
+        }
+    },
+    "boilingPointFeature": {
+        "title": "Referenz Wasser-Siedepunkt",
+        "description": "100°C (212°F) ist der Standard-Siedepunkt von Wasser auf Meereshöhe. Diese Referenz wird weltweit in Küche, Wissenschaft und Industrie verwendet.",
+        "cards": {
+            "boiling": "Kochend",
+            "freezing": "Gefrierend",
+            "baking": "Backen",
+            "body": "Körpertemp."
+        }
+    },
+    "practical": {
+        "cooking": {
+            "title": "Kochen & Lebensmittelzubereitung",
+            "description": "Bei 100°C (212°F) wird diese Temperatur hauptsächlich zum Kochen, Pochieren, Blanchieren und Sterilisieren verwendet – nicht zum Backen oder Braten.",
+            "pastries": "Kochen von Nudeln und Gemüse",
+            "pastriesDesc": "Standard-Siedepunkt von Wasser zum Kochen von Pasta, Reis und Gemüse",
+            "roasting": "Blanchieren",
+            "roastingDesc": "Kurzes Eintauchen von Lebensmitteln in kochendes Wasser",
+            "slowRoast": "Sterilisation",
+            "slowRoastDesc": "Abtöten von Bakterien auf Utensilien und Babyflaschen"
+        }
+    },
+    "editorial": {
+        "title": "Redaktioneller Hinweis",
+        "doc": {
+            "note": "Dieser Inhalt wurde auf der Grundlage öffentlich verfügbarer Referenzen zur Lebensmittelsicherheit und Wissenschaft zusammengestellt und überprüft.",
+            "sources": "Quellen: NIST, Physical Science Center, USDA."
+        }
+    }
+}

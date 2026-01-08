@@ -1,0 +1,60 @@
+{
+    "meta": {
+        "titles": {
+            "fever": "37°C para Fahrenheit (98.6°F) – É febre ou temperatura normal?",
+            "general": "Calculadora de Conversão de 37°C para Fahrenheit (98.6°F)"
+        },
+        "ogDescription": "Converta 37°C para Fahrenheit (98.6°F). 37°C é febre? Saiba mais sobre a temperatura corporal normal padrão, flutuações e quando se preocupar.",
+        "descriptions": {
+            "googleContext": "37 graus Celsius = 98.6 graus Fahrenheit. Esta é a temperatura corporal normal padrão. Conversão exata: 37°C × 9/5 + 32.",
+            "googleGeneral": "37 graus Celsius = 98.6 graus Fahrenheit. Use nossa calculadora precisa para converter instantaneamente qualquer valor Celsius para Fahrenheit."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Guia de Temperatura Corporal",
+        "subtitle": "37°C é febre?",
+        "intro": "37°C (98.6°F) é amplamente estabelecido como a temperatura corporal humana normal média, embora estudos recentes sugiram que a média real pode ser ligeiramente menor.",
+        "ranges": {
+            "hypothermia": "Hipotermia",
+            "normal": "Normal",
+            "fever": "Febre",
+            "highFever": "Febre Alta"
+        },
+        "table": {
+            "headers": {
+                "condition": "Condição",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Hipotermia",
+                "normal": "Faixa Normal",
+                "elevated": "Elevada / Febrícula",
+                "fever": "Febre",
+                "highFever": "Febre Alta (Chamar médico)"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "37°C é febre?",
+            "answer": "Não, 37°C (98.6°F) não é febre. É considerado o ponto de referência padrão para a temperatura corporal humana normal."
+        },
+        "q2": {
+            "question": "Quanto é 37°C em Fahrenheit?",
+            "answer": "37°C é exatamente 98.6°F. A fórmula é: 37 × 9/5 + 32 = 66.6 + 32 = 98.6."
+        },
+        "q3": {
+            "question": "37°C é quente para o clima?",
+            "answer": "Sim, para o clima, 37°C (98.6°F) é considerado muito quente. Está significativamente acima da temperatura ambiente típica e a exposição prolongada pode levar à exaustão pelo calor."
+        },
+        "q4": {
+            "question": "Por que 37°C é considerado normal?",
+            "answer": "O médico alemão Carl Wunderlich estabeleceu 37°C como a temperatura corporal normal média no século XIX. Embora as médias modernas sejam ligeiramente inferiores (~36.6°C), 37°C permanece o ponto de referência médico padrão."
+        },
+        "q5": {
+            "question": "37°C pode ser febre para um bebê?",
+            "answer": "Geralmente, não. 37°C é perfeitamente normal para bebês e crianças, que costumam ser um pouco mais quentes que os adultos. A febre em bebês é geralmente considerada a partir de 38°C (100.4°F) ou mais."
+        }
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "page": {
+        "title": "100°C a Fahrenheit (212°F) – Punto de Ebullición del Agua Explicado",
+        "description": "Convierte 100 grados Celsius a Fahrenheit (212°F). Aprende sobre el punto de ebullición del agua, conversiones de horno, fiebre y la fórmula de conversión."
+    },
+    "faq": {
+        "item3": {
+            "question": "¿Es 100°C temperatura de fiebre?",
+            "answer": "No, 100°C (212°F) no es una temperatura corporal humana. A menudo se confunde con 100°F (37.8°C), que es una fiebre leve. La temperatura normal es de unos 37°C. La exposición a temperaturas de 100°C causaría quemaduras graves y es incompatible con la supervivencia humana."
+        },
+        "item4": {
+            "question": "¿Cuánto es 100°C en Kelvin?",
+            "answer": "100°C equivale a 373.15 Kelvin (K). La fórmula es K = °C + 273.15."
+        },
+        "item5": {
+            "question": "¿Cómo afecta la altitud al punto de ebullición?",
+            "answer": "El punto de ebullición disminuye con la altitud debido a la menor presión. Al nivel del mar, el agua hierve a 100°C (212°F). A 3,000 metros, hierve a solo 90°C (194°F). Esto requiere ajustes al cocinar en altura."
+        },
+        "item6": {
+            "question": "¿Cuánto es 100°F en Celsius?",
+            "answer": "100°F equivale a 37.78°C. Se calcula usando la fórmula: °C = (100 - 32) × 5/9."
+        }
+    },
+    "boilingPointFeature": {
+        "title": "Referencia del Punto de Ebullición",
+        "description": "100°C (212°F) es el punto de ebullición estándar del agua al nivel del mar. Esta referencia se usa mundialmente en cocina, ciencia e industria.",
+        "cards": {
+            "boiling": "Agua Hierve",
+            "freezing": "Agua Congela",
+            "baking": "Horneado",
+            "body": "Temp. Corporal"
+        }
+    },
+    "practical": {
+        "cooking": {
+            "title": "Ebullición y Preparación de Alimentos",
+            "description": "A 100°C (212°F), esta temperatura se utiliza principalmente para hervir, escalfar, blanquear y esterilizar, no para hornear ni asar.",
+            "pastries": "Hervir pasta y verduras",
+            "pastriesDesc": "Punto de ebullición del agua estándar para cocinar pasta, arroz y verduras",
+            "roasting": "Blanqueado",
+            "roastingDesc": "Sumergir brevemente los alimentos en agua hirviendo",
+            "slowRoast": "Esterilización",
+            "slowRoastDesc": "Matar bacterias en utensilios y biberones"
+        }
+    },
+    "editorial": {
+        "title": "Nota Editorial",
+        "doc": {
+            "note": "Este contenido ha sido recopilado y revisado con base en referencias científicas y de seguridad alimentaria disponibles públicamente.",
+            "sources": "Fuentes: NIST, Centro de Ciencias Físicas, USDA."
+        }
+    }
+}

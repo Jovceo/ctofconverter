@@ -81,6 +81,22 @@
         "linkOvenChart": "tabela de conversão de forno",
         "linkCooking": "configurações de culinária, panificação e temperatura do forno",
         "linkGeneral": "tabela abrangente de conversão de temperatura",
+        "introMedical": [
+            "Usado para medições de temperatura corporal. Veja nosso <link>gráfico de febre</link>.",
+            "Comum em diagnósticos de saúde. Consulte a <link>tabela de temperatura</link>."
+        ],
+        "introWeather": [
+            "Usado em previsões do tempo. Veja nossa <link>tabela de temperatura</link>.",
+            "Padrão em meteorologia. Veja o <link>guia de conversão</link>."
+        ],
+        "introCooking": [
+            "Comumente usado em culinária. Veja nossa <link>tabela de conversão</link>.",
+            "Ideal para receitas de forno. Use nosso <link>guia de culinária</link>."
+        ],
+        "introGeneral": [
+            "Usado em aplicações científicas. Veja nossa <link>tabela de conversão</link>.",
+            "Padrão na indústria. Consulte o <link>guia de unidades</link>."
+        ],
         "introMedicalPart2": " e diagnósticos médicos. Consulte nossa ",
         "introMedicalPart3": " para mais detalhes.",
         "introWeatherPart1": " previsões do tempo e leituras diárias. Veja nossa tabela completa de ",

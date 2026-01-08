@@ -1,0 +1,88 @@
+{
+    "meta": {
+        "titles": {
+            "weather": "0°C to Fahrenheit (32°F) – Weather & Feeling Guide",
+            "general": "0°C to Fahrenheit (32°F) Conversion Calculator"
+        },
+        "ogDescription": "Convert 0°C to Fahrenheit (32°F). Learn about the freezing point, how it feels, and practical applications of this fundamental temperature.",
+        "descriptions": {
+            "googleContext": "0 degrees Celsius = 32 degrees Fahrenheit. Exact conversion formula: 0°C × 9/5 + 32. Perfect for {weather_context}.",
+            "googleGeneral": "0 degrees Celsius = 32 degrees Fahrenheit. Use our precise calculator to convert any Celsius value to Fahrenheit instantly."
+        }
+    },
+    "common": {
+        "introWeather": [
+            "weather forecasts and daily temperature monitoring"
+        ]
+    },
+    "scaleComparison": {
+        "title": "Temperature Scale Comparison",
+        "subtitle": "Key Temperature Points Across Scales",
+        "intro": "0°C (32°F) is a fundamental reference point across temperature scales. Here's how it compares to other important temperatures:",
+        "chartLink": "For a comprehensive view of temperature conversions across different values, check out our <a href=\"https://ctofconverter.com/celsius-to-fahrenheit-chart/\" target=\"_blank\" rel=\"noopener noreferrer\">Celsius to Fahrenheit Chart</a>.",
+        "scales": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "kelvin": "Kelvin (K)"
+        },
+        "waterFreezes": "Water Freezes",
+        "table": {
+            "headers": {
+                "description": "Description",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)",
+                "kelvin": "Kelvin (K)"
+            },
+            "rows": {
+                "waterFreezes": "Water Freezes",
+                "waterBoils": "Water Boils",
+                "absoluteZero": "Absolute Zero",
+                "bodyTemp": "Human Body Temperature",
+                "roomTemp": "Room Temperature"
+            }
+        },
+        "formulas": {
+            "title": "Conversion formulas:",
+            "text": "°F = (°C × 9/5) + 32  |  °C = (°F - 32) × 5/9  |  K = °C + 273.15"
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "Is 0°C the same as 32°F?",
+            "answer": "Yes, 0°C is exactly equal to 32°F. This is the freezing point of water and a fundamental reference point in both temperature scales."
+        },
+        "q2": {
+            "question": "What is the formula for converting 0°C to Fahrenheit?",
+            "answer": "The formula to convert Celsius to Fahrenheit is: °F = (°C × 9/5) + 32<br>For 0°C: (0 × 9/5) + 32 = 0 + 32 = 32°F"
+        },
+        "q3": {
+            "question": "What is 0°C in Kelvin?",
+            "answer": "0°C is equal to 273.15K. The conversion formula is: K = °C + 273.15<br>So 0 + 273.15 = 273.15K"
+        },
+        "q4": {
+            "question": "Is 0°C considered cold?",
+            "answer": "Yes, 0°C (32°F) is considered cold as it's the freezing point of water. At this temperature:",
+            "items": [
+                "Water turns to ice",
+                "Frost can form on surfaces",
+                "You would need warm clothing outdoors",
+                "Plants may need protection from frost damage"
+            ]
+        },
+        "q5": {
+            "question": "Is 0°C a fever temperature?",
+            "answer": "No, 0°C is not a fever temperature. In fact, it's far below normal body temperature (37°C or 98.6°F). A fever is typically considered to be 38°C (100.4°F) or higher. 0°C is the freezing point of water and would be extremely dangerous for human body temperature."
+        },
+        "q6": {
+            "question": "Why is 0°C important?",
+            "answer": "0°C is important because:",
+            "items": [
+                "It's the freezing point of water under standard conditions",
+                "It's a fundamental reference point for the Celsius scale",
+                "It marks the transition between liquid and solid water",
+                "It's used in meteorology for frost and freezing advisories",
+                "It's crucial in food storage and safety guidelines"
+            ]
+        }
+    }
+}

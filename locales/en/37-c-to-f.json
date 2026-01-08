@@ -1,0 +1,60 @@
+{
+    "meta": {
+        "titles": {
+            "fever": "37°C to Fahrenheit (98.6°F) – Is It a Fever or Normal Body Temperature?",
+            "general": "37°C to Fahrenheit (98.6°F) Conversion Calculator"
+        },
+        "ogDescription": "Convert 37°C to Fahrenheit (98.6°F). Is 37°C a fever? Learn about standard normal body temperature, fluctuations, and when to worry.",
+        "descriptions": {
+            "googleContext": "37 degrees Celsius = 98.6 degrees Fahrenheit. This is standard normal body temperature. Exact conversion: 37°C × 9/5 + 32.",
+            "googleGeneral": "37 degrees Celsius = 98.6 degrees Fahrenheit. Use our precise calculator to convert any Celsius value to Fahrenheit instantly."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Body Temperature Guide",
+        "subtitle": "Is 37°C a Fever?",
+        "intro": "37°C (98.6°F) is widely established as the average normal human body temperature, though recent studies suggest the actual average might be slightly lower.",
+        "ranges": {
+            "hypothermia": "Hypothermia",
+            "normal": "Normal",
+            "fever": "Fever",
+            "highFever": "High Fever"
+        },
+        "table": {
+            "headers": {
+                "condition": "Condition",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Hypothermia",
+                "normal": "Normal Range",
+                "elevated": "Elevated / Low-grade",
+                "fever": "Fever",
+                "highFever": "High Fever"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "Is 37°C a fever?",
+            "answer": "No, 37°C (98.6°F) is not a fever. It is considered the standard benchmark for normal human body temperature."
+        },
+        "q2": {
+            "question": "What is 37°C in Fahrenheit?",
+            "answer": "37°C is exactly 98.6°F. The formula is: 37 × 9/5 + 32 = 66.6 + 32 = 98.6."
+        },
+        "q3": {
+            "question": "Is 37°C hot for weather?",
+            "answer": "Yes, for weather, 37°C (98.6°F) is considered very hot. It is significantly above typical room temperature and prolonged exposure can lead to heat exhaustion."
+        },
+        "q4": {
+            "question": "Why is 37°C considered normal?",
+            "answer": "German physician Carl Wunderlich established 37°C as the mean normal body temperature in the 19th century. While modern averages are slightly lower (~36.6°C), 37°C remains the standard medical reference point."
+        },
+        "q5": {
+            "question": "Can 37°C be a fever for a baby?",
+            "answer": "Generally, no. 37°C is perfectly normal for babies and children, who often run slightly warmer than adults. A fever in infants is usually considered 38°C (100.4°F) or higher."
+        }
+    }
+}

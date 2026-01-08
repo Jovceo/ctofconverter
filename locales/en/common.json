@@ -122,5 +122,37 @@
     "lastUpdated": "Last updated:",
     "backToTop": "Back to top",
     "footerNavigation": "Footer navigation"
+  },
+  "strategy": {
+    "insights": {
+      "tea": {
+        "title": "Tea Brewing Expert Tip",
+        "content": "Different teas need different temperatures. 75°C-80°C is the \"Gold Standard\" for delicate Green Tea and White Tea to prevent bitterness."
+      },
+      "chicken": {
+        "title": "Food Safety: Poultry",
+        "content": "USDA recommends cooking chicken to an internal temperature of 165°F (74°C). At 75°C, your chicken is perfectly safe and juicy."
+      },
+      "burn": {
+        "title": "Safety Warning: Scalding Risk",
+        "content": "Water in this range causes severe burns in seconds. It is much hotter than standard domestic hot water (usually 50-60°C)."
+      },
+      "boiling": {
+        "title": "Sterilization Zone",
+        "content": "Water at this temperature kills most bacteria, viruses, and protozoa. It is the standard for safe drinking water sterilization."
+      },
+      "steam": {
+        "title": "Steam Burn Hazard",
+        "content": "Steam contains more heat energy than boiling water at the same temperature due to latent heat. Steam burns can be more severe than water burns."
+      },
+      "freezing": {
+        "title": "Black Ice Risk",
+        "content": "Road surfaces can freeze even when air temperature is slightly above zero. Always drive with caution near 0°C."
+      },
+      "ice": {
+        "title": "Phase Change",
+        "content": "At 0°C, ice and water can coexist in equilibrium. Adding energy melts ice; removing energy freezes water."
+      }
+    }
   }
 }

@@ -26,7 +26,7 @@ export default function TemperatureConversionChallenge() {
 
     const meta = {
         title: t('meta.title'),
-        description: t('meta.description'),
+        description: t('meta.ogDescription'),
         ogTitle: t('meta.ogTitle'),
         ogDescription: t('meta.ogDescription'),
         canonical: canonicalUrl

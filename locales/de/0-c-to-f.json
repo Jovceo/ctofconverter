@@ -1,0 +1,88 @@
+{
+    "meta": {
+        "titles": {
+            "weather": "0°C in Fahrenheit (32°F) – Wetter & Gefühlter Leitfaden",
+            "general": "0°C in Fahrenheit (32°F) Umrechnungsrechner"
+        },
+        "ogDescription": "Rechnen Sie 0°C in Fahrenheit (32°F) um. Erfahren Sie mehr über den Gefrierpunkt, wie es sich anfühlt und praktische Anwendungen dieser grundlegenden Temperatur.",
+        "descriptions": {
+            "googleContext": "0 Grad Celsius = 32 Grad Fahrenheit. Exakte Umrechnungsformel: 0°C × 9/5 + 32. Perfekt für {weather_context}.",
+            "googleGeneral": "0 Grad Celsius = 32 Grad Fahrenheit. Nutzen Sie unseren präzisen Rechner, um jeden Celsius-Wert sofort in Fahrenheit umzurechnen."
+        }
+    },
+    "common": {
+        "introWeather": [
+            "Wettervorhersagen und tägliche Temperaturüberwachung"
+        ]
+    },
+    "scaleComparison": {
+        "title": "Temperaturskalen-Vergleich",
+        "subtitle": "Wichtige Temperaturpunkte auf den Skalen",
+        "intro": "0°C (32°F) ist ein grundlegender Bezugspunkt über Temperaturskalen hinweg. Hier ist der Vergleich mit anderen wichtigen Temperaturen:",
+        "chartLink": "Für eine umfassende Ansicht der Temperaturumrechnungen über verschiedene Werte hinweg, schauen Sie sich unsere <a href=\"https://ctofconverter.com/de/celsius-to-fahrenheit-chart/\" target=\"_blank\" rel=\"noopener noreferrer\">Celsius-in-Fahrenheit-Tabelle</a> an.",
+        "scales": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "kelvin": "Kelvin (K)"
+        },
+        "waterFreezes": "Wasser gefriert",
+        "table": {
+            "headers": {
+                "description": "Beschreibung",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)",
+                "kelvin": "Kelvin (K)"
+            },
+            "rows": {
+                "waterFreezes": "Wasser gefriert",
+                "waterBoils": "Wasser kocht",
+                "absoluteZero": "Absoluter Nullpunkt",
+                "bodyTemp": "Menschliche Körpertemperatur",
+                "roomTemp": "Zimmertemperatur"
+            }
+        },
+        "formulas": {
+            "title": "Umrechnungsformeln:",
+            "text": "°F = (°C × 9/5) + 32  |  °C = (°F - 32) × 5/9  |  K = °C + 273.15"
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "Ist 0°C dasselbe wie 32°F?",
+            "answer": "Ja, 0°C entspricht exakt 32°F. Dies ist der Gefrierpunkt von Wasser und ein grundlegender Referenzpunkt in beiden Temperaturskalen."
+        },
+        "q2": {
+            "question": "Wie lautet die Formel zur Umrechnung von 0°C in Fahrenheit?",
+            "answer": "Die Formel zur Umrechnung von Celsius in Fahrenheit lautet: °F = (°C × 9/5) + 32<br>Für 0°C: (0 × 9/5) + 32 = 0 + 32 = 32°F"
+        },
+        "q3": {
+            "question": "Was sind 0°C in Kelvin?",
+            "answer": "0°C entsprechen 273,15K. Die Umrechnungsformel lautet: K = °C + 273,15<br>Also 0 + 273,15 = 273,15K"
+        },
+        "q4": {
+            "question": "Gilt 0°C als kalt?",
+            "answer": "Ja, 0°C (32°F) gilt als kalt, da es der Gefrierpunkt von Wasser ist. Bei dieser Temperatur:",
+            "items": [
+                "Wasser wird zu Eis",
+                "Frost kann sich auf Oberflächen bilden",
+                "Sie benötigen im Freien warme Kleidung",
+                "Pflanzen benötigen möglicherweise Schutz vor Frostschäden"
+            ]
+        },
+        "q5": {
+            "question": "Ist 0°C eine Fiebertemperatur?",
+            "answer": "Nein, 0°C ist keine Fiebertemperatur. Tatsächlich liegt sie weit unter der normalen Körpertemperatur (37°C oder 98,6°F). Fieber wird typischerweise ab 38°C (100,4°F) oder höher angesehen. 0°C ist der Gefrierpunkt von Wasser und wäre für die menschliche Körpertemperatur extrem gefährlich."
+        },
+        "q6": {
+            "question": "Warum ist 0°C wichtig?",
+            "answer": "0°C ist wichtig, weil:",
+            "items": [
+                "Es ist der Gefrierpunkt von Wasser unter Standardbedingungen",
+                "Es ist ein grundlegender Bezugspunkt für die Celsius-Skala",
+                "Es markiert den Übergang zwischen flüssigem und festem Wasser",
+                "Es wird in der Meteorologie für Frostwarnungen verwendet",
+                "Es ist entscheidend für Lebensmittellagerung und Sicherheitsrichtlinien"
+            ]
+        }
+    }
+}

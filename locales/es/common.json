@@ -117,5 +117,37 @@
     "lastUpdated": "Última actualización:",
     "backToTop": "Volver arriba",
     "footerNavigation": "Navegación del pie de página"
+  },
+  "strategy": {
+    "insights": {
+      "tea": {
+        "title": "Consejo de Experto en Té",
+        "content": "Diferentes tés necesitan diferentes temperaturas. 75°C-80°C es el \"Estándar de Oro\" para el Té Verde y Blanco delicado para prevenir el amargor."
+      },
+      "chicken": {
+        "title": "Seguridad Alimentaria: Aves",
+        "content": "El USDA recomienda cocinar el pollo a una temperatura interna de 165°F (74°C). A 75°C, su pollo es perfectamente seguro y jugoso."
+      },
+      "burn": {
+        "title": "Advertencia de Seguridad: Riesgo de Escaldaduras",
+        "content": "El agua en este rango causa quemaduras graves en segundos. Es mucho más caliente que el agua caliente doméstica estándar (generalmente 50-60°C)."
+      },
+      "boiling": {
+        "title": "Zona de Esterilización",
+        "content": "El agua a esta temperatura mata la mayoría de las bacterias, virus y protozoos. Es el estándar para la esterilización segura del agua potable."
+      },
+      "steam": {
+        "title": "Peligro de Quemadura por Vapor",
+        "content": "El vapor contiene más energía térmica que el agua hirviendo a la misma temperatura debido al calor latente. Las quemaduras por vapor pueden ser más graves que las del agua."
+      },
+      "freezing": {
+        "title": "Riesgo de Hielo Negro",
+        "content": "Las superficies de las carreteras pueden congelarse incluso cuando la temperatura del aire está ligeramente por encima de cero. Conduzca siempre con precaución cerca de 0°C."
+      },
+      "ice": {
+        "title": "Cambio de Fase",
+        "content": "A 0°C, el hielo y el agua pueden coexistir en equilibrio. Agregar energía derrite el hielo; eliminar energía congela el agua."
+      }
+    }
   }
 }

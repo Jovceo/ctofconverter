@@ -29,7 +29,7 @@ export function generateHowToStructuredData(celsius: number, fahrenheit: number,
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name: t('meta.pageTitle', { celsius, fahrenheit: formatTemperature(fahrenheit) }),
-    description: t('meta.description', { celsius, fahrenheit: formatTemperature(fahrenheit) }),
+    description: t('meta.ogDescription', { celsius, fahrenheit: formatTemperature(fahrenheit) }),
     totalTime: 'PT1M',
     estimatedCost: {
       '@type': 'MonetaryAmount',
@@ -58,6 +58,44 @@ export function generateHowToStructuredData(celsius: number, fahrenheit: number,
         name: 'Result',
       },
     ],
+  };
+}
+
+/**
+ * 移除HTML标签以生成纯文本 (SEO Safe)
+ */
+function stripHtml(html: string): string {
+  if (!html) return '';
+  return html
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<\/p>/gi, ' ')
+    .replace(/<\/li>/gi, '. ')
+    .replace(/<[^>]+>/g, '') // Strip remaining tags
+    .replace(/\s+/g, ' ') // Collapse multiple spaces
+    .trim();
+}
+
+/**
+ * 生成Breadcrumb结构化数据
+ */
+export function generateBreadcrumbStructuredData(celsius: number, formattedFahrenheit: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://ctofconverter.com/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: `${celsius} Celsius to Fahrenheit`, // Keep English for Schema ID typical convention or localize if strictly needed (usually English slug match is fine for ID, but name can be localized. For now simple English as per request)
+        item: `https://ctofconverter.com/${String(celsius).replace('.', '-')}-c-to-f`
+      }
+    ]
   };
 }
 
@@ -91,7 +129,7 @@ export function generateFAQStructuredData(
       name: faq.question,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: faq.answer,
+        text: stripHtml(faq.answer),
       },
     })),
   };
@@ -115,7 +153,7 @@ export function generateRelatedTemperatures(
       related.push({
         celsius: relatedCelsius,
         fahrenheit: celsiusToFahrenheit(relatedCelsius),
-        href: `/${relatedCelsius}-c-to-f`,
+        href: `/${String(relatedCelsius).replace('.', '-')}-c-to-f`,
       });
     }
   }

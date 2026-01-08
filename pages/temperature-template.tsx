@@ -12,6 +12,7 @@ import {
   celsiusToFahrenheit,
   formatTemperature,
   generateFAQStructuredData,
+  generateBreadcrumbStructuredData,
   generatePageUrl,
   generatePageTitle,
   generateMetaDescription,
@@ -533,8 +534,8 @@ const RelatedTemperatures: React.FC<{
       return {
         title: title,
         equation: `${targetC}°C = ${formatTemperature(f)}°F`,
-        url: `/${targetC}-c-to-f`,
-        href: exists ? getLocalizedLink(`/${targetC}-c-to-f`, locale) : undefined,
+        url: `/${String(targetC).replace('.', '-')}-c-to-f`,
+        href: exists ? getLocalizedLink(`/${String(targetC).replace('.', '-')}-c-to-f`, locale) : undefined,
         isContextual: true
       };
     };
@@ -828,6 +829,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
 
     // 生成结构化数据    // const howToData = generateHowToStructuredData(celsius, f, t); // Deprecated
     const faqData = generateFAQStructuredData(celsius, f, t, strategy.faqs);
+    const breadcrumbData = generateBreadcrumbStructuredData(celsius, formattedF);
 
     return {
       fahrenheit: f,
@@ -847,7 +849,8 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
           description: metaDescription,
           mainEntityOfPage: { '@type': 'WebPage', '@id': url }
         },
-        faq: faqData
+        faq: faqData,
+        breadcrumb: breadcrumbData
       },
 
     };
@@ -893,9 +896,10 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
       alternates: alternates
     }}>
       <Head>
-        {/* 🚀 Schema: Article + FAQ (No HowTo) */}
+        {/* 🚀 Schema: Article + FAQ (No HowTo) + Breadcrumb */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.article) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.faq) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.breadcrumb) }} />
       </Head>
 
       <div dir={locale === 'ar' ? 'rtl' : 'ltr'}>

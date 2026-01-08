@@ -380,7 +380,7 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: t('meta.title'),
-    description: t('meta.description'),
+    description: t('meta.ogDescription'),
     author: {
       '@type': 'Person',
       name: t('meta.author'),
@@ -401,7 +401,7 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
   return (
     <Layout seo={{
       title: t('meta.title'),
-      description: t('meta.description'),
+      description: t('meta.ogDescription'),
       author: t('meta.author'),
       ogTitle: t('meta.ogTitle'),
       ogDescription: t('meta.ogDescription'),

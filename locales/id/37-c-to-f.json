@@ -1,0 +1,60 @@
+{
+    "meta": {
+        "titles": {
+            "fever": "37°C ke Fahrenheit (98.6°F) – Apakah Demam atau Suhu Tubuh Normal?",
+            "general": "Kalkulator Konversi 37°C ke Fahrenheit (98.6°F)"
+        },
+        "ogDescription": "Konversikan 37°C ke Fahrenheit (98.6°F). Apakah 37°C demam? Pelajari tentang suhu tubuh normal standar, fluktuasi, dan kapan harus khawatir.",
+        "descriptions": {
+            "googleContext": "37 derajat Celsius = 98.6 derajat Fahrenheit. Ini adalah suhu tubuh normal standar. Konversi tepat: 37°C × 9/5 + 32.",
+            "googleGeneral": "37 derajat Celsius = 98.6 derajat Fahrenheit. Gunakan kalkulator presisi kami untuk mengonversi nilai Celsius apa pun ke Fahrenheit secara instan."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Panduan Suhu Tubuh",
+        "subtitle": "Apakah 37°C Demam?",
+        "intro": "37°C (98.6°F) secara luas ditetapkan sebagai rata-rata suhu tubuh manusia normal, meskipun penelitian terbaru menunjukkan rata-rata sebenarnya mungkin sedikit lebih rendah.",
+        "ranges": {
+            "hypothermia": "Hipotermia",
+            "normal": "Normal",
+            "fever": "Demam",
+            "highFever": "Demam Tinggi"
+        },
+        "table": {
+            "headers": {
+                "condition": "Kondisi",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Hipotermia",
+                "normal": "Rentang Normal",
+                "elevated": "Meningkat / Demam Ringan",
+                "fever": "Demam",
+                "highFever": "Demam Tinggi (Hubungi Dokter)"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "Apakah 37°C itu demam?",
+            "answer": "Tidak, 37°C (98.6°F) bukan demam. Ini dianggap sebagai patokan standar untuk suhu tubuh manusia normal."
+        },
+        "q2": {
+            "question": "Berapa 37°C dalam Fahrenheit?",
+            "answer": "37°C tepatnya 98.6°F. Rumusnya adalah: 37 × 9/5 + 32 = 66.6 + 32 = 98.6."
+        },
+        "q3": {
+            "question": "Apakah 37°C panas untuk cuaca?",
+            "answer": "Ya, untuk cuaca, 37°C (98.6°F) dianggap sangat panas. Ini jauh di atas suhu ruangan biasa dan paparan yang lama dapat menyebabkan kelelahan panas."
+        },
+        "q4": {
+            "question": "Mengapa 37°C dianggap normal?",
+            "answer": "Dokter Jerman Carl Wunderlich menetapkan 37°C sebagai rata-rata suhu tubuh normal pada abad ke-19. Meskipun rata-rata modern sedikit lebih rendah (~36.6°C), 37°C tetap menjadi titik referensi medis standar."
+        },
+        "q5": {
+            "question": "Bisakah 37°C menjadi demam bagi bayi?",
+            "answer": "Secara umum, tidak. 37°C sangat normal untuk bayi dan anak-anak, yang seringkali sedikit lebih hangat daripada orang dewasa. Demam pada bayi biasanya dianggap 38°C (100.4°F) atau lebih tinggi."
+        }
+    }
+}
