@@ -35,12 +35,14 @@ function getLatestModifiedDate(paths) {
                 fsDate = stats.mtimeMs;
             } catch (e) { /* ignore */ }
 
-            // 3. 决策逻辑
+            // 3. Decision Logic
             if (isCI) {
-                // CI 环境：只信赖 Git。只有 Git 拿不到才回退到 FS (例如生成的文件)
-                fileDate = gitDate > 0 ? gitDate : fsDate;
+                // CI Environment: Trust Git ONLY.
+                // If Git fails (returns 0), we DO NOT fallback to FS, because FS in CI is always "now".
+                // We prefer to return 0 (which triggers FALLBACK_DATE) rather than a fake "today".
+                fileDate = gitDate;
             } else {
-                // 本地环境：取较新者 (兼容未提交修改)
+                // Local Environment: Trust newer (allows uncommitted previews)
                 fileDate = Math.max(gitDate, fsDate);
             }
 
@@ -123,7 +125,13 @@ function generateSitemap() {
     // For now, I'll assume standard pattern for all detected pages.
 
     // 4. Sort and Generate
+    // Sort logic: High Priority first (Homepage), then Newest Date.
     allEntries.sort((a, b) => {
+        // First, Primary Sort by Priority (Descending)
+        if (b.priority !== a.priority) {
+            return b.priority - a.priority;
+        }
+        // Second, Secondary Sort by Date (Descending)
         const dateA = new Date(a.lastmod);
         const dateB = new Date(b.lastmod);
         return dateB - dateA;
