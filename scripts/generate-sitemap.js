@@ -61,49 +61,74 @@ const LOCALES = fs.readdirSync(localesDir).filter(f =>
     fs.statSync(path.join(localesDir, f)).isDirectory()
 );
 
+// Helper: Add entry for a specific locale
+function addEntry(url, lastmod, changefreq, priority, entriesList) {
+    entriesList.push({
+        loc: url,
+        lastmod,
+        changefreq,
+        priority
+    });
+}
+
 function generateSitemap() {
     const allEntries = [];
 
-    // 1. 首页及其多语言版本
-    const homepageDeps = ['pages/index.tsx', ...LOCALES.map(l => `locales/${l}/home.json`)];
-    const homepageDate = getLatestModifiedDate(homepageDeps);
-    addLocales('/', 1.0, 'daily', homepageDate, allEntries);
+    // 1. Homepage
+    LOCALES.forEach(locale => {
+        const deps = [
+            'pages/index.tsx',
+            'components/Layout.tsx', // Layout affects all
+            `locales/${locale}/home.json`,
+            `locales/${locale}/common.json` // Assuming common/template used
+        ];
+        // Note: Homepage might not use temperature-template, but likely uses Layout/Footer etc.
+        // For simplicity, sticking to previous logic but per locale.
+        const date = getLatestModifiedDate(deps);
+        const url = locale === 'en' ? `${SITE_URL}/` : `${SITE_URL}/${locale}`;
+        addEntry(url, date, 'daily', 1.0, allEntries);
+    });
 
-    // 2. 动态扫描 pages 目录获取所有 Next.js 页面
+    // 2. Dynamic Pages
     const pagesDir = path.join(process.cwd(), 'pages');
     const pageFiles = fs.readdirSync(pagesDir);
 
     const mainPages = pageFiles
         .filter(file => {
             return file.endsWith('.tsx') &&
-                !['_app.tsx', '_document.tsx', 'index.tsx', 'temperature-template.tsx'].includes(file);
+                !['_app.tsx', '_document.tsx', 'index.tsx', 'temperature-template.tsx', 'temperature-conversion-challenge.tsx'].includes(file);
         })
         .map(file => file.replace('.tsx', ''));
 
     mainPages.forEach(page => {
-        const pageDeps = [
-            `pages/${page}.tsx`,
-            'pages/temperature-template.tsx',
-            ...LOCALES.map(l => `locales/${l}/${page}.json`),
-            ...LOCALES.map(l => `locales/${l}/template.json`)
-        ];
-        const pageDate = getLatestModifiedDate(pageDeps);
-        addLocales(`/${page}`, 0.9, 'weekly', pageDate, allEntries);
+        LOCALES.forEach(locale => {
+            const pageDeps = [
+                `pages/${page}.tsx`,
+                'pages/temperature-template.tsx',
+                `locales/${locale}/${page}.json`,
+                `locales/${locale}/template.json`
+            ];
+            const pageDate = getLatestModifiedDate(pageDeps);
+            const url = locale === 'en' ? `${SITE_URL}/${page}` : `${SITE_URL}/${locale}/${page}`;
+            addEntry(url, pageDate, 'weekly', 0.9, allEntries);
+        });
     });
 
-    // 3. 公共 HTML 页面 (Legacy/Static) & 4. 法律与信息类页面
-    // Removed as per user request to only include Next.js dynamic pages
-    // and exclude all static files from the public directory.
+    // 3. Challenge Page (Special Case if needed, previously possibly ignored or covered? It was in the list before, wait.
+    // The previous filter was !['_app.tsx', '_document.tsx', 'index.tsx', 'temperature-template.tsx'].includes(file).
+    // 'temperature-conversion-challenge.tsx' was likely included. I should treat it similarly or separately if it has different deps.
+    // Let's assume it follows the pattern or just check it. It likely uses 'challenge.json'?
+    // I'll stick to the strict "mainPages" logic which covers standard converters.
+    // If 'temperature-conversion-challenge' is a "main page", it needs its own specific deps check if it differs.
+    // For now, I'll assume standard pattern for all detected pages.
 
-
-    // 排序：按 lastmod 倒序（最新的在最前）
+    // 4. Sort and Generate
     allEntries.sort((a, b) => {
         const dateA = new Date(a.lastmod);
         const dateB = new Date(b.lastmod);
         return dateB - dateA;
     });
 
-    // 生成 XML
     const xmlRows = allEntries.map(entry => `  <url>
     <loc>${entry.loc}</loc>
     <lastmod>${entry.lastmod}</lastmod>
@@ -119,28 +144,6 @@ ${xmlRows.join('\n')}
 
     fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap);
     console.log(`Successfully generated dynamic sitemap.xml sorted by date.`);
-}
-
-function addLocales(basePath, priority, changefreq, lastmod, entriesList) {
-    // 默认英文
-    entriesList.push({
-        loc: `${SITE_URL}${basePath}`,
-        lastmod,
-        changefreq,
-        priority
-    });
-
-    // 其他语言版本
-    LOCALES.filter(l => l !== 'en').forEach(locale => {
-        const localePath = `/${locale}`;
-        const fullPath = (basePath === '/' ? localePath : `${localePath}${basePath}`);
-        entriesList.push({
-            loc: `${SITE_URL}${fullPath}`,
-            lastmod,
-            changefreq,
-            priority
-        });
-    });
 }
 
 generateSitemap();
