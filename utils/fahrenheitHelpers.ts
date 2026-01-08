@@ -98,7 +98,7 @@ export function getTemperatureLabel(fahrenheit: number, locale: string = 'en'): 
     };
 
     const key = fahrenheit.toString();
-    return referencePoints[key] || '';
+    return (referencePoints as Record<string, string>)[key] || '';
 }
 
 /**
