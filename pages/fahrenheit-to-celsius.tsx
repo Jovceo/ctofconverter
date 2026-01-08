@@ -328,7 +328,7 @@ export default function FahrenheitToCelsiusPage({ canonicalUrl, lastUpdated }: F
                     <section className="formula-section">
                         <h2>{t('practical.title')}</h2>
                         <div className="practical-uses">
-                            {(Array.isArray(t('practical.items', { returnObjects: true })) ? t('practical.items', { returnObjects: true }) : []).map((item: any, i: number) => (
+                            {(Array.isArray(t('practical.items', { returnObjects: true } as any)) ? t('practical.items', { returnObjects: true } as any) : []).map((item: any, i: number) => (
                                 <div className="use-case" key={i}>
                                     <div className="use-case-header">{item.title}</div>
                                     <div className="use-case-body">
