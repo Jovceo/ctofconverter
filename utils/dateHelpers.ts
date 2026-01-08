@@ -36,9 +36,12 @@ export function getLatestModifiedDate(filePaths: string[]): string {
             } catch (e) { /* ignore */ }
 
             // 3. Decision Logic
+            // 3. Decision Logic
             if (isCI) {
-                // CI: Trust Git only. Fallback to FS only if Git failed/missing.
-                fileDate = gitDate > 0 ? gitDate : fsDate;
+                // CI: Trust Git only. 
+                // We DO NOT fallback to FS in CI, as FS is typically "now" (build time).
+                // Better to return 0 (and trigger fallback) than show a false "updated today" date.
+                fileDate = gitDate;
             } else {
                 // Local: Trust newer (allows uncommitted previews)
                 fileDate = Math.max(gitDate, fsDate);
