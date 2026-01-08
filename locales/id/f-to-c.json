@@ -1,0 +1,201 @@
+{
+    "meta": {
+        "title": "Konversi Fahrenheit ke Celsius | °F ke °C",
+        "description": "Konversi Fahrenheit ke Celsius dengan cepat menggunakan konverter F ke C. Dapatkan hasil instan, pelajari rumus, dan periksa tabel konversi.",
+        "ogTitle": "Konverter Fahrenheit ke Celsius",
+        "ogDescription": "Kalkulator suhu online gratis untuk konversi instan. Konversi suhu dari Fahrenheit (°F) ke Celsius (°C) dengan hasil yang akurat dan detail langkah demi langkah."
+    },
+    "header": {
+        "title": "Konverter Fahrenheit ke Celsius (°F ke °C)",
+        "tagline": "Alat konversi suhu online gratis yang mengonversi derajat Fahrenheit (°F) ke derajat Celsius (°C) secara instan, dengan rumus konversi dan langkah-langkah detail.",
+        "siteName": "Konverter C ke F"
+    },
+    "breadcrumb": {
+        "home": "Beranda",
+        "current": "Fahrenheit ke Celsius"
+    },
+    "converter": {
+        "title": "Konverter Fahrenheit ke Celsius",
+        "description": "Konversi °F ke °C secara gratis. Ideal untuk memasak, bepergian, dan sains. Dapatkan hasil akurat dalam hitungan detik!",
+        "inputLabel": "Fahrenheit (°F)",
+        "inputPlaceholder": "mis. 68",
+        "inputTooltip": "Air membeku pada 32°F dan mendidih pada 212°F",
+        "outputLabel": "Celsius (°C)",
+        "outputTooltip": "Air membeku pada 0°C dan mendidih pada 100°C",
+        "copyButton": "Salin",
+        "copied": "Tersalin!",
+        "errorBelowAbsoluteZero": "Suhu tidak boleh di bawah nol mutlak (-459,67°F)",
+        "errorInvalidNumber": "Harap masukkan angka yang valid"
+    },
+    "formula": {
+        "title": "Rumus Fahrenheit ke Celsius",
+        "subtitle": "Persamaan untuk mengonversi Fahrenheit ke Celsius",
+        "formula": "°C = (°F - 32) × 5/9",
+        "example": "Contoh: 68°F = (68 - 32) × 5/9 = 20°C"
+    },
+    "steps": {
+        "title": "Cara Mengonversi Fahrenheit ke Celsius",
+        "description": "Klik setiap langkah untuk melihat perhitungan detail",
+        "step1": {
+            "title": "Kurangi 32",
+            "description": "Kurangi 32 dari suhu Fahrenheit"
+        },
+        "step2": {
+            "title": "Kalikan dengan 5/9",
+            "description": "Kalikan hasil dari langkah 1 dengan 5/9 (atau sekitar 0,556)"
+        },
+        "step3": {
+            "title": "Hasil Akhir",
+            "description": "Dapatkan hasil akhir suhu Celsius"
+        },
+        "commonMistakes": {
+            "title": "Kesalahan Umum Konversi Fahrenheit ke Celsius",
+            "mistake1": "Lupa mengurangi 32",
+            "mistake1Detail": "Hanya mengalikan dengan 5/9 akan memberikan hasil yang salah",
+            "mistake2": "Urutan operasi yang salah",
+            "mistake2Detail": "Mengalikan dengan 5/9 terlebih dahulu lalu mengurangi 32 adalah salah",
+            "mistake3": "Menggunakan pecahan yang salah",
+            "mistake3Detail": "Menggunakan 2/3 alih-alih 5/9 adalah kesalahan umum",
+            "mistake4": "Pembulatan terlalu dini",
+            "mistake4Detail": "Membulatkan hasil sementara dapat menyebabkan ketidakakuratan"
+        }
+    },
+    "table": {
+        "title": "Tabel Konversi Fahrenheit ke Celsius",
+        "caption": "Konversi suhu umum dari Fahrenheit ke Celsius dengan titik referensi",
+        "fahrenheitCol": "°F",
+        "celsiusCol": "°C",
+        "descriptionCol": "Deskripsi",
+        "references": {
+            "absoluteZero": "Nol mutlak",
+            "intersection": "Skala Fahrenheit dan Celsius berpotongan",
+            "extremelyCold": "Hari yang sangat dingin",
+            "veryCold": "Hari musim dingin yang sangat dingin",
+            "freezingPoint": "Titik beku air",
+            "coolDay": "Hari gugur yang sejuk",
+            "mildDay": "Hari semi/gugur yang hangat",
+            "roomTemperature": "Suhu ruangan",
+            "warmDay": "Hari musim panas yang hangat",
+            "hotDay": "Hari musim panas yang panas",
+            "veryHot": "Sangat panas",
+            "bodyTemperature": "Suhu tubuh rata-rata manusia",
+            "hotTub": "Suhu jacuzzi",
+            "fever": "Demam tinggi",
+            "hotWater": "Air panas untuk kopi/teh",
+            "mediumSteak": "Suhu memasak steak medium",
+            "simmering": "Suhu mendidih",
+            "slowCooking": "Suhu memasak lambat",
+            "boilingPoint": "Titik didih air (di permukaan laut)",
+            "lowOven": "Suhu oven rendah",
+            "slowRoasting": "Suhu memanggang lambat",
+            "moderateOven": "Suhu oven sedang",
+            "standardBaking": "Suhu memanggang standar",
+            "bakingTemp": "Suhu memanggang",
+            "broilingTemp": "Suhu membakar",
+            "maxOven": "Suhu oven rumah maksimum"
+        }
+    },
+    "practical": {
+        "title": "Penggunaan Praktis Konversi Suhu",
+        "items": [
+            {
+                "title": "Memasak dan Memanggang",
+                "description": "Konversi suhu penting untuk digunakan di dapur:",
+                "bullets": [
+                    "<strong>140°F (60°C)</strong> - Suhu pasteurisasi untuk telur",
+                    "<strong>160°F (71°C)</strong> - Kematangan medium untuk daging",
+                    "<strong>165°F (74°C)</strong> - Suhu internal aman untuk unggas",
+                    "<strong>175°F (79°C)</strong> - Daging matang sempurna",
+                    "<strong>200°F (93°C)</strong> - Suhu mendidih untuk saus",
+                    "<strong>212°F (100°C)</strong> - Titik didih air (permukaan laut)",
+                    "<strong>225°F (107°C)</strong> - Pengasapan suhu rendah",
+                    "<strong>250°F (121°C)</strong> - Oven sangat lambat",
+                    "<strong>300°F (149°C)</strong> - Memanggang lambat",
+                    "<strong>325°F (163°C)</strong> - Oven sedang (sebagian besar barang panggang)",
+                    "<strong>350°F (177°C)</strong> - Suhu memanggang standar",
+                    "<strong>375°F (191°C)</strong> - Oven panas (kue, pai)",
+                    "<strong>400°F (204°C)</strong> - Oven sangat panas (memanggang sayuran)",
+                    "<strong>425°F (218°C)</strong> - Suhu memasak pizza",
+                    "<strong>450°F (232°C)</strong> - Suhu memanggang/menumis",
+                    "<strong>500°F (260°C)</strong> - Suhu oven rumah maksimum"
+                ]
+            },
+            {
+                "title": "Interpretasi Cuaca",
+                "description": "Memahami suhu dalam kehidupan sehari-hari:",
+                "bullets": [
+                    "<strong>-40°F (-40°C)</strong> - Dingin sangat berbahaya (radang dingin dalam hitungan menit)",
+                    "<strong>0°F (-18°C)</strong> - Berbahaya dingin (batasi paparan luar ruangan)",
+                    "<strong>14°F (-10°C)</strong> - Hari musim dingin yang sangat dingin",
+                    "<strong>32°F (0°C)</strong> - Titik beku (es terbentuk)",
+                    "<strong>50°F (10°C)</strong> - Cuaca sejuk, pakai jaket",
+                    "<strong>59°F (15°C)</strong> - Hari semi/gugur yang hangat",
+                    "<strong>68°F (20°C)</strong> - Suhu ruangan yang nyaman",
+                    "<strong>77°F (25°C)</strong> - Hari musim panas yang hangat",
+                    "<strong>86°F (30°C)</strong> - Hari musim panas yang panas",
+                    "<strong>95°F (35°C)</strong> -  Sangat panas (peringatan panas kemungkinan)",
+                    "<strong>104°F (40°C)</strong> - Berbahaya panas (risiko serangan panas)"
+                ]
+            },
+            {
+                "title": "Suhu Tubuh",
+                "description": "Suhu penting terkait kesehatan:",
+                "bullets": [
+                    "<strong>95°F (35°C)</strong> - Hipotermia dimulai",
+                    "<strong>96,8°F (36°C)</strong> - Suhu tubuh sedikit rendah",
+                    "<strong>97,7°F (36,5°C)</strong> - Suhu tubuh normal rendah",
+                    "<strong>98,6°F (37°C)</strong> - Suhu tubuh manusia standar",
+                    "<strong>99,5°F (37,5°C)</strong> - Suhu sedikit meningkat",
+                    "<strong>100,4°F (38°C)</strong> - Ambang demam",
+                    "<strong>102°F (38,9°C)</strong> - Demam sedang",
+                    "<strong>104°F (40°C)</strong> - Demam tinggi (cari perhatian medis)",
+                    "<strong>106°F (41,1°C)</strong> - Demam berbahaya (darurat)"
+                ]
+            },
+            {
+                "title": "Sains dan Industri",
+                "description": "Referensi suhu ilmiah utama:",
+                "bullets": [
+                    "<strong>-459,67°F (-273,15°C)</strong> - Nol mutlak",
+                    "<strong>-320°F (-196°C)</strong> - Suhu nitrogen cair",
+                    "<strong>-109°F (-78,5°C)</strong> - Titik sublimasi es kering",
+                    "<strong>32°F (0°C)</strong> - Titik beku air",
+                    "<strong>212°F (100°C)</strong> - Titik didih air (di permukaan laut)",
+                    "<strong>451°F (233°C)</strong> - Suhu penyalaan kertas",
+                    "<strong>600°F (316°C)</strong> - Titik leleh timah",
+                    "<strong>1.832°F (1.000°C)</strong> - Rentang suhu lava",
+                    "<strong>2.795°F (1.535°C)</strong> - Titik leleh besi"
+                ]
+            }
+        ]
+    },
+    "faq": {
+        "title": "Pertanyaan yang Sering Diajukan (FAQ)",
+        "questions": [
+            {
+                "question": "Bagaimana cara mengonversi Fahrenheit ke Celsius?",
+                "answer": "Untuk mengonversi Fahrenheit ke Celsius, kurangi 32, lalu kalikan dengan 5/9. Rumus: °C = (°F - 32) × 5/9"
+            },
+            {
+                "question": "Apa perbedaan antara Fahrenheit dan Celsius?",
+                "answer": "Fahrenheit dan Celsius adalah dua unit pengukuran suhu yang berbeda. Fahrenheit terutama digunakan di Amerika Serikat, sedangkan Celsius banyak digunakan secara internasional. Mereka menggunakan skala yang berbeda: dalam Fahrenheit, air membeku pada 32°F dan mendidih pada 212°F; dalam Celsius, air membeku pada 0°C dan mendidih pada 100°C."
+            },
+            {
+                "question": "Bagaimana saya bisa dengan cepat memperkirakan konversi antara Fahrenheit dan Celsius?",
+                "answer": "Metode perkiraan sederhana adalah mengurangi 30 dari suhu Fahrenheit, lalu membagi dengan 2 (alih-alih mengurangi 32 dan mengalikan dengan 5/9). Misalnya, 70°F adalah sekitar (70 - 30) / 2 = 20°C (sebenarnya 21,11°C). Metode ini memberikan perkiraan yang cukup dekat untuk penggunaan sehari-hari."
+            },
+            {
+                "question": "Pada suhu berapa Fahrenheit dan Celsius sama?",
+                "answer": "Fahrenheit dan Celsius sama pada -40 derajat. Artinya, -40°F = -40°C. Ini adalah titik perpotongan dari dua skala suhu."
+            }
+        ]
+    },
+    "footer": {
+        "navigation": "Navigasi",
+        "charts": "Grafik",
+        "legal": "Hukum",
+        "copyright": "© 2025 Ctofconverter. Hak cipta dilindungi.",
+        "lastUpdated": "Terakhir diperbarui:",
+        "backToTop": "Kembali ke atas"
+    }
+}

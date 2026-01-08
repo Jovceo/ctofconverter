@@ -1,0 +1,201 @@
+{
+    "meta": {
+        "title": "华氏度转摄氏度转换器 | °F 转 °C",
+        "description": "使用 F 到 C 转换器快速将华氏度转换为摄氏度。立即获得结果，学习公式，并查看转换图表。",
+        "ogTitle": "华氏度转摄氏度转换器",
+        "ogDescription": "免费在线温度计算器，即时转换。快速将华氏度（°F）转换为摄氏度（°C），提供精确结果和详细步骤。"
+    },
+    "header": {
+        "title": "华氏度转摄氏度转换器（°F 转 °C）",
+        "tagline": "免费在线温度转换工具，即时将华氏度（°F）转换为摄氏度（°C），提供转换公式和详细步骤。",
+        "siteName": "温度转换器"
+    },
+    "breadcrumb": {
+        "home": "首页",
+        "current": "华氏度转摄氏度"
+    },
+    "converter": {
+        "title": "华氏度转摄氏度转换器",
+        "description": "免费即时将 °F 转换为 °C。适用于烹饪、旅行和科学。几秒钟内获得准确结果！",
+        "inputLabel": "华氏度（°F）",
+        "inputPlaceholder": "例如 68",
+        "inputTooltip": "水在 32°F 结冰，在 212°F 沸腾",
+        "outputLabel": "摄氏度（°C）",
+        "outputTooltip": "水在 0°C 结冰，在 100°C 沸腾",
+        "copyButton": "复制",
+        "copied": "已复制！",
+        "errorBelowAbsoluteZero": "温度不能低于绝对零度（-459.67°F）",
+        "errorInvalidNumber": "请输入有效数字"
+    },
+    "formula": {
+        "title": "华氏度转摄氏度公式",
+        "subtitle": "华氏度转摄氏度的计算公式",
+        "formula": "°C = (°F - 32) × 5/9",
+        "example": "示例：68°F = (68 - 32) × 5/9 = 20°C"
+    },
+    "steps": {
+        "title": "如何将华氏度转换为摄氏度",
+        "description": "点击每个步骤查看详细计算",
+        "step1": {
+            "title": "减去 32",
+            "description": "从华氏度温度中减去 32"
+        },
+        "step2": {
+            "title": "乘以 5/9",
+            "description": "将步骤 1 的结果乘以 5/9（约 0.556）"
+        },
+        "step3": {
+            "title": "最终结果",
+            "description": "获得最终的摄氏度温度结果"
+        },
+        "commonMistakes": {
+            "title": "华氏度转摄氏度的常见错误",
+            "mistake1": "忘记减 32",
+            "mistake1Detail": "仅乘以 5/9 会导致错误结果",
+            "mistake2": "运算顺序错误",
+            "mistake2Detail": "先乘以 5/9 再减 32 是错误的",
+            "mistake3": "使用错误的分数",
+            "mistake3Detail": "使用 2/3 而不是 5/9 是常见错误",
+            "mistake4": "过早四舍五入",
+            "mistake4Detail": "对中间结果进行四舍五入可能导致不准确"
+        }
+    },
+    "table": {
+        "title": "华氏度转摄氏度转换表",
+        "caption": "常见华氏度到摄氏度的温度转换及参考点",
+        "fahrenheitCol": "°F",
+        "celsiusCol": "°C",
+        "descriptionCol": "描述",
+        "references": {
+            "absoluteZero": "绝对零度",
+            "intersection": "华氏度和摄氏度刻度相交",
+            "extremelyCold": "极寒天气",
+            "veryCold": "非常寒冷的冬日",
+            "freezingPoint": "水的冰点",
+            "coolDay": "凉爽的秋日",
+            "mildDay": "温和的春秋天",
+            "roomTemperature": "室温",
+            "warmDay": "温暖的夏日",
+            "hotDay": "炎热的夏日",
+            "veryHot": "非常炎热",
+            "bodyTemperature": "人体平均温度",
+            "hotTub": "热水浴缸温度",
+            "fever": "高烧",
+            "hotWater": "咖啡/茶的热水温度",
+            "mediumSteak": "牛排五分熟烹饪温度",
+            "simmering": "文火煨炖温度",
+            "slowCooking": "慢炖温度",
+            "boilingPoint": "水的沸点（海平面）",
+            "lowOven": "低温烤箱温度",
+            "slowRoasting": "慢烤温度",
+            "moderateOven": "中温烤箱温度",
+            "standardBaking": "标准烘焙温度",
+            "bakingTemp": "烘焙温度",
+            "broilingTemp": "炙烤温度",
+            "maxOven": "家用烤箱最高温度"
+        }
+    },
+    "practical": {
+        "title": "实用温度转换用途",
+        "items": [
+            {
+                "title": "烹饪和烘焙",
+                "description": "厨房使用的基本温度转换：",
+                "bullets": [
+                    "<strong>140°F (60°C)</strong> - 鸡蛋巴氏杀菌温度",
+                    "<strong>160°F (71°C)</strong> - 肉类五分熟",
+                    "<strong>165°F (74°C)</strong> - 家禽安全内部温度",
+                    "<strong>175°F (79°C)</strong> - 全熟肉类",
+                    "<strong>200°F (93°C)</strong> - 酱汁文火温度",
+                    "<strong>212°F (100°C)</strong> - 水沸点（海平面）",
+                    "<strong>225°F (107°C)</strong> - 低温熏制",
+                    "<strong>250°F (121°C)</strong> - 极低温烤箱",
+                    "<strong>300°F (149°C)</strong> - 慢烤",
+                    "<strong>325°F (163°C)</strong> - 中温烤箱（大多数烘焙食品）",
+                    "<strong>350°F (177°C)</strong> - 标准烘焙温度",
+                    "<strong>375°F (191°C)</strong> - 高温烤箱（饼干、派）",
+                    "<strong>400°F (204°C)</strong> - 非常高温烤箱（烤蔬菜）",
+                    "<strong>425°F (218°C)</strong> - 披萨烹饪温度",
+                    "<strong>450°F (232°C)</strong> - 烧烤/煎封温度",
+                    "<strong>500°F (260°C)</strong> - 家用烤箱最高温度"
+                ]
+            },
+            {
+                "title": "天气解读",
+                "description": "日常生活中的温度理解：",
+                "bullets": [
+                    "<strong>-40°F (-40°C)</strong> - 极度危险的寒冷（几分钟内冻伤）",
+                    "<strong>0°F (-18°C)</strong> - 危险的寒冷（限制户外活动）",
+                    "<strong>14°F (-10°C)</strong> - 非常寒冷的冬日",
+                    "<strong>32°F (0°C)</strong> - 冰点（结冰）",
+                    "<strong>50°F (10°C)</strong> - 需要穿外套的天气",
+                    "<strong>59°F (15°C)</strong> - 温和的春秋天",
+                    "<strong>68°F (20°C)</strong> - 舒适的室温",
+                    "<strong>77°F (25°C)</strong> - 温暖的夏日",
+                    "<strong>86°F (30°C)</strong> - 炎热的夏日",
+                    "<strong>95°F (35°C)</strong> - 非常炎热（可能发高温警报）",
+                    "<strong>104°F (40°C)</strong> - 危险的高温（中暑风险）"
+                ]
+            },
+            {
+                "title": "体温",
+                "description": "重要的健康相关温度：",
+                "bullets": [
+                    "<strong>95°F (35°C)</strong> - 开始体温过低",
+                    "<strong>96.8°F (36°C)</strong> - 略低的体温",
+                    "<strong>97.7°F (36.5°C)</strong> - 正常低体温",
+                    "<strong>98.6°F (37°C)</strong> - 标准人体温度",
+                    "<strong>99.5°F (37.5°C)</strong> - 略高的体温",
+                    "<strong>100.4°F (38°C)</strong> - 发烧阈值",
+                    "<strong>102°F (38.9°C)</strong> - 中度发烧",
+                    "<strong>104°F (40°C)</strong> - 高烧（需就医）",
+                    "<strong>106°F (41.1°C)</strong> - 危险的高烧（紧急情况）"
+                ]
+            },
+            {
+                "title": "科学和工业",
+                "description": "关键的科学温度参考：",
+                "bullets": [
+                    "<strong>-459.67°F (-273.15°C)</strong> - 绝对零度",
+                    "<strong>-320°F (-196°C)</strong> - 液氮温度",
+                    "<strong>-109°F (-78.5°C)</strong> - 干冰升华点",
+                    "<strong>32°F (0°C)</strong> - 水的冰点",
+                    "<strong>212°F (100°C)</strong> - 水的沸点（海平面）",
+                    "<strong>451°F (233°C)</strong> - 纸张燃点",
+                    "<strong>600°F (316°C)</strong> - 铅熔点",
+                    "<strong>1,832°F (1,000°C)</strong> - 熔岩温度范围",
+                    "<strong>2,795°F (1,535°C)</strong> - 铁熔点"
+                ]
+            }
+        ]
+    },
+    "faq": {
+        "title": "常见问题（FAQ）",
+        "questions": [
+            {
+                "question": "如何将华氏度转换为摄氏度？",
+                "answer": "要将华氏度转换为摄氏度，先减去 32，然后乘以 5/9。公式：°C = (°F - 32) × 5/9"
+            },
+            {
+                "question": "华氏度和摄氏度有什么区别？",
+                "answer": "华氏度和摄氏度是两种不同的温度测量单位。华氏度主要在美国使用，而摄氏度在国际上广泛使用。它们使用不同的刻度：华氏度中，水在 32°F 结冰，在 212°F 沸腾；摄氏度中，水在 0°C 结冰，在 100°C 沸腾。"
+            },
+            {
+                "question": "如何快速估算华氏度和摄氏度之间的转换？",
+                "answer": "一个简单的估算方法是从华氏度温度中减去 30，然后除以 2（而不是精确的减 32 再乘 5/9）。例如，70°F 大约是 (70 - 30) / 2 = 20°C（实际为 21.11°C）。这种方法为日常使用提供了足够接近的估算。"
+            },
+            {
+                "question": "华氏度和摄氏度在什么温度相等？",
+                "answer": "华氏度和摄氏度在 -40 度相等。也就是说，-40°F = -40°C。这是两个温度刻度的交点。"
+            }
+        ]
+    },
+    "footer": {
+        "navigation": "导航",
+        "charts": "图表",
+        "legal": "法律",
+        "copyright": "© 2025 Ctofconverter. 保留所有权利。",
+        "lastUpdated": "最后更新：",
+        "backToTop": "返回顶部"
+    }
+}

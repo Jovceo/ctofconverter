@@ -1,0 +1,201 @@
+{
+    "meta": {
+        "title": "Convertidor de Fahrenheit a Celsius | °F a °C",
+        "description": "Convierte Fahrenheit a Celsius rápidamente con el convertidor F a C. Obtén resultados instantáneos, aprende la fórmula y consulta la tabla de conversión.",
+        "ogTitle": "Convertidor de Fahrenheit a Celsius",
+        "ogDescription": "Calculadora gratuita de temperatura en línea para conversiones instantáneas. Convierte temperaturas de Fahrenheit (°F) a Celsius (°C) con resultados precisos y detalles paso a paso."
+    },
+    "header": {
+        "title": "Convertidor de Fahrenheit a Celsius (°F a °C)",
+        "tagline": "Herramienta gratuita de conversión de temperatura en línea que convierte instantáneamente grados Fahrenheit (°F) a grados Celsius (°C), con fórmulas de conversión y pasos detallados.",
+        "siteName": "Convertidor C a F"
+    },
+    "breadcrumb": {
+        "home": "Inicio",
+        "current": "Fahrenheit a Celsius"
+    },
+    "converter": {
+        "title": "Convertidor de Fahrenheit a Celsius",
+        "description": "Convierte °F a °C gratis al instante. Ideal para cocina, viajes y ciencia. ¡Obtén resultados precisos en segundos!",
+        "inputLabel": "Fahrenheit (°F)",
+        "inputPlaceholder": "ej. 68",
+        "inputTooltip": "El agua se congela a 32°F y hierve a 212°F",
+        "outputLabel": "Celsius (°C)",
+        "outputTooltip": "El agua se congela a 0°C y hierve a 100°C",
+        "copyButton": "Copiar",
+        "copied": "¡Copiado!",
+        "errorBelowAbsoluteZero": "La temperatura no puede estar por debajo del cero absoluto (-459.67°F)",
+        "errorInvalidNumber": "Por favor, introduce un número válido"
+    },
+    "formula": {
+        "title": "Fórmula de Fahrenheit a Celsius",
+        "subtitle": "Ecuación para convertir Fahrenheit a Celsius",
+        "formula": "°C = (°F - 32) × 5/9",
+        "example": "Ejemplo: 68°F = (68 - 32) × 5/9 = 20°C"
+    },
+    "steps": {
+        "title": "Cómo convertir Fahrenheit a Celsius",
+        "description": "Haz clic en cada paso para ver el cálculo detallado",
+        "step1": {
+            "title": "Restar 32",
+            "description": "Resta 32 de la temperatura en Fahrenheit"
+        },
+        "step2": {
+            "title": "Multiplicar por 5/9",
+            "description": "Multiplica el resultado del paso 1 por 5/9 (o aproximadamente 0.556)"
+        },
+        "step3": {
+            "title": "Resultado final",
+            "description": "Obtén el resultado final de la temperatura en Celsius"
+        },
+        "commonMistakes": {
+            "title": "Errores comunes en la conversión de Fahrenheit a Celsius",
+            "mistake1": "Olvidar restar 32",
+            "mistake1Detail": "Solo multiplicar por 5/9 dará resultados incorrectos",
+            "mistake2": "Orden incorrecto de operaciones",
+            "mistake2Detail": "Multiplicar por 5/9 primero y luego restar 32 es incorrecto",
+            "mistake3": "Usar la fracción incorrecta",
+            "mistake3Detail": "Usar 2/3 en lugar de 5/9 es un error común",
+            "mistake4": "Redondear demasiado pronto",
+            "mistake4Detail": "Redondear resultados intermedios puede llevar a inexactitudes"
+        }
+    },
+    "table": {
+        "title": "Tabla de conversión de Fahrenheit a Celsius",
+        "caption": "Conversiones comunes de temperatura de Fahrenheit a Celsius con puntos de referencia",
+        "fahrenheitCol": "°F",
+        "celsiusCol": "°C",
+        "descriptionCol": "Descripción",
+        "references": {
+            "absoluteZero": "Cero absoluto",
+            "intersection": "Las escalas Fahrenheit y Celsius se cruzan",
+            "extremelyCold": "Día extremadamente frío",
+            "veryCold": "Día de invierno muy frío",
+            "freezingPoint": "Punto de congelación del agua",
+            "coolDay": "Día fresco de otoño",
+            "mildDay": "Día templado de primavera/otoño",
+            "roomTemperature": "Temperatura ambiente",
+            "warmDay": "Día cálido de verano",
+            "hotDay": "Día caluroso de verano",
+            "veryHot": "Muy caluroso",
+            "bodyTemperature": "Temperatura corporal promedio",
+            "hotTub": "Temperatura de jacuzzi",
+            "fever": "Fiebre alta",
+            "hotWater": "Agua caliente para café/té",
+            "mediumSteak": "Temperatura de cocción de carne a término medio",
+            "simmering": "Temperatura a fuego lento",
+            "slowCooking": "Temperatura de cocción lenta",
+            "boilingPoint": "Punto de ebullición del agua (al nivel del mar)",
+            "lowOven": "Temperatura de horno bajo",
+            "slowRoasting": "Temperatura de asado lento",
+            "moderateOven": "Temperatura de horno moderado",
+            "standardBaking": "Temperatura de horneado estándar",
+            "bakingTemp": "Temperatura de horneado",
+            "broilingTemp": "Temperatura de asado",
+            "maxOven": "Temperatura máxima de horno doméstico"
+        }
+    },
+    "practical": {
+        "title": "Usos prácticos de conversión de temperatura",
+        "items": [
+            {
+                "title": "Cocina y repostería",
+                "description": "Conversiones de temperatura esenciales para uso en cocina:",
+                "bullets": [
+                    "<strong>140°F (60°C)</strong> - Temperatura de pasteurización para huevos",
+                    "<strong>160°F (71°C)</strong> - Término medio para carnes",
+                    "<strong>165°F (74°C)</strong> - Temperatura interna segura para aves",
+                    "<strong>175°F (79°C)</strong> - Carnes bien cocidas",
+                    "<strong>200°F (93°C)</strong> - Temperatura a fuego lento para salsas",
+                    "<strong>212°F (100°C)</strong> - Punto de ebullición del agua (nivel del mar)",
+                    "<strong>225°F (107°C)</strong> - Ahumado a baja temperatura",
+                    "<strong>250°F (121°C)</strong> - Horno muy lento",
+                    "<strong>300°F (149°C)</strong> - Asado lento",
+                    "<strong>325°F (163°C)</strong> - Horno moderado (mayoría de productos horneados)",
+                    "<strong>350°F (177°C)</strong> - Temperatura de horneado estándar",
+                    "<strong>375°F (191°C)</strong> - Horno caliente (galletas, pasteles)",
+                    "<strong>400°F (204°C)</strong> - Horno muy caliente (asar vegetales)",
+                    "<strong>425°F (218°C)</strong> - Temperatura de cocción de pizza",
+                    "<strong>450°F (232°C)</strong> - Temperatura de asado/sellado",
+                    "<strong>500°F (260°C)</strong> - Temperatura máxima de horno doméstico"
+                ]
+            },
+            {
+                "title": "Interpretación del clima",
+                "description": "Comprensión de la temperatura en la vida diaria:",
+                "bullets": [
+                    "<strong>-40°F (-40°C)</strong> - Frío extremadamente peligroso (congelación en minutos)",
+                    "<strong>0°F (-18°C)</strong> - Peligrosamente frío (limitar exposición al aire libre)",
+                    "<strong>14°F (-10°C)</strong> - Día de invierno muy frío",
+                    "<strong>32°F (0°C)</strong> - Punto de congelación (se forma hielo)",
+                    "<strong>50°F (10°C)</strong> - Clima fresco, usar chaqueta",
+                    "<strong>59°F (15°C)</strong> - Día templado de primavera/otoño",
+                    "<strong>68°F (20°C)</strong> - Temperatura ambiente confortable",
+                    "<strong>77°F (25°C)</strong> - Día cálido de verano",
+                    "<strong>86°F (30°C)</strong> - Día caluroso de verano",
+                    "<strong>95°F (35°C)</strong> - Muy caluroso (probable aviso de calor)",
+                    "<strong>104°F (40°C)</strong> - Peligrosamente caluroso (riesgo de insolación)"
+                ]
+            },
+            {
+                "title": "Temperatura corporal",
+                "description": "Temperaturas importantes relacionadas con la salud:",
+                "bullets": [
+                    "<strong>95°F (35°C)</strong> - Comienza la hipotermia",
+                    "<strong>96.8°F (36°C)</strong> - Temperatura corporal ligeramente baja",
+                    "<strong>97.7°F (36.5°C)</strong> - Temperatura corporal normal baja",
+                    "<strong>98.6°F (37°C)</strong> - Temperatura corporal humana estándar",
+                    "<strong>99.5°F (37.5°C)</strong> - Temperatura ligeramente elevada",
+                    "<strong>100.4°F (38°C)</strong> - Umbral de fiebre",
+                    "<strong>102°F (38.9°C)</strong> - Fiebre moderada",
+                    "<strong>104°F (40°C)</strong> - Fiebre alta (buscar atención médica)",
+                    "<strong>106°F (41.1°C)</strong> - Fiebre peligrosa (emergencia)"
+                ]
+            },
+            {
+                "title": "Ciencia e industria",
+                "description": "Referencias de temperatura científicas clave:",
+                "bullets": [
+                    "<strong>-459.67°F (-273.15°C)</strong> - Cero absoluto",
+                    "<strong>-320°F (-196°C)</strong> - Temperatura del nitrógeno líquido",
+                    "<strong>-109°F (-78.5°C)</strong> - Punto de sublimación del hielo seco",
+                    "<strong>32°F (0°C)</strong> - Punto de congelación del agua",
+                    "<strong>212°F (100°C)</strong> - Punto de ebullición del agua (al nivel del mar)",
+                    "<strong>451°F (233°C)</strong> - Temperatura de ignición del papel",
+                    "<strong>600°F (316°C)</strong> - Punto de fusión del plomo",
+                    "<strong>1,832°F (1,000°C)</strong> - Rango de temperatura de la lava",
+                    "<strong>2,795°F (1,535°C)</strong> - Punto de fusión del hierro"
+                ]
+            }
+        ]
+    },
+    "faq": {
+        "title": "Preguntas frecuentes (FAQ)",
+        "questions": [
+            {
+                "question": "¿Cómo convertir Fahrenheit a Celsius?",
+                "answer": "Para convertir Fahrenheit a Celsius, resta 32 y luego multiplica por 5/9. Fórmula: °C = (°F - 32) × 5/9"
+            },
+            {
+                "question": "¿Cuál es la diferencia entre Fahrenheit y Celsius?",
+                "answer": "Fahrenheit y Celsius son dos unidades diferentes de medición de temperatura. Fahrenheit se usa principalmente en Estados Unidos, mientras que Celsius se usa ampliamente a nivel internacional. Usan escalas diferentes: en Fahrenheit, el agua se congela a 32°F y hierve a 212°F; en Celsius, el agua se congela a 0°C y hierve a 100°C."
+            },
+            {
+                "question": "¿Cómo puedo estimar rápidamente la conversión entre Fahrenheit y Celsius?",
+                "answer": "Un método de estimación simple es restar 30 de la temperatura en Fahrenheit y luego dividir por 2 (en lugar de restar 32 y multiplicar por 5/9). Por ejemplo, 70°F es aproximadamente (70 - 30) / 2 = 20°C (en realidad es 21.11°C). Este método proporciona una estimación suficientemente cercana para uso diario."
+            },
+            {
+                "question": "¿A qué temperatura son iguales Fahrenheit y Celsius?",
+                "answer": "Fahrenheit y Celsius son iguales a -40 grados. Es decir, -40°F = -40°C. Este es el punto de intersección de las dos escalas de temperatura."
+            }
+        ]
+    },
+    "footer": {
+        "navigation": "Navegación",
+        "charts": "Tablas",
+        "legal": "Legal",
+        "copyright": "© 2025 Ctofconverter. Todos los derechos reservados.",
+        "lastUpdated": "Última actualización:",
+        "backToTop": "Volver arriba"
+    }
+}
