@@ -76,10 +76,10 @@ export const textSpinner = {
     },
 
     getMetaDescription: (celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string) => {
-        const variants = t('meta.description');
+        const variants = t('meta.ogDescription');
         if (!Array.isArray(variants)) {
             if (typeof variants === 'string') {
-                return t('meta.description', { celsius, fahrenheit: formatTemperature(fahrenheit) });
+                return t('meta.ogDescription', { celsius, fahrenheit: formatTemperature(fahrenheit) });
             }
             return `Convert ${celsius} Celsius to Fahrenheit.`;
         }

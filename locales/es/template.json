@@ -81,6 +81,22 @@
         "linkOvenChart": "tabla de conversión de horno",
         "linkCooking": "ajustes de temperatura de cocina, horneado y horno",
         "linkGeneral": "tabla completa de conversión de temperatura",
+        "introMedical": [
+            "Usado para medir la temperatura corporal. Vea nuestra <link>guía de fiebre</link>.",
+            "Común en diagnósticos de salud. Consulte la <link>tabla de temperatura</link>."
+        ],
+        "introWeather": [
+            "Usado en pronósticos del tiempo. Consulte nuestra <link>tabla de temperatura</link>.",
+            "Estándar en meteorología. Vea la <link>guía de conversión</link>."
+        ],
+        "introCooking": [
+            "Comúnmente utilizado en cocina y repostería. Consulte nuestra <link>tabla de conversión</link>.",
+            "Ideal para recetas de horno. Use nuestra <link>guía de cocina</link>."
+        ],
+        "introGeneral": [
+            "Usado en aplicaciones científicas. Vea nuestra <link>tabla de conversión</link>.",
+            "Estándar en la industria. Consulte la <link>guía de unidades</link>."
+        ],
         "introMedicalPart2": " y diagnósticos médicos. Consulte nuestra ",
         "introMedicalPart3": " para más detalles.",
         "introWeatherPart1": " pronósticos del tiempo y lecturas diarias. Vea nuestra tabla completa de ",

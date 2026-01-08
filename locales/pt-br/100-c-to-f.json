@@ -1,0 +1,53 @@
+{
+    "page": {
+        "title": "100°C para Fahrenheit (212°F) – Ponto de Ebulição Explicado",
+        "description": "Converta 100 graus Celsius para Fahrenheit (212°F). Aprenda sobre o ponto de ebulição da água, fornos, febre e fórmulas."
+    },
+    "faq": {
+        "item3": {
+            "question": "100°C é febre?",
+            "answer": "Não, 100°C (212°F) não é uma temperatura corporal. Frequentemente confundido com 100°F (37,8°C), que é febre leve. A temperatura normal é cerca de 37°C. A exposição a temperaturas de 100°C causaria queimaduras graves e é incompatível com a sobrevivência humana."
+        },
+        "item4": {
+            "question": "Quanto é 100°C em Kelvin?",
+            "answer": "100°C equivale a 373,15 Kelvin (K). A fórmula é K = °C + 273,15."
+        },
+        "item5": {
+            "question": "Como a altitude afeta a ebulição?",
+            "answer": "O ponto de ebulição diminui com a altitude devido à menor pressão. Ao nível do mar, a água ferve a 100°C. A 3.000 metros, ferve a apenas 90°C. Isso exige ajustes ao cozinhar em locais altos."
+        },
+        "item6": {
+            "question": "Quanto é 100°F em Celsius?",
+            "answer": "100°F equivale a 37,78°C. Fórmula: °C = (100 - 32) × 5/9."
+        }
+    },
+    "boilingPointFeature": {
+        "title": "Referência de Ebulição da Água",
+        "description": "100°C (212°F) é o ponto de ebulição padrão da água ao nível do mar. Esta referência é usada mundialmente na culinária, ciência e indústria.",
+        "cards": {
+            "boiling": "Fervura",
+            "freezing": "Congelamento",
+            "baking": "Forno",
+            "body": "Temp. Corpo"
+        }
+    },
+    "practical": {
+        "cooking": {
+            "title": "Fervura e Preparação de Alimentos",
+            "description": "A 100°C (212°F), esta temperatura é usada principalmente para ferver, escalfar, branquear e esterilizar — e não para assar ou grelhar.",
+            "pastries": "Ferver massas e legumes",
+            "pastriesDesc": "Ponto de ebulição padrão da água para cozinhar massas, arroz e vegetais",
+            "roasting": "Branqueamento",
+            "roastingDesc": "Mergulhar brevemente os alimentos em água fervente",
+            "slowRoast": "Esterilização",
+            "slowRoastDesc": "Matar bactérias em utensílios e mamadeiras"
+        }
+    },
+    "editorial": {
+        "title": "Nota Editorial",
+        "doc": {
+            "note": "Este conteúdo é compilado e revisado com base em referências científicas e de segurança alimentar disponíveis publicamente.",
+            "sources": "Fontes: NIST, Physical Science Center, USDA."
+        }
+    }
+}

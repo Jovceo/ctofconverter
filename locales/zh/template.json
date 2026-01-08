@@ -99,6 +99,22 @@
         "linkOvenChart": "风炉转换表",
         "linkCooking": "烹饪、烘焙和烤箱温度设置",
         "linkGeneral": "完整温度对照表",
+        "introMedical": [
+            "用于体温测量。查看我们的 <link>体温图表</link> 了解详情。",
+            "用于健康监测。参考 <link>发烧温度指南</link> 判断是否发烧。"
+        ],
+        "introWeather": [
+            "用于天气预报。查看 <link>摄氏度转华氏度图表</link> 获取对照。",
+            "用于日常气温理解。参考 <link>温度转换指南</link>。"
+        ],
+        "introCooking": [
+            "常用于烹饪和烘焙。查看我们的 <link>风炉转换表</link> 了解详情。",
+            "适用于厨房食谱。使用 <link>烤箱温度转换指南</link> 获取精确结果。"
+        ],
+        "introGeneral": [
+            "用于科学应用。查看 <link>温度对照表</link>。",
+            "用于工业标准。参考 <link>单位转换指南</link>。"
+        ],
         "introMedicalPart2": " 和医疗诊断。查看我们的 ",
         "introMedicalPart3": " 了解更多详情。",
         "introWeatherPart1": " 天气预报和日常温度读取。查看我们完整的 ",

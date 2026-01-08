@@ -117,5 +117,37 @@
     "lastUpdated": "Terakhir diperbarui:",
     "backToTop": "Kembali ke atas",
     "footerNavigation": "Navigasi footer"
+  },
+  "strategy": {
+    "insights": {
+      "tea": {
+        "title": "Tips Ahli Teh",
+        "content": "Teh yang berbeda membutuhkan suhu yang berbeda. 75°C-80°C adalah \"Standar Emas\" untuk Teh Hijau dan Teh Putih yang lembut untuk mencegah rasa pahit."
+      },
+      "chicken": {
+        "title": "Keamanan Pangan: Unggas",
+        "content": "USDA menyarankan memasak ayam hingga suhu internal 165°F (74°C). Pada 75°C, ayam Anda sangat aman dan juicy."
+      },
+      "burn": {
+        "title": "Peringatan Keamanan: Risiko Luka Bakar",
+        "content": "Air dalam kisaran ini menyebabkan luka bakar parah dalam hitungan detik. Ini jauh lebih panas daripada air panas domestik standar (biasanya 50-60°C)."
+      },
+      "boiling": {
+        "title": "Zona Sterilisasi",
+        "content": "Air pada suhu ini membunuh sebagian besar bakteri, virus, dan protozoa. Ini adalah standar untuk sterilisasi air minum yang aman."
+      },
+      "steam": {
+        "title": "Bahaya Luka Bakar Uap",
+        "content": "Uap mengandung lebih banyak energi panas daripada air mendidih pada suhu yang sama karena panas laten. Luka bakar uap bisa lebih parah daripada luka bakar air."
+      },
+      "freezing": {
+        "title": "Risiko Es Hitam",
+        "content": "Permukaan jalan dapat membeku bahkan ketika suhu udara sedikit di atas nol. Selalu berkendara dengan hati-hati di dekat 0°C."
+      },
+      "ice": {
+        "title": "Perubahan Fase",
+        "content": "Pada 0°C, es dan air dapat hidup berdampingan dalam keseimbangan. Menambah energi melelehkan es; menghilangkan energi membekukan air."
+      }
+    }
   }
 }

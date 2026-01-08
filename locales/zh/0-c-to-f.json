@@ -1,0 +1,88 @@
+{
+    "meta": {
+        "titles": {
+            "weather": "0°C转华氏度(32°F) - 天气和体感指南",
+            "general": "0°C转华氏度(32°F)转换计算器"
+        },
+        "ogDescription": "将0°C转换为华氏度(32°F)。了解冰点温度、体感以及这一基本温度的实际应用。",
+        "descriptions": {
+            "googleContext": "0摄氏度 = 32华氏度。精确转换公式：0°C × 9/5 + 32。非常适合用于{weather_context}。",
+            "googleGeneral": "0摄氏度 = 32华氏度。使用我们的精密计算器立即将任何摄氏度值转换为华氏度。"
+        }
+    },
+    "common": {
+        "introWeather": [
+            "天气预报和日常温度监测"
+        ]
+    },
+    "scaleComparison": {
+        "title": "温度刻度对比",
+        "subtitle": "跨刻度的关键温度点",
+        "intro": "0°C (32°F) 是温度刻度中的一个基本参考点。以下是它与其他重要温度的对比：",
+        "chartLink": "如需查看不同温度值的综合转换，请访问我们的 <a href=\"https://ctofconverter.com/celsius-to-fahrenheit-chart/\" target=\"_blank\" rel=\"noopener noreferrer\">摄氏度到华氏度转换表</a>。",
+        "scales": {
+            "celsius": "摄氏度 (°C)",
+            "fahrenheit": "华氏度 (°F)",
+            "kelvin": "开尔文 (K)"
+        },
+        "waterFreezes": "水结冰",
+        "table": {
+            "headers": {
+                "description": "描述",
+                "celsius": "摄氏度 (°C)",
+                "fahrenheit": "华氏度 (°F)",
+                "kelvin": "开尔文 (K)"
+            },
+            "rows": {
+                "waterFreezes": "水结冰",
+                "waterBoils": "水沸腾",
+                "absoluteZero": "绝对零度",
+                "bodyTemp": "人体温度",
+                "roomTemp": "室温"
+            }
+        },
+        "formulas": {
+            "title": "转换公式：",
+            "text": "°F = (°C × 9/5) + 32  |  °C = (°F - 32) × 5/9  |  K = °C + 273.15"
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "0°C 与 32°F 相同吗？",
+            "answer": "是的，0°C 完全等于 32°F。这是水的冰点，也是两种温度刻度的基本参考点。"
+        },
+        "q2": {
+            "question": "将 0°C 转换为华氏度的公式是什么？",
+            "answer": "摄氏度转华氏度的公式是：°F = (°C × 9/5) + 32<br>对于 0°C：(0 × 9/5) + 32 = 0 + 32 = 32°F"
+        },
+        "q3": {
+            "question": "0°C 用开尔文表示是多少？",
+            "answer": "0°C 等于 273.15K。转换公式是：K = °C + 273.15<br>所以 0 + 273.15 = 273.15K"
+        },
+        "q4": {
+            "question": "0°C 被认为是冷的吗？",
+            "answer": "是的，0°C (32°F) 被认为是冷的，因为它是水的冰点。在这个温度下：",
+            "items": [
+                "水会变成冰",
+                "表面会结霜",
+                "在户外需要保暖衣物",
+                "植物可能需要保护以免冻伤"
+            ]
+        },
+        "q5": {
+            "question": "0°C 是发烧温度吗？",
+            "answer": "不，0°C 不是发烧温度。实际上，它远低于正常体温（37°C 或 98.6°F）。发烧通常被认为是 38°C (100.4°F) 或更高。0°C 是水的冰点，对人体温度来说极其危险。"
+        },
+        "q6": {
+            "question": "为什么 0°C 很重要？",
+            "answer": "0°C 很重要，因为：",
+            "items": [
+                "它是标准条件下水的冰点",
+                "它是摄氏度刻度的基本参考点",
+                "它标志着液态水和固态水之间的转变",
+                "它在气象学中用于霜冻和冰冻预警",
+                "它在食品储存和安全指南中至关重要"
+            ]
+        }
+    }
+}

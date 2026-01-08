@@ -1,0 +1,53 @@
+{
+    "page": {
+        "title": "100°C en Fahrenheit (212°F) – Le Point d'Ébullition de l'Eau Expliqué",
+        "description": "Convertir 100 degrés Celsius en Fahrenheit (212°F). Découvrez le point d'ébullition de l'eau, les conversions de four, la fièvre et la formule."
+    },
+    "faq": {
+        "item3": {
+            "question": "Est-ce que 100°C est une fièvre ?",
+            "answer": "Non, 100°C (212°F) n'est pas une température corporelle. On la confond souvent avec 100°F (37,8°C), qui est une légère fièvre. La température normale est d'environ 37°C. L'exposition à des températures de 100°C causerait de graves brûlures et est incompatible avec la survie humaine."
+        },
+        "item4": {
+            "question": "Que vaut 100°C en Kelvin ?",
+            "answer": "100°C équivaut à 373,15 Kelvin (K). La formule est K = °C + 273,15."
+        },
+        "item5": {
+            "question": "Comment l'altitude affecte-t-elle le point d'ébullition ?",
+            "answer": "Le point d'ébullition diminue avec l'altitude en raison de la pression plus faible. Au niveau de la mer, l'eau bout à 100°C. À 3000 mètres, elle bout à seulement 90°C. Cela nécessite des ajustements pour la cuisson en altitude."
+        },
+        "item6": {
+            "question": "Que vaut 100°F en Celsius ?",
+            "answer": "100°F équivaut à 37,78°C. Formule : °C = (100 - 32) × 5/9."
+        }
+    },
+    "boilingPointFeature": {
+        "title": "Référence du Point d'Ébullition",
+        "description": "100°C (212°F) est le point d'ébullition standard de l'eau au niveau de la mer. Cette référence est utilisée mondialement en cuisine, science et industrie.",
+        "cards": {
+            "boiling": "Ébullition",
+            "freezing": "Congélation",
+            "baking": "Cuisson Four",
+            "body": "Temp. Corps"
+        }
+    },
+    "practical": {
+        "cooking": {
+            "title": "Ébullition et Préparation des Aliments",
+            "description": "À 100°C (212°F), cette température est principalement utilisée pour bouillir, pocher, blanchir et stériliser — et non pour cuire au four ou rôtir.",
+            "pastries": "Bouillir pâtes et légumes",
+            "pastriesDesc": "Point d'ébullition standard pour la cuisson des pâtes, du riz et des légumes",
+            "roasting": "Blanchiment",
+            "roastingDesc": "Plonger brièvement les aliments dans l'eau bouillante",
+            "slowRoast": "Stérilisation",
+            "slowRoastDesc": "Tuer les bactéries sur les ustensiles et biberons"
+        }
+    },
+    "editorial": {
+        "title": "Note Éditoriale",
+        "doc": {
+            "note": "Ce contenu est compilé et révisé sur la base de références scientifiques et de sécurité alimentaire accessibles au public.",
+            "sources": "Sources : NIST, Centre des Sciences Physiques, USDA."
+        }
+    }
+}

@@ -49,5 +49,37 @@
         "lastUpdated": "Zuletzt aktualisiert:",
         "backToTop": "Nach oben",
         "footerNavigation": "Fußzeilen-Navigation"
+    },
+    "strategy": {
+        "insights": {
+            "tea": {
+                "title": "Tee-Experten-Tipp",
+                "content": "Verschiedene Tees benötigen unterschiedliche Temperaturen. 75°C-80°C ist der „Goldstandard“ für empfindlichen Grün- und Weißtee, um Bitterkeit zu vermeiden."
+            },
+            "chicken": {
+                "title": "Lebensmittelsicherheit: Geflügel",
+                "content": "Das USDA empfiehlt, Hühnchen auf eine Kerntemperatur von 165°F (74°C) zu garen. Bei 75°C ist Ihr Hühnchen vollkommen sicher und saftig."
+            },
+            "burn": {
+                "title": "Sicherheitswarnung: Verbrühungsgefahr",
+                "content": "Wasser in diesem Bereich verursacht in Sekunden schwere Verbrühungen. Es ist viel heißer als normales Haushalts-Warmwasser (meist 50-60°C)."
+            },
+            "boiling": {
+                "title": "Sterilisationszone",
+                "content": "Wasser bei dieser Temperatur tötet die meisten Bakterien, Viren und Protozoen ab. Dies ist der Standard für die sichere Sterilisation von Trinkwasser."
+            },
+            "steam": {
+                "title": "Dampf-Verbrennungsgefahr",
+                "content": "Dampf enthält aufgrund der latenten Wärme mehr Wärmeenergie als kochendes Wasser bei gleicher Temperatur. Dampfverbrennungen können schwerwiegender sein als Wasserverbrennungen."
+            },
+            "freezing": {
+                "title": "Glatteis-Risiko",
+                "content": "Straßenoberflächen können gefrieren, auch wenn die Lufttemperatur leicht über null liegt. Fahren Sie bei Temperaturen um 0°C immer vorsichtig."
+            },
+            "ice": {
+                "title": "Phasenwechsel",
+                "content": "Bei 0°C können Eis und Wasser im Gleichgewicht koexistieren. Energiezufuhr schmilzt Eis; Energieentzug lässt Wasser gefrieren."
+            }
+        }
     }
 }

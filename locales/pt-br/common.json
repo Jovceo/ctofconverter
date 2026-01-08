@@ -117,5 +117,37 @@
     "lastUpdated": "Última atualização:",
     "backToTop": "Volver ao topo",
     "footerNavigation": "Navegação do rodapé"
+  },
+  "strategy": {
+    "insights": {
+      "tea": {
+        "title": "Dica de Especialista em Chá",
+        "content": "Diferentes chás precisam de temperaturas diferentes. 75°C-80°C é o \"Padrão Ouro\" para Chá Verde e Branco delicados para evitar o amargor."
+      },
+      "chicken": {
+        "title": "Segurança Alimentar: Aves",
+        "content": "O USDA recomenda cozinhar frango a uma temperatura interna de 165°F (74°C). A 75°C, seu frango é perfeitamente seguro e suculento."
+      },
+      "burn": {
+        "title": "Aviso de Segurança: Risco de Escaldadura",
+        "content": "A água nesta faixa causa queimaduras graves em segundos. É muito mais quente que a água quente doméstica padrão (geralmente 50-60°C)."
+      },
+      "boiling": {
+        "title": "Zona de Esterilização",
+        "content": "A água a esta temperatura mata a maioria das bactérias, vírus e protozoários. É o padrão para esterilização segura de água potável."
+      },
+      "steam": {
+        "title": "Perigo de Queimadura por Vapor",
+        "content": "O vapor contém mais energia térmica do que a água fervente na mesma temperatura devido ao calor latente. Queimaduras por vapor podem ser mais graves que as por água."
+      },
+      "freezing": {
+        "title": "Risco de Gelo Negro",
+        "content": "Superfícies de estradas podem congelar mesmo quando a temperatura do ar está ligeiramente acima de zero. Sempre dirija com cuidado perto de 0°C."
+      },
+      "ice": {
+        "title": "Mudança de Fase",
+        "content": "A 0°C, gelo e água podem coexistir em equilíbrio. Adicionar energia derrete o gelo; remover energia congela a água."
+      }
+    }
   }
 }

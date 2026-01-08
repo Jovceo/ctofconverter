@@ -49,5 +49,37 @@
         "lastUpdated": "Dernière mise à jour :",
         "backToTop": "Retour en haut",
         "footerNavigation": "Navigation de pied de page"
+    },
+    "strategy": {
+        "insights": {
+            "tea": {
+                "title": "Conseil d'Expert : Thé",
+                "content": "Différents thés nécessitent différentes températures. 75°C-80°C est l'\"Étalon-Or\" pour le Thé Vert et le Thé Blanc délicats afin d'éviter l'amertume."
+            },
+            "chicken": {
+                "title": "Sécurité Alimentaire : Volaille",
+                "content": "L'USDA recommande de cuire le poulet à une température interne de 165°F (74°C). À 75°C, votre poulet est parfaitement sûr et juteux."
+            },
+            "burn": {
+                "title": "Avertissement de Sécurité : Risque de Brûlure",
+                "content": "L'eau dans cette plage cause des brûlures graves en quelques secondes. Elle est beaucoup plus chaude que l'eau chaude domestique standard (généralement 50-60°C)."
+            },
+            "boiling": {
+                "title": "Zone de Stérilisation",
+                "content": "L'eau à cette température tue la plupart des bactéries, virus et protozoaires. C'est la norme pour la stérilisation sûre de l'eau potable."
+            },
+            "steam": {
+                "title": "Danger de Brûlure par Vapeur",
+                "content": "La vapeur contient plus d'énergie thermique que l'eau bouillante à la même température en raison de la chaleur latente. Les brûlures par vapeur peuvent être plus graves que celles par l'eau."
+            },
+            "freezing": {
+                "title": "Risque de Verglas",
+                "content": "Les surfaces routières peuvent geler même lorsque la température de l'air est légèrement au-dessus de zéro. Conduisez toujours avec prudence près de 0°C."
+            },
+            "ice": {
+                "title": "Changement de Phase",
+                "content": "À 0°C, la glace et l'eau peuvent coexister en équilibre. Ajouter de l'énergie fait fondre la glace ; en retirer fait geler l'eau."
+            }
+        }
     }
 }

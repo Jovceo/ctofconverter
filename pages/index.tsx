@@ -112,7 +112,7 @@ export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: Home
         <>
             <Head>
                 <title>{t('meta.title')}</title>
-                <meta name="description" content={t('meta.description')} />
+                <meta name="description" content={t('meta.ogDescription')} />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="author" content="Ctofconverter Team" />
                 <meta name="robots" content="index, follow" />
@@ -145,7 +145,7 @@ export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: Home
                         "@type": "WebApplication",
                         "name": t('meta.title'),
                         "url": "https://ctofconverter.com/",
-                        "description": t('meta.description'),
+                        "description": t('meta.ogDescription'),
                         "applicationCategory": "UtilityApplication",
                         "operatingSystem": "All"
                     })

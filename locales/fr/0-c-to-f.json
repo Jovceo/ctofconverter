@@ -1,0 +1,88 @@
+{
+    "meta": {
+        "titles": {
+            "weather": "0°C en Fahrenheit (32°F) – Guide météo et ressenti",
+            "general": "Calculateur de conversion 0°C en Fahrenheit (32°F)"
+        },
+        "ogDescription": "Convertissez 0°C en Fahrenheit (32°F). Découvrez le point de congélation, le ressenti et les applications pratiques de cette température fondamentale.",
+        "descriptions": {
+            "googleContext": "0 degré Celsius = 32 degrés Fahrenheit. Formule de conversion exacte : 0°C × 9/5 + 32. Idéal pour {weather_context}.",
+            "googleGeneral": "0 degré Celsius = 32 degrés Fahrenheit. Utilisez notre calculateur précis pour convertir instantanément toute valeur Celsius en Fahrenheit."
+        }
+    },
+    "common": {
+        "introWeather": [
+            "les prévisions météorologiques et le suivi quotidien de la température"
+        ]
+    },
+    "scaleComparison": {
+        "title": "Comparaison des échelles de température",
+        "subtitle": "Points de température clés sur les échelles",
+        "intro": "0°C (32°F) est un point de référence fondamental à travers les échelles de température. Voici comment il se compare à d'autres températures importantes :",
+        "chartLink": "Pour une vue complète des conversions de température sur différentes valeurs, consultez notre <a href=\"https://ctofconverter.com/fr/celsius-to-fahrenheit-chart/\" target=\"_blank\" rel=\"noopener noreferrer\">Tableau Celsius en Fahrenheit</a>.",
+        "scales": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "kelvin": "Kelvin (K)"
+        },
+        "waterFreezes": "L'eau gèle",
+        "table": {
+            "headers": {
+                "description": "Description",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)",
+                "kelvin": "Kelvin (K)"
+            },
+            "rows": {
+                "waterFreezes": "L'eau gèle",
+                "waterBoils": "L'eau bout",
+                "absoluteZero": "Zéro absolu",
+                "bodyTemp": "Température corporelle humaine",
+                "roomTemp": "Température ambiante"
+            }
+        },
+        "formulas": {
+            "title": "Formules de conversion :",
+            "text": "°F = (°C × 9/5) + 32  |  °C = (°F - 32) × 5/9  |  K = °C + 273.15"
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "Est-ce que 0°C est la même chose que 32°F ?",
+            "answer": "Oui, 0°C est exactement égal à 32°F. C'est le point de congélation de l'eau et un point de référence fondamental dans les deux échelles de température."
+        },
+        "q2": {
+            "question": "Quelle est la formule pour convertir 0°C en Fahrenheit ?",
+            "answer": "La formule pour convertir les Celsius en Fahrenheit est : °F = (°C × 9/5) + 32<br>Pour 0°C : (0 × 9/5) + 32 = 0 + 32 = 32°F"
+        },
+        "q3": {
+            "question": "Combien fait 0°C en Kelvin ?",
+            "answer": "0°C est égal à 273.15K. La formule de conversion est : K = °C + 273.15<br>Donc 0 + 273.15 = 273.15K"
+        },
+        "q4": {
+            "question": "Est-ce que 0°C est considéré comme froid ?",
+            "answer": "Oui, 0°C (32°F) est considéré comme froid car c'est le point de congélation de l'eau. À cette température :",
+            "items": [
+                "L'eau se transforme en glace",
+                "Du givre peut se former sur les surfaces",
+                "Vous auriez besoin de vêtements chauds à l'extérieur",
+                "Les plantes peuvent avoir besoin de protection contre les dommages dus au gel"
+            ]
+        },
+        "q5": {
+            "question": "Est-ce que 0°C est une température de fièvre ?",
+            "answer": "Non, 0°C n'est pas une température de fièvre. En fait, c'est bien en dessous de la température corporelle normale (37°C ou 98,6°F). Une fièvre est généralement considérée comme étant de 38°C (100,4°F) ou plus. 0°C est le point de congélation de l'eau et serait extrêmement dangereux pour la température du corps humain."
+        },
+        "q6": {
+            "question": "Pourquoi 0°C est-il important ?",
+            "answer": "0°C est important car :",
+            "items": [
+                "C'est le point de congélation de l'eau dans des conditions standard",
+                "C'est un point de référence fondamental pour l'échelle Celsius",
+                "Il marque la transition entre l'eau liquide et solide",
+                "Il est utilisé en météorologie pour les avis de gel et de congélation",
+                "Il est crucial dans les directives de stockage et de sécurité alimentaire"
+            ]
+        }
+    }
+}

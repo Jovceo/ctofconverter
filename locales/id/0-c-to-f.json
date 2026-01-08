@@ -1,0 +1,88 @@
+{
+    "meta": {
+        "titles": {
+            "weather": "0°C ke Fahrenheit (32°F) – Panduan Cuaca & Sensasi",
+            "general": "Kalkulator Konversi 0°C ke Fahrenheit (32°F)"
+        },
+        "ogDescription": "Konversikan 0°C ke Fahrenheit (32°F). Pelajari tentang titik beku, bagaimana rasanya, dan aplikasi praktis dari suhu fundamental ini.",
+        "descriptions": {
+            "googleContext": "0 derajat Celsius = 32 derajat Fahrenheit. Rumus konversi tepat: 0°C × 9/5 + 32. Cocok untuk {weather_context}.",
+            "googleGeneral": "0 derajat Celsius = 32 derajat Fahrenheit. Gunakan kalkulator presisi kami untuk mengonversi nilai Celsius apa pun ke Fahrenheit secara instan."
+        }
+    },
+    "common": {
+        "introWeather": [
+            "prakiraan cuaca dan pemantauan suhu harian"
+        ]
+    },
+    "scaleComparison": {
+        "title": "Perbandingan Skala Suhu",
+        "subtitle": "Titik Suhu Utama di Seluruh Skala",
+        "intro": "0°C (32°F) adalah titik referensi fundamental di seluruh skala suhu. Berikut perbandingannya dengan suhu penting lainnya:",
+        "chartLink": "Untuk tampilan lengkap konversi suhu di berbagai nilai, lihat <a href=\"https://ctofconverter.com/id/celsius-to-fahrenheit-chart/\" target=\"_blank\" rel=\"noopener noreferrer\">Tabel Celsius ke Fahrenheit</a> kami.",
+        "scales": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "kelvin": "Kelvin (K)"
+        },
+        "waterFreezes": "Air Membeku",
+        "table": {
+            "headers": {
+                "description": "Deskripsi",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)",
+                "kelvin": "Kelvin (K)"
+            },
+            "rows": {
+                "waterFreezes": "Air Membeku (Titik Es)",
+                "waterBoils": "Air Mendidih (Titik Didih)",
+                "absoluteZero": "Nol Mutlak",
+                "bodyTemp": "Suhu Tubuh Manusia",
+                "roomTemp": "Suhu Ruangan"
+            }
+        },
+        "formulas": {
+            "title": "Rumus konversi:",
+            "text": "°F = (°C × 9/5) + 32  |  °C = (°F - 32) × 5/9  |  K = °C + 273.15"
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "Apakah 0°C sama dengan 32°F?",
+            "answer": "Ya, 0°C sama persis dengan 32°F. Ini adalah titik beku air dan titik referensi fundamental dalam kedua skala suhu."
+        },
+        "q2": {
+            "question": "Apa rumus untuk mengonversi 0°C ke Fahrenheit?",
+            "answer": "Rumus untuk mengonversi Celsius ke Fahrenheit adalah: °F = (°C × 9/5) + 32<br>Untuk 0°C: (0 × 9/5) + 32 = 0 + 32 = 32°F"
+        },
+        "q3": {
+            "question": "Berapa 0°C dalam Kelvin?",
+            "answer": "0°C sama dengan 273,15K. Rumus konversinya adalah: K = °C + 273,15<br>Jadi 0 + 273,15 = 273,15K"
+        },
+        "q4": {
+            "question": "Apakah 0°C dianggap dingin?",
+            "answer": "Ya, 0°C (32°F) dianggap dingin karena merupakan titik beku air. Pada suhu ini:",
+            "items": [
+                "Air berubah menjadi es",
+                "Embun beku dapat terbentuk di permukaan",
+                "Anda akan membutuhkan pakaian hangat di luar ruangan",
+                "Tanaman mungkin membutuhkan perlindungan dari kerusakan akibat pembekuan"
+            ]
+        },
+        "q5": {
+            "question": "Apakah 0°C adalah suhu demam?",
+            "answer": "Bukan, 0°C bukan suhu demam. Faktanya, ini jauh di bawah suhu tubuh normal (37°C atau 98,6°F). Demam biasanya dianggap 38°C (100,4°F) atau lebih tinggi. 0°C adalah titik beku air dan akan sangat berbahaya bagi suhu tubuh manusia."
+        },
+        "q6": {
+            "question": "Mengapa 0°C itu penting?",
+            "answer": "0°C itu penting karena:",
+            "items": [
+                "Ini adalah titik beku air di bawah kondisi standar",
+                "Ini adalah titik referensi fundamental untuk skala Celsius",
+                "Ini menandai transisi antara air cair dan padat",
+                "Ini digunakan dalam meteorologi untuk peringatan embun beku dan pembekuan",
+                "Sangat penting dalam penyimpanan makanan dan pedoman keselamatan"
+            ]
+        }
+    }
+}

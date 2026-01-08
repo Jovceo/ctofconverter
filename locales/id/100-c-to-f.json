@@ -1,0 +1,53 @@
+{
+    "page": {
+        "title": "100°C ke Fahrenheit (212°F) – Titik Didih Air Dijelaskan",
+        "description": "Konversi 100 derajat Celcius ke Fahrenheit (212°F). Pelajari tentang titik didih air, suhu oven, demam, dan rumus konversi."
+    },
+    "faq": {
+        "item3": {
+            "question": "Apakah 100°C suhu demam?",
+            "answer": "Tidak, 100°C (212°F) bukan suhu tubuh manusia. Sering tertukar dengan 100°F (37,8°C), yang merupakan demam ringan. Suhu normal sekitar 37°C. Paparan suhu 100°C akan menyebabkan luka bakar parah dan tidak sesuai dengan kelangsungan hidup manusia."
+        },
+        "item4": {
+            "question": "Berapa 100°C dalam Kelvin?",
+            "answer": "100°C sama dengan 373,15 Kelvin (K). Rumusnya adalah K = °C + 273,15."
+        },
+        "item5": {
+            "question": "Bagaimana ketinggian mempengaruhi titik didih?",
+            "answer": "Titik didih menurun seiring ketinggian karena tekanan yang lebih rendah. Di permukaan laut, air mendidih pada 100°C. Pada 3.000 meter, air mendidih hanya pada 90°C. Ini memerlukan penyesuaian saat memasak di dataran tinggi."
+        },
+        "item6": {
+            "question": "Berapa 100°F dalam Celcius?",
+            "answer": "100°F sama dengan 37,78°C. Dihitung menggunakan rumus: °C = (100 - 32) × 5/9."
+        }
+    },
+    "boilingPointFeature": {
+        "title": "Referensi Titik Didih Air",
+        "description": "100°C (212°F) adalah titik didih standar air di permukaan laut. Referensi ini digunakan secara global dalam memasak, sains, dan industri.",
+        "cards": {
+            "boiling": "Air Mendidih",
+            "freezing": "Air Beku",
+            "baking": "Suhu Oven",
+            "body": "Suhu Tubuh"
+        }
+    },
+    "practical": {
+        "cooking": {
+            "title": "Merebus & Persiapan Makanan",
+            "description": "Pada 100°C (212°F), suhu ini digunakan terutama untuk merebus, merebus pelan (poaching), memblansir, dan sterilisasi — bukan memanggang atau menyangrai.",
+            "pastries": "Merebus pasta dan sayuran",
+            "pastriesDesc": "Titik didih air standar untuk memasak pasta, nasi, dan sayuran",
+            "roasting": "Blansir",
+            "roastingDesc": "Merendam makanan sebentar dalam air mendidih",
+            "slowRoast": "Sterilisasi",
+            "slowRoastDesc": "Membunuh bakteri pada peralatan dan botol bayi"
+        }
+    },
+    "editorial": {
+        "title": "Catatan Editorial",
+        "doc": {
+            "note": "Konten ini disusun dan ditinjau berdasarkan referensi keamanan pangan dan ilmiah yang tersedia untuk umum.",
+            "sources": "Sumber: NIST, Pusat Ilmu Fisika, USDA."
+        }
+    }
+}

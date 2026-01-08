@@ -81,7 +81,23 @@
         "linkOvenChart": "Backofenumrechnungstabelle",
         "linkCooking": "Kochen, Backen und Ofentemperatur-Einstellungen",
         "linkGeneral": "umfassende Temperaturumrechnungstabelle",
-        "introMedicalPart2": " und medizinische Diagnostik. Sehen Sie sich unsere ",
+        "introMedical": [
+            "Verwendet für Körpertemperatur. Siehe unseren <link>Fieber-Ratgeber</link>.",
+            "Üblich in der Gesundheitsdiagnostik. Siehe <link>Temperaturtabelle</link>."
+        ],
+        "introWeather": [
+            "Verwendet in Wettervorhersagen. Siehe unsere <link>Temperaturtabelle</link>.",
+            "Standard in der Meteorologie. Siehe <link>Umrechnungshilfe</link>."
+        ],
+        "introCooking": [
+            "Häufig beim Kochen verwendet. Sehen Sie unsere <link>Umrechnungstabelle</link>.",
+            "Ideal zum Backen. Nutzen Sie unseren <link>Küchenratgeber</link>."
+        ],
+        "introGeneral": [
+            "Verwendet in der Wissenschaft. Siehe unsere <link>Umrechnungstabelle</link>.",
+            "Standard in der Industrie. Siehe <link>Einheiten-Guide</link>."
+        ],
+        "introMedicalPart2": " und medizinische Diagnostik. Prüfen Sie unseren ",
         "introMedicalPart3": " für weitere Details an.",
         "introWeatherPart1": " Wettervorhersagen und tägliche Temperaturwerte. Sehen Sie sich unsere komplette ",
         "introWeatherPart3": " zur schnellen Referenz an.",

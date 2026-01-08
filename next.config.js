@@ -52,6 +52,48 @@ const nextConfig = {
         destination: '/fan-oven-conversion-chart',
         statusCode: 301,
       },
+      // 301 Redirects: Legacy Static HTML -> Next.js Dynamic Routes
+      // These shadow the public/*.html files (checked before filesystem)
+      {
+        source: '/0-c-to-f.html',
+        destination: '/0-c-to-f',
+        statusCode: 301,
+      },
+      {
+        source: '/37-c-to-f.html',
+        destination: '/37-c-to-f',
+        statusCode: 301,
+      },
+      {
+        source: '/37-2-c-to-f.html',
+        destination: '/37-2-c-to-f',
+        statusCode: 301,
+      },
+      {
+        source: '/37-5-c-to-f.html',
+        destination: '/37-5-c-to-f',
+        statusCode: 301,
+      },
+      {
+        source: '/4-c-to-f.html',
+        destination: '/4-c-to-f',
+        statusCode: 301,
+      },
+      {
+        source: '/47-c-to-f.html',
+        destination: '/47-c-to-f',
+        statusCode: 301,
+      },
+      {
+        source: '/75-c-to-f.html',
+        destination: '/75-c-to-f',
+        statusCode: 301,
+      },
+      {
+        source: '/100-c-to-f.html',
+        destination: '/100-c-to-f',
+        statusCode: 301,
+      },
     ];
   },
 };

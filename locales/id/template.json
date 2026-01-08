@@ -81,6 +81,22 @@
         "linkOvenChart": "tabel konversi oven kipas",
         "linkCooking": "pengaturan suhu memasak, memanggang, dan oven",
         "linkGeneral": "tabel konversi suhu komprehensif",
+        "introMedical": [
+            "Digunakan untuk pengukuran suhu tubuh. Lihat <link>grafik demam</link> kami.",
+            "Umum dalam diagnostik kesehatan. Cek <link>tabel suhu</link>."
+        ],
+        "introWeather": [
+            "Digunakan dalam prakiraan cuaca. Lihat <link>tabel suhu</link> kami.",
+            "Standar dalam meteorologi. Lihat <link>panduan konversi</link>."
+        ],
+        "introCooking": [
+            "Umum digunakan dalam memasak. Lihat <link>tabel konversi</link> kami.",
+            "Ideal untuk memanggang. Gunakan <link>panduan memasak</link> kami."
+        ],
+        "introGeneral": [
+            "Digunakan dalam aplikasi sains. Lihat <link>tabel konversi</link> kami.",
+            "Standar di industri. Lihat <link>panduan unit</link>."
+        ],
         "introMedicalPart2": " dan diagnosis medis. Lihat ",
         "introMedicalPart3": " kami untuk detail lebih lanjut.",
         "introWeatherPart1": " prakiraan cuaca dan pembacaan suhu harian. Lihat ",

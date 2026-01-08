@@ -80,8 +80,24 @@
         "linkCtoFChart": "摂氏・華氏チャート",
         "linkOvenChart": "ファンオーブン変換チャート",
         "linkCooking": "料理、製菓、オーブン温度設定",
-        "linkGeneral": "総合温度変換チャート",
-        "introMedicalPart2": "および医療診断。詳細については当サイトの",
+        "linkGeneral": "包括的な温度変換チャート",
+        "introMedical": [
+            "体温測定に使用されます。<link>体温チャート</link>をご覧ください。",
+            "健康管理に一般的です。<link>発熱ガイド</link>を確認してください。"
+        ],
+        "introWeather": [
+            "天気予報で使用されます。<link>温度チャート</link>をご覧ください。",
+            "気象学の標準です。<link>変換ガイド</link>を参照してください。"
+        ],
+        "introCooking": [
+            "料理やベーキングで一般的に使用されます。<link>変換表</link>をご覧ください。",
+            "オーブンレシピに最適です。<link>料理ガイド</link>を使用してください。"
+        ],
+        "introGeneral": [
+            "科学的用途に使用されます。<link>変換表</link>をご覧ください。",
+            "業界標準です。<link>単位ガイド</link>を参照してください。"
+        ],
+        "introMedicalPart2": " および医療診断。詳細については、当サイトの",
         "introMedicalPart3": "をご覧ください。",
         "introWeatherPart1": "天気予報と毎日の温度。クイックリファレンスとして当サイトの完全な",
         "introWeatherPart3": "をご覧ください。",
