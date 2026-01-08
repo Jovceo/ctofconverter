@@ -94,6 +94,17 @@ const nextConfig = {
         destination: '/100-c-to-f',
         statusCode: 301,
       },
+      // Fahrenheit to Celsius page redirect
+      {
+        source: '/fahrenheit-to-celsius/',
+        destination: '/fahrenheit-to-celsius',
+        statusCode: 301,
+      },
+      {
+        source: '/fahrenheit-to-celsius/index.html',
+        destination: '/fahrenheit-to-celsius',
+        statusCode: 301,
+      },
     ];
   },
 };

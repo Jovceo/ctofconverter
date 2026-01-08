@@ -1,0 +1,201 @@
+{
+    "meta": {
+        "title": "Fahrenheit in Celsius umrechnen | °F in °C",
+        "description": "Fahrenheit schnell in Celsius umrechnen mit dem F in C Umrechner. Erhalten Sie sofortige Ergebnisse, lernen Sie die Formel und überprüfen Sie die Umrechnungstabelle.",
+        "ogTitle": "Fahrenheit in Celsius Umrechner",
+        "ogDescription": "Kostenloser Online-Temperaturrechner für sofortige Umrechnungen. Rechnen Sie Temperaturen sofort von Fahrenheit (°F) in Celsius (°C) mit präzisen Ergebnissen und Schritt-für-Schritt-Details um."
+    },
+    "header": {
+        "title": "Fahrenheit in Celsius Umrechner (°F in °C)",
+        "tagline": "Kostenloses Online-Temperaturumrechnungstool, das Grad Fahrenheit (°F) sofort in Grad Celsius (°C) umrechnet, mit Umrechnungsformeln und detaillierten Schritten.",
+        "siteName": "C in F Umrechner"
+    },
+    "breadcrumb": {
+        "home": "Startseite",
+        "current": "Fahrenheit in Celsius"
+    },
+    "converter": {
+        "title": "Fahrenheit in Celsius Umrechner",
+        "description": "Rechnen Sie °F sofort kostenlos in °C um. Ideal für Kochen, Reisen und Wissenschaft. Erhalten Sie genaue Ergebnisse in Sekunden!",
+        "inputLabel": "Fahrenheit (°F)",
+        "inputPlaceholder": "z.B. 68",
+        "inputTooltip": "Wasser gefriert bei 32°F und kocht bei 212°F",
+        "outputLabel": "Celsius (°C)",
+        "outputTooltip": "Wasser gefriert bei 0°C und kocht bei 100°C",
+        "copyButton": "Kopieren",
+        "copied": "Kopiert!",
+        "errorBelowAbsoluteZero": "Die Temperatur kann nicht unter dem absoluten Nullpunkt liegen (-459,67°F)",
+        "errorInvalidNumber": "Bitte geben Sie eine gültige Zahl ein"
+    },
+    "formula": {
+        "title": "Fahrenheit in Celsius Formel",
+        "subtitle": "Gleichung zur Umrechnung von Fahrenheit in Celsius",
+        "formula": "°C = (°F - 32) × 5/9",
+        "example": "Beispiel: 68°F = (68 - 32) × 5/9 = 20°C"
+    },
+    "steps": {
+        "title": "Wie man Fahrenheit in Celsius umrechnet",
+        "description": "Klicken Sie auf jeden Schritt, um die detaillierte Berechnung zu sehen",
+        "step1": {
+            "title": "32 subtrahieren",
+            "description": "Subtrahieren Sie 32 von der Fahrenheit-Temperatur"
+        },
+        "step2": {
+            "title": "Mit 5/9 multiplizieren",
+            "description": "Multiplizieren Sie das Ergebnis aus Schritt 1 mit 5/9 (oder ungefähr 0,556)"
+        },
+        "step3": {
+            "title": "Endergebnis",
+            "description": "Erhalten Sie das endgültige Celsius-Temperaturergebnis"
+        },
+        "commonMistakes": {
+            "title": "Häufige Fehler bei der Umrechnung von Fahrenheit in Celsius",
+            "mistake1": "Vergessen, 32 zu subtrahieren",
+            "mistake1Detail": "Nur mit 5/9 zu multiplizieren führt zu falschen Ergebnissen",
+            "mistake2": "Falsche Reihenfolge der Operationen",
+            "mistake2Detail": "Zuerst mit 5/9 zu multiplizieren und dann 32 zu subtrahieren ist falsch",
+            "mistake3": "Verwendung des falschen Bruchs",
+            "mistake3Detail": "2/3 statt 5/9 zu verwenden ist ein häufiger Fehler",
+            "mistake4": "Zu frühes Runden",
+            "mistake4Detail": "Das Runden von Zwischenergebnissen kann zu Ungenauigkeiten führen"
+        }
+    },
+    "table": {
+        "title": "Fahrenheit in Celsius Umrechnungstabelle",
+        "caption": "Gebräuchliche Temperaturumrechnungen von Fahrenheit in Celsius mit Referenzpunkten",
+        "fahrenheitCol": "°F",
+        "celsiusCol": "°C",
+        "descriptionCol": "Beschreibung",
+        "references": {
+            "absoluteZero": "Absoluter Nullpunkt",
+            "intersection": "Fahrenheit- und Celsius-Skalen kreuzen sich",
+            "extremelyCold": "Extrem kalter Tag",
+            "veryCold": "Sehr kalter Wintertag",
+            "freezingPoint": "Gefrierpunkt des Wassers",
+            "coolDay": "Kühler Herbsttag",
+            "mildDay": "Milder Frühlings-/Herbsttag",
+            "roomTemperature": "Raumtemperatur",
+            "warmDay": "Warmer Sommertag",
+            "hotDay": "Heißer Sommertag",
+            "veryHot": "Sehr heiß",
+            "bodyTemperature": "Durchschnittliche Körpertemperatur",
+            "hotTub": "Whirlpool-Temperatur",
+            "fever": "Hohes Fieber",
+            "hotWater": "Heißes Wasser für Kaffee/Tee",
+            "mediumSteak": "Gartemperatur für medium Steak",
+            "simmering": "Simmern-Temperatur",
+            "slowCooking": "Schmortemperatur",
+            "boilingPoint": "Siedepunkt des Wassers (auf Meereshöhe)",
+            "lowOven": "Niedrige Ofentemperatur",
+            "slowRoasting": "Langsambraten-Temperatur",
+            "moderateOven": "Mittlere Ofentemperatur",
+            "standardBaking": "Standard-Backtemperatur",
+            "bakingTemp": "Backtemperatur",
+            "broilingTemp": "Grilltemperatur",
+            "maxOven": "Maximale Haushaltsofentemperatur"
+        }
+    },
+    "practical": {
+        "title": "Praktische Temperaturumrechnungen",
+        "items": [
+            {
+                "title": "Kochen und Backen",
+                "description": "Wesentliche Temperaturumrechnungen für die Küche:",
+                "bullets": [
+                    "<strong>140°F (60°C)</strong> - Pasteurisierungstemperatur für Eier",
+                    "<strong>160°F (71°C)</strong> - Medium-Garstufe für Fleisch",
+                    "<strong>165°F (74°C)</strong> - Sichere Kerntemperatur für Geflügel",
+                    "<strong>175°F (79°C)</strong> - Durchgegartes Fleisch",
+                    "<strong>200°F (93°C)</strong> - Simmertemperatur für Saucen",
+                    "<strong>212°F (100°C)</strong> - Siedepunkt des Wassers (Meereshöhe)",
+                    "<strong>225°F (107°C)</strong> - Niedertemperatur-Räuchern",
+                    "<strong>250°F (121°C)</strong> - Sehr niedriger Ofen",
+                    "<strong>300°F (149°C)</strong> - Langsambräunen",
+                    "<strong>325°F (163°C)</strong> - Mittlerer Ofen (die meisten Backwaren)",
+                    "<strong>350°F (177°C)</strong> - Standard-Backtemperatur",
+                    "<strong>375°F (191°C)</strong> - Heißer Ofen (Kekse, Kuchen)",
+                    "<strong>400°F (204°C)</strong> - Sehr heißer Ofen (Gemüse rösten)",
+                    "<strong>425°F (218°C)</strong> - Pizza-Backtemperatur",
+                    "<strong>450°F (232°C)</strong> - Grill-/Anbratemperatur",
+                    "<strong>500°F (260°C)</strong> - Maximale Haushaltsofentemperatur"
+                ]
+            },
+            {
+                "title": "Wetterinterpretation",
+                "description": "Temperaturverständnis im Alltag:",
+                "bullets": [
+                    "<strong>-40°F (-40°C)</strong> - Extrem gefährliche Kälte (Erfrierungen in Minuten)",
+                    "<strong>0°F (-18°C)</strong> - Gefährlich kalt (Aufenthalt im Freien begrenzen)",
+                    "<strong>14°F (-10°C)</strong> - Sehr kalter Wintertag",
+                    "<strong>32°F (0°C)</strong> - Gefrierpunkt (Eisbildung)",
+                    "<strong>50°F (10°C)</strong> - Kühles Wetter, Jacke tragen",
+                    "<strong>59°F (15°C)</strong> - Milder Frühlings-/Herbsttag",
+                    "<strong>68°F (20°C)</strong> - Angenehme Raumtemperatur",
+                    "<strong>77°F (25°C)</strong> - Warmer Sommertag",
+                    "<strong>86°F (30°C)</strong> - Heißer Sommertag",
+                    "<strong>95°F (35°C)</strong> - Sehr heiß (Hitzewarnung wahrscheinlich)",
+                    "<strong>104°F (40°C)</strong> - Gefährlich heiß (Hitzschlaggefahr)"
+                ]
+            },
+            {
+                "title": "Körpertemperatur",
+                "description": "Wichtige gesundheitsbezogene Temperaturen:",
+                "bullets": [
+                    "<strong>95°F (35°C)</strong> - Hypothermie beginnt",
+                    "<strong>96,8°F (36°C)</strong> - Leicht niedrige Körpertemperatur",
+                    "<strong>97,7°F (36,5°C)</strong> - Normale niedrige Körpertemperatur",
+                    "<strong>98,6°F (37°C)</strong> - Standard-Körpertemperatur",
+                    "<strong>99,5°F (37,5°C)</strong> - Leicht erhöhte Temperatur",
+                    "<strong>100,4°F (38°C)</strong> - Fieberschwelle",
+                    "<strong>102°F (38,9°C)</strong> - Mittleres Fieber",
+                    "<strong>104°F (40°C)</strong> - Hohes Fieber (Arzt aufsuchen)",
+                    "<strong>106°F (41,1°C)</strong> - Gefährliches Fieber (Notfall)"
+                ]
+            },
+            {
+                "title": "Wissenschaft und Industrie",
+                "description": "Wichtige wissenschaftliche Temperaturreferenzen:",
+                "bullets": [
+                    "<strong>-459,67°F (-273,15°C)</strong> - Absoluter Nullpunkt",
+                    "<strong>-320°F (-196°C)</strong> - Flüssigstickstoff-Temperatur",
+                    "<strong>-109°F (-78,5°C)</strong> - Sublimationspunkt von Trockeneis",
+                    "<strong>32°F (0°C)</strong> - Gefrierpunkt des Wassers",
+                    "<strong>212°F (100°C)</strong> - Siedepunkt des Wassers (auf Meereshöhe)",
+                    "<strong>451°F (233°C)</strong> - Zündtemperatur von Papier",
+                    "<strong>600°F (316°C)</strong> - Schmelzpunkt von Blei",
+                    "<strong>1.832°F (1.000°C)</strong> - Lava-Temperaturbereich",
+                    "<strong>2.795°F (1.535°C)</strong> - Schmelzpunkt von Eisen"
+                ]
+            }
+        ]
+    },
+    "faq": {
+        "title": "Häufig gestellte Fragen (FAQ)",
+        "questions": [
+            {
+                "question": "Wie rechnet man Fahrenheit in Celsius um?",
+                "answer": "Um Fahrenheit in Celsius umzurechnen, subtrahieren Sie 32 und multiplizieren dann mit 5/9. Formel: °C = (°F - 32) × 5/9"
+            },
+            {
+                "question": "Was ist der Unterschied zwischen Fahrenheit und Celsius?",
+                "answer": "Fahrenheit und Celsius sind zwei unterschiedliche Temperaturmesseinheiten. Fahrenheit wird hauptsächlich in den USA verwendet, während Celsius international weit verbreitet ist. Sie verwenden unterschiedliche Skalen: In Fahrenheit gefriert Wasser bei 32°F und kocht bei 212°F; in Celsius gefriert Wasser bei 0°C und kocht bei 100°C."
+            },
+            {
+                "question": "Wie kann ich die Umrechnung zwischen Fahrenheit und Celsius schnell schätzen?",
+                "answer": "Eine einfache Schätzmethode ist, 30 von der Fahrenheit-Temperatur zu subtrahieren und dann durch 2 zu teilen (anstatt 32 zu subtrahieren und mit 5/9 zu multiplizieren). Zum Beispiel: 70°F ist ungefähr (70 - 30) / 2 = 20°C (tatsächlich 21,11°C). Diese Methode liefert eine ausreichend genaue Schätzung für den täglichen Gebrauch."
+            },
+            {
+                "question": "Bei welcher Temperatur sind Fahrenheit und Celsius gleich?",
+                "answer": "Fahrenheit und Celsius sind bei -40 Grad gleich. Das heißt, -40°F = -40°C. Dies ist der Schnittpunkt der beiden Temperaturskalen."
+            }
+        ]
+    },
+    "footer": {
+        "navigation": "Navigation",
+        "charts": "Tabellen",
+        "legal": "Rechtliches",
+        "copyright": "© 2025 Ctofconverter. Alle Rechte vorbehalten.",
+        "lastUpdated": "Zuletzt aktualisiert:",
+        "backToTop": "Zurück nach oben"
+    }
+}

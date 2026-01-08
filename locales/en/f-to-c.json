@@ -1,0 +1,205 @@
+{
+    "meta": {
+        "title": "Fahrenheit to Celsius Converter | °F to °C",
+        "description": "Convert Fahrenheit to Celsius quickly with the F to C Converter. Get results instantly, learn the formula, and check the conversion chart.",
+        "ogTitle": "Fahrenheit to Celsius Converter",
+        "ogDescription": "Free Online Temperature Calculator for Instant Conversions. Instantly convert temperatures from Fahrenheit (°F) to Celsius (°C) with precise results and step-by-step details."
+    },
+    "header": {
+        "title": "Fahrenheit to Celsius Converter (°F to °C)",
+        "tagline": "Free online temperature conversion tool that instantly converts degrees Fahrenheit (°F) to degrees Celsius (°C), with conversion formulas and detailed steps.",
+        "siteName": "C to F Converter"
+    },
+    "breadcrumb": {
+        "home": "Home",
+        "current": "Fahrenheit to Celsius"
+    },
+    "converter": {
+        "title": "Fahrenheit to Celsius Converter",
+        "description": "Instantly convert °F to °C for free. Ideal for cooking, travel, and science. Get accurate results in seconds!",
+        "inputLabel": "Fahrenheit (°F)",
+        "inputPlaceholder": "e.g. 68",
+        "inputTooltip": "Water freezes at 32°F and boils at 212°F",
+        "outputLabel": "Celsius (°C)",
+        "outputTooltip": "Water freezes at 0°C and boils at 100°C",
+        "copyButton": "Copy",
+        "copied": "Copied!",
+        "errorBelowAbsoluteZero": "Temperature cannot be below absolute zero (-459.67°F)",
+        "errorInvalidNumber": "Please enter a valid number"
+    },
+    "formula": {
+        "title": "Fahrenheit to Celsius Formula",
+        "subtitle": "Equation to Convert Fahrenheit to Celsius",
+        "formula": "°C = (°F - 32) × 5/9",
+        "example": "Example: 68°F = (68 - 32) × 5/9 = 20°C"
+    },
+    "steps": {
+        "title": "How to Convert Fahrenheit to Celsius",
+        "description": "Click each step to see detailed calculation",
+        "step1": {
+            "title": "Subtract 32",
+            "description": "Subtract 32 from the Fahrenheit temperature"
+        },
+        "step2": {
+            "title": "Multiply by 5/9",
+            "description": "Multiply the result from step 1 by 5/9 (or approximately 0.556)"
+        },
+        "step3": {
+            "title": "Final Result",
+            "description": "Get the final Celsius temperature result"
+        },
+        "commonMistakes": {
+            "title": "Fahrenheit to Celsius Conversion Common Mistakes",
+            "mistake1": "Forgetting to subtract 32",
+            "mistake1Detail": "Only multiplying by 5/9 will give incorrect results",
+            "mistake2": "Incorrect order of operations",
+            "mistake2Detail": "Multiplying by 5/9 first and then subtracting 32 is incorrect",
+            "mistake3": "Using the wrong fraction",
+            "mistake3Detail": "Using 2/3 instead of 5/9 is a common error",
+            "mistake4": "Rounding too early",
+            "mistake4Detail": "Rounding intermediate results can lead to inaccuracies"
+        }
+    },
+    "table": {
+        "title": "Fahrenheit to Celsius Conversion Table",
+        "caption": "Common temperature conversions from Fahrenheit to Celsius with reference points",
+        "fahrenheitCol": "°F",
+        "celsiusCol": "°C",
+        "descriptionCol": "Description",
+        "references": {
+            "absoluteZero": "Absolute zero",
+            "intersection": "Fahrenheit and Celsius scales intersect",
+            "extremelyCold": "Extremely cold day",
+            "veryCold": "Very cold winter day",
+            "freezingPoint": "Water freezing point",
+            "coolDay": "Cool autumn day",
+            "mildDay": "Mild spring/autumn day",
+            "roomTemperature": "Room temperature",
+            "warmDay": "Warm summer day",
+            "hotDay": "Hot summer day",
+            "veryHot": "Very hot day",
+            "bodyTemperature": "Average human body temperature",
+            "hotTub": "Hot tub temperature",
+            "fever": "High fever",
+            "hotWater": "Hot water for coffee/tea",
+            "mediumSteak": "Medium steak cooking temperature",
+            "simmering": "Simmering temperature",
+            "slowCooking": "Slow cooking temperature",
+            "boilingPoint": "Water boiling point (at sea level)",
+            "lowOven": "Low oven temperature",
+            "slowRoasting": "Slow roasting temperature",
+            "moderateOven": "Moderate oven temperature",
+            "standardBaking": "Standard baking temperature",
+            "hotOven": "Hot oven temperature",
+            "veryHotOven": "Very hot oven temperature",
+            "pizzaCooking": "Pizza cooking temperature",
+            "broiling": "Broiling temperature",
+            "maxOven": "Maximum home oven temperature",
+            "bakingTemp": "Baking temperature",
+            "broilingTemp": "Broiling temperature"
+        }
+    },
+    "practical": {
+        "title": "Practical Temperature Conversion Uses",
+        "items": [
+            {
+                "title": "Cooking and Baking",
+                "description": "Essential temperature conversions for kitchen use:",
+                "bullets": [
+                    "<strong>140°F (60°C)</strong> - Pasteurization temperature for eggs",
+                    "<strong>160°F (71°C)</strong> - Medium doneness for meats",
+                    "<strong>165°F (74°C)</strong> - Safe poultry internal temperature",
+                    "<strong>175°F (79°C)</strong> - Well-done meats",
+                    "<strong>200°F (93°C)</strong> - Simmering temperature for sauces",
+                    "<strong>212°F (100°C)</strong> - Water boiling point (sea level)",
+                    "<strong>225°F (107°C)</strong> - Low-temperature smoking",
+                    "<strong>250°F (121°C)</strong> - Very slow oven",
+                    "<strong>300°F (149°C)</strong> - Slow roasting",
+                    "<strong>325°F (163°C)</strong> - Moderate oven (most baked goods)",
+                    "<strong>350°F (177°C)</strong> - Standard baking temperature",
+                    "<strong>375°F (191°C)</strong> - Hot oven (cookies, pies)",
+                    "<strong>400°F (204°C)</strong> - Very hot oven (roasting vegetables)",
+                    "<strong>425°F (218°C)</strong> - Pizza cooking temperature",
+                    "<strong>450°F (232°C)</strong> - Broiling/searing temperature",
+                    "<strong>500°F (260°C)</strong> - Maximum home oven temperature"
+                ]
+            },
+            {
+                "title": "Weather Interpretation",
+                "description": "Understanding temperature in daily life:",
+                "bullets": [
+                    "<strong>-40°F (-40°C)</strong> - Extremely dangerous cold (frostbite in minutes)",
+                    "<strong>0°F (-18°C)</strong> - Dangerously cold (limit outdoor exposure)",
+                    "<strong>14°F (-10°C)</strong> - Very cold winter day",
+                    "<strong>32°F (0°C)</strong> - Freezing point (ice forms)",
+                    "<strong>50°F (10°C)</strong> - Cool jacket weather",
+                    "<strong>59°F (15°C)</strong> - Mild spring/autumn day",
+                    "<strong>68°F (20°C)</strong> - Comfortable room temperature",
+                    "<strong>77°F (25°C)</strong> - Warm summer day",
+                    "<strong>86°F (30°C)</strong> - Hot summer day",
+                    "<strong>95°F (35°C)</strong> - Very hot (heat advisory likely)",
+                    "<strong>104°F (40°C)</strong> - Dangerously hot (heat stroke risk)"
+                ]
+            },
+            {
+                "title": "Body Temperature",
+                "description": "Important health-related temperatures:",
+                "bullets": [
+                    "<strong>95°F (35°C)</strong> - Hypothermia begins",
+                    "<strong>96.8°F (36°C)</strong> - Slightly low body temperature",
+                    "<strong>97.7°F (36.5°C)</strong> - Normal low body temperature",
+                    "<strong>98.6°F (37°C)</strong> - Standard human body temperature",
+                    "<strong>99.5°F (37.5°C)</strong> - Slightly elevated temperature",
+                    "<strong>100.4°F (38°C)</strong> - Fever threshold",
+                    "<strong>102°F (38.9°C)</strong> - Moderate fever",
+                    "<strong>104°F (40°C)</strong> - High fever (seek medical attention)",
+                    "<strong>106°F (41.1°C)</strong> - Dangerous fever (emergency)"
+                ]
+            },
+            {
+                "title": "Science and Industry",
+                "description": "Key scientific temperature references:",
+                "bullets": [
+                    "<strong>-459.67°F (-273.15°C)</strong> - Absolute zero",
+                    "<strong>-320°F (-196°C)</strong> - Liquid nitrogen temperature",
+                    "<strong>-109°F (-78.5°C)</strong> - Dry ice sublimation point",
+                    "<strong>32°F (0°C)</strong> - Water freezing point",
+                    "<strong>212°F (100°C)</strong> - Water boiling point (at sea level)",
+                    "<strong>451°F (233°C)</strong> - Paper ignition temperature",
+                    "<strong>600°F (316°C)</strong> - Lead melting point",
+                    "<strong>1,832°F (1,000°C)</strong> - Lava temperature range",
+                    "<strong>2,795°F (1,535°C)</strong> - Iron melting point"
+                ]
+            }
+        ]
+    },
+    "faq": {
+        "title": "Frequently Asked Questions (FAQ)",
+        "questions": [
+            {
+                "question": "How to convert Fahrenheit to Celsius?",
+                "answer": "To convert Fahrenheit to Celsius, subtract 32, then multiply by 5/9. Formula: °C = (°F - 32) × 5/9"
+            },
+            {
+                "question": "What is the difference between Fahrenheit and Celsius?",
+                "answer": "Fahrenheit and Celsius are two different temperature measurement units. Fahrenheit is primarily used in the United States, while Celsius is widely used internationally. They use different scales: in Fahrenheit, water freezes at 32°F and boils at 212°F; in Celsius, water freezes at 0°C and boils at 100°C."
+            },
+            {
+                "question": "How can I quickly estimate the conversion between Fahrenheit and Celsius?",
+                "answer": "A simple estimation method is to subtract 30 from the Fahrenheit temperature, then divide by 2 (instead of the accurate subtraction of 32 and multiplying by 5/9). For example, 70°F is approximately (70 - 30) / 2 = 20°C (actually 21.11°C). This method provides a close enough estimate for everyday use."
+            },
+            {
+                "question": "At what temperature are Fahrenheit and Celsius equal?",
+                "answer": "Fahrenheit and Celsius are equal at -40 degrees. That is, -40°F = -40°C. This is the intersection point of the two temperature scales."
+            }
+        ]
+    },
+    "footer": {
+        "navigation": "Navigation",
+        "charts": "Charts",
+        "legal": "Legal",
+        "copyright": "© 2025 Ctofconverter. All rights reserved.",
+        "lastUpdated": "Last updated:",
+        "backToTop": "Back to top"
+    }
+}

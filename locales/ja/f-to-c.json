@@ -1,0 +1,205 @@
+{
+    "meta": {
+        "title": "華氏から摂氏への変換 | °F → °C 変換ツール",
+        "description": "華氏から摂氏への簡単変換ツール。正確な計算式、詳細な説明、実用的な温度表を無料でご利用いただけます。",
+        "ogTitle": "華氏から摂氏への変換ツール",
+        "ogDescription": "無料のオンライン温度計算機。華氏(°F)から摂氏(°C)への変換を正確な結果と詳細な手順でサポートします。"
+    },
+    "header": {
+        "title": "華氏から摂氏への変換ツール(°F → °C)",
+        "tagline": "華氏(°F)から摂氏(°C)への温度変換を瞬時に実行。変換公式と詳しい手順で、料理や海外旅行に役立ちます。",
+        "siteName": "温度変換ツール"
+    },
+    "breadcrumb": {
+        "home": "ホーム",
+        "current": "華氏から摂氏"
+    },
+    "converter": {
+        "title": "華氏から摂氏への変換ツール",
+        "description": "°Fを°Cに無料で即座に変換。料理、旅行、科学に最適。数秒で正確な結果を取得！",
+        "inputLabel": "華氏(°F)",
+        "inputPlaceholder": "例：68",
+        "inputTooltip": "水は32°Fで凍り、212°Fで沸騰します",
+        "outputLabel": "摂氏(°C)",
+        "outputTooltip": "水は0°Cで凍り、100°Cで沸騰します",
+        "copyButton": "コピー",
+        "copied": "コピーしました！",
+        "errorBelowAbsoluteZero": "温度は絶対零度(-459.67°F)を下回ることはできません",
+        "errorInvalidNumber": "有効な数値を入力してください"
+    },
+    "formula": {
+        "title": "華氏から摂氏への変換式",
+        "subtitle": "華氏を摂氏に変換する方程式",
+        "formula": "°C = (°F - 32) × 5/9",
+        "example": "例：68°F = (68 - 32) × 5/9 = 20°C"
+    },
+    "steps": {
+        "title": "華氏を摂氏に変換する方法",
+        "description": "各ステップをクリックして詳細な計算を表示",
+        "step1": {
+            "title": "32を引く",
+            "description": "華氏の温度から32を引く"
+        },
+        "step2": {
+            "title": "5/9を掛ける",
+            "description": "ステップ1の結果に5/9(または約0.556)を掛ける"
+        },
+        "step3": {
+            "title": "最終結果",
+            "description": "摂氏温度の最終結果を取得"
+        },
+        "commonMistakes": {
+            "title": "華氏から摂氏への変換でよくある間違い",
+            "mistake1": "32を引くのを忘れる",
+            "mistake1Detail": "5/9を掛けるだけでは誤った結果になります",
+            "mistake2": "演算の順序が間違っている",
+            "mistake2Detail": "最初に5/9を掛けてから32を引くのは誤りです",
+            "mistake3": "間違った分数を使う",
+            "mistake3Detail": "5/9の代わりに2/3を使うのはよくある誤りです",
+            "mistake4": "早すぎる段階で四捨五入する",
+            "mistake4Detail": "中間結果を四捨五入すると不正確さにつながる可能性があります"
+        }
+    },
+    "table": {
+        "title": "華氏摂氏変換表",
+        "caption": "参照点を含む華氏から摂氏への一般的な温度変換",
+        "fahrenheitCol": "°F",
+        "celsiusCol": "°C",
+        "descriptionCol": "説明",
+        "references": {
+            "absoluteZero": "絶対零度",
+            "intersection": "華氏と摂氏の目盛りが交わる点",
+            "extremelyCold": "極寒の日",
+            "veryCold": "非常に寒い冬の日",
+            "freezingPoint": "水の氷点",
+            "coolDay": "涼しい秋の日",
+            "mildDay": "穏やかな春/秋の日",
+            "roomTemperature": "室温",
+            "warmDay": "暖かい夏の日",
+            "hotDay": "暑い夏の日",
+            "veryHot": "非常に暑い",
+            "bodyTemperature": "平均的な人の体温",
+            "hotTub": "ジャグジーの温度",
+            "fever": "高熱",
+            "hotWater": "コーヒー/お茶用の熱湯",
+            "mediumSteak": "ミディアムステーキの調理温度",
+            "simmering": "とろ火の温度",
+            "slowCooking": "低温調理の温度",
+            "boilingPoint": "水の沸点(海面レベル)",
+            "lowOven": "低温オーブン",
+            "slowRoasting": "低温ローストの温度",
+            "moderateOven": "中温オーブン",
+            "standardBaking": "標準的な焼き温度",
+            "bakingTemp": "ベーキング温度",
+            "broilingTemp": "ブロイリング温度",
+            "maxOven": "家庭用オーブンの最高温度"
+        }
+    },
+    "practical": {
+        "title": "実用的な温度変換の用途",
+        "items": [
+            {
+                "title": "調理とベーキング",
+                "description": "キッチン使用に不可欠な温度変換：",
+                "bullets": [
+                    "<strong>140°F(60°C)</strong> - 卵の低温殺菌温度",
+                    "<strong>160°F(71°C)</strong> - 肉のミディアムの焼き加減",
+                    "<strong>165°F(74°C)</strong> - 鶏肉の安全な内部温度",
+                    "<strong>175°F(79°C)</strong> - よく焼いた肉",
+                    "<strong>200°F(93°C)</strong> - ソースのとろ火温度",
+                    "<strong>212°F(100°C)</strong> - 水の沸点(海面レベル)",
+                    "<strong>225°F(107°C)</strong> - 低温スモーキング",
+                    "<strong>250°F(121°C)</strong> - 非常に低温のオーブン",
+                    "<strong>300°F(149°C)</strong> - 低温ロースト",
+                    "<strong>325°F(163°C)</strong> - 中温オーブン(ほとんどの焼き菓子)",
+                    "<strong>350°F(177°C)</strong> - 標準的な焼き温度",
+                    "<strong>375°F(191°C)</strong> - 高温オーブン(クッキー、パイ)",
+                    "<strong>400°F(204°C)</strong> - 非常に高温のオーブン(野菜のロースト)",
+                    "<strong>425°F(218°C)</strong> - ピザの焼き温度",
+                    "<strong>450°F(232°C)</strong> - ブロイリング/シアリング温度",
+                    "<strong>500°F(260°C)</strong> - 家庭用オーブンの最高温度"
+                ]
+            },
+            {
+                "title": "天気の解釈",
+                "description": "日常生活における温度の理解：",
+                "bullets": [
+                    "<strong>-40°F(-40°C)</strong> - 極度に危険な寒さ(数分で凍傷)",
+                    "<strong>0°F(-18°C)</strong> - 危険な寒さ(屋外曝露を制限)",
+                    "<strong>14°F(-10°C)</strong> - 非常に寒い冬の日",
+                    "<strong>32°F(0°C)</strong> - 氷点(氷が形成される)",
+                    "<strong>50°F(10°C)</strong> - 涼しい天気、ジャケットを着用",
+                    "<strong>59°F(15°C)</strong> - 穏やかな春/秋の日",
+                    "<strong>68°F(20°C)</strong> - 快適な室温",
+                    "<strong>77°F(25°C)</strong> - 暖かい夏の日",
+                    "<strong>86°F(30°C)</strong> - 暑い夏の日",
+                    "<strong>95°F(35°C)</strong> - 非常に暑い(熱中症警報の可能性)",
+                    "<strong>104°F(40°C)</strong> - 危険な暑さ(熱中症のリスク)"
+                ]
+            },
+            {
+                "title": "体温",
+                "description": "健康に関連する重要な温度：",
+                "bullets": [
+                    "<strong>95°F(35°C)</strong> - 低体温症が始まる",
+                    "<strong>96.8°F(36°C)</strong> - わずかに低い体温",
+                    "<strong>97.7°F(36.5°C)</strong> - 正常な低体温",
+                    "<strong>98.6°F(37°C)</strong> - 標準的な人間の体温",
+                    "<strong>99.5°F(37.5°C)</strong> - わずかに高い体温",
+                    "<strong>100.4°F(38°C)</strong> - 発熱の閾値",
+                    "<strong>102°F(38.9°C)</strong> - 中程度の発熱",
+                    "<strong>104°F(40°C)</strong> - 高熱(医療機関を受診)",
+                    "<strong>106°F(41.1°C)</strong> - 危険な発熱(緊急事態)"
+                ]
+            },
+            {
+                "title": "科学と産業",
+                "description": "主要な科学的温度参照：",
+                "bullets": [
+                    "<strong>-459.67°F(-273.15°C)</strong> - 絶対零度",
+                    "<strong>-320°F(-196°C)</strong> - 液体窒素の温度",
+                    "<strong>-109°F(-78.5°C)</strong> - ドライアイスの昇華点",
+                    "<strong>32°F(0°C)</strong> - 水の氷点",
+                    "<strong>212°F(100°C)</strong> - 水の沸点(海面レベル)",
+                    "<strong>451°F(233°C)</strong> - 紙の発火温度",
+                    "<strong>600°F(316°C)</strong> - 鉛の融点",
+                    "<strong>1,832°F(1,000°C)</strong> - 溶岩の温度範囲",
+                    "<strong>2,795°F(1,535°C)</strong> - 鉄の融点"
+                ]
+            }
+        ]
+    },
+    "faq": {
+        "title": "よくある質問(FAQ)",
+        "questions": [
+            {
+                "question": "華氏を摂氏に変換するには？",
+                "answer": "華氏を摂氏に変換するには、32を引いてから5/9を掛けます。公式：°C = (°F - 32) × 5/9"
+            },
+            {
+                "question": "華氏と摂氏の違いは何ですか？",
+                "answer": "華氏と摂氏は2つの異なる温度測定単位です。華氏は主にアメリカで使用され、摂氏は国際的に広く使用されています。異なる目盛りを使用しており、華氏では水は32°Fで凍り212°Fで沸騰し、摂氏では水は0°Cで凍り100°Cで沸騰します。"
+            },
+            {
+                "question": "華氏と摂氏の間の変換を素早く推定するには？",
+                "answer": "簡単な推定方法は、華氏温度から30を引いてから2で割ることです(32を引いて5/9を掛ける代わりに)。例えば、70°Fは約(70 - 30) / 2 = 20°C(実際には21.11°C)です。この方法は日常使用に十分近い推定値を提供します。"
+            },
+            {
+                "question": "華氏と摂氏が等しくなる温度は？",
+                "answer": "華氏と摂氏は-40度で等しくなります。つまり、-40°F = -40°Cです。これは2つの温度目盛りの交点です。"
+            },
+            {
+                "question": "100°Fは日本ではどのくらい暑いですか？",
+                "answer": "100°Fは約37.8°Cで、日本では高熱または猛暑日に相当します。真夏日(30°C以上)を超え、熱中症に注意が必要なレベルです。屋外活動は避け、こまめに水分補給を行ってください。"
+            }
+        ]
+    },
+    "footer": {
+        "navigation": "ナビゲーション",
+        "charts": "チャート",
+        "legal": "法的情報",
+        "copyright": "© 2025 Ctofconverter. 無断複写・転載を禁じます。",
+        "lastUpdated": "最終更新：",
+        "backToTop": "トップへ戻る"
+    }
+}
