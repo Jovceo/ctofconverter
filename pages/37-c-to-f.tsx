@@ -35,7 +35,9 @@ interface PageTranslation {
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     const lastUpdatedIso = getLatestModifiedDate([
         'pages/37-c-to-f.tsx',
-        `locales/${locale}/37-c-to-f.json`
+        'pages/temperature-template.tsx',
+        `locales/${locale}/37-c-to-f.json`,
+        `locales/${locale}/template.json`
     ]);
 
     const availablePages = getAvailableTemperaturePages();

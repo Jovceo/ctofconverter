@@ -78,7 +78,9 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const currentLocale = locale || 'en';
   const lastUpdatedIso = getLatestModifiedDate([
     'pages/fan-oven-conversion-chart.tsx',
-    `locales/${currentLocale}/fan-oven-conversion-chart.json`
+    'pages/temperature-template.tsx',
+    `locales/${currentLocale}/fan-oven-conversion-chart.json`,
+    `locales/${currentLocale}/template.json`
   ]);
 
   // Helper to deep merge objects
