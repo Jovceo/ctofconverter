@@ -207,7 +207,7 @@ export default function FahrenheitToCelsiusPage({ canonicalUrl, lastUpdated }: F
     }), [t, canonicalUrl]);
 
     const faqData = useMemo(() => {
-        const faqs = t('faq.questions', { returnObjects: true });
+        const faqs = t('faq.questions', { returnObjects: true } as any);
         const faqArray = Array.isArray(faqs) ? faqs : [];
 
         return {
@@ -288,7 +288,7 @@ export default function FahrenheitToCelsiusPage({ canonicalUrl, lastUpdated }: F
                     <div className="container">
                         <div className="site-logo">
                             <a href={getLocalizedLink('/', locale)} aria-label={`${t('breadcrumb.home')} - ${t('meta.title')}`}>
-                                <span aria-hidden="true">{t('header.siteName', { returnObjects: false }) || 'C to F Converter'}</span>
+                                <span aria-hidden="true">{t('header.siteName', { returnObjects: false } as any) || 'C to F Converter'}</span>
                                 <span className="sr-only">{t('meta.title')}</span>
                             </a>
                         </div>
