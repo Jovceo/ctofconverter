@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
-    "postbuild": "echo 'Sitemap generated in postinstall'",
-    "postinstall": "node scripts/generate-sitemap.js",
+    "postbuild": "node scripts/generate-sitemap.js",
     "start": "next start",
     "lint": "next lint",
     "export": "next build && next export",
