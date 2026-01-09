@@ -214,13 +214,18 @@ function generateSitemap() {
     console.log(`✅ 共生成 ${allEntries.length} 个 sitemap 条目`);
 
     // 3. Sort and Generate
+    // 排序规则：
+    // 1. 首页（priority=1.0）始终排在第一位
+    // 2. 其他页面按更新时间倒序（最新的在前）
     allEntries.sort((a, b) => {
-        if (b.priority !== a.priority) {
-            return b.priority - a.priority;
-        }
+        // 首页永远排在第一位
+        if (a.priority === 1.0 && b.priority !== 1.0) return -1;
+        if (b.priority === 1.0 && a.priority !== 1.0) return 1;
+
+        // 其他页面按更新日期倒序（最新的在前）
         const dateA = new Date(a.lastmod);
         const dateB = new Date(b.lastmod);
-        return dateB - dateA;
+        return dateB - dateA;  // 降序
     });
 
     const xmlRows = allEntries.map(entry => `  <url>
