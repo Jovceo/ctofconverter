@@ -33,5 +33,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# generated
-public/sitemap.xml
+# generated files that should be committed for SEO
+# sitemap.xml is generated during build but should be in Git for faster deployment
