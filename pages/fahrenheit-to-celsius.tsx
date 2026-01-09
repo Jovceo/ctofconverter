@@ -379,6 +379,17 @@ export default function FahrenheitToCelsiusPage({ canonicalUrl, lastUpdated }: F
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
+    const { getLatestModifiedDate } = await import('../utils/dateHelpers');
+
+    // 计算最后更新时间（与页面显示的时间完全一致）
+    const lastUpdated = getLatestModifiedDate([
+        'pages/fahrenheit-to-celsius.tsx',
+        `locales/${locale}/f-to-c.json`,
+        'components/Layout.tsx',
+        `locales/${locale}/common.json`
+    ]);
+
     const canonicalUrl = `https://ctofconverter.com${locale === 'en' ? '' : `/${locale}`}/fahrenheit-to-celsius`;
-    return { props: { canonicalUrl, lastUpdated: new Date().toISOString() } };
+    return { props: { canonicalUrl, lastUpdated } };
 };
+
