@@ -215,17 +215,25 @@ function generateSitemap() {
 
     // 3. Sort and Generate
     // 排序规则：
-    // 1. 首页（priority=1.0）始终排在第一位
-    // 2. 其他页面按更新时间倒序（最新的在前）
+    // 1. 英文首页 (/) 绝对排第一
+    // 2. 其他语言首页 (priority=1.0) 按字母顺序
+    // 3. 其他页面 (priority=0.9) 按更新时间倒序（最新的在前）
     allEntries.sort((a, b) => {
-        // 首页永远排在第一位
+        // 规则 1: 英文首页 (https://ctofconverter.com/) 绝对第一
+        const isAEnHome = a.loc === `${SITE_URL}/` || a.loc === SITE_URL;
+        const isBEnHome = b.loc === `${SITE_URL}/` || b.loc === SITE_URL;
+
+        if (isAEnHome) return -1;
+        if (isBEnHome) return 1;
+
+        // 规则 2: 其他首页 (priority=1.0) 排在前面
         if (a.priority === 1.0 && b.priority !== 1.0) return -1;
         if (b.priority === 1.0 && a.priority !== 1.0) return 1;
 
-        // 其他页面按更新日期倒序（最新的在前）
+        // 规则 3: 同等 priority，按日期倒序（最新的在前）
         const dateA = new Date(a.lastmod);
         const dateB = new Date(b.lastmod);
-        return dateB - dateA;  // 降序
+        return dateB - dateA;
     });
 
     const xmlRows = allEntries.map(entry => `  <url>
