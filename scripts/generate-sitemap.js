@@ -73,65 +73,151 @@ function addEntry(url, lastmod, changefreq, priority, entriesList) {
     });
 }
 
+/**
+ * 智能检测页面的翻译文件
+ * 自动查找 locales/{locale}/{page}.json 或任何匹配的翻译文件
+ */
+function findTranslationFile(page, locale) {
+    const possibleFiles = [
+        `locales/${locale}/${page}.json`,           // 标准命名
+        `locales/${locale}/f-to-c.json`,            // fahrenheit-to-celsius 特例
+        `locales/${locale}/common.json`,            // 回退
+    ];
+
+    for (const file of possibleFiles) {
+        const fullPath = path.join(process.cwd(), file);
+        if (fs.existsSync(fullPath)) {
+            // 优先返回与页面名称匹配的文件
+            if (file.includes(page) || file.includes('f-to-c')) {
+                return file;
+            }
+        }
+    }
+
+    // 如果找不到特定文件，返回 common.json 作为回退
+    return `locales/${locale}/common.json`;
+}
+
+/**
+ * 检测页面是否使用 temperature-template
+ */
+function usesTemperatureTemplate(page) {
+    const pageFile = path.join(process.cwd(), 'pages', `${page}.tsx`);
+    if (!fs.existsSync(pageFile)) return false;
+
+    try {
+        const content = fs.readFileSync(pageFile, 'utf-8');
+        // 检查是否导入或使用了 temperature-template
+        return content.includes('temperature-template');
+    } catch (e) {
+        return false;
+    }
+}
+
+/**
+ * 智能收集页面依赖
+ */
+function collectPageDependencies(page, locale) {
+    const deps = [
+        `pages/${page}.tsx`,  // 页面本身
+    ];
+
+    // 检测是否使用 temperature-template
+    if (usesTemperatureTemplate(page)) {
+        deps.push('pages/temperature-template.tsx');
+        deps.push(`locales/${locale}/template.json`);
+    }
+
+    // 添加页面特定的翻译文件
+    const translationFile = findTranslationFile(page, locale);
+    if (translationFile && !deps.includes(translationFile)) {
+        deps.push(translationFile);
+    }
+
+    // 添加通用依赖
+    deps.push('components/Layout.tsx');
+    deps.push(`locales/${locale}/common.json`);
+
+    // 过滤掉不存在的文件
+    return deps.filter(dep => {
+        const fullPath = path.join(process.cwd(), dep);
+        return fs.existsSync(fullPath);
+    });
+}
+
 function generateSitemap() {
     const allEntries = [];
 
+    console.log('🔍 开始自动检测页面...');
+
     // 1. Homepage
+    console.log('📄 处理首页...');
     LOCALES.forEach(locale => {
         const deps = [
             'pages/index.tsx',
-            'components/Layout.tsx', // Layout affects all
+            'components/Layout.tsx',
             `locales/${locale}/home.json`,
-            `locales/${locale}/common.json` // Assuming common/template used
-        ];
-        // Note: Homepage might not use temperature-template, but likely uses Layout/Footer etc.
-        // For simplicity, sticking to previous logic but per locale.
+            `locales/${locale}/common.json`
+        ].filter(dep => fs.existsSync(path.join(process.cwd(), dep)));
+
         const date = getLatestModifiedDate(deps);
         const url = locale === 'en' ? `${SITE_URL}/` : `${SITE_URL}/${locale}`;
         addEntry(url, date, 'daily', 1.0, allEntries);
     });
 
-    // 2. Dynamic Pages
+    // 2. 自動检测所有页面
     const pagesDir = path.join(process.cwd(), 'pages');
     const pageFiles = fs.readdirSync(pagesDir);
 
+    // 排除特殊文件
+    const excludedPages = [
+        '_app.tsx',
+        '_document.tsx',
+        'index.tsx',
+        'temperature-template.tsx',       // 这是模板，不是页面
+        'api',                             // API 目录
+    ];
+
     const mainPages = pageFiles
         .filter(file => {
-            return file.endsWith('.tsx') &&
-                !['_app.tsx', '_document.tsx', 'index.tsx', 'temperature-template.tsx', 'temperature-conversion-challenge.tsx'].includes(file);
+            if (!file.endsWith('.tsx')) return false;
+            if (excludedPages.includes(file)) return false;
+
+            // 排除目录
+            const fullPath = path.join(pagesDir, file);
+            if (fs.statSync(fullPath).isDirectory()) return false;
+
+            return true;
         })
         .map(file => file.replace('.tsx', ''));
 
+    console.log(`📋 检测到 ${mainPages.length} 个页面: ${mainPages.join(', ')}`);
+
     mainPages.forEach(page => {
+        console.log(`  处理页面: ${page}`);
+
         LOCALES.forEach(locale => {
-            const pageDeps = [
-                `pages/${page}.tsx`,
-                'pages/temperature-template.tsx',
-                `locales/${locale}/${page}.json`,
-                `locales/${locale}/template.json`
-            ];
+            // 智能收集依赖
+            const pageDeps = collectPageDependencies(page, locale);
+
+            if (pageDeps.length === 0) {
+                console.warn(`  ⚠️  警告: ${page} (${locale}) 没有找到任何依赖文件`);
+                return;
+            }
+
             const pageDate = getLatestModifiedDate(pageDeps);
             const url = locale === 'en' ? `${SITE_URL}/${page}` : `${SITE_URL}/${locale}/${page}`;
             addEntry(url, pageDate, 'weekly', 0.9, allEntries);
         });
     });
 
-    // 3. Challenge Page (Special Case if needed, previously possibly ignored or covered? It was in the list before, wait.
-    // The previous filter was !['_app.tsx', '_document.tsx', 'index.tsx', 'temperature-template.tsx'].includes(file).
-    // 'temperature-conversion-challenge.tsx' was likely included. I should treat it similarly or separately if it has different deps.
-    // Let's assume it follows the pattern or just check it. It likely uses 'challenge.json'?
-    // I'll stick to the strict "mainPages" logic which covers standard converters.
-    // If 'temperature-conversion-challenge' is a "main page", it needs its own specific deps check if it differs.
-    // For now, I'll assume standard pattern for all detected pages.
+    console.log(`✅ 共生成 ${allEntries.length} 个 sitemap 条目`);
 
-    // 4. Sort and Generate
-    // Sort logic: High Priority first (Homepage), then Newest Date.
+    // 3. Sort and Generate
     allEntries.sort((a, b) => {
-        // First, Primary Sort by Priority (Descending)
         if (b.priority !== a.priority) {
             return b.priority - a.priority;
         }
-        // Second, Secondary Sort by Date (Descending)
         const dateA = new Date(a.lastmod);
         const dateB = new Date(b.lastmod);
         return dateB - dateA;
@@ -151,7 +237,7 @@ ${xmlRows.join('\n')}
 </urlset>`;
 
     fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap);
-    console.log(`Successfully generated dynamic sitemap.xml sorted by date.`);
+    console.log(`\n🎉 Successfully generated dynamic sitemap.xml with ${allEntries.length} URLs sorted by priority and date.`);
 }
 
 generateSitemap();
