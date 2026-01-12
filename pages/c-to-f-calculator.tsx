@@ -249,9 +249,12 @@ export default function CalculatorPage({ lastUpdatedIso, t, common, locale }: Ca
                     .faq-box h3 { font-size: 1.1rem; color: #2d3748; margin-bottom: 0.5rem; }
                     
                     @media (max-width: 768px) {
+                        .container { padding: 0 1rem; }
                         .faq-grid { grid-template-columns: 1fr; }
-                        .hero-section { padding: 2rem 0; }
-                        h1 { font-size: 1.8rem; }
+                        .hero-section { padding: 2rem 0 1.5rem; }
+                        h1 { font-size: 1.75rem; margin-bottom: 1rem; }
+                        .kicker { font-size: 0.8rem; margin-bottom: 0.25rem; }
+                        .snippet-definition { font-size: 1rem; line-height: 1.6; }
                     }
                 `}</style>
             </div>

@@ -218,54 +218,84 @@ function generateSitemap() {
     // 1. 英文首页 (/) 绝对排第一
     // 2. 其他语言首页 (priority=1.0) 按字母顺序
     // 3. 其他页面 (priority=0.9) 按更新时间倒序（最新的在前）
-    allEntries.sort((a, b) => {
-        // 规则 1: 英文首页 (https://ctofconverter.com/) 绝对第一
-        const isAEnHome = a.loc === `${SITE_URL}/` || a.loc === SITE_URL;
-        const isBEnHome = b.loc === `${SITE_URL}/` || b.loc === SITE_URL;
+    // 新的排序逻辑：
+    // 1. 按 Slug 分组 (保持不同语言版本的同一页面在一起)
+    // 2. 计算每组的"最新更新时间"
+    // 3. 组与组之间：按最新更新时间倒序 (首页组强制置顶)
+    // 4. 组内：英文版 (URL 最短) -> 其他语言按字母顺序
 
-        if (isAEnHome) return -1;
-        if (isBEnHome) return 1;
-
-        // 规则 2: 其他首页 (priority=1.0) 排在前面
-        if (a.priority === 1.0 && b.priority !== 1.0) return -1;
-        if (b.priority === 1.0 && a.priority !== 1.0) return 1;
-
-        // 规则 3: 按页面 Slug 分组排序 (把相同页面的不同语言版本聚在一起)
-        // 提取 Slug (去除 locale 前缀)
-        const getSlug = (loc) => {
-            const relativePath = loc.replace(SITE_URL, '');
-            const parts = relativePath.split('/').filter(p => p);
-
-            // 如果第一段是 locale 代码 (且不是 'en'，因为 'en' 没有 URL 前缀)，则认为是 locale
-            // 注意：generateSitemap 中英文 URL 没有 /en/ 前缀，所以这里只需要检测是否存在于 LOCALES 中
-            // 且我们的页面 filename 不会和 locale 代码重名
-            if (parts.length > 0 && LOCALES.includes(parts[0])) {
-                return parts.slice(1).join('/');
-            }
-            return parts.join('/');
-        };
-
-        const slugA = getSlug(a.loc);
-        const slugB = getSlug(b.loc);
-
-        if (slugA < slugB) return -1;
-        if (slugA > slugB) return 1;
-
-        // 规则 4: 同一个 Slug 下，英文版 (URL 最短，无前缀) 排在最前
-        // 简单的逻辑是：长度短的在前 (前提是 slug 相同，那么差异仅在于 locale 前缀)
-        if (a.loc.length !== b.loc.length) {
-            return a.loc.length - b.loc.length;
+    const groups = {};
+    const getSlug = (loc) => {
+        let rel = loc.replace(SITE_URL, '');
+        if (rel.startsWith('/')) rel = rel.slice(1);
+        const parts = rel.split('/');
+        // 如果第一段是 locale 代码 (且不是 'en' 的隐式情况)，则移除
+        if (parts.length > 0 && LOCALES.includes(parts[0])) {
+            parts.shift();
         }
+        return parts.join('/') || 'HOME_PAGE_GROUP'; // 使用特殊标记标识首页组
+    };
 
-        // 规则 5: 其他语言按字母顺序
-        return a.loc.localeCompare(b.loc);
+    allEntries.forEach(entry => {
+        const slug = getSlug(entry.loc);
+        if (!groups[slug]) {
+            groups[slug] = {
+                slug: slug,
+                maxDate: '',
+                entries: []
+            };
+        }
+        groups[slug].entries.push(entry);
+        // 更新该组的最新日期
+        if (entry.lastmod > groups[slug].maxDate) {
+            groups[slug].maxDate = entry.lastmod;
+        }
     });
 
-    const xmlRows = allEntries.map(entry => `  <url>
+    // 将组转换为数组并排序
+    const sortedGroups = Object.values(groups).sort((groupA, groupB) => {
+        // 规则 1: 首页组绝对置顶
+        if (groupA.slug === 'HOME_PAGE_GROUP') return -1;
+        if (groupB.slug === 'HOME_PAGE_GROUP') return 1;
+
+        // 规则 2: 按组内最新时间倒序 (刚刚更新的在前)
+        if (groupA.maxDate !== groupB.maxDate) {
+            return groupB.maxDate.localeCompare(groupA.maxDate);
+        }
+
+        // 规则 3: 时间相同时，按 Slug 字母顺序保持稳定
+        return groupA.slug.localeCompare(groupB.slug);
+    });
+
+    // 展平并应用组内排序
+    const sortedEntries = [];
+    sortedGroups.forEach(group => {
+        // 组内排序
+        group.entries.sort((a, b) => {
+            // 特殊处理首页组：英文首页 (https://ctofconverter.com/) 必须排在所有其他首页之前
+            const isAEnHome = a.loc === `${SITE_URL}/` || a.loc === SITE_URL;
+            const isBEnHome = b.loc === `${SITE_URL}/` || b.loc === SITE_URL;
+            if (isAEnHome) return -1;
+            if (isBEnHome) return 1;
+
+            // 规则 4.1: 英文版排在最前 (利用 URL 长度判断，英文版无前缀，最短)
+            if (a.loc.length !== b.loc.length) {
+                return a.loc.length - b.loc.length;
+            }
+            // 规则 4.2: 其他语言按字母顺序
+            return a.loc.localeCompare(b.loc);
+        });
+        sortedEntries.push(...group.entries);
+    });
+
+    // 更新引用 (虽然 allEntries 是 const 数组引用，但其内容顺序不影响 map 生成，这里我们需要用 sortedEntries 生成 XML)
+    // 由于下面的 xmlRows 是基于 sortedEntries map 的，我们直接替换变量名使用即可，或者重新赋值给 allEntries 使用
+    // 但 allEntries 是 const 定义的数组，不能重新赋值，所以我们修改后续代码使用 sortedEntries
+
+
+    const xmlRows = sortedEntries.map(entry => `  <url>
     <loc>${entry.loc}</loc>
     <lastmod>${entry.lastmod}</lastmod>
-    <changefreq>${entry.changefreq}</changefreq>
-    <priority>${entry.priority.toFixed(1)}</priority>
   </url>`);
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
