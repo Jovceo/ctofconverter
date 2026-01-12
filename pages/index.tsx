@@ -483,10 +483,17 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
         .slice(0, 12); // 只显示最新的 12 个
     // 核心逻辑：按修改时间倒序排列，取最新的 12 个”
 
-    const lastUpdatedIso = getLatestModifiedDate([
+    const pageFileDate = getLatestModifiedDate([
         'pages/index.tsx',
         'locales/en/home.json'
     ]);
+
+    // Homepage's last updated should also reflect if the "Latest Conversions" list changed
+    // So we pick the latest date from: index.tsx itself, home.json, OR the newest item in the recent list
+    const latestContentDate = dynamicRecentUpdates.length > 0 ? dynamicRecentUpdates[0].date : '2025-01-01';
+
+    // Compare and pick the most recent
+    const lastUpdatedIso = pageFileDate > latestContentDate ? pageFileDate : latestContentDate;
 
     return {
         props: {
