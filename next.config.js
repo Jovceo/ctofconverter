@@ -47,38 +47,23 @@ const nextConfig = {
 
   async redirects() {
     return [
-      // 1. Core Feature & Metadata Redirects
+      // 1. Surgical Redirects: Only for pages that exist in Next.js (pages/ directory)
       {
-        source: '/fan-oven-conversion-chart/',
-        destination: '/fan-oven-conversion-chart',
-        statusCode: 301,
-      },
-      {
-        source: '/fahrenheit-to-celsius/',
-        destination: '/fahrenheit-to-celsius',
-        statusCode: 301,
-      },
-      {
-        source: '/c-to-f-formula/',
-        destination: '/c-to-f-formula',
-        statusCode: 301,
-      },
-
-      // 2. Generic .html to Clean URL (Handles all languages automatically)
-      // Matches path.html but excludes sitemap.xml and other non-page assets
-      {
-        source: '/:path((?!.*(?:sitemap|robots|ads|google|yandex|favicon|apple-touch-icon)).*)\\.html',
+        // Redirect .html to clean URL for:
+        // - Numbered temp pages (0, 4, 20, 37, 37-2, 37-5, 47, 75, 100)
+        // - Core features (calculators, charts, formula)
+        // - Base pages (about, privacy, terms)
+        source: '/:path(0-c-to-f|4-c-to-f|20-c-to-f|37-c-to-f|37-2-c-to-f|37-5-c-to-f|47-c-to-f|75-c-to-f|100-c-to-f|about-us|privacy-policy|terms-of-service|c-to-f-calculator|c-to-f-formula|celsius-to-fahrenheit-chart|fahrenheit-to-celsius|fan-oven-conversion-chart|temperature-conversion-challenge).html',
         destination: '/:path',
         statusCode: 301,
       },
-
-      // 3. Generic index.html to Directory (Handles all languages automatically)
       {
-        source: '/:path*/index.html',
-        destination: '/:path*',
+        // Redirect index.html to parent directory for core feature sections
+        source: '/:path(c-to-f-calculator|c-to-f-formula|celsius-to-fahrenheit-chart|fahrenheit-to-celsius|fan-oven-conversion-chart)/index.html',
+        destination: '/:path',
         statusCode: 301,
       },
-
+      // Note: All other static .html files (e.g., 13-c-to-f.html) in public/ will be served as-is.
     ];
   },
 };
