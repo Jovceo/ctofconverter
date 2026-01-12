@@ -129,15 +129,16 @@ export default function CalculatorWidget({ t, locale }: CalculatorWidgetProps) {
             <style jsx>{`
                 .glass-card { background: #fff; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #edf2f7; padding: 2.5rem; margin-bottom: 3rem; }
                 .mode-tabs { display: flex; background: #f7fafc; border-radius: 12px; padding: 0.5rem; margin-bottom: 2rem; }
-                .tab-btn { flex: 1; padding: 0.8rem; border: none; background: transparent; border-radius: 8px; font-weight: 600; color: #718096; cursor: pointer; transition: all 0.2s; }
+                .tab-btn { flex: 1; padding: 0.8rem; border: none; background: transparent; border-radius: 8px; font-weight: 600; color: #718096; cursor: pointer; transition: all 0.2s; min-height: 48px; }
+                .tab-btn:active { transform: scale(0.98); }
                 .tab-btn.active { background: #fff; color: #3182ce; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
                 
                 .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
                 label { display: block; font-size: 0.9rem; color: #718096; margin-bottom: 0.75rem; font-weight: 600; }
-                input { width: 100%; padding: 1rem; font-size: 1.5rem; border: 2px solid #edf2f7; border-radius: 12px; color: #2d3748; transition: border-color 0.2s; }
+                input { width: 100%; padding: 1rem; font-size: 1.5rem; border: 2px solid #edf2f7; border-radius: 12px; color: #2d3748; transition: border-color 0.2s; height: 60px; }
                 input:focus { outline: none; border-color: #3182ce; }
                 
-                .display-result { width: 100%; padding: 1rem; font-size: 1.5rem; background: #ebf8ff; border-radius: 12px; color: #2b6cb0; font-weight: 700; border: 2px solid transparent; min-height: 4rem; display: flex; align-items: center; }
+                .display-result { width: 100%; padding: 1rem; font-size: 1.5rem; background: #ebf8ff; border-radius: 12px; color: #2b6cb0; font-weight: 700; border: 2px solid transparent; min-height: 60px; display: flex; align-items: center; }
                 
                 .fever-banner { padding: 1rem; border-radius: 12px; text-align: center; font-weight: 700; margin-bottom: 1.5rem; animation: slideDown 0.3s ease; }
                 .fever-normal { background: #c6f6d5; color: #22543d; }
@@ -146,19 +147,26 @@ export default function CalculatorWidget({ t, locale }: CalculatorWidgetProps) {
                 .fever-high { background: #fed7d7; color: #822727; }
                 
                 .quick-action-strip { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
-                .quick-action-strip button { flex: 1; padding: 0.75rem; border: 1px solid #edf2f7; border-radius: 8px; background: #fff; color: #4a5568; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+                .quick-action-strip button { flex: 1; padding: 0.75rem; border: 1px solid #edf2f7; border-radius: 8px; background: #fff; color: #4a5568; font-weight: 600; cursor: pointer; transition: background 0.2s; min-height: 48px; }
+                .quick-action-strip button:active { transform: scale(0.98); }
                 .quick-action-strip button:hover:not(:disabled) { background: #f7fafc; }
                 .quick-action-strip button:disabled { opacity: 0.5; cursor: not-allowed; }
                 
                 .quick-presets { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
-                .quick-presets button { padding: 0.5rem; background: #f7fafc; border: none; border-radius: 6px; color: #3182ce; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+                .quick-presets button { padding: 0.8rem 0.5rem; background: #f7fafc; border: none; border-radius: 6px; color: #3182ce; font-weight: 600; cursor: pointer; transition: background 0.2s; min-height: 44px; }
+                .quick-presets button:active { transform: scale(0.95); }
                 .quick-presets button:hover { background: #edf2f7; }
 
                 @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
                 @media (max-width: 768px) {
-                    .input-grid { grid-template-columns: 1fr; gap: 1rem; }
-                    .glass-card { padding: 1.5rem; }
+                    .input-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+                    .glass-card { padding: 1.5rem 1.25rem; border-radius: 16px; margin-bottom: 2rem; }
+                    
+                    input, .display-result { font-size: 1.35rem; padding: 0.875rem; height: 56px; min-height: 56px; }
+                    
+                    .quick-action-strip { flex-direction: column; gap: 0.75rem; }
+                    .quick-presets { gap: 0.5rem; }
                 }
             `}</style>
         </div>
