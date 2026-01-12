@@ -1,0 +1,102 @@
+{
+    "seo": {
+        "title": "20°C to °F: Temperature Conversion + Room Temperature Guide",
+        "description": "Convert 20 degrees Celsius to Fahrenheit quickly. Learn that 20°C equals 68°F, see the calculation steps, and understand its significance as room temperature."
+    },
+    "comfortGuide": {
+        "title": "Temperature Comfort Guide",
+        "subtitle": "Understanding Temperature Comfort Levels",
+        "intro": "20°C (68°F) falls within the comfortable temperature range for most people. Here's how it compares to other common temperatures:",
+        "chart": {
+            "cold": {
+                "label": "Cool",
+                "value": "10-15°C",
+                "desc": "50-59°F<br>Light jacket weather"
+            },
+            "moderate": {
+                "label": "Comfortable",
+                "value": "18-22°C",
+                "desc": "64-72°F<br>Ideal room temperature"
+            },
+            "warm": {
+                "label": "Warm",
+                "value": "25-30°C",
+                "desc": "77-86°F<br>T-shirt weather"
+            }
+        },
+        "table": {
+            "headers": {
+                "temperature": "Temperature",
+                "description": "Description",
+                "typicalUse": "Typical Use"
+            },
+            "rows": {
+                "0c": {
+                    "temp": "0°C (32°F)",
+                    "desc": "Freezing point of water",
+                    "use": "Refrigerator temperature, winter weather"
+                },
+                "10c": {
+                    "temp": "10°C (50°F)",
+                    "desc": "Cool",
+                    "use": "Spring/autumn weather, light jacket needed"
+                },
+                "20c": {
+                    "temp": "20°C (68°F)",
+                    "desc": "Room temperature",
+                    "use": "Ideal indoor temperature, comfortable weather"
+                },
+                "30c": {
+                    "temp": "30°C (86°F)",
+                    "desc": "Warm",
+                    "use": "Summer weather, light clothing"
+                },
+                "37c": {
+                    "temp": "37°C (98.6°F)",
+                    "desc": "Body temperature",
+                    "use": "Normal human body temperature"
+                },
+                "100c": {
+                    "temp": "100°C (212°F)",
+                    "desc": "Boiling point of water",
+                    "use": "Cooking, boiling water"
+                }
+            }
+        },
+        "note": "<strong>Note about personal comfort:</strong> Individual temperature preferences can vary based on factors like humidity, air movement, clothing, and personal metabolism. What feels comfortable to one person might feel cool or warm to another."
+    },
+    "faq": {
+        "warmOrCold": {
+            "question": "Is 20°C warm or cold?",
+            "answer": "20°C (68°F) is generally considered comfortable room temperature. It's not cold nor hot, but rather mild and pleasant for most people. It's the temperature at which many people feel most comfortable indoors without needing extra layers of clothing."
+        },
+        "fever": {
+            "question": "Is 20°C a fever?",
+            "answer": "No, 20°C (68°F) is not a fever. Normal human body temperature is around 37°C (98.6°F). A fever is typically considered to be 38°C (100.4°F) or higher. 20°C is actually much lower than normal body temperature and would be dangerously cold for a human body."
+        },
+        "cooking": {
+            "question": "What is 20°C in Fahrenheit for cooking?",
+            "answer": "20°C is equal to 68°F. In cooking, this temperature is not typically used for cooking itself but might be relevant for:",
+            "items": [
+                "Proofing yeast dough (which often requires warmer temperatures)",
+                "Storing certain ingredients like some wines or oils",
+                "Resting chocolate or other temperature-sensitive ingredients",
+                "Room temperature ingredients in baking recipes"
+            ]
+        },
+        "wear": {
+            "question": "What should I wear at 20°C?",
+            "answer": "At 20°C (68°F), most people find comfortable:",
+            "items": [
+                "Light long sleeves or short sleeves",
+                "Light trousers or jeans",
+                "Light dress or skirt",
+                "Possibly a light sweater or cardigan for cooler evenings"
+            ]
+        },
+        "sleeping": {
+            "question": "Is 20°C good for sleeping?",
+            "answer": "20°C (68°F) is at the warmer end of the ideal sleeping temperature range. Most people sleep best at temperatures between 15-20°C (60-68°F). Some may find 20°C slightly warm for sleeping, while others find it comfortable. Individual preferences vary, but 20°C is generally acceptable for sleeping, especially with appropriate bedding."
+        }
+    }
+}

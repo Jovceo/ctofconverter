@@ -91,7 +91,7 @@ export default function Footer({ lastUpdated }: FooterProps) {
               <ul className="footer-link-list" aria-labelledby="footer-legal-heading">
                 <li>
                   <Link
-                    href={getLocalizedLink('/privacy-policy.html', currentLocale)}
+                    href={getLocalizedLink('/privacy-policy', currentLocale)}
                     className="footer-link"
                   >
                     {t('footer.links.privacyPolicy')}
@@ -99,14 +99,14 @@ export default function Footer({ lastUpdated }: FooterProps) {
                 </li>
                 <li>
                   <Link
-                    href={getLocalizedLink('/terms-of-service.html', currentLocale)}
+                    href={getLocalizedLink('/terms-of-service', currentLocale)}
                     className="footer-link"
                   >
                     {t('footer.links.termsOfService')}
                   </Link>
                 </li>
                 <li>
-                  <Link href={getLocalizedLink('/about-us.html', currentLocale)} className="footer-link">
+                  <Link href={getLocalizedLink('/about-us', currentLocale)} className="footer-link">
                     {t('footer.links.aboutUs')}
                   </Link>
                 </li>

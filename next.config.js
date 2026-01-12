@@ -47,64 +47,38 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // 1. Core Feature & Metadata Redirects
       {
         source: '/fan-oven-conversion-chart/',
         destination: '/fan-oven-conversion-chart',
         statusCode: 301,
       },
-      // 301 Redirects: Legacy Static HTML -> Next.js Dynamic Routes
-      // These shadow the public/*.html files (checked before filesystem)
-      {
-        source: '/0-c-to-f.html',
-        destination: '/0-c-to-f',
-        statusCode: 301,
-      },
-      {
-        source: '/37-c-to-f.html',
-        destination: '/37-c-to-f',
-        statusCode: 301,
-      },
-      {
-        source: '/37-2-c-to-f.html',
-        destination: '/37-2-c-to-f',
-        statusCode: 301,
-      },
-      {
-        source: '/37-5-c-to-f.html',
-        destination: '/37-5-c-to-f',
-        statusCode: 301,
-      },
-      {
-        source: '/4-c-to-f.html',
-        destination: '/4-c-to-f',
-        statusCode: 301,
-      },
-      {
-        source: '/47-c-to-f.html',
-        destination: '/47-c-to-f',
-        statusCode: 301,
-      },
-      {
-        source: '/75-c-to-f.html',
-        destination: '/75-c-to-f',
-        statusCode: 301,
-      },
-      {
-        source: '/100-c-to-f.html',
-        destination: '/100-c-to-f',
-        statusCode: 301,
-      },
-      // Fahrenheit to Celsius page redirect
       {
         source: '/fahrenheit-to-celsius/',
         destination: '/fahrenheit-to-celsius',
         statusCode: 301,
       },
       {
-        source: '/fahrenheit-to-celsius/index.html',
-        destination: '/fahrenheit-to-celsius',
+        source: '/c-to-f-formula/',
+        destination: '/c-to-f-formula',
         statusCode: 301,
       },
+
+      // 2. Generic .html to Clean URL (Handles all languages automatically)
+      // Matches path.html but excludes sitemap.xml and other non-page assets
+      {
+        source: '/:path((?!.*(?:sitemap|robots|ads|google|yandex|favicon|apple-touch-icon)).*)\\.html',
+        destination: '/:path',
+        statusCode: 301,
+      },
+
+      // 3. Generic index.html to Directory (Handles all languages automatically)
+      {
+        source: '/:path*/index.html',
+        destination: '/:path*',
+        statusCode: 301,
+      },
+
     ];
   },
 };

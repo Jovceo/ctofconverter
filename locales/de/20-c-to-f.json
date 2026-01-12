@@ -1,0 +1,102 @@
+{
+    "seo": {
+        "title": "20°C in °F: Temperaturumrechnung + Leitfaden zur Raumtemperatur",
+        "description": "Rechnen Sie 20 Grad Celsius schnell in Fahrenheit um. Erfahren Sie, dass 20°C gleich 68°F sind, sehen Sie die Berechnungsschritte und verstehen Sie die Bedeutung als Raumtemperatur."
+    },
+    "comfortGuide": {
+        "title": "Leitfaden zum Temperaturkomfort",
+        "subtitle": "Temperatur-Komfortstufen verstehen",
+        "intro": "20°C (68°F) liegen im komfortablen Temperaturbereich für die meisten Menschen. Hier ist der Vergleich mit anderen gängigen Temperaturen:",
+        "chart": {
+            "cold": {
+                "label": "Kühl",
+                "value": "10-15°C",
+                "desc": "50-59°F<br>Wetter für eine leichte Jacke"
+            },
+            "moderate": {
+                "label": "Komfortabel",
+                "value": "18-22°C",
+                "desc": "64-72°F<br>Ideale Raumtemperatur"
+            },
+            "warm": {
+                "label": "Warm",
+                "value": "25-30°C",
+                "desc": "77-86°F<br>T-Shirt-Wetter"
+            }
+        },
+        "table": {
+            "headers": {
+                "temperature": "Temperatur",
+                "description": "Beschreibung",
+                "typicalUse": "Typische Verwendung"
+            },
+            "rows": {
+                "0c": {
+                    "temp": "0°C (32°F)",
+                    "desc": "Gefrierpunkt von Wasser",
+                    "use": "Kühlschranktemperatur, Winterwetter"
+                },
+                "10c": {
+                    "temp": "10°C (50°F)",
+                    "desc": "Kühl",
+                    "use": "Frühlings-/Herbstwetter, leichte Jacke benötigt"
+                },
+                "20c": {
+                    "temp": "20°C (68°F)",
+                    "desc": "Raumtemperatur",
+                    "use": "Ideale Innentemperatur, angenehmes Wetter"
+                },
+                "30c": {
+                    "temp": "30°C (86°F)",
+                    "desc": "Warm",
+                    "use": "Sommerwetter, leichte Kleidung"
+                },
+                "37c": {
+                    "temp": "37°C (98.6°F)",
+                    "desc": "Körpertemperatur",
+                    "use": "Normale menschliche Körpertemperatur"
+                },
+                "100c": {
+                    "temp": "100°C (212°F)",
+                    "desc": "Siedepunkt von Wasser",
+                    "use": "Kochen, Wasser kochen"
+                }
+            }
+        },
+        "note": "<strong>Hinweis zum persönlichen Komfort:</strong> Individuelle Temperaturpräferenzen können je nach Faktoren wie Luftfeuchtigkeit, Luftbewegung, Kleidung und persönlichem Stoffwechsel variieren. Was sich für eine Person angenehm anfühlt, kann für eine andere kühl oder warm sein."
+    },
+    "faq": {
+        "warmOrCold": {
+            "question": "Sind 20°C warm oder kalt?",
+            "answer": "20°C (68°F) gelten allgemein als angenehme Raumtemperatur. Es ist weder kalt noch heiß, sondern eher mild und für die meisten Menschen angenehm. Es ist die Temperatur, bei der sich viele Menschen in Innenräumen am wohlsten fühlen, ohne zusätzliche Kleidungsschichten zu benötigen."
+        },
+        "fever": {
+            "question": "Sind 20°C Fieber?",
+            "answer": "Nein, 20°C (68°F) sind kein Fieber. Die normale menschliche Körpertemperatur liegt bei etwa 37°C (98,6°F). Fieber wird normalerweise ab 38°C (100,4°F) oder höher betrachtet. 20°C liegen tatsächlich weit unter der normalen Körpertemperatur und wären für den menschlichen Körper gefährlich kalt."
+        },
+        "cooking": {
+            "question": "Was sind 20°C in Fahrenheit beim Kochen?",
+            "answer": "20°C entsprechen 68°F. Beim Kochen wird diese Temperatur normalerweise nicht für das eigentliche Garen verwendet, kann aber relevant sein für:",
+            "items": [
+                "Gehenlassen von Hefeteig (der oft wärmere Temperaturen benötigt)",
+                "Lagerung bestimmter Zutaten wie mancher Weine oder Öle",
+                "Ruhenlassen von Schokolade oder anderen temperaturempfindlichen Zutaten",
+                "Zutaten auf Raumtemperatur in Backrezepten"
+            ]
+        },
+        "wear": {
+            "question": "Was sollte man bei 20°C anziehen?",
+            "answer": "Bei 20°C (68°F) finden die meisten Menschen es angenehm, Folgendes zu tragen:",
+            "items": [
+                "Leichte Langarm- oder Kurzarmshirts",
+                "Leichte Hosen oder Jeans",
+                "Leichtes Kleid oder Rock",
+                "Evtl. einen leichten Pullover oder Cardigan für kühlere Abende"
+            ]
+        },
+        "sleeping": {
+            "question": "Sind 20°C gut zum Schlafen?",
+            "answer": "20°C (68°F) liegen am oberen Ende des idealen Schlaftemperaturbereichs. Die meisten Menschen schlafen am besten bei Temperaturen zwischen 15-20°C (60-68°F). Manche empfinden 20°C als etwas warm zum Schlafen, während andere es als angenehm empfinden. Die individuellen Vorlieben variieren, aber 20°C sind im Allgemeinen zum Schlafen akzeptabel, besonders mit passendem Bettzeug."
+        }
+    }
+}

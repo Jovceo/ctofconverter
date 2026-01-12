@@ -1,0 +1,102 @@
+{
+    "seo": {
+        "title": "20°C ke °F: Konversi Suhu + Panduan Suhu Ruangan",
+        "description": "Konversikan 20 derajat Celsius ke Fahrenheit dengan cepat. Pelajari bahwa 20°C sama dengan 68°F, lihat langkah-langkah penghitungan, dan pahami signifikansinya sebagai suhu ruangan."
+    },
+    "comfortGuide": {
+        "title": "Panduan Kenyamanan Suhu",
+        "subtitle": "Memahami Tingkat Kenyamanan Suhu",
+        "intro": "20°C (68°F) termasuk dalam kisaran suhu yang nyaman bagi kebanyakan orang. Berikut perbandingannya dengan suhu umum lainnya:",
+        "chart": {
+            "cold": {
+                "label": "Sejuk",
+                "value": "10-15°C",
+                "desc": "50-59°F<br>Cuaca untuk jaket ringan"
+            },
+            "moderate": {
+                "label": "Nyaman",
+                "value": "18-22°C",
+                "desc": "64-72°F<br>Suhu ruangan ideal"
+            },
+            "warm": {
+                "label": "Hangat",
+                "value": "25-30°C",
+                "desc": "77-86°F<br>Cuaca untuk kaos"
+            }
+        },
+        "table": {
+            "headers": {
+                "temperature": "Suhu",
+                "description": "Deskripsi",
+                "typicalUse": "Penggunaan Umum"
+            },
+            "rows": {
+                "0c": {
+                    "temp": "0°C (32°F)",
+                    "desc": "Titik beku air",
+                    "use": "Suhu lemari es, cuaca musim dingin"
+                },
+                "10c": {
+                    "temp": "10°C (50°F)",
+                    "desc": "Sejuk",
+                    "use": "Cuaca musim semi/gugur, perlu jaket ringan"
+                },
+                "20c": {
+                    "temp": "20°C (68°F)",
+                    "desc": "Suhu ruangan",
+                    "use": "Suhu dalam ruangan ideal, cuaca nyaman"
+                },
+                "30c": {
+                    "temp": "30°C (86°F)",
+                    "desc": "Hangat",
+                    "use": "Cuaca musim panas, pakaian ringan"
+                },
+                "37c": {
+                    "temp": "37°C (98.6°F)",
+                    "desc": "Suhu tubuh",
+                    "use": "Suhu tubuh manusia normal"
+                },
+                "100c": {
+                    "temp": "100°C (212°F)",
+                    "desc": "Titik didih air",
+                    "use": "Memasak, merebus air"
+                }
+            }
+        },
+        "note": "<strong>Catatan tentang kenyamanan pribadi:</strong> Preferensi suhu individu dapat bervariasi berdasarkan faktor-faktor seperti kelembapan, pergerakan udara, pakaian, dan metabolisme pribadi. Apa yang terasa nyaman bagi satu orang mungkin terasa sejuk atau hangat bagi orang lain."
+    },
+    "faq": {
+        "warmOrCold": {
+            "question": "Apakah 20°C hangat atau dingin?",
+            "answer": "20°C (68°F) umumnya dianggap sebagai suhu ruangan yang nyaman. Tidak dingin dan tidak panas, melainkan sejuk dan menyenangkan bagi kebanyakan orang. Ini adalah suhu di mana banyak orang merasa paling nyaman di dalam ruangan tanpa perlu lapisan pakaian tambahan."
+        },
+        "fever": {
+            "question": "Apakah 20°C itu demam?",
+            "answer": "Tidak, 20°C (68°F) bukan demam. Suhu tubuh manusia normal adalah sekitar 37°C (98.6°F). Demam biasanya dianggap mulai dari 38°C (100.4°F) atau lebih tinggi. 20°C sebenarnya jauh di bawah suhu tubuh normal dan akan sangat dingin bagi tubuh manusia."
+        },
+        "cooking": {
+            "question": "Berapa 20°C dalam Fahrenheit untuk memasak?",
+            "answer": "20°C sama dengan 68°F. Dalam memasak, suhu ini biasanya tidak digunakan untuk memasak itu sendiri tetapi mungkin relevan untuk:",
+            "items": [
+                "Mengembangkan adonan ragi (yang seringkali membutuhkan suhu yang lebih hangat)",
+                "Menyimpan bahan-bahan tertentu seperti beberapa jenis anggur atau minyak",
+                "Mengistirahatkan cokelat atau bahan sensitif suhu lainnya",
+                "Bahan bersuhu ruangan dalam resep kue"
+            ]
+        },
+        "wear": {
+            "question": "Apa yang harus saya pakai pada suhu 20°C?",
+            "answer": "Pada suhu 20°C (68°F), kebanyakan orang merasa nyaman memakai:",
+            "items": [
+                "Lengan panjang tipis atau lengan pendek",
+                "Celana panjang tipis atau jeans",
+                "Gaun atau rok tipis",
+                "Mungkin sweter ringan atau kardigan untuk malam yang lebih sejuk"
+            ]
+        },
+        "sleeping": {
+            "question": "Apakah 20°C baik untuk tidur?",
+            "answer": "20°C (68°F) berada di ujung atas kisaran suhu tidur yang ideal. Kebanyakan orang tidur paling nyenyak pada suhu antara 15-20°C (60-68°F). Beberapa orang mungkin menganggap 20°C agak hangat untuk tidur, sementara yang lain menganggapnya nyaman. Preferensi individu bervariasi, tetapi 20°C umumnya dapat diterima untuk tidur, terutama dengan perlengkapan tidur yang sesuai."
+        }
+    }
+}
