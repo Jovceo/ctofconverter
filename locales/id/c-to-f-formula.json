@@ -1,0 +1,269 @@
+{
+    "meta": {
+        "title": "Rumus Celsius ke Fahrenheit | Persamaan Konversi °C ke °F",
+        "description": "Pelajari rumus Celsius ke Fahrenheit: °F = (°C × 9/5) + 32. Penjelasan langkah demi langkah, derivasi, contoh, dan metode konversi cepat.",
+        "ogTitle": "Rumus Celsius ke Fahrenheit | Persamaan °C ke °F",
+        "ogDescription": "Pelajari rumus Celsius ke Fahrenheit: °F = (°C × 9/5) + 32. Penjelasan langkah demi langkah, derivasi, contoh, dan metode konversi cepat."
+    },
+    "header": {
+        "title": "Rumus Celsius ke Fahrenheit",
+        "tagline": "Pelajari persamaan matematika untuk mengonversi suhu dari Celsius ke Fahrenheit: °F = (°C × 9/5) + 32"
+    },
+    "breadcrumb": {
+        "home": "Beranda",
+        "current": "Rumus C ke F"
+    },
+    "mainSection": {
+        "title": "Rumus Celsius ke Fahrenheit",
+        "equation": "°F = (°C × 9/5) + 32",
+        "explanation1": "Rumus Celsius ke Fahrenheit adalah persamaan matematika yang digunakan untuk mengonversi suhu dari skala Celsius ke skala Fahrenheit. Rumus ini sangat penting untuk memahami konversi suhu dalam berbagai konteks, mulai dari ramalan cuaca hingga memasak.",
+        "explanation2": "Untuk menggunakan rumus C ke F, cukup kalikan suhu Celsius dengan 9/5 (atau 1,8) lalu tambahkan 32 pada hasilnya.",
+        "cta": "Perlu menghitung konversi dengan cepat? Gunakan Kalkulator C ke F kami untuk hasil instan."
+    },
+    "howTo": {
+        "title": "Cara Menggunakan Rumus",
+        "description": "Menggunakan rumus konversi Celsius ke Fahrenheit sangatlah mudah:",
+        "steps": [
+            "Ambil suhu dalam Celsius",
+            "Kalikan dengan 9/5 (atau 1,8)",
+            "Tambahkan 32 pada hasilnya"
+        ],
+        "exampleTitle": "Contoh:",
+        "exampleContent": "Konversi 20°C ke Fahrenheit",
+        "exampleCalculation": "20 × 9/5 = 36\n36 + 32 = 68°F"
+    },
+    "easyMethod": {
+        "title": "Metode Estimasi Cepat",
+        "description": "Untuk perkiraan mental cepat saat Anda tidak memegang kalkulator, gunakan versi sederhana dari rumus C ke F ini:",
+        "equation": "°F ≈ (°C × 2) + 30",
+        "content": "Metode ini tidak tepat namun memberikan perkiraan yang mendekati untuk suhu cuaca dan ruangan sehari-hari.",
+        "example": "Contoh: 20°C ≈ (20×2)+30 = 70°F (Nilai tepatnya adalah 68°F)"
+    },
+    "derivation": {
+        "title": "Derivasi Rumus Celsius ke Fahrenheit",
+        "intro": "Persamaan Celsius ke Fahrenheit diturunkan dari hubungan antara dua skala suhu tersebut. Titik referensi utamanya adalah titik beku dan titik didih air:",
+        "points": [
+            "Air membeku pada 0°C dan 32°F",
+            "Air mendidih pada 100°C and 212°F"
+        ],
+        "rangeExplanation": "Ini memberikan kita rentang 100-derajat untuk Celsius dan rentang 180-derajat untuk Fahrenheit di antara dua titik fisik yang sama. Oleh karena itu, setiap satu derajat Celsius setara dengan 1,8 derajat Fahrenheit (180/100 = 9/5 = 1,8).",
+        "steps": [
+            {
+                "title": "Tentukan Rasio",
+                "description": "Perbedaan antara titik beku dan titik didih adalah 100° di Celsius dan 180° di Fahrenheit.",
+                "visualization": "Rasio = 180°F / 100°C = 9/5 = 1,8"
+            },
+            {
+                "title": "Perhitungkan Offset",
+                "description": "Skala Fahrenheit memiliki offset 32° pada titik beku (0°C = 32°F).",
+                "visualization": "Jadi kita tambahkan 32 ke nilai yang telah dikonversi: °F = (°C × 9/5) + 32"
+            },
+            {
+                "title": "Rumus Akhir",
+                "description": "Menggabungkan kedua elemen tersebut memberikan kita rumus konversi C ke F yang lengkap.",
+                "visualization": "°F = (°C × 9/5) + 32"
+            }
+        ],
+        "tip": {
+            "title": "Mengapa 9/5 dan +32?",
+            "content": "Pecahan 9/5 (yang sama dengan 1,8) mewakili rasio antara ukuran derajat Fahrenheit dan Celsius. Angka +32 memperhitungkan titik nol yang berbeda dari kedua skala tersebut - 0°C sama dengan 32°F, jadi kita perlu menambahkan offset ini untuk mendapatkan suhu Fahrenheit yang benar."
+        }
+    },
+    "table": {
+        "title": "Tabel Konversi Celsius ke Fahrenheit",
+        "headers": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "description": "Deskripsi"
+        },
+        "rows": [
+            {
+                "c": "-40",
+                "f": "-40",
+                "d": "Suhu di mana Celsius dan Fahrenheit sama"
+            },
+            {
+                "c": "-18",
+                "f": "0",
+                "d": "Suhu pembekuan dalam Fahrenheit"
+            },
+            {
+                "c": "0",
+                "f": "32",
+                "d": "Titik beku air"
+            },
+            {
+                "c": "5",
+                "f": "41",
+                "d": "Suhu kulkas yang sejuk"
+            },
+            {
+                "c": "20",
+                "f": "68",
+                "d": "Suhu ruangan"
+            },
+            {
+                "c": "25",
+                "f": "77",
+                "d": "Hari hangat yang menyenangkan"
+            },
+            {
+                "c": "30",
+                "f": "86",
+                "d": "Hari yang panas"
+            },
+            {
+                "c": "37",
+                "f": "98.6",
+                "d": "Suhu rata-rata tubuh manusia"
+            },
+            {
+                "c": "100",
+                "f": "212",
+                "d": "Titik didih air"
+            },
+            {
+                "c": "200",
+                "f": "392",
+                "d": "Suhu oven sedang"
+            }
+        ]
+    },
+    "interactive": {
+        "title": "Demonstrasi Rumus Interaktif",
+        "prompt": "Masukkan suhu Celsius untuk melihat rumus C ke F bekerja dengan perhitungan langkah demi langkah:",
+        "labelCelsius": "Celsius (°C)",
+        "labelFahrenheit": "Fahrenheit (°F)",
+        "stepsTitle": "Langkah Perhitungan:",
+        "step1": "Langkah 1: Kalikan nilai Celsius dengan 9/5",
+        "step2": "Langkah 2: Tambahkan 32 ke hasilnya",
+        "finalResult": "Hasil Akhir:"
+    },
+    "otherFormulas": {
+        "title": "Rumus Konversi Suhu Lainnya",
+        "fToC": {
+            "title": "Rumus Fahrenheit ke Celsius",
+            "formula": "°C = (°F - 32) × 5/9",
+            "description": "Untuk mengonversi Fahrenheit ke Celsius, kurangi 32 dari suhu Fahrenheit, lalu kalikan dengan 5/9.",
+            "example": "Contoh: Konversi 68°F ke Celsius: (68 - 32) × 5/9 = 36 × 5/9 = 20°C",
+            "quickTitle": "Estimasi Cepat",
+            "quickFormula": "°C ≈ (°F - 30) ÷ 2",
+            "quickExample": "Contoh: 70°F ≈ (70-30)÷2 = 20°C (aslinya 21,1°C)"
+        },
+        "cToK": {
+            "title": "Rumus Celsius ke Kelvin",
+            "formula": "K = °C + 273.15",
+            "description": "Untuk mengonversi Celsius ke Kelvin, cukup tambahkan 273,15 ke suhu Celsius.",
+            "example": "Contoh: Konversi 25°C ke Kelvin: 25 + 273,15 = 298,15K",
+            "reverseTitle": "Rumus Kelvin ke Celsius",
+            "reverseFormula": "°C = K - 273.15",
+            "reverseExample": "Contoh: 300K = 300 - 273,15 = 26,85°C"
+        }
+    },
+    "example30": {
+        "title": "Cara Mengonversi 30°C ke Fahrenheit",
+        "intro": "Mari kita bahas langkah-langkah konversi 30°C ke Fahrenheit menggunakan persamaan Celsius ke Fahrenheit yang diakui secara resmi:",
+        "steps": [
+            {
+                "title": "Mulai dengan rumus",
+                "value": "°F = (°C × 9/5) + 32"
+            },
+            {
+                "title": "Masukkan nilai Celsius",
+                "value": "°F = (30 × 9/5) + 32"
+            },
+            {
+                "title": "Kalikan 30 dengan 9/5",
+                "value": "30 × 9/5 = 270/5 = 54"
+            },
+            {
+                "title": "Tambahkan 32 ke hasilnya",
+                "value": "54 + 32 = 86"
+            },
+            {
+                "title": "Hasil akhir",
+                "value": "30°C = 86°F"
+            }
+        ],
+        "approxNote": "Menggunakan metode estimasi: (30 × 2) + 30 = 90°F, yang merupakan perkiraan dekat untuk sebagian besar kebutuhan kalkulator Celsius ke Fahrenheit."
+    },
+    "commonMistakes": {
+        "title": "Kesalahan Umum Saat Mengonversi Celsius ke Fahrenheit",
+        "items": [
+            {
+                "bold": "Lupa menambahkan 32:",
+                "text": "Banyak orang mengalikan nilai Celsius dengan 1,8 tetapi lupa menambahkan offset 32 derajat di akhir."
+            },
+            {
+                "bold": "Menggunakan 5/9 alih-alih 9/5:",
+                "text": "Ingat bahwa derajat Fahrenheit lebih kecil, jadi angka pengali dari Celsius ke Fahrenheit harus lebih besar dari 1 (9/5 = 1,8)."
+            },
+            {
+                "bold": "Urutan operasi:",
+                "text": "Selalu lakukan perkalian (atau pembagian) sebelum menambahkan 32."
+            }
+        ]
+    },
+    "whenToUse": {
+        "title": "Kapan Anda Perlu Mengonversi Celsius ke Fahrenheit?",
+        "intro": "Memahami rumus C ke F sangat berguna dalam beberapa skenario dunia nyata:",
+        "items": [
+            {
+                "bold": "Ramalan Cuaca:",
+                "text": "Membandingkan laporan cuaca internasional saat bepergian antar negara yang menggunakan skala berbeda."
+            },
+            {
+                "bold": "Memasak dan Memanggang:",
+                "text": "Mengikuti resep yang menggunakan Fahrenheit dalam oven yang dikalibrasi ke Celsius, atau sebaliknya."
+            },
+            {
+                "bold": "Perjalanan Internasional:",
+                "text": "Menyetel termostat dan memahami iklim lokal selama perjalanan ke Amerika Serikat atau wilayah kekuasaannya."
+            },
+            {
+                "bold": "Pendidikan Sains:",
+                "text": "Memahami sifat fisik mendasar dari skala suhu dalam kimia dan fisika."
+            }
+        ]
+    },
+    "difference": {
+        "title": "Celsius vs Fahrenheit: Apa Perbedaannya?",
+        "p1": "Perbedaan utama antara Celsius dan Fahrenheit adalah titik awal dan ukuran derajatnya. Celsius didasarkan pada sistem metrik di mana 0° adalah titik beku air dan 100° adalah titik didihnya. Fahrenheit adalah skala imperial lama di mana air membeku pada 32° dan mendidih pada 212°.",
+        "p2": "Meskipun skala Fahrenheit lebih granular (180 derajat antara beku dan didih vs 100 di Celsius), skala Celsius jauh lebih umum dalam konteks ilmiah dan internasional. Anda dapat mempelajari cara mengubah Celsius ke Fahrenheit dengan mudah untuk nilai apa pun menggunakan alat khusus kami."
+    },
+    "vs": {
+        "title": "Rumus vs Kalkulator: Mana yang Harus Anda Gunakan?",
+        "intro": "Keputusan untuk menggunakan rumus Celsius ke Fahrenheit atau kalkulator online tergantung pada kebutuhan spesifik Anda:",
+        "items": [
+            {
+                "bold": "Gunakan Rumus saat:",
+                "text": "Anda berada di lingkungan kelas, sedang ujian, atau ingin melatih matematika mental menggunakan metode penggandaan mudah kami."
+            },
+            {
+                "bold": "Gunakan Kalkulator saat:",
+                "text": "Anda memiliki daftar panjang suhu untuk dikonversi, membutuhkan hasil desimal presisi tinggi, atau sedang terburu-buru saat memasak atau bepergian."
+            }
+        ],
+        "footer": "Kedua metode menggunakan logika matematika konsisten yang sama untuk membantu Anda memahami cara mengubah Celsius ke Fahrenheit secara akurat."
+    },
+    "faq": {
+        "title": "FAQ Konversi Suhu Spesifik",
+        "items": [
+            {
+                "question": "Pada suhu berapa Celsius dan Fahrenheit sama?",
+                "answer": "Kedua skala bertemu pada <strong>-40 derajat</strong>. Ini berarti -40°C sama persis dengan -40°F—titik keseimbangan termal antara kedua sistem tersebut."
+            },
+            {
+                "question": "Bagaimana cara mengonversi 37,3°C ke Fahrenheit untuk penggunaan medis?",
+                "answer": "Untuk suhu medis seperti 37,3°C, gunakan perhitungan: (37,3 × 1,8) + 32 = <strong>99,14°F</strong>. Ini sedikit di atas suhu tubuh rata-rata orang dewasa 98,6°F dan mungkin mengindikasikan demam ringan."
+            },
+            {
+                "question": "Bagaimana cara mengonversi 180°C ke Fahrenheit untuk memanggang?",
+                "answer": "Untuk pengaturan oven, konversinya adalah: (180 × 1,8) + 32 = <strong>356°F</strong>. Kebanyakan resep akan membulatkan angka ini menjadi 350°F atau 375°F tergantung pada presisi pemanggangan yang diperlukan dan kalibrasi oven."
+            }
+        ]
+    },
+    "footer": {
+        "calculatorLink": "Untuk konversi yang cepat dan akurat, coba kalkulator Celsius ke Fahrenheit kami."
+    }
+}

@@ -1,0 +1,111 @@
+{
+    "seo": {
+        "title": "Kalkulator C ke F: Konversi Suhu Cepat & Akurat",
+        "description": "Konverter Celsius ke Fahrenheit gratis dan ramah seluler. Dapatkan hasil instan dan akurat dengan panduan demam dan logika konversi langkah demi langkah."
+    },
+    "breadcrumb": {
+        "home": "Beranda",
+        "current": "Kalkulator C ke F"
+    },
+    "hero": {
+        "kicker": "Cepat & Profesional",
+        "title": "Kalkulator Celsius ke Fahrenheit",
+        "description": "Gunakan kalkulator C ke F ini untuk mengonversi suhu secara instan antar skala. Baik untuk pengecekan demam medis, memasak, atau sains, dapatkan hasil dengan akurasi 100% menggunakan rumus resmi: °F = (°C × 1.8) + 32."
+    },
+    "calculator": {
+        "modeTabs": {
+            "cToF": "°C ke °F",
+            "fToC": "°F ke °C"
+        },
+        "labels": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "enterValue": "Masukkan nilai"
+        },
+        "feverStatus": {
+            "normal": "Suhu tubuh normal",
+            "low": "Demam ringan",
+            "moderate": "Demam sedang",
+            "high": "Demam tinggi"
+        },
+        "actions": {
+            "copy": "Salin",
+            "clear": "Hapus",
+            "copied": "Disalin ke papan klip!"
+        }
+    },
+    "formula": {
+        "title": "Rumus Konversi",
+        "introCtoF": "Rumus standar untuk mengonversi Celsius ke Fahrenheit adalah:",
+        "introFtoC": "Untuk mengonversi kembali Fahrenheit ke Celsius:",
+        "tip": "Perkiraan cepat: Untuk estimasi cepat tanpa kalkulator, kalikan dua suhu Celsius dan tambahkan 30 untuk mendapatkan nilai Fahrenheit."
+    },
+    "commonTable": {
+        "title": "Konversi Suhu Umum",
+        "intro": "Gunakan tabel referensi ini untuk titik suhu paling umum yang ditemui dalam kehidupan sehari-hari:",
+        "columns": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "description": "Keterangan"
+        },
+        "descriptions": {
+            "equilibrium": "Ekuilibrium Skala",
+            "freezing": "Titik beku air",
+            "room": "Suhu ruangan nyaman standar",
+            "body": "Suhu rata-rata tubuh manusia",
+            "boiling": "Titik didih air"
+        }
+    },
+    "howTo": {
+        "title": "Cara Menggunakan Konverter Suhu",
+        "intro": "Kalkulator Celsius ke Fahrenheit kami dirancang untuk kecepatan dan keandalan. Cukup ikuti langkah-langkah berikut:",
+        "steps": [
+            "Pilih Mode: Beralih antara °C ke °F atau °F ke °C.",
+            "Masukkan Nilai: Ketik suhu Anda di kotak input.",
+            "Hasil Instan: Nilai yang dikonversi muncul segera saat Anda mengetik."
+        ],
+        "linkPrefix": "Mencari perhitungan matematikanya? Kunjungi panduan detail kami tentang ",
+        "linkText": "rumus Celsius ke Fahrenheit",
+        "linkSuffix": "."
+    },
+    "feverTable": {
+        "title": "Referensi Suhu Tubuh & Demam",
+        "columns": {
+            "celsius": "Celsius",
+            "fahrenheit": "Fahrenheit",
+            "condition": "Kondisi"
+        },
+        "conditions": {
+            "normal": "Rentang Normal",
+            "low": "Demam Ringan",
+            "moderate": "Demam Sedang",
+            "high": "Demam Tinggi"
+        },
+        "disclaimer": "Catatan: Selalu gunakan termometer klinis untuk keputusan kesehatan. Alat ini hanya untuk konversi cepat."
+    },
+    "faqs": {
+        "title": "Pertanyaan yang Sering Diajukan",
+        "items": [
+            {
+                "q": "Bagaimana cara konversi Celsius ke Fahrenheit?",
+                "a": "Gunakan rumus: °F = (°C × 9/5) + 32. Contohnya, untuk konversi 40 Celsius ke Fahrenheit: (40 × 9/5) + 32 = 104°F."
+            },
+            {
+                "q": "Mengapa rumusnya (°C × 9/5) + 32?",
+                "a": "Skala Fahrenheit dan Celsius memiliki titik nol dan ukuran derajat yang berbeda. Rasio ukuran derajat adalah 9/5, dan angka 32 mengompensasi perbedaan antara kedua skala pada titik nolnya."
+            },
+            {
+                "q": "Pada suhu berapa Celsius dan Fahrenheit sama?",
+                "a": "Pada -40 derajat, skala Celsius dan Fahrenheit sama: -40°C = -40°F."
+            },
+            {
+                "q": "Bagaimana cara konversi C ke F dengan mudah?",
+                "a": "Untuk perkiraan cepat, kalikan dua suhu Celsius dan tambahkan 30. Contoh: 20°C × 2 = 40, + 30 = 70°F (hasil sebenarnya adalah 68°F)."
+            },
+            {
+                "q": "Bagaimana cara menghitung C dari F?",
+                "a": "Gunakan rumus pasti: °C = (°F - 32) × 5/9. Contoh: 100°F ke Celsius: (100 - 32) × 5/9 = 37.8°C."
+            }
+        ]
+    }
+}

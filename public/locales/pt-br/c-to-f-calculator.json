@@ -1,0 +1,111 @@
+{
+    "seo": {
+        "title": "Calculadora de C para F: Conversão de Temperatura Rápida e Precisa",
+        "description": "Conversor de Celsius para Fahrenheit gratuito e responsivo. Obtenha resultados instantâneos e precisos com guia de febre e lógica de conversão passo a passo."
+    },
+    "breadcrumb": {
+        "home": "Início",
+        "current": "Calculadora de C para F"
+    },
+    "hero": {
+        "kicker": "Rápido e Profissional",
+        "title": "Calculadora de Celsius para Fahrenheit",
+        "description": "Use esta calculadora de C para F para converter temperaturas instantaneamente. Seja para controle de febre, culinária ou ciência, obtenha resultados com 100% de precisão usando a fórmula oficial: °F = (°C × 1,8) + 32."
+    },
+    "calculator": {
+        "modeTabs": {
+            "cToF": "°C para °F",
+            "fToC": "°F para °C"
+        },
+        "labels": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "enterValue": "Digite o valor"
+        },
+        "feverStatus": {
+            "normal": "Temperatura corporal normal",
+            "low": "Febre baixa",
+            "moderate": "Febre moderada",
+            "high": "Febre alta"
+        },
+        "actions": {
+            "copy": "Copiar",
+            "clear": "Limpar",
+            "copied": "Copiado para a área de transferência!"
+        }
+    },
+    "formula": {
+        "title": "Fórmula de Conversão",
+        "introCtoF": "A fórmula padrão para converter Celsius em Fahrenheit é:",
+        "introFtoC": "Para converter Fahrenheit de volta para Celsius:",
+        "tip": "Aproximação rápida: Para uma estimativa rápida sem calculadora, dobre a temperatura Celsius e some 30 para obter o valor em Fahrenheit."
+    },
+    "commonTable": {
+        "title": "Conversões de Temperatura Comuns",
+        "intro": "Use esta tabela de referência para os pontos de temperatura mais típicos do dia a dia:",
+        "columns": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "description": "Descrição"
+        },
+        "descriptions": {
+            "equilibrium": "Equilíbrio das Escalas",
+            "freezing": "Ponto de congelamento da água",
+            "room": "Temperatura ambiente de conforto padrão",
+            "body": "Temperatura média do corpo humano",
+            "boiling": "Ponto de ebulição da água"
+        }
+    },
+    "howTo": {
+        "title": "Como Usar o Conversor de Temperatura",
+        "intro": "Nossa calculadora de Celsius para Fahrenheit foi projetada para ser rápida e confiável. Basta seguir estes passos:",
+        "steps": [
+            "Selecione o Modo: Alterne entre °C para °F ou °F para °C.",
+            "Digite o Valor: Digite a temperatura na caixa de entrada.",
+            "Resultado Instantâneo: O valor convertido aparece imediatamente enquanto você digita."
+        ],
+        "linkPrefix": "Procurando a matemática por trás? Visite nosso guia detalhado sobre a ",
+        "linkText": "fórmula de Celsius para Fahrenheit",
+        "linkSuffix": "."
+    },
+    "feverTable": {
+        "title": "Referência de Temperatura Corporal e Febre",
+        "columns": {
+            "celsius": "Celsius",
+            "fahrenheit": "Fahrenheit",
+            "condition": "Condição"
+        },
+        "conditions": {
+            "normal": "Intervalo Normal",
+            "low": "Febre Baixa",
+            "moderate": "Febre Moderada",
+            "high": "Febre Alta"
+        },
+        "disclaimer": "Nota: Sempre use um termômetro clínico para decisões de saúde. Esta ferramenta é apenas para conversão rápida."
+    },
+    "faqs": {
+        "title": "Perguntas Frequentes",
+        "items": [
+            {
+                "q": "Como converter Celsius para Fahrenheit?",
+                "a": "Use a fórmula: °F = (°C × 9/5) + 32. Por exemplo, para converter 40 Celsius em Fahrenheit: (40 × 9/5) + 32 = 104°F."
+            },
+            {
+                "q": "Por que a fórmula é (°C × 9/5) + 32?",
+                "a": "As escalas Fahrenheit e Celsius têm pontos zero e tamanhos de graus diferentes. A proporção é de 9/5, e o 32 compensa o deslocamento entre as duas escalas em seus pontos zero."
+            },
+            {
+                "q": "Em qual temperatura Celsius e Fahrenheit são iguais?",
+                "a": "A -40 graus, as escalas Celsius e Fahrenheit são iguais: -40°C = -40°F."
+            },
+            {
+                "q": "Como converter C para F facilmente?",
+                "a": "Para uma aproximação rápida, dobre a temperatura Celsius e some 30. Exemplo: 20°C × 2 = 40, + 30 = 70°F (o valor real é 68°F)."
+            },
+            {
+                "q": "Como calcular C a partir de F?",
+                "a": "Use a fórmula exata: °C = (°F - 32) × 5/9. Exemplo: 100°F para Celsius: (100 - 32) × 5/9 = 37,8°C."
+            }
+        ]
+    }
+}

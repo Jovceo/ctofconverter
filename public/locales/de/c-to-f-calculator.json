@@ -1,0 +1,111 @@
+{
+    "seo": {
+        "title": "C-zu-F-Rechner: Schnelle und genaue Temperaturumrechnung",
+        "description": "Kostenloser, mobilfreundlicher Celsius-zu-Fahrenheit-Umrechner. Erhalten Sie sofortige, genaue Ergebnisse mit Fieber-Leitfaden und schrittweiser Umrechnungslogik."
+    },
+    "breadcrumb": {
+        "home": "Startseite",
+        "current": "C-zu-F-Rechner"
+    },
+    "hero": {
+        "kicker": "Schnell & Professionell",
+        "title": "Celsius-zu-Fahrenheit-Rechner",
+        "description": "Verwenden Sie diesen C-zu-F-Rechner, um Temperaturen sofort zwischen den Skalen umzurechnen. Ob für die medizinische Fieberprüfung, beim Kochen oder in der Wissenschaft – erhalten Sie Ergebnisse mit 100 % Genauigkeit unter Verwendung der offiziellen Formel: °F = (°C × 1,8) + 32."
+    },
+    "calculator": {
+        "modeTabs": {
+            "cToF": "°C zu °F",
+            "fToC": "°F zu °C"
+        },
+        "labels": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "enterValue": "Wert eingeben"
+        },
+        "feverStatus": {
+            "normal": "Normale Körpertemperatur",
+            "low": "Erhöhte Temperatur",
+            "moderate": "Mäßiges Fieber",
+            "high": "Hohes Fieber"
+        },
+        "actions": {
+            "copy": "Kopieren",
+            "clear": "Leeren",
+            "copied": "In die Zwischenablage kopiert!"
+        }
+    },
+    "formula": {
+        "title": "Umrechnungsformel",
+        "introCtoF": "Die Standardformel zur Umrechnung von Celsius in Fahrenheit lautet:",
+        "introFtoC": "So rechnen Sie von Fahrenheit zurück in Celsius:",
+        "tip": "Schnelle Schätzung: Für eine schnelle Schätzung ohne Rechner verdoppeln Sie die Celsius-Temperatur und addieren 30, um den Fahrenheit-Wert zu erhalten."
+    },
+    "commonTable": {
+        "title": "Häufige Temperaturumrechnungen",
+        "intro": "Verwenden Sie diese Referenztabelle für die typischsten Temperaturpunkte im täglichen Leben:",
+        "columns": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "description": "Beschreibung"
+        },
+        "descriptions": {
+            "equilibrium": "Gleichgewicht der Skalen",
+            "freezing": "Gefrierpunkt von Wasser",
+            "room": "Standard-Komfort-Zimmertemperatur",
+            "body": "Durchschnittliche menschliche Körpertemperatur",
+            "boiling": "Siedepunkt von Wasser"
+        }
+    },
+    "howTo": {
+        "title": "So verwenden Sie den Temperaturumrechner",
+        "intro": "Unser Celsius-zu-Fahrenheit-Rechner ist auf Schnelligkeit und Zuverlässigkeit ausgelegt. Folgen Sie einfach diesen Schritten:",
+        "steps": [
+            "Wählen Sie den Modus: Wechseln Sie zwischen °C zu °F oder °F zu °C.",
+            "Wert eingeben: Geben Sie Ihre Temperatur in das Eingabefeld ein.",
+            "Sofortiges Ergebnis: Der umgerechnete Wert erscheint sofort während der Eingabe."
+        ],
+        "linkPrefix": "Suchen Sie nach der mathematischen Grundlage? Besuchen Sie unseren detaillierten Leitfaden zur ",
+        "linkText": "Celsius-zu-Fahrenheit-Formel",
+        "linkSuffix": "."
+    },
+    "feverTable": {
+        "title": "Körpertemperatur- & Fieber-Referenz",
+        "columns": {
+            "celsius": "Celsius",
+            "fahrenheit": "Fahrenheit",
+            "condition": "Zustand"
+        },
+        "conditions": {
+            "normal": "Normalbereich",
+            "low": "Erhöhte Temperatur",
+            "moderate": "Mäßiges Fieber",
+            "high": "Hohes Fieber"
+        },
+        "disclaimer": "Hinweis: Verwenden Sie für Gesundheitsentscheidungen immer ein klinisches Thermometer. Dieses Tool dient nur der schnellen Umrechnung."
+    },
+    "faqs": {
+        "title": "Häufig gestellte Fragen",
+        "items": [
+            {
+                "q": "Wie rechne ich Celsius in Fahrenheit um?",
+                "a": "Verwenden Sie die Formel: °F = (°C × 9/5) + 32. Beispiel: 40 Grad Celsius entsprechen (40 × 9/5) + 32 = 104°F."
+            },
+            {
+                "q": "Warum lautet die Formel (°C × 9/5) + 32?",
+                "a": "Fahrenheit- und Celsius-Skalen haben unterschiedliche Nullpunkte und Gradgrößen. Das Verhältnis der Gradgrößen beträgt 9/5, und die 32 gleicht den Versatz zwischen den beiden Skalen an ihren Nullpunkten aus."
+            },
+            {
+                "q": "Bei welcher Temperatur sind Celsius und Fahrenheit gleich?",
+                "a": "Bei -40 Grad sind die Celsius- und Fahrenheit-Skalen gleich: -40°C = -40°F."
+            },
+            {
+                "q": "Wie rechne ich C einfach in F um?",
+                "a": "Für eine grobe Schätzung verdoppeln Sie die Celsius-Temperatur und addieren 30. Das ergibt einen guten Näherungswert. Beispiel: 20°C × 2 = 40, + 30 = 70°F (tatsächlich 68°F)."
+            },
+            {
+                "q": "Wie berechnet man C aus F?",
+                "a": "Für die exakte Umrechnung von Fahrenheit in Celsius verwenden Sie: °C = (°F - 32) × 5/9. Beispiel: 100°F entsprechen (100 - 32) × 5/9 = 37,8°C."
+            }
+        ]
+    }
+}

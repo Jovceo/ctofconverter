@@ -1,0 +1,102 @@
+{
+    "seo": {
+        "title": "20°C en °F : Conversion de Température + Guide de Température Ambiante",
+        "description": "Convertissez 20 degrés Celsius en Fahrenheit rapidement. Apprenez que 20°C égalent 68°F, consultez les étapes du calcul et comprenez sa signification en tant que température ambiante."
+    },
+    "comfortGuide": {
+        "title": "Guide de Confort Thermique",
+        "subtitle": "Comprendre les Niveaux de Confort Thermique",
+        "intro": "20°C (68°F) se situent dans la plage de température confortable pour la plupart des gens. Voici comment cela se compare à d'autres températures courantes :",
+        "chart": {
+            "cold": {
+                "label": "Frais",
+                "value": "10-15°C",
+                "desc": "50-59°F<br>Temps pour une veste légère"
+            },
+            "moderate": {
+                "label": "Confortable",
+                "value": "18-22°C",
+                "desc": "64-72°F<br>Température ambiante idéale"
+            },
+            "warm": {
+                "label": "Chaud",
+                "value": "25-30°C",
+                "desc": "77-86°F<br>Temps pour un t-shirt"
+            }
+        },
+        "table": {
+            "headers": {
+                "temperature": "Température",
+                "description": "Description",
+                "typicalUse": "Utilisation Typique"
+            },
+            "rows": {
+                "0c": {
+                    "temp": "0°C (32°F)",
+                    "desc": "Point de congélation de l'eau",
+                    "use": "Température du réfrigérateur, temps hivernal"
+                },
+                "10c": {
+                    "temp": "10°C (50°F)",
+                    "desc": "Frais",
+                    "use": "Temps de printemps/automne, veste légère nécessaire"
+                },
+                "20c": {
+                    "temp": "20°C (68°F)",
+                    "desc": "Température ambiante",
+                    "use": "Température intérieure idéale, temps confortable"
+                },
+                "30c": {
+                    "temp": "30°C (86°F)",
+                    "desc": "Chaud",
+                    "use": "Temps d'été, vêtements légers"
+                },
+                "37c": {
+                    "temp": "37°C (98.6°F)",
+                    "desc": "Température corporelle",
+                    "use": "Température corporelle humaine normale"
+                },
+                "100c": {
+                    "temp": "100°C (212°F)",
+                    "desc": "Point d'ébullition de l'eau",
+                    "use": "Cuisiner, faire bouillir de l'eau"
+                }
+            }
+        },
+        "note": "<strong>Note sur le confort personnel :</strong> Les préférences individuelles de température peuvent varier en fonction de facteurs tels que l'humidité, le mouvement de l'air, les vêtements et le métabolisme personnel. Ce qui semble confortable pour une personne peut paraître frais ou chaud pour une autre."
+    },
+    "faq": {
+        "warmOrCold": {
+            "question": "Est-ce que 20°C c'est chaud ou froid ?",
+            "answer": "20°C (68°F) sont généralement considérés comme une température ambiante confortable. Ce n'est ni froid ni chaud, mais plutôt doux et agréable pour la plupart des gens. C'est la température à laquelle beaucoup de gens se sentent le plus à l'aise à l'intérieur sans avoir besoin de couches de vêtements supplémentaires."
+        },
+        "fever": {
+            "question": "Est-ce que 20°C c'est de la fièvre ?",
+            "answer": "Non, 20°C (68°F) ce n'est pas de la fièvre. La température normale du corps humain est d'environ 37°C (98.6°F). Une fièvre est généralement considérée à partir de 38°C (100.4°F) ou plus. 20°C sont en réalité bien inférieurs à la température corporelle normale et seraient dangereusement froids pour un corps humain."
+        },
+        "cooking": {
+            "question": "Que valent 20°C en Fahrenheit pour la cuisine ?",
+            "answer": "20°C égalent 68°F. En cuisine, cette température n'est pas typiquement utilisée pour la cuisson elle-même mais peut être pertinente pour :",
+            "items": [
+                "La levée de la pâte à levure (qui nécessite souvent des températures plus chaudes)",
+                "La conservation de certains ingrédients comme certains vins ou huiles",
+                "Le repos du chocolat ou d'autres ingrédients sensibles à la température",
+                "Les ingrédients à température ambiante dans les recettes de pâtisserie"
+            ]
+        },
+        "wear": {
+            "question": "Que porter à 20°C ?",
+            "answer": "À 20°C (68°F), la plupart des gens trouvent confortable de porter :",
+            "items": [
+                "Des manches longues légères ou des manches courtes",
+                "Un pantalon léger ou un jean",
+                "Une robe ou une jupe légère",
+                "Éventuellement un pull léger ou un gilet pour les soirées plus fraîches"
+            ]
+        },
+        "sleeping": {
+            "question": "Est-ce que 20°C c'est bon pour dormir ?",
+            "answer": "20°C (68°F) se situent à l'extrémité supérieure de la plage de température idéale pour dormir. La plupart des gens dorment mieux à des températures comprises entre 15 et 20°C (60-68°F). Certains peuvent trouver 20°C légèrement chaud pour dormir, tandis que d'autres trouvent cela confortable. Les préférences individuelles varient, mais 20°C sont généralement acceptables pour dormir, surtout avec une literie appropriée."
+        }
+    }
+}

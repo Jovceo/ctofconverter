@@ -1,0 +1,86 @@
+{
+    "meta": {
+        "title": "About Us - Ctofconverter",
+        "description": "Learn about Ctofconverter, your reliable resource for temperature conversion between Celsius and Fahrenheit.",
+        "ogTitle": "About Us - Ctofconverter",
+        "ogDescription": "Learn about Ctofconverter, your reliable resource for temperature conversion between Celsius and Fahrenheit."
+    },
+    "header": {
+        "title": "About Us - Ctofconverter",
+        "tagline": "Learn about our mission, team, and commitment to providing accurate temperature conversion tools."
+    },
+    "mission": {
+        "title": "Our Mission",
+        "content": [
+            "At Ctofconverter, our mission is to provide simple, accurate, and reliable temperature conversion tools for everyone. Whether you're a student, a professional, or someone who just needs to convert temperatures in daily life, we're here to make the process quick and effortless.",
+            "We believe that accessing temperature conversion tools should be easy and straightforward, without any barriers or complications. Our website is designed to be intuitive, user-friendly, and accessible to people of all ages and technical backgrounds."
+        ]
+    },
+    "story": {
+        "title": "Our Story",
+        "content": [
+            "Ctofconverter was founded in 2025 by a team of passionate developers and designers who recognized the need for a simple, reliable temperature conversion tool. We noticed that many existing tools were either too complicated, filled with ads, or lacked the accuracy needed for professional use.",
+            "With this in mind, we set out to create a website that focuses solely on providing the best possible temperature conversion experience. We've worked tirelessly to ensure that our tools are accurate, our interface is clean and intuitive, and our content is helpful and informative."
+        ]
+    },
+    "features": {
+        "title": "Our Features",
+        "items": [
+            {
+                "icon": "📏",
+                "title": "Accurate Conversions",
+                "description": "Our conversion tools use precise mathematical formulas to ensure accurate results every time."
+            },
+            {
+                "icon": "📱",
+                "title": "Mobile Friendly",
+                "description": "Our website is fully responsive, making it easy to use on any device, from smartphones to desktop computers."
+            },
+            {
+                "icon": "⚡",
+                "title": "Instant Results",
+                "description": "Get your temperature conversions instantly, without any delay or waiting time."
+            },
+            {
+                "icon": "📚",
+                "title": "Educational Content",
+                "description": "Learn about temperature scales, conversion formulas, and practical applications with our informative guides."
+            },
+            {
+                "icon": "📊",
+                "title": "Conversion Charts",
+                "description": "Access our comprehensive conversion charts for quick reference and easy comparison."
+            },
+            {
+                "icon": "🔒",
+                "title": "Privacy Focused",
+                "description": "We respect your privacy and never collect or store any personal information without your consent."
+            }
+        ]
+    },
+    "team": {
+        "title": "Meet Our Team",
+        "members": [
+            {
+                "name": "Sarah Johnson",
+                "role": "Founder & Developer",
+                "description": "Sarah has over 10 years of experience in web development and a passion for creating useful tools."
+            },
+            {
+                "name": "Michael Chen",
+                "role": "Designer",
+                "description": "Michael specializes in user interface design and creating intuitive, visually appealing websites."
+            },
+            {
+                "name": "Emily Rodriguez",
+                "role": "Content Writer",
+                "description": "Emily creates informative, easy-to-understand content that helps users make the most of our tools."
+            }
+        ]
+    },
+    "contact": {
+        "title": "Contact Us",
+        "text": "Have a question, suggestion, or feedback? We'd love to hear from you! Feel free to reach out to us via email:",
+        "email": "lhqlvp@gmail.com"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "title": "关于我们 - Ctofconverter",
+    "description": "了解 Ctofconverter，您可靠的摄氏度和华氏度温度转换资源。",
+    "content": "<div class=\"about-card\"><h2>我们的使命</h2><p>在 Ctofconverter，我们的使命是为每个人提供简单、准确和可靠的温度转换工具。无论您是学生、专业人士，还是日常生活中需要转换温度的人，我们都在这里让这个过程快速而轻松。</p><p>我们相信，访问温度转换工具应该简单直接，没有任何障碍或复杂性。我们的网站设计直观、用户友好，适合所有年龄和技术背景的人使用。</p></div><div class=\"about-card\"><h2>我们的故事</h2><p>Ctofconverter 由一群充满热情的开发人员和设计师于 2025 年创立，他们认识到需要一个简单、可靠的温度转换工具。我们注意到许多现有工具要么过于复杂，要么充满广告，要么缺乏专业使用所需的准确性。</p><p>考虑到这一点，我们着手创建一个专注于提供最佳温度转换体验的网站。我们不懈努力，确保我们的工具准确，界面简洁直观，内容有用且信息丰富。</p></div><div class=\"about-card\"><h2>联系我们</h2><p>有问题、建议或反馈吗？我们很乐意听取您的意见！请随时通过电子邮件与我们联系：</p><a href=\"mailto:lhqlvp@gmail.com\" class=\"contact-email\">lhqlvp@gmail.com</a></div><style>.about-card{background:#fff;border-radius:12px;padding:2.5rem;margin-bottom:2rem;box-shadow:0 4px 6px rgba(0,0,0,0.05)}.about-card h2{color:#2c3e50;margin:0 0 1.5rem 0;font-size:1.75rem}.about-card p{line-height:1.7;color:#4a5568;margin-bottom:1.25rem}.contact-email{display:inline-block;margin-top:1rem;font-weight:600;color:#3182ce;text-decoration:none;font-size:1.1rem}.contact-email:hover{text-decoration:underline}</style>"
+}
