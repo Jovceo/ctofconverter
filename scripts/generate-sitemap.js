@@ -230,10 +230,35 @@ function generateSitemap() {
         if (a.priority === 1.0 && b.priority !== 1.0) return -1;
         if (b.priority === 1.0 && a.priority !== 1.0) return 1;
 
-        // 规则 3: 同等 priority，按日期倒序（最新的在前）
-        const dateA = new Date(a.lastmod);
-        const dateB = new Date(b.lastmod);
-        return dateB - dateA;
+        // 规则 3: 按页面 Slug 分组排序 (把相同页面的不同语言版本聚在一起)
+        // 提取 Slug (去除 locale 前缀)
+        const getSlug = (loc) => {
+            const relativePath = loc.replace(SITE_URL, '');
+            const parts = relativePath.split('/').filter(p => p);
+
+            // 如果第一段是 locale 代码 (且不是 'en'，因为 'en' 没有 URL 前缀)，则认为是 locale
+            // 注意：generateSitemap 中英文 URL 没有 /en/ 前缀，所以这里只需要检测是否存在于 LOCALES 中
+            // 且我们的页面 filename 不会和 locale 代码重名
+            if (parts.length > 0 && LOCALES.includes(parts[0])) {
+                return parts.slice(1).join('/');
+            }
+            return parts.join('/');
+        };
+
+        const slugA = getSlug(a.loc);
+        const slugB = getSlug(b.loc);
+
+        if (slugA < slugB) return -1;
+        if (slugA > slugB) return 1;
+
+        // 规则 4: 同一个 Slug 下，英文版 (URL 最短，无前缀) 排在最前
+        // 简单的逻辑是：长度短的在前 (前提是 slug 相同，那么差异仅在于 locale 前缀)
+        if (a.loc.length !== b.loc.length) {
+            return a.loc.length - b.loc.length;
+        }
+
+        // 规则 5: 其他语言按字母顺序
+        return a.loc.localeCompare(b.loc);
     });
 
     const xmlRows = allEntries.map(entry => `  <url>
