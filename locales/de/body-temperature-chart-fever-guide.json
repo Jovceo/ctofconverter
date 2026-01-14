@@ -1,0 +1,267 @@
+{
+    "meta": {
+        "title": "Fieber-Tabelle & Körpertemperatur: Guide für Celsius & Fahrenheit",
+        "description": "Vollständiger Ratgeber zu Fieber und Körpertemperatur mit Celsius-Fahrenheit-Umrechnungstabellen. Erfahren Sie mehr über Normalbereiche und wann Sie zum Arzt müssen.",
+        "ogTitle": "Fieber-Tabelle & Ratgeber: Erwachsene & Kinder",
+        "ogDescription": "Umfassende Fieber-Tabellen und Gesundheitsrichtlinien für alle Altersgruppen."
+    },
+    "nav": {
+        "home": "Home",
+        "page": "Körpertemperatur-Ratgeber"
+    },
+    "intro": {
+        "title": "Körpertemperatur & Fieber-Ratgeber: Erwachsene & Kinder",
+        "tagline": "Ihre Referenz für Celsius und Fahrenheit mit Fieber-Grenzwerten, Tabellen und medizinischem Rat.",
+        "featuredSnippet": {
+            "title": "Was ist eine normale Körpertemperatur?",
+            "content": "Die normale Körpertemperatur für Erwachsene liegt typischerweise zwischen {normalRange}. Eine Temperatur von {feverThreshold} oder höher gilt im Allgemeinen als {fever}."
+        }
+    },
+    "keyInfo": {
+        "normal": {
+            "label": "✅ Normale Temperatur",
+            "value": "36,5–37,5°C (97,7–99,5°F)"
+        },
+        "warning": {
+            "label": "⚠️ Fieber-Grenzwert",
+            "value": "38,0°C (100,4°F)"
+        },
+        "danger": {
+            "label": "🚨 Hohes Fieber",
+            "value": "39,0°C (102,2°F)+"
+        }
+    },
+    "converter": {
+        "title": "Schnell-Umrechner Celsius ↔ Fahrenheit",
+        "placeholder": "Temperatur eingeben",
+        "celsius": "Celsius (°C)",
+        "fahrenheit": "Fahrenheit (°F)",
+        "btn": "Umrechnen",
+        "error": "Bitte geben Sie einen gültigen Temperaturwert ein",
+        "feverCriteria": "Dies entspricht den Fieber-Kriterien. Ruhen Sie sich aus und konsultieren Sie einen Arzt.",
+        "elevatedCriteria": "Leicht erhöhte Temperatur. Symptome beobachten und viel trinken.",
+        "normalCriteria": "Normaler Temperaturbereich.",
+        "belowNormalCriteria": "Leicht unter Normalwert oder Kältegefühl."
+    },
+    "assessment": {
+        "title": "Interaktive Temperatur-Bewertung",
+        "person": {
+            "label": "Person wählen:",
+            "adult": "Erwachsener",
+            "child": "Kind",
+            "infant": "Säugling"
+        },
+        "temp": {
+            "label": "Aktuelle Temperatur:",
+            "unitC": "Celsius (°C)",
+            "unitF": "Fahrenheit (°F)"
+        },
+        "result": {
+            "recPrefix": "Empfehlung:",
+            "analysisPrefix": "Analyse für {person}:"
+        },
+        "statuses": {
+            "hypothermia": "Unterkühlung",
+            "normal": "Normal",
+            "elevated": "Leicht erhöht",
+            "lowGrade": "Leichtes Fieber",
+            "fever": "Fieber",
+            "moderate": "Mäßiges Fieber",
+            "high": "Hohes Fieber",
+            "emergency": "Fieber / Notfall",
+            "hyperpyrexia": "Hyperpyrexie"
+        },
+        "severities": {
+            "normal": "Normal",
+            "warning": "Warnung",
+            "mild": "Mild",
+            "moderate": "Mäßig",
+            "high": "Hoch",
+            "danger": "Gefahr",
+            "critical": "Kritisch",
+            "highRisk": "Hohes Risiko",
+            "highDanger": "Hohe Gefahr",
+            "severe": "Schwerwiegend",
+            "severeDanger": "Schwere Gefahr"
+        },
+        "advice": {
+            "infant": {
+                "hypo": "Dringend: Unterkühlung bei Säuglingen ist ein medizinischer Notfall. Vorsichtig wärmen und sofort einen Arzt kontaktieren.",
+                "normal": "Gesunder Bereich für einen Säugling. Auf bequeme Kleidung achten.",
+                "elevated": "Engmaschig überwachen. Bei Säuglingen unter 3 Monaten bei jeder Erhöhung einen Arzt kontaktieren.",
+                "emergency": "Dringende ärztliche Konsultation erforderlich. Fieber bei Säuglingen kann ernsthaft sein."
+            },
+            "child": {
+                "hypo": "Wärmen Sie das Kind auf. Bei Apathie oder dauerhaftem Zittern einen Arzt aufsuchen.",
+                "normal": "Gesunder Bereich. Kein Handlungsbedarf, sofern keine anderen Symptome vorliegen.",
+                "lowGrade": "Ruhe und Flüssigkeit. Arzt aufsuchen, wenn das Fieber länger als 24 Stunden anhält.",
+                "high": "Ärztlichen Rat einholen. Fiebersenkende Mittel nur nach Rücksprache mit dem Kinderarzt verwenden."
+            },
+            "adult": {
+                "hypo": "Aufwärmen. Wenn die Körperkerntemperatur unter 35°C (95°F) bleibt, Notaufnahme aufsuchen.",
+                "normal": "Gesunde Temperatur. Faktoren wie Aktivität oder Tageszeit können dies beeinflussen.",
+                "lowGrade": "Symptome beobachten. Ruhe und Flüssigkeitszufuhr sind meist ausreichend.",
+                "fever": "Fiebersenker in Betracht ziehen. Arzt aufsuchen, wenn das Fieber länger als 3 Tage anhält.",
+                "high": "Dringend: Mögliche Hyperpyrexie. Sofort medizinische Hilfe suchen."
+            }
+        }
+    },
+    "chart": {
+        "title": "Umfassende Temperatur-Referenztabelle (Erwachsene & Kinder)",
+        "scrollHint": "← Auf dem Handy horizontal scrollen für die ganze Tabelle →",
+        "imgAlt": "Fieber-Tabelle mit Celsius-Fahrenheit-Umrechnung und Fieber-Grenzwerten",
+        "imgCaption": "Visueller Guide für Fiebertemperaturen in Celsius und Fahrenheit",
+        "headers": {
+            "status": "Status",
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "adultAdvice": "Rat für Erwachsene",
+            "childAdvice": "Rat für Kinder"
+        },
+        "rows": {
+            "hypothermia": {
+                "status": "Unterkühlung",
+                "c": "<36,0°C",
+                "f": "<96,8°F",
+                "adult": "Wärmen, beobachten",
+                "child": "Sofort wärmen, Arzt rufen"
+            },
+            "normal": {
+                "status": "Normalbereich",
+                "c": "36,5–37,5°C",
+                "f": "97,7–99,5°F",
+                "adult": "Gesund",
+                "child": "Gesund"
+            },
+            "elevated": {
+                "status": "Leicht erhöht",
+                "c": "37,6–37,9°C",
+                "f": "99,7–100,2°F",
+                "adult": "Beobachten, trinken",
+                "child": "Überwachen, Ruhe"
+            },
+            "lowGrade": {
+                "status": "Leichtes Fieber",
+                "c": "38,0–38,9°C",
+                "f": "100,4–102,0°F",
+                "adult": "Ruhe, ggf. Medikamente",
+                "child": "Engmaschig überwachen, Arzt rufen"
+            },
+            "moderate": {
+                "status": "Mäßiges Fieber",
+                "c": "39,0–39,9°C",
+                "f": "102,2–103,8°F",
+                "adult": "Ärztlichen Rat einholen",
+                "child": "Sofort zum Arzt"
+            },
+            "high": {
+                "status": "Hohes Fieber",
+                "c": "40,0–41,0°C",
+                "f": "104,0–105,8°F",
+                "adult": "Notfallversorgung",
+                "child": "Notfallversorgung"
+            },
+            "hyperpyrexia": {
+                "status": "Gefährliche Hyperpyrexie",
+                "c": ">41,0°C",
+                "f": ">105,8°F",
+                "adult": "Medizinischer Notfall",
+                "child": "Medizinischer Notfall"
+            }
+        }
+    },
+    "guides": {
+        "title": "Fieber-Ratgeber nach Altersgruppen",
+        "adult": {
+            "title": "👨‍⚕️ Fieber-Guide Erwachsene",
+            "items": [
+                "Normale Schwankungen der Körpertemperatur",
+                "Typische Anzeichen von Fieber bei Erwachsenen",
+                "Wann Sie unbedingt zum Arzt müssen",
+                "Tipps zum Fiebermanagement und Medikamente"
+            ]
+        },
+        "child": {
+            "title": "👶 Fieber-Guide Kinder & Säuglinge",
+            "items": [
+                "Fieber-Grenzwerte nach Alter (0-3 Monate, 3-12 Monate, 1-12 Jahre)",
+                "Besonderheiten bei kranken Kindern",
+                "Fieberkrämpfe erkennen und richtig reagieren",
+                "Wann der Kinderarzt gerufen werden muss"
+            ]
+        }
+    },
+    "faqs": {
+        "title": "Häufige Fragen zu Fieber",
+        "items": [
+            {
+                "q": "Ab welcher Temperatur hat man Fieber?",
+                "a": "Eine Körpertemperatur ab 38,0°C (100,4°F) gilt allgemein als Fieber. Die Messmethoden (Mund, Ohr, Po, Stirn) können sich leicht unterscheiden."
+            },
+            {
+                "q": "Was ist die normale Körpertemperatur in C und F?",
+                "a": "Der Normalbereich liegt bei gesunden Erwachsenen meist zwischen 36,1°C (97,0°F) und 37,2°C (99,0°F), abhängig von Tageszeit und Aktivität."
+            },
+            {
+                "q": "Sind 37,5°C (99,5°F) bereits Fieber?",
+                "a": "Dies ist ein Grenzwert, oft als erhöhte Temperatur bezeichnet. Es ist meist kein echtes Fieber, kann aber den Beginn eines Infekts anzeigen."
+            },
+            {
+                "q": "Wann sollte ich mit Fieber zum Arzt?",
+                "a": "<strong>Erwachsene:</strong> Fieber länger als 3 Tage, über 39,4°C (103°F) oder bei starken Kopfschmerzen/Nackensteife. <strong>Kinder:</strong> Jedes Fieber bei Babys unter 3 Monaten, hohes Fieber ohne Besserung oder bei Teilnahmslosigkeit."
+            }
+        ]
+    },
+    "measurement": {
+        "title": "Körpertemperatur richtig messen",
+        "headers": {
+            "method": "Methode",
+            "range": "Normalbereich",
+            "bestFor": "Geeignet für",
+            "notes": "Hinweise"
+        },
+        "rows": {
+            "oral": {
+                "method": "Oral (Mund)",
+                "range": "36,5–37,5°C",
+                "best": "Erwachsene, ältere Kinder",
+                "note": "Nicht direkt nach dem Essen/Trinken messen"
+            },
+            "axillary": {
+                "method": "Axillar (Achsel)",
+                "range": "35,9–36,7°C",
+                "best": "Alle Altersgruppen",
+                "note": "Meist 0,5–1,0°C niedriger als die Kerntemperatur"
+            },
+            "ear": {
+                "method": "Ohr (tympanal)",
+                "range": "35,8–38,0°C",
+                "best": "Ab 6 Monaten",
+                "note": "Ohrenschmalz kann Ergebnis verfälschen"
+            },
+            "forehead": {
+                "method": "Stirn (temporal)",
+                "range": "35,8–37,8°C",
+                "best": "Schnellmessung",
+                "note": "Kann durch Umgebungsluft beeinflusst werden"
+            }
+        },
+        "note": "<strong>Hinweis zu Messunterschieden:</strong> Rektale Messungen sind meist 0,5°C (0,9°F) höher als orale Werte, während die Messung unter der Achsel ungenauer ist."
+    },
+    "download": {
+        "title": "Druckbare Fieber-Tabelle (PDF)",
+        "content": "Laden Sie unsere einseitige Referenzkarte herunter – ideal für Zuhause oder unterwegs auf dem Handy.",
+        "btn": "PDF-Tabelle laden"
+    },
+    "authority": {
+        "disclaimer": {
+            "title": "Wichtiger medizinischer Hinweis",
+            "content": "<strong>Hinweis:</strong> Dieser Ratgeber dient der Information und ersetzt keinen Arztbesuch. Bei schwerem Krankheitsgefühl oder anhaltendem hohen Fieber sofort medizinische Hilfe suchen."
+        },
+        "transparency": {
+            "title": "Medizinische Autorität & Transparenz",
+            "reviewProcess": "<strong>Medizinische Prüfung:</strong> Die Inhalte basieren auf Richtlinien von <strong>CDC</strong>, <strong>WHO</strong> und <strong>NHS</strong>.",
+            "lastUpdatedPrefix": "Zuletzt medizinisch geprüft: "
+        }
+    }
+}

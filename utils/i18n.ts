@@ -71,6 +71,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     '0-c-to-f': require('../locales/en/0-c-to-f.json'),
     'f-to-c': require('../locales/en/f-to-c.json'),
     game: require('../locales/en/game.json'),
+    'body-temperature-chart-fever-guide': require('../locales/en/body-temperature-chart-fever-guide.json'),
   },
   zh: {
     '47-c-to-f': require('../locales/zh/47-c-to-f.json'),
@@ -83,6 +84,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     '0-c-to-f': require('../locales/zh/0-c-to-f.json'),
     'f-to-c': require('../locales/zh/f-to-c.json'),
     game: require('../locales/zh/game.json'),
+    'body-temperature-chart-fever-guide': require('../locales/zh/body-temperature-chart-fever-guide.json'),
   },
   es: {
     '47-c-to-f': require('../locales/es/47-c-to-f.json'),
@@ -95,6 +97,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     '0-c-to-f': require('../locales/es/0-c-to-f.json'),
     'f-to-c': require('../locales/es/f-to-c.json'),
     game: require('../locales/es/game.json'),
+    'body-temperature-chart-fever-guide': require('../locales/es/body-temperature-chart-fever-guide.json'),
   },
   hi: {
     '47-c-to-f': require('../locales/hi/47-c-to-f.json'),
@@ -107,6 +110,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     '0-c-to-f': require('../locales/hi/0-c-to-f.json'),
     'f-to-c': require('../locales/hi/f-to-c.json'),
     game: require('../locales/hi/game.json'),
+    'body-temperature-chart-fever-guide': require('../locales/hi/body-temperature-chart-fever-guide.json'),
   },
   ar: {
     '47-c-to-f': require('../locales/ar/47-c-to-f.json'),
@@ -119,6 +123,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     '0-c-to-f': require('../locales/ar/0-c-to-f.json'),
     'f-to-c': require('../locales/ar/f-to-c.json'),
     game: require('../locales/ar/game.json'),
+    'body-temperature-chart-fever-guide': require('../locales/ar/body-temperature-chart-fever-guide.json'),
   },
   ja: {
     '47-c-to-f': require('../locales/ja/47-c-to-f.json'),
@@ -131,6 +136,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     '0-c-to-f': require('../locales/ja/0-c-to-f.json'),
     'f-to-c': require('../locales/ja/f-to-c.json'),
     game: require('../locales/ja/game.json'),
+    'body-temperature-chart-fever-guide': require('../locales/ja/body-temperature-chart-fever-guide.json'),
   },
   id: {
     '47-c-to-f': require('../locales/id/47-c-to-f.json'),
@@ -143,6 +149,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     '0-c-to-f': require('../locales/id/0-c-to-f.json'),
     'f-to-c': require('../locales/id/f-to-c.json'),
     game: require('../locales/id/game.json'),
+    'body-temperature-chart-fever-guide': require('../locales/id/body-temperature-chart-fever-guide.json'),
   },
   'pt-br': {
     '47-c-to-f': require('../locales/pt-br/47-c-to-f.json'),
@@ -155,6 +162,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     '0-c-to-f': require('../locales/pt-br/0-c-to-f.json'),
     'f-to-c': require('../locales/pt-br/f-to-c.json'),
     game: require('../locales/pt-br/game.json'),
+    'body-temperature-chart-fever-guide': require('../locales/pt-br/body-temperature-chart-fever-guide.json'),
   },
   fr: {
     '47-c-to-f': require('../locales/fr/47-c-to-f.json'),
@@ -167,6 +175,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     '0-c-to-f': require('../locales/fr/0-c-to-f.json'),
     'f-to-c': require('../locales/fr/f-to-c.json'),
     game: require('../locales/fr/game.json'),
+    'body-temperature-chart-fever-guide': require('../locales/fr/body-temperature-chart-fever-guide.json'),
   },
   de: {
     '47-c-to-f': require('../locales/de/47-c-to-f.json'),
@@ -179,6 +188,7 @@ const PAGE_TRANSLATIONS: Record<string, any> = {
     '0-c-to-f': require('../locales/de/0-c-to-f.json'),
     'f-to-c': require('../locales/de/f-to-c.json'),
     game: require('../locales/de/game.json'),
+    'body-temperature-chart-fever-guide': require('../locales/de/body-temperature-chart-fever-guide.json'),
   },
 };
 

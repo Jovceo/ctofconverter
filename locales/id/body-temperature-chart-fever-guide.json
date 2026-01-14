@@ -1,0 +1,267 @@
+{
+    "meta": {
+        "title": "Tabel Demam & Suhu Tubuh: Panduan Celsius ke Fahrenheit",
+        "description": "Panduan lengkap demam dan suhu tubuh dengan tabel konversi Celsius ke Fahrenheit. Pelajari rentang normal, ambang batas demam, dan kapan harus ke dokter.",
+        "ogTitle": "Tabel Suhu Demam: Panduan untuk Dewasa & Anak",
+        "ogDescription": "Tabel suhu demam komprehensif dan panduan kesehatan untuk semua usia."
+    },
+    "nav": {
+        "home": "Beranda",
+        "page": "Panduan Suhu Tubuh"
+    },
+    "intro": {
+        "title": "Panduan Suhu Tubuh & Demam: Dewasa & Anak",
+        "tagline": "Referensi lengkap Celsius ke Fahrenheit dengan ambang batas demam, tabel, dan panduan medis untuk Anda.",
+        "featuredSnippet": {
+            "title": "Berapa Suhu Tubuh Normal?",
+            "content": "Suhu tubuh normal untuk orang dewasa biasanya berkisar antara {normalRange}. Suhu {feverThreshold} atau lebih tinggi umumnya dianggap sebagai {fever}."
+        }
+    },
+    "keyInfo": {
+        "normal": {
+            "label": "✅ Suhu Normal",
+            "value": "36,5–37,5°C (97,7–99,5°F)"
+        },
+        "warning": {
+            "label": "⚠️ Ambang Batas Demam",
+            "value": "38,0°C (100,4°F)"
+        },
+        "danger": {
+            "label": "🚨 Demam Tinggi",
+            "value": "39,0°C (102,2°F)+"
+        }
+    },
+    "converter": {
+        "title": "Konverter Cepat Celsius ↔ Fahrenheit",
+        "placeholder": "Masukkan suhu",
+        "celsius": "Celsius (°C)",
+        "fahrenheit": "Fahrenheit (°F)",
+        "btn": "Konversi",
+        "error": "Silakan masukkan nilai suhu yang valid",
+        "feverCriteria": "Ini memenuhi kriteria demam. Disarankan untuk beristirahat dan konsultasi dengan dokter.",
+        "elevatedCriteria": "Suhu sedikit meningkat. Pantau gejala dan tetap terhidrasi.",
+        "normalCriteria": "Rentang suhu normal.",
+        "belowNormalCriteria": "Sedikit di bawah normal atau kedinginan."
+    },
+    "assessment": {
+        "title": "Penilaian Suhu Interaktif",
+        "person": {
+            "label": "Pilih Orang:",
+            "adult": "Dewasa",
+            "child": "Anak",
+            "infant": "Bayi"
+        },
+        "temp": {
+            "label": "Suhu Saat Ini:",
+            "unitC": "Celsius (°C)",
+            "unitF": "Fahrenheit (°F)"
+        },
+        "result": {
+            "recPrefix": "Rekomendasi:",
+            "analysisPrefix": "Analisis untuk {person}:"
+        },
+        "statuses": {
+            "hypothermia": "Hipotermia",
+            "normal": "Normal",
+            "elevated": "Agak Tinggi",
+            "lowGrade": "Demam Ringan",
+            "fever": "Demam",
+            "moderate": "Demam Sedang",
+            "high": "Demam Tinggi",
+            "emergency": "Demam / Darurat",
+            "hyperpyrexia": "Hiperpiaksia"
+        },
+        "severities": {
+            "normal": "Normal",
+            "warning": "Peringatan",
+            "mild": "Ringan",
+            "moderate": "Sedang",
+            "high": "Tinggi",
+            "danger": "Bahaya",
+            "critical": "Kritis",
+            "highRisk": "Risiko Tinggi",
+            "highDanger": "Bahaya Tinggi",
+            "severe": "Parah",
+            "severeDanger": "Bahaya Parah"
+        },
+        "advice": {
+            "infant": {
+                "hypo": "Darurat: Hipotermia pada bayi adalah keadaan darurat medis. Hangatkan perlahan dan hubungi dokter segera.",
+                "normal": "Rentang sehat untuk bayi. Pastikan mereka berpakaian dengan nyaman.",
+                "elevated": "Pantau dengan ketat. Untuk bayi di bawah 3 bulan, hubungi dokter untuk setiap kenaikan suhu.",
+                "emergency": "Konsultasi medis segera diperlukan. Demam pada bayi bisa berakibat serius."
+            },
+            "child": {
+                "hypo": "Hangatkan anak. Jika mereka lesu atau menggigil terus-menerus, konsultasikan dengan dokter.",
+                "normal": "Rentang sehat. Tidak perlu tindakan kecuali ada gejala lain.",
+                "lowGrade": "Istirahat dan cairan. Konsultasikan dengan dokter jika demam berlangsung lebih dari 24 jam.",
+                "high": "Cari saran medis. Gunakan obat penurun demam jika direkomendasikan oleh dokter anak."
+            },
+            "adult": {
+                "hypo": "Hangatkan diri. Jika suhu inti tetap di bawah 35°C (95°F), cari perawatan darurat.",
+                "normal": "Suhu sehat. Faktor-faktor seperti aktivitas atau waktu bisa berpengaruh.",
+                "lowGrade": "Pantau gejala. Istirahat dan hidrasi biasanya cukup.",
+                "fever": "Pertimbangkan antipiretik. Konsultasikan dengan dokter jika demam berlangsung lebih dari 3 hari.",
+                "high": "Darurat: Kemungkinan hiperpiaksia. Cari bantuan medis segera."
+            }
+        }
+    },
+    "chart": {
+        "title": "Tabel Referensi Suhu Lengkap (Dewasa & Anak)",
+        "scrollHint": "← Geser horizontal pada ponsel untuk melihat tabel lengkap →",
+        "imgAlt": "Tabel suhu demam menunjukkan konversi Celsius ke Fahrenheit dan ambang batas demam",
+        "imgCaption": "Panduan visual suhu demam dalam Celsius dan Fahrenheit",
+        "headers": {
+            "status": "Status",
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "adultAdvice": "Saran Dewasa",
+            "childAdvice": "Saran Anak"
+        },
+        "rows": {
+            "hypothermia": {
+                "status": "Hipotermia",
+                "c": "<36,0°C",
+                "f": "<96,8°F",
+                "adult": "Hangatkan, pantau",
+                "child": "Hangatkan segera, hubungi dokter"
+            },
+            "normal": {
+                "status": "Rentang Normal",
+                "c": "36,5–37,5°C",
+                "f": "97,7–99,5°F",
+                "adult": "Sehat",
+                "child": "Sehat"
+            },
+            "elevated": {
+                "status": "Agak Tinggi",
+                "c": "37,6–37,9°C",
+                "f": "99,7–100,2°F",
+                "adult": "Pantau, minum cairan",
+                "child": "Pantau, kurangi aktivitas"
+            },
+            "lowGrade": {
+                "status": "Demam Ringan",
+                "c": "38,0–38,9°C",
+                "f": "100,4–102,0°F",
+                "adult": "Istirahat, pertimbangkan obat",
+                "child": "Pantau ketat, hubungi dokter"
+            },
+            "moderate": {
+                "status": "Demam Sedang",
+                "c": "39,0–39,9°C",
+                "f": "102,2–103,8°F",
+                "adult": "Cari saran medis",
+                "child": "Lihat dokter segera"
+            },
+            "high": {
+                "status": "Demam Tinggi",
+                "c": "40,0–41,0°C",
+                "f": "104,0–105,8°F",
+                "adult": "Perawatan darurat",
+                "child": "Perawatan darurat"
+            },
+            "hyperpyrexia": {
+                "status": "Hiperpiaksia Berbahaya",
+                "c": ">41,0°C",
+                "f": ">105,8°F",
+                "adult": "Darurat medis",
+                "child": "Darurat medis"
+            }
+        }
+    },
+    "guides": {
+        "title": "Panduan Demam Berdasarkan Kelompok Usia",
+        "adult": {
+            "title": "👨‍⚕️ Panduan Demam Dewasa",
+            "items": [
+                "Variasi normal suhu tubuh orang dewasa",
+                "Tanda-tanda khas demam pada orang dewasa",
+                "Indikator jelas kapan harus mencari bantuan medis",
+                "Panduan pengelolaan demam dan obat-obatan"
+            ]
+        },
+        "child": {
+            "title": "👶 Panduan Demam Anak & Bayi",
+            "items": [
+                "Ambang batas demam berdasarkan usia (0-3 bln, 3-12 bln, 1-12 thn)",
+                "Pertimbangan khusus untuk anak yang sakit",
+                "Mengenali dan menangani kejang demam",
+                "Kapan harus menghubungi dokter anak"
+            ]
+        }
+    },
+    "faqs": {
+        "title": "Pertanyaan Umum Suhu Demam",
+        "items": [
+            {
+                "q": "Suhu berapa yang dianggap demam?",
+                "a": "Suhu tubuh 38,0°C (100,4°F) atau lebih tinggi umumnya dianggap demam. Berbagai metode pengukuran (mulut, telinga, dubur, dahi) mungkin menunjukkan sedikit variasi."
+            },
+            {
+                "q": "Berapa suhu tubuh normal dalam C dan F?",
+                "a": "Rentang normal untuk orang dewasa sehat biasanya antara 36,1°C (97,0°F) dan 37,2°C (99,0°F). Ini bervariasi menurut waktu, aktivitas, usia, dan metode pengukuran."
+            },
+            {
+                "q": "Apakah 37,5°C (99,5°F) termasuk demam?",
+                "a": "Ini adalah suhu ambang batas, terkadang disebut \"agak tinggi\". Pantau gejala dan perhatikan perubahan. Biasanya tidak dianggap demam sungguhan tetapi bisa menandakan awal penyakit."
+            },
+            {
+                "q": "Kapan saya harus ke dokter karena demam?",
+                "a": "<strong>Dewasa:</strong> demam berlangsung lebih dari 3 hari, suhu di atas 39,4°C (103°F), atau disertai sakit kepala parah, ruam, atau leher kaku. <strong>Anak:</strong> demam apa pun pada bayi sebelum 3 bulan, demam tinggi yang menetap, atau demam dengan kelesuan."
+            }
+        ]
+    },
+    "measurement": {
+        "title": "Cara Mengukur Suhu Tubuh dengan Akurat",
+        "headers": {
+            "method": "Metode",
+            "range": "Rentang Normal",
+            "bestFor": "Terbaik untuk",
+            "notes": "Catatan"
+        },
+        "rows": {
+            "oral": {
+                "method": "Mulut (Oral)",
+                "range": "36,5–37,5°C",
+                "best": "Dewasa, anak usia sekolah",
+                "note": "Hindari dalam 30 menit setelah makan/minum"
+            },
+            "axillary": {
+                "method": "Ketiak (Axillary)",
+                "range": "35,9–36,7°C",
+                "best": "Semua usia",
+                "note": "Biasanya 0,5 hingga 1,0°C lebih rendah dari suhu inti"
+            },
+            "ear": {
+                "method": "Telinga (Tympanic)",
+                "range": "35,8–38,0°C",
+                "best": "Usia 6 bulan ke atas",
+                "note": "Kotoran telinga dapat memengaruhi akurasi"
+            },
+            "forehead": {
+                "method": "Dahi (Temporal)",
+                "range": "35,8–37,8°C",
+                "best": "Skrining cepat",
+                "note": "Dapat dipengaruhi oleh lingkungan"
+            }
+        },
+        "note": "<strong>Catatan tentang perbedaan pengukuran:</strong> Suhu dubur biasanya 0,5°C (0,9°F) lebih tinggi dari pembacaan mulut, sedangkan pengukuran ketiak adalah yang terendah dan kurang akurat untuk suhu inti."
+    },
+    "download": {
+        "title": "Tabel Suhu Demam Cetak (PDF)",
+        "content": "Unduh panduan referensi cepat satu halaman kami untuk akses mudah di rumah atau di ponsel Anda.",
+        "btn": "Unduh Tabel PDF"
+    },
+    "authority": {
+        "disclaimer": {
+            "title": "Sanggahan Medis Penting",
+            "content": "<strong>Sanggahan:</strong> Panduan ini hanya untuk tujuan edukasi dan tidak menggantikan saran medis profesional. Jika Anda atau anak Anda mengalami demam tinggi atau gejala serius lainnya, segera cari bantuan medis."
+        },
+        "transparency": {
+            "title": "Otoritas Medis & Transparansi",
+            "reviewProcess": "<strong>Proses Peninjauan Medis:</strong> Konten disusun oleh tim redaksi Ctofconverter dan ditinjau berdasarkan pedoman dari <strong>CDC</strong>, <strong>WHO</strong>, dan <strong>NHS</strong>.",
+            "lastUpdatedPrefix": "Peninjauan Medis Terakhir: "
+        }
+    }
+}

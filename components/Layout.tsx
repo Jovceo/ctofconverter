@@ -105,9 +105,10 @@ export default function Layout({ children, seo }: LayoutProps) {
   const robots = seo?.robots || 'index, follow';
 
   // OG / Social
+  const ogImageRaw = seo?.ogImage || 'https://ctofconverter.com/converter.png';
+  const ogImage = ogImageRaw.startsWith('/') ? `${SITE_ORIGIN}${ogImageRaw}` : ogImageRaw;
   const ogTitle = seo?.ogTitle || seo?.title || meta.ogTitle || meta.defaultTitle || title;
   const ogDescription = seo?.ogDescription || seo?.description || meta.ogDescription || meta.defaultDescription || description;
-  const ogImage = seo?.ogImage || 'https://ctofconverter.com/converter.png';
   const ogUrl = seo?.ogUrl || canonicalUrl;
   const ogType = seo?.ogType || 'website';
 

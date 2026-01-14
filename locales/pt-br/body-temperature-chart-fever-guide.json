@@ -1,0 +1,267 @@
+{
+    "meta": {
+        "title": "Tabela de Febre e Temperatura Corporal: Guia de Celsius para Fahrenheit",
+        "description": "Guia completo sobre febre e temperatura corporal com tabelas de conversão Celsius/Fahrenheit. Conheça as faixas normais e quando procurar um médico.",
+        "ogTitle": "Tabela de Temperatura da Febre: Guia para Adultos e Crianças",
+        "ogDescription": "Tabelas completas de temperatura da febre e diretrizes de saúde para todas as idades."
+    },
+    "nav": {
+        "home": "Início",
+        "page": "Guia de Temperatura"
+    },
+    "intro": {
+        "title": "Guia de Temperatura Corporal e Febre: Adultos e Crianças",
+        "tagline": "Sua referência completa de Celsius para Fahrenheit com limiares de febre, tabelas e orientação médica.",
+        "featuredSnippet": {
+            "title": "Qual é a Temperatura Corporal Normal?",
+            "content": "A temperatura corporal normal para adultos costuma variar entre {normalRange}. Uma temperatura de {feverThreshold} ou superior é geralmente considerada {fever}."
+        }
+    },
+    "keyInfo": {
+        "normal": {
+            "label": "✅ Temperatura Normal",
+            "value": "36,5–37,5°C (97,7–99,5°F)"
+        },
+        "warning": {
+            "label": "⚠️ Limiar de Febre",
+            "value": "38,0°C (100,4°F)"
+        },
+        "danger": {
+            "label": "🚨 Febre Alta",
+            "value": "39,0°C (102,2°F)+"
+        }
+    },
+    "converter": {
+        "title": "Conversor Rápido de Celsius ↔ Fahrenheit",
+        "placeholder": "Digite a temperatura",
+        "celsius": "Celsius (°C)",
+        "fahrenheit": "Fahrenheit (°F)",
+        "btn": "Converter",
+        "error": "Por favor, insira um valor de temperatura válido",
+        "feverCriteria": "Isso atende aos critérios de febre. Considere descansar e consultar um médico.",
+        "elevatedCriteria": "Temperatura ligeiramente elevada. Monitore os sintomas e mantenha-se hidratado.",
+        "normalCriteria": "Faixa de temperatura normal.",
+        "belowNormalCriteria": "Ligeiramente abaixo do normal ou frio."
+    },
+    "assessment": {
+        "title": "Avaliação Interativa da Temperatura",
+        "person": {
+            "label": "Selecionar Pessoa:",
+            "adult": "Adulto",
+            "child": "Criança",
+            "infant": "Bebê"
+        },
+        "temp": {
+            "label": "Temperatura Atual:",
+            "unitC": "Celsius (°C)",
+            "unitF": "Fahrenheit (°F)"
+        },
+        "result": {
+            "recPrefix": "Recomendação:",
+            "analysisPrefix": "Análise para {person}:"
+        },
+        "statuses": {
+            "hypothermia": "Hipotermia",
+            "normal": "Normal",
+            "elevated": "Ligeiramente Elevada",
+            "lowGrade": "Estado Febril",
+            "fever": "Febre",
+            "moderate": "Febre Moderada",
+            "high": "Febre Alta",
+            "emergency": "Febre / Emergência",
+            "hyperpyrexia": "Hiperpirexia"
+        },
+        "severities": {
+            "normal": "Normal",
+            "warning": "Aviso",
+            "mild": "Leve",
+            "moderate": "Moderada",
+            "high": "Alta",
+            "danger": "Perigo",
+            "critical": "Crítica",
+            "highRisk": "Alto Risco",
+            "highDanger": "Perigo Alto",
+            "severe": "Grave",
+            "severeDanger": "Perigo Grave"
+        },
+        "advice": {
+            "infant": {
+                "hypo": "Urgente: A hipotermia em bebês é uma emergência médica. Aqueça-o suavemente e contate um médico imediatamente.",
+                "normal": "Faixa saudável para um bebê. Certifique-se de que ele esteja vestido confortavelmente.",
+                "elevated": "Monitore de perto. Em bebês com menos de 3 meses, contate um médico para qualquer elevação.",
+                "emergency": "Consulta médica urgente necessária. A febre em um bebê pode ser grave."
+            },
+            "child": {
+                "hypo": "Aqueça a criança. Se estiver letárgica ou tremendo persistentemente, consulte um médico.",
+                "normal": "Faixa saudável. Nenhuma ação é necessária, a menos que outros sintomas estejam presentes.",
+                "lowGrade": "Repouso e líquidos. Consulte um médico se a febre durar mais de 24 horas.",
+                "high": "Busque orientação médica. Use medicamentos para reduzir a febre apenas se recomendado pelo pediatra."
+            },
+            "adult": {
+                "hypo": "Aqueça-se. Se a temperatura central permanecer abaixo de 35°C (95°F), procure atendimento de emergência.",
+                "normal": "Temperatura saudável. Fatores como atividade ou hora do dia podem influenciar.",
+                "lowGrade": "Monitore os sintomas. Repouso e hidratação costumam ser suficientes.",
+                "fever": "Considere antitérmicos. Consulte um médico se a febre persistir por mais de 3 dias.",
+                "high": "Urgente: Possível hiperpirexia. Procure assistência médica imediata."
+            }
+        }
+    },
+    "chart": {
+        "title": "Tabela de Referência Completa de Temperatura (Adultos e Crianças)",
+        "scrollHint": "← Role horizontalmente para ver a tabela completa no celular →",
+        "imgAlt": "Tabela de temperatura da febre mostrando a conversão Celsius para Fahrenheit e limiares de febre",
+        "imgCaption": "Guia visual das temperaturas da febre em Celsius e Fahrenheit",
+        "headers": {
+            "status": "Estado",
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "adultAdvice": "Conselho para Adultos",
+            "childAdvice": "Conselho para Crianças"
+        },
+        "rows": {
+            "hypothermia": {
+                "status": "Hipotermia",
+                "c": "<36,0°C",
+                "f": "<96,8°F",
+                "adult": "Aquecer, monitorar",
+                "child": "Aquecimento imediato, consultar médico"
+            },
+            "normal": {
+                "status": "Faixa Normal",
+                "c": "36,5–37,5°C",
+                "f": "97,7–99,5°F",
+                "adult": "Saudável",
+                "child": "Saudável"
+            },
+            "elevated": {
+                "status": "Ligeiramente Elevada",
+                "c": "37,6–37,9°C",
+                "f": "99,7–100,2°F",
+                "adult": "Observar, beber líquidos",
+                "child": "Monitorar, reduzir atividade"
+            },
+            "lowGrade": {
+                "status": "Estado Febril",
+                "c": "38,0–38,9°C",
+                "f": "100,4–102,0°F",
+                "adult": "Repouso, considerar medicação",
+                "child": "Monitorar de perto, consultar médico"
+            },
+            "moderate": {
+                "status": "Febre Moderada",
+                "c": "39,0–39,9°C",
+                "f": "102,2–103,8°F",
+                "adult": "Buscar orientação médica",
+                "child": "Ver médico imediatamente"
+            },
+            "high": {
+                "status": "Febre Alta",
+                "c": "40,0–41,0°C",
+                "f": "104,0–105,8°F",
+                "adult": "Cuidado de emergência",
+                "child": "Cuidado de emergência"
+            },
+            "hyperpyrexia": {
+                "status": "Hiperpirexia Perigosa",
+                "c": ">41,0°C",
+                "f": ">105,8°F",
+                "adult": "Emergência médica",
+                "child": "Emergencia médica"
+            }
+        }
+    },
+    "guides": {
+        "title": "Guias de Febre por Grupos de Idade",
+        "adult": {
+            "title": "👨‍⚕️ Guia de Febre para Adultos",
+            "items": [
+                "Variações normais da temperatura corporal em adultos",
+                "Sinais típicos de febre em adultos",
+                "Indicadores claros de quando procurar ajuda médica",
+                "Orientações sobre controle da febre e medicação"
+            ]
+        },
+        "child": {
+            "title": "👶 Guia de Febre para Crianças e Bebês",
+            "items": [
+                "Limiares de febre por idade (0-3 meses, 3-12 meses, 1-12 anos)",
+                "Considerações especiais para crianças",
+                "Reconhecer e lidar com convulsões febris",
+                "Quando ligar para o pediatra"
+            ]
+        }
+    },
+    "faqs": {
+        "title": "Perguntas Frequentes sobre Febre",
+        "items": [
+            {
+                "q": "Qual temperatura é considerada febre?",
+                "a": "Uma temperatura corporal de 38,0°C (100,4°F) ou superior é geralmente considerada febre. Diferentes métodos de medição (oral, ouvido, retal, testa) podem mostrar pequenas variações."
+            },
+            {
+                "q": "Qual é a temperatura corporal normal em C e F?",
+                "a": "A faixa normal para adultos saudáveis costuma ficar entre 36,1°C (97,0°F) e 37,2°C (99,0°F). Isso varia conforme a hora do dia, nível de atividade, idade e método de medição."
+            },
+            {
+                "q": "37,5°C (99,5°F) é febre?",
+                "a": "Esta é uma temperatura limítrofe, às vezes chamada de \"estado febril\". Monitore os sintomas e observe mudanças. Geralmente não é considerada febre real, mas pode indicar o início de uma indisposição."
+            },
+            {
+                "q": "Quando devo procurar um médico por causa da febre?",
+                "a": "<strong>Adultos:</strong> febre que dura mais de 3 dias, acima de 39,4°C (103°F) ou acompanhada de dor de cabeça intensa, manchas na pele ou rigidez na nuca. <strong>Crianças:</strong> qualquer febre em bebês antes dos 3 meses, febre alta que não cede ou acompanhada de letargia ou irritabilidade."
+            }
+        ]
+    },
+    "measurement": {
+        "title": "Como Medir a Temperatura Corporal com Precisão",
+        "headers": {
+            "method": "Método",
+            "range": "Faixa Normal",
+            "bestFor": "Ideal para",
+            "notes": "Observações"
+        },
+        "rows": {
+            "oral": {
+                "method": "Oral",
+                "range": "36,5–37,5°C",
+                "best": "Adultos, crianças maiores",
+                "note": "Evitar nos 30 min após comer/beber"
+            },
+            "axillary": {
+                "method": "Axilar (axila)",
+                "range": "35,9–36,7°C",
+                "best": "Todas as idades",
+                "note": "Costuma ser 0,5 a 1,0°C menor que a temperatura central"
+            },
+            "ear": {
+                "method": "Ouvido (timpânica)",
+                "range": "35,8–38,0°C",
+                "best": "A partir do 6º mês",
+                "note": "A cera de ouvido pode afetar a precisão"
+            },
+            "forehead": {
+                "method": "Testa (temporal)",
+                "range": "35,8–37,8°C",
+                "best": "Triagem rápida",
+                "note": "Pode ser influenciada pelo ambiente"
+            }
+        },
+        "note": "<strong>Nota sobre diferenças de medição:</strong> Temperaturas retais são geralmente 0,5°C (0,9°F) mais altas que as orais, enquanto a medição axilar é menos precisa para a temperatura central."
+    },
+    "download": {
+        "title": "Tabela de Febre para Imprimir (PDF)",
+        "content": "Baixe nosso guia de referência rápida em uma página para facilitar o acesso em casa ou no celular.",
+        "btn": "Baixar Tabela em PDF"
+    },
+    "authority": {
+        "disclaimer": {
+            "title": "Aviso Médico Importante",
+            "content": "<strong>Aviso:</strong> Este guia é apenas para fins educativos e não substitui o conselho médico profissional. Em caso de febre persistente ou sintomas graves, procure atendimento médico imediatamente."
+        },
+        "transparency": {
+            "title": "Autoridade Médica e Transparência",
+            "reviewProcess": "<strong>Processo de revisão médica:</strong> O conteúdo é revisado com base em diretrizes do <strong>CDC</strong>, <strong>OMS</strong> e <strong>NHS</strong>.",
+            "lastUpdatedPrefix": "Última revisão médica: "
+        }
+    }
+}

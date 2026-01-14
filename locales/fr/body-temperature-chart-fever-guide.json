@@ -1,0 +1,267 @@
+{
+    "meta": {
+        "title": "Tableau de Fièvre et Température Corporelle : Guide Celsius en Fahrenheit",
+        "description": "Guide complet sur la fièvre et la température corporelle avec tableaux de conversion Celsius/Fahrenheit. Découvrez les plages normales et quand consulter un médecin.",
+        "ogTitle": "Tableau de Température de la Fièvre : Guide pour Adultes et Enfants",
+        "ogDescription": "Tableaux complets de température et directives de santé pour tous les âges."
+    },
+    "nav": {
+        "home": "Accueil",
+        "page": "Guide de Température"
+    },
+    "intro": {
+        "title": "Guide de Température Corporelle et Fièvre : Adultes et Enfants",
+        "tagline": "Votre référence complète de Celsius à Fahrenheit avec seuils de fièvre, tableaux et conseils médicaux.",
+        "featuredSnippet": {
+            "title": "Quelle est la Température Corporelle Normale ?",
+            "content": "La température corporelle normale pour les adultes varie généralement entre {normalRange}. Une température de {feverThreshold} ou plus est généralement considérée comme une {fever}."
+        }
+    },
+    "keyInfo": {
+        "normal": {
+            "label": "✅ Température Normale",
+            "value": "36,5–37,5°C (97,7–99,5°F)"
+        },
+        "warning": {
+            "label": "⚠️ Seuil de Fièvre",
+            "value": "38,0°C (100,4°F)"
+        },
+        "danger": {
+            "label": "🚨 Fièvre Élevée",
+            "value": "39,0°C (102,2°F)+"
+        }
+    },
+    "converter": {
+        "title": "Convertisseur Rapide Celsius ↔ Fahrenheit",
+        "placeholder": "Entrez la température",
+        "celsius": "Celsius (°C)",
+        "fahrenheit": "Fahrenheit (°F)",
+        "btn": "Convertir",
+        "error": "Veuillez entrer une valeur de température valide",
+        "feverCriteria": "Cela correspond aux critères de fièvre. Reposez-vous et consultez un médecin.",
+        "elevatedCriteria": "Température légèrement élevée. Surveillez les symptômes et hydratez-vous.",
+        "normalCriteria": "Plage de température normale.",
+        "belowNormalCriteria": "Légèrement en dessous de la normale ou froid."
+    },
+    "assessment": {
+        "title": "Évaluation Interactive de la Température",
+        "person": {
+            "label": "Sélectionner la personne :",
+            "adult": "Adulte",
+            "child": "Enfant",
+            "infant": "Nourrisson"
+        },
+        "temp": {
+            "label": "Température Actuelle :",
+            "unitC": "Celsius (°C)",
+            "unitF": "Fahrenheit (°F)"
+        },
+        "result": {
+            "recPrefix": "Recommandation :",
+            "analysisPrefix": "Analyse pour {person} :"
+        },
+        "statuses": {
+            "hypothermia": "Hypothermie",
+            "normal": "Normale",
+            "elevated": "Légèrement Élevée",
+            "lowGrade": "Fébricule (Légère Fièvre)",
+            "fever": "Fièvre",
+            "moderate": "Fièvre Modérée",
+            "high": "Fièvre Élevée",
+            "emergency": "Fièvre / Urgence",
+            "hyperpyrexia": "Hyperpyrexie"
+        },
+        "severities": {
+            "normal": "Normal",
+            "warning": "Avertissement",
+            "mild": "Légère",
+            "moderate": "Modérée",
+            "high": "Élevée",
+            "danger": "Danger",
+            "critical": "Critique",
+            "highRisk": "Risque Élevé",
+            "highDanger": "Danger Élevé",
+            "severe": "Grave",
+            "severeDanger": "Danger Grave"
+        },
+        "advice": {
+            "infant": {
+                "hypo": "Urgent : L'hypothermie chez le nourrisson est une urgence médicale. Réchauffez-le doucement et contactez un médecin immédiatement.",
+                "normal": "Plage de santé pour un nourrisson. Assurez-vous qu'il est habillé confortablement.",
+                "elevated": "Surveillez de près. Pour les nourrissons de moins de 3 mois, contactez un médecin pour toute élévation.",
+                "emergency": "Consultation médicale urgente requise. La fièvre chez un nourrisson peut être grave."
+            },
+            "child": {
+                "hypo": "Réchauffez l'enfant. S'il est léthargique ou grelotte de façon persistante, consultez un médecin.",
+                "normal": "Plage saine. Aucune action n'est nécessaire sauf si d'autres symptômes sont présents.",
+                "lowGrade": "Repos et liquides. Consultez un médecin si la fièvre dure plus de 24 heures.",
+                "high": "Demandez un avis médical. Utilisez des antipyrétiques si recommandés par votre pédiatre."
+            },
+            "adult": {
+                "hypo": "Réchauffez-vous. Si la température interne reste inférieure à 35°C (95°F), cherchez des soins d'urgence.",
+                "normal": "Température saine. Des facteurs comme l'activité ou l'heure de la journée peuvent influencer cela.",
+                "lowGrade": "Surveillez les symptômes. Repos et hydratation sont généralement suffisants.",
+                "fever": "Envisagez des antipyrétiques. Consultez un médecin si la fièvre persiste plus de 3 jours.",
+                "high": "Urgent : Hyperpyrexie possible. Cherchez une assistance médicale immédiate."
+            }
+        }
+    },
+    "chart": {
+        "title": "Tableau de Référence Complet des Températures (Adultes et Enfants)",
+        "scrollHint": "← Faites défiler horizontalement sur mobile →",
+        "imgAlt": "Tableau de température de la fièvre montrant la conversion Celsius/Fahrenheit et les seuils",
+        "imgCaption": "Guide visuel des températures de fièvre en Celsius et en Fahrenheit",
+        "headers": {
+            "status": "État",
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "adultAdvice": "Conseils Adultes",
+            "childAdvice": "Conseils Enfants"
+        },
+        "rows": {
+            "hypothermia": {
+                "status": "Hypothermie",
+                "c": "<36,0°C",
+                "f": "<96,8°F",
+                "adult": "Réchauffer, surveiller",
+                "child": "Réchauffement immédiat, consulter docteur"
+            },
+            "normal": {
+                "status": "Plage Normale",
+                "c": "36,5–37,5°C",
+                "f": "97,7–99,5°F",
+                "adult": "Sain",
+                "child": "Sain"
+            },
+            "elevated": {
+                "status": "Légèrement Élevée",
+                "c": "37,6–37,9°C",
+                "f": "99,7–100,2°F",
+                "adult": "Observer, boire des liquides",
+                "child": "Surveiller, réduire l'activité"
+            },
+            "lowGrade": {
+                "status": "Fièvre Légère",
+                "c": "38,0–38,9°C",
+                "f": "100,4–102,0°F",
+                "adult": "Repos, envisager médicament",
+                "child": "Surveiller de près, consulter docteur"
+            },
+            "moderate": {
+                "status": "Fièvre Modérée",
+                "c": "39,0–39,9°C",
+                "f": "102,2–103,8°F",
+                "adult": "Demander avis médical",
+                "child": "Voir médecin immédiatement"
+            },
+            "high": {
+                "status": "Fièvre Élevée",
+                "c": "40,0–41,0°C",
+                "f": "104,0–105,8°F",
+                "adult": "Soins d'urgence",
+                "child": "Soins d'urgence"
+            },
+            "hyperpyrexia": {
+                "status": "Hyperpyrexie Dangereuse",
+                "c": ">41,0°C",
+                "f": ">105,8°F",
+                "adult": "Urgence médicale",
+                "child": "Urgence médicale"
+            }
+        }
+    },
+    "guides": {
+        "title": "Guides de Fièvre par Groupe d'Âge",
+        "adult": {
+            "title": "👨‍⚕️ Guide Fièvre Adultes",
+            "items": [
+                "Variations normales de la température chez l'adulte",
+                "Signes typiques de fièvre chez l'adulte",
+                "Indicateurs clairs pour consulter un médecin",
+                "Conseils de gestion de la fièvre et médicaments"
+            ]
+        },
+        "child": {
+            "title": "👶 Guide Fièvre Enfants & Nourrissons",
+            "items": [
+                "Seuils de fièvre par âge (0-3 mois, 3-12 mois, 1-12 ans)",
+                "Considérations spéciales pour les enfants",
+                "Reconnaître et gérer les convulsions fébriles",
+                "Quand appeler le pédiatre"
+            ]
+        }
+    },
+    "faqs": {
+        "title": "FAQ sur la Température et la Fièvre",
+        "items": [
+            {
+                "q": "À partir de quelle température a-t-on de la fièvre ?",
+                "a": "Une température corporelle de 38,0°C (100,4°F) ou plus est généralement considérée comme de la fièvre. Les différentes méthodes de mesure (orale, oreille, rectale, front) peuvent varier légèrement."
+            },
+            {
+                "q": "Quelle est la température normale en C et F ?",
+                "a": "La plage normale pour un adulte sain se situe généralement entre 36,1°C (97,0°F) et 37,2°C (99,0°F). Cela varie selon l'heure, l'activité, l'âge et la méthode de mesure."
+            },
+            {
+                "q": "Est-ce que 37,5°C (99,5°F) est de la fièvre ?",
+                "a": "C'est une température limite, parfois appelée fébricule. Surveillez les symptômes. Ce n'est pas typiquement une vraie fièvre mais cela peut indiquer le début d'une maladie."
+            },
+            {
+                "q": "Quand faut-il voir un médecin ?",
+                "a": "<strong>Adultes :</strong> fièvre durant plus de 3 jours, plus de 39,4°C (103°F), ou avec maux de tête sévères, éruption, essoufflement ou cou raide. <strong>Enfants :</strong> toute fièvre avant 3 mois, fièvre élevée persistante, ou avec léthargie, irritabilité ou éruption inhabituelle."
+            }
+        ]
+    },
+    "measurement": {
+        "title": "Comment Mesurer la Température avec Précision",
+        "headers": {
+            "method": "Méthode",
+            "range": "Plage Normale",
+            "bestFor": "Idéal pour",
+            "notes": "Notes"
+        },
+        "rows": {
+            "oral": {
+                "method": "Orale",
+                "range": "36,5–37,5°C",
+                "best": "Adultes, grands enfants",
+                "note": "Éviter de manger/boire 30 min avant"
+            },
+            "axillary": {
+                "method": "Axillaire (sous le bras)",
+                "range": "35,9–36,7°C",
+                "best": "Tous les âges",
+                "note": "Généralement 0,5 à 1,0°C de moins que la température centrale"
+            },
+            "ear": {
+                "method": "Auriculaire (tympanique)",
+                "range": "35,8–38,0°C",
+                "best": "6 mois+",
+                "note": "Le cérumen peut affecter la précision"
+            },
+            "forehead": {
+                "method": "Frontale (temporale)",
+                "range": "35,8–37,8°C",
+                "best": "Dépistage rapide",
+                "note": "Peut être influencé par l'environnement"
+            }
+        },
+        "note": "<strong>Note sur les différences de mesure :</strong> Les températures rectales sont généralement supérieures de 0,5°C (0,9°F) aux mesures buccales, tandis que les mesures axillaires sont plus basses et moins précises pour la température centrale."
+    },
+    "download": {
+        "title": "Tableau de Fièvre Imprimable (PDF)",
+        "content": "Téléchargez notre guide de référence rapide d'une page pour y accéder facilement chez vous ou sur votre mobile.",
+        "btn": "Télécharger le Tableau PDF"
+    },
+    "authority": {
+        "disclaimer": {
+            "title": "Avis Médical Important",
+            "content": "<strong>Avertissement :</strong> Ce guide est à titre éducatif et ne remplace pas un avis médical professionnel. En cas de forte fièvre persistante ou de symptômes graves (léthargie, difficultés respiratoires), consultez immédiatement un médecin."
+        },
+        "transparency": {
+            "title": "Autorité Médicale et Transparence",
+            "reviewProcess": "<strong>Processus de révision médicale :</strong> Ce contenu est rédigé par l'équipe de Ctofconverter et révisé selon les directives du <strong>CDC</strong>, de l'<strong>OMS</strong> et du <strong>NHS</strong>.",
+            "lastUpdatedPrefix": "Dernière révision médicale : "
+        }
+    }
+}
