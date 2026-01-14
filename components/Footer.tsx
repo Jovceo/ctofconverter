@@ -37,7 +37,7 @@ export default function Footer({ lastUpdated }: FooterProps) {
                 </li>
                 <li>
                   <Link
-                    href={getLocalizedLink('/fahrenheit-to-celsius/', currentLocale)}
+                    href={getLocalizedLink('/fahrenheit-to-celsius', currentLocale)}
                     className="footer-link"
                   >
                     {t('footer.links.fahrenheitToCelsius')}
@@ -52,7 +52,7 @@ export default function Footer({ lastUpdated }: FooterProps) {
               <ul className="footer-link-list" aria-labelledby="footer-chart-heading">
                 <li>
                   <Link
-                    href={getLocalizedLink('/celsius-to-fahrenheit-chart/', currentLocale)}
+                    href={getLocalizedLink('/celsius-to-fahrenheit-chart', currentLocale)}
                     className="footer-link"
                   >
                     {t('footer.links.celsiusToFahrenheitChart')}
@@ -68,7 +68,7 @@ export default function Footer({ lastUpdated }: FooterProps) {
                 </li>
                 <li>
                   <Link
-                    href={getLocalizedLink('/body-temperature-chart-fever-guide/', currentLocale)}
+                    href={getLocalizedLink('/body-temperature-chart-fever-guide', currentLocale)}
                     className="footer-link"
                   >
                     {t('footer.links.bodyTemperatureGuide')}
@@ -76,7 +76,7 @@ export default function Footer({ lastUpdated }: FooterProps) {
                 </li>
                 <li>
                   <Link
-                    href={getLocalizedLink('/fever-temperature-chart/', currentLocale)}
+                    href={getLocalizedLink('/fever-temperature-chart', currentLocale)}
                     className="footer-link"
                   >
                     {t('footer.links.feverChart')}

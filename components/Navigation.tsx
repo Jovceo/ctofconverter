@@ -57,7 +57,7 @@ export default function Navigation() {
           </li>
           <li>
             <Link
-              href={getLocalizedLink('/fahrenheit-to-celsius/', currentLocale)}
+              href={getLocalizedLink('/fahrenheit-to-celsius', currentLocale)}
               aria-label={t('nav.fahrenheitToCelsius')}
               title={t('nav.fahrenheitToCelsius')}
             >
@@ -66,7 +66,7 @@ export default function Navigation() {
           </li>
           <li>
             <Link
-              href={getLocalizedLink('/c-to-f-calculator/', currentLocale)}
+              href={getLocalizedLink('/c-to-f-calculator', currentLocale)}
               aria-label={t('nav.calculator')}
               title={t('nav.calculator')}
             >
@@ -75,7 +75,7 @@ export default function Navigation() {
           </li>
           <li>
             <Link
-              href={getLocalizedLink('/temperature-conversion-challenge/', currentLocale)}
+              href={getLocalizedLink('/temperature-conversion-challenge', currentLocale)}
               className="nav-game-link"
               aria-label={t('nav.game')}
               title={t('nav.game')}
