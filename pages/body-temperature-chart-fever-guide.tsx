@@ -179,7 +179,7 @@ export default function BodyTemperatureGuide({ lastUpdatedIso }: BodyTemperature
         <Layout seo={{
             title: t('meta.title'),
             description: t('meta.description'),
-            canonical: `https://ctofconverter.com${getLocalizedLink('/body-temperature-chart-fever-guide/', locale)}`,
+            canonical: `https://ctofconverter.com${getLocalizedLink('/body-temperature-chart-fever-guide', locale)}`,
             ogImage: 'https://ctofconverter.com/images/fever-temperature-chart.webp'
         }}>
             <Head>
