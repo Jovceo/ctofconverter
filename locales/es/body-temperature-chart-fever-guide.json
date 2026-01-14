@@ -1,0 +1,267 @@
+{
+    "meta": {
+        "title": "Tabla de Fiebre y Temperatura Corporal: Guía de Celsius a Fahrenheit",
+        "description": "Guía completa de fiebre y temperatura corporal con tablas de conversión de Celsius a Fahrenheit. Conozca rangos normales, umbrales de fiebre y cuándo consultar a un médico.",
+        "ogTitle": "Tabla de Temperatura de la Fiebre: Guía para Adultos y Niños",
+        "ogDescription": "Tablas completas de temperatura de la fiebre y pautas de salud para todas las edades."
+    },
+    "nav": {
+        "home": "Inicio",
+        "page": "Guía de Temperatura"
+    },
+    "intro": {
+        "title": "Guía de Temperatura Corporal y Fiebre: Adultos y Niños",
+        "tagline": "Su referencia completa de Celsius a Fahrenheit con umbrales de fiebre, tablas y orientación médica.",
+        "featuredSnippet": {
+            "title": "¿Cuál es la Temperatura Corporal Normal?",
+            "content": "La temperatura corporal normal para adultos suele oscilar entre {normalRange}. Una temperatura de {feverThreshold} o superior se considera generalmente {fever}."
+        }
+    },
+    "keyInfo": {
+        "normal": {
+            "label": "✅ Temperatura Normal",
+            "value": "36.5–37.5°C (97.7–99.5°F)"
+        },
+        "warning": {
+            "label": "⚠️ Umbral de Fiebre",
+            "value": "38.0°C (100.4°F)"
+        },
+        "danger": {
+            "label": "🚨 Fiebre Alta",
+            "value": "39.0°C (102.2°F)+"
+        }
+    },
+    "converter": {
+        "title": "Convertidor Rápido de Celsius ↔ Fahrenheit",
+        "placeholder": "Ingrese la temperatura",
+        "celsius": "Celsius (°C)",
+        "fahrenheit": "Fahrenheit (°F)",
+        "btn": "Convertir",
+        "error": "Por favor, introduzca un valor de temperatura válido",
+        "feverCriteria": "Esto cumple con los criterios de fiebre. Considere descansar y consultar a un médico.",
+        "elevatedCriteria": "Temperatura ligeramente elevada. Controle los síntomas y manténgase hidratado.",
+        "normalCriteria": "Rango de temperatura normal.",
+        "belowNormalCriteria": "Ligeramente por debajo de lo normal o frío."
+    },
+    "assessment": {
+        "title": "Evaluación Interactiva de la Temperatura",
+        "person": {
+            "label": "Seleccionar Persona:",
+            "adult": "Adulto",
+            "child": "Niño",
+            "infant": "Bebé"
+        },
+        "temp": {
+            "label": "Temperatura Actual:",
+            "unitC": "Celsius (°C)",
+            "unitF": "Fahrenheit (°F)"
+        },
+        "result": {
+            "recPrefix": "Recomendación:",
+            "analysisPrefix": "Análisis para {person}:"
+        },
+        "statuses": {
+            "hypothermia": "Hipotermia",
+            "normal": "Normal",
+            "elevated": "Ligeramente Elevada",
+            "lowGrade": "Fiebre Leve",
+            "fever": "Fiebre",
+            "moderate": "Fiebre Moderada",
+            "high": "Fiebre Alta",
+            "emergency": "Fiebre / Emergencia",
+            "hyperpyrexia": "Hiperpiréxia"
+        },
+        "severities": {
+            "normal": "Normal",
+            "warning": "Advertencia",
+            "mild": "Leve",
+            "moderate": "Moderada",
+            "high": "Alta",
+            "danger": "Peligro",
+            "critical": "Crítica",
+            "highRisk": "Alto Riesgo",
+            "highDanger": "Peligro Alto",
+            "severe": "Grave",
+            "severeDanger": "Peligro Grave"
+        },
+        "advice": {
+            "infant": {
+                "hypo": "Urgente: La hipotermia en bebés es una emergencia médica. Caliéntelo suavemente y contacte a un médico de inmediato.",
+                "normal": "Rango saludable para un bebé. Asegúrese de que esté vestido cómodamente.",
+                "elevated": "Vigile de cerca. En bebés menores de 3 meses, contacte a un médico por cualquier elevación.",
+                "emergency": "Se requiere consulta médica urgente. La fiebre en un bebé puede ser grave."
+            },
+            "child": {
+                "hypo": "Abofetearlo. Si están letárgicos o tiemblan persistentemente, consulte a un médico.",
+                "normal": "Rango saludable. No se requiere acción a menos que haya otros síntomas presentes.",
+                "lowGrade": "Descanso y líquidos. Consulte a un médico si la fiebre dura más de 24 horas.",
+                "high": "Busque consejo médico. Use medicamentos para reducir la fiebre si lo recomienda su pediatra."
+            },
+            "adult": {
+                "hypo": "Caliéntese. Si la temperatura central permanece por debajo de 35°C (95°F), busque atención de emergencia.",
+                "normal": "Temperatura saludable. Factores como la actividad o la hora del día pueden influir en esto.",
+                "lowGrade": "Controle los síntomas. El descanso y la hidratación suelen ser suficientes.",
+                "fever": "Considere antitérmicos. Consulte a un médico si la fiebre persiste por más de 3 días.",
+                "high": "Urgente: Posible hiperpiréxia. Busque atención médica inmediata."
+            }
+        }
+    },
+    "chart": {
+        "title": "Tabla de Referencia Completa de Temperatura (Adultos y Niños)",
+        "scrollHint": "← Deslice horizontalmente para ver la tabla completa en el móvil →",
+        "imgAlt": "Tabla de temperatura de la fiebre que muestra la conversión de Celsius a Fahrenheit y los umbrales de fiebre",
+        "imgCaption": "Guía visual de las temperaturas de la fiebre tanto en Celsius como en Fahrenheit",
+        "headers": {
+            "status": "Estado",
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "adultAdvice": "Consejos para Adultos",
+            "childAdvice": "Consejos para Niños"
+        },
+        "rows": {
+            "hypothermia": {
+                "status": "Hipotermia",
+                "c": "<36.0°C",
+                "f": "<96.8°F",
+                "adult": "Calentar, vigilar",
+                "child": "Calentamiento inmediato, consultar médico"
+            },
+            "normal": {
+                "status": "Rango Normal",
+                "c": "36.5–37.5°C",
+                "f": "97.7–99.5°F",
+                "adult": "Saludable",
+                "child": "Saludable"
+            },
+            "elevated": {
+                "status": "Ligeramente Elevada",
+                "c": "37.6–37.9°C",
+                "f": "99.7–100.2°F",
+                "adult": "Observar, beber líquidos",
+                "child": "Vigilar, reducir la actividad"
+            },
+            "lowGrade": {
+                "status": "Fiebre Leve",
+                "c": "38.0–38.9°C",
+                "f": "100.4–102.0°F",
+                "adult": "Descanso, considerar medicación",
+                "child": "Vigilar de cerca, consultar médico"
+            },
+            "moderate": {
+                "status": "Fiebre Moderada",
+                "c": "39.0–39.9°C",
+                "f": "102.2–103.8°F",
+                "adult": "Buscar consejo médico",
+                "child": "Ver al médico de inmediato"
+            },
+            "high": {
+                "status": "Fiebre Alta",
+                "c": "40.0–41.0°C",
+                "f": "104.0–105.8°F",
+                "adult": "Atención de emergencia",
+                "child": "Atención de emergencia"
+            },
+            "hyperpyrexia": {
+                "status": "Hiperpiréxia Peligrosa",
+                "c": ">41.0°C",
+                "f": ">105.8°F",
+                "adult": "Emergencia médica",
+                "child": "Emergencia médica"
+            }
+        }
+    },
+    "guides": {
+        "title": "Guías de Fiebre por Grupo de Edad",
+        "adult": {
+            "title": "👨‍⚕️ Guía de Fiebre para Adultos",
+            "items": [
+                "Variaciones normales de la temperatura corporal de los adultos",
+                "Signos típicos de fiebre en adultos",
+                "Indicadores claros de cuándo buscar atención médica",
+                "Pautas de manejo de la fiebre y medicación"
+            ]
+        },
+        "child": {
+            "title": "👶 Guía de Fiebre para Niños y Bebés",
+            "items": [
+                "Umbrales de fiebre por edad (0-3 meses, 3-12 meses, 1-12 años)",
+                "Consideraciones especiales para niños",
+                "Cómo reconocer y manejar las convulsiones febriles",
+                "Cuándo llamar al pediatra"
+            ]
+        }
+    },
+    "faqs": {
+        "title": "Preguntas Frecuentes sobre la Fiebre",
+        "items": [
+            {
+                "q": "¿Qué temperatura se considera fiebre?",
+                "a": "Generalmente se considera fiebre una temperatura corporal de 38.0°C (100.4°F) o superior. Los diferentes métodos de medición (oral, oído, rectal, frente) pueden mostrar ligeras variaciones."
+            },
+            {
+                "q": "¿Cuál es la temperatura corporal normal en C y F?",
+                "a": "El rango normal de temperatura corporal para adultos sanos suele estar entre 36.1°C (97.0°F) y 37.2°C (99.0°F). Esto puede variar ligeramente según factores como la hora del día, el nivel de actividad, la edad y el método de medición."
+            },
+            {
+                "q": "¿Son 37.5°C (99.5°F) fiebre?",
+                "a": "Esta es una temperatura límite, a veces llamada aumento de \"fiebre leve\". Controle los síntomas y esté atento a los cambios. No suele considerarse una fiebre verdadera, pero puede indicar el comienzo de una enfermedad."
+            },
+            {
+                "q": "¿Cuándo debo ver a un médico por fiebre?",
+                "a": "<strong>Adultos:</strong> fiebre que dura más de 3 días, temperatura superior a 39.4°C (103°F) o acompañada de dolor de cabeza intenso, erupción cutánea, dificultad para respirar o rigidez en el cuello. <strong>Niños:</strong> cualquier fiebre en bebés menores de 3 meses, fiebre alta que no responde a la medicación o fiebre con letargo, irritabilidad o erupción inusual."
+            }
+        ]
+    },
+    "measurement": {
+        "title": "Cómo Medir la Temperatura Corporal con Precisión",
+        "headers": {
+            "method": "Método",
+            "range": "Rango Normal",
+            "bestFor": "Mejor para",
+            "notes": "Notas"
+        },
+        "rows": {
+            "oral": {
+                "method": "Oral",
+                "range": "36.5–37.5°C",
+                "best": "Adultos, niños mayores",
+                "note": "Evitar durante los 30 min posteriores a comer/beber"
+            },
+            "axillary": {
+                "method": "Axilar (axila)",
+                "range": "35.9–36.7°C",
+                "best": "Todas las edades",
+                "note": "Suele ser entre 0.5 y 1.0°C inferior a la temperatura central"
+            },
+            "ear": {
+                "method": "Oído (timpánica)",
+                "range": "35.8–38.0°C",
+                "best": "6 meses+",
+                "note": "El cerumen puede afectar la precisión"
+            },
+            "forehead": {
+                "method": "Frente (temporal)",
+                "range": "35.8–37.8°C",
+                "best": "Detección rápida",
+                "note": "Puede verse influenciado por el entorno"
+            }
+        },
+        "note": "<strong>Nota sobre las Diferencias de Medición:</strong> Las temperaturas rectales son generalmente 0.5°C (0.9°F) más altas que las lecturas orales, mientras que las mediciones axilares (axila) suelen ser más bajas y se consideran menos precisas para la temperatura central."
+    },
+    "download": {
+        "title": "Tabla de Temperatura de la Fiebre para Imprimir (PDF)",
+        "content": "Descargue nuestra guía de referencia rápida de una página para acceder fácilmente en casa o en su dispositivo móvil.",
+        "btn": "Descargar Tabla en PDF"
+    },
+    "authority": {
+        "disclaimer": {
+            "title": "Descargo de Responsabilidad Médica Importante",
+            "content": "<strong>Descargo de responsabilidad:</strong> Esta guía es solo para fines educativos y no debe reemplazar el consejo, diagnóstico o tratamiento médico profesional. Si usted o su hijo tienen fiebre alta, fiebre persistente o síntomas como letargo, dificultad para respirar o erupción cutánea, consulte a un médico o busque atención médica de emergencia."
+        },
+        "transparency": {
+            "title": "Autoridad Médica y Transparencia",
+            "reviewProcess": "<strong>Proceso de Revisión Médica:</strong> Este contenido ha sido escrito por el equipo editorial de Ctofconverter y revisado utilizando las pautas médicas establecidas de los <strong>CDC (Centros para el Control de Enfermedades)</strong>, la <strong>OMS (Organización Mundial de la Salud)</strong> y el <strong>NHS</strong>.",
+            "lastUpdatedPrefix": "Última revisión médica: "
+        }
+    }
+}

@@ -1,0 +1,267 @@
+{
+    "meta": {
+        "title": "Body Temperature & Fever Guide: Celsius to Fahrenheit Chart",
+        "description": "Complete fever and body temperature guide with Celsius to Fahrenheit conversion charts. Learn normal ranges, fever thresholds, and when to seek medical help.",
+        "ogTitle": "Body Temperature & Fever Guide: Adults & Children",
+        "ogDescription": "Comprehensive fever temperature charts and health guidelines for all ages."
+    },
+    "nav": {
+        "home": "Home",
+        "page": "Body Temperature Guide"
+    },
+    "intro": {
+        "title": "Body Temperature & Fever Guide: Adults & Children",
+        "tagline": "Your complete Celsius to Fahrenheit reference with fever thresholds, charts, and medical guidance.",
+        "featuredSnippet": {
+            "title": "What Is a Normal Body Temperature?",
+            "content": "Normal body temperature for adults typically ranges from {normalRange}. A temperature of {feverThreshold} or higher is generally considered a {fever}."
+        }
+    },
+    "keyInfo": {
+        "normal": {
+            "label": "✅ Normal Temperature",
+            "value": "36.5–37.5°C (97.7–99.5°F)"
+        },
+        "warning": {
+            "label": "⚠️ Fever Threshold",
+            "value": "38.0°C (100.4°F)"
+        },
+        "danger": {
+            "label": "🚨 High Fever",
+            "value": "39.0°C (102.2°F)+"
+        }
+    },
+    "converter": {
+        "title": "Quick Celsius ↔ Fahrenheit Converter",
+        "placeholder": "Enter temperature",
+        "celsius": "Celsius (°C)",
+        "fahrenheit": "Fahrenheit (°F)",
+        "btn": "Convert",
+        "error": "Please enter a valid temperature value",
+        "feverCriteria": "This meets fever criteria. Consider rest and consulting a doctor.",
+        "elevatedCriteria": "Slightly elevated temperature. Monitor symptoms and stay hydrated.",
+        "normalCriteria": "Normal temperature range.",
+        "belowNormalCriteria": "Slightly below normal or cold."
+    },
+    "assessment": {
+        "title": "Interactive Temperature Assessment",
+        "person": {
+            "label": "Select Person:",
+            "adult": "Adult",
+            "child": "Child",
+            "infant": "Infant"
+        },
+        "temp": {
+            "label": "Current Temperature:",
+            "unitC": "Celsius (°C)",
+            "unitF": "Fahrenheit (°F)"
+        },
+        "result": {
+            "recPrefix": "Recommendation:",
+            "analysisPrefix": "Analysis for {person}:"
+        },
+        "statuses": {
+            "hypothermia": "Hypothermia",
+            "normal": "Normal",
+            "elevated": "Slightly Elevated",
+            "lowGrade": "Low-Grade Fever",
+            "fever": "Fever",
+            "moderate": "Moderate Fever",
+            "high": "High Fever",
+            "emergency": "Fever / Emergency",
+            "hyperpyrexia": "Hyperpyrexia"
+        },
+        "severities": {
+            "normal": "Normal",
+            "warning": "Warning",
+            "mild": "Mild",
+            "moderate": "Moderate",
+            "high": "High",
+            "danger": "Danger",
+            "critical": "Critical",
+            "highRisk": "High Risk",
+            "highDanger": "High Danger",
+            "severe": "Severe",
+            "severeDanger": "Severe Danger"
+        },
+        "advice": {
+            "infant": {
+                "hypo": "Urgent: Infant hypothermia is a medical emergency. Warm them gently and contact a doctor immediately.",
+                "normal": "Healthy range for an infant. Ensure they are comfortably dressed.",
+                "elevated": "Monitor closely. In infants under 3 months, contact a doctor for any elevation.",
+                "emergency": "Urgent medical consultation required. A fever in an infant can be serious."
+            },
+            "child": {
+                "hypo": "Warm them up. If they are lethargic or shivering persistently, consult a doctor.",
+                "normal": "Healthy range. No action needed unless other symptoms are present.",
+                "lowGrade": "Rest and fluids. Consult a doctor if the fever lasts more than 24 hours.",
+                "high": "Seek medical advice. Use fever-reducing medicine if recommended by your pediatrician."
+            },
+            "adult": {
+                "hypo": "Warm up. If core temp stays below 35°C (95°F), seek emergency care.",
+                "normal": "Healthy temperature. Factors like activity or time of day can influence this.",
+                "lowGrade": "Monitor symptoms. Rest and hydration are usually sufficient.",
+                "fever": "Consider fever reducers. Consult a doctor if fever persists for more than 3 days.",
+                "high": "Urgent: Possible hyperpyrexia. Seek immediate medical attention."
+            }
+        }
+    },
+    "chart": {
+        "title": "Comprehensive Temperature Reference Chart (Adults & Children)",
+        "scrollHint": "← Scroll horizontally for full table on mobile →",
+        "imgAlt": "Fever temperature chart showing Celsius to Fahrenheit conversion and fever thresholds",
+        "imgCaption": "Visual guide to fever temperatures in both Celsius and Fahrenheit",
+        "headers": {
+            "status": "Status",
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "adultAdvice": "Adult Advice",
+            "childAdvice": "Child Advice"
+        },
+        "rows": {
+            "hypothermia": {
+                "status": "Hypothermia",
+                "c": "<36.0°C",
+                "f": "<96.8°F",
+                "adult": "Warm up, monitor",
+                "child": "Immediate warming, consult doctor"
+            },
+            "normal": {
+                "status": "Normal Range",
+                "c": "36.5–37.5°C",
+                "f": "97.7–99.5°F",
+                "adult": "Healthy",
+                "child": "Healthy"
+            },
+            "elevated": {
+                "status": "Slightly Elevated",
+                "c": "37.6–37.9°C",
+                "f": "99.7–100.2°F",
+                "adult": "Observe, drink fluids",
+                "child": "Monitor, reduce activity"
+            },
+            "lowGrade": {
+                "status": "Low-grade Fever",
+                "c": "38.0–38.9°C",
+                "f": "100.4–102.0°F",
+                "adult": "Rest, consider medication",
+                "child": "Monitor closely, consult doctor"
+            },
+            "moderate": {
+                "status": "Moderate Fever",
+                "c": "39.0–39.9°C",
+                "f": "102.2–103.8°F",
+                "adult": "Seek medical advice",
+                "child": "See doctor immediately"
+            },
+            "high": {
+                "status": "High Fever",
+                "c": "40.0–41.0°C",
+                "f": "104.0–105.8°F",
+                "adult": "Emergency care",
+                "child": "Emergency care"
+            },
+            "hyperpyrexia": {
+                "status": "Dangerous Hyperpyrexia",
+                "c": ">41.0°C",
+                "f": ">105.8°F",
+                "adult": "Medical emergency",
+                "child": "Medical emergency"
+            }
+        }
+    },
+    "guides": {
+        "title": "Fever Guides by Age Group",
+        "adult": {
+            "title": "👨‍⚕️ Adult Fever Guide",
+            "items": [
+                "Normal adult body temperature variations",
+                "Typical signs of fever in adults",
+                "Clear indicators for when to seek medical care",
+                "Fever management and medication guidelines"
+            ]
+        },
+        "child": {
+            "title": "👶 Child & Infant Fever Guide",
+            "items": [
+                "Age-based fever thresholds (0–3 months, 3–12 months, 1–12 years)",
+                "Special considerations for children",
+                "Recognizing and managing febrile seizures",
+                "When to call the pediatrician"
+            ]
+        }
+    },
+    "faqs": {
+        "title": "Fever Temperature FAQs",
+        "items": [
+            {
+                "q": "What temperature is considered a fever?",
+                "a": "A body temperature of 38.0°C (100.4°F) or higher is generally considered a fever. Different measurement methods (oral, ear, rectal, forehead) may show slight variations."
+            },
+            {
+                "q": "What is the normal body temperature in C to F?",
+                "a": "The normal body temperature range for healthy adults is typically between 36.1°C (97.0°F) and 37.2°C (99.0°F). This can vary slightly depending on factors such as time of day, activity level, age, and measurement method."
+            },
+            {
+                "q": "Is 37.5°C (99.5°F) a fever?",
+                "a": "This is a borderline temperature, sometimes called a \"low-grade\" rise. Monitor symptoms and watch for changes. It's not typically considered a true fever but may indicate the beginning of an illness."
+            },
+            {
+                "q": "When should I see a doctor for fever?",
+                "a": "<strong>Adults:</strong> fever lasting more than 3 days, temperature over 39.4°C (103°F), or accompanied by severe headache, rash, shortness of breath, or stiff neck.<br /><strong>Children:</strong> any fever in infants under 3 months, high fever that doesn't respond to medication, or fever with lethargy, irritability, or unusual rash."
+            }
+        ]
+    },
+    "measurement": {
+        "title": "How to Measure Body Temperature Accurately",
+        "headers": {
+            "method": "Method",
+            "range": "Normal Range",
+            "bestFor": "Best For",
+            "notes": "Notes"
+        },
+        "rows": {
+            "oral": {
+                "method": "Oral",
+                "range": "36.5–37.5°C",
+                "best": "Adults, older children",
+                "note": "Avoid within 30 min after eating/drinking"
+            },
+            "axillary": {
+                "method": "Axillary (armpit)",
+                "range": "35.9–36.7°C",
+                "best": "All ages",
+                "note": "Usually 0.5–1.0°C lower than core temperature"
+            },
+            "ear": {
+                "method": "Ear (tympanic)",
+                "range": "35.8–38.0°C",
+                "best": "6 months+",
+                "note": "Earwax may affect accuracy"
+            },
+            "forehead": {
+                "method": "Forehead (temporal)",
+                "range": "35.8–37.8°C",
+                "best": "Quick screening",
+                "note": "May be influenced by environment"
+            }
+        },
+        "note": "<strong>Note on Measurement Differences:</strong> Rectal temperatures are generally 0.5°C (0.9°F) higher than oral readings, while armpit (axillary) measurements are usually lower and considered less accurate for core temperature."
+    },
+    "download": {
+        "title": "Printable Fever Temperature Chart (PDF)",
+        "content": "Download our one-page quick reference guide for easy access at home or on your mobile device.",
+        "btn": "Download PDF Chart"
+    },
+    "authority": {
+        "disclaimer": {
+            "title": "Important Medical Disclaimer",
+            "content": "<strong>Disclaimer:</strong> This guide is for educational purposes only and should not replace professional medical advice, diagnosis, or treatment. If you or your child has a high fever, persistent fever, or symptoms like lethargy, difficulty breathing, or rash, consult a doctor or seek emergency medical care."
+        },
+        "transparency": {
+            "title": "Medical Authority & Transparency",
+            "reviewProcess": "<strong>Medical Review Process:</strong> This content is written by the Ctofconverter editorial team and reviewed using established medical guidelines from the <strong>CDC (Centers for Disease Control)</strong>, <strong>WHO (World Health Organization)</strong>, and <strong>NHS</strong>.",
+            "lastUpdatedPrefix": "Last medically reviewed: "
+        }
+    }
+}
