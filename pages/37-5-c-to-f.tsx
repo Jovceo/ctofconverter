@@ -99,7 +99,7 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     };
 };
 
-export default function Temperature37_5C({ lastUpdatedIso, pageTrans }: { lastUpdatedIso: string, pageTrans: PageTranslation }) {
+export default function Temperature37_5C({ lastUpdatedIso, pageTrans, availablePages }: { lastUpdatedIso: string, pageTrans: PageTranslation, availablePages: number[] }) {
     const celsius = 37.5;
     const fahrenheit = celsiusToFahrenheit(celsius);
 
@@ -197,6 +197,7 @@ export default function Temperature37_5C({ lastUpdatedIso, pageTrans }: { lastUp
             customDescription={replacePlaceholders(pageT.page?.description || '', replacements)}
             customIntro={replacePlaceholders(pageT.page?.intro || '', replacements)}
             extraConversions={extraConversions}
+            availablePages={availablePages}
         />
     );
 }
