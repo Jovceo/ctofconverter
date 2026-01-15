@@ -1,6 +1,7 @@
 import { GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
+import { getLatestModifiedDate } from '../utils/dateHelpers';
 
 const SITE_URL = 'https://ctofconverter.com';
 
@@ -11,14 +12,16 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
         fs.statSync(path.join(localesDir, f)).isDirectory()
     );
 
-    // 2. 获取所有页面及其最后修改时间
+    // 2. 获取所有页面及其真实更新时间
     const pagesDir = path.join(process.cwd(), 'pages');
     const getPagesWithDates = (dir: string, base = ''): { path: string; lastmod: string }[] => {
         let results: { path: string; lastmod: string }[] = [];
         const list = fs.readdirSync(dir);
+
         list.forEach(file => {
             const filePath = path.join(dir, file);
             const stat = fs.statSync(filePath);
+
             if (stat && stat.isDirectory()) {
                 if (file !== 'api' && !file.startsWith('_')) {
                     results = results.concat(getPagesWithDates(filePath, path.join(base, file)));
@@ -26,15 +29,27 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
             } else {
                 if (file.endsWith('.tsx') || file.endsWith('.js')) {
                     const name = file.replace(/\.(tsx|js)$/, '');
+
                     // 排除不需要包含在 sitemap 中的页面
                     if (name !== '_app' && name !== '_document' && name !== 'sitemap.xml' && name !== 'temperature-template') {
-                        const pagePath = path.join(base, name === 'index' ? '' : name).replace(/\\/g, '/');
-                        const lastmod = stat.mtime.toISOString().split('T')[0];
+                        // 修复 URL 路径：统一为 Unix 风格并移除末尾多余字符
+                        let pagePath = path.join(base, name === 'index' ? '' : name)
+                            .replace(/\\/g, '/')  // 统一为 Unix 风格
+                            .replace(/\.+$/, ''); // 移除末尾的点号
+
+                        // 计算真实的更新时间（与页面底部 Footer 显示一致）
+                        const dependencies = [
+                            filePath,  // 页面本身
+                            path.join(process.cwd(), 'pages', 'temperature-template.tsx'),  // 模板文件（如果存在）
+                        ];
+
+                        const lastmod = getLatestModifiedDate(dependencies);
                         results.push({ path: pagePath, lastmod });
                     }
                 }
             }
         });
+
         return results;
     };
 
@@ -57,14 +72,14 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
         return a.path.localeCompare(b.path);
     });
 
-    // 4. 生成 XML 条目
+    // 4. 生成 XML 条目（英语版本在前）
     const entries: string[] = [];
 
     allPages.forEach(pageObj => {
         const { path: page, lastmod } = pageObj;
 
-        // 默认语言 (en)
-        const enUrl = page ? `${SITE_URL}/${page}` : `${SITE_URL}`;
+        // 先生成英语版本（默认语言）
+        const enUrl = page ? `${SITE_URL}/${page}` : SITE_URL;
         entries.push(`  <url>
     <loc>${enUrl}</loc>
     <lastmod>${lastmod}</lastmod>
@@ -72,11 +87,10 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     <priority>${page === '' ? '1.0' : '0.8'}</priority>
   </url>`);
 
-        // 其他语言
+        // 再生成其他语言版本
         locales.forEach(locale => {
             if (locale === 'en') return;
             const locUrl = page ? `${SITE_URL}/${locale}/${page}` : `${SITE_URL}/${locale}`;
-            // 多语言版本使用相同的 lastmod
             entries.push(`  <url>
     <loc>${locUrl}</loc>
     <lastmod>${lastmod}</lastmod>
