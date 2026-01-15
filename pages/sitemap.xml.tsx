@@ -37,19 +37,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
                             .replace(/\\/g, '/')  // 统一为 Unix 风格
                             .replace(/\.+$/, ''); // 移除末尾的点号
 
-                        // 计算真实的更新时间（与页面底部 Footer 显示一致）
-                        // 使用相对路径，与各页面的 getStaticProps 保持一致
-                        const relativePagePath = path.relative(process.cwd(), filePath).replace(/\\/g, '/');
-                        const dependencies = [
-                            relativePagePath,  // 例如: 'pages/41-c-to-f.tsx'
-                        ];
-
-                        // 如果是温度转换页面，添加模板文件依赖
-                        if (name.match(/^\d+(-\d+)?-c-to-f$/)) {
-                            dependencies.push('pages/temperature-template.tsx');
-                        }
-
-                        const lastmod = getLatestModifiedDate(dependencies);
+                        // 统一使用固定日期
+                        const lastmod = '2026-01-15';
                         results.push({ path: pagePath, lastmod });
                     }
                 }
