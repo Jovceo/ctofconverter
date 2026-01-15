@@ -1,0 +1,57 @@
+{
+    "meta": {
+        "titles": {
+            "fever": "41°C para Fahrenheit (105.8°F) – Emergência Médica: Guia de Hiperpirexia",
+            "general": "Calculadora de Conversão de 41°C para Fahrenheit (105.8°F)"
+        },
+        "ogDescription": "41°C equivale a 105.8°F. Uma febre de 41°C é uma emergência médica que requer atenção imediata. Aprenda a converter 41 Celsius para Fahrenheit.",
+        "descriptions": {
+            "googleContext": "41 graus Celsius = 105.8 graus Fahrenheit. Este é um nível de febre com risco de vida. Cálculo exato: 41°C × 9/5 + 32 = 105.8°F.",
+            "googleGeneral": "Converta 41°C para Fahrenheit instantaneamente. 41 graus Celsius são 105.8 graus Fahrenheit. Guia de emergência para febre crítica incluído."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Emergência Médica: 41°C (105.8°F)",
+        "subtitle": "Febre de 41°C é Perigosa?",
+        "intro": "Sim, 41°C (105.8°F) é uma emergência médica conhecida como hiperpirexia. Esta temperatura extremamente alta pode levar a danos cerebrais permanentes ou falência de órgãos se não for tratada imediatamente.",
+        "ranges": {
+            "hypothermia": "Hipotermia",
+            "normal": "Normal",
+            "fever": "Febre",
+            "highFever": "Febre de Emergência"
+        },
+        "table": {
+            "headers": {
+                "condition": "Condição",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Hipotermia",
+                "normal": "Faixa Saudável",
+                "elevated": "Febre Leve",
+                "fever": "Febre Moderada",
+                "highFever": "Emergência Médica (41°C)"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "O que significa febre de 41°C em Fahrenheit?",
+            "answer": "Uma febre de 41°C em Fahrenheit é exatamente 105.8°F. É considerada uma emergência médica grave (hiperpirexia). Procure ajuda médica imediatamente."
+        },
+        "q2": {
+            "question": "Temperatura corporal de 41°C é fatal?",
+            "answer": "Embora nem sempre seja fatal, 41°C é extremamente perigoso pois está no limite do que o corpo humano suporta, podendo causar danos irreversíveis.",
+            "items": [
+                "Ligue para a emergência imediatamente",
+                "Não espere para procurar um médico",
+                "Monitore convulsões ou perda de consciência"
+            ]
+        },
+        "q3": {
+            "question": "41°C é clima quente?",
+            "answer": "Sim, 41°C (105.8°F) é um clima perigosamente quente, podendo causar insolação e desidratação severa rapidamente."
+        }
+    }
+}

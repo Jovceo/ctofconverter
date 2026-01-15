@@ -1,0 +1,76 @@
+{
+    "meta": {
+        "titles": {
+            "fever": "39°C in Fahrenheit (102.2°F) – Haben Erwachsene und Kinder Fieber?",
+            "general": "39°C in Fahrenheit (102.2°F) Umrechner"
+        },
+        "ogDescription": "Rechnen Sie 39°C in Fahrenheit (102.2°F) um. Sind 39°C Fieber? 39 Grad Celsius entsprechen 102.2 Grad Fahrenheit. Erfahren Sie, wie man es behandelt und wann man einen Arzt aufsuchen sollte.",
+        "descriptions": {
+            "googleContext": "39 Grad Celsius = 102.2 Grad Fahrenheit. Dies gilt als Fieber. Genaue Umrechnung: 39°C × 9/5 + 32 = 102.2°F.",
+            "googleGeneral": "Rechnen Sie 39°C sofort in Fahrenheit um. 39 Grad Celsius entsprechen 102.2 Grad Fahrenheit. Detaillierte Berechnung und Fieberratgeber inklusive."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Fieber-Ratgeber: 39°C (102.2°F)",
+        "subtitle": "Sind 39°C Fieber?",
+        "intro": "Ja, 39°C (102.2°F) gelten sowohl für Erwachsene als auch für Kinder als Fieber. Bei Erwachsenen ist es in der Regel mäßiges Fieber, aber bei Säuglingen und Kleinkindern ist es hohes Fieber, das sofortige Aufmerksamkeit und Überwachung erfordert.",
+        "ranges": {
+            "hypothermia": "Unterkühlung",
+            "normal": "Normal",
+            "fever": "Fieber",
+            "highFever": "Hohes Fieber"
+        },
+        "table": {
+            "headers": {
+                "condition": "Zustand",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Unterkühlung",
+                "normal": "Normalbereich",
+                "elevated": "Erhöht / Leichtes Fieber",
+                "fever": "Mäßiges Fieber (39°C)",
+                "highFever": "Hohes Fieber"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "Gelten 39°C (102.2°F) als Fieber?",
+            "answer": "Ja, 39°C sind bei Erwachsenen mäßiges Fieber. Bei Kindern und Babys gilt es als hohes Fieber. Sie sollten die Symptome genau überwachen und bei Fortbestehen einen Fachmann konsultieren.",
+            "items": [
+                "Erwachsene: Mäßiges Fieber (ärztlicher Rat meist bei >3 Tagen Dauer)",
+                "Kinder: Hohes Fieber (Kinderarzt aufsuchen, wenn es >24h anhält)",
+                "Säuglinge (<3 Monate): Sofort einen Notarzt aufsuchen"
+            ]
+        },
+        "q2": {
+            "question": "Sind 39°C für ein 4-jähriges Kind gefährlich?",
+            "answer": "Für ein 4-jähriges Kind sind 39°C hohes Fieber. Obwohl es nicht immer ein Notfall ist, sollten Sie ärztliche Hilfe suchen, wenn das Fieber länger als 3 Tage anhält oder wenn das Kind lethargisch ist, Flüssigkeit ablehnt oder einen steifen Nacken hat.",
+            "items": [
+                "Überwachen Sie die Flüssigkeitsaufnahme und das Spielverhalten",
+                "Verwenden Sie altersgerechte fiebersenkende Mittel, falls empfohlen",
+                "Achten Sie auf Ausschlag oder Atembeschwerden"
+            ]
+        },
+        "q3": {
+            "question": "Kann Zahnen bei Babys 39°C Fieber verursachen?",
+            "answer": "Nein, Zahnen verursacht selten Fieber über 38°C (100.4°F). Wenn ein Baby 39°C Fieber hat, gehen Sie nicht davon aus, dass es am Zahnen liegt; suchen Sie nach anderen Ursachen und konsultieren Sie einen Kinderarzt, besonders wenn das Baby jünger als 12 Monate ist."
+        },
+        "q4": {
+            "question": "Wie senkt man 39°C Fieber bei Erwachsenen?",
+            "answer": "Ein 39°C-Fieber kann zu Hause durch Ruhe und Flüssigkeitszufuhr behandelt werden. Wenn das Fieber unangenehm ist, ziehen Sie rezeptfreie Medikamente in Betracht.",
+            "items": [
+                "Trinken Sie viel Wasser und Elektrolyte",
+                "Verwenden Sie kühle (nicht kalte) Kompressen",
+                "Nehmen Sie Paracetamol oder Ibuprofen ein",
+                "Tragen Sie leichte Kleidung und ruhen Sie sich aus"
+            ]
+        },
+        "q5": {
+            "question": "Wie viel sind 39°C in Kelvin?",
+            "answer": "39°C sind 312.15 Kelvin. Die Formel lautet: K = °C + 273.15. Also 39 + 273.15 = 312.15K."
+        }
+    }
+}

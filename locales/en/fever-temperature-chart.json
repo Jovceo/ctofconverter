@@ -1,0 +1,184 @@
+{
+    "meta": {
+        "title": "Fever Temperature Chart | Celsius to Fahrenheit Guide",
+        "description": "Comprehensive fever temperature chart back with Celsius to Fahrenheit conversion. Quick reference guide for adults and children with fever thresholds and medical advice.",
+        "ogTitle": "Fever Temperature Chart: Adults & Children",
+        "ogDescription": "Complete Celsius to Fahrenheit reference with fever thresholds, charts, and medical guidance."
+    },
+    "breadcrumb": {
+        "home": "Home",
+        "page": "Fever Temperature Chart"
+    },
+    "hero": {
+        "title": "Fever Temperature Chart",
+        "tagline": "Complete Celsius to Fahrenheit conversion guide for fever temperatures with medical advice for adults and children.",
+        "subtitle": "Fever Temperature Chart Guide",
+        "subTagline": "Quick reference guide for Celsius to Fahrenheit fever temperatures with medical recommendations"
+    },
+    "definition": {
+        "title": "What Temperature Is Considered a Fever?",
+        "content": "A body temperature of <strong>38.0°C (100.4°F)</strong> or higher is generally considered a fever for adults and children. Temperatures between 37.6°C and 37.9°C are often classified as a low-grade or slight fever."
+    },
+    "converter": {
+        "title": "Quick Temperature Converter",
+        "description": "Convert between Celsius and Fahrenheit for any temperature value:",
+        "celsiusLabel": "Celsius (°C)",
+        "fahrenheitLabel": "Fahrenheit (°F)",
+        "placeholder": "e.g. 38.5",
+        "copy": "Copy",
+        "copied": "Copied!",
+        "validation": {
+            "invalid": "Please enter a valid number",
+            "range": "Please enter a temperature between 35°C and 42°C",
+            "danger": "DANGEROUS: This is a medical emergency. Seek immediate care.",
+            "high": "HIGH FEVER: Seek medical care, especially for children.",
+            "moderate": "MODERATE FEVER: Consider consulting a doctor.",
+            "lowGrade": "LOW-GRADE FEVER: Rest and monitor symptoms.",
+            "elevated": "SLIGHTLY ELEVATED: Monitor for changes.",
+            "normal": "NORMAL: Healthy temperature range.",
+            "low": "LOW TEMPERATURE: Consider warming up."
+        }
+    },
+    "levels": {
+        "title": "Fever Temperature Levels",
+        "description": "Reference chart showing different fever levels with Celsius to Fahrenheit conversions and medical advice:",
+        "normal": {
+            "title": "✅ Normal Temperature",
+            "range": "36.5°C - 37.5°C (97.7°F - 99.5°F)",
+            "desc": "Healthy body temperature range. No medical intervention needed.",
+            "tips": [
+                "Maintain normal activities",
+                "Stay hydrated",
+                "Monitor for changes"
+            ]
+        },
+        "elevated": {
+            "title": "⚠️ Slightly Elevated",
+            "range": "37.6°C - 37.9°C (99.7°F - 100.2°F)",
+            "desc": "Borderline temperature. May indicate early illness.",
+            "tips": [
+                "Monitor symptoms",
+                "Increase fluid intake",
+                "Rest if feeling unwell"
+            ]
+        },
+        "lowGrade": {
+            "title": "🌡️ Low-Grade Fever",
+            "range": "38.0°C - 38.9°C (100.4°F - 102.0°F)",
+            "desc": "Official fever threshold. Body is fighting infection.",
+            "tips": [
+                "Rest and hydrate",
+                "Consider fever reducers",
+                "Monitor closely"
+            ]
+        },
+        "moderate": {
+            "title": "🔥 Moderate Fever",
+            "range": "39.0°C - 39.9°C (102.2°F - 103.8°F)",
+            "desc": "Significant fever requiring attention.",
+            "tips": [
+                "Seek medical advice",
+                "Use fever medication",
+                "Monitor for worsening"
+            ]
+        },
+        "high": {
+            "title": "🚨 High Fever",
+            "range": "40.0°C - 41.0°C (104.0°F - 105.8°F)",
+            "desc": "Potentially dangerous fever level.",
+            "tips": [
+                "Seek medical care",
+                "Emergency for children",
+                "Immediate treatment needed"
+            ]
+        },
+        "danger": {
+            "title": "💀 Dangerous Hyperpyrexia",
+            "range": ">41.0°C (>105.8°F)",
+            "desc": "Medical emergency requiring immediate attention.",
+            "tips": [
+                "Call emergency services",
+                "Cooling measures",
+                "Hospitalization likely"
+            ]
+        }
+    },
+    "ageGroups": {
+        "title": "Age-Specific Fever Guidelines",
+        "infants": {
+            "title": "👶 Infants (0-3 months)",
+            "threshold": "<strong>Fever threshold:</strong> Any temperature &ge;38.0°C (100.4°F) requires immediate medical attention.",
+            "tips": [
+                "Rectal temperature is most accurate",
+                "Even low-grade fever can be serious",
+                "Contact pediatrician immediately"
+            ]
+        },
+        "children": {
+            "title": "🧒 Children (3 months - 12 years)",
+            "threshold": "<strong>Fever threshold:</strong> &ge;38.0°C (100.4°F) - monitor closely and consult doctor if concerned.",
+            "tips": [
+                "Watch for behavior changes",
+                "Use age-appropriate medication",
+                "Seek care if fever >39.0°C (102.2°F)"
+            ]
+        },
+        "adults": {
+            "title": "👨‍⚕️ Adults (12+ years)",
+            "threshold": "<strong>Fever threshold:</strong> &ge;38.0°C (100.4°F) - usually manageable at home unless severe.",
+            "tips": [
+                "Rest and hydration usually sufficient",
+                "Seek care if fever >39.4°C (103°F) or lasts >3 days",
+                "Watch for concerning symptoms"
+            ]
+        }
+    },
+    "measurement": {
+        "title": "Temperature Measurement Methods",
+        "description": "Different methods yield slightly different results. Here's what you need to know:",
+        "oral": {
+            "title": "Oral",
+            "range": "Normal range: 36.5-37.5°C",
+            "note": "Wait 30 minutes after eating/drinking for accurate reading."
+        },
+        "ear": {
+            "title": "Ear (Tympanic)",
+            "range": "Normal range: 35.8-38.0°C",
+            "note": "Quick and convenient but can be affected by earwax."
+        },
+        "forehead": {
+            "title": "Forehead (Temporal)",
+            "range": "Normal range: 35.8-37.8°C",
+            "note": "Good for screening but less accurate than other methods."
+        },
+        "axillary": {
+            "title": "Axillary (Armpit)",
+            "range": "Normal range: 35.9-36.7°C",
+            "note": "Least accurate method, typically 0.5-1.0°C lower than core temperature."
+        }
+    },
+    "download": {
+        "title": "Download Printable Fever Temperature Chart",
+        "description": "Get our comprehensive one-page PDF reference guide for quick access at home or medical facility.",
+        "btn": "Download PDF Chart",
+        "printPage": "Print This Page",
+        "printChart": "Print Chart Only",
+        "note": "PDF includes: Fever temperature ranges, conversion chart, age-specific guidelines, and emergency contacts."
+    },
+    "disclaimer": {
+        "title": "Important Medical Disclaimer",
+        "content": "<strong>Disclaimer:</strong> This fever temperature chart is for educational purposes only and should not replace professional medical advice, diagnosis, or treatment. Always consult with a healthcare provider for medical concerns, especially for infants, young children, or individuals with compromised immune systems."
+    },
+    "faq": {
+        "q1": "What temperature is considered a fever?",
+        "a1": "A body temperature of 38.0°C (100.4°F) or higher is generally considered a fever for adults and children.",
+        "q2": "What is a dangerous fever temperature?",
+        "a2": "A fever above 39.4°C (103°F) in adults or over 38°C (100.4°F) in infants under 3 months is considered concerning and may require medical attention. Temperatures above 41.1°C (106°F) are considered a medical emergency (hyperpyrexia).",
+        "q3": "What is the normal range for body temperature?",
+        "a3": "The normal body temperature range is typically between 36.5°C and 37.5°C (97.7°F - 99.5°F)."
+    },
+    "schema": {
+        "medicalHeadline": "Fever Temperature Chart: Celsius to Fahrenheit Guide",
+        "medicalDesc": "A comprehensive guide to fever temperatures for adults and children, including Celsius to Fahrenheit conversions and medical advice."
+    }
+}

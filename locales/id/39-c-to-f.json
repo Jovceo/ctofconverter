@@ -1,0 +1,72 @@
+{
+    "meta": {
+        "title": "39°C ke Fahrenheit (102.2°F) – Apakah Demam pada Dewasa & Anak?",
+        "descriptions": {
+            "googleContext": "39 derajat Celsius = 102.2 derajat Fahrenheit. Ini dianggap demam. Konversi tepat: 39°C × 9/5 + 32 = 102.2°F.",
+            "googleGeneral": "Konversi 39°C ke Fahrenheit secara instan. 39 derajat Celsius sama dengan 102.2 derajat Fahrenheit. Termasuk perhitungan detail dan panduan demam."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Panduan Demam: 39°C (102.2°F)",
+        "subtitle": "Apakah 39°C Demam?",
+        "intro": "Ya, 39°C (102.2°F) dianggap demam baik untuk dewasa maupun anak-anak. Pada orang dewasa, biasanya ini adalah demam sedang, tetapi bagi bayi dan balita, ini adalah demam tinggi yang memerlukan perhatian dan pemantauan segera.",
+        "ranges": {
+            "hypothermia": "Hipotermia",
+            "normal": "Normal",
+            "fever": "Demam",
+            "highFever": "Demam Tinggi"
+        },
+        "table": {
+            "headers": {
+                "condition": "Kondisi",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Hipotermia",
+                "normal": "Rentang Normal",
+                "elevated": "Meningkat / Demam Ringan",
+                "fever": "Demam Sedang (39°C)",
+                "highFever": "Demam Tinggi"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "Apakah 39°C (102.2°F) dianggap demam?",
+            "answer": "Ya, 39°C adalah demam sedang untuk orang dewasa. Untuk anak-anak dan bayi, ini dianggap demam tinggi. Anda harus memantau gejala dengan cermat dan berkonsultasi dengan profesional jika terus berlanjut.",
+            "items": [
+                "Dewasa: Demam sedang (saran medis biasanya jika berlangsung >3 hari)",
+                "Anak-anak: Demam tinggi (konsultasi ke dokter anak jika berlangsung >24 jam)",
+                "Bayi (<3 bulan): Segera cari perawatan darurat"
+            ]
+        },
+        "q2": {
+            "question": "Apakah 39°C berbahaya untuk anak berusia 4 tahun?",
+            "answer": "Untuk anak berusia 4 tahun, 39°C adalah demam tinggi. Meskipun tidak selalu merupakan keadaan darurat, Anda harus mencari bantuan medis jika demam berlangsung lebih dari 3 hari, atau jika anak lesu, menolak cairan, atau mengalami leher kaku.",
+            "items": [
+                "Pantau hidrasi dan keceriaan anak",
+                "Gunakan penurun demam yang sesuai usia jika disarankan",
+                "Periksa adanya ruam atau kesulitan bernapas"
+            ]
+        },
+        "q3": {
+            "question": "Bisakah tumbuh gigi menyebabkan demam 39°C pada bayi?",
+            "answer": "Tidak, tumbuh gigi jarang menyebabkan demam lebih tinggi dari 38°C (100.4°F). Jika bayi mengalami demam 39°C, jangan berasumsi itu karena tumbuh gigi; periksa penyebab lain dan konsultasikan dengan dokter anak, terutama jika bayi berusia di bawah 12 bulan."
+        },
+        "q4": {
+            "question": "Bagaimana cara menurunkan demam 39°C pada orang dewasa?",
+            "answer": "Anda dapat mengelola demam 39°C di rumah melalui istirahat dan hidrasi. Jika demam membuat tidak nyaman, pertimbangkan obat-obatan umum.",
+            "items": [
+                "Minum banyak air dan elektrolit",
+                "Gunakan kompres sejuk (bukan dingin)",
+                "Minum Parasetamol atau Ibuprofen",
+                "Kenakan pakaian ringan dan istirahat"
+            ]
+        },
+        "q5": {
+            "question": "Berapa 39°C dalam Kelvin?",
+            "answer": "39°C adalah 312.15 Kelvin. Rumusnya adalah: K = °C + 273.15. Jadi, 39 + 273.15 = 312.15K."
+        }
+    }
+}

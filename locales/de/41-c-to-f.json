@@ -1,0 +1,57 @@
+{
+    "meta": {
+        "titles": {
+            "fever": "41°C in Fahrenheit (105.8°F) – Medizinischer Notfall: Ratgeber bei Hyperpyrexie",
+            "general": "Rechner für die Umrechnung von 41°C in Fahrenheit (105.8°F)"
+        },
+        "ogDescription": "41°C entsprechen 105.8°F. Ein Fieber von 41°C ist ein medizinischer Notfall, der sofortige Hilfe erfordert. Erfahren Sie mehr über die Umrechnung.",
+        "descriptions": {
+            "googleContext": "41 Grad Celsius = 105.8 Grad Fahrenheit. Dies ist ein lebensbedrohlicher Fieberspiegel. Genaue Berechnung: 41°C × 9/5 + 32 = 105.8°F.",
+            "googleGeneral": "Rechnen Sie 41°C sofort in Fahrenheit um. 41 Grad Celsius sind 105.8 Grad Fahrenheit. Inklusive Notfall-Ratgeber bei extrem hohem Fieber."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Medizinischer Notfall: 41°C (105.8°F)",
+        "subtitle": "Ist ein Fieber von 41°C gefährlich?",
+        "intro": "Ja, 41°C (105.8°F) sind ein medizinischer Notfall, der als Hyperpyrexie bekannt ist. Diese extrem hohe Temperatur kann zu bleibenden Hirnschäden oder Organversagen führen, wenn sie nicht sofort behandelt wird.",
+        "ranges": {
+            "hypothermia": "Unterkühlung",
+            "normal": "Normal",
+            "fever": "Fieber",
+            "highFever": "Notfall-Fieber"
+        },
+        "table": {
+            "headers": {
+                "condition": "Zustand",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Unterkühlung",
+                "normal": "Gesunder Bereich",
+                "elevated": "Leichtes Fieber",
+                "fever": "Mäßiges Fieber",
+                "highFever": "Medizinischer Notfall (41°C)"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "Was bedeuten 41°C in Fahrenheit als Fieber?",
+            "answer": "Ein Fieber von 41°C entspricht genau 105.8°F. Dies gilt als Hyperpyrexie und ist ein medizinischer Notfall für alle Altersgruppen. Rufen Sie sofort den Notruf."
+        },
+        "q2": {
+            "question": "Ist eine Körpertemperatur von 41°C tödlich?",
+            "answer": "41°C sind extrem gefährlich und können tödlich sein, da sie an der oberen Grenze dessen liegen, was der menschliche Körper überleben kann. Es drohen bleibende Schäden.",
+            "items": [
+                "Rufen Sie sofort den Notarzt",
+                "Warten Sie nicht mit der Behandlung",
+                "Achten Sie auf Krampfanfälle oder Bewusstlosigkeit"
+            ]
+        },
+        "q3": {
+            "question": "Ist 41°C heißes Wetter?",
+            "answer": "Ja, 41°C (105.8°F) sind gefährlich heißes Wetter, das schnell zu Hitzschlag und schwerer Dehydration führen kann."
+        }
+    }
+}

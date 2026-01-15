@@ -1,0 +1,184 @@
+{
+    "meta": {
+        "title": "Tabela de Temperatura da Febre | Guia de Celsius para Fahrenheit",
+        "description": "Tabela completa de temperatura da febre com conversão de Celsius para Fahrenheit. Guia de referência rápida para adultos e crianças com limiares de febre e conselhos médicos.",
+        "ogTitle": "Tabela de Temperatura da Febre: Adultos e Crianças",
+        "ogDescription": "Referência completa de Celsius para Fahrenheit com limiares de febre, tabelas e orientação médica."
+    },
+    "breadcrumb": {
+        "home": "Início",
+        "page": "Tabela de Temperatura da Febre"
+    },
+    "hero": {
+        "title": "Tabela de Temperatura da Febre",
+        "tagline": "Guia completo de conversão de Celsius para Fahrenheit para temperaturas de febre com conselhos médicos para adultos e crianças.",
+        "subtitle": "Guia de Tabela de Temperatura da Febre",
+        "subTagline": "Guia de referência rápida para temperaturas de febre em Celsius e Fahrenheit com recomendações médicas"
+    },
+    "definition": {
+        "title": "Qual temperatura é considerada febre?",
+        "content": "Uma temperatura corporal de <strong>38,0°C (100,4°F)</strong> ou superior é geralmente considerada febre para adultos e crianças. Temperaturas entre 37,6°C e 37,9°C são frequentemente classificadas como febrícula ou febre leve."
+    },
+    "converter": {
+        "title": "Conversor de Temperatura Rápido",
+        "description": "Converta entre Celsius e Fahrenheit para qualquer valor de temperatura:",
+        "celsiusLabel": "Celsius (°C)",
+        "fahrenheitLabel": "Fahrenheit (°F)",
+        "placeholder": "ex: 38,5",
+        "copy": "Copiar",
+        "copied": "Copiado!",
+        "validation": {
+            "invalid": "Por favor, insira um número válido",
+            "range": "Por favor, insira uma temperatura entre 35°C e 42°C",
+            "danger": "PERIGO: Esta é uma emergência médica. Procure atendimento imediato.",
+            "high": "FEBRE ALTA: Procure atendimento médico, especialmente para crianças.",
+            "moderate": "FEBRE MODERADA: Considere consultar um médico.",
+            "lowGrade": "FEBRÍCULA: Descanse e monitore os sintomas.",
+            "elevated": "LIGEIRAMENTE ELEVADA: Monitore alterações.",
+            "normal": "NORMAL: Intervalo de temperatura saudável.",
+            "low": "TEMPERATURA BAIXA: Considere aquecer-se."
+        }
+    },
+    "levels": {
+        "title": "Níveis de Temperatura da Febre",
+        "description": "Tabela de referência mostrando diferentes níveis de febre com conversões de Celsius para Fahrenheit e conselhos médicos:",
+        "normal": {
+            "title": "✅ Temperatura Normal",
+            "range": "36,5°C - 37,5°C (97,7°F - 99,5°F)",
+            "desc": "Intervalo de temperatura corporal saudável. Nenhuma intervenção médica necessária.",
+            "tips": [
+                "Manter atividades normais",
+                "Manter-se hidratado",
+                "Monitorar alterações"
+            ]
+        },
+        "elevated": {
+            "title": "⚠️ Ligeiramente Elevada",
+            "range": "37,6°C - 37,9°C (99,7°F - 100,2°F)",
+            "desc": "Temperatura limítrofe. Pode indicar o início de uma doença.",
+            "tips": [
+                "Monitorar sintomas",
+                "Aumentar a ingestão de líquidos",
+                "Descansar se não se sentir bem"
+            ]
+        },
+        "lowGrade": {
+            "title": "🌡️ Febrícula",
+            "range": "38,0°C - 38,9°C (100,4°F - 102,0°F)",
+            "desc": "Limiar oficial de febre. O corpo está lutando contra uma infecção.",
+            "tips": [
+                "Repouso e hidratação",
+                "Considerar antitérmicos",
+                "Monitorar de perto"
+            ]
+        },
+        "moderate": {
+            "title": "🔥 Febre Moderada",
+            "range": "39,0°C - 39,9°C (102,2°F - 103,8°F)",
+            "desc": "Febre significativa que requer atenção.",
+            "tips": [
+                "Procurar aconselhamento médico",
+                "Usar medicação para febre",
+                "Monitorar se piorar"
+            ]
+        },
+        "high": {
+            "title": "🚨 Febre Alta",
+            "range": "40,0°C - 41,0°C (104,0°F - 105,8°F)",
+            "desc": "Nível de febre potencialmente perigoso.",
+            "tips": [
+                "Procurar atendimento médico",
+                "Emergência para crianças",
+                "Tratamento imediato necessário"
+            ]
+        },
+        "danger": {
+            "title": "💀 Hiperpirexia Perigosa",
+            "range": ">41,0°C (>105.8°F)",
+            "desc": "Emergência médica que requer atenção imediata.",
+            "tips": [
+                "Ligar para serviços de emergência",
+                "Medidas de resfriamento",
+                "Provável hospitalização"
+            ]
+        }
+    },
+    "ageGroups": {
+        "title": "Diretrizes de Febre por Faixa Etária",
+        "infants": {
+            "title": "👶 Bebês (0-3 meses)",
+            "threshold": "<strong>Limiar de febre:</strong> Qualquer temperatura &ge;38,0°C (100,4°F) requer atenção médica imediata.",
+            "tips": [
+                "A temperatura retal é a mais precisa",
+                "Mesmo uma febrícula pode ser grave",
+                "Contate o pediatra imediatamente"
+            ]
+        },
+        "children": {
+            "title": "🧒 Crianças (3 meses - 12 anos)",
+            "threshold": "<strong>Limiar de febre:</strong> &ge;38,0°C (100,4°F) - monitore de perto e consulte um médico se estiver preocupado.",
+            "tips": [
+                "Observar mudanças de comportamento",
+                "Usar medicação adequada para a idade",
+                "Procurar atendimento se febre >39,0°C (102,2°F)"
+            ]
+        },
+        "adults": {
+            "title": "👨‍⚕️ Adultos (12+ anos)",
+            "threshold": "<strong>Limiar de febre:</strong> &ge;38,0°C (100,4°F) - geralmente tratável em casa, a menos que seja grave.",
+            "tips": [
+                "Repouso e hidratação costumam ser suficientes",
+                "Procurar atendimento se febre >39,4°C (103°F) ou durar >3 dias",
+                "Observar sintomas preocupantes"
+            ]
+        }
+    },
+    "measurement": {
+        "title": "Métodos de Medição de Temperatura",
+        "description": "Métodos diferentes dão resultados ligeiramente diferentes. Aqui está o que você precisa saber:",
+        "oral": {
+            "title": "Oral",
+            "range": "Intervalo normal: 36,5-37,5°C",
+            "note": "Aguarde 30 minutos após comer/beber para uma leitura precisa."
+        },
+        "ear": {
+            "title": "Ouvido (Timpânica)",
+            "range": "Intervalo normal: 35,8-38,0°C",
+            "note": "Rápido e conveniente, mas pode ser afetado por cera de ouvido."
+        },
+        "forehead": {
+            "title": "Testa (Temporal)",
+            "range": "Intervalo normal: 35,8-37,8°C",
+            "note": "Bom para triagem rápida, mas menos preciso que outros métodos."
+        },
+        "axillary": {
+            "title": "Axilar (Axila)",
+            "range": "Intervalo normal: 35,9-36,7°C",
+            "note": "Método menos preciso, normalmente 0,5-1,0°C abaixo da temperatura central."
+        }
+    },
+    "download": {
+        "title": "Baixar Tabela de Temperatura de Febre para Imprimir",
+        "description": "Obtenha nosso guia de referência PDF abrangente de uma página para acesso rápido em casa ou em instalações médicas.",
+        "btn": "Baixar Tabela em PDF",
+        "printPage": "Imprimir Esta Página",
+        "printChart": "Imprimir Apenas Tabela",
+        "note": "O PDF inclui: Intervalos de temperatura de febre, tabela de conversão, diretrizes por idade e contatos de emergência."
+    },
+    "disclaimer": {
+        "title": "Aviso Médico Importante",
+        "content": "<strong>Aviso:</strong> Esta tabela de temperatura da febre é apenas para fins educacionais e não deve substituir o aconselhamento médico profissional, diagnóstico ou tratamento. Sempre consulte um profissional de saúde para preocupações médicas, especialmente para bebês, crianças pequenas ou indivíduos com sistema imunológico comprometido."
+    },
+    "faq": {
+        "q1": "Qual temperatura é considerada febre?",
+        "a1": "Uma temperatura corporal de 38,0°C (100,4°F) ou superior é geralmente considerada febre para adultos e crianças.",
+        "q2": "O que é uma temperatura de febre perigosa?",
+        "a2": "Febre acima de 39,4°C (103°F) em adultos ou acima de 38°C (100,4°F) em bebês com menos de 3 meses é considerada preocupante e pode exigir atenção médica. Temperaturas acima de 41,1°C (106°F) são consideradas uma emergência médica (hiperpirexia).",
+        "q3": "Qual é o intervalo normal para a temperatura corporal?",
+        "a3": "O intervalo normal de temperatura corporal é tipicamente entre 36,5°C e 37,5°C (97,7°F - 99,5°F)."
+    },
+    "schema": {
+        "medicalHeadline": "Tabela de Temperatura da Febre: Guia de Celsius para Fahrenheit",
+        "medicalDesc": "Um guia abrangente sobre temperaturas de febre para adultos e crianças, incluindo conversões de Celsius para Fahrenheit e aconselhamento médico."
+    }
+}

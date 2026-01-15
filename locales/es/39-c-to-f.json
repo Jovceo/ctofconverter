@@ -1,0 +1,76 @@
+{
+    "meta": {
+        "titles": {
+            "fever": "39°C a Fahrenheit (102.2°F) – ¿Es fiebre en adultos y niños?",
+            "general": "Calculadora de conversión de 39°C a Fahrenheit (102.2°F)"
+        },
+        "ogDescription": "Convierta 39°C a Fahrenheit (102.2°F). ¿Es 39°C fiebre? 39 grados Celsius son 102.2 grados Fahrenheit. Vea cómo tratarla y cuándo consultar a un médico.",
+        "descriptions": {
+            "googleContext": "39 grados Celsius = 102.2 grados Fahrenheit. Esto se considera fiebre. Conversión exacta: 39°C × 9/5 + 32 = 102.2°F.",
+            "googleGeneral": "Convierta 39°C a Fahrenheit al instante. 39 grados Celsius equivalen a 102.2 grados Fahrenheit. Incluye cálculo detallado y guía de fiebre."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Guía de fiebre: 39°C (102.2°F)",
+        "subtitle": "¿Es 39°C fiebre?",
+        "intro": "Sí, 39°C (102.2°F) se considera fiebre tanto para adultos como para niños. En adultos, suele ser una fiebre moderada, pero para bebés y niños pequeños, es una fiebre alta que requiere atención y seguimiento inmediatos.",
+        "ranges": {
+            "hypothermia": "Hipotermia",
+            "normal": "Normal",
+            "fever": "Fiebre",
+            "highFever": "Fiebre alta"
+        },
+        "table": {
+            "headers": {
+                "condition": "Condición",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Hipotermia",
+                "normal": "Rango normal",
+                "elevated": "Elevada / Febrícula",
+                "fever": "Fiebre moderada (39°C)",
+                "highFever": "Fiebre alta"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "¿Se considera 39°C (102.2°F) fiebre?",
+            "answer": "Sí, 39°C es una fiebre moderada para adultos. Para niños y bebés, se considera fiebre alta. Debe vigilar de cerca los síntomas y consultar a un profesional si persiste.",
+            "items": [
+                "Adultos: Fiebre moderada (consejo médico generalmente si dura >3 días)",
+                "Niños: Fiebre alta (consulte al pediatra si dura >24h)",
+                "Bebés (<3 meses): Busque atención de emergencia de inmediato"
+            ]
+        },
+        "q2": {
+            "question": "¿Es peligroso 39°C para un niño de 4 años?",
+            "answer": "Para un niño de 4 años, 39°C es una fiebre alta. Aunque no siempre es una emergencia, debe buscar ayuda médica si la fiebre dura más de 3 días, o si el niño está letárgico, rechaza los líquidos o tiene el cuello rígido.",
+            "items": [
+                "Vigile la hidratación y el estado de ánimo",
+                "Use reductores de fiebre adecuados para la edad si se lo indican",
+                "Compruebe si hay erupciones o dificultades respiratorias"
+            ]
+        },
+        "q3": {
+            "question": "¿Puede la dentición causar fiebre de 39°C en los bebés?",
+            "answer": "No, la dentición rara vez causa una fiebre superior a 38°C (100.4°F). Si un bebé tiene 39°C de fiebre, no asuma que es por la dentición; busque otras causas y consulte a un pediatra, especialmente si el bebé tiene menos de 12 meses."
+        },
+        "q4": {
+            "question": "¿Cómo bajar la fiebre de 39°C en adultos?",
+            "answer": "Puede manejar una fiebre de 39°C en casa mediante descanso e hidratación. Si la fiebre es incómoda, considere medicamentos de venta libre.",
+            "items": [
+                "Beba mucha agua y electrolitos",
+                "Use compresas frescas (no frías)",
+                "Tome paracetamol o ibuprofeno",
+                "Use ropa ligera y descanse"
+            ]
+        },
+        "q5": {
+            "question": "¿Cuánto es 39°C en Kelvin?",
+            "answer": "39°C son 312.15 Kelvin. La fórmula es: K = °C + 273.15. Por tanto, 39 + 273.15 = 312.15K."
+        }
+    }
+}

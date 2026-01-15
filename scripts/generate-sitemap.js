@@ -1,15 +1,39 @@
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const SITE_URL = 'https://ctofconverter.com';
 const FALLBACK_DATE = '2025-09-15';
 
-const { execSync } = require('child_process');
+// 1. 定义语言列表 (从目录结构获取)
+const localesDir = path.join(process.cwd(), 'locales');
+const LOCALES = fs.readdirSync(localesDir).filter(f =>
+    fs.statSync(path.join(localesDir, f)).isDirectory()
+);
 
-// Helper: 获取文件或目录列表中最新的修改日期
-// Local 环境: 优先取 Git 和 FS 中较新的一个 (支持未提交的修改)
-// CI/Prod 环境: 严格使用 Git 时间 (防止 CI checkout 导致 FS 时间刷新为"当前")
-function getLatestModifiedDate(paths) {
+/**
+ * Helper: 从已构建的 HTML 文件中提取日期
+ * 寻找 <time dateTime="YYYY-MM-DD"> 标签
+ */
+function extractDateFromHtml(htmlPath) {
+    try {
+        if (!fs.existsSync(htmlPath)) return null;
+        const content = fs.readFileSync(htmlPath, 'utf-8');
+        // Regex to match <time dateTime="2025-01-01">
+        const match = content.match(/<time[^>]*dateTime="(\d{4}-\d{2}-\d{2})"[^>]*>/);
+        if (match && match[1]) {
+            return match[1];
+        }
+    } catch (e) {
+        console.warn(`Error reading date from HTML ${htmlPath}:`, e.message);
+    }
+    return null;
+}
+
+/**
+ * Helper: Git/FS 回退日期逻辑 (与旧脚本一致，作为兜底)
+ */
+function getLegacyLatestModifiedDate(paths) {
     let latestDate = 0;
     const isCI = process.env.CI || process.env.VERCEL || process.env.NETLIFY;
 
@@ -19,36 +43,24 @@ function getLatestModifiedDate(paths) {
             let fileDate = 0;
             let gitDate = 0;
 
-            // 1. 尝试获取 Git 提交时间
             try {
                 const relPath = path.relative(process.cwd(), fullPath);
                 const gitDateStr = execSync(`git log -1 --format=%cI "${relPath}"`, { encoding: 'utf-8', stdio: ['pipe', 'pipe', 'ignore'] }).trim();
-                if (gitDateStr) {
-                    gitDate = new Date(gitDateStr).getTime();
-                }
-            } catch (e) { /* ignore */ }
+                if (gitDateStr) gitDate = new Date(gitDateStr).getTime();
+            } catch (e) { }
 
-            // 2. 获取本地文件系统时间
             let fsDate = 0;
             try {
-                const stats = fs.statSync(fullPath);
-                fsDate = stats.mtimeMs;
-            } catch (e) { /* ignore */ }
+                fsDate = fs.statSync(fullPath).mtimeMs;
+            } catch (e) { }
 
-            // 3. Decision Logic
             if (isCI) {
-                // CI Environment: Trust Git ONLY.
-                // If Git fails (returns 0), we DO NOT fallback to FS, because FS in CI is always "now".
-                // We prefer to return 0 (which triggers FALLBACK_DATE) rather than a fake "today".
                 fileDate = gitDate;
             } else {
-                // Local Environment: Trust newer (allows uncommitted previews)
                 fileDate = Math.max(gitDate, fsDate);
             }
 
-            if (fileDate > latestDate) {
-                latestDate = fileDate;
-            }
+            if (fileDate > latestDate) latestDate = fileDate;
         }
     });
 
@@ -57,242 +69,173 @@ function getLatestModifiedDate(paths) {
         : FALLBACK_DATE;
 }
 
-// 动态获取支持的语言列表
-const localesDir = path.join(process.cwd(), 'locales');
-const LOCALES = fs.readdirSync(localesDir).filter(f =>
-    fs.statSync(path.join(localesDir, f)).isDirectory()
-);
-
-// Helper: Add entry for a specific locale
-function addEntry(url, lastmod, changefreq, priority, entriesList) {
-    entriesList.push({
-        loc: url,
-        lastmod,
-        changefreq,
-        priority
-    });
-}
-
 /**
- * 智能检测页面的翻译文件
- * 自动查找 locales/{locale}/{page}.json 或任何匹配的翻译文件
+ * 递归遍历目录获取所有 HTML 文件
  */
-function findTranslationFile(page, locale) {
-    const possibleFiles = [
-        `locales/${locale}/${page}.json`,           // 标准命名
-        `locales/${locale}/f-to-c.json`,            // fahrenheit-to-celsius 特例
-        `locales/${locale}/common.json`,            // 回退
-    ];
-
-    for (const file of possibleFiles) {
-        const fullPath = path.join(process.cwd(), file);
-        if (fs.existsSync(fullPath)) {
-            // 优先返回与页面名称匹配的文件
-            if (file.includes(page) || file.includes('f-to-c')) {
-                return file;
+function getHtmlFiles(dir, fileList = []) {
+    if (!fs.existsSync(dir)) return fileList;
+    const files = fs.readdirSync(dir);
+    files.forEach(file => {
+        const filePath = path.join(dir, file);
+        if (fs.statSync(filePath).isDirectory()) {
+            getHtmlFiles(filePath, fileList);
+        } else {
+            if (file.endsWith('.html') && !file.endsWith('404.html') && !file.endsWith('500.html')) {
+                fileList.push(filePath);
             }
         }
-    }
-
-    // 如果找不到特定文件，返回 common.json 作为回退
-    return `locales/${locale}/common.json`;
-}
-
-/**
- * 检测页面是否使用 temperature-template
- */
-function usesTemperatureTemplate(page) {
-    const pageFile = path.join(process.cwd(), 'pages', `${page}.tsx`);
-    if (!fs.existsSync(pageFile)) return false;
-
-    try {
-        const content = fs.readFileSync(pageFile, 'utf-8');
-        // 检查是否导入或使用了 temperature-template
-        return content.includes('temperature-template');
-    } catch (e) {
-        return false;
-    }
-}
-
-/**
- * 智能收集页面依赖
- */
-function collectPageDependencies(page, locale) {
-    const deps = [
-        `pages/${page}.tsx`,  // 页面本身
-    ];
-
-    // 检测是否使用 temperature-template
-    if (usesTemperatureTemplate(page)) {
-        deps.push('pages/temperature-template.tsx');
-        deps.push(`locales/${locale}/template.json`);
-    }
-
-    // 添加页面特定的翻译文件
-    const translationFile = findTranslationFile(page, locale);
-    if (translationFile && !deps.includes(translationFile)) {
-        deps.push(translationFile);
-    }
-
-    // 添加通用依赖
-    deps.push('components/Layout.tsx');
-    deps.push(`locales/${locale}/common.json`);
-
-    // 过滤掉不存在的文件
-    return deps.filter(dep => {
-        const fullPath = path.join(process.cwd(), dep);
-        return fs.existsSync(fullPath);
     });
+    return fileList;
 }
 
 function generateSitemap() {
+    console.log('🔍 开始生成 Post-Build Sitemap...');
+
+    // Next.js static pages output directory
+    const pagesDir = path.join(process.cwd(), '.next/server/pages');
+
+    if (!fs.existsSync(pagesDir)) {
+        console.error('❌ Error: .next/server/pages not found. Make sure to run `next build` first.');
+        process.exit(1);
+    }
+
+    const htmlFiles = getHtmlFiles(pagesDir);
+    // 过滤掉任何可能混入的非 Next.js 生成文件（虽然 .next 目录下通常都是）
+    // 如果 public 下有静态 html，它们不会出现在 .next/server/pages 中，所以不需要额外排除逻辑。
+    console.log(`📋 扫描到 ${htmlFiles.length} 个静态页面文件 (仅 Next.js 生成页面)`);
+
     const allEntries = [];
 
-    console.log('🔍 开始自动检测页面...');
+    htmlFiles.forEach(htmlPath => {
+        // 计算相对路径
+        let relPath = path.relative(pagesDir, htmlPath); // e.g., "en/about-us.html" or "index.html"
 
-    // 1. Homepage
-    console.log('📄 处理首页...');
-    LOCALES.forEach(locale => {
-        const deps = [
-            'pages/index.tsx',
-            'components/Layout.tsx',
-            `locales/${locale}/home.json`,
-            `locales/${locale}/common.json`
-        ].filter(dep => fs.existsSync(path.join(process.cwd(), dep)));
+        // 修正路径分隔符 (Windows兼容)
+        relPath = relPath.split(path.sep).join('/');
 
-        const date = getLatestModifiedDate(deps);
-        const url = locale === 'en' ? `${SITE_URL}/` : `${SITE_URL}/${locale}`;
-        addEntry(url, date, 'daily', 1.0, allEntries);
-    });
+        // 提取 locale 和 slug
+        let locale = 'en'; // default
+        let slug = relPath.replace(/\.html$/, '');
 
-    // 2. 自動检测所有页面
-    const pagesDir = path.join(process.cwd(), 'pages');
-    const pageFiles = fs.readdirSync(pagesDir);
+        // 检查开头是否是 locale 目录
+        const parts = slug.split('/');
+        if (LOCALES.includes(parts[0])) {
+            locale = parts[0];
+            slug = parts.slice(1).join('/'); //移除 locale 前缀
+        } else if (slug === 'index') {
+            // 根目录 index.html 通常是默认语言 (en)
+            slug = '';
+        }
 
-    // 排除特殊文件
-    const excludedPages = [
-        '_app.tsx',
-        '_document.tsx',
-        'index.tsx',
-        'temperature-template.tsx',       // 这是模板，不是页面
-        'api',                             // API 目录
-    ];
+        // 处理 index 的情况 (如 en/index.html -> /en)
+        if (slug.endsWith('/index')) {
+            slug = slug.substring(0, slug.length - 6);
+        }
+        if (slug === 'index') slug = '';
 
-    const mainPages = pageFiles
-        .filter(file => {
-            if (!file.endsWith('.tsx')) return false;
-            if (excludedPages.includes(file)) return false;
+        // 构建 URL
+        let url;
+        if (locale === 'en') {
+            url = slug ? `${SITE_URL}/${slug}` : `${SITE_URL}/`;
+        } else {
+            url = slug ? `${SITE_URL}/${locale}/${slug}` : `${SITE_URL}/${locale}`;
+        }
 
-            // 排除目录
-            const fullPath = path.join(pagesDir, file);
-            if (fs.statSync(fullPath).isDirectory()) return false;
+        // 排除 404 等特殊页面 (已经在 getHtmlFiles 过滤了一部分，再次确认)
+        if (slug === '404' || slug === '500') return;
 
-            return true;
-        })
-        .map(file => file.replace('.tsx', ''));
+        // 核心逻辑：提取日期
+        let date = extractDateFromHtml(htmlPath);
 
-    console.log(`📋 检测到 ${mainPages.length} 个页面: ${mainPages.join(', ')}`);
+        // 验证日期格式
+        if (!date || !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+            console.warn(`⚠️  无法从 HTML 提取日期: ${relPath}, 回退到文件系统检测...`);
+            // 回退逻辑：尝试匹配源文件
+            // 这比之前的精确度低，但作为兜底
+            let sourceFiles = [];
+            const pageName = slug || 'index';
+            const pageTsx = path.join(process.cwd(), 'pages', `${pageName}.tsx`);
+            if (fs.existsSync(pageTsx)) sourceFiles.push(pageTsx);
 
-    mainPages.forEach(page => {
-        console.log(`  处理页面: ${page}`);
+            date = getLegacyLatestModifiedDate(sourceFiles);
+        }
 
-        LOCALES.forEach(locale => {
-            // 智能收集依赖
-            const pageDeps = collectPageDependencies(page, locale);
+        // 设置优先级
+        let priority = 0.9;
+        let changefreq = 'weekly';
 
-            if (pageDeps.length === 0) {
-                console.warn(`  ⚠️  警告: ${page} (${locale}) 没有找到任何依赖文件`);
-                return;
-            }
+        // 首页高优先级
+        if (slug === '') {
+            priority = 1.0;
+            changefreq = 'daily';
+        }
 
-            const pageDate = getLatestModifiedDate(pageDeps);
-            const url = locale === 'en' ? `${SITE_URL}/${page}` : `${SITE_URL}/${locale}/${page}`;
-            addEntry(url, pageDate, 'weekly', 0.9, allEntries);
+        allEntries.push({
+            loc: url,
+            lastmod: date,
+            changefreq,
+            priority
         });
     });
 
-    console.log(`✅ 共生成 ${allEntries.length} 个 sitemap 条目`);
+    console.log(`✅ 处理了 ${allEntries.length} 个页面条目`);
 
-    // 3. Sort and Generate
-    // 排序规则：
-    // 1. 英文首页 (/) 绝对排第一
-    // 2. 其他语言首页 (priority=1.0) 按字母顺序
-    // 3. 其他页面 (priority=0.9) 按更新时间倒序（最新的在前）
-    // 新的排序逻辑：
-    // 1. 按 Slug 分组 (保持不同语言版本的同一页面在一起)
-    // 2. 计算每组的"最新更新时间"
-    // 3. 组与组之间：按最新更新时间倒序 (首页组强制置顶)
-    // 4. 组内：英文版 (URL 最短) -> 其他语言按字母顺序
+    // --- 排序逻辑 (复用旧脚本的优秀排序逻辑) ---
+    // 1. 按 Slug 分组
+    // 2. 组内排序：英文优先 -> 字母顺序
+    // 3. 组间排序：首页优先 -> 最新更新时间倒序
 
     const groups = {};
-    const getSlug = (loc) => {
+    const getSlugKey = (loc) => {
         let rel = loc.replace(SITE_URL, '');
         if (rel.startsWith('/')) rel = rel.slice(1);
         const parts = rel.split('/');
-        // 如果第一段是 locale 代码 (且不是 'en' 的隐式情况)，则移除
         if (parts.length > 0 && LOCALES.includes(parts[0])) {
             parts.shift();
         }
-        return parts.join('/') || 'HOME_PAGE_GROUP'; // 使用特殊标记标识首页组
+        return parts.join('/') || 'HOME_PAGE_GROUP';
     };
 
     allEntries.forEach(entry => {
-        const slug = getSlug(entry.loc);
-        if (!groups[slug]) {
-            groups[slug] = {
-                slug: slug,
+        const slugKey = getSlugKey(entry.loc);
+        if (!groups[slugKey]) {
+            groups[slugKey] = {
+                slug: slugKey,
                 maxDate: '',
                 entries: []
             };
         }
-        groups[slug].entries.push(entry);
-        // 更新该组的最新日期
-        if (entry.lastmod > groups[slug].maxDate) {
-            groups[slug].maxDate = entry.lastmod;
+        groups[slugKey].entries.push(entry);
+        if (entry.lastmod > groups[slugKey].maxDate) {
+            groups[slugKey].maxDate = entry.lastmod;
         }
     });
 
-    // 将组转换为数组并排序
     const sortedGroups = Object.values(groups).sort((groupA, groupB) => {
-        // 规则 1: 首页组绝对置顶
         if (groupA.slug === 'HOME_PAGE_GROUP') return -1;
         if (groupB.slug === 'HOME_PAGE_GROUP') return 1;
-
-        // 规则 2: 按组内最新时间倒序 (刚刚更新的在前)
         if (groupA.maxDate !== groupB.maxDate) {
             return groupB.maxDate.localeCompare(groupA.maxDate);
         }
-
-        // 规则 3: 时间相同时，按 Slug 字母顺序保持稳定
         return groupA.slug.localeCompare(groupB.slug);
     });
 
-    // 展平并应用组内排序
     const sortedEntries = [];
     sortedGroups.forEach(group => {
-        // 组内排序
         group.entries.sort((a, b) => {
-            // 特殊处理首页组：英文首页 (https://ctofconverter.com/) 必须排在所有其他首页之前
             const isAEnHome = a.loc === `${SITE_URL}/` || a.loc === SITE_URL;
             const isBEnHome = b.loc === `${SITE_URL}/` || b.loc === SITE_URL;
             if (isAEnHome) return -1;
             if (isBEnHome) return 1;
-
-            // 规则 4.1: 英文版排在最前 (利用 URL 长度判断，英文版无前缀，最短)
             if (a.loc.length !== b.loc.length) {
                 return a.loc.length - b.loc.length;
             }
-            // 规则 4.2: 其他语言按字母顺序
             return a.loc.localeCompare(b.loc);
         });
         sortedEntries.push(...group.entries);
     });
 
-    // 更新引用 (虽然 allEntries 是 const 数组引用，但其内容顺序不影响 map 生成，这里我们需要用 sortedEntries 生成 XML)
-    // 由于下面的 xmlRows 是基于 sortedEntries map 的，我们直接替换变量名使用即可，或者重新赋值给 allEntries 使用
-    // 但 allEntries 是 const 定义的数组，不能重新赋值，所以我们修改后续代码使用 sortedEntries
-
-
+    // Generate XML
     const xmlRows = sortedEntries.map(entry => `  <url>
     <loc>${entry.loc}</loc>
     <lastmod>${entry.lastmod}</lastmod>
@@ -305,7 +248,7 @@ ${xmlRows.join('\n')}
 </urlset>`;
 
     fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap);
-    console.log(`\n🎉 Successfully generated dynamic sitemap.xml with ${allEntries.length} URLs sorted by priority and date.`);
+    console.log(`\n🎉 Successfully generated POST-BUILD sitemap.xml with ${allEntries.length} URLs.`);
 }
 
 generateSitemap();

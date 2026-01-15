@@ -1,0 +1,184 @@
+{
+    "meta": {
+        "title": "Fieber-Temperatur-Tabelle | Leitfaden Celsius in Fahrenheit",
+        "description": "Vollständige Fieber-Temperatur-Tabelle mit Umrechnung von Celsius in Fahrenheit. Kurzübersicht für Erwachsene und Kinder mit Fiebergrenzwerten und medizinischem Rat.",
+        "ogTitle": "Fieber-Temperatur-Tabelle: Erwachsene & Kinder",
+        "ogDescription": "Vollständige Referenz von Celsius in Fahrenheit mit Fiebergrenzwerten, Tabellen und medizinischer Anleitung."
+    },
+    "breadcrumb": {
+        "home": "Startseite",
+        "page": "Fieber-Temperatur-Tabelle"
+    },
+    "hero": {
+        "title": "Fieber-Temperatur-Tabelle",
+        "tagline": "Vollständiger Leitfaden zur Umrechnung von Celsius in Fahrenheit für Fiebertemperaturen mit medizinischem Rat für Erwachsene und Kinder.",
+        "subtitle": "Leitfaden zur Fieber-Temperatur-Tabelle",
+        "subTagline": "Kurzübersicht für Fiebertemperaturen in Celsius und Fahrenheit mit medizinischen Empfehlungen"
+    },
+    "definition": {
+        "title": "Ab welcher Temperatur hat man Fieber?",
+        "content": "Eine Körpertemperatur von <strong>38,0°C (100,4°F)</strong> oder höher gilt im Allgemeinen als Fieber bei Erwachsenen und Kindern. Temperaturen zwischen 37,6°C und 37,9°C werden oft als leicht erhöhte Temperatur oder mäßiges Fieber eingestuft."
+    },
+    "converter": {
+        "title": "Schneller Temperaturrechner",
+        "description": "Rechnen Sie zwischen Celsius und Fahrenheit für jeden Temperaturwert um:",
+        "celsiusLabel": "Celsius (°C)",
+        "fahrenheitLabel": "Fahrenheit (°F)",
+        "placeholder": "z.B. 38,5",
+        "copy": "Kopieren",
+        "copied": "Kopiert!",
+        "validation": {
+            "invalid": "Bitte geben Sie eine gültige Zahl ein",
+            "range": "Bitte geben Sie eine Temperatur zwischen 35°C und 42°C ein",
+            "danger": "GEFAHR: Dies ist ein medizinischer Notfall. Suchen Sie sofort Hilfe.",
+            "high": "HOHES FIEBER: Suchen Sie einen Arzt auf, besonders bei Kindern.",
+            "moderate": "MÄSSIGES FIEBER: Ziehen Sie einen Arzt zu Rate.",
+            "lowGrade": "LEICHTES FIEBER: Ruhen Sie sich aus und beobachten Sie die Symptome.",
+            "elevated": "LEICHT ERHÖHT: Beobachten Sie Veränderungen.",
+            "normal": "NORMAL: Gesunder Temperaturbereich.",
+            "low": "NIEDRIGE TEMPERATUR: Erwägen Sie Maßnahmen zur Erwärmung."
+        }
+    },
+    "levels": {
+        "title": "Fieber-Temperaturstufen",
+        "description": "Referenztabelle mit verschiedenen Fieberstufen mit Umrechnungen von Celsius in Fahrenheit und medizinischem Rat:",
+        "normal": {
+            "title": "✅ Normale Temperatur",
+            "range": "36,5°C - 37,5°C (97,7°F - 99,5°F)",
+            "desc": "Gesunder Körpertemperaturbereich. Kein medizinischer Eingriff erforderlich.",
+            "tips": [
+                "Normale Aktivitäten beibehalten",
+                "Ausreichend trinken",
+                "Auf Veränderungen achten"
+            ]
+        },
+        "elevated": {
+            "title": "⚠️ Leicht erhöht",
+            "range": "37,6°C - 37,9°C (99,7°F - 100,2°F)",
+            "desc": "Grenztemperatur. Kann auf den Beginn einer Krankheit hindeuten.",
+            "tips": [
+                "Symptome beobachten",
+                "Flüssigkeitsaufnahme erhöhen",
+                "Ausruhen bei Unwohlsein"
+            ]
+        },
+        "lowGrade": {
+            "title": "🌡️ Leichtes Fieber",
+            "range": "38,0°C - 38,9°C (100,4°F - 102,0°F)",
+            "desc": "Offizielle Fieberschwelle. Der Körper bekämpft eine Infektion.",
+            "tips": [
+                "Ausruhen und trinken",
+                "Fiebersenkende Mittel in Betracht ziehen",
+                "Engmaschig überwachen"
+            ]
+        },
+        "moderate": {
+            "title": "🔥 Mäßiges Fieber",
+            "range": "39,0°C - 39,9°C (102,2°F - 103,8°F)",
+            "desc": "Erhebliches Fieber, das Aufmerksamkeit erfordert.",
+            "tips": [
+                "Ärztlichen Rat einholen",
+                "Fiebermedikamente einnehmen",
+                "Auf Verschlechterung achten"
+            ]
+        },
+        "high": {
+            "title": "🚨 Hohes Fieber",
+            "range": "40,0°C - 41,0°C (104,0°F - 105,8°F)",
+            "desc": "Potenziell gefährlicher Fieberspiegel.",
+            "tips": [
+                "Medizinische Hilfe suchen",
+                "Notfall bei Kindern",
+                "Sofortige Behandlung erforderlich"
+            ]
+        },
+        "danger": {
+            "title": "💀 Gefährliche Hyperpyrexie",
+            "range": ">41,0°C (>105,8°F)",
+            "desc": "Medizinischer Notfall, der sofortige Aufmerksamkeit erfordert.",
+            "tips": [
+                "Notruf absetzen",
+                "Kühlungsmaßnahmen",
+                "Krankenhausaufenthalt wahrscheinlich"
+            ]
+        }
+    },
+    "ageGroups": {
+        "title": "Fieber-Richtlinien nach Altersgruppen",
+        "infants": {
+            "title": "👶 Säuglinge (0-3 Monate)",
+            "threshold": "<strong>Fieberschwelle:</strong> Jede Temperatur &ge;38,0°C (100,4°F) erfordert sofortige medizinische Hilfe.",
+            "tips": [
+                "Rektale Temperaturmessung ist am genauesten",
+                "Auch leichtes Fieber kann ernst sein",
+                "Sofort Kinderarzt kontaktieren"
+            ]
+        },
+        "children": {
+            "title": "🧒 Kinder (3 Monate - 12 Jahre)",
+            "threshold": "<strong>Fieberschwelle:</strong> &ge;38,0°C (100,4°F) - engmaschig überwachen und bei Bedenken Arzt konsultieren.",
+            "tips": [
+                "Auf Verhaltensänderungen achten",
+                "Altersgerechte Medikamente verwenden",
+                "Hilfe suchen, wenn Fieber >39,0°C (102,2°F)"
+            ]
+        },
+        "adults": {
+            "title": "👨‍⚕️ Erwachsene (12+ Jahre)",
+            "threshold": "<strong>Fieberschwelle:</strong> &ge;38,0°C (100,4°F) - meist zu Hause behandelbar, sofern nicht schwerwiegend.",
+            "tips": [
+                "Ruhe und Flüssigkeitszufuhr meist ausreichend",
+                "Hilfe suchen, wenn Fieber >39,4°C (103°F) oder >3 Tage anhält",
+                "Auf beunruhigende Symptome achten"
+            ]
+        }
+    },
+    "measurement": {
+        "title": "Temperatur-Messmethoden",
+        "description": "Verschiedene Methoden liefern leicht unterschiedliche Ergebnisse. Das müssen Sie wissen:",
+        "oral": {
+            "title": "Oral (Mund)",
+            "range": "Normalbereich: 36,5-37,5°C",
+            "note": "Warten Sie 30 Minuten nach dem Essen/Trinken für genaue Messung."
+        },
+        "ear": {
+            "title": "Ohr (Tympanal)",
+            "range": "Normalbereich: 35,8-38,0°C",
+            "note": "Schnell und bequem, kann aber durch Ohrenschmalz beeinflusst werden."
+        },
+        "forehead": {
+            "title": "Stirn (Temporal)",
+            "range": "Normalbereich: 35,8-37,8°C",
+            "note": "Gut für Screenings, aber weniger genau als andere Methoden."
+        },
+        "axillary": {
+            "title": "Axillar (Achselhöhle)",
+            "range": "Normalbereich: 35,9-36,7°C",
+            "note": "Ungenaueste Methode, meist 0,5-1,0°C niedriger als Kerntemperatur."
+        }
+    },
+    "download": {
+        "title": "Druckbare Fieber-Temperatur-Tabelle herunterladen",
+        "description": "Holen Sie sich unseren umfassenden einseitigen PDF-Leitfaden für den schnellen Zugriff zu Hause oder in medizinischen Einrichtungen.",
+        "btn": "PDF-Tabelle herunterladen",
+        "printPage": "Diese Seite drucken",
+        "printChart": "Nur Tabelle drucken",
+        "note": "Das PDF enthält: Fieber-Temperaturbereiche, Umrechnungstabelle, altersbezogene Richtlinien und Notfallkontakte."
+    },
+    "disclaimer": {
+        "title": "Wichtiger medizinischer Haftungsausschluss",
+        "content": "<strong>Haftungsausschluss:</strong> Diese Fieber-Temperatur-Tabelle dient nur zu Bildungszwecken und ersetzt keinen professionellen medizinischen Rat, keine Diagnose oder Behandlung. Konsultieren Sie bei medizinischen Bedenken immer einen Arzt, insbesondere bei Säuglingen, Kleinkindern oder Personen mit geschwächtem Immunsystem."
+    },
+    "faq": {
+        "q1": "Ab welcher Temperatur hat man Fieber?",
+        "a1": "Eine Körpertemperatur von 38,0°C (100,4°F) oder höher gilt im Allgemeinen als Fieber bei Erwachsenen und Kindern.",
+        "q2": "Was ist eine gefährliche Fiebertemperatur?",
+        "a2": "Fieber über 39,4°C (103°F) bei Erwachsenen oder über 38°C (100,4°F) bei Säuglingen unter 3 Monaten gilt als besorgniserregend und erfordert möglicherweise medizinische Hilfe. Temperaturen über 41,1°C (106°F) gelten als medizinischer Notfall (Hyperpyrexie).",
+        "q3": "Was ist der Normalbereich für die Körpertemperatur?",
+        "a3": "Der normale Körpertemperaturbereich liegt normalerweise zwischen 36,5°C und 37,5°C (97,7°F - 99,5°F)."
+    },
+    "schema": {
+        "medicalHeadline": "Fieber-Temperatur-Tabelle: Leitfaden Celsius in Fahrenheit",
+        "medicalDesc": "Ein umfassender Leitfaden zu Fiebertemperaturen für Erwachsene und Kinder, einschließlich Umrechnungen von Celsius in Fahrenheit und medizinischem Rat."
+    }
+}

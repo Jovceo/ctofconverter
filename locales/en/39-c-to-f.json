@@ -1,0 +1,52 @@
+{
+    "meta": {
+        "titles": {
+            "fever": "39°C to Fahrenheit (102.2°F) – Is It a Fever in Adults and Children?",
+            "general": "39°C to Fahrenheit (102.2°F) Conversion Calculator"
+        },
+        "ogDescription": "Convert 39°C to Fahrenheit (102.2°F). Is 39°C a fever? 39 degrees Celsius is 102.2 degrees Fahrenheit. See how to treat it and when to see a doctor.",
+        "descriptions": {
+            "googleContext": "39 degrees Celsius = 102.2 degrees Fahrenheit. This is considered a fever. Exact conversion: 39°C × 9/5 + 32 = 102.2°F.",
+            "googleGeneral": "Convert 39°C to Fahrenheit instantly. 39 degrees Celsius equals 102.2 degrees Fahrenheit. Detailed calculation and fever guide included."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Fever Guide: 39°C (102.2°F)",
+        "subtitle": "Is 39°C a Fever?",
+        "intro": "Yes, 39°C (102.2°F) is considered a fever for both adults and children. In adults, it's typically a moderate fever, but for infants and toddlers, it is a high fever that requires immediate attention and monitoring.",
+        "ranges": {
+            "hypothermia": "Hypothermia",
+            "normal": "Normal",
+            "fever": "Fever",
+            "highFever": "High Fever"
+        },
+        "table": {
+            "headers": {
+                "condition": "Condition",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Hypothermia",
+                "normal": "Normal Range",
+                "elevated": "Elevated / Low-grade",
+                "fever": "Moderate Fever (39°C)",
+                "highFever": "High Fever"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "Is 39°C (102.2°F) high for a child?",
+            "answer": "Yes, for children and babies, 39°C is considered a high fever. You should monitor their hydration and behavior closely. Consult a pediatrician if the fever persists for more than 24 hours or if the child is lethargic."
+        },
+        "q2": {
+            "question": "Can teething cause 39°C fever in babies?",
+            "answer": "No, teething typically only causes a slight rise in temperature, rarely exceeding 38°C (100.4°F). If a baby has a 39°C fever, look for other symptoms of infection and consult a doctor."
+        },
+        "q3": {
+            "question": "Is 39°C considered a medical emergency?",
+            "answer": "For adults, 39°C is a moderate fever and usually not an emergency unless accompanied by severe symptoms like confusion or difficulty breathing. However, for infants under 3 months, any fever of 38°C or higher is a reason to seek immediate emergency care."
+        }
+    }
+}

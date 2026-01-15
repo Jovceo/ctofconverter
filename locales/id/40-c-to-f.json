@@ -1,0 +1,57 @@
+{
+    "meta": {
+        "titles": {
+            "fever": "40°C ke Fahrenheit (104°F) – Panduan Demam Tinggi Dewasa & Anak",
+            "general": "Kalkulator Konversi 40°C ke Fahrenheit (104°F)"
+        },
+        "ogDescription": "40°C sama dengan 104°F. Demam 40°C adalah darurat medis bagi bayi dan demam tinggi bagi orang dewasa. Pelajari cara mengubah 40 Celsius ke Fahrenheit.",
+        "descriptions": {
+            "googleContext": "40 derajat Celsius = 104 derajat Fahrenheit. Ini adalah demam tinggi. Perhitungan tepat: 40°C × 9/5 + 32 = 104°F.",
+            "googleGeneral": "Konversi 40°C ke Fahrenheit secara instan. 40 derajat Celsius tepat 104 derajat Fahrenheit. Termasuk panduan demam mendalam dan penggunaan praktis."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Peringatan Demam: 40°C (104°F)",
+        "subtitle": "Apakah 40°C Demam Tinggi?",
+        "intro": "Ya, 40°C (104°F) dianggap sebagai demam tinggi baik bagi orang dewasa maupun anak-anak. Suhu ini menunjukkan respons imun yang signifikan atau infeksi serius dan memerlukan evaluasi medis segera.",
+        "ranges": {
+            "hypothermia": "Hipotermia",
+            "normal": "Normal",
+            "fever": "Demam",
+            "highFever": "Demam Tinggi"
+        },
+        "table": {
+            "headers": {
+                "condition": "Kondisi",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Hipotermia",
+                "normal": "Rentang Sehat",
+                "elevated": "Demam Ringan",
+                "fever": "Demam Sedang",
+                "highFever": "Demam Tinggi (40°C)"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "Apakah 40°C (104°F) demam tinggi bagi orang dewasa?",
+            "answer": "Ya, 40°C (104°F) adalah demam tinggi bagi orang dewasa. Ini adalah suhu yang memerlukan perhatian medis jika menetap atau disertai sesak napas."
+        },
+        "q2": {
+            "question": "Apakah 40°C berbahaya bagi anak berusia 2 tahun?",
+            "answer": "Ya, 40°C adalah demam yang sangat tinggi bagi balita. Anda harus segera mencari saran medis dari dokter anak.",
+            "items": [
+                "Cari bantuan darurat jika anak lemas",
+                "Pantau apakah ada muntah atau kaku kuduk",
+                "Pastikan hidrasi dan jaga anak tetap sejuk"
+            ]
+        },
+        "q3": {
+            "question": "Apa arti 40°C di mesin cuci?",
+            "answer": "Dalam pencucian rumah tangga, 40°C (104°F) adalah setelan cuci 'hangat' standar. Ini adalah suhu paling umum untuk mencuci pakaian berwarna sehari-hari."
+        }
+    }
+}
