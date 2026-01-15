@@ -65,8 +65,9 @@ export function getLatestModifiedDate(filePaths: string[]): string {
 
             // 3. Decision Logic
             if (isCI) {
-                // CI: Trust Git only
-                fileDate = gitDate;
+                // CI: Prefer Git, but fallback to FS if Git fails
+                // This ensures we always have a real date instead of default fallback
+                fileDate = gitDate > 0 ? gitDate : fsDate;
             } else {
                 // Local: Trust newer (allows uncommitted previews)
                 fileDate = Math.max(gitDate, fsDate);
