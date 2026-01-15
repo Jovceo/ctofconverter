@@ -59,7 +59,7 @@ const nextConfig = {
       },
       {
         // Redirect index.html to parent directory for core feature sections
-        source: '/:path(c-to-f-calculator|c-to-f-formula|celsius-to-fahrenheit-chart|fahrenheit-to-celsius|fan-oven-conversion-chart|body-temperature-chart-fever-guide|temperature-conversion-challenge)/index.html',
+        source: '/:path(c-to-f-calculator|c-to-f-formula|celsius-to-fahrenheit-chart|fahrenheit-to-celsius|fan-oven-conversion-chart|body-temperature-chart-fever-guide|fever-temperature-chart|temperature-conversion-challenge)/index.html',
         destination: '/:path',
         statusCode: 301,
       },
