@@ -65,9 +65,10 @@ export function getLatestModifiedDate(filePaths: string[]): string {
 
             // 3. Decision Logic
             if (isCI) {
-                // CI: Prefer Git, but fallback to FS if Git fails
-                // This ensures we always have a real date instead of default fallback
-                fileDate = gitDate > 0 ? gitDate : fsDate;
+                // CI: Prefer FS time (build time) over Git
+                // Reason: In Vercel/Netlify shallow clones, Git history is incomplete
+                // File system time reflects the actual build time, which is more accurate
+                fileDate = fsDate > 0 ? fsDate : gitDate;
             } else {
                 // Local: Trust newer (allows uncommitted previews)
                 fileDate = Math.max(gitDate, fsDate);
