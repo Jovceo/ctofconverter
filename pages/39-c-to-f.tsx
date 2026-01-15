@@ -165,6 +165,7 @@ export default function Temperature39C({ lastUpdatedIso, availablePages, pageTra
             customNamespace="39-c-to-f"
             lastUpdated={lastUpdatedIso}
             canonicalUrl={canonicalUrl}
+            availablePages={availablePages}
             disableSmartFaqs={true}
             showEditorialNote={true}
         />

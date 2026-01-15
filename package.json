@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
-    "build": "next build --webpack && node scripts/generate-sitemap.js",
+    "build": "next build --webpack",
     "postinstall": "echo 'Sitemap generation moved to build step'",
     "start": "next start",
     "lint": "next lint",
