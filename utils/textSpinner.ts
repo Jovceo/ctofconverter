@@ -111,17 +111,17 @@ export const textSpinner = {
         // Determine context type
         let type = 'General';
         let key = 'introGeneral';
-        let url = '/celsius-to-fahrenheit-chart/';
+        let url = '/celsius-to-fahrenheit-chart';
 
         if (celsius >= 35 && celsius <= 42) {
             type = 'Medical';
             key = 'introMedical';
-            url = '/body-temperature-chart-fever-guide/';
+            url = '/fever-temperature-chart';
         }
         else if (celsius >= -20 && celsius <= 40) {
             type = 'Weather';
             key = 'introWeather';
-            url = '/celsius-to-fahrenheit-chart/';
+            url = '/celsius-to-fahrenheit-chart';
         } // Broad weather range
         else if (celsius >= 100 && celsius <= 250) {
             type = 'Cooking';

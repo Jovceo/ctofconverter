@@ -1,0 +1,57 @@
+{
+    "meta": {
+        "titles": {
+            "fever": "40°C to Fahrenheit (104°F) – High Fever Guide for Adults & Children",
+            "general": "40°C to Fahrenheit (104°F) Conversion Calculator"
+        },
+        "ogDescription": "40°C equals 104°F. A 40°C fever is a medical emergency for infants and high fever for adults. Learn how to convert 40 Celsius to Fahrenheit.",
+        "descriptions": {
+            "googleContext": "40 degrees Celsius = 104 degrees Fahrenheit. This is a high fever. Exact calculation: 40°C × 9/5 + 32 = 104°F.",
+            "googleGeneral": "Convert 40°C to Fahrenheit instantly. 40 degrees Celsius is exactly 104 degrees Fahrenheit. In-depth fever guide and practical uses included."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Fever Alert: 40°C (104°F)",
+        "subtitle": "Is 40°C a High Fever?",
+        "intro": "Yes, 40°C (104°F) is considered a high fever for both adults and children. This temperature indicates a significant immune response or serious infection and requires immediate medical evaluation, especially if accompanied by severe symptoms.",
+        "ranges": {
+            "hypothermia": "Hypothermia",
+            "normal": "Normal",
+            "fever": "Fever",
+            "highFever": "High Fever"
+        },
+        "table": {
+            "headers": {
+                "condition": "Condition",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Hypothermia",
+                "normal": "Healthy Range",
+                "elevated": "Low-grade Fever",
+                "fever": "Moderate Fever",
+                "highFever": "High Fever (40°C)"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "Is 40°C (104°F) high fever for adults?",
+            "answer": "Yes, 40°C (104°F) is a high fever for adults. While a fever itself is a defense mechanism, a temperature this high can be dangerous if it persists or is accompanied by confusion, severe headache, or difficulty breathing."
+        },
+        "q2": {
+            "question": "Is 40°C dangerous for a 2-year-old child?",
+            "answer": "Yes, 40°C is a very high fever for a toddler. You should seek urgent medical advice from a pediatrician. High fevers in young children can sometimes lead to febrile seizures, though these are usually not permanent.",
+            "items": [
+                "Seek emergency care if child is lethargic",
+                "Monitor for vomiting or stiff neck",
+                "Keep the child hydrated and cool"
+            ]
+        },
+        "q3": {
+            "question": "What does 40°C mean in a washing machine?",
+            "answer": "In household laundry, 40°C (104°F) is a standard 'warm' wash setting. It is the most common temperature for washing everyday colored clothes, cottons, and synthetics as it effectively removes soil without excessive energy use or fabric damage."
+        }
+    }
+}

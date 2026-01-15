@@ -1,0 +1,184 @@
+{
+    "meta": {
+        "title": "Tabla de Temperatura de la Fiebre | Guía de Celsius a Fahrenheit",
+        "description": "Tabla completa de temperatura de la fiebre con conversión de Celsius a Fahrenheit. Guía de referencia rápida para adultos y niños con umbrales de fiebre y consejos médicos.",
+        "ogTitle": "Tabla de Temperatura de la Fiebre: Adultos y Niños",
+        "ogDescription": "Referencia completa de Celsius a Fahrenheit con umbrales de fiebre, tablas y guía médica."
+    },
+    "breadcrumb": {
+        "home": "Inicio",
+        "page": "Tabla de Temperatura de la Fiebre"
+    },
+    "hero": {
+        "title": "Tabla de Temperatura de la Fiebre",
+        "tagline": "Guía completa de conversión de Celsius a Fahrenheit para temperaturas de fiebre con consejos médicos para adultos y niños.",
+        "subtitle": "Guía de Tabla de Temperatura de Fiebre",
+        "subTagline": "Guía de referencia rápida para temperaturas de fiebre en Celsius y Fahrenheit con recomendaciones médicas"
+    },
+    "definition": {
+        "title": "¿Qué temperatura se considera fiebre?",
+        "content": "Una temperatura corporal de <strong>38.0°C (100.4°F)</strong> o superior se considera generalmente fiebre para adultos y niños. Las temperaturas entre 37.6°C y 37.9°C se clasifican a menudo como febrícula o fiebre leve."
+    },
+    "converter": {
+        "title": "Convertidor Rápido de Temperatura",
+        "description": "Convierta entre Celsius y Fahrenheit para cualquier valor de temperatura:",
+        "celsiusLabel": "Celsius (°C)",
+        "fahrenheitLabel": "Fahrenheit (°F)",
+        "placeholder": "ej. 38.5",
+        "copy": "Copiar",
+        "copied": "¡Copiado!",
+        "validation": {
+            "invalid": "Por favor ingrese un número válido",
+            "range": "Por favor ingrese una temperatura entre 35°C y 42°C",
+            "danger": "PELIGRO: Esta es una emergencia médica. Busque atención inmediata.",
+            "high": "FIEBRE ALTA: Busque atención médica, especialmente para niños.",
+            "moderate": "FIEBRE MODERADA: Considere consultar a un médico.",
+            "lowGrade": "FIEBRÍCULA: Descanse y controle los síntomas.",
+            "elevated": "LIGERAMENTE ELEVADA: Supervise los cambios.",
+            "normal": "NORMAL: Rango de temperatura saludable.",
+            "low": "TEMPERATURA BAJA: Considere abrigarse."
+        }
+    },
+    "levels": {
+        "title": "Niveles de Temperatura de la Fiebre",
+        "description": "Tabla de referencia que muestra los diferentes niveles de fiebre con conversiones de Celsius a Fahrenheit y consejos médicos:",
+        "normal": {
+            "title": "✅ Temperatura Normal",
+            "range": "36.5°C - 37.5°C (97.7°F - 99.5°F)",
+            "desc": "Rango de temperatura corporal saludable. No se necesita intervención médica.",
+            "tips": [
+                "Mantener actividades normales",
+                "Mantenerse hidratado",
+                "Supervisar los cambios"
+            ]
+        },
+        "elevated": {
+            "title": "⚠️ Ligeramente Elevada",
+            "range": "37.6°C - 37.9°C (99.7°F - 100.2°F)",
+            "desc": "Temperatura límite. Puede indicar el inicio de una enfermedad.",
+            "tips": [
+                "Supervisar los síntomas",
+                "Aumentar la ingesta de líquidos",
+                "Descansar si se siente mal"
+            ]
+        },
+        "lowGrade": {
+            "title": "🌡️ Febrícula",
+            "range": "38.0°C - 38.9°C (100.4°F - 102.0°F)",
+            "desc": "Umbral de fiebre oficial. El cuerpo está luchando contra una infección.",
+            "tips": [
+                "Descansar e hidratarse",
+                "Considerar antitérmicos",
+                "Supervisar de cerca"
+            ]
+        },
+        "moderate": {
+            "title": "🔥 Fiebre Moderada",
+            "range": "39.0°C - 39.9°C (102.2°F - 103.8°F)",
+            "desc": "Fiebre significativa que requiere atención.",
+            "tips": [
+                "Buscar consejo médico",
+                "Usar medicación para la fiebre",
+                "Supervisar si empeora"
+            ]
+        },
+        "high": {
+            "title": "🚨 Fiebre Alta",
+            "range": "40.0°C - 41.0°C (104.0°F - 105.8°F)",
+            "desc": "Nivel de fiebre potencialmente peligroso.",
+            "tips": [
+                "Buscar atención médica",
+                "Emergencia para niños",
+                "Tratamiento inmediato necesario"
+            ]
+        },
+        "danger": {
+            "title": "💀 Hiperpirexia Peligrosa",
+            "range": ">41.0°C (>105.8°F)",
+            "desc": "Emergencia médica que requiere atención inmediata.",
+            "tips": [
+                "Llamar a servicios de emergencia",
+                "Medidas de enfriamiento",
+                "Hospitalización probable"
+            ]
+        }
+    },
+    "ageGroups": {
+        "title": "Guía de Fiebre por Edad",
+        "infants": {
+            "title": "👶 Lactantes (0-3 meses)",
+            "threshold": "<strong>Umbral de fiebre:</strong> Cualquier temperatura &ge;38.0°C (100.4°F) requiere atención médica inmediata.",
+            "tips": [
+                "La temperatura rectal es la más precisa",
+                "Incluso una febrícula puede ser grave",
+                "Contacte al pediatra inmediatamente"
+            ]
+        },
+        "children": {
+            "title": "🧒 Niños (3 meses - 12 años)",
+            "threshold": "<strong>Umbral de fiebre:</strong> &ge;38.0°C (100.4°F): vigile de cerca y consulte al médico si le preocupa.",
+            "tips": [
+                "Vigilar cambios de comportamiento",
+                "Usar medicación adecuada para la edad",
+                "Buscar atención si fiebre >39.0°C (102.2°F)"
+            ]
+        },
+        "adults": {
+            "title": "👨‍⚕️ Adultos (12+ años)",
+            "threshold": "<strong>Umbral de fiebre:</strong> &ge;38.0°C (100.4°F): generalmente manejable en casa a menos que sea grave.",
+            "tips": [
+                "El descanso y la hidratación suelen ser suficientes",
+                "Buscar atención si fiebre >39.4°C (103°F) o dura >3 días",
+                "Vigilar síntomas preocupantes"
+            ]
+        }
+    },
+    "measurement": {
+        "title": "Métodos de Medición de Temperatura",
+        "description": "Diferentes métodos dan resultados ligeramente diferentes. Esto es lo que necesita saber:",
+        "oral": {
+            "title": "Oral",
+            "range": "Rango normal: 36.5-37.5°C",
+            "note": "Espere 30 minutos después de comer/beber para una lectura precisa."
+        },
+        "ear": {
+            "title": "Oído (Timpánico)",
+            "range": "Rango normal: 35.8-38.0°C",
+            "note": "Rápido y conveniente, pero puede verse afectado por el cerumen."
+        },
+        "forehead": {
+            "title": "Frente (Temporal)",
+            "range": "Rango normal: 35.8-37.8°C",
+            "note": "Bueno para detección rápida pero menos preciso que otros métodos."
+        },
+        "axillary": {
+            "title": "Axilar (Axila)",
+            "range": "Rango normal: 35.9-36.7°C",
+            "note": "Método menos preciso, típicamente 0.5-1.0°C más bajo que la temperatura central."
+        }
+    },
+    "download": {
+        "title": "Descargar Tabla de Temperatura de Fiebre Imprimible",
+        "description": "Obtenga nuestra completa guía de referencia en PDF de una página para un acceso rápido en casa o en un centro médico.",
+        "btn": "Descargar Tabla en PDF",
+        "printPage": "Imprimir esta página",
+        "printChart": "Imprimir solo tabla",
+        "note": "El PDF incluye: rangos de temperatura de fiebre, tabla de conversión, pautas por edad y contactos de emergencia."
+    },
+    "disclaimer": {
+        "title": "Aviso Médico Importante",
+        "content": "<strong>Aviso:</strong> Esta tabla de temperatura de la fiebre es solo para fines educativos y no debe reemplazar el consejo médico profesional, el diagnóstico o el tratamiento. Consulte siempre con un proveedor de atención médica sobre inquietudes médicas, especialmente para lactantes, niños pequeños o personas con sistemas inmunitarios comprometidos."
+    },
+    "faq": {
+        "q1": "¿Qué temperatura se considera fiebre?",
+        "a1": "Una temperatura corporal de 38.0°C (100.4°F) o superior se considera generalmente fiebre para adultos y niños.",
+        "q2": "¿Qué es una temperatura de fiebre peligrosa?",
+        "a2": "Una fiebre por encima de 39.4°C (103°F) en adultos o por encima de 38°C (100.4°F) en lactantes menores de 3 meses se considera preocupante y puede requerir atención médica. Las temperaturas por encima de 41.1°C (106°F) se consideran una emergencia médica (hiperpirexia).",
+        "q3": "¿Cuál es el rango normal de la temperatura corporal?",
+        "a3": "El rango de temperatura corporal normal suele estar entre 36.5°C y 37.5°C (97.7°F - 99.5°F)."
+    },
+    "schema": {
+        "medicalHeadline": "Tabla de Temperatura de la Fiebre: Guía de Celsius a Fahrenheit",
+        "medicalDesc": "Una guía completa sobre las temperaturas de la fiebre para adultos y niños, que incluye conversiones de Celsius a Fahrenheit y consejos médicos."
+    }
+}

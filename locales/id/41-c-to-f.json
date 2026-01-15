@@ -1,0 +1,57 @@
+{
+    "meta": {
+        "titles": {
+            "fever": "41°C ke Fahrenheit (105.8°F) – Darurat Medis: Panduan Hiperpireksia",
+            "general": "Kalkulator Konversi 41°C ke Fahrenheit (105.8°F)"
+        },
+        "ogDescription": "41°C sama dengan 105.8°F. Demam 41°C adalah darurat medis yang memerlukan penanganan segera. Pelajari cara mengubah 41 Celsius ke Fahrenheit.",
+        "descriptions": {
+            "googleContext": "41 derajat Celsius = 105.8 derajat Fahrenheit. Ini adalah level demam yang mengancam jiwa. Perhitungan tepat: 41°C × 9/5 + 32 = 105.8°F.",
+            "googleGeneral": "Konversi 41°C ke Fahrenheit secara instan. 41 derajat Celsius adalah 105.8 Fahrenheit. Panduan darurat demam kritis disertakan."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Darurat Medis: 41°C (105.8°F)",
+        "subtitle": "Apakah Demam 41°C Berbahaya?",
+        "intro": "Ya, 41°C (105.8°F) adalah darurat medis yang dikenal sebagai hiperpireksia. Suhu ekstrem ini dapat menyebabkan kerusakan otak permanen atau kegagalan organ jika tidak segera ditangani oleh profesional medis.",
+        "ranges": {
+            "hypothermia": "Hipotermia",
+            "normal": "Normal",
+            "fever": "Demam",
+            "highFever": "Demam Darurat Tinggi"
+        },
+        "table": {
+            "headers": {
+                "condition": "Kondisi",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Hipotermia",
+                "normal": "Rentang Sehat",
+                "elevated": "Demam Ringan",
+                "fever": "Demam Sedang",
+                "highFever": "Darurat Medis (41°C)"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "Berapa 41°C dalam Fahrenheit untuk demam?",
+            "answer": "Demam 41°C tepat 105.8°F. Ini dianggap sebagai hiperpireksia dan merupakan darurat medis bagi siapa saja. Segera cari bantuan darurat."
+        },
+        "q2": {
+            "question": "Apakah suhu tubuh 41°C fatal?",
+            "answer": "Meskipun tidak selalu fatal, 41°C sangat berbahaya karena mendekati batas atas yang dapat bertahan oleh tubuh manusia. Kerusakan permanen dapat terjadi.",
+            "items": [
+                "Hubungi layanan darurat segera",
+                "Jangan menunggu untuk menemui dokter",
+                "Pantau kejang atau kehilangan kesadaran"
+            ]
+        },
+        "q3": {
+            "question": "Apakah 41°C panas untuk cuaca?",
+            "answer": "Ya, 41°C (105.8°F) adalah cuaca yang panas secara berbahaya, dapat menyebabkan serangan panas (heat stroke) dalam waktu singkat."
+        }
+    }
+}

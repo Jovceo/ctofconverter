@@ -1,0 +1,57 @@
+{
+    "meta": {
+        "titles": {
+            "fever": "41°C pour Fahrenheit (105.8°F) – Urgence Médicale : Guide de l'Hyperpirexie",
+            "general": "Convertisseur de 41°C en Fahrenheit (105.8°F)"
+        },
+        "ogDescription": "41°C équivaut à 105.8°F. Une fièvre de 41°C est une urgence médicale nécessitant une attention immédiate. Apprenez à convertir 41 Celsius en Fahrenheit.",
+        "descriptions": {
+            "googleContext": "41 degrés Celsius = 105.8 degrés Fahrenheit. C'est un niveau de fièvre mettant la vie en danger. Calcul exact : 41°C × 9/5 + 32 = 105.8°F.",
+            "googleGeneral": "Convertissez instantanément 41°C en Fahrenheit. 41 degrés Celsius font 105.8 degrés Fahrenheit. Guide d'urgence pour forte fièvre inclus."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Urgence Médicale : 41°C (105.8°F)",
+        "subtitle": "Une fièvre de 41°C est-elle dangereuse ?",
+        "intro": "Oui, 41°C (105.8°F) est une urgence médicale connue sous le nom d'hyperpirexie. Cette température extrêmement élevée peut entraîner des lésions cérébrales permanentes ou une défaillance des organes si elle n'est pas traitée immédiatement par des professionnels de la santé.",
+        "ranges": {
+            "hypothermia": "Hypothermie",
+            "normal": "Normale",
+            "fever": "Fièvre",
+            "highFever": "Forte Fièvre d'Urgence"
+        },
+        "table": {
+            "headers": {
+                "condition": "Condition",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Hypothermie",
+                "normal": "Plage saine",
+                "elevated": "Fièvre légère",
+                "fever": "Fièvre modérée",
+                "highFever": "Urgence Médicale (41°C)"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "À quoi correspond une fièvre de 41°C en Fahrenheit ?",
+            "answer": "Une fièvre de 41°C correspond exactement à 105.8°F. Elle est considérée comme une hyperpirexie et constitue une urgence médicale pour tous. Appelez immédiatement les secours."
+        },
+        "q2": {
+            "question": "Une température corporelle de 41°C est-elle fatale ?",
+            "answer": "Bien qu'elle ne soit pas toujours fatale, une température de 41°C est extrêmement dangereuse car elle approche la limite supérieure supportable par le corps humain. Elle peut causer des dommages irréversibles.",
+            "items": [
+                "Appelez immédiatement les services d'urgence",
+                "N'attendez pas pour consulter un médecin",
+                "Surveillez les convulsions ou la perte de conscience"
+            ]
+        },
+        "q3": {
+            "question": "Le temps est-il chaud à 41°C ?",
+            "answer": "Oui, 41°C (105.8°F) correspond à un temps dangereusement chaud, pouvant causer des coups de chaleur et une déshydratation sévère rapidement."
+        }
+    }
+}

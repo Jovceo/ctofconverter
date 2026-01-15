@@ -1,0 +1,57 @@
+{
+    "meta": {
+        "titles": {
+            "fever": "40°C a Fahrenheit (104°F) – Guía de Fiebre Alta para Adultos y Niños",
+            "general": "Calculadora de Conversión de 40°C a Fahrenheit (104°F)"
+        },
+        "ogDescription": "40°C equivale a 104°F. Una fiebre de 40°C es una emergencia médica para bebés y fiebre alta para adultos. Aprende a convertir 40 Celsius a Fahrenheit.",
+        "descriptions": {
+            "googleContext": "40 grados Celsius = 104 grados Fahrenheit. Esto es fiebre alta. Cálculo exacto: 40°C × 9/5 + 32 = 104°F.",
+            "googleGeneral": "Convierte 40°C a Fahrenheit al instante. 40 grados Celsius son exactamente 104 grados Fahrenheit. Guía de fiebre y usos prácticos incluidos."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Alerta de Fiebre: 40°C (104°F)",
+        "subtitle": "¿Es 40°C una Fiebre Alta?",
+        "intro": "Sí, 40°C (104°F) se considera fiebre alta tanto para adultos como para niños. Esta temperatura indica una respuesta inmune significativa o una infección grave y requiere una evaluación médica inmediata.",
+        "ranges": {
+            "hypothermia": "Hipotermia",
+            "normal": "Normal",
+            "fever": "Fiebre",
+            "highFever": "Fiebre Alta"
+        },
+        "table": {
+            "headers": {
+                "condition": "Condición",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Hipotermia",
+                "normal": "Rango Saludable",
+                "elevated": "Fiebre Leve",
+                "fever": "Fiebre Moderada",
+                "highFever": "Fiebre Alta (40°C)"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "¿Es 40°C (104°F) fiebre alta para adultos?",
+            "answer": "Sí, 40°C (104°F) es fiebre alta para adultos. Es una temperatura que requiere atención médica si persiste o si se acompaña de confusión o dificultad para respirar."
+        },
+        "q2": {
+            "question": "¿Es peligroso 40°C para un niño de 2 años?",
+            "answer": "Sí, 40°C es una fiebre muy alta para un niño pequeño. Debe buscar consejo médico urgente de un pediatra.",
+            "items": [
+                "Busque atención de emergencia si el niño está letárgico",
+                "Vigile si hay vómitos o rigidez en el cuello",
+                "Mantenga al niño hidratado y fresco"
+            ]
+        },
+        "q3": {
+            "question": "¿Qué significa 40°C en una lavadora?",
+            "answer": "En el lavado doméstico, 40°C (104°F) es un ajuste estándar de lavado 'tibio'. Es la temperatura más común para lavar ropa de color de uso diario."
+        }
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "meta": {
+        "title": "39°C em Fahrenheit (102.2°F) – É Febre em Adultos e Crianças?",
+        "descriptions": {
+            "googleContext": "39 graus Celsius = 102.2 graus Fahrenheit. Isso é considerado febre. Conversão exata: 39°C × 9/5 + 32 = 102.2°F.",
+            "googleGeneral": "Converta 39°C para Fahrenheit instantaneamente. 39 graus Celsius equivalem a 102.2 graus Fahrenheit. Inclui cálculo detalhado e guia de febre."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Guia de Febre: 39°C (102.2°F)",
+        "subtitle": "39°C é Febre?",
+        "intro": "Sim, 39°C (102.2°F) é considerado febre tanto para adultos quanto para crianças. Em adultos, geralmente é uma febre moderada, mas para bebês e crianças pequenas, é uma febre alta que requer atenção e monitoramento imediatos.",
+        "ranges": {
+            "hypothermia": "Hipotermia",
+            "normal": "Normal",
+            "fever": "Febre",
+            "highFever": "Febre Alta"
+        },
+        "table": {
+            "headers": {
+                "condition": "Condição",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Hipotermia",
+                "normal": "Intervalo Normal",
+                "elevated": "Elevada / Febrícula",
+                "fever": "Febre Moderada (39°C)",
+                "highFever": "Febre Alta"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "39°C (102.2°F) é considerado febre?",
+            "answer": "Sim, 39°C é uma febre moderada para adultos. Para crianças e bebês, é considerada febre alta. Você deve monitorar os sintomas de perto e consultar um profissional se persistir.",
+            "items": [
+                "Adultos: Febre moderada (aconselhamento médico geralmente se durar >3 dias)",
+                "Crianças: Febre alta (consulte o pediatra se durar >24h)",
+                "Bebês (<3 meses): Procure atendimento de emergência imediatamente"
+            ]
+        },
+        "q2": {
+            "question": "39°C é perigoso para uma criança de 4 anos?",
+            "answer": "Para uma criança de 4 anos, 39°C é uma febre alta. Embora nem sempre seja uma emergência, você deve procurar ajuda médica se a febre durar mais de 3 dias, ou se a criança estiver letárgica, recusar líquidos ou tiver o pescoço rígido.",
+            "items": [
+                "Monitore a hidratação e o ânimo",
+                "Use redutores de febre adequados para a idade, se orientado",
+                "Verifique se há manchas ou dificuldade para respirar"
+            ]
+        },
+        "q3": {
+            "question": "O nascimento dos dentes pode causar febre de 39°C em bebês?",
+            "answer": "Não, o nascimento dos dentes raramente causa febre superior a 38°C (100.4°F). Se um bebê tiver febre de 39°C, não presuma que sejam os dentes; verifique outras causas e consulte um pediatra, especialmente se o bebê tiver menos de 12 meses."
+        },
+        "q4": {
+            "question": "Como baixar a febre de 39°C em adultos?",
+            "answer": "Você pode controlar uma febre de 39°C em casa através de repouso e hidratação. Se a febre causar desconforto, considere medicamentos de venda livre.",
+            "items": [
+                "Beba muita água e eletrólitos",
+                "Use compressas frescas (não geladas)",
+                "Tome Paracetamol ou Ibuprofeno",
+                "Use roupas leves e descanse"
+            ]
+        },
+        "q5": {
+            "question": "Quanto é 39°C em Kelvin?",
+            "answer": "39°C são 312.15 Kelvin. A fórmula é: K = °C + 273.15. Então, 39 + 273.15 = 312.15K."
+        }
+    }
+}

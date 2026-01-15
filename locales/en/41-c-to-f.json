@@ -1,0 +1,57 @@
+{
+    "meta": {
+        "titles": {
+            "fever": "41°C to Fahrenheit (105.8°F) – Medical Emergency: High-Grade Fever",
+            "general": "41°C to Fahrenheit (105.8°F) Conversion Calculator"
+        },
+        "ogDescription": "41°C equals 105.8°F. A 41°C fever is a medical emergency requiring immediate attention. Learn how to convert 41 Celsius to Fahrenheit.",
+        "descriptions": {
+            "googleContext": "41 degrees Celsius = 105.8 degrees Fahrenheit. This is a life-threatening fever levels. Exact calculation: 41°C × 9/5 + 32 = 105.8°F.",
+            "googleGeneral": "Convert 41°C to Fahrenheit instantly. 41 degrees Celsius is 105.8 degrees Fahrenheit. Critical fever emergency guide and health alerts included."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Medical Emergency: 41°C (105.8°F)",
+        "subtitle": "Is 41°C a Dangerous Fever?",
+        "intro": "Yes, 41°C (105.8°F) is a medical emergency known as hyperpyrexia. This extremely high temperature can lead to permanent brain damage or organ failure if not treated immediately by medical professionals.",
+        "ranges": {
+            "hypothermia": "Hypothermia",
+            "normal": "Normal",
+            "fever": "Fever",
+            "highFever": "Emergency High Fever"
+        },
+        "table": {
+            "headers": {
+                "condition": "Condition",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Hypothermia",
+                "normal": "Healthy Range",
+                "elevated": "Low-grade Fever",
+                "fever": "Moderate Fever",
+                "highFever": "Medical Emergency (41°C)"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "What is 41°C in Fahrenheit as a fever?",
+            "answer": "A 41°C fever is exactly 105.8°F. This is considered a high-grade fever (hyperpyrexia) and is a medical emergency for infants, children, and adults alike. You should seek emergency care immediately."
+        },
+        "q2": {
+            "question": "Is 41°C body temperature fatal?",
+            "answer": "While not always fatal, 41°C is extremely dangerous. It is near the upper limit of what the human body can survive. Prolonged exposure to this internal temperature can cause irreversible damage to the brain and other vital organs.",
+            "items": [
+                "Call emergency services immediately",
+                "Do not wait for morning to see a doctor",
+                "Monitor for seizures or loss of consciousness"
+            ]
+        },
+        "q3": {
+            "question": "Is 41°C hot for weather?",
+            "answer": "Yes, 41°C (105.8°F) is dangerously hot weather. It can cause heat stroke and severe dehydration within a short period. If the outdoor temperature reaches 41°C, stay indoors in air conditioning and drink plenty of water."
+        }
+    }
+}

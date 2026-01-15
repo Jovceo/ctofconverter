@@ -1,0 +1,76 @@
+{
+    "meta": {
+        "titles": {
+            "fever": "39°C à Fahrenheit (102.2°F) – Est-ce de la fièvre chez l'adulte et l'enfant ?",
+            "general": "Calculateur de conversion 39°C en Fahrenheit (102.2°F)"
+        },
+        "ogDescription": "Convertissez 39°C en Fahrenheit (102.2°F). Est-ce que 39°C est de la fièvre ? 39 degrés Celsius font 102.2 degrés Fahrenheit. Découvrez comment la traiter et quand voir un médecin.",
+        "descriptions": {
+            "googleContext": "39 degrés Celsius = 102.2 degrés Fahrenheit. Ceci est considéré comme de la fièvre. Conversion exacte : 39°C × 9/5 + 32 = 102.2°F.",
+            "googleGeneral": "Convertissez 39°C en Fahrenheit instantanément. 39 degrés Celsius égalent 102.2 degrés Fahrenheit. Calcul détaillé et guide sur la fièvre inclus."
+        }
+    },
+    "bodyTempRanges": {
+        "title": "Guide de la fièvre : 39°C (102.2°F)",
+        "subtitle": "Est-ce que 39°C est de la fièvre ?",
+        "intro": "Oui, 39°C (102.2°F) est considéré comme de la fièvre pour les adultes et les enfants. Chez les adultes, c'est généralement une fièvre modérée, mais pour les nourrissons et les jeunes enfants, c'est une fièvre élevée qui nécessite une attention et une surveillance immédiates.",
+        "ranges": {
+            "hypothermia": "Hypothermie",
+            "normal": "Normal",
+            "fever": "Fièvre",
+            "highFever": "Fievre élevée"
+        },
+        "table": {
+            "headers": {
+                "condition": "État",
+                "celsius": "Celsius (°C)",
+                "fahrenheit": "Fahrenheit (°F)"
+            },
+            "rows": {
+                "hypothermia": "Hypothermie",
+                "normal": "Plage normale",
+                "elevated": "Élevée / Fébricule",
+                "fever": "Fièvre modérée (39°C)",
+                "highFever": "Fièvre élevée"
+            }
+        }
+    },
+    "faq": {
+        "q1": {
+            "question": "Est-ce que 39°C (102.2°F) est considéré comme de la fièvre ?",
+            "answer": "Oui, 39°C est une fièvre modérée pour les adultes. Pour les enfants et les bébés, elle est considérée comme une fièvre élevée. Vous devez surveiller étroitement les symptômes et consulter un professionnel si elle persiste.",
+            "items": [
+                "Adultes : Fièvre modérée (avis médical généralement si elle dure > 3 jours)",
+                "Enfants : Fièvre élevée (consulter un pédiatre si elle dure > 24h)",
+                "Nourrissons (< 3 mois) : Consulter immédiatement un service d'urgence"
+            ]
+        },
+        "q2": {
+            "question": "Est-ce que 39°C est dangereux pour un enfant de 4 ans ?",
+            "answer": "Pour un enfant de 4 ans, 39°C est une fièvre élevée. Bien qu'il ne s'agisse pas toujours d'une urgence, vous devez consulter un médecin si la fièvre dure plus de 3 jours, ou si l'enfant est léthargique, refuse les liquides ou a la nuque raide.",
+            "items": [
+                "Surveiller l'hydratation et le comportement",
+                "Utiliser des antipyrétiques adaptés à l'âge si conseillé",
+                "Vérifier l'absence d'éruptions cutanées ou de difficultés respiratoires"
+            ]
+        },
+        "q3": {
+            "question": "Les poussées dentaires peuvent-elles causer une fièvre de 39°C chez les bébés ?",
+            "answer": "Non, les poussées dentaires causent rarement une fièvre supérieure à 38°C (100.4°F). Si un bébé a 39°C de fièvre, ne supposez pas qu'il s'agit des dents ; recherchez d'autres causes et consultez un pédiatre, surtout si le bébé a moins de 12 mois."
+        },
+        "q4": {
+            "question": "Comment faire baisser une fièvre de 39°C chez l'adulte ?",
+            "answer": "Vous pouvez gérer une fièvre de 39°C à la maison par le repos et l'hydratation. Si la fièvre est inconfortable, envisagez des médicaments en vente libre.",
+            "items": [
+                "Boire beaucoup d'eau et d'électrolytes",
+                "Utiliser des compresses fraîches (pas froides)",
+                "Prendre du Paracétamol ou de l'Ibuprofène",
+                "Porter des vêtements légers et se reposer"
+            ]
+        },
+        "q5": {
+            "question": "Combien font 39°C en Kelvin ?",
+            "answer": "39°C font 312.15 Kelvin. La formule est : K = °C + 273.15. Donc, 39 + 273.15 = 312.15K."
+        }
+    }
+}
