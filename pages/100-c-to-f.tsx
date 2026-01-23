@@ -160,7 +160,7 @@ export default function Temperature100C({ lastUpdatedIso, availablePages, pageTr
         }
 
         return baseStrategy;
-    }, [celsius, pageT]);
+    }, [celsius, pageT, t]);
 
     const canonicalUrl = generatePageUrl(celsius, locale);
 
