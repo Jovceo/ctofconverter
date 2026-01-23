@@ -827,27 +827,36 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
     const formattedF = formatTemperature(f);
     const url = canonicalUrl || generatePageUrl(celsius, locale);
 
-    // 生成结构化数据    // const howToData = generateHowToStructuredData(celsius, f, t); // Deprecated
+    // 生成结构化数据
     const faqData = generateFAQStructuredData(celsius, f, t, strategy.faqs);
-    const breadcrumbData = generateBreadcrumbStructuredData(celsius, formattedF);
+    // 🚀 SEO Fix: Pass locale and t for localized breadcrumbs
+    const breadcrumbData = generateBreadcrumbStructuredData(celsius, formattedF, locale, t);
 
     return {
       fahrenheit: f,
       formattedFahrenheit: formattedF,
       pageUrl: url,
       structuredData: {
-        // 🚀 SEO Strategy: Use Article schema instead of HowTo for tool pages
-        article: {
+        // 🚀 SEO Strategy: Use WebPage schema for tool pages (safer than Article)
+        webPage: {
           '@context': 'https://schema.org',
-          '@type': 'Article',
-          headline: pageTitle,
-          image: `${new URL(url).origin}/images/equation/c-to-f-conversion.png`,
-          author: { '@type': 'Organization', name: t('meta.author') },
-          publisher: { '@type': 'Organization', name: t('common.logoText'), logo: { '@type': 'ImageObject', url: `${new URL(url).origin}/logo.png` } },
-
-          dateModified: isoDate,
+          '@type': 'WebPage',
+          name: pageTitle,
           description: metaDescription,
-          mainEntityOfPage: { '@type': 'WebPage', '@id': url }
+          url: url,
+          mainEntity: {
+            '@type': 'SoftwareApplication',
+            name: `${celsius}°C to °F Converter`,
+            applicationCategory: 'UtilityApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'USD'
+            }
+          },
+          dateModified: isoDate,
+          image: `${new URL(url).origin}/images/equation/c-to-f-conversion.png`
         },
         faq: faqData,
         breadcrumb: breadcrumbData
@@ -896,8 +905,8 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
       alternates: alternates
     }}>
       <Head>
-        {/* 🚀 Schema: Article + FAQ (No HowTo) + Breadcrumb */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.article) }} />
+        {/* 🚀 Schema: WebPage + SoftwareApp + FAQ + Breadcrumb */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.webPage) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.faq) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.breadcrumb) }} />
       </Head>

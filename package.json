@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "postinstall": "echo 'Sitemap generation moved to build step'",
+    "build": "next build && next-sitemap",
+    "postinstall": "echo 'Sitemap auto-generation configured'",
     "start": "next start",
     "lint": "next lint",
     "export": "next build && next export",

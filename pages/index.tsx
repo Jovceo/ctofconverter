@@ -281,7 +281,7 @@ export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: Home
                                 <li key={i} className="temperature-list-item">
                                     <div className="temp-card-content">
                                         <div className="temp-info">
-                                            <Link href={item.url} className="temp-title-link" title={t('reference.itemFormat', { c: item.c, f: item.f })}>
+                                            <Link href={getLocalizedLink(item.url, locale)} className="temp-title-link" title={t('reference.itemFormat', { c: item.c, f: item.f })}>
                                                 <div className="temp-title">{t('reference.itemFormat', { c: item.c, f: item.f })}</div>
                                             </Link>
                                         </div>
