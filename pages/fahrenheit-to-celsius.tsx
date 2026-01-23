@@ -15,7 +15,7 @@ import {
 } from '../utils/fahrenheitHelpers';
 
 // 导入现有工具函数
-import { generateBreadcrumbStructuredData } from '../utils/temperaturePageHelpers';
+// 导入现有工具函数
 import { useTranslation, getLocalizedLink, SUPPORTED_LOCALES, HREFLANG_MAP } from '../utils/i18n';
 
 /**

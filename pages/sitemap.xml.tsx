@@ -31,15 +31,30 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
                     const name = file.replace(/\.(tsx|js)$/, '');
 
                     // 排除不需要包含在 sitemap 中的页面
-                    if (name !== '_app' && name !== '_document' && name !== 'sitemap.xml' && name !== 'temperature-template') {
-                        // 修复 URL 路径：统一为 Unix 风格并移除末尾多余字符
-                        let pagePath = path.join(base, name === 'index' ? '' : name)
-                            .replace(/\\/g, '/')  // 统一为 Unix 风格
-                            .replace(/\.+$/, ''); // 移除末尾的点号
+                    const excludedPages = [
+                        '_app',
+                        '_document',
+                        '_error',
+                        '404',
+                        'sitemap.xml',
+                        'temperature-template',
+                        'index' // Handled specifically below
+                    ];
 
-                        // 统一使用固定日期
-                        const lastmod = '2026-01-15';
+                    if (!excludedPages.includes(name) && !name.startsWith('[')) {
+                        let pagePath = path.join(base, name)
+                            .replace(/\\/g, '/'); // 统一为 Unix 风格
+
+                        // Ensure no double slashes
+                        if (pagePath.startsWith('/')) pagePath = pagePath.substring(1);
+
+                        // 统一使用固定日期 (可改为动态)
+                        const lastmod = '2026-01-23';
                         results.push({ path: pagePath, lastmod });
+                    } else if (name === 'index' && base === '') {
+                        // Home page
+                        const lastmod = '2026-01-23';
+                        results.push({ path: '', lastmod });
                     }
                 }
             }

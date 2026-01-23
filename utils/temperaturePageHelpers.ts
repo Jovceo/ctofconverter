@@ -78,7 +78,35 @@ function stripHtml(html: string): string {
 /**
  * 生成Breadcrumb结构化数据
  */
-export function generateBreadcrumbStructuredData(celsius: number, formattedFahrenheit: string) {
+/**
+ * 生成Breadcrumb结构化数据
+ */
+export function generateBreadcrumbStructuredData(
+  celsius: number,
+  formattedFahrenheit: string,
+  locale: string = 'en',
+  t: (key: string, repl?: any) => string
+) {
+  const homeUrl = locale === 'en' ? 'https://ctofconverter.com/' : `https://ctofconverter.com/${locale}`;
+  const currentUrl = generatePageUrl(celsius, locale);
+
+  // Use translated string for Home if available, otherwise fallback
+  const homeName = t('breadcrumb.home') || 'Home';
+
+  // Use localized page title for current item. 
+  // Fallback to "X Celsius to Fahrenheit" if translation fails, but t() usually handles it.
+  // We can use a simpler breadcrumb name like "20°C to °F" depending on taste, 
+  // but "20 Celsius to Fahrenheit" (localized) is standard.
+  // Let's use the translated meta title pattern but shorter if possible, or just the main title.
+  // Using t('meta.pageTitle') might be too long. 
+  // Let's stick to a safe translated pattern: "{celsius}°C -> °F" or reusing header title.
+
+  // Try 'nav.seoLinkText' first (short and nice), then 'meta.pageTitle', then fallback.
+  // Note: 'meta.titles.general' does NOT exist in current locale files.
+  const currentName = t('nav.seoLinkText', { celsius, fahrenheit: formattedFahrenheit })
+    || t('meta.pageTitle', { celsius, fahrenheit: formattedFahrenheit })
+    || `${celsius} Celsius to Fahrenheit`;
+
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -86,14 +114,14 @@ export function generateBreadcrumbStructuredData(celsius: number, formattedFahre
       {
         '@type': 'ListItem',
         position: 1,
-        name: 'Home',
-        item: 'https://ctofconverter.com/'
+        name: homeName,
+        item: homeUrl
       },
       {
         '@type': 'ListItem',
         position: 2,
-        name: `${celsius} Celsius to Fahrenheit`, // Keep English for Schema ID typical convention or localize if strictly needed (usually English slug match is fine for ID, but name can be localized. For now simple English as per request)
-        item: `https://ctofconverter.com/${String(celsius).replace('.', '-')}-c-to-f`
+        name: currentName,
+        item: currentUrl
       }
     ]
   };
@@ -223,39 +251,18 @@ export function generatePageTitle(
   context?: TemperatureContext,
   keywords?: string[]
 ): string {
-  // 1. -40 Exception (Scientific curiosity)
+  // -40 Exception
   if (Math.abs(celsius + 40) < 0.1) {
-    return t('meta.titles.sameValue', { celsius, fahrenheit: formatTemperature(fahrenheit) });
+    // If 'meta.titles.sameValue' doesn't exist, fallback to standard title
+    const sameValTitle = t('meta.titles.sameValue', { celsius, fahrenheit: formatTemperature(fahrenheit) });
+    if (sameValTitle !== 'meta.titles.sameValue') return sameValTitle;
   }
 
-  // 2. Identify Zone/Scene
-  const scene = getTemperatureScene(celsius);
+  // CRITICAL FIX: The locale files (e.g. fr/template.json) ONLY have 'meta.pageTitle'.
+  // They DO NOT have 'meta.titles.fever', 'meta.titles.weather', etc.
+  // We must fallback to the single existing key to avoid returning "meta.titles.general" to the user.
 
-  // 3. Select Template Key based on Zone
-  let titleKey = 'meta.titles.general';
-
-  switch (scene.name) {
-    case 'BODY':
-      // Zone A: Fever / Body Temp -> Question-Based
-      titleKey = 'meta.titles.fever';
-      break;
-    case 'WEATHER':
-      // Zone B: Weather -> Guide-Based
-      titleKey = 'meta.titles.weather';
-      break;
-    case 'OVEN':
-      // Zone C: Cooking -> Utility-Based
-      titleKey = 'meta.titles.cooking';
-      break;
-    default:
-      // Zone D: General / Water / Extreme -> Utility-Based
-      titleKey = 'meta.titles.general';
-      break;
-  }
-
-  // 4. Generate Title with Exact Precision
-  // formatTemperature(fahrenheit) now defaults to 2 decimals, ensuring "Always Exact"
-  return t(titleKey, {
+  return t('meta.pageTitle', {
     celsius,
     fahrenheit: formatTemperature(fahrenheit)
   }).trim();
