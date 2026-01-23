@@ -4,8 +4,8 @@
   "description": "Celsius to Fahrenheit converter with Next.js integration",
   "private": true,
   "scripts": {
-    "dev": "next dev --webpack",
-    "build": "next build --webpack",
+    "dev": "next dev",
+    "build": "next build",
     "postinstall": "echo 'Sitemap generation moved to build step'",
     "start": "next start",
     "lint": "next lint",
@@ -14,9 +14,10 @@
   },
   "dependencies": {
     "@vercel/og": "^0.8.6",
-    "next": "^16.1.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "next": "15.1.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/node": "^20.19.25",
