@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@vercel/og": "^0.8.6",
-    "next": "^15.1.6",
+    "next": "^15.1.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "xlsx": "^0.18.5"
@@ -24,7 +24,7 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "eslint": "^8.0.0",
-    "eslint-config-next": "15.1.5",
+    "eslint-config-next": "15.1.7",
     "next-sitemap": "^4.2.3",
     "typescript": "^5.0.0"
   }
