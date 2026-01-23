@@ -38,12 +38,12 @@ export default function HotOrColdEngine() {
         setGameState('GAMEOVER');
     };
 
-    const nextRound = () => {
+    const nextRound = React.useCallback(() => {
         setRound(generateRound());
         setFeedback(null);
-    };
+    }, []);
 
-    const handleGuess = (guess: 'HOTTER' | 'COLDER') => {
+    const handleGuess = React.useCallback((guess: 'HOTTER' | 'COLDER') => {
         if (!round || gameState !== 'PLAYING') return;
 
         if (round.correctAnswer === guess) {
@@ -60,7 +60,7 @@ export default function HotOrColdEngine() {
             setFeedback('WRONG');
             setTimeout(nextRound, 300);
         }
-    };
+    }, [round, gameState, nextRound]);
 
     // Cleanup
     useEffect(() => {
@@ -82,7 +82,7 @@ export default function HotOrColdEngine() {
 
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [gameState, round]);
+    }, [gameState, round, handleGuess]);
 
     if (gameState === 'START') {
         return (

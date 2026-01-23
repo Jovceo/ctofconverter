@@ -217,7 +217,7 @@ export default function Temperature20C({ lastUpdatedIso, availablePages, pageTra
         // Actually, looking at 0-c-to-f.tsx, it overwrites `baseStrategy.faqs`. So I will do the same.
 
         return baseStrategy;
-    }, [celsius, pageT]);
+    }, [celsius, pageT, locale]);
 
     const canonicalUrl = generatePageUrl(celsius, locale);
 
