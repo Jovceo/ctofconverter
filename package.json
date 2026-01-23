@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/generate-sitemap.js",
+    "prebuild": "node scripts/generate-sitemap.js",
+    "build": "next build",
     "postinstall": "echo 'Sitemap auto-generation configured'",
     "start": "next start",
     "lint": "next lint",
