@@ -20,8 +20,7 @@ export default function FormulaPage({ lastUpdatedIso, t, common }: FormulaPagePr
     const router = useRouter();
     const { locale = 'en' } = router;
 
-    if (!t || !common) return null;
-
+    // Hooks must be called unconditionally first
     const [celsius, setCelsius] = useState<string>('20');
     const [fahrenheit, setFahrenheit] = useState<number>(68);
     const [step1, setStep1] = useState<string>('36.0');
@@ -38,6 +37,8 @@ export default function FormulaPage({ lastUpdatedIso, t, common }: FormulaPagePr
             setFahrenheit(NaN);
         }
     }, [celsius]);
+
+    if (!t || !common) return null;
 
     return (
         <Layout
