@@ -44,9 +44,16 @@ function addUrl(urlPath, priority) {
 }
 
 console.log(`Generating sitemap for ${pages.length} pages across ${LOCALES.length} locales...`);
+console.log('Pages found:', pages.join(', '));
 
-// Generate
-pages.forEach(page => {
+// Add homepage first (force include to prevent missing)
+LOCALES.forEach(locale => {
+    const homePath = locale === 'en' ? '/' : `/${locale}`;
+    addUrl(homePath, '1.0');
+});
+
+// Generate other pages (exclude index to avoid duplication)
+pages.filter(page => page !== 'index').forEach(page => {
     // Determine priority
     let priority = '0.8';
     if (page === 'index') priority = '1.0';
