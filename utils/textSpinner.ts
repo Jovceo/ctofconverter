@@ -59,34 +59,48 @@ export const textSpinner = {
 
     getPageTitle: (celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string) => {
         const variants = t('meta.pageTitle');
+        const formattedF = formatTemperature(fahrenheit);
+
         // Fallback or static string handling
         if (!Array.isArray(variants)) {
-            // Check if it's a string (standard case for non-en)
-            if (typeof variants === 'string') {
-                return t('meta.pageTitle', { celsius, fahrenheit: formatTemperature(fahrenheit) });
+            // If it returned the key name, try the alternative nested structure
+            if (variants === 'meta.pageTitle') {
+                const alt = t('meta.titles.general', { celsius, fahrenheit: formattedF });
+                if (alt !== 'meta.titles.general') return alt;
+            } else if (typeof variants === 'string') {
+                // If it's a real string (already translated or has placeholders)
+                return variants.replace(/{celsius}/g, celsius.toString()).replace(/{fahrenheit}/g, formattedF);
             }
-            return `${celsius}°C to Fahrenheit`; // Emergency fallback
+            return `${celsius}°C to Fahrenheit (${formattedF}°F)`; // Emergency fallback
         }
 
         const idx = getVariantIndex(celsius + 4, variants.length);
         const text = variants[idx];
-        const formattedF = formatTemperature(fahrenheit);
         return text.replace(/{celsius}/g, celsius.toString())
             .replace(/{fahrenheit}/g, formattedF);
     },
 
     getMetaDescription: (celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string) => {
         const variants = t('meta.ogDescription');
+        const formattedF = formatTemperature(fahrenheit);
+
         if (!Array.isArray(variants)) {
-            if (typeof variants === 'string') {
-                return t('meta.ogDescription', { celsius, fahrenheit: formatTemperature(fahrenheit) });
+            if (variants === 'meta.ogDescription') {
+                const alt = t('meta.descriptions.googleGeneral', { celsius, fahrenheit: formattedF });
+                if (alt === 'meta.descriptions.googleGeneral') {
+                    const alt2 = t('meta.description', { celsius, fahrenheit: formattedF });
+                    if (alt2 !== 'meta.description') return alt2;
+                } else {
+                    return alt;
+                }
+            } else if (typeof variants === 'string') {
+                return variants.replace(/{celsius}/g, celsius.toString()).replace(/{fahrenheit}/g, formattedF);
             }
-            return `Convert ${celsius} Celsius to Fahrenheit.`;
+            return `Convert ${celsius} Celsius to Fahrenheit. ${celsius}°C equals ${formattedF}°F.`;
         }
 
         const idx = getVariantIndex(celsius + 5, variants.length);
         const text = variants[idx];
-        const formattedF = formatTemperature(fahrenheit);
         return text.replace(/{celsius}/g, celsius.toString())
             .replace(/{fahrenheit}/g, formattedF);
     },

@@ -258,14 +258,27 @@ export function generatePageTitle(
     if (sameValTitle !== 'meta.titles.sameValue') return sameValTitle;
   }
 
-  // CRITICAL FIX: The locale files (e.g. fr/template.json) ONLY have 'meta.pageTitle'.
-  // They DO NOT have 'meta.titles.fever', 'meta.titles.weather', etc.
-  // We must fallback to the single existing key to avoid returning "meta.titles.general" to the user.
-
-  return t('meta.pageTitle', {
+  // Determine best title key based on legacy and new locale structures
+  // Some locales (fr, de) use 'meta.pageTitle' directly
+  // Others (en, zh) use nested 'meta.titles.general'
+  let title = t('meta.pageTitle', {
     celsius,
     fahrenheit: formatTemperature(fahrenheit)
-  }).trim();
+  });
+
+  if (title === 'meta.pageTitle') {
+    title = t('meta.titles.general', {
+      celsius,
+      fahrenheit: formatTemperature(fahrenheit)
+    });
+  }
+
+  // Final safety fallback
+  if (title === 'meta.titles.general') {
+    return `${celsius}°C to Fahrenheit (${formatTemperature(fahrenheit)}°F)`;
+  }
+
+  return title.trim();
 }
 
 /**
@@ -297,19 +310,39 @@ export function generateMetaDescription(
     });
   }
 
-  // General Fallback
-  return t('meta.descriptions.googleGeneral', {
+  // Determine best description key
+  let description = t('meta.descriptions.googleGeneral', {
     celsius,
     fahrenheit: formattedF
   });
+
+  if (description === 'meta.descriptions.googleGeneral') {
+    description = t('meta.description', {
+      celsius,
+      fahrenheit: formattedF
+    });
+  }
+
+  // Safety fallback
+  if (description === 'meta.description') {
+    return `${celsius} degrees Celsius equals ${formattedF} degrees Fahrenheit. Use our precise calculator to convert any Celsius value to Fahrenheit instantly.`;
+  }
+
+  return description;
 }
 
-/**
- * 生成OG描述
- * (Typically same as Meta Description for consistency, or can have its own variant logic)
- */
 export function generateOGDescription(celsius: number, fahrenheit: number, t: (key: string, repl?: any) => string): string {
-  return textSpinner.getMetaDescription(celsius, fahrenheit, t);
+  let description = t('meta.ogDescription', {
+    celsius,
+    fahrenheit: formatTemperature(fahrenheit)
+  });
+
+  if (description === 'meta.ogDescription') {
+    // Fallback to text spinner or general meta description
+    return textSpinner.getMetaDescription(celsius, fahrenheit, t);
+  }
+
+  return description;
 }
 
 /**
