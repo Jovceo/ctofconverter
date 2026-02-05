@@ -1,4 +1,4 @@
-﻿import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import Layout from '../components/Layout';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -6,6 +6,11 @@ import Analytics from '../components/Analytics';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+
+// 导入CSS Modules
+import insightsStyles from '../components/TemperatureInsights/index.module.css';
+import conversionToolStyles from '../components/ConversionTool/index.module.css';
+import practicalAppsStyles from '../components/PracticalApps/index.module.css';
 
 // 导入工具函数
 import {
@@ -62,28 +67,26 @@ const DynamicInsightsSection: React.FC<{ insights: ContentStrategy['insights'] }
   if (!insights || insights.length === 0) return null;
 
   return (
-    <section className="insights-section" style={{ margin: '30px 0' }}>
-      <div style={{ display: 'grid', gap: '20px' }}>
+    <section className={insightsStyles.insightsSection}>
+      <div className={insightsStyles.insightsGrid}>
         {insights.map((insight, idx) => {
-          const styles = {
-            warning: { border: '#e74c3c', bg: '#fde2e2', icon: '⚠️' },
-            tip: { border: '#27ae60', bg: '#d4edda', icon: '💡' },
-            fact: { border: '#3498db', bg: '#d1ecf1', icon: 'ℹ️' }
-          }[insight.type] || { border: '#ccc', bg: '#f8f9fa', icon: '📌' };
+          const cardTypeStyles = {
+            warning: insightsStyles.insightCardWarning,
+            tip: insightsStyles.insightCardTip,
+            fact: insightsStyles.insightCardFact,
+          }[insight.type] || insightsStyles.insightCardDefault;
 
           return (
-            <div key={idx} style={{
-              padding: '20px',
-              backgroundColor: styles.bg,
-              borderLeft: `5px solid ${styles.border}`,
-              borderRadius: '8px',
-              boxShadow: '0 2px 5px rgba(0,0,0,0.05)'
-            }}>
-              <h3 style={{ margin: '0 0 10px 0', fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span>{styles.icon}</span>
-                <span dangerouslySetInnerHTML={{ __html: insight.title }} />
-              </h3>
-              <div style={{ margin: 0, lineHeight: '1.6' }} dangerouslySetInnerHTML={{ __html: insight.content }} />
+            <div key={idx} className={`${insightsStyles.insightCard} ${cardTypeStyles}`}>
+              <div className={insightsStyles.insightHeader}>
+                <span className={insightsStyles.insightIcon} aria-hidden="true">
+                  {insight.type === 'warning' && '⚠️'}
+                  {insight.type === 'tip' && '💡'}
+                  {insight.type === 'fact' && 'ℹ️'}
+                </span>
+                <h3 className={insightsStyles.insightTitle} dangerouslySetInnerHTML={{ __html: insight.title }} />
+              </div>
+              <div className={insightsStyles.insightContent} dangerouslySetInnerHTML={{ __html: insight.content }} />
             </div>
           );
         })}
@@ -181,16 +184,16 @@ const PracticalApplications: React.FC<{
   }, [celsius, t, formattedF]);
 
   return (
-    <div className="formula-section">
+    <div className={practicalAppsStyles.formulaSection}>
       <h2 id="practical-title">{t('practical.title', { celsius, fahrenheit: formattedF })}</h2>
-      <div className="practical-uses">
+      <div className={practicalAppsStyles.practicalUses}>
         {applications.map((app, index) => (
-          <div key={index} className="use-case">
-            <div className="use-case-header">{app.title}</div>
-            <div className="use-case-body">
+          <div key={index} className={practicalAppsStyles.useCase}>
+            <div className={practicalAppsStyles.useCaseHeader}>{app.title}</div>
+            <div className={practicalAppsStyles.useCaseBody}>
               <p>{app.description}</p>
               {app.examples && (
-                <ul className="use-case-examples">
+                <ul className={practicalAppsStyles.useCaseExamples}>
                   {app.examples.map((ex: { label: string; value: string }, i: number) => (
                     <li key={i}><strong>{ex.label}:</strong> {ex.value}</li>
                   ))}
@@ -396,29 +399,31 @@ const EnhancedConverter: React.FC<{ t: TFunction; initialCelsius?: number }> = R
   }, [celsius, fahrenheit]);
 
   return (
-    <div className="converter-form">
-      <div className="input-group">
-        <div className="input-header">
-          <label htmlFor="celsius-input">{t('common.celsiusLabel')}</label>
-          <button className="info-btn" title={t('common.freezingTooltip')}>ℹ️</button>
+    <div className={conversionToolStyles.converterTool}>
+      <div className={conversionToolStyles.converterForm}>
+        <div className={conversionToolStyles.inputGroup}>
+          <div className={conversionToolStyles.inputHeader}>
+            <label htmlFor="celsius-input">{t('common.celsiusLabel')}</label>
+            <button className="info-btn" title={t('common.freezingTooltip')}>ℹ️</button>
+          </div>
+          <input
+            id="celsius-input" type="number" value={celsius} onChange={handleCelsiusChange}
+            placeholder={t('common.celsiusLabel')} className={conversionToolStyles.temperatureInput}
+          />
         </div>
-        <input
-          id="celsius-input" type="number" value={celsius} onChange={handleCelsiusChange}
-          placeholder={t('common.celsiusLabel')} className="temperature-input"
-        />
-      </div>
 
-      <div className="result-container" role="region" aria-live="polite">
-        <div className="result-header">
-          <label>{t('common.fahrenheitLabel')}</label>
-          <button className="info-btn" title={t('common.fahrenheitTooltip')}>ℹ️</button>
+        <div className={conversionToolStyles.resultContainer} role="region" aria-live="polite">
+          <div className={conversionToolStyles.resultHeader}>
+            <label>{t('common.fahrenheitLabel')}</label>
+            <button className="info-btn" title={t('common.fahrenheitTooltip')}>ℹ️</button>
+          </div>
+          <output id="conversion-result" className={conversionToolStyles.resultValue}>
+            {fahrenheit ? fahrenheit : '--'}
+          </output>
+          <button className={`${conversionToolStyles.copyButton} ${!fahrenheit ? conversionToolStyles.copyButtonDisabled : ''}`} onClick={handleCopy} disabled={!fahrenheit}>
+            {copySuccess ? t('common.copied') : t('common.copyResult')}
+          </button>
         </div>
-        <output id="conversion-result" className="result-value" style={{ display: 'block', fontSize: '2.5rem', fontWeight: 'bold', margin: '15px 0', minHeight: '60px', color: fahrenheit ? '#2c3e50' : '#bdc3c7' }}>
-          {fahrenheit ? fahrenheit : '--'}
-        </output>
-        <button className="btn" onClick={handleCopy} disabled={!fahrenheit} style={{ width: '100%', marginTop: '10px' }}>
-          {copySuccess ? t('common.copied') : t('common.copyResult')}
-        </button>
       </div>
     </div>
   );

@@ -1,0 +1,143 @@
+{
+    "meta": {
+        "title": "36.1°C to °F: Body Temperature Conversion & Fever Guide",
+        "description": "Convert 36.1°C to Fahrenheit ({fahrenheit}°F). Learn if 36.1°C is normal body temperature, fever for adults/babies, and temperature measurement methods.",
+        "ogTitle": "36.1°C to Fahrenheit Body Temperature Converter",
+        "ogDescription": "Convert 36.1°C to Fahrenheit for body temperature. Check if it's normal, fever for adults, babies, and different measurement methods."
+    },
+    "bodyTempRanges": {
+        "title": "36.1°C Body Temperature: Quick Medical Assessment",
+        "subtitle": "Is 36.1°C a Fever or Normal?",
+        "intro": "36.1°C ({fahrenheit}°F) is the lower end of normal body temperature. While completely normal, it's important to understand its meaning in different contexts.",
+        "normalHighlight": "✅ NORMAL BODY TEMPERATURE<br>36.1°C = {fahrenheit}°F is within the normal range",
+        "adultStatus": "Normal<br>Lower end of normal range",
+        "babyStatus": "Normal<br>Acceptable, monitor if concerned",
+        "underArmStatus": "Normal<br>Typical axillary reading"
+    },
+    "measurementMethods": {
+        "title": "Temperature Measurement Methods",
+        "intro": "36.1°C ({fahrenheit}°F) can mean different things depending on how and where you measure temperature:",
+        "oral": {
+            "icon": "🌡️",
+            "temp": "36.1°C = {fahrenheit}°F",
+            "description": "Lower normal oral reading"
+        },
+        "underArm": {
+            "icon": "💪",
+            "temp": "36.1°C = {fahrenheit}°F",
+            "description": "Normal axillary"
+        },
+        "ear": {
+            "icon": "👂",
+            "temp": "36.1°C = {fahrenheit}°F",
+            "description": "Low tympanic"
+        },
+        "rectal": {
+            "icon": "👶",
+            "temp": "36.1°C = {fahrenheit}°F",
+            "description": "Low for rectal"
+        }
+    },
+    "ageGroups": {
+        "title": "36.1°C Temperature Guide by Age Group",
+        "newborn": {
+            "title": "👶 Newborns & Babies",
+            "points": [
+                "Lower end of normal range",
+                "Monitor for consistent patterns",
+                "Babies have less temperature regulation",
+                "Consult pediatrician if concerned"
+            ]
+        },
+        "children": {
+            "title": "🧒 Children",
+            "points": [
+                "Normal temperature",
+                "May be normal morning temperature",
+                "Consider activity level before measuring",
+                "Watch for behavior changes"
+            ]
+        },
+        "adults": {
+            "title": "👨‍🦳 Adults",
+            "points": [
+                "Normal lower range temperature",
+                "Common morning temperature",
+                "May indicate individual baseline",
+                "No medical concern typically"
+            ]
+        }
+    },
+    "feverScale": {
+        "title": "Body Temperature Conversion Chart",
+        "intro": "Temperature Assessment Guide",
+        "tableHeaders": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "assessment": "Medical Assessment"
+        },
+        "rows": [
+            {
+                "celsius": "35.5°C",
+                "fahrenheit": "95.9°F",
+                "assessment": "Low normal / Mild hypothermia risk"
+            },
+            {
+                "celsius": "36.1°C",
+                "fahrenheit": "{fahrenheit}°F",
+                "assessment": "Normal body temperature"
+            },
+            {
+                "celsius": "36.5°C",
+                "fahrenheit": "97.7°F",
+                "assessment": "Mid-normal range"
+            },
+            {
+                "celsius": "37.0°C",
+                "fahrenheit": "98.6°F",
+                "assessment": "Classic 'normal' temperature"
+            },
+            {
+                "celsius": "37.5°C",
+                "fahrenheit": "99.5°F",
+                "assessment": "High normal / Very low-grade fever"
+            },
+            {
+                "celsius": "38.0°C",
+                "fahrenheit": "100.4°F",
+                "assessment": "Fever threshold"
+            },
+            {
+                "celsius": "38.5°C",
+                "fahrenheit": "101.3°F",
+                "assessment": "Moderate fever"
+            }
+        ]
+    },
+    "faq": {
+        "q1": {
+            "question": "Is 36.1 Celsius a normal body temperature?",
+            "answer": "Yes, 36.1°C ({fahrenheit}°F) is a normal body temperature. It falls within the typical normal range of 36.1°C to 37.2°C (97°F to 99°F) for adults. This temperature indicates healthy, normal physiological function."
+        },
+        "q2": {
+            "question": "Is 36.1°C a fever for babies and children?",
+            "answer": "No, 36.1°C ({fahrenheit}°F) is not a fever for babies or children. It's actually at the lower end of normal range. A fever is typically considered to be 38°C (100.4°F) or higher in children."
+        },
+        "q3": {
+            "question": "What does 36.1°C under the arm mean?",
+            "answer": "36.1°C ({fahrenheit}°F) measured under the arm (axillary) indicates a normal body temperature. Axillary temperatures typically read 0.5-1°C lower than core body temperature, so this reading suggests your actual core temperature is perfectly normal."
+        },
+        "q4": {
+            "question": "Is 36.1°C too low for a newborn?",
+            "answer": "36.1°C ({fahrenheit}°F) is at the lower end of normal for newborns but generally acceptable. However, newborns have less temperature regulation ability, so temperatures below 36°C (96.8°F) should be evaluated by a healthcare provider."
+        },
+        "q5": {
+            "question": "What is 36.1 Celsius in Fahrenheit fever?",
+            "answer": "36.1°C ({fahrenheit}°F) is not a fever. This is a common search misunderstanding. If you're concerned about fever, you might be looking for information around 38°C (100.4°F) or higher, which is the fever threshold."
+        },
+        "q6": {
+            "question": "When should I worry about 36.1°C temperature?",
+            "answer": "You generally don't need to worry about 36.1°C ({fahrenheit}°F) itself, as it's normal. However, seek medical advice if accompanied by concerning symptoms like lethargy, difficulty breathing, poor feeding (in babies), or if temperature rapidly changes."
+        }
+    }
+}

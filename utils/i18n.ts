@@ -377,3 +377,132 @@ export function getLocalizedLink(path: string, locale: string): string {
 export function getDisplayLocale(locale: string): string {
   return DATE_LOCALE_MAP[locale] || 'en-US';
 }
+
+// 🎯 本地化关键词映射（用于SEO优化）
+// 每个语言独立的关键词，用于contentStrategy
+export const LOCALE_KEYWORDS: Record<Locale, string> = {
+  en: 'fever body temperature medical health hypothermia',
+  zh: '发烧 体温 医疗 健康 低体温',
+  es: 'fiebre temperatura corporal médica salud hipotermia',
+  fr: 'fièvre température corporelle médicale santé hypothermie',
+  de: 'Fieber Körpertemperatur medizinische Gesundheit Hypothermie',
+  ja: '発熱 体温 医療 健康 低体温',
+  'pt-br': 'febre temperatura corporal médica saúde hipotermia',
+  hi: 'बुखार शरीर ताप मैडिकल स्वास्थ्य कम ताप',
+  ar: 'حمى درجة حرارة الجسم طبي صحة انخفاض الحرارة',
+  id: 'demam suhu tubuh medis kesehatan suhu tubuh rendah'
+};
+
+/**
+ * 获取本地化关键词
+ * @param locale 语言代码
+ * @returns 本地化关键词字符串
+ */
+export function getLocalizedKeywords(locale: Locale | string): string {
+  const safeLocale = locale as Locale;
+  return LOCALE_KEYWORDS[safeLocale] || LOCALE_KEYWORDS.en;
+}
+
+/**
+ * 温度场景关键词映射
+ * 根据温度和场景返回最合适的本地化关键词
+ */
+export const TEMPERATURE_SCENE_KEYWORDS: Record<Locale, Record<string, string>> = {
+  en: {
+    body: 'fever body temperature medical health',
+    cooking: 'oven baking cooking temperature',
+    weather: 'weather cold freezing outdoor',
+    water: 'boiling steam water temperature',
+    general: 'temperature conversion celsius fahrenheit'
+  },
+  zh: {
+    body: '发烧 体温 医疗 健康',
+    cooking: '烤箱 烘焙 烹饪 温度',
+    weather: '天气 寒冷 冰冻 户外',
+    water: '沸腾 蒸汽 水温',
+    general: '温度转换 摄氏度 华氏度'
+  },
+  es: {
+    body: 'fiebre temperatura corporal médica salud',
+    cooking: 'horno hornear cocina temperatura',
+    weather: 'clima frío congelación exterior',
+    water: 'hirviendo vapor temperatura agua',
+    general: 'conversión temperatura celsius fahrenheit'
+  },
+  fr: {
+    body: 'fièvre température corporelle médicale santé',
+    cooking: 'four cuisson cuisine température',
+    weather: 'météo froid gel extérieur',
+    water: 'ébullition vapeur température eau',
+    general: 'conversion température celsius fahrenheit'
+  },
+  de: {
+    body: 'Fieber Körpertemperatur medizinische Gesundheit',
+    cooking: 'Ofen Backen Kochen Temperatur',
+    weather: 'Wetter Kalt Frost Außen',
+    water: 'Kochen Dampf Wassertemperatur',
+    general: 'Temperaturumrechnung Celsius Fahrenheit'
+  },
+  ja: {
+    body: '発熱 体温 医療 健康',
+    cooking: 'オーブン ベーキング 料理 温度',
+    weather: '天気 寒い 凍結 屋外',
+    water: '沸騰 蒸気 水温',
+    general: '温度変換 摂氏 華氏'
+  },
+  'pt-br': {
+    body: 'febre temperatura corporal médica saúde',
+    cooking: 'forno assar cozinha temperatura',
+    weather: 'clima frio congelamento exterior',
+    water: 'fervendo vapor temperatura água',
+    general: 'conversão temperatura celsius fahrenheit'
+  },
+  hi: {
+    body: 'बुखार शरीर ताप मैडिकल स्वास्थ्य',
+    cooking: 'ओवन बेकिंग खाना पकाना तापमान',
+    weather: 'मौसम ठंडा जमाव बाहर',
+    water: 'उबाल भाप पानी का तापमान',
+    general: 'तापमान रूपांतरण सेल्सियस फ़ारेनहाइट'
+  },
+  ar: {
+    body: 'حمى درجة حرارة الجسم طبي صحة',
+    cooking: 'فرن خبز طبخ درجة الحرارة',
+    weather: 'طقس بارد تجمد خارجي',
+    water: 'غليان بخار درجة حرارة الماء',
+    general: 'تحويل درجة الحرارة مئوي فهرنهايت'
+  },
+  id: {
+    body: 'demam suhu tubuh medis kesehatan',
+    cooking: 'oven baking memasak suhu',
+    weather: 'cuaca dingin beku luar',
+    water: 'mendidih uap suhu air',
+    general: 'konversi suhu celsius fahrenheit'
+  }
+};
+
+/**
+ * 根据温度和场景获取最佳本地化关键词
+ * @param celsius 温度值
+ * @param scene 场景（body, cooking, weather, water, general）
+ * @param locale 语言代码
+ * @returns 本地化关键词字符串
+ */
+export function getSceneKeywords(celsius: number, scene: string, locale: Locale | string): string {
+  const safeLocale = locale as Locale;
+  const sceneMap = TEMPERATURE_SCENE_KEYWORDS[safeLocale] || TEMPERATURE_SCENE_KEYWORDS.en;
+  
+  // 如果没有指定场景，自动判断
+  if (!scene || scene === 'auto') {
+    if (celsius >= 35 && celsius <= 42.5) {
+      scene = 'body';
+    } else if (celsius >= 60) {
+      scene = 'cooking';
+    } else if (celsius >= -60 && celsius <= 55) {
+      scene = 'weather';
+    } else {
+      scene = 'general';
+    }
+  }
+  
+  return sceneMap[scene] || sceneMap.general;
+}
