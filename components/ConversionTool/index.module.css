@@ -1,0 +1,74 @@
+.converterTool {
+    margin-bottom: 30px;
+}
+
+.converterForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.inputGroup {
+    flex: 1;
+    min-width: 200px;
+}
+
+.inputHeader {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.temperatureInput {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.resultContainer {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+}
+
+.resultHeader {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.resultValue {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 15px 0;
+    min-height: 60px;
+    color: #2c3e50;
+}
+
+.copyButton {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.copyButton:hover {
+    background-color: #2980b9;
+}
+
+.copyButton:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}

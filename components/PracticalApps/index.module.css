@@ -1,0 +1,44 @@
+.formulaSection {
+    margin: 30px 0;
+}
+
+.practicalUses {
+    display: grid;
+    gap: 20px;
+}
+
+.useCase {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.useCaseHeader {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.useCaseBody {
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+.useCaseExamples {
+    margin-top: 15px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.useCaseExamples li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.useCaseExamples strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}

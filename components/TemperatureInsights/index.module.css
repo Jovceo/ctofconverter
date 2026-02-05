@@ -1,0 +1,57 @@
+.insightsSection {
+    margin: 30px 0;
+}
+
+.insightsGrid {
+    display: grid;
+    gap: 20px;
+}
+
+.insightCard {
+    padding: 20px;
+    border-left: 5px solid #3498db;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.insightCardWarning {
+    border-left-color: #e74c3c;
+    background-color: #fde2e2;
+}
+
+.insightCardTip {
+    border-left-color: #27ae60;
+    background-color: #d4edda;
+}
+
+.insightCardFact {
+    border-left-color: #3498db;
+    background-color: #d1ecf1;
+}
+
+.insightCardDefault {
+    border-left-color: #ccc;
+    background-color: #f8f9fa;
+}
+
+.insightHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.insightIcon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.insightTitle {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.insightContent {
+    margin: 0;
+    line-height: 1.6;
+}
