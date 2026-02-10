@@ -1,0 +1,224 @@
+{
+    "meta": {
+        "title": "38°C para Fahrenheit (100.4°F) | Guia de Conversão de Temperatura de Febres",
+        "description": "Converta 38°C para 100.4°F - o limiar médico de febre. Aprenda a verificar a febre em adultos, crianças e bebês, com fórmulas de conversão precisas e tabelas de temperatura.",
+        "ogTitle": "38°C para Fahrenheit (100.4°F) - Conversão de Temperatura de Febres",
+        "ogDescription": "38°C equivale a 100.4°F - o limiar médico de febre. Aprenda as fórmulas de conversão, tabelas de febre e quando procurar ajuda médica."
+    },
+    "conversionFormula": {
+        "title": "Fórmula de Conversão de 38°C para Fahrenheit",
+        "formula": "(38°C × 9/5) + 32 = 100.4°F",
+        "steps": [
+            "Multiplique 38 por 9/5: 38 × 1,8 = 68,4",
+            "Adicione 32 ao resultado: 68,4 + 32 = 100,4",
+            "Resultado final: 38°C = 100.4°F"
+        ],
+        "imageAlt": "Fórmula de conversão de 38°C para Fahrenheit e passos de cálculo"
+    },
+    "bodyTempRanges": {
+        "title": "Avaliação de Febre 38°C: Limiar Médico",
+        "subtitle": "38°C é febre?",
+        "intro": "38°C (100.4°F) é o limiar de febre reconhecido internacionalmente. Esta temperatura indica que seu corpo está combatendo uma infecção e requer monitoramento adequado.",
+        "feverHighlight": "⚠️ LIMIAR DE FEBRE<br>38°C = 100.4°F requer atenção",
+        "adultStatus": "Febre<br>Monitorar sintomas",
+        "babyStatus": "URGENTE<br>Contatar médico imediatamente",
+        "underArmStatus": "Febre Alta<br>Temperatura central ~38.5°C",
+        "ranges": {
+            "adult": "Adultos",
+            "baby": "Bebês",
+            "underArm": "Axila",
+            "normal": "Febre"
+        }
+    },
+    "measurementMethods": {
+        "title": "Métodos de Medição de Temperatura em 38°C",
+        "intro": "As leituras de 38°C (100.4°F) variam conforme o local de medição. Entender essas diferenças é crucial para uma avaliação precisa:",
+        "oral": {
+            "icon": "🌡️",
+            "temp": "38°C = 100.4°F",
+            "title": "Oral",
+            "description": "Limiar padrão de febre"
+        },
+        "underArm": {
+            "icon": "💪",
+            "temp": "38°C = 100.4°F",
+            "title": "Axila",
+            "description": "38°C axilar = 38.5°C central"
+        },
+        "ear": {
+            "icon": "👂",
+            "temp": "38°C = 100.4°F",
+            "title": "Ouvido",
+            "description": "Leitura de febre timpânica"
+        },
+        "rectal": {
+            "icon": "👶",
+            "temp": "38°C = 100.4°F",
+            "title": "Retal",
+            "description": "Mais preciso para bebês"
+        }
+    },
+    "antipyretics": {
+        "title": "Quando Usar Antipiréticos (Redutores de Febre)",
+        "intro": "Nem todas as febres requerem medicação. Use antipiréticos quando:",
+        "adults": {
+            "title": "Para Adultos",
+            "conditions": [
+                "Temperatura excede 38.5°C (101.3°F)",
+                "Experimentando desconforto significativo",
+                "Incapaz de dormir devido à febre",
+                "Tem problemas de saúde subjacentes"
+            ],
+            "medications": [
+                {
+                    "name": "Paracetamol (Tylenol)",
+                    "dose": "500-1000mg a cada 6 horas",
+                    "max": "3000mg/dia"
+                },
+                {
+                    "name": "Ibuprofeno (Advil/Motrin)",
+                    "dose": "200-400mg a cada 6 horas",
+                    "max": "1200mg/dia"
+                }
+            ],
+            "warning": "NÃO dê aspirina a crianças ou adolescentes com febre"
+        },
+        "children": {
+            "title": "Para Crianças (6+ meses)",
+            "conditions": [
+                "Temperatura excede 38.5°C (101.3°F)",
+                "Criança está desconfortável ou com dor",
+                "Médico recomenda tratamento"
+            ],
+            "medications": [
+                {
+                    "name": "Paracetamol",
+                    "dose": "10-15mg/kg a cada 4-6 horas",
+                    "max": "Ver rótulo"
+                },
+                {
+                    "name": "Ibuprofeno",
+                    "dose": "5-10mg/kg a cada 6-8 horas",
+                    "max": "Ver rótulo"
+                }
+            ],
+            "warning": "Nunca dê aspirina a crianças"
+        }
+    },
+    "ageGroups": {
+        "title": "Guia de Febre 38°C por Faixa Etária",
+        "newborn": {
+            "title": "👶 Recém-nascidos (0-3 meses) - EMERGÊNCIA",
+            "points": [
+                "EMERGÊNCIA: Procure ajuda médica imediata",
+                "Sistema imunológico imaturo não consegue combater infecções bem",
+                "Risco de infecção bacteriana grave (SBI)",
+                "Qualquer febre de 38°C+ requer avaliação imediata"
+            ]
+        },
+        "infant": {
+            "title": "👶 Bebês (3-6 meses) - URGENTE",
+            "points": [
+                "Contate o pediatra no mesmo dia",
+                "Pode precisar de exames de urina/sangue",
+                "Monitore outros sintomas",
+                "Não espere mais de 24 horas"
+            ]
+        },
+        "children": {
+            "title": "🧒 Crianças (6+ meses)",
+            "points": [
+                "Monitore por 24-48 horas se a criança parecer bem",
+                "Garanta hidratação adequada",
+                "Observe sinais de alerta",
+                "Contate o médico se persistir >48 horas"
+            ]
+        },
+        "adults": {
+            "title": "👨‍🦳 Adultos",
+            "points": [
+                "Geralmente gerenciável em casa",
+                "Descanse, hidrate-se, monitore",
+                "Procure ajuda se persistir >3 dias",
+                "Observe sintomas de piora"
+            ]
+        }
+    },
+    "feverScale": {
+        "title": "Escala Completa de Temperatura de Febre",
+        "intro": "Entenda os níveis de gravidade da febre do normal ao perigoso:",
+        "tableHeaders": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "assessment": "Avaliação Médica"
+        },
+        "rows": [
+            {
+                "celsius": "37.0°C",
+                "fahrenheit": "98.6°F",
+                "assessment": "Temperatura corporal normal"
+            },
+            {
+                "celsius": "37.5°C",
+                "fahrenheit": "99.5°F",
+                "assessment": "Normal alta / Febre leve"
+            },
+            {
+                "celsius": "38.0°C",
+                "fahrenheit": "100.4°F",
+                "assessment": "Limiar de febre - Monitorar"
+            },
+            {
+                "celsius": "38.5°C",
+                "fahrenheit": "101.3°F",
+                "assessment": "Febre moderada - Tratar se desconfortável"
+            },
+            {
+                "celsius": "39.0°C",
+                "fahrenheit": "102.2°F",
+                "assessment": "Febre alta - Antipiréticos recomendados"
+            },
+            {
+                "celsius": "39.5°C",
+                "fahrenheit": "103.1°F",
+                "assessment": "Febre muito alta - Procure atendimento"
+            },
+            {
+                "celsius": "40.0°C",
+                "fahrenheit": "104.0°F",
+                "assessment": "Febre perigosa - Atendimento urgente"
+            },
+            {
+                "celsius": "40.5°C",
+                "fahrenheit": "104.9°F",
+                "assessment": "Emergência médica - Vá ao pronto-socorro"
+            }
+        ]
+    },
+    "faq": {
+        "q1": {
+            "question": "38°C (100.4°F) é considerado febre?",
+            "answer": "Sim, 38°C (100.4°F) é a definição médica padrão de febre mundialmente. Este limiar é usado por profissionais de saúde para determinar quando a temperatura corporal está elevada o suficiente para ser considerada febril. Nota: Isto se aplica a medições orais. O limiar retal é 38.3°C (101°F) e o axilar é 37.5°C (99.5°F)."
+        },
+        "q2": {
+            "question": "38°C é perigoso para adultos?",
+            "answer": "Para a maioria dos adultos saudáveis, 38°C (100.4°F) NÃO é perigoso. É na verdade seu sistema imunológico funcionando efetivamente. Procure atendimento médico se: A febre exceder 39.4°C (103°F); Persistir >3 dias; Acompanhada de dor de cabeça severa, rigidez no pescoço, dificuldade para respirar, dor no peito, ou confusão; Você tem imunidade comprometida ou condições crônicas."
+        },
+        "q3": {
+            "question": "O que 38°C significa para um bebê?",
+            "answer": "38°C (100.4°F) em bebês requer resposta baseada na idade: Recém-nascidos 0-3 meses: EMERGÊNCIA - procure ajuda imediata; Bebês 3-6 meses: URGENTE - contate o pediatra no mesmo dia; Bebês 6+ meses: Monitore de perto, contate o médico se persistir >24 horas. Use sempre termômetros retais para precisão em bebês."
+        },
+        "q4": {
+            "question": "38°C na axila é diferente da temperatura oral?",
+            "answer": "Sim! Temperaturas axilares (axila) leem 0.5°C (0.9°F) mais baixas que as orais. Se você medir 38°C na axila, sua temperatura corporal central real é aproximadamente 38.5°C (101.3°F) - já na faixa de febre moderada. Limites médicos são baseados em medições orais, então adicione 0.5°C às leituras axilares para precisão."
+        },
+        "q5": {
+            "question": "Quando devo me preocupar com uma febre de 38°C?",
+            "answer": "38°C (100.4°F) por si só geralmente não é preocupante, mas observe: Bebês <3 meses: Qualquer 38°C+ é emergência; Crianças: Febre >48 horas ou letargia; Adultos: Febre >3 dias ou sintomas severos; Qualquer pessoa: Rigidez no pescoço, dor de cabeça severa, dificuldade para respirar, dor no peito, confusão, ou erupção cutânea. Como a pessoa parece/age importa mais que o número."
+        },
+        "q6": {
+            "question": "Quando devo tomar medicamentos para reduzir a febre?",
+            "answer": "Tome antipiréticos quando: Adultos: Temperatura >38.5°C (101.3°F) OU desconforto significativo; Crianças: Temperatura >38.5°C (101.3°F) E a criança está desconfortável; Nunca dê aspirina a crianças. Opções comuns: Paracetamol (Tylenol) ou Ibuprofeno (Advil). Lembre-se: Trate a pessoa, não apenas o número - uma criança confortável com febre de 38.5°C pode não precisar de medicação."
+        }
+    }
+}

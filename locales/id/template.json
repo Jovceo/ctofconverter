@@ -278,5 +278,8 @@
             "note": "Catatan Editor: Konten ditinjau untuk keakuratan. Mengikuti pedoman NIST.",
             "sources": "Sumber: NIST, Physical Science Center, USDA."
         }
+    },
+    "structuredData": {
+        "appName": "Konverter {celsius}°C ke °F"
     }
 }

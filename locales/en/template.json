@@ -323,5 +323,8 @@
             "note": "Culinary temperature guidelines for food safety and baking precision are referenced from food safety authorities and professional culinary standards.",
             "sources": "Sources: USDA Food Safety and Inspection Service, FDA."
         }
+    },
+    "structuredData": {
+        "appName": "{celsius}°C to °F Converter"
     }
 }
