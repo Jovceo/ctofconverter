@@ -1,6 +1,7 @@
 import { TemperaturePage } from './temperature-template';
 import { generateContentStrategy } from '../utils/contentStrategy';
 import { useTranslation, replacePlaceholders, getLocalizedKeywords, getSceneKeywords } from '../utils/i18n';
+import { safeTranslate } from '../utils/translationHelpers';
 import { celsiusToFahrenheit, formatTemperature, generatePageUrl } from '../utils/temperaturePageHelpers';
 import { useMemo } from 'react';
 
@@ -133,112 +134,112 @@ export default function Temperature36_1C({ lastUpdatedIso, pageTrans, availableP
         // 注入自定义医疗评估
         s.insights = [{
             type: 'fact' as const,
-            title: pageT.bodyTempRanges?.title || '36.1°C Body Temperature: Quick Medical Assessment',
+            title: safeTranslate(pageT, 'bodyTempRanges.title', locale),
             content: `
                 <div style="display: flex; gap: 10px; margin: 30px 0; flex-wrap: wrap;">
                     <div style="flex: 1; min-width: 140px; padding: 15px; border-radius: 8px; background: #e3f2fd; border-top: 4px solid #2196f3; text-align: center;">
                         <div style="font-size: 2rem; margin-bottom: 10px;">✅</div>
-                        <h3 style="margin: 0 0 10px 0; font-size: 1rem;">${pageT.bodyTempRanges?.ranges?.adult || 'For Adults'}</h3>
-                        <p><strong>${pageT.bodyTempRanges?.ranges?.normal || 'Normal'}</strong><br>36.1°C = ${formattedF}°F</p>
-                        <small>${pageT.bodyTempRanges?.adultStatus || 'Lower end of normal range'}</small>
+                        <h3 style="margin: 0 0 10px 0; font-size: 1rem;">${safeTranslate(pageT, 'bodyTempRanges.ranges.adult', locale)}</h3>
+                        <p><strong>${safeTranslate(pageT, 'bodyTempRanges.ranges.normal', locale)}</strong><br>36.1°C = ${formattedF}°F</p>
+                        <small>${safeTranslate(pageT, 'bodyTempRanges.adultStatus', locale)}</small>
                     </div>
                     <div style="flex: 1; min-width: 140px; padding: 15px; border-radius: 8px; background: #e3f2fd; border-top: 4px solid #2196f3; text-align: center;">
                         <div style="font-size: 2rem; margin-bottom: 10px;">✅</div>
-                        <h3 style="margin: 0 0 10px 0; font-size: 1rem;">${pageT.bodyTempRanges?.ranges?.baby || 'For Babies'}</h3>
-                        <p><strong>${pageT.bodyTempRanges?.ranges?.normal || 'Normal'}</strong><br>36.1°C = ${formattedF}°F</p>
-                        <small>${pageT.bodyTempRanges?.babyStatus || 'Acceptable, monitor if concerned'}</small>
+                        <h3 style="margin: 0 0 10px 0; font-size: 1rem;">${safeTranslate(pageT, 'bodyTempRanges.ranges.baby', locale)}</h3>
+                        <p><strong>${safeTranslate(pageT, 'bodyTempRanges.ranges.normal', locale)}</strong><br>36.1°C = ${formattedF}°F</p>
+                        <small>${safeTranslate(pageT, 'bodyTempRanges.babyStatus', locale)}</small>
                     </div>
                     <div style="flex: 1; min-width: 140px; padding: 15px; border-radius: 8px; background: #e3f2fd; border-top: 4px solid #2196f3; text-align: center;">
                         <div style="font-size: 2rem; margin-bottom: 10px;">✅</div>
-                        <h3 style="margin: 0 0 10px 0; font-size: 1rem;">${pageT.bodyTempRanges?.ranges?.underArm || 'Under Arm'}</h3>
-                        <p><strong>${pageT.bodyTempRanges?.ranges?.normal || 'Normal'}</strong><br>36.1°C = ${formattedF}°F</p>
-                        <small>${pageT.bodyTempRanges?.underArmStatus || 'Typical axillary reading'}</small>
+                        <h3 style="margin: 0 0 10px 0; font-size: 1rem;">${safeTranslate(pageT, 'bodyTempRanges.ranges.underArm', locale)}</h3>
+                        <p><strong>${safeTranslate(pageT, 'bodyTempRanges.ranges.normal', locale)}</strong><br>36.1°C = ${formattedF}°F</p>
+                        <small>${safeTranslate(pageT, 'bodyTempRanges.underArmStatus', locale)}</small>
                     </div>
                 </div>
             `
         }, {
             type: 'fact' as const,
-            title: pageT.measurementMethods?.title || 'Temperature Measurement Methods',
+            title: safeTranslate(pageT, 'measurementMethods.title', locale),
             content: `
-                <p>${pageT.measurementMethods?.intro || `36.1°C (${formattedF}°F) can mean different things depending on how and where you measure temperature:`}</p>
+                <p>${safeTranslate(pageT, 'measurementMethods.intro', locale).replace('{fahrenheit}', formattedF)}</p>
                 <div style="display: grid; gap: 15px; margin-top: 15px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
                     <div style="background: white; padding: 15px; border-radius: 6px; text-align: center;">
                         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
                             <span style="font-size: 1.5rem;" aria-hidden="true">🌡️</span>
-                            <h4 style="margin: 0;">${pageT.measurementMethods?.oral?.title || 'Oral'}</h4>
+                            <h4 style="margin: 0;">${safeTranslate(pageT, 'measurementMethods.oral.title', locale)}</h4>
                         </div>
-                        <p><strong>36.1°C = ${formattedF}°F</strong><br>${pageT.measurementMethods?.oral?.description || 'Lower normal reading'}</p>
+                        <p><strong>36.1°C = ${formattedF}°F</strong><br>${safeTranslate(pageT, 'measurementMethods.oral.description', locale)}</p>
                     </div>
                     <div style="background: white; padding: 15px; border-radius: 6px; text-align: center;">
                         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
                             <span style="font-size: 1.5rem;" aria-hidden="true">💪</span>
-                            <h4 style="margin: 0;">${pageT.measurementMethods?.underArm?.title || 'Under Arm'}</h4>
+                            <h4 style="margin: 0;">${safeTranslate(pageT, 'measurementMethods.underArm.title', locale)}</h4>
                         </div>
-                        <p><strong>36.1°C = ${formattedF}°F</strong><br>${pageT.measurementMethods?.underArm?.description || 'Normal axillary'}</p>
+                        <p><strong>36.1°C = ${formattedF}°F</strong><br>${safeTranslate(pageT, 'measurementMethods.underArm.description', locale)}</p>
                     </div>
                     <div style="background: white; padding: 15px; border-radius: 6px; text-align: center;">
                         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
                             <span style="font-size: 1.5rem;" aria-hidden="true">👂</span>
-                            <h4 style="margin: 0;">${pageT.measurementMethods?.ear?.title || 'Ear'}</h4>
+                            <h4 style="margin: 0;">${safeTranslate(pageT, 'measurementMethods.ear.title', locale)}</h4>
                         </div>
-                        <p><strong>36.1°C = ${formattedF}°F</strong><br>${pageT.measurementMethods?.ear?.description || 'Low tympanic'}</p>
+                        <p><strong>36.1°C = ${formattedF}°F</strong><br>${safeTranslate(pageT, 'measurementMethods.ear.description', locale)}</p>
                     </div>
                     <div style="background: white; padding: 15px; border-radius: 6px; text-align: center;">
                         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
                             <span style="font-size: 1.5rem;" aria-hidden="true">👶</span>
-                            <h4 style="margin: 0;">${pageT.measurementMethods?.rectal?.title || 'Rectal'}</h4>
+                            <h4 style="margin: 0;">${safeTranslate(pageT, 'measurementMethods.rectal.title', locale)}</h4>
                         </div>
-                        <p><strong>36.1°C = ${formattedF}°F</strong><br>${pageT.measurementMethods?.rectal?.description || 'Low for rectal'}</p>
+                        <p><strong>36.1°C = ${formattedF}°F</strong><br>${safeTranslate(pageT, 'measurementMethods.rectal.description', locale)}</p>
                     </div>
                 </div>
             `
         }, {
             type: 'fact' as const,
-            title: pageT.ageGroups?.title || '36.1°C Temperature Guide by Age Group',
+            title: safeTranslate(pageT, 'ageGroups.title', locale),
             content: `
                 <div style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                     <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #9c27b0;">
                         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
                             <span style="font-size: 1.5rem;" aria-hidden="true">👶</span>
-                            <h3 style="margin: 0;">${pageT.ageGroups?.newborn?.title || 'Newborns & Babies'}</h3>
+                            <h3 style="margin: 0;">${safeTranslate(pageT, 'ageGroups.newborn.title', locale)}</h3>
                         </div>
                         <p><strong>36.1°C = ${formattedF}°F</strong></p>
                         <ul style="margin: 10px 0 0 20px; padding: 0;">
-                            ${pageT.ageGroups?.newborn?.points.map(point => `<li>${point}</li>`).join('') || `
-                            <li>Lower end of normal range</li>
-                            <li>Monitor for consistent patterns</li>
-                            <li>Babies have less temperature regulation</li>
-                            <li>Consult pediatrician if concerned</li>
+                            ${pageT.ageGroups?.newborn?.points?.map((point: string) => `<li>${point}</li>`).join('') || `
+                            <li>${safeTranslate(pageT, 'ageGroups.newborn.points.0', locale)}</li>
+                            <li>${safeTranslate(pageT, 'ageGroups.newborn.points.1', locale)}</li>
+                            <li>${safeTranslate(pageT, 'ageGroups.newborn.points.2', locale)}</li>
+                            <li>${safeTranslate(pageT, 'ageGroups.newborn.points.3', locale)}</li>
                             `}
                         </ul>
                     </div>
                     <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #9c27b0;">
                         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
                             <span style="font-size: 1.5rem;" aria-hidden="true">🧒</span>
-                            <h3 style="margin: 0;">${pageT.ageGroups?.children?.title || 'Children'}</h3>
+                            <h3 style="margin: 0;">${safeTranslate(pageT, 'ageGroups.children.title', locale)}</h3>
                         </div>
                         <p><strong>36.1°C = ${formattedF}°F</strong></p>
                         <ul style="margin: 10px 0 0 20px; padding: 0;">
-                            ${pageT.ageGroups?.children?.points.map(point => `<li>${point}</li>`).join('') || `
-                            <li>Normal temperature</li>
-                            <li>May be normal morning temperature</li>
-                            <li>Consider activity level before measuring</li>
-                            <li>Watch for behavior changes</li>
+                            ${pageT.ageGroups?.children?.points?.map((point: string) => `<li>${point}</li>`).join('') || `
+                            <li>${safeTranslate(pageT, 'ageGroups.children.points.0', locale)}</li>
+                            <li>${safeTranslate(pageT, 'ageGroups.children.points.1', locale)}</li>
+                            <li>${safeTranslate(pageT, 'ageGroups.children.points.2', locale)}</li>
+                            <li>${safeTranslate(pageT, 'ageGroups.children.points.3', locale)}</li>
                             `}
                         </ul>
                     </div>
                     <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #9c27b0;">
                         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
                             <span style="font-size: 1.5rem;" aria-hidden="true">👨‍🦳</span>
-                            <h3 style="margin: 0;">${pageT.ageGroups?.adults?.title || 'Adults'}</h3>
+                            <h3 style="margin: 0;">${safeTranslate(pageT, 'ageGroups.adults.title', locale)}</h3>
                         </div>
                         <p><strong>36.1°C = ${formattedF}°F</strong></p>
                         <ul style="margin: 10px 0 0 20px; padding: 0;">
-                            ${pageT.ageGroups?.adults?.points.map(point => `<li>${point}</li>`).join('') || `
-                            <li>Normal lower range temperature</li>
-                            <li>Common morning temperature</li>
-                            <li>May indicate individual baseline</li>
-                            <li>No medical concern typically</li>
+                            ${pageT.ageGroups?.adults?.points?.map((point: string) => `<li>${point}</li>`).join('') || `
+                            <li>${safeTranslate(pageT, 'ageGroups.adults.points.0', locale)}</li>
+                            <li>${safeTranslate(pageT, 'ageGroups.adults.points.1', locale)}</li>
+                            <li>${safeTranslate(pageT, 'ageGroups.adults.points.2', locale)}</li>
+                            <li>${safeTranslate(pageT, 'ageGroups.adults.points.3', locale)}</li>
                             `}
                         </ul>
                     </div>
@@ -246,15 +247,15 @@ export default function Temperature36_1C({ lastUpdatedIso, pageTrans, availableP
             `
         }, {
             type: 'fact' as const,
-            title: pageT.feverScale?.title || 'Body Temperature Conversion Chart',
+            title: safeTranslate(pageT, 'feverScale.title', locale),
             content: `
-                <h3 style="margin-top: 0;">${pageT.feverScale?.intro || 'Temperature Assessment Guide'}</h3>
+                <h3 style="margin-top: 0;">${safeTranslate(pageT, 'feverScale.intro', locale)}</h3>
                 <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
                     <thead>
                         <tr style="background-color: #f8f9fa;">
-                            <th style="padding: 12px; border-bottom: 2px solid #dee2e6; text-align: left;">${pageT.feverScale?.tableHeaders?.celsius || t('common.celsiusLabel') || 'Celsius (°C)'}</th>
-                            <th style="padding: 12px; border-bottom: 2px solid #dee2e6;">${pageT.feverScale?.tableHeaders?.fahrenheit || t('common.fahrenheitLabel') || 'Fahrenheit (°F)'}</th>
-                            <th style="padding: 12px; border-bottom: 2px solid #dee2e6;">${pageT.feverScale?.tableHeaders?.assessment || 'Medical Assessment'}</th>
+                            <th style="padding: 12px; border-bottom: 2px solid #dee2e6; text-align: left;">${safeTranslate(pageT, 'feverScale.tableHeaders.celsius', locale)}</th>
+                            <th style="padding: 12px; border-bottom: 2px solid #dee2e6;">${safeTranslate(pageT, 'feverScale.tableHeaders.fahrenheit', locale)}</th>
+                            <th style="padding: 12px; border-bottom: 2px solid #dee2e6;">${safeTranslate(pageT, 'feverScale.tableHeaders.assessment', locale)}</th>
                         </tr>
                     </thead>
                     <tbody>

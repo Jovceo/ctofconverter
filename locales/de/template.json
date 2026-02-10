@@ -248,5 +248,8 @@
             "note": "Redaktioneller Hinweis: Auf wissenschaftliche Genauigkeit geprüft. Folgt den Standardrichtlinien des NIST.",
             "sources": "Quellen: NIST, Physical Science Center, USDA."
         }
+    },
+    "structuredData": {
+        "appName": "{celsius}°C in °F Umrechner"
     }
 }

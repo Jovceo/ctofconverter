@@ -1,0 +1,224 @@
+{
+    "meta": {
+        "title": "38°C a Fahrenheit (100.4°F) | Guía de Conversión de Temperatura de Fiebre",
+        "description": "Convierte 38°C a 100.4°F - el umbral médico de fiebre. Aprende a verificar la fiebre en adultos, niños y bebés, con fórmulas de conversión precisas y tablas de temperatura.",
+        "ogTitle": "38°C a Fahrenheit (100.4°F) - Conversión de Temperatura de Fiebre",
+        "ogDescription": "38°C equivale a 100.4°F - el umbral médico de fiebre. Aprende las fórmulas de conversión, tablas de fiebre y cuándo buscar ayuda médica."
+    },
+    "conversionFormula": {
+        "title": "Fórmula de Conversión de 38°C a Fahrenheit",
+        "formula": "(38°C × 9/5) + 32 = 100.4°F",
+        "steps": [
+            "Multiplica 38 por 9/5: 38 × 1.8 = 68.4",
+            "Suma 32 al resultado: 68.4 + 32 = 100.4",
+            "Resultado final: 38°C = 100.4°F"
+        ],
+        "imageAlt": "Fórmula de conversión de 38°C a Fahrenheit y pasos de cálculo"
+    },
+    "bodyTempRanges": {
+        "title": "Evaluación de Fiebre 38°C: Umbral Médico",
+        "subtitle": "¿Es 38°C una fiebre?",
+        "intro": "38°C (100.4°F) es el umbral de fiebre reconocido internacionalmente. Esta temperatura indica que su cuerpo está combatiendo una infección y requiere monitoreo adecuado.",
+        "feverHighlight": "⚠️ UMBRAL DE FIEBRE<br>38°C = 100.4°F requiere atención",
+        "adultStatus": "Fiebre<br>Monitorear síntomas",
+        "babyStatus": "URGENTE<br>Contactar médico inmediatamente",
+        "underArmStatus": "Fiebre Alta<br>Temperatura central ~38.5°C",
+        "ranges": {
+            "adult": "Adultos",
+            "baby": "Bebés",
+            "underArm": "Axila",
+            "normal": "Fiebre"
+        }
+    },
+    "measurementMethods": {
+        "title": "Métodos de Medición de Temperatura a 38°C",
+        "intro": "Las lecturas de 38°C (100.4°F) varían según el sitio de medición. Comprender estas diferencias es crucial para una evaluación precisa:",
+        "oral": {
+            "icon": "🌡️",
+            "temp": "38°C = 100.4°F",
+            "title": "Oral",
+            "description": "Umbral estándar de fiebre"
+        },
+        "underArm": {
+            "icon": "💪",
+            "temp": "38°C = 100.4°F",
+            "title": "Axila",
+            "description": "38°C axilar = 38.5°C central"
+        },
+        "ear": {
+            "icon": "👂",
+            "temp": "38°C = 100.4°F",
+            "title": "Oído",
+            "description": "Lectura de fiebre timpánica"
+        },
+        "rectal": {
+            "icon": "👶",
+            "temp": "38°C = 100.4°F",
+            "title": "Rectal",
+            "description": "Más preciso para bebés"
+        }
+    },
+    "antipyretics": {
+        "title": "Cuándo Usar Antipiréticos (Reductores de Fiebre)",
+        "intro": "No todas las fiebres requieren medicación. Use antipiréticos cuando:",
+        "adults": {
+            "title": "Para Adultos",
+            "conditions": [
+                "La temperatura excede 38.5°C (101.3°F)",
+                "Experimenta malestar significativo",
+                "No puede dormir debido a la fiebre",
+                "Tiene condiciones de salud subyacentes"
+            ],
+            "medications": [
+                {
+                    "name": "Paracetamol (Tylenol)",
+                    "dose": "500-1000mg cada 6 horas",
+                    "max": "3000mg/día"
+                },
+                {
+                    "name": "Ibuprofeno (Advil/Motrin)",
+                    "dose": "200-400mg cada 6 horas",
+                    "max": "1200mg/día"
+                }
+            ],
+            "warning": "NO dé aspirina a niños o adolescentes con fiebre"
+        },
+        "children": {
+            "title": "Para Niños (6+ meses)",
+            "conditions": [
+                "La temperatura excede 38.5°C (101.3°F)",
+                "El niño está incómodo o tiene dolor",
+                "El médico recomienda tratamiento"
+            ],
+            "medications": [
+                {
+                    "name": "Paracetamol",
+                    "dose": "10-15mg/kg cada 4-6 horas",
+                    "max": "Ver etiqueta"
+                },
+                {
+                    "name": "Ibuprofeno",
+                    "dose": "5-10mg/kg cada 6-8 horas",
+                    "max": "Ver etiqueta"
+                }
+            ],
+            "warning": "Nunca dé aspirina a niños"
+        }
+    },
+    "ageGroups": {
+        "title": "Guía de Fiebre 38°C por Grupo de Edad",
+        "newborn": {
+            "title": "👶 Recién Nacidos (0-3 meses) - EMERGENCIA",
+            "points": [
+                "EMERGENCIA: Busque atención médica inmediata",
+                "El sistema inmune inmaduro no puede combatir infecciones bien",
+                "Riesgo de infección bacteriana grave (SBI)",
+                "Cualquier fiebre de 38°C+ requiere evaluación inmediata"
+            ]
+        },
+        "infant": {
+            "title": "👶 Bebés (3-6 meses) - URGENTE",
+            "points": [
+                "Contacte al pediatra el mismo día",
+                "Puede necesitar análisis de orina/sangre",
+                "Monitoree otros síntomas",
+                "No espere más de 24 horas"
+            ]
+        },
+        "children": {
+            "title": "🧒 Niños (6+ meses)",
+            "points": [
+                "Monitoree 24-48 horas si el niño parece bien",
+                "Asegure hidratación adecuada",
+                "Observe señales de advertencia",
+                "Contacte al médico si persiste >48 horas"
+            ]
+        },
+        "adults": {
+            "title": "👨‍🦳 Adultos",
+            "points": [
+                "Generalmente manejable en casa",
+                "Descanse, hidrátese, monitoree",
+                "Busque atención si persiste >3 días",
+                "Observe síntomas de empeoramiento"
+            ]
+        }
+    },
+    "feverScale": {
+        "title": "Escala Completa de Temperatura de Fiebre",
+        "intro": "Comprenda los niveles de gravedad de la fiebre desde normal hasta peligroso:",
+        "tableHeaders": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "assessment": "Evaluación Médica"
+        },
+        "rows": [
+            {
+                "celsius": "37.0°C",
+                "fahrenheit": "98.6°F",
+                "assessment": "Temperatura corporal normal"
+            },
+            {
+                "celsius": "37.5°C",
+                "fahrenheit": "99.5°F",
+                "assessment": "Normal alta / Fiebre leve"
+            },
+            {
+                "celsius": "38.0°C",
+                "fahrenheit": "100.4°F",
+                "assessment": "Umbral de fiebre - Monitorear"
+            },
+            {
+                "celsius": "38.5°C",
+                "fahrenheit": "101.3°F",
+                "assessment": "Fiebre moderada - Tratar si incómodo"
+            },
+            {
+                "celsius": "39.0°C",
+                "fahrenheit": "102.2°F",
+                "assessment": "Fiebre alta - Antipiréticos recomendados"
+            },
+            {
+                "celsius": "39.5°C",
+                "fahrenheit": "103.1°F",
+                "assessment": "Fiebre muy alta - Busque atención"
+            },
+            {
+                "celsius": "40.0°C",
+                "fahrenheit": "104.0°F",
+                "assessment": "Fiebre peligrosa - Atención urgente"
+            },
+            {
+                "celsius": "40.5°C",
+                "fahrenheit": "104.9°F",
+                "assessment": "Emergencia médica - Vaya a urgencias"
+            }
+        ]
+    },
+    "faq": {
+        "q1": {
+            "question": "¿Se considera 38°C (100.4°F) una fiebre?",
+            "answer": "Sí, 38°C (100.4°F) es la definición médica estándar de fiebre en todo el mundo. Este umbral es utilizado por profesionales de la salud para determinar cuándo la temperatura corporal está lo suficientemente elevada como para considerarse febril. Nota: Esto aplica a mediciones orales. El umbral rectal es 38.3°C (101°F) y el axilar es 37.5°C (99.5°F)."
+        },
+        "q2": {
+            "question": "¿Es peligroso 38°C para adultos?",
+            "answer": "Para la mayoría de los adultos sanos, 38°C (100.4°F) NO es peligroso. Es en realidad su sistema inmunológico funcionando efectivamente. Busque atención médica si: La fiebre excede 39.4°C (103°F); Persiste >3 días; Acompañada de dolor de cabeza severo, rigidez de cuello, dificultad para respirar, dolor de pecho o confusión; Tiene inmunidad comprometida o condiciones crónicas."
+        },
+        "q3": {
+            "question": "¿Qué significa 38°C para un bebé?",
+            "answer": "38°C (100.4°F) en bebés requiere respuesta basada en la edad: Recién nacidos 0-3 meses: EMERGENCIA - busque atención inmediata; Bebés 3-6 meses: URGENTE - contacte al pediatra el mismo día; Bebés 6+ meses: Monitoree de cerca, contacte al médico si persiste >24 horas. Use siempre termómetros rectales para precisión en bebés."
+        },
+        "q4": {
+            "question": "¿Es diferente 38°C en la axila de la oral?",
+            "answer": "¡Sí! Las temperaturas axilares (en la axila) leen 0.5°C (0.9°F) más bajas que las orales. Si mide 38°C en la axila, su temperatura corporal central real es aproximadamente 38.5°C (101.3°F) - ya en el rango de fiebre moderada. Los umbrales médicos se basan en mediciones orales, así que sume 0.5°C a las lecturas axilares para precisión."
+        },
+        "q5": {
+            "question": "¿Cuándo debo preocuparme por una fiebre de 38°C?",
+            "answer": "38°C (100.4°F) por sí mismo generalmente no es preocupante, pero observe: Bebés <3 meses: Cualquier 38°C+ es emergencia; Niños: Fiebre >48 horas o letargo; Adultos: Fiebre >3 días o síntomas severos; Cualquiera: Rigidez de cuello, dolor de cabeza severo, dificultad para respirar, dolor de pecho, confusión o sarpullido. Cómo se ve/actúa la persona importa más que el número."
+        },
+        "q6": {
+            "question": "¿Cuándo debo tomar medicamentos para reducir la fiebre?",
+            "answer": "Tome antipiréticos cuando: Adultos: Temperatura >38.5°C (101.3°F) O malestar significativo; Niños: Temperatura >38.5°C (101.3°F) Y el niño está incómodo; Nunca dé aspirina a niños. Opciones comunes: Paracetamol (Tylenol) o Ibuprofeno (Advil). Recuerde: Trate a la persona, no solo el número - un niño cómodo con fiebre de 38.5°C puede no necesitar medicación."
+        }
+    }
+}

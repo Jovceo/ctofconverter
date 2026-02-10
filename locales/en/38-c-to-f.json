@@ -1,0 +1,224 @@
+{
+    "meta": {
+        "title": "38°C to Fahrenheit (100.4°F) - Fever Temperature Guide",
+        "description": "Convert 38°C to 100.4°F - the medical fever threshold. Learn fever check methods for adults and babies, with conversion formulas and temperature charts.",
+        "ogTitle": "38°C to Fahrenheit Conversion - Fever Guide",
+        "ogDescription": "38°C equals 100.4°F. Learn fever management, conversion formulas, and when to seek medical help."
+    },
+    "conversionFormula": {
+        "title": "38°C to Fahrenheit Conversion Formula",
+        "formula": "(38°C × 9/5) + 32 = 100.4°F",
+        "steps": [
+            "Multiply 38 by 9/5: 38 × 1.8 = 68.4",
+            "Add 32 to the result: 68.4 + 32 = 100.4",
+            "Final result: 38°C = 100.4°F"
+        ],
+        "imageAlt": "38°C to Fahrenheit conversion formula and calculation steps"
+    },
+    "bodyTempRanges": {
+        "title": "38°C Fever Assessment: Medical Threshold",
+        "subtitle": "Is 38°C a Fever?",
+        "intro": "38°C (100.4°F) is the internationally recognized fever threshold. This temperature indicates your body is fighting infection and requires appropriate monitoring.",
+        "feverHighlight": "⚠️ FEVER THRESHOLD<br>38°C = 100.4°F requires attention",
+        "adultStatus": "Fever<br>Monitor symptoms",
+        "babyStatus": "URGENT<br>Contact doctor immediately",
+        "underArmStatus": "High Fever<br>Core temp ~38.5°C",
+        "ranges": {
+            "adult": "Adults",
+            "baby": "Babies",
+            "underArm": "Under Arm",
+            "normal": "Fever"
+        }
+    },
+    "measurementMethods": {
+        "title": "Temperature Measurement Methods at 38°C",
+        "intro": "38°C (100.4°F) readings vary by measurement site. Understanding these differences is crucial for accurate assessment.",
+        "oral": {
+            "icon": "🌡️",
+            "temp": "38°C = 100.4°F",
+            "title": "Oral",
+            "description": "Standard fever threshold"
+        },
+        "underArm": {
+            "icon": "💪",
+            "temp": "38°C = 100.4°F",
+            "title": "Under Arm",
+            "description": "38°C axillary = 38.5°C core"
+        },
+        "ear": {
+            "icon": "👂",
+            "temp": "38°C = 100.4°F",
+            "title": "Ear",
+            "description": "Tympanic fever reading"
+        },
+        "rectal": {
+            "icon": "👶",
+            "temp": "38°C = 100.4°F",
+            "title": "Rectal",
+            "description": "Most accurate for infants"
+        }
+    },
+    "antipyretics": {
+        "title": "When to Use Fever Reducers (Antipyretics)",
+        "intro": "Not all fevers require medication. Use antipyretics when:",
+        "adults": {
+            "title": "For Adults",
+            "conditions": [
+                "Temperature exceeds 38.5°C (101.3°F)",
+                "Experiencing significant discomfort",
+                "Unable to sleep due to fever",
+                "Have underlying health conditions"
+            ],
+            "medications": [
+                {
+                    "name": "Acetaminophen (Tylenol)",
+                    "dose": "500-1000mg every 6 hours",
+                    "max": "3000mg/day"
+                },
+                {
+                    "name": "Ibuprofen (Advil/Motrin)",
+                    "dose": "200-400mg every 6 hours",
+                    "max": "1200mg/day"
+                }
+            ],
+            "warning": "Do NOT give aspirin to children or teens with fever"
+        },
+        "children": {
+            "title": "For Children (6+ months)",
+            "conditions": [
+                "Temperature exceeds 38.5°C (101.3°F)",
+                "Child is uncomfortable or in pain",
+                "Doctor recommends treatment"
+            ],
+            "medications": [
+                {
+                    "name": "Acetaminophen",
+                    "dose": "10-15mg/kg every 4-6 hours",
+                    "max": "Check label"
+                },
+                {
+                    "name": "Ibuprofen",
+                    "dose": "5-10mg/kg every 6-8 hours",
+                    "max": "Check label"
+                }
+            ],
+            "warning": "Never give aspirin to children"
+        }
+    },
+    "ageGroups": {
+        "title": "38°C Fever Guide by Age Group",
+        "newborn": {
+            "title": "👶 Newborns (0-3 months) - EMERGENCY",
+            "points": [
+                "EMERGENCY: Seek immediate medical care",
+                "Immature immune system cannot fight infections well",
+                "Risk of serious bacterial infection (SBI)",
+                "Any fever 38°C+ requires immediate evaluation"
+            ]
+        },
+        "infant": {
+            "title": "👶 Infants (3-6 months) - URGENT",
+            "points": [
+                "Contact pediatrician same day",
+                "May need urine/blood tests",
+                "Monitor for other symptoms",
+                "Do not wait more than 24 hours"
+            ]
+        },
+        "children": {
+            "title": "🧒 Children (6+ months)",
+            "points": [
+                "Monitor for 24-48 hours if child appears well",
+                "Ensure adequate hydration",
+                "Watch for warning signs",
+                "Contact doctor if persists >48 hours"
+            ]
+        },
+        "adults": {
+            "title": "👨‍🦳 Adults",
+            "points": [
+                "Usually manageable at home",
+                "Rest, hydrate, monitor",
+                "Seek care if persists >3 days",
+                "Watch for worsening symptoms"
+            ]
+        }
+    },
+    "feverScale": {
+        "title": "Complete Fever Temperature Scale",
+        "intro": "Understanding fever severity levels from normal to dangerous:",
+        "tableHeaders": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "assessment": "Medical Assessment"
+        },
+        "rows": [
+            {
+                "celsius": "37.0°C",
+                "fahrenheit": "98.6°F",
+                "assessment": "Normal body temperature"
+            },
+            {
+                "celsius": "37.5°C",
+                "fahrenheit": "99.5°F",
+                "assessment": "High normal / Low-grade"
+            },
+            {
+                "celsius": "38.0°C",
+                "fahrenheit": "100.4°F",
+                "assessment": "Fever threshold - Monitor"
+            },
+            {
+                "celsius": "38.5°C",
+                "fahrenheit": "101.3°F",
+                "assessment": "Moderate fever - Treat if uncomfortable"
+            },
+            {
+                "celsius": "39.0°C",
+                "fahrenheit": "102.2°F",
+                "assessment": "High fever - Antipyretics recommended"
+            },
+            {
+                "celsius": "39.5°C",
+                "fahrenheit": "103.1°F",
+                "assessment": "Very high fever - Seek care"
+            },
+            {
+                "celsius": "40.0°C",
+                "fahrenheit": "104.0°F",
+                "assessment": "Dangerous fever - Urgent care needed"
+            },
+            {
+                "celsius": "40.5°C",
+                "fahrenheit": "104.9°F",
+                "assessment": "Medical emergency - Go to ER"
+            }
+        ]
+    },
+    "faq": {
+        "q1": {
+            "question": "Is 38°C (100.4°F) considered a fever?",
+            "answer": "Yes, 38°C (100.4°F) is the standard medical definition of fever worldwide. This threshold is used by healthcare professionals to determine when body temperature is elevated enough to be considered febrile. Note: This applies to oral measurements. Rectal fever threshold is 38.3°C (101°F), and underarm is 37.5°C (99.5°F)."
+        },
+        "q2": {
+            "question": "Is 38°C dangerous for adults?",
+            "answer": "For most healthy adults, 38°C (100.4°F) is NOT dangerous. It's actually your immune system working effectively. Seek medical care if: Fever exceeds 39.4°C (103°F); Persists >3 days; Accompanied by severe headache, stiff neck, shortness of breath, chest pain, or confusion; You have compromised immunity or chronic conditions."
+        },
+        "q3": {
+            "question": "What does 38°C mean for a baby?",
+            "answer": "38°C (100.4°F) in babies requires age-based response: Newborns 0-3 months: EMERGENCY - seek immediate care; Infants 3-6 months: URGENT - contact pediatrician same day; Babies 6+ months: Monitor closely, contact doctor if persists >24 hours. Always use rectal thermometers for accuracy in infants."
+        },
+        "q4": {
+            "question": "Is 38°C under the arm different from oral?",
+            "answer": "Yes! Underarm (axillary) temperatures read 0.5°C (0.9°F) lower than oral. If you measure 38°C under the arm, your actual core temperature is approximately 38.5°C (101.3°F) - already in moderate fever range. Medical thresholds are based on oral measurements, so add 0.5°C to underarm readings for accuracy."
+        },
+        "q5": {
+            "question": "When should I worry about a 38°C fever?",
+            "answer": "38°C (100.4°F) itself is usually not worrisome, but watch for: Infants <3 months: Any 38°C+ is emergency; Children: Fever >48 hours or lethargy; Adults: Fever >3 days or severe symptoms; Anyone: Stiff neck, severe headache, breathing difficulty, chest pain, confusion, or rash. How the person looks/acts matters more than the number."
+        },
+        "q6": {
+            "question": "When should I take fever-reducing medication?",
+            "answer": "Take antipyretics when: Adults: Temperature >38.5°C (101.3°F) OR significant discomfort; Children: Temperature >38.5°C (101.3°F) AND child is uncomfortable; Never give aspirin to children. Common options: Acetaminophen (Tylenol) or Ibuprofen (Advil). Remember: Treat the person, not just the number - a comfortable child with 38.5°C fever may not need medication."
+        }
+    }
+}

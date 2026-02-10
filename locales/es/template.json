@@ -254,5 +254,8 @@
             "note": "Nota editorial: revisado para exactitud científica. Siguen las pautas estándar del NIST.",
             "sources": "Fuentes: NIST, Centro de Ciencias Físicas, USDA."
         }
+    },
+    "structuredData": {
+        "appName": "Convertidor de {celsius}°C a °F"
     }
 }

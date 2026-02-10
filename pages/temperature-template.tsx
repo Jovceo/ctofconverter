@@ -52,6 +52,7 @@ export interface TemperaturePageProps {
   customIntro?: string;
   disableSmartFaqs?: boolean;
   showEditorialNote?: boolean;
+  customOgImage?: string;
 }
 
 export interface ConversionItem {
@@ -781,7 +782,8 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   availablePages,
   customIntro,
   disableSmartFaqs = false,
-  showEditorialNote = true
+  showEditorialNote = true,
+  customOgImage
 }) => {
   const { t: tTemplate, locale } = useTranslation('template');
   const { t: tPage } = useTranslation(customNamespace);
@@ -851,7 +853,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
           url: url,
           mainEntity: {
             '@type': 'SoftwareApplication',
-            name: `${celsius}°C to °F Converter`,
+            name: t('structuredData.appName', { celsius, fahrenheit: formattedF }) || `${celsius}°C to °F Converter`,
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -861,14 +863,14 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
             }
           },
           dateModified: isoDate,
-          image: `${new URL(url).origin}/images/equation/c-to-f-conversion.png`
+          image: customOgImage || `${new URL(url).origin}/images/equation/${celsius}-celsius-to-fahrenheit-conversion.png`
         },
         faq: faqData,
         breadcrumb: breadcrumbData
       },
 
     };
-  }, [celsius, canonicalUrl, locale, t, strategy.faqs, isoDate, pageTitle, metaDescription]);
+  }, [celsius, canonicalUrl, locale, t, strategy.faqs, isoDate, pageTitle, metaDescription, customOgImage]);
 
   // 🚀 Calculate site origin for consistent URL generation across environments
   const siteOrigin = useMemo(() => new URL(pageUrl).origin, [pageUrl]);
@@ -902,11 +904,11 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
       ogDescription: ogDescription,
       ogUrl: pageUrl,
       ogType: 'article',
-      ogImage: `${siteOrigin}/images/equation/c-to-f-conversion.png`,
+      ogImage: customOgImage || `${siteOrigin}/images/equation/${celsius}-celsius-to-fahrenheit-conversion.png`,
       twitterCard: 'summary_large_image',
       twitterTitle: pageTitle,
       twitterDescription: ogDescription,
-      twitterImage: `${siteOrigin}/images/equation/c-to-f-conversion.png`,
+      twitterImage: customOgImage || `${siteOrigin}/images/equation/${celsius}-celsius-to-fahrenheit-conversion.png`,
       alternates: alternates
     }}>
       <Head>

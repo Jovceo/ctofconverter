@@ -296,5 +296,8 @@
             "note": "编辑说明：本温度转换内容由气象专家和科学教育者审核，确保物理计算的精确性。遵循 NIST 标准指南。",
             "sources": "来源：NIST, 物理科学中心, USDA。"
         }
+    },
+    "structuredData": {
+        "appName": "{celsius}摄氏度转华氏度转换器"
     }
 }

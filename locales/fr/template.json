@@ -278,5 +278,8 @@
             "note": "Note éditoriale : Ce contenu de conversion de température est révisé pour garantir la précision. Suit les directives standard du NIST.",
             "sources": "Sources : NIST, Physical Science Center, USDA."
         }
+    },
+    "structuredData": {
+        "appName": "Convertisseur {celsius}°C en °F"
     }
 }

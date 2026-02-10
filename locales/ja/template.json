@@ -278,5 +278,8 @@
             "note": "編集注記：本温度変換コンテンツは、物理的計算の正確性を期すため、気象専門家および科学教育者によって校閲されています。",
             "sources": "出典：NIST, Physical Science Center, USDA."
         }
+    },
+    "structuredData": {
+        "appName": "{celsius}摄氏度から華氏度変換"
     }
 }
