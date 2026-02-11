@@ -1,0 +1,172 @@
+{
+    "meta": {
+        "title": "36°C en Fahrenheit (96.8°F) - Température Corporelle Normale",
+        "description": "Convertissez 36°C en 96.8°F - plage de température corporelle normale. Découvrez les niveaux de température sains pour adultes et bébés, avec les formules de conversion.",
+        "ogTitle": "Conversion 36°C en Fahrenheit - Température Normale",
+        "ogDescription": "36°C équivaut à 96.8°F. Découvrez la température corporelle normale, les plages saines et la mesure de température."
+    },
+    "conversionFormula": {
+        "title": "Formule de Conversion de 36°C en Fahrenheit",
+        "formula": "(36°C × 9/5) + 32 = 96.8°F",
+        "steps": [
+            "Multipliez 36 par 9/5 : 36 × 1.8 = 64.8",
+            "Ajoutez 32 au résultat : 64.8 + 32 = 96.8",
+            "Résultat final : 36°C = 96.8°F"
+        ],
+        "imageAlt": "Formule de conversion 36°C en Fahrenheit et étapes de calcul"
+    },
+    "bodyTempRanges": {
+        "title": "Évaluation de la Température 36°C : Plage Normale",
+        "subtitle": "36°C est-il Normal ?",
+        "intro": "36°C (96.8°F) est dans la plage normale de température corporelle. C'est une température saine pour la plupart des adultes, bien que les températures de base individuelles puissent varier.",
+        "normalHighlight": "✅ TEMPÉRATURE NORMALE<br>36°C = 96.8°F est sain",
+        "adultStatus": "Normal<br>Plage saine",
+        "babyStatus": "Normal<br>Typique pour bébés",
+        "underArmStatus": "Normal<br>Lecture axillaire",
+        "ranges": {
+            "adult": "Adultes",
+            "baby": "Bébés",
+            "underArm": "Sous le Bras",
+            "normal": "Normal"
+        }
+    },
+    "measurementMethods": {
+        "title": "Méthodes de Mesure de Température à 36°C",
+        "intro": "Les lectures de 36°C (96.8°F) varient selon le site de mesure. Comprendre ces différences aide à assurer une évaluation précise de la température corporelle normale.",
+        "oral": {
+            "icon": "🌡️",
+            "temp": "36°C = 96.8°F",
+            "title": "Orale",
+            "description": "Lecture orale normale basse"
+        },
+        "underArm": {
+            "icon": "💪",
+            "temp": "36°C = 96.8°F",
+            "title": "Sous le Bras",
+            "description": "36°C axillaire = 36.5°C centrale"
+        },
+        "ear": {
+            "icon": "👂",
+            "temp": "36°C = 96.8°F",
+            "title": "Oreille",
+            "description": "Lecture tympanique normale"
+        },
+        "rectal": {
+            "icon": "👶",
+            "temp": "36°C = 96.8°F",
+            "title": "Rectale",
+            "description": "Normal pour nourrissons"
+        }
+    },
+    "ageGroups": {
+        "title": "Guide de Température 36°C par Groupe d'Âge",
+        "newborn": {
+            "title": "👶 Nouveau-nés (0-3 mois) - Normal",
+            "points": [
+                "36°C (96.8°F) est dans la plage normale pour nouveau-nés",
+                "Les nouveau-nés ont moins de capacité de régulation thermique",
+                "Surveillez les patterns consistants plutôt que les lectures isolées",
+                "Contactez le pédiatre si constamment sous 36°C ou au-dessus de 37.5°C"
+            ]
+        },
+        "infant": {
+            "title": "👶 Nourrissons (3-6 mois) - Normal",
+            "points": [
+                "36°C est une température saine pour cet âge",
+                "Plage normale nourrisson : 36.0-37.5°C",
+                "Surveillez avec les niveaux d'alimentation et d'activité",
+                "Contactez le médecin si sous 35.5°C ou au-dessus de 38°C"
+            ]
+        },
+        "children": {
+            "title": "🧒 Enfants (6+ mois) - Normal",
+            "points": [
+                "36°C est une température matinale normale pour enfants",
+                "La température varie dans la journée (différence 0.5°C)",
+                "Extrémité basse du normal mais complètement sain",
+                "Surveillez si constamment sous 35.8°C"
+            ]
+        },
+        "adults": {
+            "title": "👨‍🦳 Adultes - Normal",
+            "points": [
+                "36°C est dans la plage normale adulte (36.0-37.2°C)",
+                "Température matinale courante",
+                "La ligne de base individuelle varie de 0.3-0.5°C",
+                "Pas de raison de s'inquiéter"
+            ]
+        }
+    },
+    "temperatureScale": {
+        "title": "Échelle de Température Corporelle",
+        "intro": "Comprendre les plages de température du plus bas au plus haut :",
+        "tableHeaders": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "assessment": "Évaluation"
+        },
+        "rows": [
+            {
+                "celsius": "35.0°C",
+                "fahrenheit": "95.0°F",
+                "assessment": "Basse - Peut indiquer hypothermie"
+            },
+            {
+                "celsius": "35.5°C",
+                "fahrenheit": "95.9°F",
+                "assessment": "Normale basse - Surveiller si persistant"
+            },
+            {
+                "celsius": "36.0°C",
+                "fahrenheit": "96.8°F",
+                "assessment": "Normale - Extrémité basse de la plage saine"
+            },
+            {
+                "celsius": "36.5°C",
+                "fahrenheit": "97.7°F",
+                "assessment": "Normale - Température matinale courante"
+            },
+            {
+                "celsius": "37.0°C",
+                "fahrenheit": "98.6°F",
+                "assessment": "Normale - Température corporelle moyenne"
+            },
+            {
+                "celsius": "37.5°C",
+                "fahrenheit": "99.5°F",
+                "assessment": "Normale haute / Bas degré"
+            },
+            {
+                "celsius": "38.0°C",
+                "fahrenheit": "100.4°F",
+                "assessment": "Seuil de fièvre"
+            }
+        ]
+    },
+    "faq": {
+        "q1": {
+            "question": "36°C (96.8°F) est-il une température normale ?",
+            "answer": "Oui, 36°C (96.8°F) est dans la plage normale de température corporelle. La température normale adulte varie de 36.0-37.2°C (96.8-99.0°F). Les températures de base individuelles varient de 0.3-0.5°C. 36°C est couramment observé le matin ou chez les personnes ayant des températures de base naturellement plus basses."
+        },
+        "q2": {
+            "question": "36°C est-il trop bas pour les adultes ?",
+            "answer": "36°C (96.8°F) n'est PAS trop bas pour la plupart des adultes. C'est dans la plage normale, bien qu'à l'extrémité basse. Les préoccupations d'hypothermie surviennent généralement sous 35.0°C (95°F). Cependant, si votre température est constamment sous 35.5°C ou si vous vous sentez mal, consultez un professionnel de santé."
+        },
+        "q3": {
+            "question": "Que signifie 36°C pour un bébé ?",
+            "answer": "36°C (96.8°F) est une température normale pour les bébés. Les nourrissons ont souvent des températures entre 36.0-37.5°C. Les nouveau-nés ont moins de régulation thermique, alors surveillez les patterns plutôt que les lectures isolées. Contactez un pédiatre si constamment sous 35.8°C ou au-dessus de 37.5°C, ou si le bébé montre des signes de maladie."
+        },
+        "q4": {
+            "question": "Pourquoi ma température est-elle de 36°C le matin ?",
+            "answer": "Les températures matinales sont généralement 0.3-0.5°C plus basses que l'après-midi/soir en raison des rythmes circadiens. 36°C le matin est complètement normal. La température corporelle fluctue naturellement dans la journée, étant la plus basse vers 6h et la plus haute vers 16h-18h."
+        },
+        "q5": {
+            "question": "Dois-je m'inquiéter d'une température de 36°C ?",
+            "answer": "36°C (96.8°F) seul n'est pas une raison de s'inquiéter. Les signes d'alerte incluent : Température constamment sous 35.5°C ; Chute soudaine de votre ligne de base normale ; Accompagnée de symptômes comme des frissons, de la confusion ou de la fatigue ; Chez les bébés : mauvaise alimentation, léthargie ou extrémités froides. Sinon, 36°C est une température saine."
+        },
+        "q6": {
+            "question": "Comment convertir 36°C en Fahrenheit ?",
+            "answer": "Pour convertir 36°C en Fahrenheit : Multipliez 36 par 9/5 (ou 1.8) = 64.8 ; Ajoutez 32 au résultat : 64.8 + 32 = 96.8 ; Réponse finale : 36°C = 96.8°F. C'est une température corporelle normale dans la plage saine."
+        }
+    }
+}

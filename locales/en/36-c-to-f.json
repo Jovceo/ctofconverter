@@ -1,0 +1,172 @@
+{
+    "meta": {
+        "title": "36°C to Fahrenheit (96.8°F) | Body Temperature Guide & Calculator",
+        "description": "Convert 36 degrees Celsius to Fahrenheit quickly. Learn that 36°C equals 96.8°F, understand if 36°C is normal body temperature or fever for adults, children and babies.",
+        "ogTitle": "36°C to Fahrenheit (96.8°F) Body Temperature Converter",
+        "ogDescription": "Convert 36 degrees Celsius to Fahrenheit instantly. 36°C equals 96.8°F - understand body temperature norms and fever detection."
+    },
+    "conversionFormula": {
+        "title": "36°C to Fahrenheit Conversion Formula",
+        "formula": "(36°C × 9/5) + 32 = 96.8°F",
+        "steps": [
+            "Multiply 36 by 9/5: 36 × 1.8 = 64.8",
+            "Add 32 to the result: 64.8 + 32 = 96.8",
+            "Final result: 36°C = 96.8°F"
+        ],
+        "imageAlt": "36°C to Fahrenheit conversion formula and calculation steps"
+    },
+    "bodyTempRanges": {
+        "title": "36°C Temperature Assessment: Normal Range",
+        "subtitle": "Is 36°C Normal?",
+        "intro": "36°C (96.8°F) is within the normal body temperature range. This is a healthy temperature for most adults, though individual baseline temperatures may vary.",
+        "normalHighlight": "✅ NORMAL TEMPERATURE<br>36°C = 96.8°F is healthy",
+        "adultStatus": "Normal<br>Healthy range",
+        "babyStatus": "Normal<br>Typical for infants",
+        "underArmStatus": "Normal<br>Axillary reading",
+        "ranges": {
+            "adult": "Adults",
+            "baby": "Babies",
+            "underArm": "Under Arm",
+            "normal": "Normal"
+        }
+    },
+    "measurementMethods": {
+        "title": "Temperature Measurement Methods at 36°C",
+        "intro": "36°C (96.8°F) readings vary by measurement site. Understanding these differences helps ensure accurate assessment of normal body temperature.",
+        "oral": {
+            "icon": "🌡️",
+            "temp": "36°C = 96.8°F",
+            "title": "Oral",
+            "description": "Lower normal oral reading"
+        },
+        "underArm": {
+            "icon": "💪",
+            "temp": "36°C = 96.8°F",
+            "title": "Under Arm",
+            "description": "36°C axillary = 36.5°C core"
+        },
+        "ear": {
+            "icon": "👂",
+            "temp": "36°C = 96.8°F",
+            "title": "Ear",
+            "description": "Normal tympanic reading"
+        },
+        "rectal": {
+            "icon": "👶",
+            "temp": "36°C = 96.8°F",
+            "title": "Rectal",
+            "description": "Normal for infants"
+        }
+    },
+    "ageGroups": {
+        "title": "36°C Temperature Guide by Age Group",
+        "newborn": {
+            "title": "👶 Newborns (0-3 months) - Normal",
+            "points": [
+                "36°C (96.8°F) is within normal range for newborns",
+                "Newborns have less temperature regulation ability",
+                "Monitor for consistent patterns rather than single readings",
+                "Contact pediatrician if consistently below 36°C or above 37.5°C"
+            ]
+        },
+        "infant": {
+            "title": "👶 Infants (3-6 months) - Normal",
+            "points": [
+                "36°C is a healthy temperature for this age",
+                "Normal infant range: 36.0-37.5°C",
+                "Monitor alongside feeding and activity levels",
+                "Contact doctor if below 35.5°C or above 38°C"
+            ]
+        },
+        "children": {
+            "title": "🧒 Children (6+ months) - Normal",
+            "points": [
+                "36°C is a normal morning temperature for children",
+                "Temperature varies throughout the day (0.5°C difference)",
+                "Lower end of normal but completely healthy",
+                "Monitor if consistently below 35.8°C"
+            ]
+        },
+        "adults": {
+            "title": "👨‍🦳 Adults - Normal",
+            "points": [
+                "36°C is within normal adult range (36.0-37.2°C)",
+                "Common morning temperature",
+                "Individual baseline varies by 0.3-0.5°C",
+                "Not a cause for concern"
+            ]
+        }
+    },
+    "temperatureScale": {
+        "title": "Body Temperature Scale",
+        "intro": "Understanding temperature ranges from low to high:",
+        "tableHeaders": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "assessment": "Assessment"
+        },
+        "rows": [
+            {
+                "celsius": "35.0°C",
+                "fahrenheit": "95.0°F",
+                "assessment": "Low - May indicate hypothermia"
+            },
+            {
+                "celsius": "35.5°C",
+                "fahrenheit": "95.9°F",
+                "assessment": "Low normal - Monitor if persistent"
+            },
+            {
+                "celsius": "36.0°C",
+                "fahrenheit": "96.8°F",
+                "assessment": "Normal - Lower end of healthy range"
+            },
+            {
+                "celsius": "36.5°C",
+                "fahrenheit": "97.7°F",
+                "assessment": "Normal - Common morning temperature"
+            },
+            {
+                "celsius": "37.0°C",
+                "fahrenheit": "98.6°F",
+                "assessment": "Normal - Average body temperature"
+            },
+            {
+                "celsius": "37.5°C",
+                "fahrenheit": "99.5°F",
+                "assessment": "High normal / Low-grade"
+            },
+            {
+                "celsius": "38.0°C",
+                "fahrenheit": "100.4°F",
+                "assessment": "Fever threshold"
+            }
+        ]
+    },
+    "faq": {
+        "q1": {
+            "question": "Is 36°C (96.8°F) a normal temperature?",
+            "answer": "Yes, 36°C (96.8°F) is within the normal body temperature range. Normal adult temperature ranges from 36.0-37.2°C (96.8-99.0°F). Individual baseline temperatures vary by 0.3-0.5°C. 36°C is commonly seen in the morning or in people with naturally lower baseline temperatures."
+        },
+        "q2": {
+            "question": "Is 36°C too low for adults?",
+            "answer": "36°C (96.8°F) is NOT too low for most adults. It's within the normal range, though on the lower end. Hypothermia concerns typically arise below 35.0°C (95°F). However, if your temperature is consistently below 35.5°C or you feel unwell, consult a healthcare provider."
+        },
+        "q3": {
+            "question": "What does 36°C mean for a baby?",
+            "answer": "36°C (96.8°F) is a normal temperature for babies. Infants often have temperatures between 36.0-37.5°C. Newborns have less temperature regulation, so monitor patterns rather than single readings. Contact a pediatrician if consistently below 35.8°C or above 37.5°C, or if baby shows signs of illness."
+        },
+        "q4": {
+            "question": "Why is my temperature 36°C in the morning?",
+            "answer": "Morning temperatures are typically 0.3-0.5°C lower than afternoon/evening due to circadian rhythms. 36°C in the morning is completely normal. Body temperature naturally fluctuates throughout the day, being lowest around 6 AM and highest around 4-6 PM."
+        },
+        "q5": {
+            "question": "Should I be concerned about 36°C temperature?",
+            "answer": "36°C (96.8°F) alone is not a cause for concern. Worry signs include: Temperature consistently below 35.5°C; Sudden drop from your normal baseline; Accompanied by symptoms like shivering, confusion, or fatigue; In babies: poor feeding, lethargy, or cold extremities. Otherwise, 36°C is a healthy temperature."
+        },
+        "q6": {
+            "question": "How do I convert 36°C to Fahrenheit?",
+            "answer": "To convert 36°C to Fahrenheit: Multiply 36 by 9/5 (or 1.8) = 64.8; Add 32 to the result: 64.8 + 32 = 96.8; Final answer: 36°C = 96.8°F. This is a normal body temperature within healthy range."
+        }
+    }
+}
