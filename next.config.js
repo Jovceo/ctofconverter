@@ -53,7 +53,7 @@ const nextConfig = {
         // - Numbered temp pages (0, 4, 20, 37, 37-2, 37-5, 39, 47, 75, 100)
         // - Core features (calculators, charts, formula)
         // - Base pages (about, privacy, terms)
-        source: '/:path(0-c-to-f|4-c-to-f|20-c-to-f|36-1-c-to-f|37-c-to-f|37-2-c-to-f|37-5-c-to-f|38-c-to-f|39-c-to-f|40-c-to-f|41-c-to-f|47-c-to-f|75-c-to-f|100-c-to-f|about-us|privacy-policy|terms-of-service|c-to-f-calculator|c-to-f-formula|celsius-to-fahrenheit-chart|fahrenheit-to-celsius|fan-oven-conversion-chart|temperature-conversion-challenge|body-temperature-chart-fever-guide).html',
+        source: '/:path(0-c-to-f|4-c-to-f|20-c-to-f|36-c-to-f|36-1-c-to-f|37-c-to-f|37-2-c-to-f|37-5-c-to-f|38-c-to-f|39-c-to-f|40-c-to-f|41-c-to-f|47-c-to-f|75-c-to-f|100-c-to-f|about-us|privacy-policy|terms-of-service|c-to-f-calculator|c-to-f-formula|celsius-to-fahrenheit-chart|fahrenheit-to-celsius|fan-oven-conversion-chart|temperature-conversion-challenge|body-temperature-chart-fever-guide).html',
         destination: '/:path',
         statusCode: 301,
       },

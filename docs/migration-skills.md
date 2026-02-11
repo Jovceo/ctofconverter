@@ -5,7 +5,116 @@
 
 ---
 
+## 📖 文档使用指南（对号入座）
+
+**👤 我是新手，第一次迁移页面**  
+→ 先看 [🚀 单页面快速迁移清单](#单页面快速迁移清单quick-start) 5步流程  
+→ 再按需查阅具体 Skill 细节
+
+**👤 我需要快速完成单个页面迁移（2小时内）**  
+→ 直接执行 [🚀 单页面快速迁移清单](#单页面快速迁移清单quick-start)  
+→ 遇到问题查看 [附录 A：常见问题速查](#附录-a单页面迁移常见问题速查)
+
+**👤 我要批量迁移多个页面（5+个）**  
+→ 先阅读 [Skill 1：硬编码修复](#skill-1硬编码修复)  
+→ 再看 [Skill 4：批量页面生成](#skill-4批量页面生成高级)  
+→ 参考 [Skill 6：多语言批量翻译](#skill-6多语言批量翻译高级)
+
+**👤 我遇到了技术问题/错误**  
+→ 查看 [附录 A：常见问题速查](#附录-a单页面迁移常见问题速查)  
+→ 或搜索具体错误信息在对应 Skill 章节
+
+**👤 我需要优化 SEO/性能**  
+→ 查看 [Skill 6.7：SEO 优化最佳实践](#67-seo-优化最佳实践关键改进)  
+→ 或 [Skill 6.9：图片 SEO](#69-图片-seo-与动态图片生成vercelog)
+
+**👤 我不确定用什么策略/颜色主题**  
+→ 查看 [附录 B：迁移决策树](#附录-b迁移决策树)
+
+---
+
+### 📂 文档结构速览
+
+| 章节 | 内容 | 何时查看 |
+|------|------|----------|
+| **🚀 快速清单** | 5步完成单页面迁移 | **每次迁移必看** |
+| **Skill 1-5** | 详细技术实现 | 遇到问题或批量迁移时 |
+| **Skill 6** | 多语言翻译深度指南 | 翻译问题或批量翻译 |
+| **附录 A** | FAQ + 速查表 | 迁移中遇到问题 |
+| **附录 B** | 决策树 | 不确定策略时 |
+
+---
+
+## 🚀 单页面快速迁移清单（Quick Start）
+
+**适用场景**：迁移单个温度页面（如 39°C）
+
+**预计时间**：2-3 小时（含审核）
+
+### 5 步完成迁移：
+
+- [ ] **Step 1: 创建英文翻译文件**
+  ```bash
+  cp locales/en/38-c-to-f.json locales/en/39-c-to-f.json
+  # 修改：温度值 38→39，内容调整为发烧场景
+  ```
+  > ⚠️ **关键**：从 `public/39-c-to-f.html` 复制原文件的 **title**、**description**、**H1** 到 JSON 的 meta 字段，保持 SEO 一致性
+
+- [ ] **Step 2: 创建页面组件**
+  ```bash
+  cp pages/38-c-to-f.tsx pages/39-c-to-f.tsx
+  # 修改：celsius = 39，颜色主题、insight 类型
+  ```
+
+- [ ] **Step 3: 翻译多语言（AI + 审核）**
+  - 使用 Claude 3.5 翻译 10 种语言
+  - 重点审核 Hindi（医学术语准确性）
+  - 验证占位符 {fahrenheit} 保留
+
+- [ ] **Step 4: 配置 301 重定向**
+  ```javascript
+  // next.config.js
+  source: '/:path(...|39-c-to-f|...).html'
+  ```
+
+- [ ] **Step 5: 构建验证**
+  ```bash
+  npm run build
+  # 验证：10 个语言版本无错误
+  ```
+
+### 详细说明 ⬇️
+
+> 💡 **提示**：下方是详细技术文档，执行快速清单时如遇问题可查阅对应 Skill
+
+---
+
+## 📋 快速对照表：我现在该看什么？
+
+**按当前任务查找：**
+
+| 如果你正在... | 查看章节 | 关键内容 |
+|--------------|---------|---------|
+| **复制模板文件** | Skill 2 + Skill 3 | 翻译文件结构、页面组件模板 |
+| **修改温度值和颜色** | Skill 3.3 | 视觉调整指南 |
+| **翻译多语言内容** | Skill 6.2 | 批量翻译执行流程 |
+| **审核 Hindi 翻译** | Skill 6.3 | Hindi 医学术语标准 |
+| **配置 301 重定向** | Skill 6.10 | next.config.js 配置 |
+| **验证构建结果** | Skill 5 | 自动化验证脚本 |
+| **优化 SEO** | Skill 6.7 | SEO 最佳实践 |
+| **修复图片问题** | Skill 6.9 | @vercel/og 动态生成 |
+| **添加退烧药板块** | 38-c-to-f.json 示例 | antipyretics 结构 |
+
+---
+
 ## Skill 1: 硬编码修复
+
+**适用场景**：系统修复（一次性）| **预计时间**：30分钟 | **必须执行**：✅ 是
+
+**本 Skill 包含**：
+- 创建安全翻译辅助函数 `safeTranslate()`
+- 识别和替换硬编码英文
+- 验证脚本使用
 
 ### 1.1 创建安全翻译辅助函数
 **文件**: `utils/translationHelpers.ts`
@@ -54,16 +163,66 @@ node scripts/validate-translations.js
 
 ## Skill 2: 翻译文件创建
 
+**适用场景**：每个新页面 | **预计时间**：20分钟 | **必须执行**：✅ 是
+
+**本 Skill 包含**：
+- 翻译文件 JSON 结构
+- 内容适配策略（颜色主题选择）
+- 医学术语参考
+
 ### 2.1 文件结构模板
 ```
 locales/{locale}/38-c-to-f.json
-├── meta              # SEO（完全保留原标题描述）
+├── meta              # SEO（⚠️ 必须完全保留原标题描述）
 ├── bodyTempRanges    # 体温范围评估
 ├── measurementMethods # 测量方法
 ├── antipyretics      # ⭐ 退烧药指南（可选）
 ├── ageGroups         # 年龄分组（3-4组）
 ├── feverScale        # 温度表格
 └── faq               # 6个问答
+```
+
+#### **⚠️ 关键要求：保留原 HTML 的 SEO 信息**
+
+**必须复制 `public/{temperature}-c-to-f.html` 中的：**
+
+1. **Title 标签内容**
+   ```html
+   <!-- 原 HTML -->
+   <title>38°C to Fahrenheit (100.4°F) | Fever Temperature Conversion Guide</title>
+   
+   <!-- 复制到 JSON -->
+   "title": "38°C to Fahrenheit (100.4°F) | Fever Temperature Conversion Guide"
+   ```
+
+2. **Meta Description 内容**
+   ```html
+   <!-- 原 HTML -->
+   <meta name="description" content="Convert 38°C to 100.4°F - the medical fever threshold...">
+   
+   <!-- 复制到 JSON -->
+   "description": "Convert 38°C to 100.4°F - the medical fever threshold..."
+   ```
+
+3. **H1 标签内容**（通过 customTitle 传递）
+   ```html
+   <!-- 原 HTML 中的 H1 -->
+   <h1>38°C to Fahrenheit (100.4°F) | Fever Temperature Conversion Guide</h1>
+   
+   <!-- 复制到 JSON meta.title -->
+   "title": "38°C to Fahrenheit (100.4°F) | Fever Temperature Conversion Guide"
+   ```
+
+**为什么重要？**
+- ✅ 保持搜索引擎排名不变
+- ✅ 保留现有 SEO 权重
+- ✅ 避免 404 和重定向链
+- ✅ 用户看到的标题与搜索结果一致
+
+**错误示例**：
+```json
+❌ "title": "38°C to Fahrenheit - Fever Guide"  // 不要简化！
+✅ "title": "38°C to Fahrenheit (100.4°F) | Fever Temperature Conversion Guide"
 ```
 
 ### 2.2 内容适配策略
@@ -94,6 +253,13 @@ locales/{locale}/38-c-to-f.json
 ---
 
 ## Skill 3: 页面组件创建
+
+**适用场景**：每个新页面 | **预计时间**：30分钟 | **必须执行**：✅ 是
+
+**本 Skill 包含**：
+- 页面组件复制和修改清单
+- 颜色主题和视觉调整
+- 年龄分组和板块配置
 
 ### 3.1 复制模板
 ```bash
@@ -126,6 +292,13 @@ background: #ffebee; border-left: 4px solid #f44336;
 
 ## Skill 4: 批量页面生成（高级）
 
+**适用场景**：批量迁移（5+页面）| **预计时间**：2小时设置 | **必须执行**：❌ 可选
+
+**本 Skill 包含**：
+- 批量生成脚本（待开发）
+- 自动化翻译修改
+- 大规模迁移策略
+
 ### 4.1 使用脚本
 ```bash
 node scripts/create-temp-page.js <temperature> <scene>
@@ -145,6 +318,13 @@ node scripts/create-temp-page.js 25 weather
 ---
 
 ## Skill 5: 质量验证
+
+**适用场景**：每次构建后 | **预计时间**：5分钟 | **必须执行**：✅ 是
+
+**本 Skill 包含**：
+- 自动化验证脚本
+- 手动检查清单
+- 多语言测试方法
 
 ### 5.1 自动化验证
 ```bash
@@ -286,9 +466,31 @@ grep -r "|| '" pages/*.tsx
   - temperature-template.tsx 自动生成图片路径
   - 格式: /images/equation/{celsius}-celsius-to-fahrenheit-conversion.png
 
+### 2025-02-10（301 重定向配置）
+- ✅ 38°C 页面 301 重定向配置
+  - 更新 next.config.js redirects
+  - 添加 38-c-to-f 到重定向列表
+  - 格式: `/:path(...|38-c-to-f|...).html` -> `/:path`
+- ✅ 验证重定向生效
+  - 本地测试: `curl -I http://localhost:3000/38-c-to-f.html`
+  - 返回 301 + Location: /38-c-to-f
+- ✅ 多语言自动支持
+  - /zh/38-c-to-f.html → /zh/38-c-to-f
+  - /es/38-c-to-f.html → /es/38-c-to-f
+  - ... 所有 10 种语言
+
 ---
 
 ## Skill 6: 多语言批量翻译（高级）
+
+**适用场景**：多语言翻译阶段 | **预计时间**：10种语言约8小时 | **必须执行**：✅ 是（至少英语+印地语）
+
+**本 Skill 包含**：
+- 批量翻译策略和优先级
+- AI 翻译执行流程
+- 各语言特殊注意事项
+- SEO 优化最佳实践
+- 301 重定向配置
 
 ### 6.1 批量翻译策略
 
@@ -743,11 +945,216 @@ grep 'src="[^"]*equation[^"]*"' .next/server/pages/en/38-c-to-f.html
 curl http://localhost:3000/images/equation/38-celsius-to-fahrenheit-conversion.png
 ```
 
+### 6.10 301 重定向配置（页面迁移必备）
+
+#### **A. 为什么需要 301 重定向**
+
+迁移静态 HTML 页面到 Next.js 后，需要确保：
+- ✅ **SEO 权重传递** - 旧链接的权重传递到新页面
+- ✅ **用户体验** - 访问旧链接自动跳转到新页面
+- ✅ **搜索引擎更新** - 爬虫自动更新索引到新 URL
+
+#### **B. 配置步骤**
+
+**在 `next.config.js` 中添加 redirects**：
+
+```javascript
+async redirects() {
+  return [
+    // 1. 主要页面重定向：HTML 文件 -> 干净 URL
+    {
+      source: '/:path(0-c-to-f|4-c-to-f|20-c-to-f|36-1-c-to-f|37-c-to-f|38-c-to-f|39-c-to-f|...).html',
+      destination: '/:path',
+      statusCode: 301,
+    },
+    // 2. 索引页重定向：index.html -> 父目录
+    {
+      source: '/:path(c-to-f-calculator|...)/index.html',
+      destination: '/:path',
+      statusCode: 301,
+    },
+  ];
+}
+```
+
+#### **C. 关键注意事项**
+
+**1. 模式匹配格式**：
+```javascript
+// ✅ 正确：使用括号包裹多个路径选项
+source: '/:path(page1|page2|page3).html'
+
+// ❌ 错误：正则语法不支持
+source: '/:path*.html'
+```
+
+**2. 更新已有配置**：
+```javascript
+// 找到已有的 redirects 配置，在 path 列表中添加新页面
+// 示例：添加 38-c-to-f 到已有列表
+source: '/:path(...|37-5-c-to-f|38-c-to-f|39-c-to-f|...).html'
+```
+
+**3. 多语言自动支持**：
+- Next.js i18n 会自动处理多语言前缀
+- `/zh/38-c-to-f.html` → `/zh/38-c-to-f`
+- `/es/38-c-to-f.html` → `/es/38-c-to-f`
+
+#### **D. 验证方法**
+
+```bash
+# 本地测试重定向
+curl -I http://localhost:3000/38-c-to-f.html
+
+# 预期响应：
+# HTTP/1.1 301 Moved Permanently
+# Location: /38-c-to-f
+
+# 生产环境测试
+curl -I https://ctofconverter.com/38-c-to-f.html
+```
+
+#### **E. 完整示例（next.config.js）**
+
+```javascript
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // ... 其他配置
+
+  async redirects() {
+    return [
+      // 温度页面重定向
+      {
+        source: '/:path(0-c-to-f|4-c-to-f|20-c-to-f|36-1-c-to-f|37-c-to-f|37-2-c-to-f|37-5-c-to-f|38-c-to-f|39-c-to-f|40-c-to-f|...).html',
+        destination: '/:path',
+        statusCode: 301,
+      },
+      // 功能页面重定向
+      {
+        source: '/:path(c-to-f-calculator|c-to-f-formula|...)/index.html',
+        destination: '/:path',
+        statusCode: 301,
+      },
+    ];
+  },
+};
+
+module.exports = nextConfig;
+```
+
+#### **F. 迁移检查清单**
+
+- [ ] 更新 `next.config.js` redirects 配置
+- [ ] 添加新页面路径到重定向列表
+- [ ] 本地测试重定向是否生效
+- [ ] 生产环境验证（部署后）
+- [ ] Google Search Console 检查索引状态
+
 ### 待优化
 - [ ] 批量生成脚本自动化
 - [ ] AI 翻译质量评分系统
 - [ ] 翻译记忆库建立
 - [ ] 医学术语词典扩展
+
+---
+
+## 附录 A：单页面迁移常见问题速查
+
+### Q1: 可以只迁移英语版本吗？
+**A**: 可以，但建议至少包含 Hindi（印度市场）。其他语言可后续补充。
+
+### Q2: 如何确定使用哪种颜色主题？
+**A**: 根据温度范围选择：
+| 温度范围 | 主题 | 颜色 | 图标 |
+|---------|------|------|------|
+| < 35°C | 低体温 | 蓝色 #e3f2fd | ❄️ |
+| 35-37°C | 正常体温 | 绿色 #e8f5e9 | ✅ |
+| 37-38°C | 边界/低烧 | 黄色 #fffde7 | ⚠️ |
+| 38-40°C | 发烧 | 橙色 #fff3e0 | 🌡️ |
+| > 40°C | 高烧危险 | 红色 #ffebee | 🚨 |
+
+### Q3: AI 翻译后必须人工审核吗？
+**A**: 医学术语建议审核，普通内容可信任 AI。Hindi 必须审核。
+
+### Q4: 迁移后原 HTML 文件怎么办？
+**A**: 保留在 `public/` 目录，通过 301 重定向自动跳转。不要删除！
+
+### Q5: 如何快速验证迁移成功？
+**A**: 检查清单：
+```bash
+# 1. 构建成功
+npm run build
+
+# 2. 检查英语版本
+curl http://localhost:3000/en/39-c-to-f | grep "39°C"
+
+# 3. 检查 Hindi 版本
+curl http://localhost:3000/hi/39-c-to-f | grep "बुखार"
+
+# 4. 检查 301 重定向
+curl -I http://localhost:3000/39-c-to-f.html
+# 应该返回 301 + Location: /39-c-to-f
+```
+
+### Q6: 必须保留原 HTML 的标题和描述吗？
+**A**: ✅ **是的，必须保留！** 这是为了保持 SEO 排名和搜索一致性。
+
+**为什么重要？**
+- 搜索引擎已经索引了原有的标题和描述
+- 更改会导致排名下降和流量损失
+- 用户看到的搜索结果与实际页面不一致
+
+**正确做法：**
+```bash
+# 1. 查看原 HTML 的 SEO 信息
+grep -E "<title>|<meta name=\"description\"" public/39-c-to-f.html
+
+# 2. 完全复制到 JSON 文件
+# locales/en/39-c-to-f.json
+{
+  "meta": {
+    "title": "原HTML中的完整标题",
+    "description": "原HTML中的完整描述",
+    "ogTitle": "原HTML中的完整标题",
+    "ogDescription": "原HTML中的完整描述"
+  }
+}
+```
+
+**错误示例：**
+```json
+❌ "title": "39°C to Fahrenheit - Fever Guide"  // 简化了！
+✅ "title": "39°C to Fahrenheit (102.2°F) | Fever Temperature Conversion Guide"
+```
+
+**验证方法：**
+```bash
+# 检查生成的 HTML 标题是否与原文一致
+grep "<title>" .next/server/pages/en/39-c-to-f.html
+# 应该与原 public/39-c-to-f.html 中的 title 完全一致
+```
+
+---
+
+## 附录 B：迁移决策树
+
+```
+开始迁移
+    │
+    ├─ 是否为体温相关页面（35-42°C）？
+    │   ├─ 是 → 使用 medical 场景，添加退烧药板块
+    │   └─ 否 → 使用 weather/cooking/body 场景
+    │
+    ├─ 是否需要多语言？
+    │   ├─ 是 → 翻译 10 种语言（2-3小时）
+    │   └─ 否 → 仅英语（30分钟）
+    │
+    ├─ 是否已有类似页面模板？
+    │   ├─ 是 → 复制修改（推荐）
+    │   └─ 否 → 从 36-1-c-to-f 创建
+    │
+    └─ 完成 → 配置 301 重定向 → 构建验证 → 部署
+```
 
 ---
 
