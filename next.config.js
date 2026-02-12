@@ -64,12 +64,7 @@ const nextConfig = {
         statusCode: 301,
       },
       // Note: All other static .html files (e.g., 13-c-to-f.html) in public/ will be served as-is.
-      // Trailing slash normalization (e.g., /c-to-f-formula/ → /c-to-f-formula)
-      {
-        source: '/:path(c-to-f-calculator|c-to-f-formula|celsius-to-fahrenheit-chart|fahrenheit-to-celsius|fan-oven-conversion-chart|body-temperature-chart-fever-guide|fever-temperature-chart|temperature-conversion-challenge)/',
-        destination: '/:path',
-        statusCode: 301,
-      },
+      // Note: Trailing slash normalization is handled natively by Next.js (308 redirect).
     ];
   },
 };
