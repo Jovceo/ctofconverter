@@ -12,6 +12,12 @@ export interface ContentStrategy {
         intro: string;
         description: string;
     };
+    // 🚀 SEO: Meta Overrides
+    meta?: {
+        title?: string;
+        description?: string;
+        ogDescription?: string;
+    };
     // 🏷️ 原始关键词 (用于 SEO 策略)
     keywords?: string[];
     // 🧠 动态洞察
