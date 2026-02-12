@@ -95,7 +95,7 @@ export default function FeverTemperatureChart() {
         <Layout seo={{
             title: t('meta.title'),
             description: t('meta.description'),
-            canonical: "https://ctofconverter.com/fever-temperature-chart",
+            canonical: `https://ctofconverter.com${locale === 'en' ? '' : `/${locale}`}/fever-temperature-chart`,
             ogType: "article",
             ogTitle: t('meta.ogTitle'),
             ogDescription: t('meta.ogDescription'),

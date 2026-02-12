@@ -1,0 +1,33 @@
+﻿
+> ctofconverter@1.0.0 prebuild
+> node scripts/generate-sitemap.js
+
+Generating sitemap for 27 pages across 10 locales...
+Pages found: 0-c-to-f, 100-c-to-f, 20-c-to-f, 36-1-c-to-f, 36-c-to-f, 37-2-c-to-f, 37-5-c-to-f, 37-c-to-f, 38-c-to-f, 39-c-to-f, 4-c-to-f, 40-c-to-f, 41-c-to-f, 47-c-to-f, 75-c-to-f, about-us, body-temperature-chart-fever-guide, c-to-f-calculator, c-to-f-formula, celsius-to-fahrenheit-chart, fahrenheit-to-celsius, fan-oven-conversion-chart, fever-temperature-chart, index, privacy-policy, temperature-conversion-challenge, terms-of-service
+鉁?Sitemap generated successfully at E:\github\ctofconverter\public\sitemap.xml
+
+> ctofconverter@1.0.0 build
+> next build
+
+鈻?Next.js 16.1.6 (Turbopack)
+
+  Running TypeScript ...
+  Creating an optimized production build ...
+node.exe : Turbopack build encountered 1 warnings:
+所在位置 D:\ruanjian\node\npm.ps1:29 字符: 3
++   & $NODE_EXE $NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Turbo   
+ pack build encountered 1 warnings::String) [],     R
+emoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+./_
+Module not found: Can't resolve 'styled-jsx/style.js'
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+鉁?Compiled successfully in 7.5s
+  Collecting page data using 3 workers ...

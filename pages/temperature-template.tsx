@@ -11,6 +11,7 @@ import Image from 'next/image';
 import insightsStyles from '../components/TemperatureInsights/index.module.css';
 import conversionToolStyles from '../components/ConversionTool/index.module.css';
 import practicalAppsStyles from '../components/PracticalApps/index.module.css';
+import pageStyles from '../styles/TemperatureTemplate.module.css';
 
 // 导入工具函数
 import {
@@ -25,6 +26,7 @@ import {
   analyzeTemperature,
   getTemperatureScene,
 } from '../utils/temperaturePageHelpers';
+import { getGranularContext } from '../utils/temperatureContext';
 
 import { ContentStrategy } from '../utils/contentStrategy';
 import { textSpinner } from '../utils/textSpinner';
@@ -241,30 +243,14 @@ const EditorialNote: React.FC<{ t: TFunction; celsius: number }> = ({ t, celsius
   }, [celsius, t]);
 
   return (
-    <section className="editorial-note" style={{
-      marginTop: '40px',
-      padding: '25px',
-      backgroundColor: '#f8fafc',
-      borderRadius: '12px',
-      border: '1px solid #e2e8f0',
-      fontSize: '0.95rem',
-      lineHeight: '1.6',
-      color: '#475569'
-    }}>
-      <h4 style={{
-        margin: '0 0 10px 0',
-        color: '#1e293b',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '8px',
-        fontSize: '1.1rem'
-      }}>
-        <span style={{ fontSize: '1.2rem' }}>ℹ️</span> {t('editorial.title')}
+    <section className={pageStyles.editorialNote}>
+      <h4 className={pageStyles.editorialNoteTitle}>
+        <span className={pageStyles.editorialNoteIcon}>ℹ️</span> {t('editorial.title')}
       </h4>
-      <p style={{ margin: 0 }}>
+      <p className={pageStyles.editorialNoteText}>
         {noteData.note}
       </p>
-      <p style={{ marginTop: '10px', fontSize: '0.85em', opacity: 0.8 }}>
+      <p className={pageStyles.editorialNoteSources}>
         {noteData.sources}
       </p>
     </section>
@@ -458,9 +444,9 @@ const ConversionTable: React.FC<{
         <table className="temperature-table">
           <thead>
             <tr>
-              <th>{t('common.celsiusLabel')}</th>
-              <th>{t('common.fahrenheitLabel')}</th>
-              <th>{t('common.descriptionCol')}</th>
+              <th scope="col">{t('common.celsiusLabel')}</th>
+              <th scope="col">{t('common.fahrenheitLabel')}</th>
+              <th scope="col">{t('common.descriptionCol')}</th>
             </tr>
           </thead>
           <tbody>
@@ -477,16 +463,20 @@ const ConversionTable: React.FC<{
                 );
               }
 
-              // 🚀 SEO: Proper HTML structure - use onClick for navigation
+              // 🚀 SEO: Use proper <a> tags so crawlers can discover internal links
+              const rowHref = getLocalizedLink(`/${row.celsius}-c-to-f`, locale);
               return (
-                <tr
-                  key={index}
-                  onClick={() => { if (typeof window !== 'undefined') window.location.href = getLocalizedLink(`/${row.celsius}-c-to-f`, locale); }}
-                  style={{ cursor: 'pointer' }}
-                  className="linkable-row"
-                >
-                  <td><strong>{row.celsius}°C</strong></td>
-                  <td><strong>{row.fahrenheit}°F</strong></td>
+                <tr key={index} className="linkable-row">
+                  <td>
+                    <Link href={rowHref}>
+                      <strong>{row.celsius}°C</strong>
+                    </Link>
+                  </td>
+                  <td>
+                    <Link href={rowHref}>
+                      <strong>{row.fahrenheit}°F</strong>
+                    </Link>
+                  </td>
                   <td>{t(`context.categories.${context.categoryKeys[0] || 'moderate'}`)}</td>
                 </tr>
               );
@@ -605,71 +595,32 @@ const RelatedTemperatures: React.FC<{
 
   // Single Flat Grid Render - User Layout + Polished Link Guide
   return (
-    <section className="related-conversions" style={{ marginTop: '50px', marginBottom: '40px' }}>
+    <section className={pageStyles.related}>
       {/* Centered Title Style (User Screenshot) - Cleaned up */}
-      <div style={{ textAlign: 'center', marginBottom: '35px' }}>
-        <h2 style={{
-          fontSize: '1.8rem',
-          color: '#2c3e50',
-          marginBottom: '15px',
-          fontWeight: '700',
-          display: 'inline-block',
-          position: 'relative'
-        }}>
+      <div className={pageStyles.relatedHead}>
+        <h2 className={pageStyles.relatedTitle}>
           {t('common.relatedTitle')} {celsius}°C
         </h2>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '20px' }}>
+      <div className={pageStyles.grid}>
         {allItems.map((item, idx) => {
           const isClickable = !!item.href;
 
           const CardContent = (
-            <div className="conversion-card" style={{
-              background: '#fff',
-              borderRadius: '8px',
-              padding: '20px 24px',
-              // Left border style from user screenshot - UNIFIED PRIMARY BLUE
-              borderLeft: `5px solid #3498db`,
-              boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              transition: 'all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1)',
-              position: 'relative',
-              overflow: 'hidden'
-            }}>
-              <div style={{ width: '100%', paddingRight: isClickable ? '20px' : '0' }}>
-                <div style={{
-                  fontWeight: 600,
-                  color: '#2c3e50',
-                  fontSize: '1.05rem',
-                  marginBottom: '8px',
-                  lineHeight: '1.4'
-                }}>
+            <div className={pageStyles.card}>
+              <div className={`${pageStyles.content} ${isClickable ? pageStyles.clickable : ''}`}>
+                <div className={pageStyles.cardTitle}>
                   {item.title}
                 </div>
-                <div style={{
-                  color: '#7f8c8d',
-                  fontSize: '0.9rem',
-                  fontWeight: 500
-                }}>
+                <div className={pageStyles.equation}>
                   {item.equation}
                 </div>
               </div>
 
               {/* Refined Arrow for Clickable Items (Polished) */}
               {isClickable && (
-                <div className="card-arrow" style={{
-                  position: 'absolute',
-                  top: '20px',
-                  right: '15px',
-                  color: '#3498db',
-                  opacity: 0.5,
-                  transform: 'translateX(-3px)',
-                  transition: 'opacity 0.2s, transform 0.2s'
-                }}>
+                <div className={pageStyles.arrow}>
                   <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                   </svg>
@@ -679,26 +630,14 @@ const RelatedTemperatures: React.FC<{
           );
 
           return isClickable ? (
-            <Link key={idx} href={item.href || ''} passHref legacyBehavior>
-              <a style={{ textDecoration: 'none', display: 'block' }} className="card-link">
-                {CardContent}
-              </a>
+            <Link key={idx} href={item.href || ''} className={pageStyles.link}>
+              {CardContent}
             </Link>
           ) : (
-            <div key={idx} style={{ opacity: 0.85 }}>{CardContent}</div>
+            <div key={idx} className={pageStyles.disabled}>{CardContent}</div>
           );
         })}
       </div>
-      <style jsx global>{`
-        .card-link:hover .conversion-card {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.1) !important;
-        }
-        .card-link:hover .card-arrow {
-          opacity: 1 !important;
-          transform: translateX(0) !important;
-        }
-      `}</style>
     </section>
   );
 });
@@ -717,13 +656,13 @@ const HealthAlert: React.FC<{ celsius: number; t: TFunction }> = ({ celsius, t }
   }, [celsius, t]);
 
   return (
-    <aside style={{ padding: '20px', backgroundColor: `${color}15`, borderLeft: `5px solid ${color}`, borderRadius: '8px', margin: '0 0 30px 0', display: 'flex', alignItems: 'center', gap: '15px' }} aria-label="Contextual Information">
-      <div style={{ fontSize: '2rem' }}>{icon}</div>
+    <aside className={pageStyles.healthAlert} style={{ backgroundColor: `${color}15`, borderLeft: `5px solid ${color}` }} aria-label="Contextual Information">
+      <div className={pageStyles.healthAlertIcon}>{icon}</div>
       <div>
-        <span style={{ display: 'block', margin: '0 0 5px 0', color: color, fontSize: '0.95em', fontWeight: 600, opacity: 0.9, textTransform: 'uppercase', letterSpacing: '0.5px' }}>{t('common.healthContextTitle')}</span>
-        <div style={{ margin: 0 }}>
+        <span className={pageStyles.healthAlertLabel} style={{ color }}>{t('common.healthContextTitle')}</span>
+        <div>
           <span dangerouslySetInnerHTML={{ __html: message }} /> {t('common.healthContextFooter')}
-          <p style={{ marginTop: '10px', fontSize: '0.85em', color: '#666', fontStyle: 'italic' }}>
+          <p className={pageStyles.healthAlertNote}>
             {t('common.medicalAdviceNote')}
           </p>
         </div>
@@ -746,11 +685,11 @@ const WeatherWidget: React.FC<{ celsius: number; t: TFunction }> = ({ celsius, t
   }, [celsius, t]);
 
   return (
-    <aside style={{ padding: '20px', background: 'linear-gradient(to right, #f8f9fa, #e9ecef)', borderRadius: '8px', margin: '0 0 30px 0', display: 'flex', alignItems: 'center', gap: '15px', border: '1px solid #dee2e6' }} aria-label="Contextual Information">
-      <div style={{ fontSize: '2rem' }}>{icon}</div>
+    <aside className={pageStyles.weatherWidget} aria-label="Contextual Information">
+      <div className={pageStyles.weatherWidgetIcon}>{icon}</div>
       <div>
-        <span style={{ display: 'block', margin: '0 0 5px 0', color: '#2c3e50', fontSize: '0.95em', fontWeight: 600, opacity: 0.9, textTransform: 'uppercase', letterSpacing: '0.5px' }}>{t('common.weatherFeelTitle')}</span>
-        <div style={{ margin: 0 }} dangerouslySetInnerHTML={{ __html: t('common.weatherFeelIntro', { celsius }) + " " + tip }} />
+        <span className={pageStyles.weatherWidgetLabel}>{t('common.weatherFeelTitle')}</span>
+        <div dangerouslySetInnerHTML={{ __html: t('common.weatherFeelIntro', { celsius }) + " " + tip }} />
       </div>
     </aside>
   );
@@ -788,6 +727,9 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   const { t: tTemplate, locale } = useTranslation('template');
   const { t: tPage } = useTranslation(customNamespace);
 
+  // 🚀 New: Get granular context
+  const granularContext = useMemo(() => getGranularContext(celsius), [celsius]);
+
   // 🚀 Enhanced Translation: Check page-specific namespace first, then fallback to template
   const t: TFunction = useMemo(() => (key: string, repl?: Record<string, string | number>) => {
     if (customNamespace) {
@@ -809,38 +751,61 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   }, [lastUpdated, locale]);
 
   // 2. Second: Calculate Titles & Meta (needed for Structured Data)
-  const { pageTitle, metaDescription, ogDescription } = useMemo(() => {
-    // Note: We need fahrenheit here but it's calculated in the next block.
-    // Circular dependency risk. Let's recalculate F simply here or merge blocks.
-    // Better strategy: Calculate F first.
+  const { fahrenheit, pageTitle, metaDescription, ogDescription, context } = useMemo(() => {
     // Better strategy: Calculate F first.
     const f = celsiusToFahrenheit(celsius);
     // 🚀 SEO: Calculate context early for dynamic titles
     const context = analyzeTemperature(celsius);
 
-    const rawTitle = customTitle || generatePageTitle(celsius, f, t, context);
-
     const stripHtml = (html: string) => html.replace(/<[^>]*>/g, '');
+
+    // 🚀 SEO: Page Title Logic
+    const pageTitle = stripHtml(customTitle || strategy?.meta?.title || generatePageTitle(celsius, f, t, context));
+
+    // 🚀 SEO: Meta 描述逻辑 - 尝试使用细粒度上下文
+    let metaDescription = customDescription || strategy?.meta?.description;
+    if (!metaDescription) {
+      // Enhance description with specific context if available
+      if (granularContext.key !== 'general' && granularContext.description) {
+        const baseDesc = generateMetaDescription(celsius, f, t, context);
+        metaDescription = `${baseDesc} ${granularContext.description}`;
+      } else {
+        metaDescription = generateMetaDescription(celsius, f, t, context);
+      }
+    }
+    metaDescription = stripHtml(metaDescription);
+
+    // 🚀 SEO: OG 描述逻辑
+    let ogDescription = strategy?.meta?.ogDescription;
+    if (!ogDescription) {
+      if (granularContext.key !== 'general' && granularContext.description) {
+        ogDescription = granularContext.description;
+      } else {
+        ogDescription = generateOGDescription(celsius, f, t);
+      }
+    }
+    ogDescription = stripHtml(ogDescription);
+
     return {
-      pageTitle: stripHtml(rawTitle),
-      metaDescription: stripHtml(customDescription || generateMetaDescription(celsius, f, t, context)),
-      ogDescription: stripHtml(customDescription || generateOGDescription(celsius, f, t)) // OG usually follows Meta or Title
+      fahrenheit: f,
+      pageTitle,
+      metaDescription,
+      ogDescription,
+      context
     };
-  }, [celsius, t, customTitle, customDescription]);
+  }, [celsius, t, customTitle, customDescription, strategy, granularContext]);
 
   // 3. Third: Main Data & Structured Data (depends on Date & Title)
-  const { fahrenheit, formattedFahrenheit, pageUrl, structuredData } = useMemo(() => {
-    const f = celsiusToFahrenheit(celsius);
-    const formattedF = formatTemperature(f);
+  const { formattedFahrenheit, pageUrl, structuredData } = useMemo(() => {
+    const formattedF = formatTemperature(fahrenheit);
     const url = canonicalUrl || generatePageUrl(celsius, locale);
 
     // 生成结构化数据
-    const faqData = generateFAQStructuredData(celsius, f, t, strategy.faqs);
+    const faqData = generateFAQStructuredData(celsius, fahrenheit, t, strategy.faqs);
     // 🚀 SEO Fix: Pass locale and t for localized breadcrumbs
     const breadcrumbData = generateBreadcrumbStructuredData(celsius, formattedF, locale, t);
 
     return {
-      fahrenheit: f,
       formattedFahrenheit: formattedF,
       pageUrl: url,
       structuredData: {
@@ -851,6 +816,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
           name: pageTitle,
           description: metaDescription,
           url: url,
+          inLanguage: HREFLANG_MAP[locale] || locale,
           mainEntity: {
             '@type': 'SoftwareApplication',
             name: t('structuredData.appName', { celsius, fahrenheit: formattedF }) || `${celsius}°C to °F Converter`,
@@ -870,7 +836,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
       },
 
     };
-  }, [celsius, canonicalUrl, locale, t, strategy.faqs, isoDate, pageTitle, metaDescription, customOgImage]);
+  }, [celsius, canonicalUrl, locale, t, strategy.faqs, isoDate, pageTitle, metaDescription, customOgImage, fahrenheit]);
 
   // 🚀 Calculate site origin for consistent URL generation across environments
   const siteOrigin = useMemo(() => new URL(pageUrl).origin, [pageUrl]);
@@ -894,6 +860,21 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
 
     return links;
   }, [celsius]);
+
+  // 🚀 New: Granular Analysis Box Helper
+  const renderGranularInsight = () => {
+    if (granularContext.key === 'general') return null;
+    return (
+      <section className={insightsStyles.granularInsightCard} style={{ borderLeftColor: granularContext.color }}>
+        <h3 className={insightsStyles.granularInsightTitle} style={{ color: granularContext.color }}>
+          💡 Analysis: {granularContext.label}
+        </h3>
+        <p className={insightsStyles.granularInsightText}>
+          {granularContext.description}
+        </p>
+      </section>
+    );
+  };
 
   return (
     <Layout seo={{
@@ -922,13 +903,13 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
         <header className="site-header">
           <div className="container">
             <div className="site-logo">
-              <Link href="/">
+              <Link href={getLocalizedLink('/', locale)}>
                 <span aria-hidden="true">{t('common.logoText')}</span>
                 <span className="sr-only">{t('common.logoText')}</span>
               </Link>
             </div>
             <h1>{customTitle || t('common.headerTitle', { celsius, fahrenheit: formattedFahrenheit })}</h1>
-            <div className="tagline" style={{ marginBottom: '1.5rem', color: '#666' }} dangerouslySetInnerHTML={{ __html: customDescription || strategy.text.intro || t('meta.ogDescription', { celsius, fahrenheit: formattedFahrenheit }) }} />
+            <p className={pageStyles.tagline} dangerouslySetInnerHTML={{ __html: customDescription || strategy.text.intro || t('meta.ogDescription', { celsius, fahrenheit: formattedFahrenheit }) }} />
           </div>
         </header>
 
@@ -937,22 +918,22 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
         <main id="main-content" className="container">
           <nav aria-label="Breadcrumb navigation" className="breadcrumb-nav">
             <ol className="breadcrumb">
-              <li><Link href="/">{t('breadcrumb.home')}</Link></li>
+              <li><Link href={getLocalizedLink('/', locale)}>{t('breadcrumb.home')}</Link></li>
               <li aria-current="page">{t('common.breadcrumbCurrent', { celsius })}</li>
             </ol>
           </nav>
 
           <div className="temperature-content-grid">
-            <section className="converter-tool" style={{ marginBottom: '30px' }}>
-              <h2 id="conversion-title" style={{ marginBottom: '20px', fontSize: '1.5rem', fontWeight: 600 }}>
+            <section className={pageStyles.box}>
+              <h2 id="conversion-title" className={pageStyles.boxTitle}>
                 {customResultHeader || textSpinner.getConverterTitle(celsius, fahrenheit, t)}
               </h2>
 
               {/* 🚀 SEO: Natural language intro paragraph for indexability */}
               {customIntro ? (
-                <p className="intro-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '20px', color: '#333' }} dangerouslySetInnerHTML={{ __html: customIntro }} />
+                <p className={pageStyles.introText} dangerouslySetInnerHTML={{ __html: customIntro }} />
               ) : (
-                <p className="intro-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '20px', color: '#333' }}>
+                <p className={pageStyles.introText}>
                   <span dangerouslySetInnerHTML={{ __html: t('common.introValue', { celsius, fahrenheit: formattedFahrenheit }) + " " + t('common.introConnect') }} />
                   {" "}
                   {/* Dynamic Intro Text Part with Embedded Natural Link */}
@@ -974,7 +955,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
                           // Odd indices are the matches (the text inside tags)
                           if (i % 2 === 1) {
                             return (
-                              <Link key={i} href={linkUrl} style={{ textDecoration: 'underline', color: '#3498db', fontWeight: 500 }}>
+                              <Link key={i} href={linkUrl} className={pageStyles.introLink}>
                                 {part}
                               </Link>
                             );
@@ -991,16 +972,17 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
               <EnhancedConverter initialCelsius={celsius} t={t} />
             </section>
 
+            {/* 🚀 New: Granular Context Insight (Disabled per user request) */}
+            {/* {renderGranularInsight()} */}
+
             {strategy.modules.showConversionGuide !== false && <DetailedConversionGuide celsius={celsius} fahrenheit={fahrenheit} t={t} />}
 
             {strategy.insights && <DynamicInsightsSection insights={strategy.insights} />}
 
-            <div className="context-widgets" style={{ display: 'grid', gap: '20px', margin: '20px 0' }}>
+            <div className={pageStyles.contextWidgets}>
               {strategy.modules.showHealthAlert && <HealthAlert celsius={celsius} t={t} />}
               {strategy.modules.showHumanFeel && <WeatherWidget celsius={celsius} t={t} />}
             </div>
-
-
 
             {strategy.modules.showPracticalApps !== false && <PracticalApplications celsius={celsius} fahrenheit={fahrenheit} t={t} />}
 
@@ -1023,4 +1005,3 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
 TemperaturePage.displayName = 'TemperaturePage';
 
 export default TemperaturePage;
-

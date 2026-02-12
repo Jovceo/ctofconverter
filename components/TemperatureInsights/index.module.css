@@ -55,3 +55,25 @@
     margin: 0;
     line-height: 1.6;
 }
+
+.granularInsightCard {
+    border-left-width: 4px;
+    border-left-style: solid;
+    margin-bottom: 2rem;
+    padding: 20px;
+    background-color: #f8f9fa;
+    /* Default light background */
+    border-radius: 8px;
+}
+
+.granularInsightTitle {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.granularInsightText {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}

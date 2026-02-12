@@ -4,6 +4,8 @@ const path = require('path');
 const SITE_URL = 'https://ctofconverter.com';
 const LOCALES = ['en', 'zh', 'es', 'hi', 'ar', 'ja', 'fr', 'de', 'id', 'pt-br'];
 const EXCLUDED = ['_app.tsx', '_document.tsx', '_error.tsx', '404.tsx', 'sitemap.xml.tsx', 'temperature-template.tsx', 'api'];
+// Pages that should only appear in English in the sitemap (low SEO value for non-English)
+const NON_EN_EXCLUDED = ['privacy-policy', 'terms-of-service', 'about-us'];
 
 const pagesDir = path.join(__dirname, '../pages');
 const publicDir = path.join(__dirname, '../public');
@@ -64,6 +66,9 @@ pages.filter(page => page !== 'index').forEach(page => {
 
     // Loop Locales
     LOCALES.forEach(locale => {
+        // Skip non-English versions of low SEO value pages
+        if (locale !== 'en' && NON_EN_EXCLUDED.includes(pageSlug)) return;
+
         // Construct path: /locale/pageSlug
         // If locale is 'en', prefix is empty.
         // If pageSlug is empty (index), just locale prefix.

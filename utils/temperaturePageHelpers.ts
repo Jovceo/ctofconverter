@@ -363,13 +363,15 @@ interface SceneConfig {
   anchors: { val: number; labelKey?: string }[]; // Benchmarks with semantic labels
   reverseRoundTo?: number; // Round Fahrenheit to nearest X
   intentType?: string;
+  safety_tips?: string; // e.g. "Risk of burns"
+  practical_use?: string; // e.g. "Ideal for sous-vide"
 }
 
 /**
  * 全局温度场景配置表
  * SYSTEM CORE: 定义了整个网站的温度世界观
  */
-const SCENE_CONFIGS: Record<SceneType, SceneConfig> = {
+export const SCENE_CONFIGS: Record<SceneType, SceneConfig> = {
   // 1. BODY: 32.0 <= T <= 42.9 (Medical Context Dominates)
   // Fix: Extended slightly to cover 42.x, but explicitly stop before 43.
   // 43 is technically survivable short term but usually transitions to "HOT WATER" in common perception unless specifically medical.
@@ -387,7 +389,9 @@ const SCENE_CONFIGS: Record<SceneType, SceneConfig> = {
       { val: 42.0, labelKey: 'criticalLimit' }   // 42 is boundary
     ],
     reverseRoundTo: 1, // 98, 99...
-    intentType: 'medical'
+    intentType: 'medical',
+    safety_tips: "Monitor closely. High fever requires hydration and rest. Seek medical attention if persistent.",
+    practical_use: "This range is critical for human health monitoring."
   },
   // 2. WEATHER: -50.0 <= T < 32.0
   // Refined: Focused on Human-scale weather (-20 to 40), removed excessive noise
@@ -403,7 +407,9 @@ const SCENE_CONFIGS: Record<SceneType, SceneConfig> = {
       { val: 30, labelKey: 'hotWeather' }
     ],
     reverseRoundTo: 10, // 0, 10, 20...
-    intentType: 'weather'
+    intentType: 'weather',
+    safety_tips: "Dress appropriately. Prolonged exposure to extremes in this range can cause hypothermia or heat stroke.",
+    practical_use: "Essential for planning outdoor activities and clothing choices."
   },
   // 3. WATER: 43.0 <= T < 100.0
   // Fix: Starts at 43.0. 
@@ -427,7 +433,9 @@ const SCENE_CONFIGS: Record<SceneType, SceneConfig> = {
       { val: 100, labelKey: 'boilingPoint' }
     ],
     reverseRoundTo: 10,
-    intentType: 'liquid'
+    intentType: 'liquid',
+    safety_tips: "CAUTION: Risk of scalding! Water at this temperature can cause near-instant burns.",
+    practical_use: "Used for various cooking methods like sous-vide, poaching, or brewing hot beverages."
   },
   // 4. OVEN: 100.0 <= T <= 300.0
   OVEN: {
@@ -441,7 +449,9 @@ const SCENE_CONFIGS: Record<SceneType, SceneConfig> = {
       { val: 220, labelKey: 'veryHot' }
     ],
     reverseRoundTo: 25, // 325, 350, 375
-    intentType: 'cooking'
+    intentType: 'cooking',
+    safety_tips: "Extremely hot! Use oven mitts. Avoid direct contact with surfaces.",
+    practical_use: "Common range for baking, roasting, and broiling foods."
   },
   // 5a. EXTREME_COLD
   EXTREME_COLD: {
@@ -453,22 +463,26 @@ const SCENE_CONFIGS: Record<SceneType, SceneConfig> = {
       { val: -78.5, labelKey: 'dryIce' }
     ],
     reverseRoundTo: 50,
-    intentType: 'science'
+    intentType: 'science',
+    safety_tips: "LETHAL COLD. Immediate freezing of biological tissue. Requires specialized protective gear.",
+    practical_use: "Found in cryogenics, deep space, or industrial freezing processes."
   },
   // 5b. EXTREME_HOT
   EXTREME_HOT: {
     name: 'EXTREME_HOT',
     range: [300.01, Number.MAX_VALUE],
-    precisionSteps: [-50, 50],
+    precisionSteps: [100, 500],
     anchors: [
-      { val: 1064, labelKey: 'goldMelting' }
+      { val: 660, labelKey: 'aluminumMelting' },
+      { val: 1064, labelKey: 'goldMelting' },
+      { val: 1538, labelKey: 'ironMelting' }
     ],
     reverseRoundTo: 100,
-    intentType: 'industrial'
+    intentType: 'industry',
+    safety_tips: "DANGER: Incineration hazard. Most materials melt or burn instantly.",
+    practical_use: "Industrial metallurgy, volcanic lava, or stellar environments."
   }
-};
-
-/**
+};/**
  * 获取温度对应的场景配置
  */
 export function getTemperatureScene(celsius: number): SceneConfig {
