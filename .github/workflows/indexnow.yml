@@ -1,44 +1,32 @@
-name: Submit URLs to IndexNow
+name: IndexNow Submit
+
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-  submit-to-indexnow:
+  indexnow:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      # 等待 Vercel 部署完成（通常 1-2 分钟）
+      - name: Wait for Vercel deployment
+        run: sleep 120
 
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v44
-        with:
-          # 使用新版参数替代 since_last_commit
-          since_last_remote_commit: true
-          separator: " "
-
-      - name: Process HTML files
-        id: process-files
+      - name: Submit URLs to IndexNow
+        env:
+          INDEXNOW_SECRET: ${{ secrets.INDEXNOW_SECRET }}
         run: |
-          # 处理文件列表，生成正确格式的JSON
-          CHANGED_HTML_FILES=$(echo '${{ steps.changed-files.outputs.all_changed_files }}' | 
-            jq -R 'split(" ") | 
-                  map(select(. | endswith(".html"))) | 
-                  map("https://ctofconverter.com/" + .)' |
-            jq -c '.')  # 生成紧凑型JSON
+          # 使用默认 secret 如果 GitHub Secrets 未设置
+          SECRET="${INDEXNOW_SECRET:-ctof-indexnow-2026}"
           
-          echo "urls=${CHANGED_HTML_FILES}" >> $GITHUB_OUTPUT
-          echo "Processed files: ${CHANGED_HTML_FILES}"
-
-      - name: Submit to IndexNow
-        if: ${{ steps.process-files.outputs.urls != '[]' }}
-        run: |
-          echo "Submitting: ${{ steps.process-files.outputs.urls }}"
-          curl -X POST "https://api.indexnow.org/indexnow" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "host": "https://ctofconverter.com",
-              "key": "4adb6fe5710d4581aecf85769a317c7d",
-              "urlList": ${{ steps.process-files.outputs.urls }}
-            }'
+          echo "Submitting URLs to IndexNow via API route..."
+          RESPONSE=$(curl -s -X POST "https://ctofconverter.com/api/indexnow?secret=${SECRET}")
+          echo "$RESPONSE"
+          
+          # 检查是否成功
+          SUCCESS=$(echo "$RESPONSE" | grep -o '"success":true')
+          if [ -z "$SUCCESS" ]; then
+            echo "⚠️ IndexNow submission may have failed, but this is non-blocking"
+          else
+            echo "✅ IndexNow submission successful!"
+          fi

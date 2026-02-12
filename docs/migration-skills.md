@@ -387,7 +387,7 @@ grep -o "बुखार\|Fever" .next/server/pages/hi/38-c-to-f.html
 ### 阶段 5: 部署
 - [ ] 保留原 HTML 文件（如需要）
 - [ ] 更新 sitemap
-- [ ] 提交搜索引擎
+- [ ] 提交搜索引擎（IndexNow 已通过 GitHub Actions 自动提交，无需手动操作）
 - [ ] 监控流量和排名
 
 ---
@@ -1177,5 +1177,5 @@ grep "<title>" .next/server/pages/en/39-c-to-f.html
 ---
 
 **文档版本**: 1.0
-**最后更新**: 2025-02-10
+**最后更新**: 2026-02-12
 **维护者**: Migration Team
