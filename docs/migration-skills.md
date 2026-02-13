@@ -159,6 +159,73 @@ node scripts/validate-translations.js
 
 **成功标准**: 0 硬编码英文，0 错误
 
+### 1.5 迁移后硬编码检查清单（关键）
+
+**⚠️ 每次迁移完成后必须执行以下检查：**
+
+#### **检查点 1: Replacements 对象**
+```typescript
+// ❌ 错误：硬编码温度值
+const replacements = useMemo(() => ({
+    fahrenheit: formattedF,
+    celsius: '36.3',           // ❌ 硬编码
+    celsiusNoDecimal: '36'     // ❌ 硬编码
+}), [formattedF]);
+
+// ✅ 正确：使用变量
+const replacements = useMemo(() => ({
+    fahrenheit: formattedF,
+    celsius: celsius.toString(),           // ✅ 使用变量
+    celsiusNoDecimal: Math.floor(celsius).toString()  // ✅ 动态计算
+}), [formattedF, celsius]);
+```
+
+#### **检查点 2: HTML 内容中的硬编码温度**
+```typescript
+// ❌ 错误：硬编码在模板字符串中
+<p><strong>${safeTranslate(...)}</strong><br>36.3°C = ${formattedF}°F</p>
+
+// ✅ 正确：使用 replacements 对象
+<p><strong>${safeTranslate(...)}</strong><br>${replacePlaceholders('{celsius}°C = {fahrenheit}°F', replacements)}</p>
+```
+
+#### **检查点 3: 条件判断中的硬编码**
+```typescript
+// ❌ 错误：硬编码字符串比较
+<tr ${row.celsius === '36.3°C' ? 'style="background-color: #e8f5e8;"' : ''}>
+
+// ✅ 正确：使用变量比较
+<tr ${row.celsius === celsius + '°C' ? 'style="background-color: #e8f5e8;"' : ''}>
+```
+
+#### **检查点 4: Fallback 表格数据**
+```typescript
+// ❌ 错误：硬编码 fallback 数据
+const fallbackRows = [
+    { celsius: '35.5°C', fahrenheit: '95.9°F', assessment: 'Low normal...' },
+    { celsius: '36.3°C', fahrenheit: '97.34°F', assessment: 'Normal body temperature' },
+];
+
+// ✅ 正确：从翻译文件获取或使用计算值
+const fallbackRows = pageT.feverScale?.rows || [];
+```
+
+#### **自动化检查脚本**
+```bash
+# 检查硬编码温度值
+grep -n "'36\.[0-9]'" pages/36-*-c-to-f.tsx
+
+# 检查硬编码华氏度
+grep -n "'97\.[0-9]'" pages/36-*-c-to-f.tsx
+
+# 检查未使用变量的比较
+grep -n "=== '.*°C'" pages/36-*-c-to-f.tsx
+
+# 检查结果应该为空，否则需要修复
+```
+
+**成功标准**: 0 硬编码温度值，所有动态值使用变量
+
 ---
 
 ## Skill 2: 翻译文件创建
@@ -335,15 +402,147 @@ node scripts/validate-translations.js
 node scripts/validate-translations.js --page 38-c-to-f
 ```
 
-### 5.2 手动检查清单
-- [ ] 页面标题正确（SEO）
-- [ ] 温度转换计算正确
-- [ ] 无英文硬编码残留
-- [ ] 所有占位符 {fahrenheit} 保留
-- [ ] 移动端响应式正常
-- [ ] 语言切换正常
-- [ ] FAQ 完整显示
-- [ ] 温度表格包含所有行
+### 5.2 完整检查清单（Critical）
+
+**⚠️ 警告：以下问题在过去迁移中多次出现，务必逐一检查**
+
+#### **阶段1：页面组件代码检查**
+
+```bash
+# 1.1 检查硬编码温度值（除const celsius外）
+grep -n "'36\.[0-9]''\|'37\.[0-9]''\|'38\.[0-9]''\|'35\.[0-9]'" pages/PAGE-c-to-f.tsx | grep -v "const celsius"
+# ❌ 错误示例：celsius: '36.1'
+# ✅ 正确：celsius: celsius.toString()
+
+# 1.2 检查硬编码华氏度
+grep -n "'9[0-9]\.[0-9]''\|'10[0-9]\.[0-9]'" pages/PAGE-c-to-f.tsx
+# ❌ 错误示例：'97.34°F'
+# ✅ 正确：应使用 formattedF + '°F' 或 {fahrenheit} 占位符
+
+# 1.3 检查硬编码字符串比较
+grep -n "=== '.*°C'\|=== '36.*°C'\|=== '37.*°C'" pages/PAGE-c-to-f.tsx
+# ❌ 错误示例：row.celsius === '36.3°C'
+# ✅ 正确：row.celsius === celsius + '°C'
+
+# 1.4 检查fallback表格硬编码
+sed -n '/pageT\.feverScale.*rows/,/join/p' pages/PAGE-c-to-f.tsx | grep -E "35\.5°C|36\.5°C|37\.0°C"
+# ❌ 错误：fallback表格中有硬编码温度值
+# ✅ 正确：删除fallback表格，或确保所有值来自翻译文件
+```
+
+**代码结构检查：**
+- [ ] **组件名与文件名匹配**：`function Temperature36_3C` 对应 `36-3-c-to-f.tsx`
+- [ ] **replacements对象使用变量**：`celsius: celsius.toString()`，不是 `'36.3'`
+- [ ] **所有HTML中的温度使用replacePlaceholders**：`{celsius}°C = {fahrenheit}°F`
+- [ ] **表格比较使用变量**：`celsius + '°C'`，不是硬编码字符串
+- [ ] **删除所有fallback硬编码**：fallback表格应为空字符串 `''` 或删除
+- [ ] **replacePlaceholders传递完整replacements**：包含 `celsius` 和 `fahrenheit`
+- [ ] **无console.log/debugger残留**
+- [ ] **TypeScript接口定义正确**：数组属性标记为可选 `points?: string[]`
+
+#### **阶段2：翻译文件完整性检查**
+
+```bash
+# 2.1 检查所有必需键是否存在
+node -e "
+const f = require('./locales/en/PAGE-c-to-f.json');
+const checks = {
+  'meta.title': !!f.meta?.title,
+  'meta.description': !!f.meta?.description,
+  'bodyTempRanges.ranges.adult': !!f.bodyTempRanges?.ranges?.adult,
+  'bodyTempRanges.ranges.baby': !!f.bodyTempRanges?.ranges?.baby,
+  'bodyTempRanges.ranges.underArm': !!f.bodyTempRanges?.ranges?.underArm,
+  'bodyTempRanges.ranges.normal': !!f.bodyTempRanges?.ranges?.normal,
+  'measurementMethods.oral.title': !!f.measurementMethods?.oral?.title,
+  'measurementMethods.underArm.title': !!f.measurementMethods?.underArm?.title,
+  'measurementMethods.ear.title': !!f.measurementMethods?.ear?.title,
+  'measurementMethods.rectal.title': !!f.measurementMethods?.rectal?.title,
+  'ageGroups.newborn.points': !!f.ageGroups?.newborn?.points,
+  'ageGroups.children.points': !!f.ageGroups?.children?.points,
+  'ageGroups.adults.points': !!f.ageGroups?.adults?.points,
+  'feverScale.rows': !!f.feverScale?.rows,
+  'faq.q1': !!f.faq?.q1
+};
+Object.entries(checks).forEach(([k, v]) => console.log(v ? '✅' : '❌', k));
+"
+# 所有项应为✅，如有❌需补充翻译
+```
+
+**翻译键完整性检查：**
+- [ ] **meta**: title, description, ogTitle, ogDescription
+- [ ] **bodyTempRanges.ranges**: adult, baby, underArm, normal
+- [ ] **measurementMethods.XXX**: title（oral, underArm, ear, rectal）
+- [ ] **ageGroups.XXX.points**: 数组已定义（newborn, children, adults）
+- [ ] **feverScale.rows**: 至少包含当前温度的行数据
+- [ ] **faq**: q1-q6全部存在
+
+#### **阶段3：构建后验证**
+
+```bash
+# 3.1 检查翻译失败占位符
+grep -o '\[en:[^]]*\]' .next/server/pages/en/PAGE-c-to-f.html | sort | uniq -c
+# 输出必须为空！任何输出都是翻译失败的标志
+
+# 3.2 检查硬编码温度残留
+grep -o "36\.3°C\|97\.34°F" .next/server/pages/en/PAGE-c-to-f.html | head -5
+# 如果是fallback中的，需要修复；如果是FAQ问题中的，可以保留
+
+# 3.3 验证Schema.org结构化数据
+node -e "
+const html = require('fs').readFileSync('.next/server/pages/en/PAGE-c-to-f.html', 'utf8');
+const schemas = html.match(/<script type=\"application\/ld\+json\"[^>]*>([\s\S]*?)<\/script>/g);
+console.log('Found schemas:', schemas ? schemas.length : 0);
+// 应有3个：WebPage, FAQPage, BreadcrumbList
+"
+
+# 3.4 验证hreflang标签
+grep -c 'hrefLang=' .next/server/pages/en/PAGE-c-to-f.html
+# 应为10（包含x-default）
+```
+
+**构建验证清单：**
+- [ ] **无 [en:xxx] 失败占位符**
+- [ ] **无硬编码温度值残留（除FAQ问题外）**
+- [ ] **Schema.org结构化数据完整**（3个schema）
+- [ ] **所有10种语言的hreflang标签存在**
+- [ ] **OG标签完整**（title, description, image, url）
+- [ ] **Canonical URL正确**
+- [ ] **移动端响应式正常**（无横向滚动条）
+
+#### **阶段4：功能验证**
+
+```bash
+# 4.1 温度转换计算正确
+curl -s http://localhost:3000/en/PAGE-c-to-f | grep -o "36\.3.*°C.*97\.34.*°F" | head -1
+# 应显示转换结果
+
+# 4.2 语言切换正常
+curl -s http://localhost:3000/hi/PAGE-c-to-f | grep -o 'वयस्क\|बगल' | head -2
+# 应显示Hindi翻译
+
+# 4.3 301重定向配置
+grep "PAGE-c-to-f" next.config.js
+# 应在redirects列表中
+```
+
+**功能检查：**
+- [ ] **温度转换计算正确**
+- [ ] **语言切换正常**（10种语言）
+- [ ] **301重定向配置**（next.config.js）
+- [ ] **图片生成正常**（/images/equation/）
+- [ ] **FAQ折叠功能正常**
+- [ ] **复制按钮功能正常**
+
+### 5.3 常见错误速查表
+
+| 错误类型 | 症状 | 修复方法 |
+|---------|------|---------|
+| 硬编码温度 | 代码中出现 `'36.3'` | 使用 `celsius.toString()` |
+| 组件名不匹配 | 函数名与文件名不一致 | 统一命名为 `TemperatureXX_XC` |
+| 翻译缺失 | HTML显示 `[en:bodyTempRanges.ranges.adult]` | 补充翻译文件中的缺失键 |
+| fallback表格硬编码 | fallback中有 `35.5°C` | 删除fallback表格或从翻译读取 |
+| replacePlaceholders不完整 | 只传递了 `{fahrenheit}` | 添加 `celsius: celsius.toString()` |
+| TypeScript类型错误 | `string | undefined` 错误 | 添加 `|| ''` 空值处理 |
 
 ### 5.3 多语言测试
 ```bash
