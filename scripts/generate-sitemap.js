@@ -2,168 +2,304 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+const startTime = Date.now();
+
 const SITE_URL = 'https://ctofconverter.com';
 const LOCALES = ['en', 'zh', 'es', 'hi', 'ar', 'ja', 'fr', 'de', 'id', 'pt-br'];
 const EXCLUDED = ['_app.tsx', '_document.tsx', '_error.tsx', '404.tsx', 'sitemap.xml.tsx', 'temperature-template.tsx', 'api'];
-// Pages that should only appear in English in the sitemap (low SEO value for non-English)
 const NON_EN_EXCLUDED = ['privacy-policy', 'terms-of-service', 'about-us'];
 
-const pagesDir = path.join(__dirname, '../pages');
-const publicDir = path.join(__dirname, '../public');
+// 项目上线日期 — 作为 lastmod 的兜底值
+const PROJECT_LAUNCH_DATE = '2025-10-19';
 
-// 缓存：文件路径 → Git 最后修改日期
-const gitDateCache = {};
+// ============================================================
+// 🎯 SEO 战略：只在 sitemap 中收录高价值页面
+//    其他温度页让搜索引擎通过内链自然发现
+// ============================================================
+// 高价值温度页 — 有真实搜索需求的页面：
+//   • 医学体温: 36, 36.1, 36.3, 37, 37.2, 37.5, 38, 39, 41 (发烧判断)
+//   • 关键温度: 0 (冰点), 4 (冰箱), 20 (室温), 40 (高热), 100 (沸点)
+//   • 常用: 47, 75 (烹饪)
+const HIGH_VALUE_TEMP_PAGES = new Set([
+    '0-c-to-f',     // 冰点
+    '4-c-to-f',     // 冰箱温度
+    '20-c-to-f',    // 室温
+    '36-c-to-f',    // 正常体温下限
+    '36-1-c-to-f',  // 正常体温
+    '36-3-c-to-f',  // 正常体温
+    '37-c-to-f',    // 正常体温上限
+    '37-2-c-to-f',  // 低烧临界
+    '37-5-c-to-f',  // 低烧
+    '38-c-to-f',    // 发烧
+    '39-c-to-f',    // 高烧
+    '40-c-to-f',    // 高热
+    '41-c-to-f',    // 危险高热
+    '47-c-to-f',    // 烹饪相关
+    '75-c-to-f',    // 烹饪安全温度
+    '100-c-to-f',   // 沸点
+]);
+
+const pagesDir = path.join(__dirname, '../pages');
+const localesDir = path.join(__dirname, '../locales');
+const publicDir = path.join(__dirname, '../public');
+const publicLocalesDir = path.join(publicDir, 'locales');
+const rootDir = path.join(__dirname, '..');
+
+// ============================================================
+// 1. 性能优化：批量获取所有文件的 Git 最后修改时间
+// ============================================================
+const gitDateMap = {};
+
+function buildGitDateMap() {
+    try {
+        // git log 输出是从新到旧，!gitDateMap[x] 保留第一次出现 = 最新日期
+        const output = execSync(
+            'git log --format="%aI" --name-only --diff-filter=ACMR HEAD',
+            { encoding: 'utf-8', cwd: rootDir, maxBuffer: 10 * 1024 * 1024 }
+        );
+
+        let currentDate = '';
+        for (const line of output.split('\n')) {
+            const trimmed = line.trim();
+            if (!trimmed) continue;
+
+            if (/^\d{4}-\d{2}-\d{2}T/.test(trimmed)) {
+                currentDate = trimmed.split('T')[0];
+            } else if (currentDate && !gitDateMap[trimmed]) {
+                gitDateMap[trimmed] = currentDate;
+            }
+        }
+
+        console.log(`📋 Loaded Git dates for ${Object.keys(gitDateMap).length} files`);
+    } catch (e) {
+        console.warn('⚠️ Failed to build Git date map, falling back to file mtime:', e.message);
+    }
+}
+
+buildGitDateMap();
 
 /**
- * 获取文件的 Git 最后修改日期（YYYY-MM-DD）
- * 优先使用 Git log，如果 Git 不可用则使用文件系统的 mtime
+ * 获取文件的最后修改日期
  */
 function getLastModified(filePath) {
-    if (gitDateCache[filePath]) return gitDateCache[filePath];
+    const relativePath = path.relative(rootDir, filePath).replace(/\\/g, '/');
 
-    try {
-        // 用 git log 获取该文件最后一次真正被修改的日期
-        const gitDate = execSync(
-            `git log -1 --format=%aI -- "${filePath}"`,
-            { encoding: 'utf-8', cwd: path.join(__dirname, '..') }
-        ).trim();
-
-        if (gitDate) {
-            const date = gitDate.split('T')[0];
-            gitDateCache[filePath] = date;
-            return date;
-        }
-    } catch (e) {
-        // Git 不可用时静默降级
+    if (gitDateMap[relativePath]) {
+        return gitDateMap[relativePath];
     }
 
-    // 降级：使用文件系统的修改时间
     try {
         const stat = fs.statSync(filePath);
-        const date = stat.mtime.toISOString().split('T')[0];
-        gitDateCache[filePath] = date;
-        return date;
+        return stat.mtime.toISOString().split('T')[0];
     } catch (e) {
-        // 最终兜底：使用今天的日期
-        const date = new Date().toISOString().split('T')[0];
-        gitDateCache[filePath] = date;
-        return date;
+        return PROJECT_LAUNCH_DATE;
     }
 }
 
 /**
- * 获取一个页面的 lastmod 日期
- * 综合考虑页面 TSX 文件和所有相关 locale JSON 文件的最新修改时间
+ * 获取页面的 lastmod 日期
  */
 function getPageLastMod(pageSlug, locale) {
     const candidates = [];
 
-    // 1. 页面 TSX 文件
     const tsxName = pageSlug === '' ? 'index.tsx' : `${pageSlug}.tsx`;
     const tsxPath = path.join(pagesDir, tsxName);
-    if (fs.existsSync(tsxPath)) {
-        candidates.push(getLastModified(tsxPath));
-    }
+    if (fs.existsSync(tsxPath)) candidates.push(getLastModified(tsxPath));
 
-    // 2. locale JSON 文件（locales/ 目录）
     const jsonName = pageSlug === '' ? 'home.json' : `${pageSlug}.json`;
-    const localePath = path.join(__dirname, '..', 'locales', locale, jsonName);
-    if (fs.existsSync(localePath)) {
-        candidates.push(getLastModified(localePath));
-    }
+    const localePath = path.join(localesDir, locale, jsonName);
+    if (fs.existsSync(localePath)) candidates.push(getLastModified(localePath));
 
-    // 3. public/locales/ 目录的 JSON（某些页面用这个路径）
-    const publicLocalePath = path.join(publicDir, 'locales', locale, jsonName);
-    if (fs.existsSync(publicLocalePath)) {
-        candidates.push(getLastModified(publicLocalePath));
-    }
+    const publicLocalePath = path.join(publicLocalesDir, locale, jsonName);
+    if (fs.existsSync(publicLocalePath)) candidates.push(getLastModified(publicLocalePath));
 
-    // 取最新的日期
-    if (candidates.length > 0) {
-        return candidates.sort().reverse()[0];
-    }
-
-    // 兜底
-    return new Date().toISOString().split('T')[0];
+    return candidates.length > 0
+        ? candidates.sort().reverse()[0]
+        : PROJECT_LAUNCH_DATE;
 }
 
+// ============================================================
+// 2. XML 工具函数
+// ============================================================
+function escapeXml(str) {
+    return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&apos;');
+}
+
+function toHreflang(locale) {
+    // 特殊映射：更精准的 BCP 47 标签
+    const HREFLANG_MAP = {
+        'zh': 'zh-Hans',       // 简体中文
+        'pt-br': 'pt-BR',     // 巴西葡语
+    };
+    if (HREFLANG_MAP[locale]) return HREFLANG_MAP[locale];
+    if (locale.includes('-')) {
+        const [lang, region] = locale.split('-');
+        return `${lang}-${region.toUpperCase()}`;
+    }
+    return locale;
+}
+
+function buildUrl(locale, pageSlug) {
+    const parts = [];
+    if (locale !== 'en') parts.push(locale);
+    if (pageSlug) parts.push(pageSlug);
+    return parts.length > 0 ? `${SITE_URL}/${parts.join('/')}` : SITE_URL;
+}
+
+/**
+ * 构建 URL 条目 — 不再包含 changefreq 和 priority
+ * Google 官方已声明忽略这两个字段
+ */
+function createUrlEntry(loc, lastmod, hreflangLinks) {
+    const lines = [
+        '  <url>',
+        `    <loc>${loc}</loc>`,
+        `    <lastmod>${lastmod}</lastmod>`,
+        ...hreflangLinks,
+        '  </url>'
+    ];
+    return lines.join('\n');
+}
+
+// ============================================================
+// 3. 扫描页面 + 高价值过滤
+// ============================================================
 function getAllPages() {
     try {
         const files = fs.readdirSync(pagesDir);
-        return files.filter(file => {
+        const allPages = files.filter(file => {
             const filePath = path.join(pagesDir, file);
             const stat = fs.statSync(filePath);
-            return stat.isFile() && file.endsWith('.tsx') && !EXCLUDED.includes(file);
+            return stat.isFile()
+                && file.endsWith('.tsx')
+                && !EXCLUDED.includes(file)
+                && !file.startsWith('[');
         }).map(file => file.replace('.tsx', ''));
+
+        // 过滤：温度页只保留高价值的
+        const filtered = allPages.filter(page => {
+            // 非温度页（首页、工具页、关于页等）全部保留
+            if (!page.match(/^\d+(-\d+)?-c-to-f$/)) return true;
+            // 温度页只保留高价值列表中的
+            return HIGH_VALUE_TEMP_PAGES.has(page);
+        });
+
+        const excluded = allPages.length - filtered.length;
+        if (excluded > 0) {
+            console.log(`🎯 Strategy: ${excluded} low-value temp pages excluded from sitemap`);
+        }
+
+        return filtered;
     } catch (e) {
         console.error('Error reading pages directory:', e);
         return [];
     }
 }
 
-const pages = getAllPages();
-let urlSet = '';
-
-// Add URL helper
-function addUrl(urlPath, priority, lastmod) {
-    // Normalize path: ensure it starts with / but not //
-    const cleanPath = urlPath.startsWith('/') ? urlPath : `/${urlPath}`;
-
-    urlSet += `
-  <url>
-    <loc>${SITE_URL}${cleanPath === '/' ? '' : cleanPath}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${priority}</priority>
-  </url>`;
+function getAvailableLocales(pageSlug) {
+    if (NON_EN_EXCLUDED.includes(pageSlug)) return ['en'];
+    return LOCALES;
 }
 
+// ============================================================
+// 4. 生成 sitemap
+// ============================================================
+const pages = getAllPages();
+const urlEntries = [];
+
 console.log(`Generating sitemap for ${pages.length} pages across ${LOCALES.length} locales...`);
-console.log('Pages found:', pages.join(', '));
 
-// Add homepage first (force include to prevent missing)
-LOCALES.forEach(locale => {
-    const homePath = locale === 'en' ? '/' : `/${locale}`;
-    const lastmod = getPageLastMod('', locale);
-    addUrl(homePath, '1.0', lastmod);
-});
-
-// Generate other pages (exclude index to avoid duplication)
-pages.filter(page => page !== 'index').forEach(page => {
-    // Determine priority
-    let priority = '0.8';
-    if (page === 'index') priority = '1.0';
-    else if (page.includes('c-to-f') || page.includes('chart')) priority = '0.9';
-
-    // Base Name (empty for index)
+pages.forEach(page => {
     const pageSlug = page === 'index' ? '' : page;
+    const availableLocales = getAvailableLocales(pageSlug);
 
-    // Loop Locales
-    LOCALES.forEach(locale => {
-        // Skip non-English versions of low SEO value pages
-        if (locale !== 'en' && NON_EN_EXCLUDED.includes(pageSlug)) return;
-
-        // Construct path: /locale/pageSlug
-        let pathParts = [];
-        if (locale !== 'en') pathParts.push(locale);
-        if (pageSlug) pathParts.push(pageSlug);
-
-        const finalPath = '/' + pathParts.join('/');
+    availableLocales.forEach(locale => {
+        const loc = escapeXml(buildUrl(locale, pageSlug));
         const lastmod = getPageLastMod(pageSlug, locale);
 
-        addUrl(finalPath, priority, lastmod);
+        // 构建 hreflang 链接
+        const hreflangLinks = [];
+        if (availableLocales.length > 1) {
+            availableLocales.forEach(altLocale => {
+                const altLoc = escapeXml(buildUrl(altLocale, pageSlug));
+                const hreflang = toHreflang(altLocale);
+                hreflangLinks.push(`    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${altLoc}"/>`);
+            });
+            const defaultLoc = escapeXml(buildUrl('en', pageSlug));
+            hreflangLinks.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${defaultLoc}"/>`);
+        }
+
+        urlEntries.push(createUrlEntry(loc, lastmod, hreflangLinks));
     });
 });
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urlSet}
-</urlset>`;
+// ============================================================
+// 5. 输出 XML
+// ============================================================
+const sitemap = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset',
+    '  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
+    '  xmlns:xhtml="http://www.w3.org/1999/xhtml"',
+    '>',
+    urlEntries.join('\n'),
+    '</urlset>'
+].join('\n');
 
-// Ensure public dir exists
 if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir);
 }
 
 fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
-console.log(`✅ Sitemap generated successfully at ${path.join(publicDir, 'sitemap.xml')}`);
+
+// ============================================================
+// 6. 统计
+// ============================================================
+const fileSizeKB = (Buffer.byteLength(sitemap, 'utf-8') / 1024).toFixed(1);
+const elapsed = Date.now() - startTime;
+
+console.log(`\n✅ Sitemap generated in ${elapsed}ms`);
+console.log(`📊 Stats:`);
+console.log(`   URLs:       ${urlEntries.length}`);
+console.log(`   File size:  ${fileSizeKB} KB`);
+console.log(`   Git files:  ${Object.keys(gitDateMap).length} cached`);
+console.log(`   Output:     ${path.join(publicDir, 'sitemap.xml')}`);
+
+if (urlEntries.length > 40000) {
+    console.warn(`⚠️ URL count (${urlEntries.length}) approaching 50,000 limit.`);
+}
+if (Buffer.byteLength(sitemap, 'utf-8') > 40 * 1024 * 1024) {
+    console.warn(`⚠️ File size (${fileSizeKB} KB) approaching 50MB limit.`);
+}
+
+// ============================================================
+// 7. 自动确保 robots.txt 包含 Sitemap 声明
+// ============================================================
+const robotsPath = path.join(publicDir, 'robots.txt');
+const sitemapDeclaration = `Sitemap: ${SITE_URL}/sitemap.xml`;
+
+try {
+    let robotsContent = fs.existsSync(robotsPath)
+        ? fs.readFileSync(robotsPath, 'utf-8')
+        : 'User-agent: *\nAllow: /\n';
+
+    if (!robotsContent.includes(sitemapDeclaration)) {
+        // 替换旧的 Sitemap 行或追加新的
+        if (/^Sitemap:.*/m.test(robotsContent)) {
+            robotsContent = robotsContent.replace(/^Sitemap:.*$/m, sitemapDeclaration);
+        } else {
+            robotsContent = robotsContent.trimEnd() + '\n\n' + sitemapDeclaration + '\n';
+        }
+        fs.writeFileSync(robotsPath, robotsContent);
+        console.log(`🤖 robots.txt updated with Sitemap declaration`);
+    } else {
+        console.log(`🤖 robots.txt already contains Sitemap declaration ✓`);
+    }
+} catch (e) {
+    console.warn(`⚠️ Could not update robots.txt:`, e.message);
+}
