@@ -1,0 +1,153 @@
+{
+    "meta": {
+        "title": "36.3°C ke Fahrenheit (97.34°F) – Apakah Demam atau Suhu Tubuh Normal?",
+        "description": "Konversi 36.3°C ke Fahrenheit (97.34°F). Apakah 36.3°C suhu tubuh normal? Pelajari standar untuk dewasa dan bayi, metode pengukuran, dan kapan mencari perawatan medis.",
+        "ogTitle": "Konverter Suhu Tubuh 36.3°C ke Fahrenheit",
+        "ogDescription": "Konversi 36.3°C ke Fahrenheit. Periksa suhu tubuh normal untuk dewasa dan bayi, serta standar metode pengukuran yang berbeda."
+    },
+    "bodyTempRanges": {
+        "title": "Penilaian Cepat Suhu: 36.3°C",
+        "subtitle": "Apakah 36.3°C demam atau normal?",
+        "intro": "36.3°C (97.34°F) berada dalam rentang normal suhu tubuh. Ini adalah suhu yang sehat untuk kebanyakan orang, menunjukkan fungsi fisiologis normal.",
+        "normalHighlight": "✅ SUHU TUBUH NORMAL<br>36.3°C = 97.34°F sangat normal",
+        "adultStatus": "Normal<br>Suhu tubuh yang sehat",
+        "babyStatus": "Normal<br>Tipikal untuk bayi",
+        "underArmStatus": "Normal<br>Pembacaan ketiak normal",
+        "ranges": {
+            "adult": "Dewasa",
+            "baby": "Bayi",
+            "underArm": "Ketiak",
+            "normal": "Normal"
+        }
+    },
+    "measurementMethods": {
+        "title": "Metode Pengukuran Suhu",
+        "intro": "36.3°C (97.34°F) bervariasi tergantung pada lokasi pengukuran. Memahami perbedaan ini membantu memastikan penilaian yang akurat:",
+        "oral": {
+            "icon": "🌡️",
+            "temp": "36.3°C = 97.34°F",
+            "description": "Pembacaan oral normal",
+            "title": "Mulut"
+        },
+        "underArm": {
+            "icon": "💪",
+            "temp": "36.3°C = 97.34°F",
+            "description": "Normal ketiak",
+            "title": "Ketiak"
+        },
+        "ear": {
+            "icon": "👂",
+            "temp": "36.3°C = 97.34°F",
+            "description": "Pembacaan timpani normal",
+            "title": "Telinga"
+        },
+        "rectal": {
+            "icon": "👶",
+            "temp": "36.3°C = 97.34°F",
+            "description": "Normal untuk rektal",
+            "title": "Rektal"
+        }
+    },
+    "ageGroups": {
+        "title": "Panduan Suhu 36.3°C Berdasarkan Kelompok Usia",
+        "newborn": {
+            "title": "👶 Bayi Baru Lahir dan Bayi",
+            "points": [
+                "Dalam rentang normal untuk bayi baru lahir",
+                "Pantau pola yang konsisten",
+                "Bayi memiliki kemampuan regulasi suhu yang lebih rendah",
+                "Konsultasikan ke dokter anak jika secara konsisten rendah"
+            ]
+        },
+        "children": {
+            "title": "🧒 Anak-anak",
+            "points": [
+                "Suhu normal untuk anak-anak",
+                "Dapat menjadi suhu pagi yang tipikal",
+                "Pertimbangkan tingkat aktivitas sebelum mengukur",
+                "Amati perubahan perilaku"
+            ]
+        },
+        "adults": {
+            "title": "👨‍🦳 Dewasa",
+            "points": [
+                "Suhu tubuh normal",
+                "Pembacaan pagi yang umum",
+                "Garis dasar individual bervariasi",
+                "Tanpa kekhawatiran medis"
+            ]
+        }
+    },
+    "feverScale": {
+        "title": "Tabel Konversi Suhu Tubuh",
+        "intro": "Panduan Penilaian Suhu",
+        "tableHeaders": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "assessment": "Penilaian Medis"
+        },
+        "rows": [
+            {
+                "celsius": "35.5°C",
+                "fahrenheit": "95.9°F",
+                "assessment": "Rendah normal / Risiko hipotermia ringan"
+            },
+            {
+                "celsius": "36.3°C",
+                "fahrenheit": "97.34°F",
+                "assessment": "Suhu tubuh normal"
+            },
+            {
+                "celsius": "36.5°C",
+                "fahrenheit": "97.7°F",
+                "assessment": "Rentang tengah normal"
+            },
+            {
+                "celsius": "37.0°C",
+                "fahrenheit": "98.6°F",
+                "assessment": "Suhu 'normal' klasik"
+            },
+            {
+                "celsius": "37.5°C",
+                "fahrenheit": "99.5°F",
+                "assessment": "Tinggi normal / Demam sangat ringan"
+            },
+            {
+                "celsius": "38.0°C",
+                "fahrenheit": "100.4°F",
+                "assessment": "Ambang demam"
+            },
+            {
+                "celsius": "38.5°C",
+                "fahrenheit": "101.3°F",
+                "assessment": "Demam sedang"
+            }
+        ]
+    },
+    "faq": {
+        "q1": {
+            "question": "Apakah 36.3°C suhu tubuh normal?",
+            "answer": "Ya, 36.3°C (97.34°F) adalah suhu tubuh normal. Berada dalam rentang normal tipikal 36.1°C hingga 37.2°C (97°F hingga 99°F) untuk dewasa. Suhu ini menunjukkan fungsi fisiologis yang sehat dan normal."
+        },
+        "q2": {
+            "question": "Apakah 36.3°C demam untuk bayi dan anak-anak?",
+            "answer": "Tidak, 36.3°C (97.34°F) bukan demam untuk bayi atau anak-anak. Ini dalam rentang normal. Demam biasanya dianggap 38°C (100.4°F) atau lebih tinggi pada anak-anak."
+        },
+        "q3": {
+            "question": "Apa artinya 36.3°C di ketiak?",
+            "answer": "36.3°C (97.34°F) yang diukur di ketiak menunjukkan suhu tubuh normal. Suhu ketiak biasanya membaca 0.5-1°C lebih rendah dari suhu tubuh inti, jadi pembacaan ini menunjukkan bahwa suhu inti aktual Anda benar-benar normal."
+        },
+        "q4": {
+            "question": "Apakah 36.3°C terlalu rendah untuk bayi baru lahir?",
+            "answer": "36.3°C (97.34°F) berada dalam rentang normal untuk bayi baru lahir dan umumnya dapat diterima. Namun, bayi baru lahir memiliki kemampuan regulasi suhu yang lebih rendah, jadi suhu di bawah 36°C (96.8°F) harus dievaluasi oleh penyedia layanan kesehatan."
+        },
+        "q5": {
+            "question": "Bagaimana cara mengonversi 36.3°C ke Fahrenheit?",
+            "answer": "Untuk mengonversi 36.3°C ke Fahrenheit: Kalikan 36.3 dengan 9/5 (atau 1.8) = 65.34; Tambahkan 32 ke hasilnya: 65.34 + 32 = 97.34; Jawaban akhir: 36.3°C = 97.34°F. Ini adalah suhu tubuh normal."
+        },
+        "q6": {
+            "question": "Kapan saya harus khawatir tentang suhu 36.3°C?",
+            "answer": "Anda umumnya tidak perlu khawatir tentang 36.3°C (97.34°F) itu sendiri, karena normal. Namun, cari nasihat medis jika disertai dengan gejala yang mengkhawatirkan seperti lesu, kesulitan bernapas, makan buruk (pada bayi), atau jika suhu berubah dengan cepat di bawah 35.5°C."
+        }
+    }
+}

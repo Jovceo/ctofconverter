@@ -12,7 +12,13 @@
         "normalHighlight": "✅ NORMAL BODY TEMPERATURE<br>36.1°C = {fahrenheit}°F is within the normal range",
         "adultStatus": "Normal<br>Lower end of normal range",
         "babyStatus": "Normal<br>Acceptable, monitor if concerned",
-        "underArmStatus": "Normal<br>Typical axillary reading"
+        "underArmStatus": "Normal<br>Typical axillary reading",
+        "ranges": {
+            "adult": "Adults",
+            "baby": "Babies",
+            "underArm": "Under Arm",
+            "normal": "Normal"
+        }
     },
     "measurementMethods": {
         "title": "Temperature Measurement Methods",
@@ -20,21 +26,25 @@
         "oral": {
             "icon": "🌡️",
             "temp": "36.1°C = {fahrenheit}°F",
+            "title": "Oral",
             "description": "Lower normal oral reading"
         },
         "underArm": {
             "icon": "💪",
             "temp": "36.1°C = {fahrenheit}°F",
+            "title": "Under Arm",
             "description": "Normal axillary"
         },
         "ear": {
             "icon": "👂",
             "temp": "36.1°C = {fahrenheit}°F",
+            "title": "Ear",
             "description": "Low tympanic"
         },
         "rectal": {
             "icon": "👶",
             "temp": "36.1°C = {fahrenheit}°F",
+            "title": "Rectal",
             "description": "Low for rectal"
         }
     },

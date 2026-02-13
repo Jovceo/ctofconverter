@@ -1,0 +1,153 @@
+{
+    "meta": {
+        "title": "36.3°C in Fahrenheit (97.34°F) – Ist es Fieber oder normale Körpertemperatur?",
+        "description": "Konvertieren Sie 36.3°C in Fahrenheit (97.34°F). Ist 36.3°C eine normale Körpertemperatur? Erfahren Sie mehr über Standards für Erwachsene und Babys, Messmethoden und wann Sie einen Arzt aufsuchen sollten.",
+        "ogTitle": "Körpertemperatur-Konverter 36.3°C in Fahrenheit",
+        "ogDescription": "Konvertieren Sie 36.3°C in Fahrenheit. Überprüfen Sie die normale Körpertemperatur für Erwachsene und Babys sowie die Standards verschiedener Messmethoden."
+    },
+    "bodyTempRanges": {
+        "title": "Schnelle Temperaturbewertung: 36.3°C",
+        "subtitle": "Ist 36.3°C Fieber oder normal?",
+        "intro": "36.3°C (97.34°F) liegt im normalen Bereich der Körpertemperatur. Dies ist eine gesunde Temperatur für die meisten Menschen und zeigt eine normale physiologische Funktion an.",
+        "normalHighlight": "✅ NORMALE KÖRPERTEMPERATUR<br>36.3°C = 97.34°F ist völlig normal",
+        "adultStatus": "Normal<br>Gesunde Körpertemperatur",
+        "babyStatus": "Normal<br>Typisch für Babys",
+        "underArmStatus": "Normal<br>Normale axilläre Ablesung",
+        "ranges": {
+            "adult": "Erwachsene",
+            "baby": "Babys",
+            "underArm": "Achsel",
+            "normal": "Normal"
+        }
+    },
+    "measurementMethods": {
+        "title": "Methoden zur Temperaturmessung",
+        "intro": "36.3°C (97.34°F) variiert je nach Messstelle. Das Verständnis dieser Unterschiede hilft bei der genauen Bewertung:",
+        "oral": {
+            "icon": "🌡️",
+            "temp": "36.3°C = 97.34°F",
+            "description": "Normale orale Ablesung",
+            "title": "Mündlich"
+        },
+        "underArm": {
+            "icon": "💪",
+            "temp": "36.3°C = 97.34°F",
+            "description": "Normal axillär",
+            "title": "Achsel"
+        },
+        "ear": {
+            "icon": "👂",
+            "temp": "36.3°C = 97.34°F",
+            "description": "Normale tympanische Ablesung",
+            "title": "Ohr"
+        },
+        "rectal": {
+            "icon": "👶",
+            "temp": "36.3°C = 97.34°F",
+            "description": "Normal für rektal",
+            "title": "Rektal"
+        }
+    },
+    "ageGroups": {
+        "title": "36.3°C Temperaturleitfaden nach Altersgruppe",
+        "newborn": {
+            "title": "👶 Neugeborene und Babys",
+            "points": [
+                "Innerhalb des normalen Bereichs für Neugeborene",
+                "Konsistente Muster überwachen",
+                "Babys haben weniger Temperaturregulationsfähigkeit",
+                "Bei konstant niedrigen Werten Kinderarzt konsultieren"
+            ]
+        },
+        "children": {
+            "title": "🧒 Kinder",
+            "points": [
+                "Normale Temperatur für Kinder",
+                "Kann normale Morgentemperatur sein",
+                "Aktivitätsniveau vor der Messung berücksichtigen",
+                "Verhaltensänderungen beobachten"
+            ]
+        },
+        "adults": {
+            "title": "👨‍🦳 Erwachsene",
+            "points": [
+                "Normale Körpertemperatur",
+                "Häufige Morgenablesung",
+                "Individuelle Basislinie variiert",
+                "Kein medizinisches Problem"
+            ]
+        }
+    },
+    "feverScale": {
+        "title": "Körpertemperatur-Umrechnungstabelle",
+        "intro": "Leitfaden zur Temperaturbewertung",
+        "tableHeaders": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "assessment": "Medizinische Bewertung"
+        },
+        "rows": [
+            {
+                "celsius": "35.5°C",
+                "fahrenheit": "95.9°F",
+                "assessment": "Niedrig normal / Leichtes Unterkühlungsrisiko"
+            },
+            {
+                "celsius": "36.3°C",
+                "fahrenheit": "97.34°F",
+                "assessment": "Normale Körpertemperatur"
+            },
+            {
+                "celsius": "36.5°C",
+                "fahrenheit": "97.7°F",
+                "assessment": "Mittlerer normaler Bereich"
+            },
+            {
+                "celsius": "37.0°C",
+                "fahrenheit": "98.6°F",
+                "assessment": "Klassische 'normale' Temperatur"
+            },
+            {
+                "celsius": "37.5°C",
+                "fahrenheit": "99.5°F",
+                "assessment": "Hoch normal / Sehr leichtes Fieber"
+            },
+            {
+                "celsius": "38.0°C",
+                "fahrenheit": "100.4°F",
+                "assessment": "Fieberschwelle"
+            },
+            {
+                "celsius": "38.5°C",
+                "fahrenheit": "101.3°F",
+                "assessment": "Mäßiges Fieber"
+            }
+        ]
+    },
+    "faq": {
+        "q1": {
+            "question": "Ist 36.3°C eine normale Körpertemperatur?",
+            "answer": "Ja, 36.3°C (97.34°F) ist eine normale Körpertemperatur. Sie liegt im typischen normalen Bereich von 36.1°C bis 37.2°C (97°F bis 99°F) für Erwachsene. Diese Temperatur zeigt eine gesunde, normale physiologische Funktion an."
+        },
+        "q2": {
+            "question": "Ist 36.3°C Fieber für Babys und Kinder?",
+            "answer": "Nein, 36.3°C (97.34°F) ist kein Fieber für Babys oder Kinder. Es liegt im normalen Bereich. Fieber wird typischerweise bei 38°C (100.4°F) oder höher bei Kindern angesehen."
+        },
+        "q3": {
+            "question": "Was bedeutet 36.3°C unter dem Arm?",
+            "answer": "36.3°C (97.34°F) gemessen unter dem Arm (axillär) zeigt eine normale Körpertemperatur an. Axilläre Temperaturen lesen typischerweise 0,5-1°C niedriger als die zentrale Körpertemperatur, daher deutet diese Ablesung darauf hin, dass Ihre tatsächliche Kerntemperatur völlig normal ist."
+        },
+        "q4": {
+            "question": "Ist 36.3°C zu niedrig für ein Neugeborenes?",
+            "answer": "36.3°C (97.34°F) liegt im normalen Bereich für Neugeborene und ist im Allgemeinen akzeptabel. Da Neugeborene jedoch weniger Fähigkeit zur Temperaturregulation haben, sollten Temperaturen unter 36°C (96.8°F) von einem Gesundheitsdienstleister bewertet werden."
+        },
+        "q5": {
+            "question": "Wie konvertiere ich 36.3°C in Fahrenheit?",
+            "answer": "So konvertieren Sie 36.3°C in Fahrenheit: Multiplizieren Sie 36.3 mit 9/5 (oder 1,8) = 65,34; Addieren Sie 32 zum Ergebnis: 65,34 + 32 = 97,34; Endgültige Antwort: 36.3°C = 97.34°F. Dies ist eine normale Körpertemperatur."
+        },
+        "q6": {
+            "question": "Wann sollte ich mich wegen der Temperatur von 36.3°C Sorgen machen?",
+            "answer": "Sie müssen sich im Allgemeinen nicht um 36.3°C (97.34°F) selbst Sorgen machen, da es normal ist. Suchen Sie jedoch medizinischen Rat, wenn es von besorgniserregenden Symptomen wie Lethargie, Atembeschwerden, schlechter Fütterung (bei Babys) oder wenn die Temperatur schnell unter 35,5°C fällt, begleitet wird."
+        }
+    }
+}
