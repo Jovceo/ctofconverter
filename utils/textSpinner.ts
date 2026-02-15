@@ -160,6 +160,37 @@ export const textSpinner = {
             textWithTags: variants[idx],
             linkUrl: getLocalizedLink(url, locale)
         };
+        return {
+            textWithTags: variants[idx],
+            linkUrl: getLocalizedLink(url, locale)
+        };
+    },
+
+    getIntroValue: (celsius: number, fahrenheit: number, t: (key: string, repl?: any) => any) => {
+        const variants = t('common.introValue');
+        const formattedF = formatTemperature(fahrenheit);
+
+        // Fallback if not an array (e.g. other languages)
+        if (!Array.isArray(variants)) {
+            if (typeof variants === 'string') {
+                return variants.replace(/{celsius}/g, celsius.toString())
+                    .replace(/{fahrenheit}/g, formattedF);
+            }
+            return `<strong>${celsius} degrees Celsius</strong> equals <strong>${formattedF} degrees Fahrenheit</strong>.`;
+        }
+
+        const idx = getVariantIndex(celsius + 8, variants.length); // Offset seed
+        const text = variants[idx];
+        return text.replace(/{celsius}/g, celsius.toString())
+            .replace(/{fahrenheit}/g, formattedF);
+    },
+
+    getIntroConnect: (celsius: number, t: (key: string) => any) => {
+        const variants = t('common.introConnect');
+        if (!Array.isArray(variants)) return 'This temperature conversion is commonly used in';
+
+        const idx = getVariantIndex(celsius + 9, variants.length);
+        return variants[idx];
     },
 
     /**
