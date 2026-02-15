@@ -22,7 +22,7 @@ jobs:
           INDEXNOW_SECRET: ${{ secrets.INDEXNOW_SECRET }}
         run: |
           # 1. Install dependencies to run generation script
-          npm ci
+          npm install
 
           # 2. Generate fresh sitemap.xml
           node scripts/generate-sitemap.js
