@@ -1,0 +1,172 @@
+{
+    "meta": {
+        "title": "36,4°C a Fahrenheit (97,5°F) | Guía de Temperatura Corporal y Fiebre",
+        "description": "Convierte 36,4 grados Celsius a Fahrenheit. Aprende que 36,4°C equivale a 97,5°F y entiende si es una temperatura corporal normal o fiebre en adultos, niños y bebés.",
+        "ogTitle": "36,4°C a Fahrenheit (97,5°F) | Guía de Temperatura Corporal",
+        "ogDescription": "Convierte 36,4°C a Fahrenheit al instante. 36,4°C equivale a 97,5°F - comprende los rangos de temperatura corporal y los umbrales de fiebre para todas las edades."
+    },
+    "conversionFormula": {
+        "title": "Fórmula de Conversión de 36,4°C a Fahrenheit",
+        "formula": "(36,4°C × 9/5) + 32 = 97,5°F",
+        "steps": [
+            "Multiplica 36,4 por 9/5: 36,4 × 1,8 = 65,52",
+            "Suma 32 al resultado: 65,52 + 32 = 97,52",
+            "Resultado final: 36,4°C = 97,5°F"
+        ],
+        "imageAlt": "Fórmula de conversión de 36,4°C a Fahrenheit y pasos de cálculo"
+    },
+    "bodyTempRanges": {
+        "title": "Evaluación de Temperatura 36,4°C: Rango Normal",
+        "subtitle": "¿Es Normal 36,4°C?",
+        "intro": "36,4°C (97,5°F) está dentro del rango normal de temperatura corporal. Esta es una temperatura saludable para la mayoría de los adultos y representa una lectura normal de rango medio confortable.",
+        "normalHighlight": "✅ TEMPERATURA NORMAL<br>36,4°C = 97,5°F es saludable",
+        "adultStatus": "Normal<br>Rango medio saludable",
+        "babyStatus": "Normal<br>Típico para bebés",
+        "underArmStatus": "Normal<br>Lectura axilar",
+        "ranges": {
+            "adult": "Adultos",
+            "baby": "Bebés",
+            "underArm": "Brazo",
+            "normal": "Normal"
+        }
+    },
+    "measurementMethods": {
+        "title": "Métodos de Medición de Temperatura a 36,4°C",
+        "intro": "Las lecturas de 36,4°C (97,5°F) varían según el sitio de medición. Comprender estas diferencias ayuda a asegurar una evaluación precisa de la temperatura corporal normal.",
+        "oral": {
+            "icon": "🌡️",
+            "temp": "36,4°C = 97,5°F",
+            "title": "Oral",
+            "description": "Lectura oral normal"
+        },
+        "underArm": {
+            "icon": "💪",
+            "temp": "36,4°C = 97,5°F",
+            "title": "Brazo",
+            "description": "Medición axilar normal"
+        },
+        "ear": {
+            "icon": "👂",
+            "temp": "36,4°C = 97,5°F",
+            "title": "Oído",
+            "description": "Lectura timpánica normal"
+        },
+        "rectal": {
+            "icon": "👶",
+            "temp": "36,4°C = 97,5°F",
+            "title": "Rectal",
+            "description": "Normal para bebés"
+        }
+    },
+    "ageGroups": {
+        "title": "Guía de Temperatura 36,4°C por Grupo de Edad",
+        "newborn": {
+            "title": "👶 Recién Nacidos (0-3 meses) - Normal",
+            "points": [
+                "36,4°C (97,5°F) está dentro del rango normal para recién nacidos",
+                "Los recién nacidos tienen menos capacidad de regulación térmica",
+                "Monitorea patrones consistentes en lugar de lecturas únicas",
+                "Contacta al pediatra si es consistentemente inferior a 36°C o superior a 37,5°C"
+            ]
+        },
+        "infant": {
+            "title": "👶 Bebés (3-6 meses) - Normal",
+            "points": [
+                "36,4°C es una temperatura saludable para esta edad",
+                "Rango normal para bebés: 36,0-37,5°C",
+                "Monitorea junto con niveles de alimentación y actividad",
+                "Contacta al médico si es inferior a 35,5°C o superior a 38°C"
+            ]
+        },
+        "children": {
+            "title": "🧒 Niños (6+ meses) - Normal",
+            "points": [
+                "36,4°C es una temperatura normal para niños",
+                "La temperatura varía durante el día (diferencia de 0,5°C)",
+                "Rango medio normal y completamente saludable",
+                "Monitorea si es consistentemente inferior a 35,8°C"
+            ]
+        },
+        "adults": {
+            "title": "👨‍🦳 Adultos - Normal",
+            "points": [
+                "36,4°C está dentro del rango normal para adultos (36,0-37,2°C)",
+                "Temperatura normal de rango medio confortable",
+                "La línea base individual varía en 0,3-0,5°C",
+                "No es motivo de preocupación"
+            ]
+        }
+    },
+    "temperatureScale": {
+        "title": "Escala de Temperatura Corporal",
+        "intro": "Comprendiendo los rangos de temperatura de bajo a alto:",
+        "tableHeaders": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "assessment": "Evaluación"
+        },
+        "rows": [
+            {
+                "celsius": "35,0°C",
+                "fahrenheit": "95,0°F",
+                "assessment": "Baja - Puede indicar hipotermia"
+            },
+            {
+                "celsius": "35,5°C",
+                "fahrenheit": "95,9°F",
+                "assessment": "Normal baja - Monitorear si persiste"
+            },
+            {
+                "celsius": "36,0°C",
+                "fahrenheit": "96,8°F",
+                "assessment": "Normal - Extremo inferior del rango saludable"
+            },
+            {
+                "celsius": "36,4°C",
+                "fahrenheit": "97,5°F",
+                "assessment": "Normal - Temperatura saludable de rango medio"
+            },
+            {
+                "celsius": "37,0°C",
+                "fahrenheit": "98,6°F",
+                "assessment": "Normal - Temperatura corporal promedio"
+            },
+            {
+                "celsius": "37,5°C",
+                "fahrenheit": "99,5°F",
+                "assessment": "Normal alta / Leve"
+            },
+            {
+                "celsius": "38,0°C",
+                "fahrenheit": "100,4°F",
+                "assessment": "Umbral de fiebre"
+            }
+        ]
+    },
+    "faq": {
+        "q1": {
+            "question": "¿Es 36,4°C (97,5°F) una temperatura normal?",
+            "answer": "Sí, 36,4°C (97,5°F) está dentro del rango normal de temperatura corporal. El rango normal de temperatura para adultos es de 36,0-37,2°C (96,8-99,0°F). 36,4°C representa una lectura normal de rango medio confortable y es una temperatura saludable para la mayoría de las personas."
+        },
+        "q2": {
+            "question": "¿Es 36,4°C demasiado baja para adultos?",
+            "answer": "36,4°C (97,5°F) NO es demasiado baja para adultos. Está bien dentro del rango normal. Las preocupaciones por hipotermia típicamente surgen por debajo de 35,0°C (95°F). 36,4°C es una temperatura saludable de rango medio que muchos adultos tienen naturalmente."
+        },
+        "q3": {
+            "question": "¿Qué significa 36,4°C para un bebé?",
+            "answer": "36,4°C (97,5°F) es una temperatura normal para bebés. Los bebés a menudo tienen temperaturas entre 36,0-37,5°C. Los recién nacidos tienen menos regulación térmica, así que monitorea patrones en lugar de lecturas únicas. Contacta a un pediatra si es consistentemente inferior a 35,8°C o superior a 37,5°C, o si el bebé muestra signos de enfermedad."
+        },
+        "q4": {
+            "question": "¿Por qué mi temperatura es 36,4°C por la mañana?",
+            "answer": "Las temperaturas matutinas típicamente son 0,3-0,5°C más bajas que por la tarde/noche debido a los ritmos circadianos. 36,4°C por la mañana es completamente normal y saludable. La temperatura corporal fluctúa naturalmente durante el día, siendo más baja alrededor de las 6 AM y más alta alrededor de las 4-6 PM."
+        },
+        "q5": {
+            "question": "¿Debería preocuparme por una temperatura de 36,4°C?",
+            "answer": "36,4°C (97,5°F) por sí sola no es motivo de preocupación. Señales de alerta incluyen: Temperatura consistentemente inferior a 35,5°C; Caída repentina desde tu línea base normal; Acompañada de síntomas como escalofríos, confusión o fatiga; En bebés: mala alimentación, letargo o extremidades frías. De lo contrario, 36,4°C es una temperatura saludable."
+        },
+        "q6": {
+            "question": "¿Cómo convierto 36,4°C a Fahrenheit?",
+            "answer": "Para convertir 36,4°C a Fahrenheit: Multiplica 36,4 por 9/5 (o 1,8) = 65,52; Suma 32 al resultado: 65,52 + 32 = 97,52; Respuesta final: 36,4°C = 97,5°F. Esta es una temperatura corporal normal dentro del rango saludable."
+        }
+    }
+}

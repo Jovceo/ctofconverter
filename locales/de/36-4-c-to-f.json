@@ -1,0 +1,172 @@
+{
+    "meta": {
+        "title": "36,4°C in Fahrenheit (97,5°F) | Körpertemperatur & Fieberleitfaden",
+        "description": "Konvertiere 36,4 Grad Celsius in Fahrenheit. Erfahre, dass 36,4°C gleich 97,5°F ist, und verstehe, ob dies eine normale Körpertemperatur oder Fieber für Erwachsene, Kinder und Babys ist.",
+        "ogTitle": "36,4°C in Fahrenheit (97,5°F) | Körpertemperatur-Leitfaden",
+        "ogDescription": "Konvertiere 36,4°C sofort in Fahrenheit. 36,4°C entspricht 97,5°F - verstehe Körpertemperaturbereiche und Fieberschwellen für alle Altersgruppen."
+    },
+    "conversionFormula": {
+        "title": "Umrechnungsformel 36,4°C in Fahrenheit",
+        "formula": "(36,4°C × 9/5) + 32 = 97,5°F",
+        "steps": [
+            "Multipliziere 36,4 mit 9/5: 36,4 × 1,8 = 65,52",
+            "Addiere 32 zum Ergebnis: 65,52 + 32 = 97,52",
+            "Endergebnis: 36,4°C = 97,5°F"
+        ],
+        "imageAlt": "Umrechnungsformel und Berechnungsschritte von 36,4°C in Fahrenheit"
+    },
+    "bodyTempRanges": {
+        "title": "36,4°C Temperaturbewertung: Normalbereich",
+        "subtitle": "Ist 36,4°C normal?",
+        "intro": "36,4°C (97,5°F) liegt im normalen Körpertemperaturbereich. Dies ist eine gesunde Temperatur für die meisten Erwachsenen und stellt eine komfortable mittlere Normalablesung dar.",
+        "normalHighlight": "✅ NORMALE TEMPERATUR<br>36,4°C = 97,5°F ist gesund",
+        "adultStatus": "Normal<br>Mittlerer gesunder Bereich",
+        "babyStatus": "Normal<br>Typisch für Säuglinge",
+        "underArmStatus": "Normal<br>Achselablesung",
+        "ranges": {
+            "adult": "Erwachsene",
+            "baby": "Babys",
+            "underArm": "Unter dem Arm",
+            "normal": "Normal"
+        }
+    },
+    "measurementMethods": {
+        "title": "Temperaturmessmethoden bei 36,4°C",
+        "intro": "36,4°C (97,5°F) Ablesungen variieren je nach Messstelle. Das Verständnis dieser Unterschiede hilft bei der genauen Bewertung der normalen Körpertemperatur.",
+        "oral": {
+            "icon": "🌡️",
+            "temp": "36,4°C = 97,5°F",
+            "title": "Oral",
+            "description": "Normale orale Ablesung"
+        },
+        "underArm": {
+            "icon": "💪",
+            "temp": "36,4°C = 97,5°F",
+            "title": "Unter dem Arm",
+            "description": "Normale axilläre Messung"
+        },
+        "ear": {
+            "icon": "👂",
+            "temp": "36,4°C = 97,5°F",
+            "title": "Ohr",
+            "description": "Normale tympanische Ablesung"
+        },
+        "rectal": {
+            "icon": "👶",
+            "temp": "36,4°C = 97,5°F",
+            "title": "Rektal",
+            "description": "Normal für Säuglinge"
+        }
+    },
+    "ageGroups": {
+        "title": "36,4°C Temperaturleitfaden nach Altersgruppe",
+        "newborn": {
+            "title": "👶 Neugeborene (0-3 Monate) - Normal",
+            "points": [
+                "36,4°C (97,5°F) liegt im Normalbereich für Neugeborene",
+                "Neugeborene haben eine geringere Temperaturregulationsfähigkeit",
+                "Überwache konsistente Muster statt einzelner Ablesungen",
+                "Kontaktiere den Kinderarzt, wenn konstant unter 36°C oder über 37,5°C"
+            ]
+        },
+        "infant": {
+            "title": "👶 Säuglinge (3-6 Monate) - Normal",
+            "points": [
+                "36,4°C ist eine gesunde Temperatur für dieses Alter",
+                "Normaler Bereich für Säuglinge: 36,0-37,5°C",
+                "Überwache zusammen mit Fütterungs- und Aktivitätsniveau",
+                "Kontaktiere den Arzt, wenn unter 35,5°C oder über 38°C"
+            ]
+        },
+        "children": {
+            "title": "🧒 Kinder (6+ Monate) - Normal",
+            "points": [
+                "36,4°C ist eine normale Temperatur für Kinder",
+                "Temperatur variiert im Laufe des Tages (0,5°C Unterschied)",
+                "Mittlerer Normalbereich und vollkommen gesund",
+                "Überwache, wenn konstant unter 35,8°C"
+            ]
+        },
+        "adults": {
+            "title": "👨‍🦳 Erwachsene - Normal",
+            "points": [
+                "36,4°C liegt im normalen Erwachsenenbereich (36,0-37,2°C)",
+                "Komfortable mittlere Normtemperatur",
+                "Individuelle Basislinie variiert um 0,3-0,5°C",
+                "Kein Grund zur Sorge"
+            ]
+        }
+    },
+    "temperatureScale": {
+        "title": "Körpertemperaturskala",
+        "intro": "Verständnis der Temperaturbereiche von niedrig bis hoch:",
+        "tableHeaders": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "assessment": "Bewertung"
+        },
+        "rows": [
+            {
+                "celsius": "35,0°C",
+                "fahrenheit": "95,0°F",
+                "assessment": "Niedrig - Kann Hypothermie anzeigen"
+            },
+            {
+                "celsius": "35,5°C",
+                "fahrenheit": "95,9°F",
+                "assessment": "Niedrig normal - Überwachen, wenn anhaltend"
+            },
+            {
+                "celsius": "36,0°C",
+                "fahrenheit": "96,8°F",
+                "assessment": "Normal - Unteres Ende des gesunden Bereichs"
+            },
+            {
+                "celsius": "36,4°C",
+                "fahrenheit": "97,5°F",
+                "assessment": "Normal - Mittlere gesunde Temperatur"
+            },
+            {
+                "celsius": "37,0°C",
+                "fahrenheit": "98,6°F",
+                "assessment": "Normal - Durchschnittliche Körpertemperatur"
+            },
+            {
+                "celsius": "37,5°C",
+                "fahrenheit": "99,5°F",
+                "assessment": "Hoch normal / Leicht erhöht"
+            },
+            {
+                "celsius": "38,0°C",
+                "fahrenheit": "100,4°F",
+                "assessment": "Fieberschwelle"
+            }
+        ]
+    },
+    "faq": {
+        "q1": {
+            "question": "Ist 36,4°C (97,5°F) eine normale Temperatur?",
+            "answer": "Ja, 36,4°C (97,5°F) liegt im normalen Körpertemperaturbereich. Der normale Temperaturbereich für Erwachsene liegt bei 36,0-37,2°C (96,8-99,0°F). 36,4°C stellt eine komfortable mittlere Normalablesung dar und ist eine gesunde Temperatur für die meisten Menschen."
+        },
+        "q2": {
+            "question": "Ist 36,4°C zu niedrig für Erwachsene?",
+            "answer": "36,4°C (97,5°F) ist NICHT zu niedrig für Erwachsene. Es liegt gut im normalen Bereich. Hypothermie-Bedenken entstehen typischerweise unter 35,0°C (95°F). 36,4°C ist eine gesunde mittlere Temperatur, die viele Erwachsene natürlicherweise haben."
+        },
+        "q3": {
+            "question": "Was bedeutet 36,4°C für ein Baby?",
+            "answer": "36,4°C (97,5°F) ist eine normale Temperatur für Babys. Säuglinge haben oft Temperaturen zwischen 36,0-37,5°C. Neugeborene haben weniger Temperaturregulation, also überwache Muster statt einzelner Ablesungen. Kontaktiere einen Kinderarzt, wenn konstant unter 35,8°C oder über 37,5°C, oder wenn das Baby Anzeichen von Krankheit zeigt."
+        },
+        "q4": {
+            "question": "Warum ist meine Temperatur morgens 36,4°C?",
+            "answer": "Morgentemperaturen sind typischerweise 0,3-0,5°C niedriger als nachmittags/abends aufgrund von circadianen Rhythmen. 36,4°C morgens ist vollkommen normal und gesund. Die Körpertemperatur schwankt natürlich im Laufe des Tages, ist am niedrigsten gegen 6 Uhr morgens und am höchsten gegen 16-18 Uhr."
+        },
+        "q5": {
+            "question": "Sollte ich mir Sorgen über eine Temperatur von 36,4°C machen?",
+            "answer": "36,4°C (97,5°F) allein ist kein Grund zur Sorge. Warnzeichen umfassen: Temperatur konstant unter 35,5°C; Plötzlicher Abfall von deiner normalen Basislinie; Begleitet von Symptomen wie Zittern, Verwirrtheit oder Müdigkeit; Bei Babys: schlechte Fütterung, Lethargie oder kalte Gliedmaßen. Ansonsten ist 36,4°C eine gesunde Temperatur."
+        },
+        "q6": {
+            "question": "Wandle ich 36,4°C in Fahrenheit um?",
+            "answer": "Um 36,4°C in Fahrenheit umzuwandeln: Multipliziere 36,4 mit 9/5 (oder 1,8) = 65,52; Addiere 32 zum Ergebnis: 65,52 + 32 = 97,52; Endergebnis: 36,4°C = 97,5°F. Dies ist eine normale Körpertemperatur im gesunden Bereich."
+        }
+    }
+}
