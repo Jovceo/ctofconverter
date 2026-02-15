@@ -934,7 +934,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
                 <p className={pageStyles.introText} dangerouslySetInnerHTML={{ __html: customIntro }} />
               ) : (
                 <p className={pageStyles.introText}>
-                  <span dangerouslySetInnerHTML={{ __html: t('common.introValue', { celsius, fahrenheit: formattedFahrenheit }) + " " + t('common.introConnect') }} />
+                  <span dangerouslySetInnerHTML={{ __html: textSpinner.getIntroValue(celsius, fahrenheit, t) + " " + textSpinner.getIntroConnect(celsius, t) }} />
                   {" "}
                   {/* Dynamic Intro Text Part with Embedded Natural Link */}
                   {(() => {

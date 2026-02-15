@@ -1,0 +1,180 @@
+{
+    "meta": {
+        "title": "36,5°C in Fahrenheit (97,7°F) | Körpertemperatur-Leitfaden",
+        "description": "Wandeln Sie 36,5°C in Fahrenheit (97,7°F) um. Erfahren Sie, ob 36,5°C bei Erwachsenen, Kindern und Babys eine normale Körpertemperatur oder Fieber ist. Vollständige Temperaturanleitung mit Messmethoden.",
+        "ogTitle": "36,5°C in Fahrenheit (97,7°F) Körpertemperatur-Umrechner",
+        "ogDescription": "Wandeln Sie 36,5°C in Fahrenheit für die Körpertemperatur um. Prüfen Sie, ob es normal ist, Fieber bei Erwachsenen, Babys und verschiedene Messmethoden."
+    },
+    "conversionFormula": {
+        "title": "Umrechnungsformel von 36,5°C in Fahrenheit",
+        "formula": "(36,5°C × 9/5) + 32 = 97,7°F",
+        "steps": [
+            "Multiplizieren Sie 36,5 mit 9/5: 36,5 × 1,8 = 65,7",
+            "Addieren Sie 32 zum Ergebnis: 65,7 + 32 = 97,7",
+            "Endergebnis: 36,5°C = 97,7°F"
+        ],
+        "imageAlt": "Umrechnungsformel und Berechnungsschritte von 36,5°C in Fahrenheit"
+    },
+    "bodyTempRanges": {
+        "title": "36,5°C Temperaturbewertung: Normaler Bereich",
+        "subtitle": "Ist 36,5°C normal?",
+        "intro": "36,5°C (97,7°F) liegt im Bereich der normalen Körpertemperatur. Dies stellt eine komfortable Normaltemperatur im mittleren Bereich dar, die etwas über dem Durchschnitt liegt, aber völlig gesund ist.",
+        "normalHighlight": "✅ NORMALE TEMPERATUR<br>36,5°C = 97,7°F ist gesund",
+        "adultStatus": "Normal<br>Mittlerer gesunder Bereich",
+        "babyStatus": "Normal<br>Typisch für Säuglinge",
+        "underArmStatus": "Normal<br>Achselmessung",
+        "ranges": {
+            "adult": "Erwachsene",
+            "baby": "Babys",
+            "underArm": "Achsel",
+            "normal": "Normal"
+        }
+    },
+    "medicalGuidelines": {
+        "title": "🏥 WHO & Medizinische Leitlinien: 36,5°C als Normaler Standard",
+        "content": "Die Weltgesundheitsorganisation und führende medizinische Institutionen definieren die normale Körpertemperatur als 36,5-37,5°C. 36,5°C (97,7°F) repräsentiert den unteren optimalen Bereich und zeigt eine gesunde Stoffwechselfunktion an. Dieser Standard wird weltweit in Krankenhäusern, Kliniken und medizinischen Lehrbüchern verwendet."
+    },
+    "optimalFunction": {
+        "title": "🔬 Warum 36,5°C Optimal für die Körperfunktion ist",
+        "content": "Bei 36,5°C arbeitet Ihr Körper mit höchster Effizienz: Enzyme funktionieren optimal für Verdauung und Stoffwechsel; Immunzellen sind am aktivsten gegen Krankheitserreger; Das Herz-Kreislauf-System hält den idealen Blutfluss aufrecht; Die Gehirnfunktion ist scharf und reaktionsschnell; Die Hormonproduktion ist ausgeglichen. Deshalb verwenden medizinische Leitlinien 36,5°C als Standard."
+    },
+    "measurementMethods": {
+        "title": "Temperaturmessmethoden bei 36,5°C",
+        "intro": "36,5°C (97,7°F) Messwerte variieren je nach Messstelle. Das Verständnis dieser Unterschiede hilft bei der genauen Bewertung der normalen Körpertemperatur.",
+        "oral": {
+            "icon": "🌡️",
+            "temp": "36,5°C = 97,7°F",
+            "title": "Oral",
+            "description": "Normaler oraler Messwert"
+        },
+        "underArm": {
+            "icon": "💪",
+            "temp": "36,5°C = 97,7°F",
+            "title": "Achsel",
+            "description": "Normale axilläre Messung"
+        },
+        "ear": {
+            "icon": "👂",
+            "temp": "36,5°C = 97,7°F",
+            "title": "Ohr",
+            "description": "Normaler tympanischer Messwert"
+        },
+        "rectal": {
+            "icon": "👶",
+            "temp": "36,5°C = 97,7°F",
+            "title": "Rektal",
+            "description": "Normal für Säuglinge"
+        }
+    },
+    "ageGroups": {
+        "title": "36,5°C Temperaturleitfaden nach Altersgruppe",
+        "newborn": {
+            "title": "👶 Neugeborene (0-3 Monate) - Normal",
+            "points": [
+                "36,5°C (97,7°F) liegt im normalen Bereich für Neugeborene",
+                "Neugeborene haben eine geringere Temperaturregulationsfähigkeit",
+                "Überwachen Sie konsistente Muster anstelle von Einzelmessungen",
+                "Kontaktieren Sie den Kinderarzt, wenn konsequent unter 36°C oder über 37,5°C"
+            ]
+        },
+        "infant": {
+            "title": "👶 Säuglinge (3-6 Monate) - Normal",
+            "points": [
+                "36,5°C ist eine gesunde Temperatur für dieses Alter",
+                "Normaler Bereich für Säuglinge: 36,0-37,5°C",
+                "Überwachen Sie zusammen mit Fütterungs- und Aktivitätsniveaus",
+                "Kontaktieren Sie den Arzt, wenn unter 35,5°C oder über 38°C"
+            ]
+        },
+        "children": {
+            "title": "🧒 Kinder (6+ Monate) - Normal",
+            "points": [
+                "36,5°C ist eine normale Temperatur für Kinder",
+                "Die Temperatur variiert im Laufe des Tages (0,5°C Unterschied)",
+                "Mittlerer normaler Bereich und völlig gesund",
+                "Überwachen Sie, wenn konsequent unter 35,8°C"
+            ]
+        },
+        "adults": {
+            "title": "👨‍🦳 Erwachsene - Normal",
+            "points": [
+                "36,5°C liegt im normalen Erwachsenenbereich (36,0-37,2°C)",
+                "Häufige Nachmittagstemperatur",
+                "Individuelle Grundlinie variiert um 0,3-0,5°C",
+                "Kein Grund zur Sorge"
+            ]
+        }
+    },
+    "temperatureScale": {
+        "title": "Körpertemperaturskala",
+        "intro": "Verständnis der Temperaturbereiche von niedrig bis hoch:",
+        "tableHeaders": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "assessment": "Bewertung"
+        },
+        "rows": [
+            {
+                "celsius": "35,0°C",
+                "fahrenheit": "95,0°F",
+                "assessment": "Niedrig - Kann Hypothermie anzeigen"
+            },
+            {
+                "celsius": "35,5°C",
+                "fahrenheit": "95,9°F",
+                "assessment": "Niedrig normal - Überwachen, wenn anhaltend"
+            },
+            {
+                "celsius": "36,0°C",
+                "fahrenheit": "96,8°F",
+                "assessment": "Normal - Unteres Ende des gesunden Bereichs"
+            },
+            {
+                "celsius": "36,5°C",
+                "fahrenheit": "97,7°F",
+                "assessment": "Normal - Mittlere gesunde Temperatur"
+            },
+            {
+                "celsius": "37,0°C",
+                "fahrenheit": "98,6°F",
+                "assessment": "Normal - Durchschnittliche Körpertemperatur"
+            },
+            {
+                "celsius": "37,5°C",
+                "fahrenheit": "99,5°F",
+                "assessment": "Hoch normal / Leichtes Fieber"
+            },
+            {
+                "celsius": "38,0°C",
+                "fahrenheit": "100,4°F",
+                "assessment": "Fieberschwelle"
+            }
+        ]
+    },
+    "faq": {
+        "q1": {
+            "question": "Ist 36,5°C (97,7°F) eine normale Temperatur?",
+            "answer": "Ja, 36,5°C (97,7°F) liegt im Bereich der normalen Körpertemperatur. Der normale Temperaturbereich für Erwachsene reicht von 36,0-37,2°C (96,8-99,0°F). 36,5°C stellt einen komfortablen mittleren normalen Messwert dar und ist eine gesunde Temperatur für die meisten Menschen."
+        },
+        "q2": {
+            "question": "Ist 36,5°C zu hoch oder zu niedrig?",
+            "answer": "36,5°C (97,7°F) ist weder zu hoch noch zu niedrig. Es ist eine gesunde mittlere Temperatur. Besorgniserregend wird es bei Hypothermie unter 35,0°C (95°F), und Fieber beginnt typischerweise bei 38,0°C (100,4°F). 36,5°C ist eine komfortable, normale Temperatur."
+        },
+        "q3": {
+            "question": "Was bedeutet 36,5°C für ein Baby?",
+            "answer": "36,5°C (97,7°F) ist eine normale Temperatur für Babys. Säuglinge haben oft Temperaturen zwischen 36,0-37,5°C. Neugeborene haben eine geringere Temperaturregulation, also überwachen Sie Muster anstelle von Einzelmessungen. Kontaktieren Sie einen Kinderarzt, wenn konsequent unter 35,8°C oder über 37,5°C, oder wenn das Baby Anzeichen von Krankheit zeigt."
+        },
+        "q4": {
+            "question": "Ist 36,5°C ein Fieber?",
+            "answer": "Nein, 36,5°C (97,7°F) ist kein Fieber. Fieber wird typischerweise als 38,0°C (100,4°F) oder höher definiert. 36,5°C ist eine normale, gesunde Körpertemperatur. Einige Menschen haben natürlicherweise eine etwas kältere oder wärmere Temperatur als der Durchschnitt von 37,0°C (98,6°F)."
+        },
+        "q5": {
+            "question": "Sollte ich mir wegen einer Temperatur von 36,5°C Sorgen machen?",
+            "answer": "36,5°C (97,7°F) allein ist kein Grund zur Sorge. Dies ist eine gesunde, normale Temperatur. Warnzeichen umfassen: Temperatur konstant unter 35,5°C oder über 37,8°C; Plötzliche Änderungen von Ihrer normalen Grundlinie; Begleitet von Symptomen wie Müdigkeit, Verwirrung oder Krankheitszeichen. Ansonsten ist 36,5°C völlig gesund."
+        },
+        "q6": {
+            "question": "Wandle ich 36,5°C in Fahrenheit um?",
+            "answer": "Um 36,5°C in Fahrenheit umzuwandeln: Multiplizieren Sie 36,5 mit 9/5 (oder 1,8) = 65,7; Addieren Sie 32 zum Ergebnis: 65,7 + 32 = 97,7; Endgültige Antwort: 36,5°C = 97,7°F. Dies ist eine normale Körpertemperatur im gesunden Bereich."
+        }
+    }
+}

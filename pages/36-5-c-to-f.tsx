@@ -40,7 +40,11 @@ interface PageTranslation {
             normal?: string;
         };
     };
-    researchUpdate?: {
+    medicalGuidelines?: {
+        title?: string;
+        content?: string;
+    };
+    optimalFunction?: {
         title?: string;
         content?: string;
     };
@@ -77,9 +81,9 @@ interface PageTranslation {
 
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     const lastUpdatedIso = getLatestModifiedDate([
-        'pages/36-4-c-to-f.tsx',
+        'pages/36-5-c-to-f.tsx',
         'pages/temperature-template.tsx',
-        `locales/${locale}/36-4-c-to-f.json`,
+        `locales/${locale}/36-5-c-to-f.json`,
         `locales/${locale}/template.json`
     ]);
 
@@ -95,8 +99,8 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     };
 
     // 加载翻译数据
-    const enTrans = loadJSON('en', '36-4-c-to-f.json');
-    const locTrans = locale !== 'en' ? loadJSON(locale, '36-4-c-to-f.json') : {};
+    const enTrans = loadJSON('en', '36-5-c-to-f.json');
+    const locTrans = locale !== 'en' ? loadJSON(locale, '36-5-c-to-f.json') : {};
 
     // 深度合并翻译
     const pageTrans = {
@@ -114,14 +118,14 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     };
 };
 
-export default function Temperature36_4C({ lastUpdatedIso, pageTrans, availablePages }: {
+export default function Temperature36_5C({ lastUpdatedIso, pageTrans, availablePages }: {
     lastUpdatedIso: string,
     pageTrans: PageTranslation,
     availablePages: number[]
 }) {
-    const celsius = 36.4;
+    const celsius = 36.5;
     const fahrenheit = celsiusToFahrenheit(celsius);
-    const { locale } = useTranslation('36-4-c-to-f');
+    const { locale } = useTranslation('36-5-c-to-f');
     const { t } = useTranslation('template');
 
     const pageT = useMemo(() => (pageTrans as PageTranslation) || {}, [pageTrans]);
@@ -168,11 +172,7 @@ export default function Temperature36_4C({ lastUpdatedIso, pageTrans, availableP
             `
         }, {
             type: 'fact' as const,
-            title: safeTranslate(pageT, 'researchUpdate.title', locale),
-            content: `<div style="background: #f0f7ff; padding: 20px; border-radius: 8px; border-left: 4px solid #1976d2;"><h4 style="margin-top: 0; color: #1976d2;">📊 Stanford Medicine Research Update</h4><p>${safeTranslate(pageT, 'researchUpdate.content', locale)}</p></div>`
-        }, {
-            type: 'fact' as const,
-            title: safeTranslate(pageT, 'conversionFormula.title', locale) || '36.4°C to Fahrenheit Conversion',
+            title: safeTranslate(pageT, 'conversionFormula.title', locale) || '36.5°C to Fahrenheit Conversion',
             content: `
                 <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
                     <div style="flex: 1; min-width: 300px;">
@@ -182,10 +182,18 @@ export default function Temperature36_4C({ lastUpdatedIso, pageTrans, availableP
                         </ol>
                     </div>
                     <div style="flex: 0 0 auto;">
-                        <img src="/images/equation/36.4-celsius-to-fahrenheit-conversion.png" alt="${safeTranslate(pageT, 'conversionFormula.imageAlt', locale) || '36.4°C to Fahrenheit conversion formula'}" style="max-width: 300px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+                        <img src="/images/equation/36.5-celsius-to-fahrenheit-conversion.png" alt="${safeTranslate(pageT, 'conversionFormula.imageAlt', locale) || '36.5°C to Fahrenheit conversion formula'}" style="max-width: 300px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
                     </div>
                 </div>
             `
+        }, {
+            type: 'fact' as const,
+            title: safeTranslate(pageT, 'medicalGuidelines.title', locale),
+            content: `<div style="background: #e8f5e9; padding: 20px; border-radius: 8px; border-left: 4px solid #4caf50;"><h4 style="margin-top: 0; color: #2e7d32;">🏥 WHO & Medical Standards</h4><p>${safeTranslate(pageT, 'medicalGuidelines.content', locale)}</p></div>`
+        }, {
+            type: 'fact' as const,
+            title: safeTranslate(pageT, 'optimalFunction.title', locale),
+            content: `<div style="background: #fff3e0; padding: 20px; border-radius: 8px; border-left: 4px solid #ff9800;"><h4 style="margin-top: 0; color: #e65100;">🔬 Peak Physiological Function</h4><p>${safeTranslate(pageT, 'optimalFunction.content', locale)}</p></div>`
         }, {
             type: 'fact' as const,
             title: safeTranslate(pageT, 'measurementMethods.title', locale),
@@ -326,7 +334,7 @@ export default function Temperature36_4C({ lastUpdatedIso, pageTrans, availableP
         <TemperaturePage
             celsius={celsius}
             strategy={strategy}
-            customNamespace="36-4-c-to-f"
+            customNamespace="36-5-c-to-f"
             lastUpdated={lastUpdatedIso}
             canonicalUrl={canonicalUrl}
             customTitle={customTitle}
