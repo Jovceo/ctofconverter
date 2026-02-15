@@ -1,0 +1,172 @@
+{
+    "meta": {
+        "title": "36,4°C ke Fahrenheit (97,5°F) | Panduan Suhu Tubuh & Demam",
+        "description": "Konversi 36,4 derajat Celsius ke Fahrenheit. Pelajari bahwa 36,4°C sama dengan 97,5°F dan pahami apakah ini suhu tubuh normal atau demam untuk dewasa, anak, dan bayi.",
+        "ogTitle": "36,4°C ke Fahrenheit (97,5°F) | Panduan Suhu Tubuh",
+        "ogDescription": "Konversi 36,4°C ke Fahrenheit secara instan. 36,4°C sama dengan 97,5°F - pahami rentang suhu tubuh dan ambang demam untuk semua usia."
+    },
+    "conversionFormula": {
+        "title": "Rumus Konversi 36,4°C ke Fahrenheit",
+        "formula": "(36,4°C × 9/5) + 32 = 97,5°F",
+        "steps": [
+            "Kalikan 36,4 dengan 9/5: 36,4 × 1,8 = 65,52",
+            "Tambahkan 32 ke hasilnya: 65,52 + 32 = 97,52",
+            "Hasil akhir: 36,4°C = 97,5°F"
+        ],
+        "imageAlt": "Rumus konversi dan langkah perhitungan 36,4°C ke Fahrenheit"
+    },
+    "bodyTempRanges": {
+        "title": "Penilaian Suhu 36,4°C: Rentang Normal",
+        "subtitle": "Apakah 36,4°C Normal?",
+        "intro": "36,4°C (97,5°F) berada dalam rentang suhu tubuh normal. Ini adalah suhu yang sehat untuk sebagian besar dewasa dan merupakan pembacaan normal rentang menengah yang nyaman.",
+        "normalHighlight": "✅ SUHU NORMAL<br>36,4°C = 97,5°F adalah sehat",
+        "adultStatus": "Normal<br>Rentang menengah sehat",
+        "babyStatus": "Normal<br>Tipikal untuk bayi",
+        "underArmStatus": "Normal<br>Pembacaan ketiak",
+        "ranges": {
+            "adult": "Dewasa",
+            "baby": "Bayi",
+            "underArm": "Ketiak",
+            "normal": "Normal"
+        }
+    },
+    "measurementMethods": {
+        "title": "Metode Pengukuran Suhu pada 36,4°C",
+        "intro": "Pembacaan 36,4°C (97,5°F) bervariasi berdasarkan lokasi pengukuran. Memahami perbedaan ini membantu memastikan penilaian suhu tubuh normal yang akurat.",
+        "oral": {
+            "icon": "🌡️",
+            "temp": "36,4°C = 97,5°F",
+            "title": "Oral",
+            "description": "Pembacaan oral normal"
+        },
+        "underArm": {
+            "icon": "💪",
+            "temp": "36,4°C = 97,5°F",
+            "title": "Ketiak",
+            "description": "Pengukuran aksila normal"
+        },
+        "ear": {
+            "icon": "👂",
+            "temp": "36,4°C = 97,5°F",
+            "title": "Telinga",
+            "description": "Pembacaan timpanik normal"
+        },
+        "rectal": {
+            "icon": "👶",
+            "temp": "36,4°C = 97,5°F",
+            "title": "Rektal",
+            "description": "Normal untuk bayi"
+        }
+    },
+    "ageGroups": {
+        "title": "Panduan Suhu 36,4°C Berdasarkan Kelompok Usia",
+        "newborn": {
+            "title": "👶 Bayi Baru Lahir (0-3 bulan) - Normal",
+            "points": [
+                "36,4°C (97,5°F) berada dalam rentang normal untuk bayi baru lahir",
+                "Bayi baru lahir memiliki kemampuan regulasi suhu yang lebih rendah",
+                "Pantau pola yang konsisten daripada pembacaan tunggal",
+                "Hubungi dokter anak jika secara konsisten di bawah 36°C atau di atas 37,5°C"
+            ]
+        },
+        "infant": {
+            "title": "👶 Bayi (3-6 bulan) - Normal",
+            "points": [
+                "36,4°C adalah suhu yang sehat untuk usia ini",
+                "Rentang normal untuk bayi: 36,0-37,5°C",
+                "Pantau bersama dengan tingkat makan dan aktivitas",
+                "Hubungi dokter jika di bawah 35,5°C atau di atas 38°C"
+            ]
+        },
+        "children": {
+            "title": "🧒 Anak-anak (6+ bulan) - Normal",
+            "points": [
+                "36,4°C adalah suhu normal untuk anak-anak",
+                "Suhu bervariasi sepanjang hari (perbedaan 0,5°C)",
+                "Rentang menengah normal dan sepenuhnya sehat",
+                "Pantau jika secara konsisten di bawah 35,8°C"
+            ]
+        },
+        "adults": {
+            "title": "👨‍🦳 Dewasa - Normal",
+            "points": [
+                "36,4°C berada dalam rentang normal dewasa (36,0-37,2°C)",
+                "Suhu normal rentang menengah yang nyaman",
+                "Garis dasar individu bervariasi 0,3-0,5°C",
+                "Bukan alasan untuk khawatir"
+            ]
+        }
+    },
+    "temperatureScale": {
+        "title": "Skala Suhu Tubuh",
+        "intro": "Memahami rentang suhu dari rendah hingga tinggi:",
+        "tableHeaders": {
+            "celsius": "Celsius (°C)",
+            "fahrenheit": "Fahrenheit (°F)",
+            "assessment": "Penilaian"
+        },
+        "rows": [
+            {
+                "celsius": "35,0°C",
+                "fahrenheit": "95,0°F",
+                "assessment": "Rendah - Mungkin menunjukkan hipotermia"
+            },
+            {
+                "celsius": "35,5°C",
+                "fahrenheit": "95,9°F",
+                "assessment": "Normal rendah - Pantau jika berlanjut"
+            },
+            {
+                "celsius": "36,0°C",
+                "fahrenheit": "96,8°F",
+                "assessment": "Normal - Ujung bawah rentang sehat"
+            },
+            {
+                "celsius": "36,4°C",
+                "fahrenheit": "97,5°F",
+                "assessment": "Normal - Suhu sehat rentang menengah"
+            },
+            {
+                "celsius": "37,0°C",
+                "fahrenheit": "98,6°F",
+                "assessment": "Normal - Suhu tubuh rata-rata"
+            },
+            {
+                "celsius": "37,5°C",
+                "fahrenheit": "99,5°F",
+                "assessment": "Normal tinggi / Rendah"
+            },
+            {
+                "celsius": "38,0°C",
+                "fahrenheit": "100,4°F",
+                "assessment": "Ambang demam"
+            }
+        ]
+    },
+    "faq": {
+        "q1": {
+            "question": "Apakah 36,4°C (97,5°F) adalah suhu normal?",
+            "answer": "Ya, 36,4°C (97,5°F) berada dalam rentang suhu tubuh normal. Rentang suhu normal untuk dewasa adalah 36,0-37,2°C (96,8-99,0°F). 36,4°C mewakili pembacaan normal rentang menengah yang nyaman dan adalah suhu yang sehat untuk sebagian besar orang."
+        },
+        "q2": {
+            "question": "Apakah 36,4°C terlalu rendah untuk dewasa?",
+            "answer": "36,4°C (97,5°F) TIDAK terlalu rendah untuk dewasa. Ini berada dengan baik dalam rentang normal. Kekhawatiran hipotermia biasanya muncul di bawah 35,0°C (95°F). 36,4°C adalah suhu sehat rentang menengah yang dimiliki banyak dewasa secara alami."
+        },
+        "q3": {
+            "question": "Apa arti 36,4°C untuk bayi?",
+            "answer": "36,4°C (97,5°F) adalah suhu normal untuk bayi. Bayi sering memiliki suhu antara 36,0-37,5°C. Bayi baru lahir memiliki regulasi suhu yang lebih rendah, jadi pantau pola daripada pembacaan tunggal. Hubungi dokter anak jika secara konsisten di bawah 35,8°C atau di atas 37,5°C, atau jika bayi menunjukkan tanda-tanda penyakit."
+        },
+        "q4": {
+            "question": "Mengapa suhu saya 36,4°C di pagi hari?",
+            "answer": "Suhu pagi biasanya 0,3-0,5°C lebih rendah dari sore/malam karena ritme sirkadian. 36,4°C di pagi hari sepenuhnya normal dan sehat. Suhu tubuh berfluktuasi secara alami sepanjang hari, paling rendah sekitar pukul 6 pagi dan paling tinggi sekitar pukul 16-18."
+        },
+        "q5": {
+            "question": "Haruskah saya khawatir tentang suhu 36,4°C?",
+            "answer": "36,4°C (97,5°F) sendiri bukan alasan untuk khawatir. Tanda-tanda peringatan termasuk: Suhu secara konsisten di bawah 35,5°C; Penurunan tiba-tiba dari garis dasar normal Anda; Disertai gejala seperti menggigil, kebingungan, atau kelelahan; Pada bayi: makan buruk, lesu, atau anggota tubuh dingin. Jika tidak, 36,4°C adalah suhu yang sehat."
+        },
+        "q6": {
+            "question": "Bagaimana cara mengkonversi 36,4°C ke Fahrenheit?",
+            "answer": "Untuk mengkonversi 36,4°C ke Fahrenheit: Kalikan 36,4 dengan 9/5 (atau 1,8) = 65,52; Tambahkan 32 ke hasilnya: 65,52 + 32 = 97,52; Jawaban akhir: 36,4°C = 97,5°F. Ini adalah suhu tubuh normal dalam rentang sehat."
+        }
+    }
+}
