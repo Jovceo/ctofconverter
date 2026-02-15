@@ -17,10 +17,16 @@ jobs:
       - name: Wait for Vercel deployment
         run: sleep 120
 
-      - name: Detect changed URLs and submit to IndexNow
+      - name: Detecting changed URLs and submit to IndexNow
         env:
           INDEXNOW_SECRET: ${{ secrets.INDEXNOW_SECRET }}
         run: |
+          # 1. Install dependencies to run generation script
+          npm ci
+
+          # 2. Generate fresh sitemap.xml
+          node scripts/generate-sitemap.js
+          
           SECRET="${INDEXNOW_SECRET:-ctof-indexnow-2026}"
           SITE="https://ctofconverter.com"
           LOCALES="en zh es hi ar ja fr de id pt-br"
