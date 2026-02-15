@@ -21,129 +21,64 @@ jobs:
         env:
           INDEXNOW_SECRET: ${{ secrets.INDEXNOW_SECRET }}
         run: |
-          # 1. Install dependencies to run generation script
+          # 1. Install dependencies
           npm install
 
           # 2. Generate fresh sitemap.xml
           node scripts/generate-sitemap.js
           
-          SECRET="${INDEXNOW_SECRET:-ctof-indexnow-2026}"
-          SITE="https://ctofconverter.com"
-          LOCALES="en zh es hi ar ja fr de id pt-br"
-          URLS=""
-
-          # 获取本次 push 变更的文件列表
-          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD 2>/dev/null || echo "")
+          # 3. Detect Added .tsx files (New Pages)
+          # --diff-filter=A ensures we only care about NEW files, not modified ones.
+          ADDED_FILES=$(git diff --name-only --diff-filter=A HEAD~1 HEAD | grep "^pages/.*\.tsx$" || true)
           
-          if [ -z "$CHANGED_FILES" ]; then
-            echo "⚠️ No changed files detected, skipping IndexNow submission"
+          if [ -z "$ADDED_FILES" ]; then
+            echo "ℹ️ No new pages added. Skipping IndexNow submission."
             exit 0
           fi
-
-          echo "📝 Changed files:"
-          echo "$CHANGED_FILES"
-          echo ""
-
-          # 标记：是否需要提交全站
-          SUBMIT_ALL=false
-
-          # 检测是否有全局性变更（组件、布局、样式、配置等影响所有页面的文件）
-          if echo "$CHANGED_FILES" | grep -qE '^(components/|styles/|pages/_app|pages/_document|next\.config|public/sitemap)'; then
-            echo "🌐 Global change detected, submitting all URLs from sitemap"
-            SUBMIT_ALL=true
-          fi
-
-          if [ "$SUBMIT_ALL" = true ]; then
-            # 全局变更：从 sitemap 提取全部 URL
-            URLS=$(grep -oP '(?<=<loc>).*?(?=</loc>)' public/sitemap.xml | tr '\n' ',')
-          else
-            # 精准提交：只提交变更文件对应的 URL
-            
-            # 1) locale JSON 变更 → 对应语言 + 页面的 URL
-            for FILE in $CHANGED_FILES; do
-              # 匹配 locales/{locale}/home.json → /{locale}/ (首页)
-              if echo "$FILE" | grep -qP '^locales/([^/]+)/home\.json$'; then
-                LOCALE=$(echo "$FILE" | sed -n 's|^locales/\([^/]*\)/home\.json$|\1|p')
-                if [ "$LOCALE" = "en" ]; then
-                  URLS="${URLS}${SITE}/,"
-                else
-                  URLS="${URLS}${SITE}/${LOCALE},"
-                fi
-              fi
-
-              # 匹配 locales/{locale}/{page}.json → /{locale}/{page}
-              if echo "$FILE" | grep -qP '^locales/([^/]+)/(?!home\.json)([^/]+)\.json$'; then
-                LOCALE=$(echo "$FILE" | sed -n 's|^locales/\([^/]*\)/\([^/]*\)\.json$|\1|p')
-                PAGE=$(echo "$FILE" | sed -n 's|^locales/\([^/]*\)/\([^/]*\)\.json$|\2|p')
-                if [ "$LOCALE" = "en" ]; then
-                  URLS="${URLS}${SITE}/${PAGE},"
-                else
-                  URLS="${URLS}${SITE}/${LOCALE}/${PAGE},"
-                fi
-              fi
-
-              # 匹配 public/locales/{locale}/{page}.json → /{locale}/{page}
-              if echo "$FILE" | grep -qP '^public/locales/([^/]+)/([^/]+)\.json$'; then
-                LOCALE=$(echo "$FILE" | sed -n 's|^public/locales/\([^/]*\)/\([^/]*\)\.json$|\1|p')
-                PAGE=$(echo "$FILE" | sed -n 's|^public/locales/\([^/]*\)/\([^/]*\)\.json$|\2|p')
-                if [ "$LOCALE" = "en" ]; then
-                  URLS="${URLS}${SITE}/${PAGE},"
-                else
-                  URLS="${URLS}${SITE}/${LOCALE}/${PAGE},"
-                fi
-              fi
-            done
-
-            # 2) 页面 TSX 变更 → 所有语言版本的该页面 URL
-            for FILE in $CHANGED_FILES; do
-              if echo "$FILE" | grep -qP '^pages/(?!_|api/)([^/]+)\.tsx$'; then
-                PAGE=$(echo "$FILE" | sed -n 's|^pages/\([^/]*\)\.tsx$|\1|p')
-                if [ "$PAGE" = "index" ]; then
-                  # 首页 → 所有语言首页
-                  for L in $LOCALES; do
-                    if [ "$L" = "en" ]; then
-                      URLS="${URLS}${SITE}/,"
-                    else
-                      URLS="${URLS}${SITE}/${L},"
-                    fi
-                  done
-                else
-                  # 其他页面 → 所有语言版本
-                  for L in $LOCALES; do
-                    if [ "$L" = "en" ]; then
-                      URLS="${URLS}${SITE}/${PAGE},"
-                    else
-                      URLS="${URLS}${SITE}/${L}/${PAGE},"
-                    fi
-                  done
-                fi
-              fi
-            done
-          fi
-
-          # 去重并清理
-          URLS=$(echo "$URLS" | tr ',' '\n' | sort -u | grep -v '^$' | tr '\n' ',' | sed 's/,$//')
-
+          
+          echo "📝 Newly added pages:"
+          echo "$ADDED_FILES"
+          
+          # 4. Extract corresponding URLs from sitemap.xml
+          # We search sitemap.xml for URLs matching the filenames
+          URLS=""
+          
+          for FILE in $ADDED_FILES; do
+             # Convert "pages/foo.tsx" -> "foo"
+             SLUG=$(echo "$FILE" | sed 's/^pages\///' | sed 's/\.tsx$//')
+             
+             if [ "$SLUG" == "index" ]; then
+                SLUG=""
+             fi
+             
+             # Grep for <loc> entries containing the slug
+             # Note: This finds all locales for that page (e.g. /foo, /zh/foo, /fr/foo...)
+             # which is exactly what we want when a new page is created.
+             if [ -z "$SLUG" ]; then
+                # Special case for exact index match to avoid matching everything
+                 MATCHED_URLS=$(grep -oP '(?<=<loc>).*?(?=</loc>)' public/sitemap.xml | grep -E "https://ctofconverter.com/$" || true)
+             else
+                 MATCHED_URLS=$(grep -oP '(?<=<loc>).*?(?=</loc>)' public/sitemap.xml | grep "/$SLUG$" || true)
+             fi
+             
+             if [ ! -z "$MATCHED_URLS" ]; then
+               # Replace newlines with commas
+               ADDED_URLS=$(echo "$MATCHED_URLS" | tr '\n' ',')
+               URLS="${URLS}${ADDED_URLS}"
+             fi
+          done
+          
+          # Clean up trailing/leading commas
+          URLS=$(echo "$URLS" | sed 's/^,//' | sed 's/,$//' | sed 's/,,/,/g')
+          
           if [ -z "$URLS" ]; then
-            echo "ℹ️ No URL-affecting changes detected (e.g. only README, .github, etc.)"
-            echo "Skipping IndexNow submission."
+            echo "⚠️ Could not resolve URLs from sitemap for the added files."
             exit 0
           fi
-
-          URL_COUNT=$(echo "$URLS" | tr ',' '\n' | wc -l)
-          echo ""
-          echo "🚀 Submitting ${URL_COUNT} changed URLs to IndexNow:"
+          
+          echo "🚀 Submitting New URLs to IndexNow:"
           echo "$URLS" | tr ',' '\n'
-          echo ""
-
-          # 通过 API 路由提交（支持 urls 参数精准提交）
-          RESPONSE=$(curl -s -X POST "${SITE}/api/indexnow?secret=${SECRET}&urls=${URLS}")
-          echo "$RESPONSE"
-
-          # 检查是否成功
-          SUCCESS=$(echo "$RESPONSE" | grep -o '"success":true')
-          if [ -z "$SUCCESS" ]; then
-            echo "⚠️ IndexNow submission may have failed, but this is non-blocking"
-          else
-            echo "✅ IndexNow submission successful!"
-          fi
+          
+          # 5. Submit to IndexNow via API
+          RESPONSE=$(curl -s -X POST "https://ctofconverter.com/api/indexnow?secret=${INDEXNOW_SECRET}&urls=${URLS}")
+          echo "Server Response: $RESPONSE"
