@@ -194,6 +194,13 @@ function getAllPages() {
             console.log(`🎯 Strategy: ${excluded} low-value temp pages excluded from sitemap`);
         }
 
+        // 排序：首页最前，其他页面按自然顺序排序
+        filtered.sort((a, b) => {
+            if (a === 'index') return -1;
+            if (b === 'index') return 1;
+            return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+        });
+
         return filtered;
     } catch (e) {
         console.error('Error reading pages directory:', e);
