@@ -55,16 +55,19 @@ jobs:
              # Note: This finds all locales for that page (e.g. /foo, /zh/foo, /fr/foo...)
              # which is exactly what we want when a new page is created.
              if [ -z "$SLUG" ]; then
-                # Special case for exact index match to avoid matching everything
-                 MATCHED_URLS=$(grep -oP '(?<=<loc>).*?(?=</loc>)' public/sitemap.xml | grep -E "https://ctofconverter.com/$" || true)
+                # Special case for index: match site root and language roots
+                # Matches: https://site.com/, https://site.com/zh, https://site.com/fr/ etc.
+                MATCHED_URLS=$(grep -oP '(?<=<loc>).*?(?=</loc>)' public/sitemap.xml | grep -E "^https://ctofconverter.com/([a-z]{2}(-[a-z]{2})?/?)?$" || true)
              else
-                 MATCHED_URLS=$(grep -oP '(?<=<loc>).*?(?=</loc>)' public/sitemap.xml | grep "/$SLUG$" || true)
+                # Match English slug and localized slug
+                # Matches: /slug, /slug/, /zh/slug, /zh/slug/
+                MATCHED_URLS=$(grep -oP '(?<=<loc>).*?(?=</loc>)' public/sitemap.xml | grep -E "/$SLUG(/)?$" || true)
              fi
              
              if [ ! -z "$MATCHED_URLS" ]; then
-               # Replace newlines with commas
-               ADDED_URLS=$(echo "$MATCHED_URLS" | tr '\n' ',')
-               URLS="${URLS}${ADDED_URLS}"
+               # Replace newlines with spaces then commas
+               ADDED_URLS=$(echo "$MATCHED_URLS" | tr '\n' ',' | sed 's/,$//')
+               URLS="${URLS},${ADDED_URLS}"
              fi
           done
           
