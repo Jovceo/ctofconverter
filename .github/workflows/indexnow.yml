@@ -11,9 +11,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2  # 需要前一个 commit 来做 diff
+          fetch-depth: 2
 
-      # 等待 Vercel 部署完成（通常 1-2 分钟）
       - name: Wait for Vercel deployment
         run: sleep 120
 
@@ -26,62 +25,96 @@ jobs:
 
           # 2. Generate fresh sitemap.xml
           node scripts/generate-sitemap.js
-          
-          # 3. Detect Added .tsx files (New Pages)
-          # --diff-filter=A ensures we only care about NEW files, not modified ones.
-          ADDED_FILES=$(git diff --name-only --diff-filter=A HEAD~1 HEAD | grep "^pages/.*\.tsx$" || true)
-          
-          if [ -z "$ADDED_FILES" ]; then
-            echo "ℹ️ No new pages added. Skipping IndexNow submission."
+
+          # 3. Detect Added/Modified .tsx files (New or Updated Pages)
+          # --diff-filter=AM includes newly added and modified files.
+          CHANGED_FILES=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD | grep "^pages/.*\.tsx$" || true)
+
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No page changes detected. Skipping IndexNow submission."
             exit 0
           fi
-          
-          echo "📝 Newly added pages:"
-          echo "$ADDED_FILES"
-          
+
+          echo "Changed pages (added/modified):"
+          echo "$CHANGED_FILES"
+
           # 4. Extract corresponding URLs from sitemap.xml
           # We search sitemap.xml for URLs matching the filenames
+          LOCALES=("en" "zh" "es" "hi" "ar" "ja" "fr" "de" "id" "pt-br")
+          EN_ONLY_SLUGS=("privacy-policy" "terms-of-service" "about-us")
           URLS=""
-          
-          for FILE in $ADDED_FILES; do
-             # Convert "pages/foo.tsx" -> "foo"
-             SLUG=$(echo "$FILE" | sed 's/^pages\///' | sed 's/\.tsx$//')
-             
-             if [ "$SLUG" == "index" ]; then
-                SLUG=""
-             fi
-             
-             # Grep for <loc> entries containing the slug
-             # Note: This finds all locales for that page (e.g. /foo, /zh/foo, /fr/foo...)
-             # which is exactly what we want when a new page is created.
-             if [ -z "$SLUG" ]; then
-                # Special case for index: match site root and language roots
-                # Matches: https://site.com/, https://site.com/zh, https://site.com/fr/ etc.
-                MATCHED_URLS=$(grep -oP '(?<=<loc>).*?(?=</loc>)' public/sitemap.xml | grep -E "^https://ctofconverter.com/([a-z]{2}(-[a-z]{2})?/?)?$" || true)
-             else
-                # Match English slug and localized slug
-                # Matches: /slug, /slug/, /zh/slug, /zh/slug/
-                MATCHED_URLS=$(grep -oP '(?<=<loc>).*?(?=</loc>)' public/sitemap.xml | grep -E "/$SLUG(/)?$" || true)
-             fi
-             
-             if [ ! -z "$MATCHED_URLS" ]; then
-               # Replace newlines with spaces then commas
-               ADDED_URLS=$(echo "$MATCHED_URLS" | tr '\n' ',' | sed 's/,$//')
-               URLS="${URLS},${ADDED_URLS}"
-             fi
+
+          for FILE in $CHANGED_FILES; do
+            # Convert "pages/foo.tsx" -> "foo"
+            SLUG=$(echo "$FILE" | sed 's/^pages\///' | sed 's/\.tsx$//')
+
+            if [ "$SLUG" == "index" ]; then
+              SLUG=""
+            fi
+
+            # Grep <loc> entries containing the slug.
+            if [ -z "$SLUG" ]; then
+              MATCHED_URLS=$(grep -oP '(?<=<loc>).*?(?=</loc>)' public/sitemap.xml | grep -E "^https://ctofconverter.com/([a-z]{2}(-[a-z]{2})?/?)?$" || true)
+            else
+              MATCHED_URLS=$(grep -oP '(?<=<loc>).*?(?=</loc>)' public/sitemap.xml | grep -E "/$SLUG(/)?$" || true)
+            fi
+
+            if [ -z "$MATCHED_URLS" ]; then
+              echo "Could not find \"$SLUG\" in sitemap.xml. Falling back to computed URLs."
+
+              if [ -z "$SLUG" ]; then
+                MATCHED_URLS="https://ctofconverter.com"
+                for LOCALE in "${LOCALES[@]}"; do
+                  if [ "$LOCALE" != "en" ]; then
+                    MATCHED_URLS="${MATCHED_URLS}"$'\n'"https://ctofconverter.com/${LOCALE}"
+                  fi
+                done
+              else
+                IS_EN_ONLY=0
+                for EN_ONLY in "${EN_ONLY_SLUGS[@]}"; do
+                  if [ "$SLUG" == "$EN_ONLY" ]; then
+                    IS_EN_ONLY=1
+                    break
+                  fi
+                done
+
+                MATCHED_URLS="https://ctofconverter.com/${SLUG}"
+
+                if [ "$IS_EN_ONLY" -eq 0 ]; then
+                  for LOCALE in "${LOCALES[@]}"; do
+                    if [ "$LOCALE" != "en" ]; then
+                      MATCHED_URLS="${MATCHED_URLS}"$'\n'"https://ctofconverter.com/${LOCALE}/${SLUG}"
+                    fi
+                  done
+                fi
+              fi
+            fi
+
+            if [ ! -z "$MATCHED_URLS" ]; then
+              ADDED_URLS=$(echo "$MATCHED_URLS" | tr '\n' ',' | sed 's/,$//')
+              URLS="${URLS},${ADDED_URLS}"
+            fi
           done
-          
+
           # Clean up trailing/leading commas
           URLS=$(echo "$URLS" | sed 's/^,//' | sed 's/,$//' | sed 's/,,/,/g')
-          
+
           if [ -z "$URLS" ]; then
-            echo "⚠️ Could not resolve URLs from sitemap for the added files."
-            exit 0
+            echo "Could not resolve any URLs for changed files."
+            exit 1
           fi
-          
-          echo "🚀 Submitting New URLs to IndexNow:"
+
+          # De-duplicate URLs
+          URLS=$(echo "$URLS" | tr ',' '\n' | sed '/^$/d' | sort -u | tr '\n' ',' | sed 's/,$//')
+
+          echo "Submitting URLs to IndexNow:"
           echo "$URLS" | tr ',' '\n'
-          
+
           # 5. Submit to IndexNow via API
           RESPONSE=$(curl -s -X POST "https://ctofconverter.com/api/indexnow?secret=${INDEXNOW_SECRET}&urls=${URLS}")
           echo "Server Response: $RESPONSE"
+
+          if echo "$RESPONSE" | grep -q '"error"'; then
+            echo "IndexNow API returned an error."
+            exit 1
+          fi
