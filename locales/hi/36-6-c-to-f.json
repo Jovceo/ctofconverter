@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "title": "36.6°C से फ़ारेनहाइट में: 97.9°F | सामान्य शरीर का तापमान और स्वास्थ्य गाइड",
+    "description": "36.6°C को फ़ारेनहाइट (97.9°F) में बदलें। जानें कि क्या 36.6°C सामान्य है, वयस्कों/बच्चों/शिशुओं के लिए सामान्य सीमा और मापन विधियाँ।",
+    "ogTitle": "36.6°C से Fahrenheit – सामान्य तापमान गाइड",
+    "ogDescription": "36.6°C को Fahrenheit में बदलें। सभी आयु के लिए सामान्य सीमा और मापन विधियों के बारे में जानें।"
+  },
+  "conversionFormula": {
+    "title": "36.6°C से Fahrenheit रूपांतरण सूत्र",
+    "formula": "(36.6°C × 9/5) + 32 = 97.9°F",
+    "steps": [
+      "36.6 को 9/5 से गुणा करें: 36.6 × 1.8 = 65.88",
+      "फल में 32 जोड़ें: 65.88 + 32 = 97.88",
+      "अंतिम परिणाम: 36.6°C ≈ 97.88°F"
+    ],
+    "imageAlt": "36.6°C से Fahrenheit रूपांतरण सूत्र"
+  },
+  "bodyTempRanges": {
+    "title": "36.6°C तापमान मूल्यांकन: सामान्य सीमा",
+    "subtitle": "क्या 36.6°C सामान्य है?",
+    "intro": "36.6°C (97.88°F) आधुनिक सामान्य शरीर तापमान रेंज में है।",
+    "normalHighlight": "✅ सामान्य तापमान<br>36.6°C = 97.88°F",
+    "adultStatus": "Normal\nMid-range health",
+    "babyStatus": "Normal\nShishu ke liye typically",
+    "underArmStatus": "Normal\nAxillary reading",
+    "ranges": {
+      "adult": "वयस्क",
+      "baby": "शिशु",
+      "underArm": "बगल",
+      "normal": "सामान्य",
+      "fever": "बुखार"
+    }
+  },
+  "measurementMethods": {
+    "title": "36.6°C मानक मापक तरीके",
+    "intro": "36.6°C (97.88°F) के मापनीय भाग के अनुसार पढ़ाई भिन्न होती है।",
+    "oral": {
+      "icon": "🌡️",
+      "temp": "36.6°C = 97.88°F",
+      "title": "Oral",
+      "description": "Normal oral reading"
+    },
+    "underArm": {
+      "icon": "💪",
+      "temp": "36.6°C = 97.88°F",
+      "title": "Under Arm",
+      "description": "Normal axillary measurement"
+    },
+    "ear": {
+      "icon": "👂",
+      "temp": "36.6°C = 97.88°F",
+      "title": "Ear",
+      "description": "Normal tympanic reading"
+    },
+    "rectal": {
+      "icon": "👶",
+      "temp": "36.6°C = 97.88°F",
+      "title": "Rectal",
+      "description": "Normal for infants"
+    }
+  },
+  "ageGroups": {
+    "title": "36.6°C आयु समूह के अनुसार तापमान गाइड",
+    "newborn": {
+      "title": "👶 नयागर्भ/शिशु",
+      "points": [
+        "36.6°C (97.88°F) नवजात के लिए सामान्य",
+        "थोड़ा कम तापमान सामान्य है",
+        "लगातार पैटर्न निगरानी करें",
+        "36.0°C से कम हो तो डॉक्टर से परामर्श"
+      ],
+      "range": "36.4-37.4°C (97.5-99.3°F)"
+    },
+    "infant": {
+      "title": "👶 शिशु",
+      "points": [
+        "36.6°C उम्र के अनुसार सामान्य",
+        "36.0-37.5°C असामान्य नहीं",
+        "खुराक/गतिविधि के साथ निगरानी",
+        "35.5°C से नीचे या 38°C से ऊपर पर चिकित्सकीय मदद"
+      ],
+      "range": "36.5-37.5°C (97.7-99.5°F)"
+    },
+    "children": {
+      "title": "🧒 बच्चों",
+      "points": [
+        "36.6°C बच्चों के लिए सामान्य",
+        "दिन के दौरान 0.5°C तक बदलाव",
+        "स्थानीय आधाररेखा"
+      ],
+      "range": "36.4-37.2°C (97.5-99°F)"
+    },
+    "adults": {
+      "title": "👨‍🦳 वयस्क",
+      "points": [
+        "36.6°C सामान्य रेंज है",
+        "दोपहर के समय सामान्य",
+        "व्यक्ति-आधार रेखा भिन्न",
+        "चिंता नहीं"
+      ],
+      "range": "36.1-37.2°C (97-99°F)"
+    }
+  },
+  "temperatureScale": {
+    "title": "शरीर तापमान स्केल: 36.6°C मानक",
+    "intro": "पुरानी मानक के विपरीत नया सामान्य",
+    "tableHeaders": {
+      "celsius": "सेल्सियस (°C)",
+      "fahrenheit": "फ़ारेनहाइट (°F)",
+      "assessment": "मूल्यांकन"
+    },
+    "rows": [
+      {
+        "celsius": "35.5°C",
+        "fahrenheit": "95.9°F",
+        "assessment": "कम सामान्य - निगरानी"
+      },
+      {
+        "celsius": "36.0°C",
+        "fahrenheit": "96.8°F",
+        "assessment": "सामान्य - निचली सीमा"
+      },
+      {
+        "celsius": "36.4°C",
+        "fahrenheit": "97.5°F",
+        "assessment": "सामान्य - निचली सीमा"
+      },
+      {
+        "celsius": "36.6°C",
+        "fahrenheit": "97.9°F",
+        "assessment": "सामान्य - संकीर्ण निचली सीमा"
+      },
+      {
+        "celsius": "37.0°C",
+        "fahrenheit": "98.6°F",
+        "assessment": "सामान्य - क्लासिक मध्य"
+      },
+      {
+        "celsius": "37.5°C",
+        "fahrenheit": "99.5°F",
+        "assessment": "उच्च सामान्य / हल्का बुखार"
+      },
+      {
+        "celsius": "38.0°C",
+        "fahrenheit": "100.4°F",
+        "assessment": "बुखार सीमा"
+      }
+    ]
+  },
+  "faq": {
+    "q1": {
+      "question": "36.6°C सामान्य शरीर तापमान है?",
+      "answer": "हाँ, 36.6°C (97.88°F) वयस्कों की सामान्य सीमा में है।"
+    },
+    "q2": {
+      "question": "36.6°C बुखार है?",
+      "answer": "नहीं, 36.6°C किसी के लिए भी बुखार नहीं है।"
+    },
+    "q3": {
+      "question": "शिशु के लिए 36.6°C सामान्य है?",
+      "answer": "हाँ, 36.6°C शिशुओं के लिए सामान्य है।"
+    },
+    "q4": {
+      "question": "बगल तापमान में 36.6°C का क्या मतलब है?",
+      "answer": "बगल माप के लिए, 36.6°C थोड़ा कम सामान्य हो सकता है।"
+    },
+    "q5": {
+      "question": "36.6°C को फ़ारेनहाइट में कैसे बदलें?",
+      "answer": "गणना: 2 से गुणा (36.6×2=73.2), 10% घटाएं (73.2-7.32=65.88), 32 जोड़ें (65.88+32=97.88)।"
+    },
+    "q6": {
+      "question": "36.6°C के आसपास अन्य तापमान?",
+      "answer": "36.5°C=97.7°F, 36.7°C=98.06°F, 37.0°C=98.6°F।"
+    }
+  },
+  "translationStatus": "pending",
+  "notes": "Structure aligned to English template; translation pending for bodyTempRanges, measurementMethods, ageGroups, temperatureScale and faq. Verify rendering of placeholders {fahrenheit}, {celsius}, {celsiusNoDecimal}."
+}

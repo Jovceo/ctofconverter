@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "title": "36.6°C を Fahrenheit に換算 (97.9°F) | 正常な体温と健康ガイド",
+    "description": "36.6°C を Fahrenheit (97.9°F) に換算します。36.6°C は正常ですか？現代の正常範囲と測定方法を学びましょう。",
+    "ogTitle": "36.6°C を Fahrenheit に換算",
+    "ogDescription": "年齢を問わず現代の正常範囲と測定方法を解説。"
+  },
+  "conversionFormula": {
+    "title": "36.6°C to Fahrenheit Conversion Formula",
+    "formula": "(36.6°C × 9/5) + 32 = 97.9°F",
+    "steps": [
+      "36.6 × 1.8 = 65.88",
+      "65.88 + 32 = 97.88",
+      "結果: 36.6°C ≈ 97.88°F"
+    ],
+    "imageAlt": "36.6°C to Fahrenheit formula"
+  },
+  "bodyTempRanges": {
+    "title": "36.6°C 体温評価：正常範囲",
+    "subtitle": "36.6°C は正常ですか？",
+    "intro": "36.6°C (97.88°F) 位于現代の正常体温範囲です。",
+    "normalHighlight": "✅ 正常体温<br>36.6°C = 97.88°F",
+    "adultStatus": "Normal",
+    "babyStatus": "Normal",
+    "underArmStatus": "Normal",
+    "ranges": {
+      "adult": "大人",
+      "baby": "乳児",
+      "underArm": "腋下",
+      "normal": "正常",
+      "fever": "発熱"
+    }
+  },
+  "measurementMethods": {
+    "title": "36.6°C の測定方法",
+    "intro": "36.6°C (97.88°F) の読みは部位ごとに異なります。",
+    "oral": {
+      "icon": "🌡️",
+      "temp": "36.6°C = 97.88°F",
+      "title": "口腔",
+      "description": "正常口読取"
+    },
+    "underArm": {
+      "icon": "💪",
+      "temp": "36.6°C = 97.88°F",
+      "title": "腋下",
+      "description": "正常腋窩測定"
+    },
+    "ear": {
+      "icon": "👂",
+      "temp": "36.6°C = 97.88°F",
+      "title": "耳",
+      "description": "正常鼓膜読取"
+    },
+    "rectal": {
+      "icon": "👶",
+      "temp": "36.6°C = 97.88°F",
+      "title": "直腸",
+      "description": "乳児の正常値"
+    }
+  },
+  "ageGroups": {
+    "title": "36.6°C 年齢別体温ガイド",
+    "newborn": {
+      "title": "👶 新生児 (0-3 月)",
+      "points": [
+        "36.6°C (97.88°F) は新生児で正常の範囲",
+        "新生児は温度調節が難しい",
+        "パターンを監視",
+        "36.0°C 未満は小児科へ"
+      ],
+      "range": "36.4-37.4°C (97.5-99.3°F)"
+    },
+    "infant": {
+      "title": "👶 乳児 (3-6 月)",
+      "points": [
+        "36.6°C はこの年齢で健康な温度",
+        "範囲: 36.0-37.5°C",
+        "授乳と活動を監視",
+        "35.5°C 未満または 38°C以上は要医療"
+      ],
+      "range": "36.5-37.5°C (97.7-99.5°F)"
+    },
+    "children": {
+      "title": "🧒 子ども (6 か月以上)",
+      "points": [
+        "36.6°C は子どもの正常温度",
+        "日中の変動は約 0.5°C",
+        "中程度の正常",
+        "継続して35.8°C未満なら注意"
+      ],
+      "range": "36.4-37.2°C (97.5-99°F)"
+    },
+    "adults": {
+      "title": "👨‍🦳 大人 - Normal",
+      "points": [
+        "36.6°C は正常範囲内",
+        "午後は高く出やすい",
+        "個人差は0.3-0.5°C",
+        "特に問題なし"
+      ],
+      "range": "36.1-37.2°C (97-99°F)"
+    }
+  },
+  "temperatureScale": {
+    "title": "体温スケール: 36.6°C の標準",
+    "intro": "古い基準と新しい研究を比較",
+    "tableHeaders": {
+      "celsius": "摂氏 (°C)",
+      "fahrenheit": "華氏 (°F)",
+      "assessment": "評価"
+    },
+    "rows": [
+      {
+        "celsius": "35.5°C",
+        "fahrenheit": "95.9°F",
+        "assessment": "低正常 - 監視"
+      },
+      {
+        "celsius": "36.0°C",
+        "fahrenheit": "96.8°F",
+        "assessment": "正常 - 下限"
+      },
+      {
+        "celsius": "36.4°C",
+        "fahrenheit": "97.5°F",
+        "assessment": "正常 - やや低"
+      },
+      {
+        "celsius": "36.6°C",
+        "fahrenheit": "97.9°F",
+        "assessment": "正常 - 下限"
+      },
+      {
+        "celsius": "37.0°C",
+        "fahrenheit": "98.6°F",
+        "assessment": "正常 - 平均的"
+      },
+      {
+        "celsius": "37.5°C",
+        "fahrenheit": "99.5°F",
+        "assessment": "高め / 軽微な発熱"
+      },
+      {
+        "celsius": "38.0°C",
+        "fahrenheit": "100.4°F",
+        "assessment": "発熱の閾値"
+      }
+    ]
+  },
+  "faq": {
+    "q1": {
+      "question": "36.6°Cは正常な体温ですか？",
+      "answer": "はい、36.6°C (97.88°F) は大人の正常体温範囲内です。"
+    },
+    "q2": {
+      "question": "36.6°Cは大人や子どもの発熱ですか？",
+      "answer": "いいえ、36.6°Cは誰の発熱でもありません。"
+    },
+    "q3": {
+      "question": "36.6°Cは赤ちゃんに正常ですか？",
+      "answer": "はい、36.6°Cは赤ちゃんに正常ですが、正常範囲の低い方です。"
+    },
+    "q4": {
+      "question": "腋下温度で36.6°Cの意味は？",
+      "answer": "腋下測定では36.6°Cは稍低めの正常値입니다。"
+    },
+    "q5": {
+      "question": "36.6°Cから華氏への暗算変換は？",
+      "answer": "快速計算: 2を掛ける(36.6×2=73.2)、10%引く(73.2-7.32=65.88)、32足す(65.88+32=97.88)。"
+    },
+    "q6": {
+      "question": "36.6°C附近的体温は？",
+      "answer": "36.5°C=97.7°F、36.7°C=98.06°F、37.0°C=98.6°Fなど。"
+    }
+  },
+  "translationStatus": "pending",
+  "notes": "英語テンプレートに合わせて構造を揃えました。 bodyTempRanges、measurementMethods、ageGroups、temperatureScale、faq の翻訳は未定義。プレースホルダ {fahrenheit}、{celsius}、{celsiusNoDecimal} の表示を確認してください。"
+}

@@ -16,11 +16,20 @@ export function safeTranslate(
   path: string,
   locale: string
 ): string {
-  const keys = path.split('.');
+  // Support array index access like rows[0]
+  const normalizedPath = path.replace(/\[(\d+)\]/g, '.__INDEX__$1__');
+  const keys = normalizedPath.split('.');
   let value = translations;
   
   for (const key of keys) {
-    if (value && typeof value === 'object' && key in value) {
+    if (key.startsWith('__INDEX__') && key.endsWith('__')) {
+      const index = parseInt(key.replace('__INDEX__', '').replace('__', ''), 10);
+      if (Array.isArray(value) && index >= 0 && index < value.length) {
+        value = value[index];
+      } else {
+        return `[${locale}:${path}]`;
+      }
+    } else if (value && typeof value === 'object' && key in value) {
       value = value[key];
     } else {
       // 翻译路径不存在 - 明显标记

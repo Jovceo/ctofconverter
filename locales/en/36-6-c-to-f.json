@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "36.6°C to Fahrenheit (97.88°F) | Body Temperature Guide & Calculator",
+    "description": "Convert 36.6 degrees Celsius to Fahrenheit quickly. Learn that 36.6°C equals 97.88°F, understand if 36.6°C is normal body temperature or fever for adults and babies.",
+    "ogTitle": "36.6°C to Fahrenheit (97.88°F) Body Temperature Converter",
+    "ogDescription": "Convert 36.6 degrees Celsius to Fahrenheit instantly. 36.6°C equals 97.88°F - understand body temperature norms and fever detection."
+  },
+  "conversionFormula": {
+    "title": "36.6°C to Fahrenheit Conversion Formula",
+    "formula": "(36.6°C × 9/5) + 32 = 97.88°F",
+    "steps": [
+      "Multiply 36.6 by 9/5: 36.6 × 1.8 = 65.88",
+      "Add 32 to the result: 65.88 + 32 = 97.88",
+      "Final result: 36.6°C = 97.88°F"
+    ],
+    "imageAlt": "36.6°C to Fahrenheit formula image"
+  },
+  "bodyTempRanges": {
+    "title": "36.6°C Temperature Assessment: Normal Range",
+    "subtitle": "Is 36.6°C Normal?",
+    "intro": "36.6°C (97.88°F) sits within the modern normal body temperature range. It reflects a healthy baseline for most adults.",
+    "normalHighlight": "✅ NORMAL TEMPERATURE<br>36.6°C = 97.88°F is healthy",
+    "adultStatus": "Normal\nMid-range healthy",
+    "babyStatus": "Normal\nTypical for infants",
+    "underArmStatus": "Normal\nAxillary reading",
+    "ranges": {
+      "adult": "Adults",
+      "baby": "Babies",
+      "underArm": "Under Arm",
+      "normal": "Normal"
+    }
+  },
+  "measurementMethods": {
+    "title": "Temperature Measurement Methods at 36.6°C",
+    "intro": "36.6°C (97.88°F) readings vary by measurement site. Understanding these differences helps ensure accurate assessment of normal body temperature.",
+    "oral": {
+      "icon": "🌡️",
+      "temp": "36.6°C = 97.88°F",
+      "title": "Oral",
+      "description": "Normal oral reading"
+    },
+    "underArm": {
+      "icon": "💪",
+      "temp": "36.6°C = 97.88°F",
+      "title": "Under Arm",
+      "description": "Normal axillary measurement"
+    },
+    "ear": {
+      "icon": "👂",
+      "temp": "36.6°C = 97.88°F",
+      "title": "Ear",
+      "description": "Normal tympanic reading"
+    },
+    "rectal": {
+      "icon": "👶",
+      "temp": "36.6°C = 97.88°F",
+      "title": "Rectal",
+      "description": "Normal for infants"
+    }
+  },
+  "ageGroups": {
+    "title": "36.6°C Temperature Guide by Age Group",
+    "newborn": {
+      "title": "👶 Newborns (0-3 months) - Normal",
+      "range": "36.4-37.4°C (97.5-99.3°F)",
+      "points": [
+        "36.6°C (97.88°F) is within normal range for newborns",
+        "Newborns have less temperature regulation ability",
+        "Monitor for consistent patterns rather than single readings",
+        "Consult pediatrician if consistently below 36.0°C"
+      ]
+    },
+    "infant": {
+      "title": "👶 Infants (3-6 months) - Normal",
+      "range": "36.5-37.5°C (97.7-99.5°F)",
+      "points": [
+        "36.6°C is a healthy temperature for this age",
+        "Normal infant range: 36.0-37.5°C",
+        "Monitor alongside feeding and activity levels",
+        "Contact doctor if below 35.5°C or above 38°C"
+      ]
+    },
+    "children": {
+      "title": "🧒 Children (6+ months) - Normal",
+      "range": "36.4-37.2°C (97.5-99°F)",
+      "points": [
+        "36.6°C is a normal temperature for children",
+        "Temperature varies throughout the day (0.5°C difference)",
+        "Mid-range normal and healthy",
+        "Monitor if consistently below 35.8°C"
+      ]
+    },
+    "adults": {
+      "title": "👨‍🦳 Adults - Normal",
+      "range": "36.1-37.2°C (97-99°F)",
+      "points": [
+        "36.6°C is within normal adult range (36.0-37.2°C)",
+        "Common afternoon temperature",
+        "Individual baseline varies by 0.3-0.5°C",
+        "Not a cause for concern"
+      ]
+    }
+  },
+  "temperatureScale": {
+    "title": "Body Temperature Scale",
+    "intro": "Understanding temperature ranges from low to high:",
+    "tableHeaders": {
+      "celsius": "Celsius (°C)",
+      "fahrenheit": "Fahrenheit (°F)",
+      "assessment": "Assessment"
+    },
+    "rows": [
+      { "celsius": "35.5°C", "fahrenheit": "95.9°F", "assessment": "Low normal - Monitor" },
+      { "celsius": "36.0°C", "fahrenheit": "96.8°F", "assessment": "Normal - Lower range" },
+      { "celsius": "36.4°C", "fahrenheit": "97.5°F", "assessment": "Normal - Lower normal" },
+      { "celsius": "36.6°C", "fahrenheit": "97.9°F", "assessment": "Normal - Refined lower limit" },
+      { "celsius": "37.0°C", "fahrenheit": "98.6°F", "assessment": "Normal - Classic average" },
+      { "celsius": "37.5°C", "fahrenheit": "99.5°F", "assessment": "High normal / Low fever" },
+      { "celsius": "38.0°C", "fahrenheit": "100.4°F", "assessment": "Fever threshold" }
+    ]
+  },
+  "faq": {
+    "q1": { "question": "Is 36.6°C a normal body temperature?", "answer": "Yes, 36.6°C (97.88°F) is within the normal body temperature range for adults. Normal oral temperature typically ranges from 36.1°C to 37.2°C (97°F to 99°F)." },
+    "q2": { "question": "Is 36.6°C a fever for adults or children?", "answer": "No, 36.6°C is not a fever for anyone. Fever is typically defined as a temperature of 38°C (100.4°F) or higher. 36.6°C is actually at the healthier, cooler end of the normal range." },
+    "q3": { "question": "Is 36.6°C normal for a baby?", "answer": "Yes, 36.6°C is normal for a baby, though it's at the lower end of their normal range. Babies typically have slightly higher normal temperatures than adults, ranging from 36.4°C to 37.4°C (97.5°F to 99.3°F) for newborns." },
+    "q4": { "question": "What does 36.6°C mean for underarm temperature?", "answer": "For underarm (axillary) measurement, 36.6°C may indicate a slightly low normal temperature. Underarm readings are typically 0.5-1.0°C lower than oral temperatures. A reading of 36.6°C underarm would correspond to approximately 37.1-37.6°C orally, which is still within normal range." },
+    "q5": { "question": "How do I convert 36.6 degrees celsius to Fahrenheit in my head?", "answer": "A quick mental calculation: Multiply by 2 (36.6×2=73.2) then subtract 10% (73.2-7.32=65.88) and add 32 (65.88+32=97.88). This gives you the exact conversion of 97.88°F." },
+    "q6": { "question": "What other body temperatures are near 36.6°C?", "answer": "Common nearby body temperatures include: 36.5°C = 97.7°F - Normal body temperature, 36.7°C = 98.06°F - Normal body temperature, 37.0°C = 98.6°F - Classic normal body temperature." }
+  }
+}

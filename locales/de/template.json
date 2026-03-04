@@ -1,255 +1,260 @@
 {
-    "meta": {
-        "pageTitle": "{celsius}°C in Fahrenheit ({fahrenheit}°F) | Umrechnungsleitfaden & Rechner",
-        "description": "Rechnen Sie {celsius} Grad Celsius schnell in Fahrenheit um. Erfahren Sie, dass {celsius}°C gleich {fahrenheit}°F ist.",
-        "ogDescription": "Celsius in Fahrenheit Umrechnung: {celsius}°C = {fahrenheit}°F. Sehen Sie sich die Berechnungsschritte an."
+  "meta": {
+    "pageTitle": "{celsius}°C in Fahrenheit ({fahrenheit}°F) | Umrechnungsleitfaden & Rechner",
+    "description": "Rechnen Sie {celsius} Grad Celsius schnell in Fahrenheit um. Erfahren Sie, dass {celsius}°C gleich {fahrenheit}°F ist.",
+    "ogDescription": "Celsius in Fahrenheit Umrechnung: {celsius}°C = {fahrenheit}°F. Sehen Sie sich die Berechnungsschritte an."
+  },
+  "related": {
+    "conversionTitle": "{celsius} Celsius in Fahrenheit ({fahrenheit}°F)",
+    "labels": {
+      "freezingPoint": "Gefrierpunkt",
+      "coolWeather": "Kühles Wetter",
+      "roomTemp": "Zimmertemperatur",
+      "warm": "Warm",
+      "hotWeather": "Heißes Wetter",
+      "normalLow": "Normal niedrig",
+      "normalBodyTemp": "Normale Körpertemperatur",
+      "feverThreshold": "Fieberschwelle",
+      "highFever": "Hohes Fieber",
+      "dangerousFever": "Gefährliches Fieber",
+      "criticalLimit": "Kritische Grenze",
+      "extremeHotBath": "Extrem heißes Bad",
+      "hotWater": "Heißes Wasser",
+      "greenTea": "Grüner Tee",
+      "coffeeBrewing": "Kaffee kochen",
+      "boilingPoint": "Siedepunkt",
+      "slowBake": "Langsames Backen",
+      "moderateOven": "Mäßiger Ofen",
+      "hotOven": "Heißer Ofen",
+      "veryHot": "Sehr heiß",
+      "absoluteZero": "Absoluter Nullpunkt",
+      "dryIce": "Trockeneis",
+      "goldMelting": "Goldschmelze"
+    }
+  },
+  "common": {
+    "quickResult": "Schnelles Ergebnis",
+    "copyResult": "📋 Kopieren",
+    "copied": "✓ Kopiert!",
+    "formulaTitle": "Wie man {celsius} Celsius in Fahrenheit umrechnet: Exakte Formel",
+    "formulaIntro": "Verwenden Sie zur Umrechnung die folgende Formel:",
+    "stepTitle": "Schritt-für-Schritt-Berechnung",
+    "stepResult": "Ergebnis",
+    "tempComparison": "Temperaturvergleich",
+    "yourTemp": "Ihre Temperatur",
+    "freezingPoint": "Gefrierpunkt",
+    "roomTemp": "Zimmertemperatur",
+    "boilingPoint": "Siedepunkt",
+    "faqTitle": "Häufig gestellte Fragen",
+    "relatedTitle": "Verwandte Umrechnungen",
+    "celsiusLabel": "Celsius (°C)",
+    "fahrenheitLabel": "Fahrenheit (°F)",
+    "tableTitle": "Umrechnungstabelle Celsius in Fahrenheit",
+    "descriptionCol": "Beschreibung",
+    "tempCol": "Temperatur",
+    "celsiusCol": "Celsius",
+    "fahrenheitCol": "Fahrenheit",
+    "lastUpdated": "Zuletzt aktualisiert:",
+    "breadcrumbCurrent": "{celsius} Celsius in Fahrenheit",
+    "resultHeader": "{celsius}°C in Fahrenheit ist:",
+    "healthContextTitle": "Gesundheitskontext",
+    "healthContextFooter": "Bitte konsultieren Sie einen Arzt für medizinischen Rat.",
+    "weatherFeelTitle": "Gefühlte Temperatur",
+    "weatherFeelIntro": "Bei <strong>{celsius}°C</strong>:",
+    "scale": {
+      "extremeCold": "Extreme Kälte",
+      "freezing": "Wasser gefriert",
+      "cool": "Kühl",
+      "roomTemp": "Zimmertemp.",
+      "bodyTemp": "Körpertemp.",
+      "veryHot": "Sehr heiß",
+      "boiling": "Wasser kocht"
     },
-    "related": {
-        "conversionTitle": "{celsius} Celsius in Fahrenheit ({fahrenheit}°F)",
-        "labels": {
-            "freezingPoint": "Gefrierpunkt",
-            "coolWeather": "Kühles Wetter",
-            "roomTemp": "Zimmertemperatur",
-            "warm": "Warm",
-            "hotWeather": "Heißes Wetter",
-            "normalLow": "Normal niedrig",
-            "normalBodyTemp": "Normale Körpertemperatur",
-            "feverThreshold": "Fieberschwelle",
-            "highFever": "Hohes Fieber",
-            "dangerousFever": "Gefährliches Fieber",
-            "criticalLimit": "Kritische Grenze",
-            "extremeHotBath": "Extrem heißes Bad",
-            "hotWater": "Heißes Wasser",
-            "greenTea": "Grüner Tee",
-            "coffeeBrewing": "Kaffee kochen",
-            "boilingPoint": "Siedepunkt",
-            "slowBake": "Langsames Backen",
-            "moderateOven": "Mäßiger Ofen",
-            "hotOven": "Heißer Ofen",
-            "veryHot": "Sehr heiß",
-            "absoluteZero": "Absoluter Nullpunkt",
-            "dryIce": "Trockeneis",
-            "goldMelting": "Goldschmelze"
-        }
-    },
-    "common": {
-        "quickResult": "Schnelles Ergebnis",
-        "copyResult": "📋 Kopieren",
-        "copied": "✓ Kopiert!",
-        "formulaTitle": "Wie man {celsius} Celsius in Fahrenheit umrechnet: Exakte Formel",
-        "formulaIntro": "Verwenden Sie zur Umrechnung die folgende Formel:",
-        "stepTitle": "Schritt-für-Schritt-Berechnung",
-        "stepResult": "Ergebnis",
-        "tempComparison": "Temperaturvergleich",
-        "yourTemp": "Ihre Temperatur",
-        "freezingPoint": "Gefrierpunkt",
-        "roomTemp": "Zimmertemperatur",
-        "boilingPoint": "Siedepunkt",
-        "faqTitle": "Häufig gestellte Fragen",
-        "relatedTitle": "Verwandte Umrechnungen",
-        "celsiusLabel": "Celsius (°C)",
-        "fahrenheitLabel": "Fahrenheit (°F)",
-        "tableTitle": "Umrechnungstabelle Celsius in Fahrenheit",
-        "descriptionCol": "Beschreibung",
-        "tempCol": "Temperatur",
-        "celsiusCol": "Celsius",
-        "fahrenheitCol": "Fahrenheit",
-        "lastUpdated": "Zuletzt aktualisiert:",
-        "breadcrumbCurrent": "{celsius} Celsius in Fahrenheit",
-        "resultHeader": "{celsius}°C in Fahrenheit ist:",
-        "healthContextTitle": "Gesundheitskontext",
-        "healthContextFooter": "Bitte konsultieren Sie einen Arzt für medizinischen Rat.",
-        "weatherFeelTitle": "Gefühlte Temperatur",
-        "weatherFeelIntro": "Bei <strong>{celsius}°C</strong>:",
-        "scale": {
-            "extremeCold": "Extreme Kälte",
-            "freezing": "Wasser gefriert",
-            "cool": "Kühl",
-            "roomTemp": "Zimmertemp.",
-            "bodyTemp": "Körpertemp.",
-            "veryHot": "Sehr heiß",
-            "boiling": "Wasser kocht"
-        },
-        "headerTitle": "Konvertieren Sie {celsius} Grad Celsius in Fahrenheit ({fahrenheit}°F)",
-        "resultHeaderDefault": "Celsius in Fahrenheit Umrechner",
-        "logoText": "Celsius in Fahrenheit Umrechner",
-        "introValue": "<strong>{celsius} Grad Celsius</strong> entsprechen <strong>{fahrenheit} Grad Fahrenheit</strong>.",
-        "introConnect": "Diese Temperaturumrechnung wird häufig verwendet in",
-        "linkBodyTemp": "Körpertemperaturmessungen",
-        "linkFeverChart": "Fieber-Temperaturtabelle",
-        "linkCtoFChart": "Celsius-in-Fahrenheit-Tabelle",
-        "linkOvenChart": "Backofenumrechnungstabelle",
-        "linkCooking": "Kochen, Backen und Ofentemperatur-Einstellungen",
-        "linkGeneral": "umfassende Temperaturumrechnungstabelle",
-        "introMedical": [
-            "Verwendet für Körpertemperatur. Siehe unseren <link>Fieber-Ratgeber</link>.",
-            "Üblich in der Gesundheitsdiagnostik. Siehe <link>Temperaturtabelle</link>."
-        ],
-        "introWeather": [
-            "Verwendet in Wettervorhersagen. Siehe unsere <link>Temperaturtabelle</link>.",
-            "Standard in der Meteorologie. Siehe <link>Umrechnungshilfe</link>."
-        ],
-        "introCooking": [
-            "Häufig beim Kochen verwendet. Sehen Sie unsere <link>Umrechnungstabelle</link>.",
-            "Ideal zum Backen. Nutzen Sie unseren <link>Küchenratgeber</link>."
-        ],
-        "introGeneral": [
-            "Verwendet in der Wissenschaft. Siehe unsere <link>Umrechnungstabelle</link>.",
-            "Standard in der Industrie. Siehe <link>Einheiten-Guide</link>."
-        ],
-        "introMedicalPart2": " und medizinische Diagnostik. Prüfen Sie unseren ",
-        "introMedicalPart3": " für weitere Details an.",
-        "introWeatherPart1": " Wettervorhersagen und tägliche Temperaturwerte. Sehen Sie sich unsere komplette ",
-        "introWeatherPart3": " zur schnellen Referenz an.",
-        "introCookingPart2": ". Verwenden Sie unsere ",
-        "introCookingPart3": " für präzises Backen.",
-        "introGeneralPart1": " wissenschaftliche und industrielle Anwendungen. Entdecken Sie unsere ",
-        "introGeneralPart3": " für weitere Umrechnungen.",
-        "step1": "Schritt 1",
-        "step2": "Schritt 2",
-        "calculation": "Berechnung",
-        "result": "Ergebnis",
-        "medicalAdviceNote": "* Diese Informationen dienen nur der allgemeinen Referenz und sind kein medizinischer Rat.",
-        "fToC": "Fahrenheit in Celsius",
-        "cToK": "Celsius in Kelvin",
-        "kToC": "Kelvin in Celsius",
-        "minusCToF": "Minus Celsius in Fahrenheit",
-        "freezingTooltip": "Wasser gefriert bei 0°C und siedet bei 100°C",
-        "fahrenheitTooltip": "Wasser gefriert bei 32°F und siedet bei 212°F"
-    },
-    "practical": {
-        "title": "Praktische Anwendungen von {celsius}°C ({fahrenheit}°F)",
-        "cooking": {
-            "title": "Kochen & Backen",
-            "description": "Bei {celsius}°C ({fahrenheit}°F) wird diese Temperatur häufig zum Kochen verwendet. Ideal zum Backen und Braten.",
-            "pastries": "Gebäck backen",
-            "pastriesDesc": "Viele Gebäcke werden bei {celsius}°C gebacken",
-            "roasting": "Gemüse rösten",
-            "roastingDesc": "Perfekte Temperatur zum Karamellisieren",
-            "slowRoast": "Langsames Braten",
-            "slowRoastDesc": "Für zartes Fleisch bei längerer Garzeit"
-        },
-        "weather": {
-            "title": "Wetter & Klima",
-            "description": "{celsius}°C ({fahrenheit}°F) entspricht {condition} Wetter. {tip}",
-            "conditions": {
-                "freezing": "gefrierenden",
-                "cold": "kalten",
-                "comfortable": "angenehmen",
-                "hot": "heißen"
-            },
-            "tips": {
-                "freezing": "Rechnen Sie mit Eis und Schnee.",
-                "cold": "Tragen Sie warme Kleidung in Schichten.",
-                "comfortable": "Ideal für Outdoor-Aktivitäten.",
-                "hot": "Viel trinken und Schatten suchen."
-            }
-        },
-        "body": {
-            "title": "Körpertemperatur",
-            "description": "{celsius}°C ({fahrenheit}°F) ist {condition}. {tip}",
-            "conditions": {
-                "below": "unter normal",
-                "normal": "normal",
-                "elevated": "leicht erhöht",
-                "lowGrade": "leichtes Fieber",
-                "moderate": "mäßiges Fieber",
-                "high": "hohes Fieber"
-            },
-            "tips": {
-                "fever": "Bei anhaltenden Symptomen Arzt aufsuchen.",
-                "normal": "Dies liegt im gesunden Bereich."
-            }
-        },
-        "science": {
-            "title": "Wissenschaftliche Anwendungen",
-            "description": "{celsius}°C ({fahrenheit}°F) {context}.",
-            "contexts": {
-                "freezing": "ist der Gefrierpunkt von Wasser",
-                "boiling": "ist der Siedepunkt von Wasser",
-                "general": "wird in Laborprozessen verwendet"
-            }
-        },
-        "storage": {
-            "title": "Lagerbedingungen",
-            "description": "{celsius}°C ({fahrenheit}°F) eignet sich für {condition}.",
-            "conditions": {
-                "frozen": "Tiefkühllagerung",
-                "refrigerated": "Kühllagerung",
-                "cool": "kühle Lagerung",
-                "room": "Lagerung bei Zimmertemperatur"
-            }
-        },
-        "extreme": "{celsius}°C ist {fahrenheit}°F, eine Temperatur mit spezifischen Anwendungen.",
-        "extremeTypes": {
-            "extreme": "extrem",
-            "specialized": "spezialisiert"
-        }
-    },
-    "spinner": {
-        "step1": [
-            "Zuerst multiplizieren Sie den Celsius-Wert ({celsius}) mit 9/5 (oder 1,8).",
-            "Beginnen Sie, indem Sie {celsius} mit 1,8 multiplizieren."
-        ],
-        "step2": [
-            "Addieren Sie dann einfach 32 zum Ergebnis ({val}).",
-            "Nehmen Sie {val} und zählen Sie 32 dazu."
-        ],
-        "conclusion": [
-            "Somit sind {celsius} Grad Celsius gleich {fahrenheit} Grad Fahrenheit.",
-            "Das Ergebnis ist {fahrenheit}°F."
-        ]
-    },
-    "faqs": {
-        "core": {
-            "q1": "Was sind {celsius} Grad Celsius in Fahrenheit?",
-            "a1": "{celsius} Grad Celsius entsprechen {fahrenheit} Grad Fahrenheit.",
-            "q2": "Ist {celsius}°C heiß oder kalt?",
-            "a2": "{celsius}°C gilt als {categories}."
-        }
-    },
-    "health": {
-        "highFever": "Warnung vor hohem Fieber.",
-        "normal": "Normaler Körpertemperaturbereich."
+    "headerTitle": "Konvertieren Sie {celsius} Grad Celsius in Fahrenheit ({fahrenheit}°F)",
+    "resultHeaderDefault": "Celsius in Fahrenheit Umrechner",
+    "logoText": "Celsius in Fahrenheit Umrechner",
+    "introValue": "<strong>{celsius} Grad Celsius</strong> entsprechen <strong>{fahrenheit} Grad Fahrenheit</strong>.",
+    "introConnect": [
+      "Diese Temperaturumrechnung wird häufig verwendet in",
+      "You will often encounter this temperature in",
+      "This specific value is frequently seen in contexts like",
+      "Common applications for this temperature include"
+    ],
+    "linkBodyTemp": "Körpertemperaturmessungen",
+    "linkFeverChart": "Fieber-Temperaturtabelle",
+    "linkCtoFChart": "Celsius-in-Fahrenheit-Tabelle",
+    "linkOvenChart": "Backofenumrechnungstabelle",
+    "linkCooking": "Kochen, Backen und Ofentemperatur-Einstellungen",
+    "linkGeneral": "umfassende Temperaturumrechnungstabelle",
+    "introMedical": [
+      "Verwendet für Körpertemperatur. Siehe unseren <link>Fieber-Ratgeber</link>.",
+      "Üblich in der Gesundheitsdiagnostik. Siehe <link>Temperaturtabelle</link>."
+    ],
+    "introWeather": [
+      "Verwendet in Wettervorhersagen. Siehe unsere <link>Temperaturtabelle</link>.",
+      "Standard in der Meteorologie. Siehe <link>Umrechnungshilfe</link>."
+    ],
+    "introCooking": [
+      "Häufig beim Kochen verwendet. Sehen Sie unsere <link>Umrechnungstabelle</link>.",
+      "Ideal zum Backen. Nutzen Sie unseren <link>Küchenratgeber</link>."
+    ],
+    "introGeneral": [
+      "Verwendet in der Wissenschaft. Siehe unsere <link>Umrechnungstabelle</link>.",
+      "Standard in der Industrie. Siehe <link>Einheiten-Guide</link>."
+    ],
+    "introMedicalPart2": " und medizinische Diagnostik. Prüfen Sie unseren ",
+    "introMedicalPart3": " für weitere Details an.",
+    "introWeatherPart1": " Wettervorhersagen und tägliche Temperaturwerte. Sehen Sie sich unsere komplette ",
+    "introWeatherPart3": " zur schnellen Referenz an.",
+    "introCookingPart2": ". Verwenden Sie unsere ",
+    "introCookingPart3": " für präzises Backen.",
+    "introGeneralPart1": " wissenschaftliche und industrielle Anwendungen. Entdecken Sie unsere ",
+    "introGeneralPart3": " für weitere Umrechnungen.",
+    "step1": "Schritt 1",
+    "step2": "Schritt 2",
+    "calculation": "Berechnung",
+    "result": "Ergebnis",
+    "medicalAdviceNote": "* Diese Informationen dienen nur der allgemeinen Referenz und sind kein medizinischer Rat.",
+    "fToC": "Fahrenheit in Celsius",
+    "cToK": "Celsius in Kelvin",
+    "kToC": "Kelvin in Celsius",
+    "minusCToF": "Minus Celsius in Fahrenheit",
+    "freezingTooltip": "Wasser gefriert bei 0°C und siedet bei 100°C",
+    "fahrenheitTooltip": "Wasser gefriert bei 32°F und siedet bei 212°F"
+  },
+  "practical": {
+    "title": "Praktische Anwendungen von {celsius}°C ({fahrenheit}°F)",
+    "cooking": {
+      "title": "Kochen & Backen",
+      "description": "Bei {celsius}°C ({fahrenheit}°F) wird diese Temperatur häufig zum Kochen verwendet. Ideal zum Backen und Braten.",
+      "pastries": "Gebäck backen",
+      "pastriesDesc": "Viele Gebäcke werden bei {celsius}°C gebacken",
+      "roasting": "Gemüse rösten",
+      "roastingDesc": "Perfekte Temperatur zum Karamellisieren",
+      "slowRoast": "Langsames Braten",
+      "slowRoastDesc": "Für zartes Fleisch bei längerer Garzeit"
     },
     "weather": {
-        "freezing": "Gefrierend! Wintermantel erforderlich.",
-        "chilly": "Kühl. Sie brauchen eine warme Jacke.",
-        "cool": "Frisch bis mild. Ein Pullover wird empfohlen.",
-        "warm": "Warm und angenehm.",
-        "hot": "Heiß! Leichte Kleidung.",
-        "veryHot": "Sehr heiß. Aktivitäten im Freien einschränken."
+      "title": "Wetter & Klima",
+      "description": "{celsius}°C ({fahrenheit}°F) entspricht {condition} Wetter. {tip}",
+      "conditions": {
+        "freezing": "gefrierenden",
+        "cold": "kalten",
+        "comfortable": "angenehmen",
+        "hot": "heißen"
+      },
+      "tips": {
+        "freezing": "Rechnen Sie mit Eis und Schnee.",
+        "cold": "Tragen Sie warme Kleidung in Schichten.",
+        "comfortable": "Ideal für Outdoor-Aktivitäten.",
+        "hot": "Viel trinken und Schatten suchen."
+      }
     },
-    "context": {
-        "descriptions": {
-            "fever": "Erhöhte Körpertemperatur",
-            "normal": "Normale Körpertemperatur"
-        },
-        "categories": {
-            "body": "Körpertemperatur",
-            "fever": "Fieber"
-        }
+    "body": {
+      "title": "Körpertemperatur",
+      "description": "{celsius}°C ({fahrenheit}°F) ist {condition}. {tip}",
+      "conditions": {
+        "below": "unter normal",
+        "normal": "normal",
+        "elevated": "leicht erhöht",
+        "lowGrade": "leichtes Fieber",
+        "moderate": "mäßiges Fieber",
+        "high": "hohes Fieber"
+      },
+      "tips": {
+        "fever": "Bei anhaltenden Symptomen Arzt aufsuchen.",
+        "normal": "Dies liegt im gesunden Bereich."
+      }
     },
-    "editorial": {
-        "title": "Redaktioneller Hinweis",
-        "medical": {
-            "note": "Redaktioneller Hinweis: Auf wissenschaftliche Genauigkeit geprüft. Praktische Anwendungskontexte wie Körpertemperatur folgen den Standardrichtlinien des NIST und der Weltgesundheitsorganisation (WHO).",
-            "sources": "Quellen: NIST, Physical Science Center, USDA."
-        },
-        "weather": {
-            "note": "Redaktioneller Hinweis: Auf wissenschaftliche Genauigkeit geprüft. Praktische Anwendungskontexte wie Wettergefühl folgen den Standardrichtlinien des NIST.",
-            "sources": "Quellen: NIST, Physical Science Center, USDA."
-        },
-        "cooking": {
-            "note": "Redaktioneller Hinweis: Auf wissenschaftliche Genauigkeit geprüft. Praktische Anwendungskontexte folgen den Standardrichtlinien des NIST.",
-            "sources": "Quellen: NIST, Physical Science Center, USDA."
-        },
-        "general": {
-            "note": "Redaktioneller Hinweis: Auf wissenschaftliche Genauigkeit geprüft. Folgt den Standardrichtlinien des NIST.",
-            "sources": "Quellen: NIST, Physical Science Center, USDA."
-        }
+    "science": {
+      "title": "Wissenschaftliche Anwendungen",
+      "description": "{celsius}°C ({fahrenheit}°F) {context}.",
+      "contexts": {
+        "freezing": "ist der Gefrierpunkt von Wasser",
+        "boiling": "ist der Siedepunkt von Wasser",
+        "general": "wird in Laborprozessen verwendet"
+      }
     },
-    "structuredData": {
-        "appName": "{celsius}°C in °F Umrechner"
+    "storage": {
+      "title": "Lagerbedingungen",
+      "description": "{celsius}°C ({fahrenheit}°F) eignet sich für {condition}.",
+      "conditions": {
+        "frozen": "Tiefkühllagerung",
+        "refrigerated": "Kühllagerung",
+        "cool": "kühle Lagerung",
+        "room": "Lagerung bei Zimmertemperatur"
+      }
+    },
+    "extreme": "{celsius}°C ist {fahrenheit}°F, eine Temperatur mit spezifischen Anwendungen.",
+    "extremeTypes": {
+      "extreme": "extrem",
+      "specialized": "spezialisiert"
     }
+  },
+  "spinner": {
+    "step1": [
+      "Zuerst multiplizieren Sie den Celsius-Wert ({celsius}) mit 9/5 (oder 1,8).",
+      "Beginnen Sie, indem Sie {celsius} mit 1,8 multiplizieren."
+    ],
+    "step2": [
+      "Addieren Sie dann einfach 32 zum Ergebnis ({val}).",
+      "Nehmen Sie {val} und zählen Sie 32 dazu."
+    ],
+    "conclusion": [
+      "Somit sind {celsius} Grad Celsius gleich {fahrenheit} Grad Fahrenheit.",
+      "Das Ergebnis ist {fahrenheit}°F."
+    ]
+  },
+  "faqs": {
+    "core": {
+      "q1": "Was sind {celsius} Grad Celsius in Fahrenheit?",
+      "a1": "{celsius} Grad Celsius entsprechen {fahrenheit} Grad Fahrenheit.",
+      "q2": "Ist {celsius}°C heiß oder kalt?",
+      "a2": "{celsius}°C gilt als {categories}."
+    }
+  },
+  "health": {
+    "highFever": "Warnung vor hohem Fieber.",
+    "normal": "Normaler Körpertemperaturbereich."
+  },
+  "weather": {
+    "freezing": "Gefrierend! Wintermantel erforderlich.",
+    "chilly": "Kühl. Sie brauchen eine warme Jacke.",
+    "cool": "Frisch bis mild. Ein Pullover wird empfohlen.",
+    "warm": "Warm und angenehm.",
+    "hot": "Heiß! Leichte Kleidung.",
+    "veryHot": "Sehr heiß. Aktivitäten im Freien einschränken."
+  },
+  "context": {
+    "descriptions": {
+      "fever": "Erhöhte Körpertemperatur",
+      "normal": "Normale Körpertemperatur"
+    },
+    "categories": {
+      "body": "Körpertemperatur",
+      "fever": "Fieber"
+    }
+  },
+  "editorial": {
+    "title": "Redaktioneller Hinweis",
+    "medical": {
+      "note": "Redaktioneller Hinweis: Auf wissenschaftliche Genauigkeit geprüft. Praktische Anwendungskontexte wie Körpertemperatur folgen den Standardrichtlinien des NIST und der Weltgesundheitsorganisation (WHO).",
+      "sources": "Quellen: NIST, Physical Science Center, USDA."
+    },
+    "weather": {
+      "note": "Redaktioneller Hinweis: Auf wissenschaftliche Genauigkeit geprüft. Praktische Anwendungskontexte wie Wettergefühl folgen den Standardrichtlinien des NIST.",
+      "sources": "Quellen: NIST, Physical Science Center, USDA."
+    },
+    "cooking": {
+      "note": "Redaktioneller Hinweis: Auf wissenschaftliche Genauigkeit geprüft. Praktische Anwendungskontexte folgen den Standardrichtlinien des NIST.",
+      "sources": "Quellen: NIST, Physical Science Center, USDA."
+    },
+    "general": {
+      "note": "Redaktioneller Hinweis: Auf wissenschaftliche Genauigkeit geprüft. Folgt den Standardrichtlinien des NIST.",
+      "sources": "Quellen: NIST, Physical Science Center, USDA."
+    }
+  },
+  "structuredData": {
+    "appName": "{celsius}°C in °F Umrechner"
+  }
 }

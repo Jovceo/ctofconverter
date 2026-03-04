@@ -92,7 +92,12 @@
         "resultHeaderDefault": "摄氏度转华氏度转换器",
         "logoText": "摄氏度转华氏度转换器",
         "introValue": "<strong>{celsius} 摄氏度</strong> 等于 <strong>{fahrenheit} 华氏度</strong>。",
-        "introConnect": "这种温度转换常用于",
+        "introConnect": [
+            "这种温度转换常用于",
+            "您经常会遇到这个温度在",
+            "这个特定值常见于以下场景",
+            "这个温度的常见应用包括"
+        ],
         "linkBodyTemp": "体温测量",
         "linkFeverChart": "发烧温度表",
         "linkCtoFChart": "摄氏度转华氏度图表",
