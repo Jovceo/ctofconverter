@@ -47,6 +47,34 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // Canonical host/protocol redirects
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.ctofconverter.com',
+          },
+        ],
+        destination: 'https://ctofconverter.com/:path*',
+        statusCode: 301,
+      },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'ctofconverter.com',
+          },
+          {
+            type: 'header',
+            key: 'x-forwarded-proto',
+            value: 'http',
+          },
+        ],
+        destination: 'https://ctofconverter.com/:path*',
+        statusCode: 301,
+      },
       // 1. Surgical Redirects: Only for pages that exist in Next.js (pages/ directory)
       {
         // Redirect .html to clean URL for:
