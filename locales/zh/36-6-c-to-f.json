@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "title": "36.6°C 转华氏度（97.9°F）| 正常体温与健康指南",
+    "description": "将 36.6°C 转换为华氏度（97.9°F）。了解 36.6°C 是否正常，以及现代测量方法和人群差异。",
+    "ogTitle": "36.6°C 转华氏度 | 体温指南",
+    "ogDescription": "将 36.6°C 转换为华氏度，涵盖所有年龄层的正常范围与测量方法。"
+  },
+  "conversionFormula": {
+    "title": "36.6°C 转华氏度换算公式",
+    "formula": "(36.6°C × 9/5) + 32 = 97.9°F",
+    "steps": [
+      "36.6 × 1.8 = 65.88",
+      "65.88 + 32 = 97.88",
+      "结果：36.6°C ≈ 97.88°F"
+    ],
+    "imageAlt": "36.6°C 转华氏度换算公式"
+  },
+  "bodyTempRanges": {
+    "title": "36.6°C 体温评估：正常范围",
+    "subtitle": "36.6°C 正常吗？",
+    "intro": "36.6°C（97.88°F）位于现代正常体温范围内，适用于大多数成年人。",
+    "normalHighlight": "✅ 正常体温<br>36.6°C = 97.88°F",
+    "adultStatus": "正常",
+    "babyStatus": "婴儿常态",
+    "underArmStatus": "腋下读数正常",
+    "ranges": {
+      "adult": "成人",
+      "baby": "婴儿",
+      "underArm": "腋下",
+      "normal": "正常",
+      "fever": "发烧"
+    }
+  },
+  "measurementMethods": {
+    "title": "36.6°C 的测量方法",
+    "intro": "36.6°C（97.88°F） 的读数因部位不同而不同。",
+    "oral": {"icon": "🌡️","temp": "36.6°C = 97.88°F","title": "口腔","description": "正常口读值"},
+    "underArm": {"icon": "💪","temp": "36.6°C = 97.88°F","title": "腋下","description": "正常腋下读数"},
+    "ear": {"icon": "👂","temp": "36.6°C = 97.88°F","title": "耳温","description": "正常鼓膜读数"},
+    "rectal": {"icon": "👶","temp": "36.6°C = 97.88°F","title": "直肠","description": "婴儿正常体温"}
+  },
+  "ageGroups": {
+    "title": "36.6°C 按年龄段的体温指南",
+    "newborn": {"title": "👶 新生儿与婴儿","range": "36.4-37.4°C (97.5-99.3°F)","points": ["36.6°C（97.88°F）在新生儿范围内","新生儿体温调节能力较弱","关注持续模式而非单次读数","如持续低于36.0°C请咨询医生"]},
+    "infant": {"title": "👶 婴儿","range": "36.5-37.5°C (97.7-99.5°F)","points": ["36.6°C 是此年龄的健康温度","范围：36.0-37.5°C","结合喂养与活动监测","低于35.5°C或高于38°C请联系医生"]},
+    "children": {"title": "🧒 儿童","range": "36.4-37.2°C (97.5-99°F)","points": ["36.6°C 为儿童的正常温度","日间波动约0.5°C","适中区域且健康","如持续低于35.8°C请关注"]},
+    "adults": {"title": "👨‍🦳 成人","range": "36.1-37.2°C (97-99°F)","points": ["36.6°C 在成人正常范围内","午后读数常见","个人基线差异约0.3-0.5°C","无需担心"]}
+  },
+  "temperatureScale": {
+    "title": "体温刻度：36.6°C 作为标准",
+    "intro": "与旧标准比较：",
+    "tableHeaders": {"celsius":"摄氏度 (°C)","fahrenheit":"华氏度 (°F)","assessment":"评估"},
+    "rows": [
+      {"celsius":"35.5°C","fahrenheit":"95.9°F","assessment":"低正常 - 需监测"},
+      {"celsius":"36.0°C","fahrenheit":"96.8°F","assessment":"正常 - 较低范围"},
+      {"celsius":"36.4°C","fahrenheit":"97.5°F","assessment":"正常 - 较低上限"},
+      {"celsius":"36.6°C","fahrenheit":"97.9°F","assessment":"正常 - 更窄下限"},
+      {"celsius":"37.0°C","fahrenheit":"98.6°F","assessment":"正常 - 经典均值"},
+      {"celsius":"37.5°C","fahrenheit":"99.5°F","assessment":"正常偏高 / 低烧"},
+      {"celsius":"38.0°C","fahrenheit":"100.4°F","assessment":"发烧阈值"}
+    ]
+  },
+  "faq": {
+    "q1": {"question":"36.6°C是正常体温吗？","answer":"是的，36.6°C（97.88°F）属于成人的正常体温范围。正常口腔温度通常在36.1°C到37.2°C之间（97°F到99°F）。"},
+    "q2": {"question":"36.6°C是成人或儿童的发烧吗？","answer":"不是，36.6°C对任何人来说都不是发烧。发烧通常定义为38°C（100.4°F）或更高。36.6°C实际上处于正常范围的较凉爽的一端。"},
+    "q3": {"question":"36.6°C对婴儿正常吗？","answer":"是的，36.6°C对婴儿来说是正常的，尽管在其正常范围的较低端。婴儿通常比成人略高，通常范围从36.4°C到37.4°C（97.5°F到99.3°F）。"},
+    "q4": {"question":"36.6°C腋下温度意味着什么？","answer":"对于腋下（腋窝）测量，36.6°C可能表示略低的正常温度。腋窝读数通常比口腔温度低0.5-1.0°C。腋下36.6°C相当于口腔约37.1-37.6°C，仍在正常范围内。"},
+    "q5": {"question":"如何心算36.6摄氏度到华氏度？","answer":"快速心算：乘以2（36.6×2=73.2），然后减去10%（73.2-7.32=65.），再加32（65.88+32=97.88）。这给您准确的97.88°F转换。"},
+    "q6": {"question":"36.6°C附近的其它体温有哪些？","answer":"附近常见体温包括：36.5°C = 97.7°F - 正常体温，36.7°C = 98.06°F - 正常体温，37.0°C = 98.6°F - 经典正常体温。"}
+  },
+  "translationStatus": "pending",
+  "notes": "结构已对齐英文模版；待翻译的板块包括 bodyTempRanges、measurementMethods、ageGroups、temperatureScale、faq。请核对占位符 {fahrenheit}、{celsius}、{celsiusNoDecimal} 的呈现。"
+}

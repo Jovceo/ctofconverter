@@ -1,285 +1,290 @@
 {
-    "meta": {
-        "pageTitle": "{celsius}°C ke Fahrenheit ({fahrenheit}°F) | Panduan Konversi & Kalkulator",
-        "description": "Konversikan {celsius} derajat Celsius ke Fahrenheit dengan cepat. Pelajari bahwa {celsius}°C sama dengan {fahrenheit}°F, lihat langkah perhitungan, dan pahami konteks suhu.",
-        "ogDescription": "Konversikan {celsius} derajat Celsius ke Fahrenheit secara instan. {celsius}°C sama dengan {fahrenheit}°F - lihat langkah perhitungan dan aplikasi praktis."
+  "meta": {
+    "pageTitle": "{celsius}°C ke Fahrenheit ({fahrenheit}°F) | Panduan Konversi & Kalkulator",
+    "description": "Konversikan {celsius} derajat Celsius ke Fahrenheit dengan cepat. Pelajari bahwa {celsius}°C sama dengan {fahrenheit}°F, lihat langkah perhitungan, dan pahami konteks suhu.",
+    "ogDescription": "Konversikan {celsius} derajat Celsius ke Fahrenheit secara instan. {celsius}°C sama dengan {fahrenheit}°F - lihat langkah perhitungan dan aplikasi praktis."
+  },
+  "related": {
+    "conversionTitle": "{celsius} Celcius ke Fahrenheit ({fahrenheit}°F)",
+    "labels": {
+      "freezingPoint": "Titik Beku",
+      "coolWeather": "Cuaca Sejuk",
+      "roomTemp": "Suhu Ruangan",
+      "warm": "Hangat",
+      "hotWeather": "Cuaca Panas",
+      "normalLow": "Normal Rendah",
+      "normalBodyTemp": "Suhu Tubuh Normal",
+      "feverThreshold": "Ambang Demam",
+      "highFever": "Demam Tinggi",
+      "dangerousFever": "Demam Berbahaya",
+      "criticalLimit": "Batas Kritis",
+      "extremeHotBath": "Mandi Sangat Panas",
+      "hotWater": "Air Panas",
+      "greenTea": "Teh Hijau",
+      "coffeeBrewing": "Menyeduh Kopi",
+      "boilingPoint": "Titik Didih",
+      "slowBake": "Panggang Lambat",
+      "moderateOven": "Oven Sedang",
+      "hotOven": "Oven Panas",
+      "veryHot": "Sangat Panas",
+      "absoluteZero": "Nol Mutlak",
+      "dryIce": "Es Kering",
+      "goldMelting": "Titik Leleh Emas"
+    }
+  },
+  "common": {
+    "quickResult": "Hasil Konversi Cepat",
+    "copyResult": "📋 Salin Hasil",
+    "copied": "✓ Berhasil Disalin!",
+    "formulaTitle": "Cara Mengonversi {celsius} Celsius ke Fahrenheit: Rumus Tepat",
+    "formulaIntro": "Untuk mengonversi dari Celsius ke Fahrenheit, gunakan rumus berikut:",
+    "stepTitle": "Proses Perhitungan Langkah Demi Langkah",
+    "stepResult": "Hasil Akhir",
+    "tempComparison": "Tabel Perbandingan Suhu",
+    "yourTemp": "Suhu Anda",
+    "freezingPoint": "Titik Beku",
+    "roomTemp": "Suhu Ruangan",
+    "boilingPoint": "Titik Didih",
+    "faqTitle": "Pertanyaan Umum (FAQ)",
+    "relatedTitle": "Konversi Suhu Terkait",
+    "celsiusLabel": "Celsius (°C)",
+    "fahrenheitLabel": "Fahrenheit (°F)",
+    "tableTitle": "Tabel Konversi Cepat Celsius ke Fahrenheit",
+    "descriptionCol": "Deskripsi",
+    "tempCol": "Suhu",
+    "celsiusCol": "Celsius",
+    "fahrenheitCol": "Fahrenheit",
+    "lastUpdated": "Terakhir diperbarui:",
+    "breadcrumbCurrent": "{celsius} Celsius ke Fahrenheit",
+    "resultHeader": "Nilai Fahrenheit untuk {celsius}°C adalah:",
+    "healthContextTitle": "Konteks Kesehatan",
+    "healthContextFooter": "Silakan berkonsultasi dengan profesional medis untuk saran spesifik.",
+    "weatherFeelTitle": "Kondisi Luar Ruangan",
+    "weatherFeelIntro": "Pada suhu <strong>{celsius}°C</strong>:",
+    "scale": {
+      "extremeCold": "Sangat Dingin",
+      "freezing": "Titik Beku",
+      "cool": "Sejuk",
+      "roomTemp": "Suhu Ruangan",
+      "bodyTemp": "Suhu Tubuh",
+      "veryHot": "Sangat Panas",
+      "boiling": "Titik Didih"
     },
-    "related": {
-        "conversionTitle": "{celsius} Celcius ke Fahrenheit ({fahrenheit}°F)",
-        "labels": {
-            "freezingPoint": "Titik Beku",
-            "coolWeather": "Cuaca Sejuk",
-            "roomTemp": "Suhu Ruangan",
-            "warm": "Hangat",
-            "hotWeather": "Cuaca Panas",
-            "normalLow": "Normal Rendah",
-            "normalBodyTemp": "Suhu Tubuh Normal",
-            "feverThreshold": "Ambang Demam",
-            "highFever": "Demam Tinggi",
-            "dangerousFever": "Demam Berbahaya",
-            "criticalLimit": "Batas Kritis",
-            "extremeHotBath": "Mandi Sangat Panas",
-            "hotWater": "Air Panas",
-            "greenTea": "Teh Hijau",
-            "coffeeBrewing": "Menyeduh Kopi",
-            "boilingPoint": "Titik Didih",
-            "slowBake": "Panggang Lambat",
-            "moderateOven": "Oven Sedang",
-            "hotOven": "Oven Panas",
-            "veryHot": "Sangat Panas",
-            "absoluteZero": "Nol Mutlak",
-            "dryIce": "Es Kering",
-            "goldMelting": "Titik Leleh Emas"
-        }
-    },
-    "common": {
-        "quickResult": "Hasil Konversi Cepat",
-        "copyResult": "📋 Salin Hasil",
-        "copied": "✓ Berhasil Disalin!",
-        "formulaTitle": "Cara Mengonversi {celsius} Celsius ke Fahrenheit: Rumus Tepat",
-        "formulaIntro": "Untuk mengonversi dari Celsius ke Fahrenheit, gunakan rumus berikut:",
-        "stepTitle": "Proses Perhitungan Langkah Demi Langkah",
-        "stepResult": "Hasil Akhir",
-        "tempComparison": "Tabel Perbandingan Suhu",
-        "yourTemp": "Suhu Anda",
-        "freezingPoint": "Titik Beku",
-        "roomTemp": "Suhu Ruangan",
-        "boilingPoint": "Titik Didih",
-        "faqTitle": "Pertanyaan Umum (FAQ)",
-        "relatedTitle": "Konversi Suhu Terkait",
-        "celsiusLabel": "Celsius (°C)",
-        "fahrenheitLabel": "Fahrenheit (°F)",
-        "tableTitle": "Tabel Konversi Cepat Celsius ke Fahrenheit",
-        "descriptionCol": "Deskripsi",
-        "tempCol": "Suhu",
-        "celsiusCol": "Celsius",
-        "fahrenheitCol": "Fahrenheit",
-        "lastUpdated": "Terakhir diperbarui:",
-        "breadcrumbCurrent": "{celsius} Celsius ke Fahrenheit",
-        "resultHeader": "Nilai Fahrenheit untuk {celsius}°C adalah:",
-        "healthContextTitle": "Konteks Kesehatan",
-        "healthContextFooter": "Silakan berkonsultasi dengan profesional medis untuk saran spesifik.",
-        "weatherFeelTitle": "Kondisi Luar Ruangan",
-        "weatherFeelIntro": "Pada suhu <strong>{celsius}°C</strong>:",
-        "scale": {
-            "extremeCold": "Sangat Dingin",
-            "freezing": "Titik Beku",
-            "cool": "Sejuk",
-            "roomTemp": "Suhu Ruangan",
-            "bodyTemp": "Suhu Tubuh",
-            "veryHot": "Sangat Panas",
-            "boiling": "Titik Didih"
-        },
-        "headerTitle": "Konversi {celsius} Derajat Celsius ke Fahrenheit ({fahrenheit}°F)",
-        "resultHeaderDefault": "Konverter Celsius ke Fahrenheit",
-        "logoText": "Konverter Celsius ke Fahrenheit",
-        "introValue": "<strong>{celsius} derajat Celsius</strong> sama dengan <strong>{fahrenheit} derajat Fahrenheit</strong>.",
-        "introConnect": "Konversi suhu ini umumnya digunakan untuk",
-        "linkBodyTemp": "pengukuran suhu tubuh",
-        "linkFeverChart": "tabel suhu demam",
-        "linkCtoFChart": "tabel Celsius ke Fahrenheit",
-        "linkOvenChart": "tabel konversi oven kipas",
-        "linkCooking": "pengaturan suhu memasak, memanggang, dan oven",
-        "linkGeneral": "tabel konversi suhu komprehensif",
-        "introMedical": [
-            "Digunakan untuk pengukuran suhu tubuh. Lihat <link>grafik demam</link> kami.",
-            "Umum dalam diagnostik kesehatan. Cek <link>tabel suhu</link>."
-        ],
-        "introWeather": [
-            "Digunakan dalam prakiraan cuaca. Lihat <link>tabel suhu</link> kami.",
-            "Standar dalam meteorologi. Lihat <link>panduan konversi</link>."
-        ],
-        "introCooking": [
-            "Umum digunakan dalam memasak. Lihat <link>tabel konversi</link> kami.",
-            "Ideal untuk memanggang. Gunakan <link>panduan memasak</link> kami."
-        ],
-        "introGeneral": [
-            "Digunakan dalam aplikasi sains. Lihat <link>tabel konversi</link> kami.",
-            "Standar di industri. Lihat <link>panduan unit</link>."
-        ],
-        "introMedicalPart2": " dan diagnosis medis. Lihat ",
-        "introMedicalPart3": " kami untuk detail lebih lanjut.",
-        "introWeatherPart1": " prakiraan cuaca dan pembacaan suhu harian. Lihat ",
-        "introWeatherPart3": " lengkap kami untuk referensi cepat.",
-        "introCookingPart2": ". Gunakan ",
-        "introCookingPart3": " kami untuk pemanggangan yang presisi.",
-        "introGeneralPart1": " aplikasi ilmiah dan industri. Jelajahi ",
-        "introGeneralPart3": " kami untuk konversi lainnya.",
-        "step1": "Langkah 1",
-        "step2": "Langkah 2",
-        "calculation": "Perhitungan",
-        "result": "Hasil",
-        "medicalAdviceNote": "* Informasi ini hanya untuk referensi umum dan bukan merupakan saran medis.",
-        "fToC": "Fahrenheit ke Celsius",
-        "cToK": "Celsius ke Kelvin",
-        "kToC": "Kelvin ke Celsius",
-        "minusCToF": "Celsius negatif ke Fahrenheit",
-        "freezingTooltip": "Air membeku pada 0°C dan mendidih pada 100°C",
-        "fahrenheitTooltip": "Air membeku pada 32°F dan mendidih pada 212°F"
-    },
-    "practical": {
-        "title": "Aplikasi Praktis dari {celsius}°C ({fahrenheit}°F)",
-        "cooking": {
-            "title": "Memasak & Memanggang",
-            "description": "Pada suhu {celsius}°C ({fahrenheit}°F), suhu ini banyak digunakan dalam memasak. Sempurna untuk memanggang, menyangrai, dan berbagai teknik kuliner.",
-            "pastries": "Memanggang Kue",
-            "pastriesDesc": "Banyak kue kering dan biskuit renyah dipanggang paling baik pada suhu {celsius}°C",
-            "roasting": "Menyangrai Sayuran",
-            "roastingDesc": "Suhu ideal untuk mengaramelisasi sayuran dan membuatnya renyah",
-            "slowRoast": "Memanggang Daging Lambat",
-            "slowRoastDesc": "Digunakan untuk waktu memasak yang lebih lama agar daging yang keras menjadi empuk"
-        },
-        "weather": {
-            "title": "Cuaca & Iklim",
-            "description": "{celsius}°C ({fahrenheit}°F) mewakili kondisi cuaca {condition}. {tip}",
-            "conditions": {
-                "freezing": "membeku",
-                "cold": "dingin",
-                "comfortable": "nyaman",
-                "hot": "panas"
-            },
-            "tips": {
-                "freezing": "Waspadai es dan salju.",
-                "cold": "Kenakan pakaian hangat berlapis.",
-                "comfortable": "Sangat cocok untuk aktivitas luar ruangan.",
-                "hot": "Tetap terhidrasi dan cari tempat berteduh."
-            }
-        },
-        "body": {
-            "title": "Referensi Suhu Tubuh",
-            "description": "{celsius}°C ({fahrenheit}°F) masuk dalam kategori {condition}. {tip}",
-            "conditions": {
-                "below": "di bawah normal",
-                "normal": "rentang normal",
-                "elevated": "agak tinggi",
-                "lowGrade": "demam ringan",
-                "moderate": "demam sedang",
-                "high": "demam tinggi"
-            },
-            "tips": {
-                "fever": "Konsultasikan dengan profesional medis jika gejala berlanjut.",
-                "normal": "Ini berada dalam rentang suhu yang sehat."
-            }
-        },
-        "science": {
-            "title": "Aplikasi Ilmiah",
-            "description": "{celsius}°C ({fahrenheit}°F) adalah {context}.",
-            "contexts": {
-                "freezing": "titik beku air",
-                "boiling": "titik didih air di permukaan laut",
-                "general": "dapat digunakan dalam berbagai pengaturan laboratorium dan proses eksperimen ilmiah"
-            }
-        },
-        "storage": {
-            "title": "Rekomendasi Kondisi Penyimpanan",
-            "description": "{celsius}°C ({fahrenheit}°F) cocok untuk {condition} berbagai produk.",
-            "conditions": {
-                "frozen": "penyimpanan beku",
-                "refrigerated": "penyimpanan dingin (kulkas)",
-                "cool": "penyimpanan di tempat sejuk dan gelap",
-                "room": "penyimpanan pada suhu kamar normal"
-            }
-        },
-        "extreme": "{celsius}°C adalah {fahrenheit}°F, yang merupakan {type} untuk tujuan tertentu. Silakan gunakan konverter di atas untuk nilai yang akurat.",
-        "extremeTypes": {
-            "extreme": "suhu ekstrem",
-            "specialized": "suhu industri khusus"
-        }
-    },
-    "spinner": {
-        "step1": [
-            "Pertama, kalikan nilai Celsius Anda ({celsius}) dengan 9/5 (atau 1,8).",
-            "Mulailah perhitungan dengan mengalikan suhu Celsius ({celsius}) dengan 1,8.",
-            "Langkah pertama adalah mengambil angka Celsius ({celsius}) dan mengalikannya sebanyak 1,8 kali.",
-            "Mulailah dengan mengambil {celsius}°C dan kalikan dengan faktor 9/5."
-        ],
-        "step2": [
-            "Selanjutnya, cukup tambahkan 32 ke hasilnya ({val}).",
-            "Kemudian, tambahkan 32 ke nilai ({val}) yang Anda dapatkan di langkah pertama.",
-            "Langkah terakhir adalah menambahkan konstanta 32 ke nilai menengah sebelumnya {val}.",
-            "Sekarang, tambahkan 32 ke {val} untuk menyesuaikan offset titik beku."
-        ],
-        "conclusion": [
-            "Jadi, {celsius} derajat Celsius sama dengan {fahrenheit} derajat Fahrenheit.",
-            "Hasilnya adalah {fahrenheit}°F. Ini adalah ekuivalen Fahrenheit dari {celsius}°C.",
-            "Oleh karena itu, {celsius}°C dikonversi secara tepat ke {fahrenheit}°F.",
-            "Selesai! {celsius}°C adalah suhu yang sama dengan {fahrenheit}°F."
-        ]
-    },
-    "faqs": {
-        "core": {
-            "q1": "Berapa {celsius} derajat Celsius dalam Fahrenheit?",
-            "a1": "{celsius} derajat Celsius sama dengan {fahrenheit} derajat Fahrenheit. Rumusnya adalah °F = ({celsius} × 9/5) + 32.",
-            "q2": "Apakah {celsius}°C panas atau dingin?",
-            "a2": "{celsius}°C dianggap {categories}. {description}",
-            "q3": "Bagaimana cara mengonversi Celsius ke Fahrenheit?",
-            "a3": "Gunakan rumus: °F = (°C × 9/5) + 32"
-        }
-    },
-    "health": {
-        "highFever": "Peringatan Demam Tinggi: Suhu ini secara signifikan berada di atas suhu tubuh normal.",
-        "lowFever": "Demam Ringan: Suhu sedikit meningkat.",
-        "hypothermia": "Risiko Hipotermia: Suhu ini berada di bawah suhu tubuh normal.",
-        "normal": "Rentang suhu tubuh normal."
+    "headerTitle": "Konversi {celsius} Derajat Celsius ke Fahrenheit ({fahrenheit}°F)",
+    "resultHeaderDefault": "Konverter Celsius ke Fahrenheit",
+    "logoText": "Konverter Celsius ke Fahrenheit",
+    "introValue": "<strong>{celsius} derajat Celsius</strong> sama dengan <strong>{fahrenheit} derajat Fahrenheit</strong>.",
+    "introConnect": [
+      "Konversi suhu ini umumnya digunakan untuk",
+      "You will often encounter this temperature in",
+      "This specific value is frequently seen in contexts like",
+      "Common applications for this temperature include"
+    ],
+    "linkBodyTemp": "pengukuran suhu tubuh",
+    "linkFeverChart": "tabel suhu demam",
+    "linkCtoFChart": "tabel Celsius ke Fahrenheit",
+    "linkOvenChart": "tabel konversi oven kipas",
+    "linkCooking": "pengaturan suhu memasak, memanggang, dan oven",
+    "linkGeneral": "tabel konversi suhu komprehensif",
+    "introMedical": [
+      "Digunakan untuk pengukuran suhu tubuh. Lihat <link>grafik demam</link> kami.",
+      "Umum dalam diagnostik kesehatan. Cek <link>tabel suhu</link>."
+    ],
+    "introWeather": [
+      "Digunakan dalam prakiraan cuaca. Lihat <link>tabel suhu</link> kami.",
+      "Standar dalam meteorologi. Lihat <link>panduan konversi</link>."
+    ],
+    "introCooking": [
+      "Umum digunakan dalam memasak. Lihat <link>tabel konversi</link> kami.",
+      "Ideal untuk memanggang. Gunakan <link>panduan memasak</link> kami."
+    ],
+    "introGeneral": [
+      "Digunakan dalam aplikasi sains. Lihat <link>tabel konversi</link> kami.",
+      "Standar di industri. Lihat <link>panduan unit</link>."
+    ],
+    "introMedicalPart2": " dan diagnosis medis. Lihat ",
+    "introMedicalPart3": " kami untuk detail lebih lanjut.",
+    "introWeatherPart1": " prakiraan cuaca dan pembacaan suhu harian. Lihat ",
+    "introWeatherPart3": " lengkap kami untuk referensi cepat.",
+    "introCookingPart2": ". Gunakan ",
+    "introCookingPart3": " kami untuk pemanggangan yang presisi.",
+    "introGeneralPart1": " aplikasi ilmiah dan industri. Jelajahi ",
+    "introGeneralPart3": " kami untuk konversi lainnya.",
+    "step1": "Langkah 1",
+    "step2": "Langkah 2",
+    "calculation": "Perhitungan",
+    "result": "Hasil",
+    "medicalAdviceNote": "* Informasi ini hanya untuk referensi umum dan bukan merupakan saran medis.",
+    "fToC": "Fahrenheit ke Celsius",
+    "cToK": "Celsius ke Kelvin",
+    "kToC": "Kelvin ke Celsius",
+    "minusCToF": "Celsius negatif ke Fahrenheit",
+    "freezingTooltip": "Air membeku pada 0°C dan mendidih pada 100°C",
+    "fahrenheitTooltip": "Air membeku pada 32°F dan mendidih pada 212°F"
+  },
+  "practical": {
+    "title": "Aplikasi Praktis dari {celsius}°C ({fahrenheit}°F)",
+    "cooking": {
+      "title": "Memasak & Memanggang",
+      "description": "Pada suhu {celsius}°C ({fahrenheit}°F), suhu ini banyak digunakan dalam memasak. Sempurna untuk memanggang, menyangrai, dan berbagai teknik kuliner.",
+      "pastries": "Memanggang Kue",
+      "pastriesDesc": "Banyak kue kering dan biskuit renyah dipanggang paling baik pada suhu {celsius}°C",
+      "roasting": "Menyangrai Sayuran",
+      "roastingDesc": "Suhu ideal untuk mengaramelisasi sayuran dan membuatnya renyah",
+      "slowRoast": "Memanggang Daging Lambat",
+      "slowRoastDesc": "Digunakan untuk waktu memasak yang lebih lama agar daging yang keras menjadi empuk"
     },
     "weather": {
-        "freezing": "Sangat Dingin! Diperlukan mantel musim dingin, topi, sarung tangan, dan syal.",
-        "chilly": "Cukup dingin. Anda akan membutuhkan jaket hangat atau mantel.",
-        "cool": "Sejuk hingga sedang. Disarankan memakai sweter atau jaket ringan.",
-        "warm": "Hangat dan menyenangkan. Waktu yang tepat untuk berada di luar!",
-        "hot": "Panas! Kenakan pakaian ringan dan tetap terhidrasi.",
-        "veryHot": "Sangat Panas / Panas Ekstrem. Batasi aktivitas luar ruangan dan cari tempat berteduh."
+      "title": "Cuaca & Iklim",
+      "description": "{celsius}°C ({fahrenheit}°F) mewakili kondisi cuaca {condition}. {tip}",
+      "conditions": {
+        "freezing": "membeku",
+        "cold": "dingin",
+        "comfortable": "nyaman",
+        "hot": "panas"
+      },
+      "tips": {
+        "freezing": "Waspadai es dan salju.",
+        "cold": "Kenakan pakaian hangat berlapis.",
+        "comfortable": "Sangat cocok untuk aktivitas luar ruangan.",
+        "hot": "Tetap terhidrasi dan cari tempat berteduh."
+      }
     },
-    "context": {
-        "descriptions": {
-            "dangerousFever": "Suhu tubuh yang mengancam jiwa dan membutuhkan perhatian medis segera",
-            "fever": "Suhu tubuh meningkat yang menunjukkan penyakit atau infeksi",
-            "elevated": "Suhu tubuh normal hingga sedikit meningkat",
-            "extremeHeat": "Suhu berbahaya yang mampu menyebabkan sengatan panas (heatstroke)",
-            "veryHot": "Suhu yang sangat tinggi, berbahaya tanpa perlindungan",
-            "hot": "Suhu panas hingga sangat panas, khas di musim panas",
-            "warm": "Suhu ruangan yang hangat dan nyaman",
-            "mild": "Suhu sedang dan nyaman",
-            "cool": "Suhu sejuk tapi tidak membeku",
-            "extremeCold": "Suhu dingin yang berbahaya",
-            "cold": "Suhu dingin yang membutuhkan pakaian hangat",
-            "moderate": "Suhu sedang"
-        },
-        "categories": {
-            "body": "Suhu Tubuh",
-            "dangerousFever": "Demam Berbahaya",
-            "fever": "Demam",
-            "extremeHeat": "Panas Ekstrem",
-            "veryHot": "Sangat Panas",
-            "hot": "Panas",
-            "warm": "Hangat",
-            "mild": "Ringan",
-            "cool": "Sejuk",
-            "extremeCold": "Sangat Dingin",
-            "cold": "Dingin",
-            "moderate": "Sedang"
-        }
+    "body": {
+      "title": "Referensi Suhu Tubuh",
+      "description": "{celsius}°C ({fahrenheit}°F) masuk dalam kategori {condition}. {tip}",
+      "conditions": {
+        "below": "di bawah normal",
+        "normal": "rentang normal",
+        "elevated": "agak tinggi",
+        "lowGrade": "demam ringan",
+        "moderate": "demam sedang",
+        "high": "demam tinggi"
+      },
+      "tips": {
+        "fever": "Konsultasikan dengan profesional medis jika gejala berlanjut.",
+        "normal": "Ini berada dalam rentang suhu yang sehat."
+      }
     },
-    "editorial": {
-        "title": "Catatan Editor",
-        "medical": {
-            "note": "Catatan Editor: Konten ditinjau untuk keakuratan. Konteks aplikasi praktis seperti suhu tubuh mengikuti pedoman NIST dan Organisasi Kesehatan Dunia (WHO).",
-            "sources": "Sumber: NIST, Physical Science Center, USDA."
-        },
-        "weather": {
-            "note": "Catatan Editor: Konten ditinjau untuk keakuratan. Konteks aplikasi praktis seperti rasa cuaca mengikuti pedoman NIST.",
-            "sources": "Sumber: NIST, Physical Science Center, USDA."
-        },
-        "cooking": {
-            "note": "Catatan Editor: Konten ditinjau untuk keakuratan. Konteks aplikasi praktis mengikuti pedoman NIST.",
-            "sources": "Sumber: NIST, Physical Science Center, USDA."
-        },
-        "general": {
-            "note": "Catatan Editor: Konten ditinjau untuk keakuratan. Mengikuti pedoman NIST.",
-            "sources": "Sumber: NIST, Physical Science Center, USDA."
-        }
+    "science": {
+      "title": "Aplikasi Ilmiah",
+      "description": "{celsius}°C ({fahrenheit}°F) adalah {context}.",
+      "contexts": {
+        "freezing": "titik beku air",
+        "boiling": "titik didih air di permukaan laut",
+        "general": "dapat digunakan dalam berbagai pengaturan laboratorium dan proses eksperimen ilmiah"
+      }
     },
-    "structuredData": {
-        "appName": "Konverter {celsius}°C ke °F"
+    "storage": {
+      "title": "Rekomendasi Kondisi Penyimpanan",
+      "description": "{celsius}°C ({fahrenheit}°F) cocok untuk {condition} berbagai produk.",
+      "conditions": {
+        "frozen": "penyimpanan beku",
+        "refrigerated": "penyimpanan dingin (kulkas)",
+        "cool": "penyimpanan di tempat sejuk dan gelap",
+        "room": "penyimpanan pada suhu kamar normal"
+      }
+    },
+    "extreme": "{celsius}°C adalah {fahrenheit}°F, yang merupakan {type} untuk tujuan tertentu. Silakan gunakan konverter di atas untuk nilai yang akurat.",
+    "extremeTypes": {
+      "extreme": "suhu ekstrem",
+      "specialized": "suhu industri khusus"
     }
+  },
+  "spinner": {
+    "step1": [
+      "Pertama, kalikan nilai Celsius Anda ({celsius}) dengan 9/5 (atau 1,8).",
+      "Mulailah perhitungan dengan mengalikan suhu Celsius ({celsius}) dengan 1,8.",
+      "Langkah pertama adalah mengambil angka Celsius ({celsius}) dan mengalikannya sebanyak 1,8 kali.",
+      "Mulailah dengan mengambil {celsius}°C dan kalikan dengan faktor 9/5."
+    ],
+    "step2": [
+      "Selanjutnya, cukup tambahkan 32 ke hasilnya ({val}).",
+      "Kemudian, tambahkan 32 ke nilai ({val}) yang Anda dapatkan di langkah pertama.",
+      "Langkah terakhir adalah menambahkan konstanta 32 ke nilai menengah sebelumnya {val}.",
+      "Sekarang, tambahkan 32 ke {val} untuk menyesuaikan offset titik beku."
+    ],
+    "conclusion": [
+      "Jadi, {celsius} derajat Celsius sama dengan {fahrenheit} derajat Fahrenheit.",
+      "Hasilnya adalah {fahrenheit}°F. Ini adalah ekuivalen Fahrenheit dari {celsius}°C.",
+      "Oleh karena itu, {celsius}°C dikonversi secara tepat ke {fahrenheit}°F.",
+      "Selesai! {celsius}°C adalah suhu yang sama dengan {fahrenheit}°F."
+    ]
+  },
+  "faqs": {
+    "core": {
+      "q1": "Berapa {celsius} derajat Celsius dalam Fahrenheit?",
+      "a1": "{celsius} derajat Celsius sama dengan {fahrenheit} derajat Fahrenheit. Rumusnya adalah °F = ({celsius} × 9/5) + 32.",
+      "q2": "Apakah {celsius}°C panas atau dingin?",
+      "a2": "{celsius}°C dianggap {categories}. {description}",
+      "q3": "Bagaimana cara mengonversi Celsius ke Fahrenheit?",
+      "a3": "Gunakan rumus: °F = (°C × 9/5) + 32"
+    }
+  },
+  "health": {
+    "highFever": "Peringatan Demam Tinggi: Suhu ini secara signifikan berada di atas suhu tubuh normal.",
+    "lowFever": "Demam Ringan: Suhu sedikit meningkat.",
+    "hypothermia": "Risiko Hipotermia: Suhu ini berada di bawah suhu tubuh normal.",
+    "normal": "Rentang suhu tubuh normal."
+  },
+  "weather": {
+    "freezing": "Sangat Dingin! Diperlukan mantel musim dingin, topi, sarung tangan, dan syal.",
+    "chilly": "Cukup dingin. Anda akan membutuhkan jaket hangat atau mantel.",
+    "cool": "Sejuk hingga sedang. Disarankan memakai sweter atau jaket ringan.",
+    "warm": "Hangat dan menyenangkan. Waktu yang tepat untuk berada di luar!",
+    "hot": "Panas! Kenakan pakaian ringan dan tetap terhidrasi.",
+    "veryHot": "Sangat Panas / Panas Ekstrem. Batasi aktivitas luar ruangan dan cari tempat berteduh."
+  },
+  "context": {
+    "descriptions": {
+      "dangerousFever": "Suhu tubuh yang mengancam jiwa dan membutuhkan perhatian medis segera",
+      "fever": "Suhu tubuh meningkat yang menunjukkan penyakit atau infeksi",
+      "elevated": "Suhu tubuh normal hingga sedikit meningkat",
+      "extremeHeat": "Suhu berbahaya yang mampu menyebabkan sengatan panas (heatstroke)",
+      "veryHot": "Suhu yang sangat tinggi, berbahaya tanpa perlindungan",
+      "hot": "Suhu panas hingga sangat panas, khas di musim panas",
+      "warm": "Suhu ruangan yang hangat dan nyaman",
+      "mild": "Suhu sedang dan nyaman",
+      "cool": "Suhu sejuk tapi tidak membeku",
+      "extremeCold": "Suhu dingin yang berbahaya",
+      "cold": "Suhu dingin yang membutuhkan pakaian hangat",
+      "moderate": "Suhu sedang"
+    },
+    "categories": {
+      "body": "Suhu Tubuh",
+      "dangerousFever": "Demam Berbahaya",
+      "fever": "Demam",
+      "extremeHeat": "Panas Ekstrem",
+      "veryHot": "Sangat Panas",
+      "hot": "Panas",
+      "warm": "Hangat",
+      "mild": "Ringan",
+      "cool": "Sejuk",
+      "extremeCold": "Sangat Dingin",
+      "cold": "Dingin",
+      "moderate": "Sedang"
+    }
+  },
+  "editorial": {
+    "title": "Catatan Editor",
+    "medical": {
+      "note": "Catatan Editor: Konten ditinjau untuk keakuratan. Konteks aplikasi praktis seperti suhu tubuh mengikuti pedoman NIST dan Organisasi Kesehatan Dunia (WHO).",
+      "sources": "Sumber: NIST, Physical Science Center, USDA."
+    },
+    "weather": {
+      "note": "Catatan Editor: Konten ditinjau untuk keakuratan. Konteks aplikasi praktis seperti rasa cuaca mengikuti pedoman NIST.",
+      "sources": "Sumber: NIST, Physical Science Center, USDA."
+    },
+    "cooking": {
+      "note": "Catatan Editor: Konten ditinjau untuk keakuratan. Konteks aplikasi praktis mengikuti pedoman NIST.",
+      "sources": "Sumber: NIST, Physical Science Center, USDA."
+    },
+    "general": {
+      "note": "Catatan Editor: Konten ditinjau untuk keakuratan. Mengikuti pedoman NIST.",
+      "sources": "Sumber: NIST, Physical Science Center, USDA."
+    }
+  },
+  "structuredData": {
+    "appName": "Konverter {celsius}°C ke °F"
+  }
 }

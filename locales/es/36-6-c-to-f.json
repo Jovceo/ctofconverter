@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "title": "36.6°C a Fahrenheit (97.9°F) | Guía de temperatura normal",
+    "description": "Convierte 36.6°C a Fahrenheit (97.9°F). ¿Es 36.6°C normal? Aprende sobre rangos normales modernos y métodos de medición.",
+    "ogTitle": "36.6°C a Fahrenheit | Guía de temperatura corporal",
+    "ogDescription": "Convierte 36.6°C a Fahrenheit. Explora rangos normales modernos y métodos de medición para todas las edades."
+  },
+  "conversionFormula": {
+    "title": "36.6°C a Fahrenheit - Fórmula de Conversión",
+    "formula": "(36.6°C × 9/5) + 32 = 97.9°F",
+    "steps": [
+      "36.6 × 1.8 = 65.88",
+      "65.88 + 32 = 97.88",
+      "Resultado: 36.6°C ≈ 97.88°F"
+    ],
+    "imageAlt": "36.6°C a Fahrenheit - fórmula"
+  },
+  "bodyTempRanges": {
+    "title": "36.6°C Evaluación de Temperatura: Rango Normal",
+    "subtitle": "¿36.6°C es normal?",
+    "intro": "36.6°C (97.88°F) está dentro del rango normal de temperatura corporal actual.",
+    "normalHighlight": "✅ TEMPERATURA NORMAL<br>36.6°C = 97.88°F",
+    "adultStatus": "Normal\nRango medio",
+    "babyStatus": "Normal\nTípico para bebés",
+    "underArmStatus": "Normal\nLectura axilar",
+    "ranges": {
+      "adult": "Adultos",
+      "baby": "Bebés",
+      "underArm": "Axila",
+      "normal": "Normal",
+      "fever": "Fiebre"
+    }
+  },
+  "measurementMethods": {
+    "title": "Métodos de medición a 36.6°C",
+    "intro": "Lecturas de 36.6°C (97.88°F) varían según el sitio de medición.",
+    "oral": {
+      "icon": "🌡️",
+      "temp": "36.6°C = 97.88°F",
+      "title": "Oral",
+      "description": "Lectura oral normal"
+    },
+    "underArm": {
+      "icon": "💪",
+      "temp": "36.6°C = 97.88°F",
+      "title": "Axila",
+      "description": "Medición axilar normal"
+    },
+    "ear": {
+      "icon": "👂",
+      "temp": "36.6°C = 97.88°F",
+      "title": "Oído",
+      "description": "Lectura timpánica normal"
+    },
+    "rectal": {
+      "icon": "👶",
+      "temp": "36.6°C = 97.88°F",
+      "title": "Rectal",
+      "description": "Normal para bebés"
+    }
+  },
+  "ageGroups": {
+    "title": "Guía de Temperatura 36.6°C por Grupo de Edad",
+    "newborn": {
+      "title": "👶 Recién Nacidos (0-3 meses) - Normal",
+      "points": [
+        "36.6°C (97.88°F) está dentro del rango normal para recién nacidos",
+        "Los recién nacidos tienen menor capacidad de regulación",
+        "Vigilar patrones constantes en lugar de lecturas aisladas",
+        "Consultar al pediatra si consistentemente por debajo de 36.0°C"
+      ],
+      "range": "36.4-37.4°C (97.5-99.3°F)"
+    },
+    "infant": {
+      "title": "👶 Lactantes (3-6 meses) - Normal",
+      "points": [
+        "36.6°C es una temperatura saludable para esta edad",
+        "Rango normal: 36.0-37.5°C",
+        "Vigilar alimentación y actividad",
+        "Consultar si está por debajo de 35.5°C o por encima de 38°C"
+      ],
+      "range": "36.5-37.5°C (97.7-99.5°F)"
+    },
+    "children": {
+      "title": "🧒 Niños (6 meses+)",
+      "points": [
+        "36.6°C es una temperatura normal para niños",
+        "Puede haber variaciones de 0.5°C a lo largo del día",
+        "Rango medio normal y saludable",
+        "Preste atención si baja constantemente por debajo de 35.8°C"
+      ],
+      "range": "36.4-37.2°C (97.5-99°F)"
+    },
+    "adults": {
+      "title": "👨‍🦳 Adultos - Normal",
+      "points": [
+        "36.6°C está dentro del rango normal (36.0-37.2°C)",
+        "Lecturas vespertinas comunes",
+        "La línea base individual varía 0.3-0.5°C",
+        "Sin preocupación médica"
+      ],
+      "range": "36.1-37.2°C (97-99°F)"
+    }
+  },
+  "temperatureScale": {
+    "title": "Escala de Temperatura Corporal",
+    "intro": "Rangos de temperatura de bajo a alto:",
+    "tableHeaders": {
+      "celsius": "Celsius (°C)",
+      "fahrenheit": "Fahrenheit (°F)",
+      "assessment": "Evaluación"
+    },
+    "rows": [
+      {
+        "celsius": "35.5°C",
+        "fahrenheit": "95.9°F",
+        "assessment": "Bajo normal - Monitorear"
+      },
+      {
+        "celsius": "36.0°C",
+        "fahrenheit": "96.8°F",
+        "assessment": "Normal - rango bajo"
+      },
+      {
+        "celsius": "36.4°C",
+        "fahrenheit": "97.5°F",
+        "assessment": "Normal - borde inferior"
+      },
+      {
+        "celsius": "36.6°C",
+        "fahrenheit": "97.9°F",
+        "assessment": "Normal - borde superior cercano"
+      },
+      {
+        "celsius": "37.0°C",
+        "fahrenheit": "98.6°F",
+        "assessment": "Normal - valor clásico"
+      },
+      {
+        "celsius": "37.5°C",
+        "fahrenheit": "99.5°F",
+        "assessment": "Normal alto / Fiebre baja"
+      },
+      {
+        "celsius": "38.0°C",
+        "fahrenheit": "100.4°F",
+        "assessment": "Umbral de fiebre"
+      }
+    ]
+  },
+  "faq": {
+    "q1": {
+      "question": "¿Es 36.6°C una temperatura corporal normal?",
+      "answer": "Sí, 36.6°C (97.88°F) está dentro del rango normal para adultos."
+    },
+    "q2": {
+      "question": "¿Es 36.6°C fiebre en adultos o niños?",
+      "answer": "No, 36.6°C no es fiebre para nadie. La fiebre se define típicamente como 38°C (100.4°F) o más."
+    },
+    "q3": {
+      "question": "¿Es 36.6°C normal para un bebé?",
+      "answer": "Sí, 36.6°C es normal para un bebé, aunque está en el extremo inferior de su rango normal."
+    },
+    "q4": {
+      "question": "¿Qué significa 36.6°C para la temperatura axilar?",
+      "answer": "Para medición axilar, 36.6°C puede indicar una temperatura normal ligeramente baja."
+    },
+    "q5": {
+      "question": "¿Cómo convertir 36.6°C a Fahrenheit mentalmente?",
+      "answer": "Cálculo rápido: Multiplicar por 2 (36.6×2=73.2), restar 10% (73.2-7.32=65.88), sumar 32 (65.88+32=97.88)."
+    },
+    "q6": {
+      "question": "¿Qué otras temperaturas corporales están cerca de 36.6°C?",
+      "answer": "Temperaturas cercanas: 36.5°C=97.7°F, 36.7°C=98.06°F, 37.0°C=98.6°F."
+    }
+  },
+  "translationStatus": "pending",
+  "notes": "Estructura alineada con la plantilla en inglés; traducción pendiente para bodyTempRanges, measurementMethods, ageGroups, temperatureScale y faq. Verificar la renderización de los placeholders {fahrenheit}, {celsius}, {celsiusNoDecimal}."
+}
