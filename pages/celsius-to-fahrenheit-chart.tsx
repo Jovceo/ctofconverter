@@ -151,10 +151,7 @@ export default function TemperatureChartPage({ lastUpdatedIso, temperatureData, 
                         </a>
                     </div>
 
-                    <div className="sr-only">
-                        {t.sr_only_desc}
-                    </div>
-
+                    {false && (
                     <table style={{ display: 'none' }} aria-hidden="true">
                         <thead>
                             <tr><th>{t.th_c}</th><th>{t.th_f}</th></tr>
@@ -165,6 +162,7 @@ export default function TemperatureChartPage({ lastUpdatedIso, temperatureData, 
                             ))}
                         </tbody>
                     </table>
+                    )}
 
                     <section className="article-content">
                         <h2>{t.section2_h2}</h2>

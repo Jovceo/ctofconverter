@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { useTranslation } from '../utils/i18n';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
+import { getLocalizedAbsoluteUrl } from '../utils/seo';
 
 const HotOrColdEngine = dynamic(() => import('../components/Game/HotOrColdEngine'), {
     loading: () => <div style={{ padding: '2rem', textAlign: 'center' }}>Loading Game...</div>,
@@ -17,12 +18,9 @@ const HotOrColdEngine = dynamic(() => import('../components/Game/HotOrColdEngine
 export default function TemperatureConversionChallenge() {
     const { t } = useTranslation('game');
     const router = useRouter();
-    const { locale } = router;
-
-    // Default to 'en' if locale is undefined, but for canonical we want to be explicit
-    // If locale is 'en', canonical should be root. If 'zh', then /zh/...
-    const canonicalLocale = locale === 'en' ? '' : `/${locale}`;
-    const canonicalUrl = `https://ctofconverter.com${canonicalLocale}/temperature-conversion-challenge`;
+    const { locale = 'en' } = router;
+    const canonicalUrl = getLocalizedAbsoluteUrl('/temperature-conversion-challenge', locale);
+    const homeUrl = getLocalizedAbsoluteUrl('/', locale);
 
     const meta = {
         title: t('meta.title'),
@@ -104,13 +102,13 @@ export default function TemperatureConversionChallenge() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": t('links.home'),
-                "item": "https://ctofconverter.com/"
+                "item": homeUrl
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": t('links.challenge'),
-                "item": "https://ctofconverter.com/temperature-conversion-challenge"
+                "item": canonicalUrl
             }
         ]
     };

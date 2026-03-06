@@ -7,6 +7,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { getLocalizedLink } from '../utils/i18n';
 import { getLatestModifiedDate } from '../utils/dateHelpers';
+import { getLocalizedAbsoluteUrl } from '../utils/seo';
 import fs from 'fs';
 import path from 'path';
 
@@ -19,6 +20,8 @@ interface FormulaPageProps {
 export default function FormulaPage({ lastUpdatedIso, t, common }: FormulaPageProps) {
     const router = useRouter();
     const { locale = 'en' } = router;
+    const homeUrl = getLocalizedAbsoluteUrl('/', locale);
+    const pageUrl = getLocalizedAbsoluteUrl('/c-to-f-formula', locale);
 
     // Hooks must be called unconditionally first
     const [celsius, setCelsius] = useState<string>('20');
@@ -45,6 +48,8 @@ export default function FormulaPage({ lastUpdatedIso, t, common }: FormulaPagePr
             seo={{
                 title: t.meta.title,
                 description: t.meta.description,
+                canonical: pageUrl,
+                ogUrl: pageUrl,
             }}
         >
             <script
@@ -55,14 +60,14 @@ export default function FormulaPage({ lastUpdatedIso, t, common }: FormulaPagePr
                         "@graph": [
                             {
                                 "@type": "WebPage",
-                                "@id": "https://ctofconverter.com/c-to-f-formula",
-                                "url": "https://ctofconverter.com/c-to-f-formula",
+                                "@id": pageUrl,
+                                "url": pageUrl,
                                 "name": t.meta.title,
                                 "description": t.meta.description,
                                 "dateModified": lastUpdatedIso,
                                 "mainEntityOfPage": {
                                     "@type": "WebPage",
-                                    "@id": "https://ctofconverter.com/c-to-f-formula"
+                                    "@id": pageUrl
                                 }
                             },
                             {
@@ -105,13 +110,13 @@ export default function FormulaPage({ lastUpdatedIso, t, common }: FormulaPagePr
                                         "@type": "ListItem",
                                         "position": 1,
                                         "name": t.breadcrumb?.home || "Home",
-                                        "item": "https://ctofconverter.com" + getLocalizedLink("/", locale)
+                                        "item": homeUrl
                                     },
                                     {
                                         "@type": "ListItem",
                                         "position": 2,
                                         "name": t.breadcrumb?.current || "Celsius to Fahrenheit Formula",
-                                        "item": "https://ctofconverter.com" + getLocalizedLink("/c-to-f-formula", locale)
+                                        "item": pageUrl
                                     }
                                 ]
                             }

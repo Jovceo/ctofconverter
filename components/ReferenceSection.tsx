@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useTranslation, getDisplayLocale } from '../utils/i18n';
+import { normalizeMigratedUrl } from '../utils/normalizeMigratedUrl';
 
 interface ConversionCard {
   title: string;
@@ -58,7 +59,7 @@ export default function ReferenceSection() {
         {conversionCards.map((card, index) => (
           <article key={index} className="update-card">
             <p>
-              <Link href={card.url} className="update-title">
+              <Link href={normalizeMigratedUrl(card.url)} className="update-title">
                 {card.title}
               </Link>
             </p>

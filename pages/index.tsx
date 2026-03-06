@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import { useTranslation, getLocalizedLink } from '../utils/i18n';
 import { celsiusToFahrenheit, formatTemperature } from '../utils/temperaturePageHelpers';
+import { getAlternateUrls, getLocalizedAbsoluteUrl, getXDefaultAbsoluteUrl } from '../utils/seo';
 
 // 历史记录类型定义
 interface ConversionHistoryItem {
@@ -25,6 +26,9 @@ interface HomeProps {
 
 export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: HomeProps) {
     const { t, locale } = useTranslation('home');
+    const homepageUrl = getLocalizedAbsoluteUrl('/', locale);
+    const homepageAlternates = getAlternateUrls('/');
+    const homepageDefaultUrl = getXDefaultAbsoluteUrl('/');
 
     // 转换器状态
     const [celsius, setCelsius] = useState<string>('');
@@ -118,21 +122,21 @@ export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: Home
                 <meta name="robots" content="index, follow" />
 
                 {/* SEO Multi-language Linking */}
-                <link rel="canonical" href={`https://ctofconverter.com${locale === 'en' ? '/' : '/' + locale}`} />
-                <link rel="alternate" hrefLang="x-default" href="https://ctofconverter.com/" />
-                {['en', 'zh', 'es', 'hi', 'ar', 'ja', 'fr', 'de', 'id', 'pt-br'].map(l => (
+                <link rel="canonical" href={homepageUrl} />
+                <link rel="alternate" hrefLang="x-default" href={homepageDefaultUrl} />
+                {homepageAlternates.map((alternate) => (
                     <link
-                        key={l}
+                        key={alternate.locale}
                         rel="alternate"
-                        hrefLang={l === 'zh' ? 'zh-CN' : (l === 'pt-br' ? 'pt-BR' : l)}
-                        href={`https://ctofconverter.com${l === 'en' ? '/' : '/' + l}`}
+                        hrefLang={alternate.hreflang}
+                        href={alternate.href}
                     />
                 ))}
 
                 <meta property="og:title" content={t('meta.ogTitle')} />
                 <meta property="og:description" content={t('meta.ogDescription')} />
                 <meta property="og:image" content="https://ctofconverter.com/converter.png" />
-                <meta property="og:url" content="https://ctofconverter.com/" />
+                <meta property="og:url" content={homepageUrl} />
                 <meta property="og:type" content="website" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={t('meta.twitterTitle')} />
@@ -144,7 +148,7 @@ export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: Home
                         "@context": "https://schema.org",
                         "@type": "WebApplication",
                         "name": t('meta.title'),
-                        "url": "https://ctofconverter.com/",
+                        "url": homepageUrl,
                         "description": t('meta.ogDescription'),
                         "applicationCategory": "UtilityApplication",
                         "operatingSystem": "All"

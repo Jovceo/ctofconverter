@@ -1,0 +1,100 @@
+{
+  "page": {
+    "metaTitle": "160°C en Fahrenheit (320°F) | Guide de conversion et calculatrice",
+    "metaDescription": "Convertissez rapidement 160 degrés Celsius en Fahrenheit. Découvrez que 160°C correspondent à 320°F, avec les étapes et les usages pratiques.",
+    "ogDescription": "160°C correspondent à 320°F. Consultez la conversion exacte, les usages en cuisson, les équivalences de four et les applications pratiques.",
+    "headerTitle": "160°C en Fahrenheit (160 degrés Celsius en °F)",
+    "tagline": "Outil gratuit en ligne qui convertit instantanément 160 degrés Celsius (160°C) en degrés Fahrenheit (°F), avec formule et étapes détaillées.",
+    "resultHeader": "Conversion de 160 degrés Celsius en Fahrenheit"
+  },
+  "sections": {
+    "about": {
+      "title": "À propos de 160°C / 320°F : informations et usages",
+      "paragraph1Prefix": "160°C correspondent à 320°F. Cette température est supérieure de 60 degrés au ",
+      "boilingPointLinkText": "point d’ébullition de l’eau",
+      "paragraph1Suffix": ", mais en cuisine quotidienne elle est généralement considérée comme une température de four modérée plutôt qu’extrême.",
+      "paragraph2": "C’est le type de chaleur utilisé lorsque l’on souhaite une cuisson homogène sans que l’extérieur dore trop vite. C’est pourquoi 160°C revient souvent dans les recettes de génoises, biscuits, pâtes feuilletées, gâteaux sur plaque et rôtis doux.",
+      "paragraph3": "Cette valeur peut aussi apparaître dans certains contextes industriels ou de laboratoire, mais l’intention principale de recherche ici concerne la conversion de four. Si votre recette utilise un four ventilé, la température réglée est en général plus basse qu’avec un four traditionnel."
+    },
+    "applications": {
+      "title": "Applications pratiques de 160°C (320°F)",
+      "cards": [
+        {
+          "title": "Pâtisserie et viennoiseries",
+          "items": [
+            "Utile pour les génoises et cakes qui demandent une levée régulière et une coloration douce.",
+            "Convient bien aux biscuits et préparations qui peuvent sécher à température plus élevée.",
+            "Permet aux pâtes feuilletées de cuire à cœur sans brunir trop vite sur les bords."
+          ]
+        },
+        {
+          "title": "Rôtissage et cuisine salée",
+          "items": [
+            "Adapté aux cuissons lentes lorsque la tendreté compte davantage qu’une croûte rapide.",
+            "Pratique pour les légumes rôtis afin d’obtenir une légère caramélisation sans brûler les sucres trop tôt.",
+            "Utile pour les gratins et plats au four qui nécessitent une chaleur stable du début à la fin."
+          ]
+        },
+        {
+          "title": "Conseils de conversion",
+          "items": [
+            "Les anciennes recettes peuvent indiquer 320°F au lieu de 160°C.",
+            "Les fours ventilés demandent souvent une température plus basse pour obtenir le même résultat.",
+            "Il vaut mieux vérifier le type de recette avant d’ajuster, car les gâteaux et les pains ne réagissent pas de la même manière à la chaleur."
+          ]
+        }
+      ]
+    },
+    "ovenGuide": {
+      "title": "Guide des températures du four (ventilé, traditionnel et chaleur tournante)",
+      "headers": {
+        "ovenType": "Type de four",
+        "adjustedTemperature": "Température équivalente",
+        "bestUse": "Usage conseillé"
+      },
+      "rows": [
+        {
+          "type": "Four traditionnel",
+          "temperature": "160°C / 320°F",
+          "bestUse": "Température standard pour gâteaux, biscuits et rôtissage doux."
+        },
+        {
+          "type": "Four ventilé (convection)",
+          "temperature": "140°C / 285°F",
+          "bestUse": "Température plus basse car l’air en circulation cuit plus vite et plus uniformément."
+        },
+        {
+          "type": "Four à chaleur tournante",
+          "temperature": "140°C / 285°F",
+          "bestUse": "Appellation courante en Australie et au Royaume-Uni pour un four assisté par ventilateur."
+        },
+        {
+          "type": "Gas Mark",
+          "temperature": "Environ Gas Mark 3",
+          "bestUse": "Pratique lorsque les anciennes recettes n’indiquent pas les degrés Celsius ou Fahrenheit."
+        }
+      ],
+      "notePrefix": "Si vous changez de type de four, consultez le ",
+      "noteLinkText": "tableau de conversion du four ventilé",
+      "noteSuffix": ". Une règle courante consiste à réduire d’environ 20°C une recette prévue pour un four traditionnel lorsqu’on utilise un four ventilé."
+    }
+  },
+  "faq": [
+    {
+      "question": "160°C est-il considéré comme une température élevée en cuisine ?",
+      "answer": "160°C (320°F) sont généralement considérés comme une température de four modérée. Elle convient aux gâteaux, biscuits, légumes rôtis et viandes mijotées au four. Les recettes qui demandent une coloration plus rapide, comme de nombreux pains ou pizzas, utilisent souvent plutôt 180°C à 220°C."
+    },
+    {
+      "question": "160°C est-il dangereux ?",
+      "answer": "Oui. 160°C (320°F) peuvent provoquer des brûlures graves et immédiates au contact. Utilisez toujours des gants de cuisine, des plats résistants à la chaleur et de la prudence lors de l’ouverture du four ou de la manipulation de plaques chaudes."
+    },
+    {
+      "question": "Comment convertir 160 degrés Celsius en Fahrenheit de tête ?",
+      "answer": "Une méthode rapide consiste à doubler 160 pour obtenir 320, puis à retenir que ce raccourci fonctionne exactement dans ce cas précis, car 160°C correspondent à 320°F. La formule exacte reste °F = (°C × 9/5) + 32."
+    },
+    {
+      "question": "Pourquoi 160°C est-il une température de cuisson si courante ?",
+      "answer": "Parce que 160°C laisse le temps aux aliments de cuire de façon homogène sans brunir trop vite à l’extérieur. C’est très utile pour les génoises, biscuits, pâtisseries et rôtissages doux."
+    }
+  ]
+}

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Celsius to Fahrenheit converter with Next.js integration",
   "private": true,
+  "packageManager": "npm@10.9.2",
   "scripts": {
     "dev": "next dev",
     "prebuild": "node scripts/generate-sitemap.js",
@@ -18,6 +19,7 @@
     "next": "^16.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "styled-jsx": "5.1.6",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"
   },
   "devDependencies": {

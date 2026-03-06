@@ -1,4 +1,4 @@
-import { TemperaturePage } from './temperature-template';
+import { TemperaturePage } from '../components/TemperaturePage';
 import { generateContentStrategy } from '../utils/contentStrategy';
 import { useTranslation, getLocalizedLink } from '../utils/i18n';
 import { celsiusToFahrenheit, generatePageUrl } from '../utils/temperaturePageHelpers';
@@ -42,7 +42,7 @@ interface PageTranslation {
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     const lastUpdatedIso = getLatestModifiedDate([
         'pages/20-c-to-f.tsx',
-        'pages/temperature-template.tsx',
+        'components/TemperaturePage.tsx',
         `locales/${locale}/20-c-to-f.json`,
         `locales/${locale}/template.json`
     ]);

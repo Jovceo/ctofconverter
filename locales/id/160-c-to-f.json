@@ -1,0 +1,100 @@
+{
+  "page": {
+    "metaTitle": "160°C ke Fahrenheit (320°F) | Panduan konversi dan kalkulator",
+    "metaDescription": "Ubah 160 derajat Celsius ke Fahrenheit dengan cepat. Ketahui bahwa 160°C sama dengan 320°F, lengkap dengan langkah perhitungan dan kegunaan praktis.",
+    "ogDescription": "160°C sama dengan 320°F. Lihat konversi tepatnya, penggunaan untuk oven dan baking, serta aplikasi praktisnya.",
+    "headerTitle": "160°C ke Fahrenheit (160 derajat Celsius ke °F)",
+    "tagline": "Alat konversi suhu online gratis yang langsung mengubah 160 derajat Celsius (160°C) ke derajat Fahrenheit (°F), lengkap dengan rumus dan langkah detail.",
+    "resultHeader": "Konversi 160 derajat Celsius ke Fahrenheit"
+  },
+  "sections": {
+    "about": {
+      "title": "Tentang 160°C / 320°F: fakta suhu dan penggunaannya",
+      "paragraph1Prefix": "160°C sama dengan 320°F. Suhu ini 60 derajat di atas ",
+      "boilingPointLinkText": "titik didih air",
+      "paragraph1Suffix": ", tetapi dalam kegiatan memasak sehari-hari biasanya dianggap sebagai suhu oven sedang, bukan suhu yang ekstrem.",
+      "paragraph2": "Suhu ini cocok saat Anda ingin makanan matang merata tanpa bagian luar terlalu cepat kecokelatan. Karena itu 160°C sering muncul pada resep sponge cake, kue kering, pastry, loyang panggang, dan roasting perlahan.",
+      "paragraph3": "Angka ini juga bisa muncul dalam lingkungan industri atau laboratorium yang terkontrol, tetapi maksud utama halaman ini adalah konversi suhu oven. Jika resep Anda memakai oven kipas atau konveksi, pengaturannya biasanya lebih rendah daripada oven biasa."
+    },
+    "applications": {
+      "title": "Aplikasi praktis 160°C (320°F)",
+      "cards": [
+        {
+          "title": "Baking dan pastry",
+          "items": [
+            "Cocok untuk sponge cake dan loaf cake yang membutuhkan hasil mengembang merata serta warna yang lembut.",
+            "Bagus untuk biskuit, cookies, dan loyang panggang yang bisa cepat kering pada suhu lebih tinggi.",
+            "Membantu pastry matang di bagian dalam tanpa pinggirannya terlalu cepat gosong."
+          ]
+        },
+        {
+          "title": "Roasting dan masakan gurih",
+          "items": [
+            "Baik untuk memanggang daging perlahan saat kelembutan lebih penting daripada kerak yang cepat terbentuk.",
+            "Sesuai untuk sayuran panggang saat Anda ingin karamelisasi tanpa gula cepat hangus.",
+            "Berguna untuk hidangan oven seperti casserole atau gratin yang membutuhkan panas stabil dari awal sampai akhir."
+          ]
+        },
+        {
+          "title": "Tips konversi resep",
+          "items": [
+            "Resep lama mungkin menuliskan 320°F alih-alih 160°C.",
+            "Oven kipas biasanya membutuhkan pengaturan suhu yang lebih rendah untuk hasil yang sama.",
+            "Periksa jenis resep sebelum menyesuaikan suhu karena kue dan roti bereaksi berbeda terhadap perubahan panas."
+          ]
+        }
+      ]
+    },
+    "ovenGuide": {
+      "title": "Panduan suhu oven (kipas, konvensional, dan fan-forced)",
+      "headers": {
+        "ovenType": "Jenis oven",
+        "adjustedTemperature": "Suhu setara",
+        "bestUse": "Paling cocok untuk"
+      },
+      "rows": [
+        {
+          "type": "Oven konvensional",
+          "temperature": "160°C / 320°F",
+          "bestUse": "Suhu standar untuk cake, cookies, dan roasting perlahan."
+        },
+        {
+          "type": "Oven kipas (konveksi)",
+          "temperature": "140°C / 285°F",
+          "bestUse": "Gunakan suhu lebih rendah karena sirkulasi udara membuat makanan matang lebih cepat dan merata."
+        },
+        {
+          "type": "Oven fan-forced",
+          "temperature": "140°C / 285°F",
+          "bestUse": "Istilah yang umum dipakai di Australia dan Inggris untuk oven dengan kipas."
+        },
+        {
+          "type": "Gas Mark",
+          "temperature": "Sekitar Gas Mark 3",
+          "bestUse": "Berguna saat resep lama tidak mencantumkan Celsius atau Fahrenheit."
+        }
+      ],
+      "notePrefix": "Jika Anda berpindah antar jenis oven, gunakan ",
+      "noteLinkText": "bagan konversi oven kipas",
+      "noteSuffix": ". Aturan praktis yang umum adalah menurunkan sekitar 20°C dari resep oven biasa saat memakai oven kipas."
+    }
+  },
+  "faq": [
+    {
+      "question": "Apakah 160°C termasuk suhu tinggi untuk memasak?",
+      "answer": "160°C (320°F) biasanya dianggap sebagai suhu oven sedang. Suhu ini cocok untuk cake, cookies, sayuran panggang, dan daging yang dimasak perlahan. Resep yang membutuhkan warna kecokelatan lebih cepat, seperti banyak roti atau pizza, biasanya memakai 180°C hingga 220°C."
+    },
+    {
+      "question": "Apakah 160°C berbahaya?",
+      "answer": "Ya. 160°C (320°F) dapat menyebabkan luka bakar parah seketika saat terkena kulit. Selalu gunakan sarung tangan oven, peralatan tahan panas, dan berhati-hati saat membuka oven atau memegang loyang panas."
+    },
+    {
+      "question": "Bagaimana cara menghitung 160 derajat Celsius ke Fahrenheit di kepala?",
+      "answer": "Cara cepatnya adalah menggandakan 160 menjadi 320. Dalam kasus ini, jalan pintas tersebut kebetulan tepat karena 160°C memang sama dengan 320°F. Rumus pastinya tetap °F = (°C × 9/5) + 32."
+    },
+    {
+      "question": "Mengapa 160°C menjadi suhu baking yang umum?",
+      "answer": "Karena 160°C memberi waktu agar makanan matang merata di bagian dalam tanpa bagian luar menjadi terlalu gelap terlalu cepat. Ini membuatnya cocok untuk sponge cake, biskuit, pastry, dan roasting ringan."
+    }
+  ]
+}

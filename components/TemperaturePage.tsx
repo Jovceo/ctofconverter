@@ -49,9 +49,14 @@ export interface TemperaturePageProps {
   customNamespace?: string;
   customTitle?: string;
   customDescription?: string;
+  customMetaTitle?: string;
+  customMetaDescription?: string;
+  customHeaderTitle?: string;
+  customTagline?: string;
   customResultHeader?: string;
   availablePages?: number[];
   customIntro?: string;
+  customSections?: React.ReactNode;
   disableSmartFaqs?: boolean;
   showEditorialNote?: boolean;
   customOgImage?: string;
@@ -425,7 +430,8 @@ const ConversionTable: React.FC<{
   celsius: number;
   t: TFunction;
   locale: string;
-}> = React.memo(({ celsius, t, locale }) => {
+  availablePages?: number[];
+}> = React.memo(({ celsius, t, locale, availablePages = [] }) => {
   const tableData = useMemo(() => {
     const data = [];
     const start = Math.max(-10, Math.floor(celsius / 10) * 10 - 10);
@@ -465,17 +471,26 @@ const ConversionTable: React.FC<{
 
               // 🚀 SEO: Use proper <a> tags so crawlers can discover internal links
               const rowHref = getLocalizedLink(`/${row.celsius}-c-to-f`, locale);
+              const rowExists = availablePages.includes(row.celsius);
               return (
                 <tr key={index} className="linkable-row">
                   <td>
-                    <Link href={rowHref}>
+                    {rowExists ? (
+                      <Link href={rowHref}>
                       <strong>{row.celsius}°C</strong>
-                    </Link>
+                      </Link>
+                    ) : (
+                      <strong>{row.celsius}掳C</strong>
+                    )}
                   </td>
                   <td>
-                    <Link href={rowHref}>
+                    {rowExists ? (
+                      <Link href={rowHref}>
                       <strong>{row.fahrenheit}°F</strong>
-                    </Link>
+                      </Link>
+                    ) : (
+                      <strong>{row.fahrenheit}掳F</strong>
+                    )}
                   </td>
                   <td>{t(`context.categories.${context.categoryKeys[0] || 'moderate'}`)}</td>
                 </tr>
@@ -717,9 +732,14 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   customNamespace,
   customTitle,
   customDescription,
+  customMetaTitle,
+  customMetaDescription,
+  customHeaderTitle,
+  customTagline,
   customResultHeader,
   availablePages,
   customIntro,
+  customSections,
   disableSmartFaqs = false,
   showEditorialNote = true,
   customOgImage
@@ -760,10 +780,10 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
     const stripHtml = (html: string) => html.replace(/<[^>]*>/g, '');
 
     // 🚀 SEO: Page Title Logic
-    const pageTitle = stripHtml(customTitle || strategy?.meta?.title || generatePageTitle(celsius, f, t, context));
+    const pageTitle = stripHtml(customMetaTitle || customTitle || strategy?.meta?.title || generatePageTitle(celsius, f, t, context));
 
     // 🚀 SEO: Meta 描述逻辑 - 尝试使用细粒度上下文
-    let metaDescription = customDescription || strategy?.meta?.description;
+    let metaDescription = customMetaDescription || customDescription || strategy?.meta?.description;
     if (!metaDescription) {
       // Enhance description with specific context if available
       if (granularContext.key !== 'general' && granularContext.description) {
@@ -793,7 +813,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
       ogDescription,
       context
     };
-  }, [celsius, t, customTitle, customDescription, strategy, granularContext]);
+  }, [celsius, t, customTitle, customDescription, customMetaTitle, customMetaDescription, strategy, granularContext]);
 
   // 3. Third: Main Data & Structured Data (depends on Date & Title)
   const { formattedFahrenheit, pageUrl, structuredData } = useMemo(() => {
@@ -908,8 +928,8 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
                 <span className="sr-only">{t('common.logoText')}</span>
               </Link>
             </div>
-            <h1>{customTitle || t('common.headerTitle', { celsius, fahrenheit: formattedFahrenheit })}</h1>
-            <p className={pageStyles.tagline} dangerouslySetInnerHTML={{ __html: customDescription || strategy.text.intro || t('meta.ogDescription', { celsius, fahrenheit: formattedFahrenheit }) }} />
+            <h1>{customHeaderTitle || customTitle || t('common.headerTitle', { celsius, fahrenheit: formattedFahrenheit })}</h1>
+            <p className={pageStyles.tagline} dangerouslySetInnerHTML={{ __html: customTagline || customDescription || strategy.text.intro || t('meta.ogDescription', { celsius, fahrenheit: formattedFahrenheit }) }} />
           </div>
         </header>
 
@@ -984,9 +1004,11 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
               {strategy.modules.showHumanFeel && <WeatherWidget celsius={celsius} t={t} />}
             </div>
 
+            {customSections}
+
             {strategy.modules.showPracticalApps !== false && <PracticalApplications celsius={celsius} fahrenheit={fahrenheit} t={t} />}
 
-            {strategy.modules.showOvenGuide && <ConversionTable celsius={celsius} t={t} locale={locale} />}
+            {strategy.modules.showOvenGuide && <ConversionTable celsius={celsius} t={t} locale={locale} availablePages={availablePages} />}
 
             <EnhancedFAQ celsius={celsius} fahrenheit={fahrenheit} customFaqs={strategy.faqs} disableSmartFaqs={disableSmartFaqs} t={t} />
 

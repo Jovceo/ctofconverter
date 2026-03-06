@@ -1,4 +1,4 @@
-import { TemperaturePage } from './temperature-template';
+import { TemperaturePage } from '../components/TemperaturePage';
 import { generateContentStrategy } from '../utils/contentStrategy';
 import { useTranslation, replacePlaceholders, getLocalizedKeywords, getSceneKeywords } from '../utils/i18n';
 import { safeTranslate } from '../utils/translationHelpers';
@@ -65,7 +65,7 @@ interface PageTranslation {
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     const lastUpdatedIso = getLatestModifiedDate([
         'pages/36-3-c-to-f.tsx',
-        'pages/temperature-template.tsx',
+        'components/TemperaturePage.tsx',
         `locales/${locale}/36-3-c-to-f.json`,
         `locales/${locale}/template.json`
     ]);

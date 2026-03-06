@@ -6,7 +6,7 @@ const startTime = Date.now();
 
 const SITE_URL = 'https://ctofconverter.com';
 const LOCALES = ['en', 'zh', 'es', 'hi', 'ar', 'ja', 'fr', 'de', 'id', 'pt-br'];
-const EXCLUDED = ['_app.tsx', '_document.tsx', '_error.tsx', '404.tsx', 'sitemap.xml.tsx', 'temperature-template.tsx', 'api'];
+const EXCLUDED = ['_app.tsx', '_document.tsx', '_error.tsx', '404.tsx', 'sitemap.xml.tsx', 'api'];
 const NON_EN_EXCLUDED = ['privacy-policy', 'terms-of-service', 'about-us'];
 
 // 项目上线日期 — 作为 lastmod 的兜底值
@@ -20,7 +20,7 @@ const PROJECT_LAUNCH_DATE = '2025-10-19';
 //   • 医学体温: 36, 36.1, 36.3, 37, 37.2, 37.5, 38, 39, 41 (发烧判断)
 //   • 关键温度: 0 (冰点), 4 (冰箱), 20 (室温), 40 (高热), 100 (沸点)
 //   • 常用: 47, 75 (烹饪)
-const HIGH_VALUE_TEMP_PAGES = new Set([
+const CORE_TEMP_PAGES = new Set([
     '0-c-to-f',     // 冰点
     '4-c-to-f',     // 冰箱温度
     '20-c-to-f',    // 室温
@@ -41,6 +41,8 @@ const HIGH_VALUE_TEMP_PAGES = new Set([
     '75-c-to-f',    // 烹饪安全温度
     '100-c-to-f',   // 沸点
 ]);
+const RECENT_TEMP_UPDATE_WINDOW_DAYS = 90;
+const MAX_RECENT_TEMP_PAGES = 12;
 
 const pagesDir = path.join(__dirname, '../pages');
 const localesDir = path.join(__dirname, '../locales');
@@ -121,6 +123,49 @@ function getPageLastMod(pageSlug, locale) {
         : PROJECT_LAUNCH_DATE;
 }
 
+function isTemperaturePage(pageSlug) {
+    return /^\d+(-\d+)?-c-to-f$/.test(pageSlug);
+}
+
+function parseDateOnly(dateString) {
+    const ms = Date.parse(`${dateString}T00:00:00Z`);
+    return Number.isNaN(ms) ? 0 : ms;
+}
+
+function getPageRollupLastMod(pageSlug) {
+    const locales = getAvailableLocales(pageSlug);
+    const lastmods = locales.map((locale) => getPageLastMod(pageSlug, locale));
+    return lastmods.sort().reverse()[0] || PROJECT_LAUNCH_DATE;
+}
+
+function getIncludedTemperaturePages(allPages) {
+    const cutoffMs = Date.now() - (RECENT_TEMP_UPDATE_WINDOW_DAYS * 24 * 60 * 60 * 1000);
+    const tempPages = allPages.filter(isTemperaturePage);
+    const corePages = tempPages.filter((page) => CORE_TEMP_PAGES.has(page));
+
+    const recentPages = tempPages
+        .filter((page) => !CORE_TEMP_PAGES.has(page))
+        .map((page) => ({
+            page,
+            lastmod: getPageRollupLastMod(page),
+        }))
+        .filter(({ lastmod }) => parseDateOnly(lastmod) >= cutoffMs)
+        .sort((a, b) => {
+            const dateCompare = b.lastmod.localeCompare(a.lastmod);
+            if (dateCompare !== 0) return dateCompare;
+            return a.page.localeCompare(b.page, undefined, { numeric: true, sensitivity: 'base' });
+        })
+        .slice(0, MAX_RECENT_TEMP_PAGES)
+        .map(({ page }) => page);
+
+    return {
+        includedTempPages: new Set([...corePages, ...recentPages]),
+        totalTempPages: tempPages.length,
+        coreCount: corePages.length,
+        recentCount: recentPages.length,
+    };
+}
+
 // ============================================================
 // 2. XML 工具函数
 // ============================================================
@@ -189,7 +234,7 @@ function getAllPages() {
             // 非温度页（首页、工具页、关于页等）全部保留
             if (!page.match(/^\d+(-\d+)?-c-to-f$/)) return true;
             // 温度页只保留高价值列表中的
-            return HIGH_VALUE_TEMP_PAGES.has(page);
+            return CORE_TEMP_PAGES.has(page);
         });
 
         const excluded = allPages.length - filtered.length;
@@ -216,10 +261,58 @@ function getAvailableLocales(pageSlug) {
     return LOCALES;
 }
 
+function getSitemapPages() {
+    try {
+        const files = fs.readdirSync(pagesDir);
+        const allPages = files.filter((file) => {
+            const filePath = path.join(pagesDir, file);
+            const stat = fs.statSync(filePath);
+            return stat.isFile()
+                && file.endsWith('.tsx')
+                && !EXCLUDED.includes(file)
+                && !file.startsWith('[');
+        }).map((file) => file.replace('.tsx', ''));
+
+        const {
+            includedTempPages,
+            totalTempPages,
+            coreCount,
+            recentCount,
+        } = getIncludedTemperaturePages(allPages);
+
+        const filtered = allPages.filter((page) => {
+            if (!isTemperaturePage(page)) return true;
+            return includedTempPages.has(page);
+        });
+
+        const includedTempCount = [...includedTempPages].length;
+        const excluded = totalTempPages - includedTempCount;
+
+        console.log(`SEO strategy: ${coreCount} core temp pages kept in sitemap`);
+        if (recentCount > 0) {
+            console.log(`SEO strategy: ${recentCount} recently updated temp pages added (last ${RECENT_TEMP_UPDATE_WINDOW_DAYS} days, cap ${MAX_RECENT_TEMP_PAGES})`);
+        }
+        if (excluded > 0) {
+            console.log(`SEO strategy: ${excluded} older non-core temp pages omitted from sitemap`);
+        }
+
+        filtered.sort((a, b) => {
+            if (a === 'index') return -1;
+            if (b === 'index') return 1;
+            return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+        });
+
+        return filtered;
+    } catch (e) {
+        console.error('Error reading pages directory:', e);
+        return [];
+    }
+}
+
 // ============================================================
 // 4. 生成 sitemap
 // ============================================================
-const pages = getAllPages();
+const pages = getSitemapPages();
 const urlEntries = [];
 
 console.log(`Generating sitemap for ${pages.length} pages across ${LOCALES.length} locales...`);
