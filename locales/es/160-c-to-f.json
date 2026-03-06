@@ -1,0 +1,100 @@
+{
+  "page": {
+    "metaTitle": "160°C a Fahrenheit (320°F) | Guía de conversión y calculadora",
+    "metaDescription": "Convierte 160 grados Celsius a Fahrenheit rápidamente. Descubre que 160°C equivalen a 320°F, revisa los pasos y sus usos prácticos.",
+    "ogDescription": "160°C equivalen a 320°F. Consulta la conversión exacta, usos de repostería, equivalencias de horno y aplicaciones prácticas.",
+    "headerTitle": "160°C a Fahrenheit (160 grados Celsius a °F)",
+    "tagline": "Herramienta gratuita en línea que convierte al instante 160 grados Celsius (160°C) a grados Fahrenheit (°F), con fórmulas y pasos detallados.",
+    "resultHeader": "Conversión de 160 grados Celsius a Fahrenheit"
+  },
+  "sections": {
+    "about": {
+      "title": "Sobre 160°C / 320°F: datos y usos de esta temperatura",
+      "paragraph1Prefix": "160°C equivalen a 320°F. Es una temperatura 60 grados por encima del ",
+      "boilingPointLinkText": "punto de ebullición del agua",
+      "paragraph1Suffix": ", pero en cocina diaria suele considerarse una temperatura de horno moderada y no extrema.",
+      "paragraph2": "Es el tipo de calor que se usa cuando quieres que los alimentos se horneen o asen de forma uniforme sin que el exterior se dore demasiado rápido. Por eso 160°C aparece con frecuencia en recetas de bizcochos, galletas, hojaldres, bandejas de repostería y asados suaves.",
+      "paragraph3": "También puede aparecer en entornos industriales o de laboratorio controlados, pero la intención principal de búsqueda en esta página es la conversión de horno. Si tu receta usa horno con ventilador o convección, normalmente la temperatura ajustada será más baja que en un horno convencional."
+    },
+    "applications": {
+      "title": "Aplicaciones prácticas de 160°C (320°F)",
+      "cards": [
+        {
+          "title": "Repostería y masas",
+          "items": [
+            "Útil para bizcochos y cakes que necesitan una subida uniforme y un color suave.",
+            "Funciona bien para galletas y horneados que pueden secarse con temperaturas más altas.",
+            "Ayuda a que las masas hojaldradas se cocinen por dentro sin dorarse demasiado pronto en los bordes."
+          ]
+        },
+        {
+          "title": "Asados y cocina salada",
+          "items": [
+            "Adecuado para asados lentos cuando importa más la ternura que una costra rápida.",
+            "Sirve para verduras asadas cuando buscas caramelización sin quemar los azúcares demasiado pronto.",
+            "Es útil para platos al horno como gratinados o cazuelas que necesitan calor estable de principio a fin."
+          ]
+        },
+        {
+          "title": "Consejos de conversión",
+          "items": [
+            "Las recetas antiguas pueden indicar 320°F en lugar de 160°C.",
+            "Los hornos con ventilador suelen necesitar una temperatura menor para el mismo resultado.",
+            "Conviene revisar el tipo de receta antes de ajustar, porque bizcochos y panes reaccionan de forma distinta al calor."
+          ]
+        }
+      ]
+    },
+    "ovenGuide": {
+      "title": "Guía de temperatura del horno (ventilador, convencional y convección)",
+      "headers": {
+        "ovenType": "Tipo de horno",
+        "adjustedTemperature": "Temperatura equivalente",
+        "bestUse": "Uso recomendado"
+      },
+      "rows": [
+        {
+          "type": "Horno convencional",
+          "temperature": "160°C / 320°F",
+          "bestUse": "Temperatura estándar para bizcochos, galletas y asados suaves."
+        },
+        {
+          "type": "Horno con ventilador (convección)",
+          "temperature": "140°C / 285°F",
+          "bestUse": "Se usa una temperatura más baja porque el aire circulante cocina más rápido y de forma uniforme."
+        },
+        {
+          "type": "Horno fan-forced",
+          "temperature": "140°C / 285°F",
+          "bestUse": "Nombre común en Australia y Reino Unido para hornos asistidos por ventilador."
+        },
+        {
+          "type": "Gas Mark",
+          "temperature": "Aproximadamente Gas Mark 3",
+          "bestUse": "Útil cuando una receta antigua no muestra grados Celsius o Fahrenheit."
+        }
+      ],
+      "notePrefix": "Si necesitas cambiar entre tipos de horno, usa la ",
+      "noteLinkText": "tabla de conversión de horno con ventilador",
+      "noteSuffix": ". Una regla habitual es reducir unos 20°C en una receta de horno convencional cuando se usa un horno con ventilador."
+    }
+  },
+  "faq": [
+    {
+      "question": "¿160°C se considera una temperatura alta en cocina?",
+      "answer": "160°C (320°F) suele considerarse una temperatura de horno moderada. Es adecuada para bizcochos, galletas, verduras asadas y carnes de cocción lenta. Las recetas que necesitan un dorado más rápido, como muchos panes o pizzas, suelen usar entre 180°C y 220°C."
+    },
+    {
+      "question": "¿160°C es peligroso?",
+      "answer": "Sí. 160°C (320°F) pueden causar quemaduras graves e inmediatas por contacto. Usa siempre guantes de horno, recipientes resistentes al calor y precaución al abrir el horno o manipular bandejas calientes."
+    },
+    {
+      "question": "¿Cómo convierto mentalmente 160 grados Celsius a Fahrenheit?",
+      "answer": "Un método rápido es duplicar 160 para obtener 320, y recordar que en este caso ese atajo da exactamente el resultado correcto, porque 160°C equivalen a 320°F. La fórmula exacta es °F = (°C × 9/5) + 32."
+    },
+    {
+      "question": "¿Por qué 160°C es una temperatura común para hornear?",
+      "answer": "Porque 160°C permite que los alimentos se cocinen de forma uniforme por dentro sin oscurecerse demasiado rápido por fuera. Por eso se usa mucho para bizcochos, galletas, masas y asados suaves."
+    }
+  ]
+}

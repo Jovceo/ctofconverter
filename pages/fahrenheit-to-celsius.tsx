@@ -16,7 +16,8 @@ import {
 
 // 导入现有工具函数
 // 导入现有工具函数
-import { useTranslation, getLocalizedLink, SUPPORTED_LOCALES, HREFLANG_MAP } from '../utils/i18n';
+import { useTranslation, getLocalizedLink } from '../utils/i18n';
+import { getAlternateUrls, getLocalizedAbsoluteUrl, getXDefaultAbsoluteUrl } from '../utils/seo';
 
 /**
  * 华氏度转换器组件
@@ -188,6 +189,9 @@ interface FahrenheitToCelsiusPageProps {
 
 export default function FahrenheitToCelsiusPage({ canonicalUrl, lastUpdated }: FahrenheitToCelsiusPageProps) {
     const { t, locale } = useTranslation('f-to-c');
+    const alternateLinks = getAlternateUrls('/fahrenheit-to-celsius');
+    const defaultAlternateUrl = getXDefaultAbsoluteUrl('/fahrenheit-to-celsius');
+    const homeUrl = getLocalizedAbsoluteUrl('/', locale);
 
     //生成结构化数据
     const webAppData = useMemo(() => ({
@@ -229,7 +233,7 @@ export default function FahrenheitToCelsiusPage({ canonicalUrl, lastUpdated }: F
                 '@type': 'ListItem',
                 position: 1,
                 name: t('breadcrumb.home'),
-                item: 'https://ctofconverter.com'
+                item: homeUrl
             },
             {
                 '@type': 'ListItem',
@@ -238,7 +242,7 @@ export default function FahrenheitToCelsiusPage({ canonicalUrl, lastUpdated }: F
                 item: canonicalUrl
             }
         ]
-    }), [t, canonicalUrl]);
+    }), [t, canonicalUrl, homeUrl]);
 
     return (
         <>
@@ -251,15 +255,15 @@ export default function FahrenheitToCelsiusPage({ canonicalUrl, lastUpdated }: F
                 <link rel="canonical" href={canonicalUrl} />
 
                 {/* hreflang 标签 */}
-                <link rel="alternate" hrefLang="x-default" href="https://ctofconverter.com/fahrenheit-to-celsius" />
-                {SUPPORTED_LOCALES.map((loc) => {
-                    const hreflang = loc === 'zh' ? 'zh-CN' : (HREFLANG_MAP[loc] || loc);
-                    return (
-                        <link key={loc} rel="alternate" hrefLang={hreflang}
-                            href={`https://ctofconverter.com${getLocalizedLink('/fahrenheit-to-celsius', loc)}`}
-                        />
-                    );
-                })}
+                <link rel="alternate" hrefLang="x-default" href={defaultAlternateUrl} />
+                {alternateLinks.map((alternate) => (
+                    <link
+                        key={alternate.locale}
+                        rel="alternate"
+                        hrefLang={alternate.hreflang}
+                        href={alternate.href}
+                    />
+                ))}
 
                 {/* Open Graph */}
                 <meta property="og:title" content={t('meta.ogTitle')} />
@@ -389,7 +393,7 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
         `locales/${locale}/common.json`
     ]);
 
-    const canonicalUrl = `https://ctofconverter.com${locale === 'en' ? '' : `/${locale}`}/fahrenheit-to-celsius`;
+    const canonicalUrl = getLocalizedAbsoluteUrl('/fahrenheit-to-celsius', locale);
     return { props: { canonicalUrl, lastUpdated } };
 };
 

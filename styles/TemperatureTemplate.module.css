@@ -246,3 +246,94 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+
+.sectionText {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #334155;
+    margin: 0 0 1rem;
+}
+
+.sectionText:last-child {
+    margin-bottom: 0;
+}
+
+.sectionLink {
+    color: #2563eb;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.customGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.customPanel {
+    background: #fff;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.customPanelTitle {
+    margin: 0 0 12px;
+    color: #1e3a8a;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.customList {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: #334155;
+    line-height: 1.7;
+}
+
+.customList li + li {
+    margin-top: 0.65rem;
+}
+
+.customTableWrap {
+    overflow-x: auto;
+}
+
+.customTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.customTable th {
+    background: #e0f2fe;
+    color: #0f172a;
+    font-weight: 700;
+    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 1px solid #bae6fd;
+}
+
+.customTable td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+    vertical-align: top;
+}
+
+.customTable tr:last-child td {
+    border-bottom: none;
+}
+
+.noteBox {
+    margin-top: 18px;
+    padding: 16px 18px;
+    background: #f0f9ff;
+    border-left: 4px solid #0ea5e9;
+    border-radius: 10px;
+    color: #0f172a;
+    line-height: 1.65;
+}

@@ -1,3 +1,8 @@
+const migratedRoutes = require('./config/migrated-routes.json');
+
+const migratedHtmlRoutePattern = migratedRoutes.htmlRoutes.join('|');
+const migratedIndexHtmlRoutePattern = migratedRoutes.indexHtmlRoutes.join('|');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // 基础配置
@@ -77,17 +82,14 @@ const nextConfig = {
       },
       // 1. Surgical Redirects: Only for pages that exist in Next.js (pages/ directory)
       {
-        // Redirect .html to clean URL for:
-        // - Numbered temp pages (0, 4, 20, 37, 37-2, 37-5, 39, 47, 75, 100)
-        // - Core features (calculators, charts, formula)
-        // - Base pages (about, privacy, terms)
-        source: '/:path(0-c-to-f|4-c-to-f|20-c-to-f|36-c-to-f|36-1-c-to-f|36-3-c-to-f|36-4-c-to-f|36-5-c-to-f|36-6-c-to-f|37-c-to-f|37-2-c-to-f|37-5-c-to-f|38-c-to-f|39-c-to-f|40-c-to-f|41-c-to-f|47-c-to-f|75-c-to-f|100-c-to-f|about-us|privacy-policy|terms-of-service|c-to-f-calculator|c-to-f-formula|celsius-to-fahrenheit-chart|fahrenheit-to-celsius|fan-oven-conversion-chart|temperature-conversion-challenge|body-temperature-chart-fever-guide).html',
+        // Redirect top-level legacy .html pages that already have Next.js replacements.
+        source: `/:path(${migratedHtmlRoutePattern}).html`,
         destination: '/:path',
         statusCode: 301,
       },
       {
-        // Redirect index.html to parent directory for core feature sections
-        source: '/:path(c-to-f-calculator|c-to-f-formula|celsius-to-fahrenheit-chart|fahrenheit-to-celsius|fan-oven-conversion-chart|body-temperature-chart-fever-guide|fever-temperature-chart|temperature-conversion-challenge)/index.html',
+        // Redirect legacy section index pages that already have Next.js replacements.
+        source: `/:path(${migratedIndexHtmlRoutePattern})/index.html`,
         destination: '/:path',
         statusCode: 301,
       },

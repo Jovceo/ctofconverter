@@ -5,9 +5,12 @@ import Layout from '../components/Layout';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { useTranslation, getLocalizedLink } from '../utils/i18n';
+import { getLocalizedAbsoluteUrl } from '../utils/seo';
 
 export default function FeverTemperatureChart() {
     const { t, locale } = useTranslation('fever-temperature-chart');
+    const homeUrl = getLocalizedAbsoluteUrl('/', locale);
+    const pageUrl = getLocalizedAbsoluteUrl('/fever-temperature-chart', locale);
 
     // Converter State
     const [celsius, setCelsius] = useState<string>('');
@@ -95,10 +98,11 @@ export default function FeverTemperatureChart() {
         <Layout seo={{
             title: t('meta.title'),
             description: t('meta.description'),
-            canonical: `https://ctofconverter.com${locale === 'en' ? '' : `/${locale}`}/fever-temperature-chart`,
+            canonical: pageUrl,
             ogType: "article",
             ogTitle: t('meta.ogTitle'),
             ogDescription: t('meta.ogDescription'),
+            ogUrl: pageUrl,
         }}>
             <Head>
                 {/* 1. MedicalWebPage Schema */}
@@ -158,13 +162,13 @@ export default function FeverTemperatureChart() {
                                 "@type": "ListItem",
                                 "position": 1,
                                 "name": "Home",
-                                "item": "https://ctofconverter.com"
+                                "item": homeUrl
                             },
                             {
                                 "@type": "ListItem",
                                 "position": 2,
                                 "name": t('breadcrumb.page'),
-                                "item": "https://ctofconverter.com/fever-temperature-chart"
+                                "item": pageUrl
                             }
                         ]
                     })

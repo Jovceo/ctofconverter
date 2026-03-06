@@ -1,0 +1,100 @@
+{
+  "page": {
+    "metaTitle": "160°C em Fahrenheit (320°F) | Guia de conversão e calculadora",
+    "metaDescription": "Converta 160 graus Celsius para Fahrenheit rapidamente. Veja que 160°C equivalem a 320°F, com etapas do cálculo e aplicações práticas.",
+    "ogDescription": "160°C equivalem a 320°F. Veja a conversão exata, usos em forno e confeitaria, equivalências e aplicações práticas.",
+    "headerTitle": "160°C em Fahrenheit (160 graus Celsius para °F)",
+    "tagline": "Ferramenta online gratuita que converte instantaneamente 160 graus Celsius (160°C) em graus Fahrenheit (°F), com fórmula e etapas detalhadas.",
+    "resultHeader": "Conversão de 160 graus Celsius para Fahrenheit"
+  },
+  "sections": {
+    "about": {
+      "title": "Sobre 160°C / 320°F: fatos e aplicações dessa temperatura",
+      "paragraph1Prefix": "160°C equivalem a 320°F. É uma temperatura 60 graus acima do ",
+      "boilingPointLinkText": "ponto de ebulição da água",
+      "paragraph1Suffix": ", mas na cozinha do dia a dia costuma ser tratada como uma temperatura moderada de forno, e não como calor extremo.",
+      "paragraph2": "Esse é o tipo de calor usado quando você quer que o alimento asse de forma uniforme sem dourar rápido demais por fora. Por isso, 160°C aparece com frequência em receitas de bolos, biscoitos, massas folhadas, preparos em assadeira e assados mais suaves.",
+      "paragraph3": "Esse número também pode aparecer em ambientes industriais ou laboratoriais controlados, mas a principal intenção desta página é a conversão para uso em forno. Se a receita for para forno com ventilação, a regulagem costuma ser mais baixa do que no forno convencional."
+    },
+    "applications": {
+      "title": "Aplicações práticas de 160°C (320°F)",
+      "cards": [
+        {
+          "title": "Confeitaria e massas",
+          "items": [
+            "Útil para bolos e massas que precisam crescer de forma uniforme e ganhar cor suave.",
+            "Funciona bem para biscoitos e assados que podem ressecar em temperaturas mais altas.",
+            "Ajuda folhados e massas a cozinharem por dentro sem escurecer rápido demais nas bordas."
+          ]
+        },
+        {
+          "title": "Assados e pratos salgados",
+          "items": [
+            "Bom para carnes assadas lentamente, quando a maciez é mais importante do que formar crosta rapidamente.",
+            "Adequado para legumes assados, buscando caramelização sem queimar os açúcares cedo demais.",
+            "Útil para pratos de forno como gratinados e caçarolas, que precisam de calor estável do começo ao fim."
+          ]
+        },
+        {
+          "title": "Dicas de conversão de receita",
+          "items": [
+            "Receitas antigas podem trazer 320°F em vez de 160°C.",
+            "Fornos com ventilação geralmente exigem ajuste mais baixo para o mesmo resultado.",
+            "Vale conferir o tipo de receita antes de ajustar, porque bolos e pães reagem de forma diferente ao calor."
+          ]
+        }
+      ]
+    },
+    "ovenGuide": {
+      "title": "Guia de temperatura do forno (ventilado, convencional e fan-forced)",
+      "headers": {
+        "ovenType": "Tipo de forno",
+        "adjustedTemperature": "Temperatura equivalente",
+        "bestUse": "Melhor uso"
+      },
+      "rows": [
+        {
+          "type": "Forno convencional",
+          "temperature": "160°C / 320°F",
+          "bestUse": "Temperatura padrão para bolos, biscoitos e assados mais suaves."
+        },
+        {
+          "type": "Forno com ventilação (convecção)",
+          "temperature": "140°C / 285°F",
+          "bestUse": "Usa temperatura menor porque o ar circulando cozinha mais rápido e de forma uniforme."
+        },
+        {
+          "type": "Forno fan-forced",
+          "temperature": "140°C / 285°F",
+          "bestUse": "Termo comum na Austrália e no Reino Unido para forno com ventilador."
+        },
+        {
+          "type": "Gas Mark",
+          "temperature": "Cerca de Gas Mark 3",
+          "bestUse": "Útil quando receitas antigas não informam Celsius ou Fahrenheit."
+        }
+      ],
+      "notePrefix": "Se você vai mudar de um tipo de forno para outro, use a ",
+      "noteLinkText": "tabela de conversão de forno ventilado",
+      "noteSuffix": ". Uma regra comum é reduzir cerca de 20°C da receita de forno convencional ao usar um forno com ventilação."
+    }
+  },
+  "faq": [
+    {
+      "question": "160°C é considerado uma temperatura alta na cozinha?",
+      "answer": "160°C (320°F) normalmente é tratado como uma temperatura moderada de forno. Serve bem para bolos, biscoitos, legumes assados e carnes de cozimento lento. Receitas que precisam dourar mais rápido, como muitos pães e pizzas, costumam usar de 180°C a 220°C."
+    },
+    {
+      "question": "160°C é perigoso?",
+      "answer": "Sim. 160°C (320°F) podem causar queimaduras graves e imediatas ao contato. Sempre use luvas térmicas, utensílios resistentes ao calor e cuidado ao abrir o forno ou manusear formas quentes."
+    },
+    {
+      "question": "Como converter 160 graus Celsius para Fahrenheit de cabeça?",
+      "answer": "Um jeito rápido é dobrar 160 para chegar a 320. Neste caso, esse atalho funciona exatamente porque 160°C correspondem a 320°F. A fórmula precisa continua sendo °F = (°C × 9/5) + 32."
+    },
+    {
+      "question": "Por que 160°C é uma temperatura comum para assar?",
+      "answer": "Porque 160°C dá tempo para o alimento cozinhar por dentro de forma uniforme sem escurecer rápido demais por fora. Isso é útil para bolos, biscoitos, massas e assados mais suaves."
+    }
+  ]
+}

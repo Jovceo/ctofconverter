@@ -10,6 +10,7 @@ import { getLocalizedLink } from '../utils/i18n';
 import styles from '../styles/fan-oven-conversion-chart.module.css';
 import { GetStaticProps } from 'next';
 import { useLightTranslation } from '../utils/i18n-lite';
+import { normalizeMigratedUrl } from '../utils/normalizeMigratedUrl';
 import fs from 'fs';
 import path from 'path';
 import { useRouter } from 'next/router';
@@ -78,7 +79,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const currentLocale = locale || 'en';
   const lastUpdatedIso = getLatestModifiedDate([
     'pages/fan-oven-conversion-chart.tsx',
-    'pages/temperature-template.tsx',
+    'components/TemperaturePage.tsx',
     `locales/${currentLocale}/fan-oven-conversion-chart.json`,
     `locales/${currentLocale}/template.json`
   ]);
@@ -640,7 +641,7 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
                           <td>
                             {row.link ? (
                               <a
-                                href={row.link}
+                                href={normalizeMigratedUrl(row.link)}
                                 title={row.ariaLabel}
                                 aria-label={row.ariaLabel}
                               >

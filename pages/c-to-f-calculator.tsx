@@ -124,10 +124,8 @@ export default function CalculatorPage({ lastUpdatedIso, t, common, locale }: Ca
 
                     <CalculatorWidget t={t} locale={locale} />
 
-                    <div className="sr-only">
-                        Detailed temperature conversion tools and reference tables for Celsius to Fahrenheit conversions. Includes formula explanations, benchmark data, and health-related temperature guides.
-                    </div>
 
+                    {false && (
                     <table style={{ display: 'none' }} aria-hidden="true">
                         <thead>
                             <tr><th>Celsius (°C)</th><th>Fahrenheit (°F)</th></tr>
@@ -138,6 +136,7 @@ export default function CalculatorPage({ lastUpdatedIso, t, common, locale }: Ca
                             ))}
                         </tbody>
                     </table>
+                    )}
 
                     <section className="info-card">
                         <h2>{t.formula.title}</h2>
