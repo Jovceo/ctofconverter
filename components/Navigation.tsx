@@ -80,7 +80,6 @@ export default function Navigation() {
               className="nav-game-link"
               aria-label={t('nav.game')}
               title={t('nav.game')}
-              style={{ color: '#ef4444', fontWeight: 'bold' }}
             >
               {t('nav.game')}
             </Link>

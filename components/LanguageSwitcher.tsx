@@ -62,10 +62,10 @@ export default function LanguageSwitcher() {
           border: 0;
         }
         .language-select {
-          background: transparent;
-          border: 1px solid rgba(255, 255, 255, 0.6);
+          background: rgba(15, 23, 42, 0.55);
+          border: 1px solid rgba(255, 255, 255, 0.85);
           border-radius: 6px;
-          color: white;
+          color: #f8fafc;
           padding: 0.25rem 0.75rem;
           font-size: 0.9rem;
           cursor: pointer;
@@ -73,13 +73,7 @@ export default function LanguageSwitcher() {
         .language-select:focus {
           outline: none;
           border-color: #ffffff;
-          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
-        }
-        @media (prefers-color-scheme: light) {
-          .language-select {
-            color: #1a1a1a;
-            border-color: rgba(0, 0, 0, 0.3);
-          }
+          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
         }
       `}</style>
     </div>
