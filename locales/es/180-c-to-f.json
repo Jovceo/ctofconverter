@@ -1,0 +1,104 @@
+{
+  "page": {
+    "metaTitle": "180°C a Fahrenheit = 356°F | Guía para horno, air fryer y repostería",
+    "metaDescription": "Convierte 180°C a Fahrenheit (356°F) al instante. Guía completa con ajustes para convección, tiempos de cocción y consejos para hornear y asar.",
+    "ogDescription": "Convierte 180 grados Celsius a Fahrenheit al instante. 180°C equivalen a 356°F. Revisa equivalencias para horno, air fryer y horno con ventilador.",
+    "headerTitle": "Conversión de 180°C a Fahrenheit (356°F) - Horno y repostería",
+    "tagline": "Herramienta gratuita en línea que convierte 180 grados Celsius (180°C) a Fahrenheit (°F), con fórmula y pasos detallados para horno, air fryer y más.",
+    "resultHeader": "Conversión de 180 grados Celsius a Fahrenheit"
+  },
+  "sections": {
+    "about": {
+      "title": "Sobre 180°C / 356°F: contexto y uso en cocina",
+      "paragraph1": "180°C equivalen a 356°F y es una de las temperaturas de horno más comunes en la cocina casera. Está en un rango muy útil para bizcochos, verduras asadas, galletas y muchas recetas cotidianas al horno.",
+      "paragraph2": "Funciona bien porque es lo bastante alta para dorar y cocinar de forma eficiente, pero no tan agresiva como para quemar el exterior antes de que el centro esté listo. Por eso tantas recetas usan 180°C como temperatura base.",
+      "paragraph3Prefix": "Si vas a cambiar entre horno convencional, convección, ventilador o air fryer, compáralos con la ",
+      "fanLinkText": "tabla de conversión de horno con ventilador",
+      "paragraph3Suffix": ". En muchos casos, 180°C en horno convencional se acerca más a 160°C en horno con ventilador o air fryer."
+    },
+    "applications": {
+      "title": "Aplicaciones prácticas de 180°C (356°F)",
+      "cards": [
+        {
+          "title": "Repostería y bizcochos",
+          "items": [
+            "Una temperatura estándar para bizcochos, muffins, cupcakes y bandejas de horno.",
+            "Útil para galletas cuando quieres bordes dorados y centro bien cocido.",
+            "Suele aparecer como temperatura por defecto en muchas recetas caseras."
+          ]
+        },
+        {
+          "title": "Asados y platos salados",
+          "items": [
+            "Funciona bien para verduras asadas, pollo, pescado y comidas al horno.",
+            "Tiene calor suficiente para dorar sin resultar demasiado agresivo en cocciones largas.",
+            "Es adecuada para gratinados, pasta al horno y guisos horneados."
+          ]
+        },
+        {
+          "title": "Air fryer y horno con ventilador",
+          "items": [
+            "En muchas recetas se baja de 180°C a unos 160°C en air fryer u horno con ventilador.",
+            "El aire en circulación cocina más rápido, así que tiempo y temperatura pueden necesitar ajuste.",
+            "Conviene revisar el punto de cocción antes cuando conviertes una receta de horno convencional."
+          ]
+        }
+      ]
+    },
+    "ovenGuide": {
+      "title": "Guía de temperatura (horno convencional, ventilador y air fryer)",
+      "headers": {
+        "ovenType": "Tipo",
+        "adjustedTemperature": "Temperatura equivalente",
+        "bestUse": "Uso recomendado"
+      },
+      "rows": [
+        {
+          "type": "Horno convencional",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Temperatura estándar para muchos bizcochos, galletas y platos familiares."
+        },
+        {
+          "type": "Horno con ventilador",
+          "temperature": "160°C / 320°F",
+          "bestUse": "Se baja la temperatura porque el aire circulante cocina más rápido y uniforme."
+        },
+        {
+          "type": "Air fryer",
+          "temperature": "160°C / 320°F",
+          "bestUse": "Buen punto de partida para alimentos crujientes y porciones pequeñas."
+        },
+        {
+          "type": "Gas Mark",
+          "temperature": "Gas Mark 4",
+          "bestUse": "Útil para recetas antiguas que solo muestran el ajuste de gas."
+        }
+      ],
+      "notePrefix": "¿Necesitas una referencia más amplia? Usa la ",
+      "noteLinkText": "tabla de conversión de horno con ventilador",
+      "noteSuffix": " para comparar horno convencional, ventilador y ajustes relacionados."
+    }
+  },
+  "faq": [
+    {
+      "question": "¿Cuánto son 180 grados Celsius en Fahrenheit?",
+      "answer": "180 grados Celsius equivalen a 356 grados Fahrenheit. La fórmula es: °F = (°C × 9/5) + 32."
+    },
+    {
+      "question": "¿Qué significa 180°C en horno o air fryer?",
+      "answer": "En un horno convencional, 180°C equivalen a 356°F. En muchas recetas para air fryer u horno con ventilador se reduce a unos 160°C (320°F), porque el calor circulante cocina con más eficiencia."
+    },
+    {
+      "question": "¿Cuál es la fórmula para convertir 180 Celsius a Fahrenheit?",
+      "answer": "La fórmula es °F = (°C × 9/5) + 32. Para 180°C: (180 × 9/5) + 32 = 356°F."
+    },
+    {
+      "question": "¿A cuánto equivale 180°C en un horno con ventilador?",
+      "answer": "En un horno con ventilador suele bajarse 180°C unos 20°C, es decir, a 160°C (320°F), porque reparte el calor de forma más eficiente."
+    },
+    {
+      "question": "¿Cuánto tarda en hornearse un pastel a 180°C?",
+      "answer": "Muchos pasteles tardan entre 25 y 35 minutos a 180°C (356°F), aunque depende del molde, la cantidad de masa y la precisión del horno. Un palillo insertado en el centro debería salir limpio."
+    }
+  ]
+}

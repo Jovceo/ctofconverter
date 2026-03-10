@@ -1,0 +1,104 @@
+{
+  "page": {
+    "metaTitle": "180°C en Fahrenheit = 356°F | Guide four, air fryer et pâtisserie",
+    "metaDescription": "Convertissez 180°C en Fahrenheit (356°F) instantanément. Guide complet avec réglages convection, temps de cuisson et conseils de pâtisserie.",
+    "ogDescription": "Convertissez 180 degrés Celsius en Fahrenheit instantanément. 180°C correspondent à 356°F. Comparez four classique, air fryer et four ventilé.",
+    "headerTitle": "Conversion de 180°C en Fahrenheit (356°F) - Four et pâtisserie",
+    "tagline": "Outil gratuit en ligne pour convertir 180 degrés Celsius (180°C) en Fahrenheit (°F), avec formule et étapes détaillées pour le four, l’air fryer et plus encore.",
+    "resultHeader": "Conversion de 180 degrés Celsius en Fahrenheit"
+  },
+  "sections": {
+    "about": {
+      "title": "À propos de 180°C / 356°F : contexte et usages en cuisine",
+      "paragraph1": "180°C correspondent à 356°F et font partie des températures de four les plus courantes à la maison. C’est un réglage très utilisé pour les gâteaux, les légumes rôtis, les biscuits et de nombreux plats du quotidien.",
+      "paragraph2": "Cette température fonctionne bien car elle permet de colorer et cuire efficacement sans être trop agressive. L’extérieur ne brûle pas trop vite avant que le centre soit cuit, ce qui explique pourquoi tant de recettes utilisent 180°C comme base.",
+      "paragraph3Prefix": "Si vous passez d’un four traditionnel à un four ventilé, à chaleur tournante ou à un air fryer, comparez les réglages avec le ",
+      "fanLinkText": "tableau de conversion du four ventilé",
+      "paragraph3Suffix": ". Dans bien des cas, 180°C en four traditionnel correspondent plutôt à 160°C en four ventilé ou en air fryer."
+    },
+    "applications": {
+      "title": "Applications pratiques de 180°C (356°F)",
+      "cards": [
+        {
+          "title": "Pâtisserie et gâteaux",
+          "items": [
+            "Température standard pour de nombreux gâteaux, muffins, cupcakes et cuissons sur plaque.",
+            "Pratique pour les biscuits quand on veut des bords dorés et un centre bien cuit.",
+            "Très fréquente dans les recettes familiales de tous les jours."
+          ]
+        },
+        {
+          "title": "Rôtissage et plats salés",
+          "items": [
+            "Convient aux légumes rôtis, morceaux de poulet, filets de poisson et plats au four.",
+            "Assez chaude pour dorer correctement sans être trop forte pour les cuissons plus longues.",
+            "Utile pour les gratins, pâtes au four et plats mijotés au four."
+          ]
+        },
+        {
+          "title": "Air fryer et four ventilé",
+          "items": [
+            "Beaucoup de recettes ramènent 180°C à environ 160°C dans un air fryer ou un four ventilé.",
+            "La circulation d’air accélère la cuisson, donc le temps et la température peuvent changer.",
+            "Mieux vaut vérifier plus tôt la cuisson lorsqu’on adapte une recette de four classique."
+          ]
+        }
+      ]
+    },
+    "ovenGuide": {
+      "title": "Guide des températures (four classique, ventilé et air fryer)",
+      "headers": {
+        "ovenType": "Type",
+        "adjustedTemperature": "Température équivalente",
+        "bestUse": "Usage conseillé"
+      },
+      "rows": [
+        {
+          "type": "Four traditionnel",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Réglage standard pour de nombreux gâteaux, biscuits et plats familiaux."
+        },
+        {
+          "type": "Four ventilé",
+          "temperature": "160°C / 320°F",
+          "bestUse": "Réglage plus bas car l’air en circulation cuit plus vite et plus uniformément."
+        },
+        {
+          "type": "Air fryer",
+          "temperature": "160°C / 320°F",
+          "bestUse": "Bon point de départ pour les aliments croustillants et les petites portions."
+        },
+        {
+          "type": "Gas Mark",
+          "temperature": "Gas Mark 4",
+          "bestUse": "Pratique pour les anciennes recettes qui indiquent seulement le gaz."
+        }
+      ],
+      "notePrefix": "Besoin d’une référence plus large ? Utilisez le ",
+      "noteLinkText": "tableau de conversion du four ventilé",
+      "noteSuffix": " pour comparer four classique, ventilé et réglages proches."
+    }
+  },
+  "faq": [
+    {
+      "question": "Combien font 180 degrés Celsius en Fahrenheit ?",
+      "answer": "180 degrés Celsius correspondent à 356 degrés Fahrenheit. La formule est : °F = (°C × 9/5) + 32."
+    },
+    {
+      "question": "Que signifie 180°C dans un four ou un air fryer ?",
+      "answer": "Dans un four traditionnel, 180°C correspondent à 356°F. Dans beaucoup de recettes pour air fryer ou four ventilé, on réduit plutôt à environ 160°C (320°F), car l’air circulant cuit plus efficacement."
+    },
+    {
+      "question": "Quelle est la formule de conversion de 180 Celsius en Fahrenheit ?",
+      "answer": "La formule est °F = (°C × 9/5) + 32. Pour 180°C : (180 × 9/5) + 32 = 356°F."
+    },
+    {
+      "question": "À combien correspond 180°C dans un four ventilé ?",
+      "answer": "Dans un four ventilé, on réduit souvent 180°C d’environ 20°C, soit à 160°C (320°F), car la chaleur est répartie plus efficacement."
+    },
+    {
+      "question": "Combien de temps cuire un gâteau à 180°C ?",
+      "answer": "Beaucoup de gâteaux cuisent entre 25 et 35 minutes à 180°C (356°F), mais cela dépend du moule, de l’épaisseur de pâte et de la précision du four. Un cure-dent piqué au centre doit ressortir propre."
+    }
+  ]
+}
