@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "36.6°C to Fahrenheit (97.88°F) | Body Temperature Guide & Calculator",
-    "description": "Convert 36.6 degrees Celsius to Fahrenheit quickly. Learn that 36.6°C equals 97.88°F, understand if 36.6°C is normal body temperature or fever for adults and babies.",
+    "description": "Convert 36.6°C to Fahrenheit. Learn why 36.6°C equals 97.88°F and whether it is a normal body temperature for adults, babies, and underarm readings.",
     "ogTitle": "36.6°C to Fahrenheit (97.88°F) Body Temperature Converter",
     "ogDescription": "Convert 36.6 degrees Celsius to Fahrenheit instantly. 36.6°C equals 97.88°F - understand body temperature norms and fever detection."
   },
@@ -118,6 +118,20 @@
       { "celsius": "37.5°C", "fahrenheit": "99.5°F", "assessment": "High normal / Low fever" },
       { "celsius": "38.0°C", "fahrenheit": "100.4°F", "assessment": "Fever threshold" }
     ]
+  },
+  "medicalReview": {
+    "title": "Medical review and interpretation",
+    "intro": "This page is written for education, not diagnosis. A reading of {celsius}°C ({fahrenheit}°F) is usually within the normal body temperature range, but interpretation still depends on symptoms, age, time of day, and how the temperature was measured.",
+    "guidance": "This guidance follows widely used public health references for fever thresholds, including the common clinical cutoff of 38°C (100.4°F). Oral, ear, rectal, and underarm readings can differ, so the same number may not mean the same thing across methods.",
+    "bullets": [
+      "Adults: {celsius}°C is typically a normal mid-range reading.",
+      "Babies and children: normal ranges are slightly wider and method-dependent.",
+      "Underarm readings: often run lower than oral or rectal measurements."
+    ],
+    "linksIntro": "For broader context, compare this page with our",
+    "guideLabel": "Body Temperature Chart & Fever Guide",
+    "chartLabel": "Fever Temperature Chart",
+    "note": "If there are symptoms such as chills, lethargy, breathing trouble, rash, dehydration, or unusual behavior, seek medical advice rather than relying on a single temperature number."
   },
   "faq": {
     "q1": { "question": "Is 36.6°C a normal body temperature?", "answer": "Yes, 36.6°C (97.88°F) is within the normal body temperature range for adults. Normal oral temperature typically ranges from 36.1°C to 37.2°C (97°F to 99°F)." },

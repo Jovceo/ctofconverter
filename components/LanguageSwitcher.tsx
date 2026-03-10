@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/router';
-import { useTranslation } from '../utils/i18n';
+import { useCommonTranslation } from '../utils/common-i18n';
 
 const LOCALES = [
   { code: 'en', label: 'English' },
@@ -20,7 +20,7 @@ export default function LanguageSwitcher() {
   const router = useRouter();
   const { locale, pathname, query, asPath } = router;
   const currentLocale = (locale as string) || 'en';
-  const { t } = useTranslation();
+  const { t } = useCommonTranslation();
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = event.target.value;

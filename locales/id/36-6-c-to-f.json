@@ -148,6 +148,20 @@
       }
     ]
   },
+  "medicalReview": {
+    "title": "Tinjauan medis dan interpretasi",
+    "intro": "Halaman ini dibuat untuk edukasi, bukan diagnosis. Angka {celsius}°C ({fahrenheit}°F) biasanya masih berada dalam rentang suhu tubuh normal, tetapi interpretasinya tetap bergantung pada gejala, usia, waktu pengukuran, dan cara pengukuran.",
+    "guidance": "Panduan ini mengikuti rujukan kesehatan masyarakat yang umum dipakai untuk ambang demam, termasuk batas klinis 38°C (100.4°F). Pengukuran lewat mulut, telinga, rektal, dan ketiak dapat berbeda, jadi angka yang sama tidak selalu berarti hal yang sama pada setiap metode.",
+    "bullets": [
+      "Dewasa: {celsius}°C biasanya merupakan pembacaan normal di kisaran tengah.",
+      "Bayi dan anak-anak: rentang normal sedikit lebih lebar dan lebih bergantung pada metode ukur.",
+      "Ketiak: hasilnya sering lebih rendah dibandingkan pengukuran oral atau rektal."
+    ],
+    "linksIntro": "Untuk konteks yang lebih lengkap, lihat juga",
+    "guideLabel": "Panduan Suhu Tubuh & Demam",
+    "chartLabel": "Bagan Suhu Demam",
+    "note": "Jika ada gejala seperti menggigil, lesu, sesak napas, ruam, dehidrasi, atau perilaku yang tidak biasa, sebaiknya cari bantuan medis daripada mengandalkan satu angka suhu saja."
+  },
   "faq": {
     "q1": {
       "question": "Apakah 36.6°C normal?",

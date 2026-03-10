@@ -1,4 +1,4 @@
-import { DEFAULT_LOCALE, HREFLANG_MAP, SUPPORTED_LOCALES, getLocalizedLink } from './i18n';
+import { DEFAULT_LOCALE, HREFLANG_MAP, SUPPORTED_LOCALES, getLocalizedLink } from './locale-config';
 
 export const SITE_ORIGIN = 'https://ctofconverter.com';
 

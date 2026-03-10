@@ -1,24 +1,40 @@
 import Link from 'next/link';
-import { useTranslation, getDisplayLocale, getLocalizedLink } from '../utils/i18n';
+import { useCommonTranslation } from '../utils/common-i18n';
+import { getDisplayLocale, getLocalizedLink } from '../utils/locale-config';
 
 interface FooterProps {
   lastUpdated?: string;
 }
 
+function parseLastUpdated(value?: string) {
+  if (!value) return null;
+
+  const normalized = /^\d{4}-\d{2}-\d{2}$/.test(value) ? `${value}T00:00:00.000Z` : value;
+  const date = new Date(normalized);
+
+  if (Number.isNaN(date.getTime())) {
+    return null;
+  }
+
+  return {
+    date,
+    dateTime: date.toISOString().split('T')[0],
+  };
+}
+
 export default function Footer({ lastUpdated }: FooterProps) {
-  const { t, locale } = useTranslation();
+  const { t, locale } = useCommonTranslation();
   const currentLocale = locale || 'en';
-  // Use provided lastUpdated, or fallback to a stable date/current date logic
-  const dateToUse = lastUpdated ? new Date(lastUpdated) : new Date();
-
-  const formatted = dateToUse.toLocaleDateString(getDisplayLocale(currentLocale), {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
-
-  const dateTime = dateToUse.toISOString().split('T')[0];
-  const year = dateToUse.getFullYear();
+  const parsedLastUpdated = parseLastUpdated(lastUpdated);
+  const year = parsedLastUpdated?.date.getUTCFullYear() || new Date().getUTCFullYear();
+  const formatted = parsedLastUpdated
+    ? new Intl.DateTimeFormat(getDisplayLocale(currentLocale), {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        timeZone: 'UTC',
+      }).format(parsedLastUpdated.date)
+    : null;
 
   return (
     <footer className="site-footer" role="contentinfo" id="footer">
@@ -118,12 +134,14 @@ export default function Footer({ lastUpdated }: FooterProps) {
         <div className="footer-extra">
           <div className="copyright-notice">
             <p>{t('footer.copyright', { year })}</p>
-            <p className="footer-meta">
-              <span>
-                {t('footer.lastUpdated')}{' '}
-                <time dateTime={dateTime}>{formatted}</time>
-              </span>
-            </p>
+            {parsedLastUpdated && formatted && (
+              <p className="footer-meta">
+                <span>
+                  {t('footer.lastUpdated')}{' '}
+                  <time dateTime={parsedLastUpdated.dateTime}>{formatted}</time>
+                </span>
+              </p>
+            )}
           </div>
           <div className="back-to-top">
             <a href="#top" className="back-to-top-link" aria-label={t('footer.backToTop')}>

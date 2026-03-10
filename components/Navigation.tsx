@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useTranslation, getLocalizedLink } from '../utils/i18n';
+import { useCommonTranslation } from '../utils/common-i18n';
+import { getLocalizedLink } from '../utils/locale-config';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t, locale } = useTranslation();
+  const { t, locale } = useCommonTranslation();
   const currentLocale = locale || 'en';
 
   const toggleMenu = () => {
