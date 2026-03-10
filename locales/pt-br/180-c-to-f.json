@@ -1,0 +1,104 @@
+{
+  "page": {
+    "metaTitle": "180°C em Fahrenheit = 356°F | Guia para forno, air fryer e bolos",
+    "metaDescription": "Converta 180°C em Fahrenheit (356°F) na hora. Guia completo com ajuste para convecção, tempo de preparo e dicas de forno.",
+    "ogDescription": "Converta 180 graus Celsius em Fahrenheit instantaneamente. 180°C equivalem a 356°F. Veja equivalências para forno, air fryer e ventilação.",
+    "headerTitle": "Conversão de 180°C em Fahrenheit (356°F) - Forno e assados",
+    "tagline": "Ferramenta online gratuita para converter 180 graus Celsius (180°C) em Fahrenheit (°F), com fórmula e etapas detalhadas para forno, air fryer e mais.",
+    "resultHeader": "Conversão de 180 graus Celsius em Fahrenheit"
+  },
+  "sections": {
+    "about": {
+      "title": "Sobre 180°C / 356°F: contexto e uso na cozinha",
+      "paragraph1": "180°C equivalem a 356°F e estão entre as temperaturas de forno mais usadas na cozinha do dia a dia. É um ponto clássico para bolos, legumes assados, biscoitos e muitas receitas de forno.",
+      "paragraph2": "Essa temperatura funciona bem porque é quente o suficiente para dourar e cozinhar com eficiência, mas não tão agressiva a ponto de queimar o lado de fora antes de o centro ficar pronto. Por isso, 180°C aparece em muitas receitas como referência padrão.",
+      "paragraph3Prefix": "Se você vai trocar entre forno convencional, convecção, ventilado ou air fryer, compare as configurações na ",
+      "fanLinkText": "tabela de conversão de forno ventilado",
+      "paragraph3Suffix": ". Em muitos casos, 180°C no forno convencional se aproxima mais de 160°C no forno ventilado ou na air fryer."
+    },
+    "applications": {
+      "title": "Aplicações práticas de 180°C (356°F)",
+      "cards": [
+        {
+          "title": "Bolos e confeitaria",
+          "items": [
+            "Temperatura padrão para muitos bolos, muffins, cupcakes e assados de forma.",
+            "Boa para cookies quando você quer bordas douradas e centro bem assado.",
+            "Muito comum como temperatura base em receitas caseiras."
+          ]
+        },
+        {
+          "title": "Assados e pratos salgados",
+          "items": [
+            "Funciona bem para legumes assados, frango, peixe e refeições feitas no forno.",
+            "Tem calor suficiente para dourar sem ficar exagerado em tempos mais longos.",
+            "Útil para lasanhas, gratinados e pratos que pedem calor estável."
+          ]
+        },
+        {
+          "title": "Air fryer e forno ventilado",
+          "items": [
+            "Em muitas receitas, 180°C cai para algo perto de 160°C na air fryer ou no forno ventilado.",
+            "O ar circulante cozinha mais rápido, então tempo e temperatura podem precisar de ajuste.",
+            "Ao adaptar uma receita de forno comum, vale conferir o ponto mais cedo."
+          ]
+        }
+      ]
+    },
+    "ovenGuide": {
+      "title": "Guia de temperatura (forno convencional, ventilado e air fryer)",
+      "headers": {
+        "ovenType": "Tipo",
+        "adjustedTemperature": "Temperatura equivalente",
+        "bestUse": "Melhor uso"
+      },
+      "rows": [
+        {
+          "type": "Forno convencional",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Temperatura padrão para muitos bolos, biscoitos e pratos do dia a dia."
+        },
+        {
+          "type": "Forno ventilado",
+          "temperature": "160°C / 320°F",
+          "bestUse": "Temperatura menor porque o ar circula melhor e cozinha mais rápido."
+        },
+        {
+          "type": "Air fryer",
+          "temperature": "160°C / 320°F",
+          "bestUse": "Bom ponto de partida para alimentos crocantes e porções menores."
+        },
+        {
+          "type": "Gas Mark",
+          "temperature": "Gas Mark 4",
+          "bestUse": "Útil para receitas antigas com referência de gás."
+        }
+      ],
+      "notePrefix": "Precisa de uma referência mais ampla? Use a ",
+      "noteLinkText": "tabela de conversão de forno ventilado",
+      "noteSuffix": " para comparar forno convencional, ventilado e ajustes próximos."
+    }
+  },
+  "faq": [
+    {
+      "question": "Quanto é 180 graus Celsius em Fahrenheit?",
+      "answer": "180 graus Celsius equivalem a 356 graus Fahrenheit. A fórmula é: °F = (°C × 9/5) + 32."
+    },
+    {
+      "question": "O que significa 180°C no forno ou na air fryer?",
+      "answer": "No forno convencional, 180°C equivalem a 356°F. Em muitas receitas de air fryer ou forno ventilado, esse valor costuma cair para algo perto de 160°C (320°F), porque o ar circulante cozinha com mais eficiência."
+    },
+    {
+      "question": "Qual é a fórmula para converter 180 Celsius em Fahrenheit?",
+      "answer": "A fórmula é °F = (°C × 9/5) + 32. Para 180°C: (180 × 9/5) + 32 = 356°F."
+    },
+    {
+      "question": "Quanto é 180°C em forno ventilado?",
+      "answer": "Em forno ventilado, costuma-se reduzir 180°C em cerca de 20°C, chegando a 160°C (320°F), porque o calor circula de forma mais eficiente."
+    },
+    {
+      "question": "Quanto tempo um bolo assa a 180°C?",
+      "answer": "Muitos bolos assam entre 25 e 35 minutos a 180°C (356°F), mas isso varia conforme a forma, a altura da massa e a precisão do forno. Um palito no centro deve sair limpo."
+    }
+  ]
+}

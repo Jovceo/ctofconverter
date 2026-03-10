@@ -1,0 +1,104 @@
+{
+  "page": {
+    "metaTitle": "180°C to Fahrenheit = 356°F | Oven, Air Fryer & Baking Temperature Guide",
+    "metaDescription": "Convert 180°C to Fahrenheit (356°F) instantly. Complete oven temperature guide with convection adjustments, cooking times, and expert tips for perfect baking and roasting results.",
+    "ogDescription": "Convert 180 degrees Celsius to Fahrenheit instantly. 180°C equals 356°F. See oven, air fryer, and fan oven equivalents plus baking tips.",
+    "headerTitle": "180°C to Fahrenheit Conversion (356°F) - Oven & Baking Temperatures",
+    "tagline": "Free online temperature conversion tool that instantly converts 180 degrees Celsius (180°C) to degrees Fahrenheit (°F), with conversion formulas and detailed steps for ovens, air fryers, and more.",
+    "resultHeader": "180 Degrees Celsius to Fahrenheit Conversion"
+  },
+  "sections": {
+    "about": {
+      "title": "About 180°C / 356°F: Temperature Facts and Cooking Context",
+      "paragraph1": "180°C equals 356°F and is one of the most common oven temperatures used in home cooking. It sits in the reliable middle range for baking cakes, roasting vegetables, cooking cookies, and preparing many everyday oven dishes.",
+      "paragraph2": "This temperature works well because it is hot enough to brown and cook food efficiently, but not so aggressive that the outside burns before the center is done. That is why so many recipes use 180°C as a default baking or roasting temperature.",
+      "paragraph3Prefix": "If you are switching between conventional, convection, fan, or air fryer settings, compare them with the ",
+      "fanLinkText": "fan oven conversion chart",
+      "paragraph3Suffix": ". In most cases, 180°C in a conventional oven is closer to 160°C in a fan oven or air fryer."
+    },
+    "applications": {
+      "title": "Practical Applications of 180°C (356°F)",
+      "cards": [
+        {
+          "title": "Baking and Cakes",
+          "items": [
+            "A standard choice for cakes, cupcakes, muffins, and tray bakes.",
+            "Useful for cookies and biscuits when you want golden edges and a cooked center.",
+            "Often used as the default temperature in everyday baking recipes."
+          ]
+        },
+        {
+          "title": "Roasting and Savory Cooking",
+          "items": [
+            "Works well for roast vegetables, chicken pieces, fish fillets, and oven-baked dinners.",
+            "Hot enough to brown food properly without becoming too harsh for longer cooking times.",
+            "Suitable for casseroles and baked pasta dishes that need steady oven heat."
+          ]
+        },
+        {
+          "title": "Air Fryer and Fan Oven Use",
+          "items": [
+            "For many recipes, reduce 180°C to around 160°C in a fan oven or air fryer.",
+            "Circulating heat cooks faster, so both time and temperature may need adjustment.",
+            "Check doneness early when converting from a conventional oven recipe."
+          ]
+        }
+      ]
+    },
+    "ovenGuide": {
+      "title": "Oven Temperature Guide (Fan, Conventional & Air Fryer)",
+      "headers": {
+        "ovenType": "Oven Type",
+        "adjustedTemperature": "Adjusted Temperature",
+        "bestUse": "Best Use"
+      },
+      "rows": [
+        {
+          "type": "Conventional oven",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Standard baking and roasting temperature for many cakes, cookies, and family meals."
+        },
+        {
+          "type": "Fan oven (convection)",
+          "temperature": "160°C / 320°F",
+          "bestUse": "Lower setting because fan circulation cooks faster and more evenly."
+        },
+        {
+          "type": "Air fryer",
+          "temperature": "160°C / 320°F",
+          "bestUse": "Good starting point for crispy foods and smaller portions."
+        },
+        {
+          "type": "Gas Mark",
+          "temperature": "Gas Mark 4",
+          "bestUse": "Useful for older recipes that list gas settings instead of Celsius or Fahrenheit."
+        }
+      ],
+      "notePrefix": "Need a broader conversion reference? Use the ",
+      "noteLinkText": "fan oven conversion chart",
+      "noteSuffix": " to compare conventional, fan, and related oven settings before you cook."
+    }
+  },
+  "faq": [
+    {
+      "question": "What is 180 degrees Celsius in Fahrenheit?",
+      "answer": "180 degrees Celsius equals 356 degrees Fahrenheit. To convert, use the formula: °F = (°C × 9/5) + 32."
+    },
+    {
+      "question": "What is 180°C in an oven or air fryer?",
+      "answer": "180°C is equivalent to 356°F in a conventional oven. In many air fryer or convection recipes, you usually reduce this to around 160°C (320°F) because circulating heat cooks more efficiently."
+    },
+    {
+      "question": "What is the conversion formula for 180 Celsius to Fahrenheit?",
+      "answer": "The formula to convert Celsius to Fahrenheit is °F = (°C × 9/5) + 32. For 180°C, you calculate (180 × 9/5) + 32 = 356°F."
+    },
+    {
+      "question": "What is 180°C in a fan oven?",
+      "answer": "For fan ovens, reduce 180°C by about 20°C to 160°C (320°F) for equivalent cooking results. Fan ovens circulate heat more efficiently, so they usually need a lower setting."
+    },
+    {
+      "question": "How long to bake cakes at 180°C?",
+      "answer": "Many cakes bake for about 25 to 35 minutes at 180°C (356°F), but the exact time depends on pan size, batter depth, and oven accuracy. A toothpick inserted in the center should come out clean when the cake is done."
+    }
+  ]
+}
