@@ -148,6 +148,20 @@
       }
     ]
   },
+  "medicalReview": {
+    "title": "Medizinische Einordnung und Interpretation",
+    "intro": "Diese Seite dient der Gesundheitsaufklärung und ersetzt keine medizinische Diagnose. Ein Wert von {celsius}°C ({fahrenheit}°F) liegt meist im normalen Bereich der Körpertemperatur, die Einordnung hängt aber auch von Symptomen, Alter, Tageszeit und Messmethode ab.",
+    "guidance": "Die Hinweise auf dieser Seite orientieren sich an häufig verwendeten öffentlichen Gesundheits- und Klinikreferenzen für Fieberschwellen, einschließlich des üblichen Grenzwerts von 38°C (100.4°F). Mund-, Ohr-, rektale und Achselmessungen können voneinander abweichen, daher bedeutet dieselbe Zahl nicht bei jeder Methode genau dasselbe.",
+    "bullets": [
+      "Erwachsene: {celsius}°C ist meist ein normaler Wert im mittleren Bereich.",
+      "Babys und Kinder: Normalbereiche sind etwas breiter und stärker von der Messmethode abhängig.",
+      "Achselmessung: Werte liegen oft niedriger als bei oraler oder rektaler Messung."
+    ],
+    "linksIntro": "Für mehr Kontext siehe auch",
+    "guideLabel": "Leitfaden zu Körpertemperatur und Fieber",
+    "chartLabel": "Fiebertemperatur-Tabelle",
+    "note": "Bei Schüttelfrost, starker Müdigkeit, Atemproblemen, Ausschlag, Dehydrierung oder ungewöhnlichem Verhalten sollte medizinischer Rat eingeholt werden, statt sich auf nur einen Messwert zu verlassen."
+  },
   "faq": {
     "q1": {
       "question": "Ist 36.6°C eine normale Körpertemperatur?",

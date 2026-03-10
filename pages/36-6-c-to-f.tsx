@@ -1,9 +1,10 @@
 import { TemperaturePage } from '../components/TemperaturePage'
 import { generateContentStrategy } from '../utils/contentStrategy'
-import { useTranslation, replacePlaceholders, getSceneKeywords } from '../utils/i18n'
+import { useTranslation, replacePlaceholders, getSceneKeywords, getLocalizedLink } from '../utils/i18n'
 import { safeTranslate } from '../utils/translationHelpers'
 import { celsiusToFahrenheit, formatTemperature, generatePageUrl } from '../utils/temperaturePageHelpers'
 import { useMemo } from 'react'
+import Link from 'next/link'
 
 import { getLatestModifiedDate } from '../utils/dateHelpers'
 import { getAvailableTemperaturePages } from '../utils/serverHelpers'
@@ -18,6 +19,7 @@ interface PageTranslation {
   measurementMethods?: { title?: string; intro?: string; oral?: { icon?: string; temp?: string; title?: string; description?: string }; underArm?: { icon?: string; temp?: string; title?: string; description?: string }; ear?: { icon?: string; temp?: string; title?: string; description?: string }; rectal?: { icon?: string; temp?: string; title?: string; description?: string } }
   ageGroups?: { newborn?: { title?: string; points?: string[] }; infant?: { title?: string; points?: string[] }; children?: { title?: string; points?: string[] }; adults?: { title?: string; points?: string[] }; elderly?: { title?: string; points?: string[] } }
   temperatureScale?: { title?: string; intro?: string; tableHeaders?: { celsius?: string; fahrenheit?: string; assessment?: string }; rows?: Array<{ celsius?: string; fahrenheit?: string; assessment?: string }> }
+  medicalReview?: { title?: string; intro?: string; guidance?: string; bullets?: string[]; linksIntro?: string; guideLabel?: string; chartLabel?: string; note?: string }
   practicalApplications?: { title?: string; adult?: { title?: string; points?: string[] }; pediatric?: { title?: string; points?: string[] }; clinical?: { title?: string; points?: string[] } }
   faq?: Record<string, { question?: string; answer?: string }>
 }
@@ -203,6 +205,11 @@ export default function Temperature36_6C({ lastUpdatedIso, pageTrans, availableP
   const canonicalUrl = generatePageUrl(celsius, locale)
   const customTitle = replacePlaceholders(pageT.meta?.title || '', replacements)
   const customDescription = replacePlaceholders(pageT.meta?.description || '', replacements)
+  const customTagline = safeTranslate(pageT, 'bodyTempRanges.intro', locale)
+  const feverGuideUrl = getLocalizedLink('/body-temperature-chart-fever-guide', locale)
+  const feverChartUrl = getLocalizedLink('/fever-temperature-chart', locale)
+  const medicalReview = pageT.medicalReview || {}
+  const reviewBullets = medicalReview.bullets || []
 
   return (
     <TemperaturePage
@@ -213,9 +220,63 @@ export default function Temperature36_6C({ lastUpdatedIso, pageTrans, availableP
       canonicalUrl={canonicalUrl}
       customTitle={customTitle}
       customDescription={customDescription}
+      customTagline={customTagline}
+      customSections={
+        <section
+          aria-labelledby="medical-review-title"
+          style={{
+            background: '#f8fafc',
+            border: '1px solid #dbe4ee',
+            borderRadius: '12px',
+            padding: '24px',
+            margin: '24px 0'
+          }}
+        >
+          <h2 id="medical-review-title" style={{ marginTop: 0 }}>
+            {replacePlaceholders(medicalReview.title || 'Medical review and interpretation', replacements)}
+          </h2>
+          <p>
+            {replacePlaceholders(
+              medicalReview.intro ||
+                'This page is written for education, not diagnosis. A reading of 36.6°C (97.88°F) is usually within the normal body temperature range, but interpretation still depends on symptoms, age, time of day, and how the temperature was measured.',
+              replacements
+            )}
+          </p>
+          <p>
+            {replacePlaceholders(
+              medicalReview.guidance ||
+                'This guidance follows widely used public health references for fever thresholds, including the common clinical cutoff of 38°C (100.4°F). Oral, ear, rectal, and underarm readings can differ, so the same number may not mean the same thing across methods.',
+              replacements
+            )}
+          </p>
+          <ul>
+            {reviewBullets.map((bullet, index) => (
+              <li key={index}>{replacePlaceholders(bullet, replacements)}</li>
+            ))}
+          </ul>
+          <p>
+            <span>{replacePlaceholders(medicalReview.linksIntro || 'For broader context, compare this page with our', replacements)} </span>
+            <Link href={feverGuideUrl}>
+              {replacePlaceholders(medicalReview.guideLabel || 'Body Temperature Chart & Fever Guide', replacements)}
+            </Link>
+            <span> / </span>
+            <Link href={feverChartUrl}>
+              {replacePlaceholders(medicalReview.chartLabel || 'Fever Temperature Chart', replacements)}
+            </Link>
+            <span>.</span>
+          </p>
+          <p style={{ marginBottom: 0, color: '#475569' }}>
+            {replacePlaceholders(
+              medicalReview.note ||
+                'If there are symptoms such as chills, lethargy, breathing trouble, rash, dehydration, or unusual behavior, seek medical advice rather than relying on a single temperature number.',
+              replacements
+            )}
+          </p>
+        </section>
+      }
       availablePages={availablePages}
       disableSmartFaqs={true}
-      showEditorialNote={true}
+      showEditorialNote={false}
     />
   )
 }

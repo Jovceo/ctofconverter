@@ -148,6 +148,20 @@
       }
     ]
   },
+  "medicalReview": {
+    "title": "Revue médicale et interprétation",
+    "intro": "Cette page a un but éducatif et ne remplace pas un diagnostic médical. Une mesure de {celsius}°C ({fahrenheit}°F) se situe généralement dans la plage normale de température corporelle, mais son interprétation dépend aussi des symptômes, de l'âge, du moment de la journée et du mode de mesure.",
+    "guidance": "Les informations de cette page s'appuient sur des références de santé publique couramment utilisées pour les seuils de fièvre, notamment le seuil clinique fréquent de 38°C (100.4°F). Les mesures orale, auriculaire, rectale et axillaire peuvent varier, donc un même chiffre n'a pas toujours exactement la même signification selon la méthode.",
+    "bullets": [
+      "Adultes : {celsius}°C correspond généralement à une valeur normale de milieu de plage.",
+      "Bébés et enfants : les plages normales sont un peu plus larges et dépendent de la méthode.",
+      "Aisselle : la mesure est souvent plus basse que la mesure orale ou rectale."
+    ],
+    "linksIntro": "Pour un contexte plus large, consultez",
+    "guideLabel": "Guide de température corporelle et de fièvre",
+    "chartLabel": "Tableau des températures de fièvre",
+    "note": "En présence de frissons, de léthargie, de difficultés respiratoires, d'une éruption cutanée, d'une déshydratation ou d'un comportement inhabituel, demandez un avis médical au lieu de vous fier à une seule mesure."
+  },
   "faq": {
     "q1": {
       "question": "36.6°C est-elle une température normale?",

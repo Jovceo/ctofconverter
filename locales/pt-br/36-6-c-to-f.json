@@ -148,6 +148,20 @@
       }
     ]
   },
+  "medicalReview": {
+    "title": "Revisão médica e interpretação",
+    "intro": "Esta página tem objetivo educativo e não substitui um diagnóstico médico. Uma leitura de {celsius}°C ({fahrenheit}°F) normalmente está dentro da faixa corporal normal, mas a interpretação também depende dos sintomas, da idade, do horário e do método de medição.",
+    "guidance": "As orientações desta página seguem referências amplamente usadas em saúde pública para limiares de febre, incluindo o corte clínico comum de 38°C (100.4°F). Medições oral, auricular, retal e axilar podem variar, então o mesmo número não significa exatamente a mesma coisa em todos os métodos.",
+    "bullets": [
+      "Adultos: {celsius}°C costuma ser uma leitura normal de faixa média.",
+      "Bebês e crianças: as faixas normais são um pouco mais amplas e dependem mais do método.",
+      "Axila: a leitura costuma ser mais baixa do que na medição oral ou retal."
+    ],
+    "linksIntro": "Para um contexto mais amplo, consulte também",
+    "guideLabel": "Guia de Temperatura Corporal e Febre",
+    "chartLabel": "Tabela de Temperatura de Febre",
+    "note": "Se houver sintomas como calafrios, letargia, dificuldade para respirar, rash, desidratação ou comportamento incomum, procure orientação médica em vez de se basear em uma única medição."
+  },
   "faq": {
     "q1": {
       "question": "36.6°C é uma temperatura corporal normal?",

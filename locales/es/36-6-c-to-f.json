@@ -148,6 +148,20 @@
       }
     ]
   },
+  "medicalReview": {
+    "title": "Revisión médica e interpretación",
+    "intro": "Esta página es educativa y no sustituye un diagnóstico médico. Una lectura de {celsius}°C ({fahrenheit}°F) suele estar dentro del rango normal de temperatura corporal, pero la interpretación también depende de los síntomas, la edad, la hora del día y el método de medición.",
+    "guidance": "La orientación de esta página sigue referencias de salud pública ampliamente utilizadas para los umbrales de fiebre, incluido el corte clínico común de 38°C (100.4°F). Las mediciones oral, ótica, rectal y axilar pueden variar, por lo que el mismo número no siempre significa lo mismo en todos los métodos.",
+    "bullets": [
+      "Adultos: {celsius}°C suele ser una lectura normal de rango medio.",
+      "Bebés y niños: los rangos normales son algo más amplios y dependen del método.",
+      "Axila: la lectura suele ser más baja que la oral o la rectal."
+    ],
+    "linksIntro": "Para un contexto más amplio, consulta",
+    "guideLabel": "Guía de temperatura corporal y fiebre",
+    "chartLabel": "Tabla de temperatura de fiebre",
+    "note": "Si hay síntomas como escalofríos, letargo, dificultad para respirar, sarpullido, deshidratación o conducta inusual, busca atención médica en lugar de basarte en una sola medición."
+  },
   "faq": {
     "q1": {
       "question": "¿Es 36.6°C una temperatura corporal normal?",

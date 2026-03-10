@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import { useTranslation, getLocalizedLink } from '../utils/i18n';
+import { getLocalizedLink } from '../utils/locale-config';
+import { createTranslator, TranslationDictionary } from '../utils/translation-runtime';
 import { celsiusToFahrenheit, formatTemperature } from '../utils/temperaturePageHelpers';
 import { getAlternateUrls, getLocalizedAbsoluteUrl, getXDefaultAbsoluteUrl } from '../utils/seo';
 
@@ -20,13 +21,28 @@ import fs from 'fs';
 import path from 'path';
 
 interface HomeProps {
+    locale: string;
+    commonMessages: TranslationDictionary;
+    homeMessages: TranslationDictionary;
     dynamicRecentUpdates: Array<{ c: number; f: number; date: string; url: string }>;
     lastUpdatedIso: string;
 }
 
-export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: HomeProps) {
-    const { t, locale } = useTranslation('home');
-    const homepageUrl = getLocalizedAbsoluteUrl('/', locale);
+function loadLocaleMessages(locale: string, namespace: string) {
+    const localePath = path.join(process.cwd(), 'locales', locale, `${namespace}.json`);
+    const fallbackPath = path.join(process.cwd(), 'locales', 'en', `${namespace}.json`);
+    const targetPath = fs.existsSync(localePath) ? localePath : fallbackPath;
+
+    return JSON.parse(fs.readFileSync(targetPath, 'utf8'));
+}
+
+export default function Home({ locale, commonMessages, homeMessages, dynamicRecentUpdates = [], lastUpdatedIso }: HomeProps) {
+    const currentLocale = locale || 'en';
+    const { t } = useMemo(
+        () => createTranslator({ locale: currentLocale, common: commonMessages, page: homeMessages }),
+        [currentLocale, commonMessages, homeMessages]
+    );
+    const homepageUrl = getLocalizedAbsoluteUrl('/', currentLocale);
     const homepageAlternates = getAlternateUrls('/');
     const homepageDefaultUrl = getXDefaultAbsoluteUrl('/');
 
@@ -116,7 +132,7 @@ export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: Home
         <>
             <Head>
                 <title>{t('meta.title')}</title>
-                <meta name="description" content={t('meta.ogDescription')} />
+                <meta name="description" content={t('meta.description')} />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="author" content="Ctofconverter Team" />
                 <meta name="robots" content="index, follow" />
@@ -149,14 +165,14 @@ export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: Home
                         "@type": "WebApplication",
                         "name": t('meta.title'),
                         "url": homepageUrl,
-                        "description": t('meta.ogDescription'),
+                        "description": t('meta.description'),
                         "applicationCategory": "UtilityApplication",
                         "operatingSystem": "All"
                     })
                 }} />
             </Head>
 
-            <div dir={locale === 'ar' ? 'rtl' : 'ltr'} className={locale === 'ar' ? 'font-ar' : ''}>
+            <div dir={currentLocale === 'ar' ? 'rtl' : 'ltr'} className={currentLocale === 'ar' ? 'font-ar' : ''}>
                 <a className="skip-link" href="#main-content">{t('common:footer.backToTop')}</a>
 
                 <header className="site-header">
@@ -249,7 +265,7 @@ export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: Home
                         <section className="game-banner-section" id="challenge-banner" style={{ margin: '3rem 0', textAlign: 'center', background: 'linear-gradient(135deg, #dcfce7 0%, #f0fdf4 100%)', padding: '2rem', borderRadius: '12px', border: '2px solid #86efac' }}>
                             <h2 style={{ color: '#15803d', marginBottom: '1rem' }}>{t('gameBanner.title')}</h2>
                             <p style={{ color: '#166534', marginBottom: '1.5rem', fontSize: '1.1rem' }} dangerouslySetInnerHTML={{ __html: t('gameBanner.description') }} />
-                            <Link href={getLocalizedLink('/temperature-conversion-challenge', locale)} className="btn" style={{ display: 'inline-block', textDecoration: 'none', background: '#22c55e', color: 'white', border: 'none', padding: '0.8rem 2rem', fontSize: '1.2rem', borderRadius: '50px', boxShadow: '0 4px 6px rgba(34, 197, 94, 0.2)' }}>
+                            <Link href={getLocalizedLink('/temperature-conversion-challenge', currentLocale)} className="btn" style={{ display: 'inline-block', textDecoration: 'none', background: '#22c55e', color: 'white', border: 'none', padding: '0.8rem 2rem', fontSize: '1.2rem', borderRadius: '50px', boxShadow: '0 4px 6px rgba(34, 197, 94, 0.2)' }}>
                                 {t('gameBanner.button')}
                             </Link>
                         </section>
@@ -285,7 +301,7 @@ export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: Home
                                 <li key={i} className="temperature-list-item">
                                     <div className="temp-card-content">
                                         <div className="temp-info">
-                                            <Link href={getLocalizedLink(item.url, locale)} className="temp-title-link" title={t('reference.itemFormat', { c: item.c, f: item.f })}>
+                                            <Link href={getLocalizedLink(item.url, currentLocale)} className="temp-title-link" title={t('reference.itemFormat', { c: item.c, f: item.f })}>
                                                 <div className="temp-title">{t('reference.itemFormat', { c: item.c, f: item.f })}</div>
                                             </Link>
                                         </div>
@@ -456,6 +472,8 @@ export default function Home({ dynamicRecentUpdates = [], lastUpdatedIso }: Home
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
+    const currentLocale = typeof locale === 'string' ? locale : 'en';
+
     // 动态扫描pages目录下的温度转换页面
     const pagesDir = path.join(process.cwd(), 'pages');
     const filenames = fs.readdirSync(pagesDir);
@@ -473,7 +491,7 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
             // Use getLatestModifiedDate to check both the page file and its locale JSON
             const lastUpdatedIso = getLatestModifiedDate([
                 filePath,
-                path.join(process.cwd(), `locales/${locale}/${match![1]}-c-to-f.json`)
+                path.join(process.cwd(), `locales/${currentLocale}/${match![1]}-c-to-f.json`)
             ]);
 
             return {
@@ -501,7 +519,9 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
 
     return {
         props: {
-            locale,
+            locale: currentLocale,
+            commonMessages: loadLocaleMessages(currentLocale, 'common'),
+            homeMessages: loadLocaleMessages(currentLocale, 'home'),
             dynamicRecentUpdates,
             lastUpdatedIso
         }

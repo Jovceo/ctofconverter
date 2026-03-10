@@ -3,7 +3,8 @@
 import Head from 'next/head';
 import { ReactNode, useMemo } from 'react';
 import { useRouter } from 'next/router';
-import { useTranslation, DEFAULT_LOCALE, SUPPORTED_LOCALES, HREFLANG_MAP } from '../utils/i18n';
+import { useCommonTranslation } from '../utils/common-i18n';
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES, HREFLANG_MAP } from '../utils/locale-config';
 
 export interface SEOProps {
   title?: string;
@@ -68,7 +69,7 @@ const buildLocalePath = (basePath: string, locale: string, defaultLocale: string
 export default function Layout({ children, seo }: LayoutProps) {
   const router = useRouter();
   const { locale = DEFAULT_LOCALE, defaultLocale = DEFAULT_LOCALE, asPath = '/' } = router;
-  const { common } = useTranslation();
+  const { common } = useCommonTranslation();
   const meta = common?.meta || {};
 
   const basePath = useMemo(
