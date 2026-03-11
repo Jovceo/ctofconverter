@@ -189,7 +189,8 @@ export default function BodyTemperatureGuide({ lastUpdatedIso }: BodyTemperature
                         "@type": "MedicalWebPage",
                         "name": t('intro.title'),
                         "description": t('meta.description'),
-                        "lastReviewed": "2026-01-14",
+                        "lastReviewed": lastUpdatedIso,
+                        "dateModified": lastUpdatedIso,
                         "reviewedBy": {
                             "@type": "Organization",
                             "name": "Ctofconverter Editorial Team"
@@ -472,6 +473,11 @@ export default function BodyTemperatureGuide({ lastUpdatedIso }: BodyTemperature
                 <section className={styles.authoritySection}>
                     <h3 id="authority-title">{t('authority.transparency.title')}</h3>
                     <p dangerouslySetInnerHTML={{ __html: t('authority.transparency.reviewProcess') }} />
+                    <ul style={{ margin: '1rem 0', paddingLeft: '1.25rem', color: '#475569' }}>
+                        <li><a href="https://www.cdc.gov/fever/" rel="noopener noreferrer">CDC</a></li>
+                        <li><a href="https://www.who.int/" rel="noopener noreferrer">WHO</a></li>
+                        <li><a href="https://www.nhs.uk/conditions/fever-in-adults/" rel="noopener noreferrer">NHS</a></li>
+                    </ul>
                     <p><strong>{t('authority.transparency.lastUpdatedPrefix')}</strong> {lastUpdatedIso}</p>
                 </section>
             </main>

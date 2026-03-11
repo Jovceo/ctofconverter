@@ -9,6 +9,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SearchableChart from '../components/SearchableChart';
 import { getLocalizedLink } from '../utils/i18n';
+import { getLatestModifiedDate } from '../utils/dateHelpers';
 
 interface TemperatureItem {
     c: number;
@@ -198,7 +199,7 @@ export default function TemperatureChartPage({ lastUpdatedIso, temperatureData, 
                     </section>
                 </main>
 
-                <Footer />
+                <Footer lastUpdated={lastUpdatedIso} />
 
                 <style jsx>{`
                     .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
@@ -234,7 +235,10 @@ export default function TemperatureChartPage({ lastUpdatedIso, temperatureData, 
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
-    const lastUpdatedIso = '2026-01-12';
+    const lastUpdatedIso = getLatestModifiedDate([
+        'pages/celsius-to-fahrenheit-chart.tsx',
+        `locales/${locale}/celsius-to-fahrenheit-chart.json`
+    ]);
 
     // Load translations
     let t = {};

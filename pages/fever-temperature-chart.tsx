@@ -1,16 +1,91 @@
 import React, { useState, useCallback } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { GetStaticProps } from 'next';
 import Layout from '../components/Layout';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { useTranslation, getLocalizedLink } from '../utils/i18n';
 import { getLocalizedAbsoluteUrl } from '../utils/seo';
+import { getLatestModifiedDate } from '../utils/dateHelpers';
 
-export default function FeverTemperatureChart() {
+interface FeverTemperatureChartProps {
+    lastUpdatedIso: string;
+}
+
+const MEDICAL_REVIEW_COPY: Record<string, {
+    title: string;
+    summary: string;
+    reviewedPrefix: string;
+    sourcesPrefix: string;
+}> = {
+    en: {
+        title: 'Medical Review & Sources',
+        summary: 'This guide is reviewed against public fever guidance from major health organizations and is intended for educational use.',
+        reviewedPrefix: 'Last medically reviewed:',
+        sourcesPrefix: 'Referenced organizations:'
+    },
+    zh: {
+        title: '医学评审与来源',
+        summary: '本指南依据主要卫生机构公开发布的发烧与体温指导信息整理，仅供学习和参考。',
+        reviewedPrefix: '最后医学评审日期：',
+        sourcesPrefix: '参考机构：'
+    },
+    es: {
+        title: 'Revisión Médica y Fuentes',
+        summary: 'Esta guía se revisa con base en recomendaciones públicas sobre fiebre de organizaciones sanitarias reconocidas y es solo para fines educativos.',
+        reviewedPrefix: 'Última revisión médica:',
+        sourcesPrefix: 'Organizaciones consultadas:'
+    },
+    hi: {
+        title: 'चिकित्सीय समीक्षा और स्रोत',
+        summary: 'यह गाइड प्रमुख स्वास्थ्य संगठनों के सार्वजनिक बुखार दिशानिर्देशों के आधार पर समीक्षा की गई है और केवल शैक्षिक उपयोग के लिए है।',
+        reviewedPrefix: 'अंतिम चिकित्सा समीक्षा:',
+        sourcesPrefix: 'संदर्भित संस्थाएँ:'
+    },
+    ar: {
+        title: 'المراجعة الطبية والمصادر',
+        summary: 'تتم مراجعة هذا الدليل بالاستناد إلى إرشادات الحمى العامة الصادرة عن جهات صحية كبرى، وهو مخصص للاستخدام التعليمي فقط.',
+        reviewedPrefix: 'آخر مراجعة طبية:',
+        sourcesPrefix: 'الجهات المرجعية:'
+    },
+    ja: {
+        title: '医療レビューと参照元',
+        summary: 'このガイドは主要な保健機関の公開ガイダンスを参照して確認しており、教育目的の情報です。',
+        reviewedPrefix: '最終医療レビュー日：',
+        sourcesPrefix: '参照機関：'
+    },
+    fr: {
+        title: 'Revue Médicale et Sources',
+        summary: 'Ce guide est vérifié à partir des recommandations publiques sur la fièvre publiées par de grandes organisations de santé et sert à des fins éducatives.',
+        reviewedPrefix: 'Dernière révision médicale :',
+        sourcesPrefix: 'Organisations de référence :'
+    },
+    de: {
+        title: 'Medizinische Prüfung und Quellen',
+        summary: 'Dieser Leitfaden wird anhand öffentlich verfügbarer Fieber-Empfehlungen großer Gesundheitsorganisationen geprüft und dient nur zu Informationszwecken.',
+        reviewedPrefix: 'Zuletzt medizinisch geprüft:',
+        sourcesPrefix: 'Berücksichtigte Organisationen:'
+    },
+    id: {
+        title: 'Tinjauan Medis dan Sumber',
+        summary: 'Panduan ini ditinjau berdasarkan panduan demam publik dari organisasi kesehatan utama dan hanya ditujukan untuk tujuan edukasi.',
+        reviewedPrefix: 'Tinjauan medis terakhir:',
+        sourcesPrefix: 'Organisasi rujukan:'
+    },
+    'pt-br': {
+        title: 'Revisão Médica e Fontes',
+        summary: 'Este guia é revisado com base em orientações públicas sobre febre de grandes organizações de saúde e destina-se apenas a fins educacionais.',
+        reviewedPrefix: 'Última revisão médica:',
+        sourcesPrefix: 'Organizações consultadas:'
+    }
+};
+
+export default function FeverTemperatureChart({ lastUpdatedIso }: FeverTemperatureChartProps) {
     const { t, locale } = useTranslation('fever-temperature-chart');
     const homeUrl = getLocalizedAbsoluteUrl('/', locale);
     const pageUrl = getLocalizedAbsoluteUrl('/fever-temperature-chart', locale);
+    const medicalReviewCopy = MEDICAL_REVIEW_COPY[locale] || MEDICAL_REVIEW_COPY.en;
 
     // Converter State
     const [celsius, setCelsius] = useState<string>('');
@@ -113,7 +188,8 @@ export default function FeverTemperatureChart() {
                         "headline": t('schema.medicalHeadline'),
                         "description": t('schema.medicalDesc'),
                         "medicalAudience": "Patient",
-                        "lastReviewed": "2025-09-28",
+                        "lastReviewed": lastUpdatedIso,
+                        "dateModified": lastUpdatedIso,
                         "relevantSpecialty": "FamilyMedicine"
                     })
                 }} />
@@ -421,13 +497,25 @@ export default function FeverTemperatureChart() {
                         <p><small>{t('download.note')}</small></p>
                     </section>
 
+                    <section className="medical-review">
+                        <h2>{medicalReviewCopy.title}</h2>
+                        <p>{medicalReviewCopy.summary}</p>
+                        <p><strong>{medicalReviewCopy.reviewedPrefix}</strong> {lastUpdatedIso}</p>
+                        <p><strong>{medicalReviewCopy.sourcesPrefix}</strong></p>
+                        <ul>
+                            <li><a href="https://www.cdc.gov/fever/" rel="noopener noreferrer">CDC</a></li>
+                            <li><a href="https://www.who.int/" rel="noopener noreferrer">WHO</a></li>
+                            <li><a href="https://www.nhs.uk/conditions/fever-in-adults/" rel="noopener noreferrer">NHS</a></li>
+                        </ul>
+                    </section>
+
                     <section className="disclaimer">
                         <h2>{t('disclaimer.title')}</h2>
                         <p dangerouslySetInnerHTML={{ __html: t('disclaimer.content') }} />
                     </section>
                 </main>
 
-                <Footer lastUpdated="2025-09-28" />
+                <Footer lastUpdated={lastUpdatedIso} />
             </div>
 
             <style jsx>{`
@@ -650,6 +738,24 @@ export default function FeverTemperatureChart() {
                 }
                 .disclaimer h2 { font-size: 1.2rem; margin-top: 0; }
 
+                .medical-review {
+                    background: #f8fafc;
+                    padding: 1.5rem;
+                    border-radius: 8px;
+                    border-left: 4px solid #2c7fb8;
+                    margin-bottom: 2rem;
+                }
+                .medical-review h2 {
+                    font-size: 1.2rem;
+                    margin-top: 0;
+                }
+                .medical-review ul {
+                    margin: 0.75rem 0 0 1.25rem;
+                }
+                .medical-review li {
+                    margin-bottom: 0.5rem;
+                }
+
                 /* Breadcrumb Override - matching site style */
                 .breadcrumb {
                     display: flex;
@@ -711,3 +817,16 @@ export default function FeverTemperatureChart() {
         </Layout>
     );
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
+    const lastUpdatedIso = getLatestModifiedDate([
+        'pages/fever-temperature-chart.tsx',
+        `locales/${locale}/fever-temperature-chart.json`
+    ]);
+
+    return {
+        props: {
+            lastUpdatedIso
+        }
+    };
+};
