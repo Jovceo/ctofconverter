@@ -1,20 +1,21 @@
 {
   "page": {
-    "metaTitle": "180°C in Fahrenheit = 356°F | Ofen-, Airfryer- und Backleitfaden",
-    "metaDescription": "Wandle 180°C sofort in Fahrenheit (356°F) um. Vollständiger Leitfaden mit Umluft-Anpassungen, Garzeiten und Backtipps.",
-    "ogDescription": "Wandle 180 Grad Celsius sofort in Fahrenheit um. 180°C entsprechen 356°F. Vergleiche Backofen, Airfryer und Umluft.",
-    "headerTitle": "180°C in Fahrenheit Umrechnung (356°F) - Ofen und Backen",
-    "tagline": "Kostenloses Online-Tool zur Umrechnung von 180 Grad Celsius (180°C) in Fahrenheit (°F), mit Formel und detaillierten Schritten für Ofen, Airfryer und mehr.",
-    "resultHeader": "180 Grad Celsius in Fahrenheit Umrechnung"
+    "metaTitle": "180°C in Fahrenheit = 356°F | Ofen-, Airfryer- und Backguide",
+    "metaDescription": "180°C sofort in Fahrenheit (356°F) umrechnen. Kompletter Ofentemperatur-Guide mit Konvektionsanpassung, Garzeiten und praktischen Backtipps.",
+    "ogDescription": "180 Grad Celsius sofort in Fahrenheit umrechnen. 180°C entsprechen 356°F. Sieh dir passende Werte für Ofen, Airfryer und Umluftofen an.",
+    "headerTitle": "180°C in Fahrenheit umrechnen (356°F) - Ofen und Backtemperaturen",
+    "tagline": "Kostenloses Online-Tool zur Umrechnung von 180 Grad Celsius (180°C) in Grad Fahrenheit (°F), mit Formeln und Schritt-für-Schritt-Erklärung für Ofen, Airfryer und mehr.",
+    "resultHeader": "Umrechnung von 180 Grad Celsius in Fahrenheit",
+    "customIntro": "<strong>180 Grad Celsius</strong> entsprechen <strong>356 Grad Fahrenheit</strong>. Das ist eine der gebräuchlichsten Ofentemperaturen für Kuchen, Kekse, Ofengemüse und alltägliches Backen."
   },
   "sections": {
     "about": {
-      "title": "Über 180°C / 356°F: Einordnung und Einsatz in der Küche",
-      "paragraph1": "180°C entsprechen 356°F und gehören zu den häufigsten Ofentemperaturen im Alltag. Dieser Bereich wird oft für Kuchen, Ofengemüse, Kekse und viele klassische Familiengerichte verwendet.",
-      "paragraph2": "Die Temperatur ist hoch genug, um Speisen sauber zu bräunen und zuverlässig zu garen, aber nicht so aggressiv, dass außen alles zu schnell dunkel wird. Deshalb ist 180°C in vielen Rezepten eine Standardangabe.",
-      "paragraph3Prefix": "Wenn du zwischen klassischem Ofen, Umluft, Heißluft oder Airfryer wechselst, vergleiche die Einstellungen mit der ",
-      "fanLinkText": "Umluft-Umrechnungstabelle",
-      "paragraph3Suffix": ". In vielen Fällen entsprechen 180°C im klassischen Ofen eher 160°C im Umluftofen oder Airfryer."
+      "title": "Über 180°C / 356°F: Einsatz und Küchenkontext",
+      "paragraph1": "180°C entsprechen 356°F und gehören zu den am häufigsten verwendeten Ofentemperaturen in der Hausküche. Dieser verlässliche mittlere Bereich eignet sich für Kuchen, geröstetes Gemüse, Kekse und viele Alltagsrezepte.",
+      "paragraph2": "Diese Temperatur funktioniert gut, weil sie hoch genug ist, um Speisen effektiv zu bräunen und zu garen, aber nicht so aggressiv, dass außen alles verbrennt, bevor das Innere fertig ist. Deshalb setzen viele Rezepte 180°C als Standard zum Backen oder Rösten an.",
+      "paragraph3Prefix": "Wenn du zwischen Ober-/Unterhitze, Konvektion, Umluft oder Airfryer wechselst, vergleiche die Einstellungen mit der ",
+      "fanLinkText": "Umluftofen-Umrechnungstabelle",
+      "paragraph3Suffix": ". In vielen Fällen entsprechen 180°C im normalen Ofen eher 160°C im Umluftofen oder Airfryer."
     },
     "applications": {
       "title": "Praktische Anwendungen von 180°C (356°F)",
@@ -22,35 +23,35 @@
         {
           "title": "Backen und Kuchen",
           "items": [
-            "Eine Standardtemperatur für viele Kuchen, Muffins, Cupcakes und Blechrezepte.",
-            "Gut für Kekse, wenn goldene Ränder und ein durchgebackenes Inneres gewünscht sind.",
-            "Häufig die Standardangabe in alltäglichen Backrezepten."
+            "Eine Standardtemperatur für Kuchen, Cupcakes, Muffins und Blechgebäck.",
+            "Gut für Kekse und Plätzchen, wenn du goldene Ränder und eine durchgebackene Mitte willst.",
+            "Wird in vielen Alltagsrezepten als normale Backtemperatur verwendet."
           ]
         },
         {
-          "title": "Braten und herzhafte Gerichte",
+          "title": "Rösten und herzhafte Gerichte",
           "items": [
-            "Geeignet für Ofengemüse, Hähnchenteile, Fischfilets und viele Ofengerichte.",
-            "Heiß genug zum Bräunen, aber nicht zu hart für längere Garzeiten.",
-            "Praktisch für Aufläufe, Ofennudeln und andere Gerichte mit gleichmäßiger Hitze."
+            "Geeignet für Ofengemüse, Hähnchenteile, Fischfilets und alltägliche Ofengerichte.",
+            "Heiß genug für gute Bräunung, aber nicht zu hart für längere Garzeiten.",
+            "Passt auch zu Aufläufen, Ofenpasta und Gerichten mit Bedarf an gleichmäßiger Hitze."
           ]
         },
         {
-          "title": "Airfryer und Umluft",
+          "title": "Airfryer und Umluftofen",
           "items": [
-            "Viele Rezepte reduzieren 180°C auf etwa 160°C im Airfryer oder Umluftofen.",
-            "Durch zirkulierende Hitze garen Speisen schneller, daher müssen Zeit und Temperatur oft angepasst werden.",
-            "Bei umgerechneten Rezepten sollte der Gargrad früher kontrolliert werden."
+            "In vielen Rezepten reduziert man 180°C im Umluftofen oder Airfryer auf etwa 160°C.",
+            "Zirkulierende Heißluft gart schneller, daher müssen Zeit und Temperatur oft angepasst werden.",
+            "Beim Umrechnen eines Rezepts aus dem normalen Ofen sollte man den Gargrad früher prüfen."
           ]
         }
       ]
     },
     "ovenGuide": {
-      "title": "Temperaturleitfaden (Backofen, Umluft und Airfryer)",
+      "title": "Ofentemperatur-Guide (Umluft, klassisch und Airfryer)",
       "headers": {
         "ovenType": "Gerät",
         "adjustedTemperature": "Entsprechende Temperatur",
-        "bestUse": "Geeignet für"
+        "bestUse": "Am besten geeignet für"
       },
       "rows": [
         {
@@ -59,9 +60,9 @@
           "bestUse": "Standardtemperatur für viele Kuchen, Kekse und Familiengerichte."
         },
         {
-          "type": "Umluftofen",
+          "type": "Umluftofen (Konvektion)",
           "temperature": "160°C / 320°F",
-          "bestUse": "Niedriger, weil die zirkulierende Luft schneller und gleichmäßiger gart."
+          "bestUse": "Niedriger eingestellt, weil die Luftzirkulation schneller und gleichmäßiger gart."
         },
         {
           "type": "Airfryer",
@@ -71,12 +72,12 @@
         {
           "type": "Gas Mark",
           "temperature": "Gas Mark 4",
-          "bestUse": "Praktisch für ältere Rezepte mit Gasangaben."
+          "bestUse": "Hilfreich bei älteren Rezepten, die nur Gasstufen angeben."
         }
       ],
-      "notePrefix": "Du brauchst einen breiteren Vergleich? Nutze die ",
-      "noteLinkText": "Umluft-Umrechnungstabelle",
-      "noteSuffix": ", um klassischen Ofen, Umluft und ähnliche Einstellungen gegenüberzustellen."
+      "notePrefix": "Wenn du eine breitere Referenz brauchst, nutze die ",
+      "noteLinkText": "Umluftofen-Umrechnungstabelle",
+      "noteSuffix": ", um klassische Ofen-, Umluft- und ähnliche Einstellungen zu vergleichen."
     }
   },
   "faq": [
@@ -86,19 +87,19 @@
     },
     {
       "question": "Was bedeutet 180°C im Ofen oder Airfryer?",
-      "answer": "Im klassischen Ofen sind 180°C gleich 356°F. In vielen Airfryer- oder Umluftrezepten wird dieser Wert eher auf etwa 160°C (320°F) reduziert, weil zirkulierende Hitze effizienter gart."
+      "answer": "Im klassischen Ofen entsprechen 180°C genau 356°F. In vielen Airfryer- oder Umluftrezepten reduziert man diese Temperatur auf etwa 160°C (320°F), weil zirkulierende Luft effizienter gart."
     },
     {
       "question": "Wie lautet die Formel für 180 Celsius in Fahrenheit?",
-      "answer": "Die Formel ist °F = (°C × 9/5) + 32. Für 180°C ergibt sich: (180 × 9/5) + 32 = 356°F."
+      "answer": "Die Umrechnungsformel lautet: °F = (°C × 9/5) + 32. Für 180°C ergibt das: (180 × 9/5) + 32 = 356°F."
     },
     {
       "question": "Wie viel sind 180°C im Umluftofen?",
-      "answer": "Im Umluftofen reduziert man 180°C oft um etwa 20°C auf 160°C (320°F), da die Wärme dort effizienter verteilt wird."
+      "answer": "Im Umluftofen reduziert man 180°C meist um etwa 20°C auf 160°C (320°F). Umluft verteilt die Hitze effizienter, deshalb reicht oft eine niedrigere Einstellung."
     },
     {
       "question": "Wie lange backt ein Kuchen bei 180°C?",
-      "answer": "Viele Kuchen backen bei 180°C (356°F) etwa 25 bis 35 Minuten. Die genaue Zeit hängt aber von Formgröße, Teigmenge und Ofengenauigkeit ab. Ein Holzstäbchen sollte sauber aus der Mitte herauskommen."
+      "answer": "Viele Kuchen brauchen bei 180°C (356°F) etwa 25 bis 35 Minuten. Die genaue Zeit hängt aber von Formgröße, Teigdicke und Ofengenauigkeit ab. Ein sauber herauskommender Holzstab ist ein gutes Zeichen dafür, dass der Kuchen fertig ist."
     }
   ]
 }

@@ -97,6 +97,7 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     // 加载翻译数据
     const enTrans = loadJSON('en', '36-4-c-to-f.json');
     const locTrans = locale !== 'en' ? loadJSON(locale, '36-4-c-to-f.json') : {};
+    const hasLocalizedResearchUpdate = locale === 'en' || Boolean(locTrans.researchUpdate?.title && locTrans.researchUpdate?.content);
 
     // 深度合并翻译
     const pageTrans = {
@@ -105,19 +106,25 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
         faq: { ...enTrans.faq, ...locTrans.faq }
     };
 
+    if (!hasLocalizedResearchUpdate) {
+        delete pageTrans.researchUpdate;
+    }
+
     return {
         props: {
             lastUpdatedIso,
             availablePages,
-            pageTrans
+            pageTrans,
+            hasLocalizedResearchUpdate
         }
     };
 };
 
-export default function Temperature36_4C({ lastUpdatedIso, pageTrans, availablePages }: {
+export default function Temperature36_4C({ lastUpdatedIso, pageTrans, availablePages, hasLocalizedResearchUpdate }: {
     lastUpdatedIso: string,
     pageTrans: PageTranslation,
-    availablePages: number[]
+    availablePages: number[],
+    hasLocalizedResearchUpdate: boolean
 }) {
     const celsius = 36.4;
     const fahrenheit = celsiusToFahrenheit(celsius);
@@ -166,10 +173,6 @@ export default function Temperature36_4C({ lastUpdatedIso, pageTrans, availableP
                     </div>
                 </div>
             `
-        }, {
-            type: 'fact' as const,
-            title: safeTranslate(pageT, 'researchUpdate.title', locale),
-            content: `<div style="background: #f0f7ff; padding: 20px; border-radius: 8px; border-left: 4px solid #1976d2;"><h4 style="margin-top: 0; color: #1976d2;">📊 Stanford Medicine Research Update</h4><p>${safeTranslate(pageT, 'researchUpdate.content', locale)}</p></div>`
         }, {
             type: 'fact' as const,
             title: safeTranslate(pageT, 'conversionFormula.title', locale) || '36.4°C to Fahrenheit Conversion',
@@ -295,6 +298,14 @@ export default function Temperature36_4C({ lastUpdatedIso, pageTrans, availableP
             `
         }];
 
+        if (hasLocalizedResearchUpdate) {
+            s.insights.splice(1, 0, {
+                type: 'fact' as const,
+                title: safeTranslate(pageT, 'researchUpdate.title', locale),
+                content: `<div style="background: #f0f7ff; padding: 20px; border-radius: 8px; border-left: 4px solid #1976d2;"><p style="margin: 0;">${safeTranslate(pageT, 'researchUpdate.content', locale)}</p></div>`
+            });
+        }
+
         // 自定义FAQs
         if (pageT.faq) {
             const faqEntries = pageT.faq || {};
@@ -307,6 +318,8 @@ export default function Temperature36_4C({ lastUpdatedIso, pageTrans, availableP
         }
 
         // 配置模块
+        s.meta = s.meta || {};
+        s.meta.ogDescription = replacePlaceholders(pageT.meta?.ogDescription || '', replacements);
         s.modules.showHealthAlert = true;
         s.modules.showHumanFeel = false;
         s.modules.showOvenGuide = false;
@@ -314,13 +327,23 @@ export default function Temperature36_4C({ lastUpdatedIso, pageTrans, availableP
         s.modules.showPracticalApps = false;
 
         return s;
-    }, [celsius, pageT, formattedF, replacements, t]);
+    }, [celsius, pageT, formattedF, replacements, t, hasLocalizedResearchUpdate]);
 
     const canonicalUrl = generatePageUrl(celsius, locale);
 
     // 自定义Title和Description
-    const customTitle = replacePlaceholders(pageT.meta?.title || '', replacements);
-    const customDescription = replacePlaceholders(pageT.meta?.description || '', replacements);
+    const customMetaTitle = replacePlaceholders(pageT.meta?.title || '', replacements);
+    const customMetaDescription = replacePlaceholders(pageT.meta?.description || '', replacements);
+    const customHeaderTitle = customMetaTitle;
+    const customTagline = customMetaDescription;
+    const customResultHeader = replacePlaceholders(
+        pageT.conversionFormula?.title || pageT.meta?.ogTitle || `${celsius}°C to Fahrenheit Converter`,
+        replacements
+    );
+    const customIntro = replacePlaceholders(
+        pageT.bodyTempRanges?.intro || customMetaDescription,
+        replacements
+    );
 
     return (
         <TemperaturePage
@@ -329,8 +352,12 @@ export default function Temperature36_4C({ lastUpdatedIso, pageTrans, availableP
             customNamespace="36-4-c-to-f"
             lastUpdated={lastUpdatedIso}
             canonicalUrl={canonicalUrl}
-            customTitle={customTitle}
-            customDescription={customDescription}
+            customMetaTitle={customMetaTitle}
+            customMetaDescription={customMetaDescription}
+            customHeaderTitle={customHeaderTitle}
+            customTagline={customTagline}
+            customResultHeader={customResultHeader}
+            customIntro={customIntro}
             availablePages={availablePages}
             disableSmartFaqs={true}
             showEditorialNote={true}

@@ -1,0 +1,105 @@
+{
+  "page": {
+    "metaTitle": "200°C a Fahrenheit = 392°F | Guía de horno, freidora de aire y horneado",
+    "metaDescription": "Convierte 200°C a Fahrenheit (392°F) al instante. Guía completa de temperatura de horno con ajustes para convección, tiempos de cocción y consejos prácticos.",
+    "ogDescription": "Convierte 200 grados Celsius a Fahrenheit al instante. 200°C equivalen a 392°F y puedes comparar horno, freidora de aire y convección.",
+    "headerTitle": "200°C a Fahrenheit (200 grados Celsius a °F)",
+    "tagline": "Herramienta gratuita en línea que convierte al instante 200 grados Celsius (200°C) a grados Fahrenheit (°F), con fórmula y pasos detallados para hornos, freidoras de aire y más.",
+    "resultHeader": "Conversión de 200 grados Celsius a Fahrenheit",
+    "customIntro": "<strong>200 grados Celsius</strong> equivalen a <strong>392 grados Fahrenheit</strong>. Es una temperatura de horno alta, muy habitual para pan, pizza, verduras asadas y recetas que necesitan más dorado y bordes crujientes."
+  },
+  "sections": {
+    "about": {
+      "title": "Guía de 200°C / 392°F: usos y contexto",
+      "paragraph1": "200°C equivalen a 392°F y representan una temperatura de horno alta, muy usada para pan, pizza, verduras asadas, galletas y platos que necesitan más dorado. En comparación con una cocción media, ofrece color y textura crujiente en menos tiempo.",
+      "paragraph2": "A esta temperatura, las reacciones de dorado avanzan con rapidez. Por eso 200°C es una opción habitual cuando se busca una corteza bien marcada, bordes crujientes o un acabado más tostado sin llegar al grill máximo.",
+      "paragraph3Prefix": "Si vas a cambiar entre horno convencional, convección, ventilado o freidora de aire, compáralos con la ",
+      "fanLinkText": "tabla de conversión de horno con ventilador",
+      "paragraph3Suffix": ". En la mayoría de los casos, 200°C en un horno convencional se acercan a 180°C en horno ventilado o freidora de aire."
+    },
+    "applications": {
+      "title": "Aplicaciones prácticas de 200°C (392°F)",
+      "cards": [
+        {
+          "title": "Pan, pizza y masas",
+          "items": [
+            "Útil para panes con corteza, pizza, masas saladas y recetas que necesitan más impulso en el horno.",
+            "Ayuda a conseguir una corteza dorada y mejor color superficial que a temperaturas más bajas.",
+            "Muy práctico para recetas que requieren más dorado sin llegar a la temperatura de grill."
+          ]
+        },
+        {
+          "title": "Asados y acabados crujientes",
+          "items": [
+            "Funciona bien para verduras asadas, pollo, salmón y comidas de bandeja.",
+            "Es suficientemente caliente para caramelizar bordes y secar la superficie sin descuidar el interior.",
+            "También sirve para gratinados, pasta al horno y platos que necesitan una capa superior dorada."
+          ]
+        },
+        {
+          "title": "Freidora de aire y horno ventilado",
+          "items": [
+            "En muchas recetas, 200°C se reducen a unos 180°C en freidora de aire u horno ventilado.",
+            "El aire circulante cocina más rápido, por lo que el tiempo total suele ser menor.",
+            "Conviene revisar antes el punto de cocción, sobre todo en galletas, pollo y porciones pequeñas."
+          ]
+        }
+      ]
+    },
+    "ovenGuide": {
+      "title": "Guía de temperatura del horno (ventilado, convencional y con ventilador forzado)",
+      "headers": {
+        "ovenType": "Tipo de horno",
+        "adjustedTemperature": "Temperatura ajustada",
+        "bestUse": "Ideal para"
+      },
+      "rows": [
+        {
+          "type": "Horno convencional",
+          "temperature": "200°C / 392°F",
+          "bestUse": "Pan, pizza, carnes asadas y bandejas con acabado crujiente."
+        },
+        {
+          "type": "Horno ventilado (convección)",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Reducir unos 20°C para una cocción más rápida y uniforme."
+        },
+        {
+          "type": "Ventilador forzado (AU/UK)",
+          "temperature": "180°C / 356°F",
+          "bestUse": "El mismo ajuste ventilado usado en recetas de Australia y Reino Unido."
+        },
+        {
+          "type": "Freidora de aire",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Patatas, alitas, verduras y porciones pequeñas de alta temperatura."
+        }
+      ],
+      "notePrefix": "Si necesitas una referencia más amplia, consulta la ",
+      "noteLinkText": "tabla de conversión de horno con ventilador",
+      "noteSuffix": " antes de cocinar para comparar configuraciones convencionales y ventiladas."
+    }
+  },
+  "faq": [
+    {
+      "question": "¿Cuánto son 200 grados Celsius en Fahrenheit?",
+      "answer": "200 grados Celsius equivalen a 392 grados Fahrenheit. La fórmula es: °F = (°C × 9/5) + 32."
+    },
+    {
+      "question": "¿A cuánto equivale 200°C en un horno ventilado?",
+      "answer": "En un horno ventilado normalmente se reducen unos 20°C, así que 200°C se convierten en 180°C (356°F) para un resultado parecido."
+    },
+    {
+      "question": "¿Cuánto tarda el pollo a 200°C?",
+      "answer": "Las piezas de pollo suelen tardar entre 20 y 25 minutos a 200°C, según su tamaño y grosor. La temperatura interna debe llegar a 74°C (165°F)."
+    },
+    {
+      "question": "¿Qué significa 200°C en Fahrenheit para hornear?",
+      "answer": "200°C equivalen a 392°F. Es una temperatura de horneado alta, habitual para pan, pizza, galletas, masas y recetas que necesitan más dorado."
+    },
+    {
+      "question": "¿200°C es una temperatura alta para el horno?",
+      "answer": "Sí. 200°C (392°F) se considera una temperatura de horno alta, adecuada para asar, dorar y crear una corteza más firme o una superficie crujiente."
+    }
+  ]
+}

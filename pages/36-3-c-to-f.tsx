@@ -21,6 +21,7 @@ interface PageTranslation {
     };
     bodyTempRanges?: {
         title?: string;
+        intro?: string;
         normalHighlight?: string;
         adultStatus?: string;
         babyStatus?: string;
@@ -269,6 +270,8 @@ export default function Temperature36_3C({ lastUpdatedIso, pageTrans, availableP
         }
 
         // 配置模块
+        s.meta = s.meta || {};
+        s.meta.ogDescription = replacePlaceholders(pageT.meta?.ogDescription || '', replacements);
         s.modules.showHealthAlert = true;
         s.modules.showHumanFeel = false;
         s.modules.showOvenGuide = false;
@@ -281,8 +284,18 @@ export default function Temperature36_3C({ lastUpdatedIso, pageTrans, availableP
     const canonicalUrl = generatePageUrl(celsius, locale);
 
     // 自定义Title和Description
-    const customTitle = replacePlaceholders(pageT.meta?.title || '', replacements);
-    const customDescription = replacePlaceholders(pageT.meta?.description || '', replacements);
+    const customMetaTitle = replacePlaceholders(pageT.meta?.title || '', replacements);
+    const customMetaDescription = replacePlaceholders(pageT.meta?.description || '', replacements);
+    const customHeaderTitle = customMetaTitle;
+    const customTagline = customMetaDescription;
+    const customResultHeader = replacePlaceholders(
+        pageT.meta?.ogTitle || `${celsius}°C to Fahrenheit Converter`,
+        replacements
+    );
+    const customIntro = replacePlaceholders(
+        pageT.bodyTempRanges?.intro || customMetaDescription,
+        replacements
+    );
 
     return (
         <TemperaturePage
@@ -291,8 +304,12 @@ export default function Temperature36_3C({ lastUpdatedIso, pageTrans, availableP
             customNamespace="36-3-c-to-f"
             lastUpdated={lastUpdatedIso}
             canonicalUrl={canonicalUrl}
-            customTitle={customTitle}
-            customDescription={customDescription}
+            customMetaTitle={customMetaTitle}
+            customMetaDescription={customMetaDescription}
+            customHeaderTitle={customHeaderTitle}
+            customTagline={customTagline}
+            customResultHeader={customResultHeader}
+            customIntro={customIntro}
             availablePages={availablePages}
             disableSmartFaqs={true}
             showEditorialNote={true}

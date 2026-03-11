@@ -5,7 +5,8 @@
     "ogDescription": "Convert 180 degrees Celsius to Fahrenheit instantly. 180°C equals 356°F. See oven, air fryer, and fan oven equivalents plus baking tips.",
     "headerTitle": "180°C to Fahrenheit Conversion (356°F) - Oven & Baking Temperatures",
     "tagline": "Free online temperature conversion tool that instantly converts 180 degrees Celsius (180°C) to degrees Fahrenheit (°F), with conversion formulas and detailed steps for ovens, air fryers, and more.",
-    "resultHeader": "180 Degrees Celsius to Fahrenheit Conversion"
+    "resultHeader": "180 Degrees Celsius to Fahrenheit Conversion",
+    "customIntro": "<strong>180 degrees Celsius</strong> equals <strong>356 degrees Fahrenheit</strong>. It is one of the most common oven temperatures for cakes, cookies, roast vegetables, and everyday baking."
   },
   "sections": {
     "about": {

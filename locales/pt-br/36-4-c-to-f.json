@@ -30,6 +30,10 @@
             "normal": "Normal"
         }
     },
+    "researchUpdate": {
+        "title": "📊 Estudo de Stanford: a temperatura corporal está diminuindo",
+        "content": "Um estudo da Stanford Medicine publicado em 2020 analisou 677.000 medições de temperatura ao longo de 157 anos e constatou que a temperatura corporal média caiu cerca de 0,03°C por década. O padrão tradicional de 37°C (98,6°F), adotado desde 1868, hoje é considerado desatualizado. A faixa normal moderna está mais próxima de 36,4°C a 36,6°C (97,5°F a 97,9°F)."
+    },
     "measurementMethods": {
         "title": "Métodos de Medição de Temperatura em 36,4°C",
         "intro": "As leituras de 36,4°C (97,5°F) variam conforme o local de medição. Entender essas diferenças ajuda a garantir uma avaliação precisa da temperatura corporal normal.",

@@ -2,17 +2,17 @@
     "meta": {
         "title": "36.1°C ke Fahrenheit (96.98°F) - Demam atau Normal?",
         "description": "Konversi 36.1°C ke Fahrenheit (96.98°F). Apakah 36.1°C suhu tubuh normal? Pelajari standar untuk dewasa dan bayi, metode pengukuran, dan kapan mencari perawatan medis.",
-        "ogTitle": "Konverter Suhu Tubuh 36.1°C ke Fahrenheit",
-        "ogDescription": "Konversi 36.1°C ke Fahrenheit. Periksa suhu tubuh normal untuk dewasa dan bayi, serta standar metode pengukuran yang berbeda."
+    "ogTitle": "36.1°C ke Fahrenheit - Panduan suhu normal rendah",
+    "ogDescription": "Konversi 36.1°C ke Fahrenheit dan pahami artinya untuk dewasa, anak, dan bayi menurut metode pengukuran."
     },
     "bodyTempRanges": {
         "title": "Penilaian Cepat Suhu: 36.1°C",
         "subtitle": "Apakah 36.1°C demam atau normal?",
-        "intro": "36.1°C (96.98°F) adalah batas bawah suhu tubuh normal. Meskipun sepenuhnya normal, penting untuk memahami artinya dalam konteks yang berbeda.",
+    "intro": "36.1°C (96.98°F) berada di bagian bawah rentang suhu tubuh normal. Dalam banyak situasi ini masih wajar, tetapi maknanya bisa sedikit berbeda tergantung usia, waktu, dan cara pengukuran.",
         "normalHighlight": "✅ SUHU TUBUH NORMAL<br>36.1°C = 96.98°F berada dalam rentang normal",
-        "adultStatus": "Normal<br>Batas bawah rentang normal",
-        "babyStatus": "Normal<br>Diterima, pantau jika khawatir",
-        "underArmStatus": "Normal<br>Pembacaan ketiak tipikal",
+    "adultStatus": "Normal<br>Di bagian bawah rentang normal",
+    "babyStatus": "Normal<br>Masih dapat diterima, perhatikan polanya",
+    "underArmStatus": "Normal<br>Wajar untuk pembacaan ketiak",
         "ranges": {
             "adult": "Dewasa",
             "baby": "Bayi",
@@ -26,25 +26,25 @@
         "oral": {
             "icon": "🌡️",
             "temp": "36.1°C = 96.98°F",
-            "description": "Pembacaan oral normal rendah",
+      "description": "Pembacaan lewat mulut yang sedikit rendah tetapi masih normal",
             "title": "Mulut"
         },
         "underArm": {
             "icon": "💪",
             "temp": "36.1°C = 96.98°F",
-            "description": "Normal ketiak",
+      "description": "Pembacaan ketiak yang masih normal",
             "title": "Ketiak"
         },
         "ear": {
             "icon": "👂",
             "temp": "36.1°C = 96.98°F",
-            "description": "Timpani rendah",
+      "description": "Pembacaan telinga yang sedikit rendah",
             "title": "Telinga"
         },
         "rectal": {
             "icon": "👶",
             "temp": "36.1°C = 96.98°F",
-            "description": "Rendah untuk rektal",
+      "description": "Cenderung rendah bila dibandingkan pembacaan rektal",
             "title": "Rektal"
         }
     },
@@ -53,28 +53,28 @@
         "newborn": {
             "title": "👶 Bayi Baru Lahir dan Bayi",
             "points": [
-                "Batas bawah rentang normal",
-                "Pantau pola yang konsisten",
-                "Bayi memiliki kemampuan regulasi suhu yang lebih rendah",
-                "Konsultasikan ke dokter anak jika khawatir"
+        "Bisa berada di bagian bawah rentang normal",
+        "Lihat pola keseluruhan, bukan hanya satu angka",
+        "Bayi baru lahir dan bayi kecil belum stabil mengatur suhu tubuh",
+        "Hubungi dokter anak bila suhu turun lagi atau bayi tampak tidak sehat"
             ]
         },
         "children": {
             "title": "🧒 Anak-anak",
             "points": [
-                "Suhu normal",
-                "Dapat menjadi suhu pagi yang normal",
-                "Pertimbangkan tingkat aktivitas sebelum mengukur",
-                "Amati perubahan perilaku"
+        "Sering kali ini masih suhu normal pada anak",
+        "Dapat muncul sebagai suhu pagi yang wajar",
+        "Perhatikan aktivitas dan pakaian sebelum mengukur",
+        "Amati bila ada perubahan perilaku atau energi"
             ]
         },
         "adults": {
             "title": "👨‍🦳 Dewasa",
             "points": [
-                "Suhu normal rentang rendah",
-                "Suhu pagi yang umum",
-                "Dapat menunjukkan garis dasar individual",
-                "Biasanya tanpa kekhawatiran medis"
+        "Ini suhu di sisi bawah kisaran normal",
+        "Sering muncul pada pagi hari",
+        "Bisa mencerminkan baseline pribadi seseorang",
+        "Biasanya tidak menimbulkan kekhawatiran medis bila berdiri sendiri"
             ]
         }
     },
@@ -127,27 +127,27 @@
     "faq": {
         "q1": {
             "question": "Apakah 36.1°C suhu tubuh normal?",
-            "answer": "Ya, 36.1°C (96.98°F) adalah suhu tubuh normal. Berada dalam rentang normal tipikal 36.1°C hingga 37.2°C (97°F hingga 99°F) untuk dewasa. Suhu ini menunjukkan fungsi fisiologis yang sehat dan normal."
+      "answer": "Ya, 36.1°C (96.98°F) termasuk suhu tubuh normal. Nilai ini berada di sisi bawah kisaran normal, tetapi tidak otomatis menandakan adanya masalah kesehatan."
         },
         "q2": {
             "question": "Apakah 36.1°C demam untuk bayi dan anak-anak?",
-            "answer": "Tidak, 36.1°C (96.98°F) bukan demam untuk bayi atau anak-anak. Ini sebenarnya adalah batas bawah rentang normal. Demam biasanya dianggap 38°C (100.4°F) atau lebih tinggi pada anak-anak."
+      "answer": "Tidak, 36.1°C (96.98°F) bukan demam untuk bayi atau anak-anak. Demam umumnya dianggap mulai dari 38°C (100.4°F), jadi angka ini masih termasuk rentang normal."
         },
         "q3": {
             "question": "Apa artinya 36.1°C di ketiak?",
-            "answer": "36.1°C (96.98°F) yang diukur di ketiak menunjukkan suhu tubuh normal. Suhu ketiak biasanya membaca 0.5-1°C lebih rendah dari suhu tubuh inti, jadi pembacaan ini menunjukkan bahwa suhu inti aktual Anda benar-benar normal."
+      "answer": "Jika 36.1°C (96.98°F) diukur di ketiak, hasil ini biasanya masih normal. Suhu ketiak memang sering sedikit lebih rendah daripada suhu inti tubuh, jadi angka ini tidak langsung mengkhawatirkan."
         },
         "q4": {
             "question": "Apakah 36.1°C terlalu rendah untuk bayi baru lahir?",
-            "answer": "36.1°C (96.98°F) berada di batas bawah normal untuk bayi baru lahir tetapi umumnya dapat diterima. Namun, bayi baru lahir memiliki kemampuan regulasi suhu yang lebih rendah, jadi suhu di bawah 36°C (96.8°F) harus dievaluasi oleh penyedia layanan kesehatan."
+      "answer": "36.1°C (96.98°F) berada di bagian bawah rentang normal untuk bayi baru lahir dan sering masih dapat diterima. Namun jika suhu turun di bawah 36°C, atau bayi tampak lemas dan minumnya buruk, sebaiknya minta evaluasi tenaga kesehatan."
         },
         "q5": {
-            "question": "Berapa 36.1 derajat Celsius dalam Fahrenheit demam?",
-            "answer": "36.1°C (96.98°F) bukan demam. Ini adalah kesalahpahaman pencarian yang umum. Jika Anda khawatir tentang demam, Anda mungkin mencari informasi sekitar 38°C (100.4°F) atau lebih tinggi, yang merupakan ambang demam."
+      "question": "Apakah 36.1°C setelah dikonversi ke Fahrenheit termasuk demam?",
+      "answer": "Tidak. 36.1°C sama dengan 96.98°F dan itu bukan demam. Ambang demam umumnya berada di sekitar 38°C (100.4°F) atau lebih tinggi."
         },
         "q6": {
             "question": "Kapan saya harus khawatir tentang suhu 36.1°C?",
-            "answer": "Anda umumnya tidak perlu khawatir tentang 36.1°C (96.98°F) itu sendiri, karena normal. Namun, cari nasihat medis jika disertai dengan gejala yang mengkhawatirkan seperti lesu, kesulitan bernapas, makan buruk (pada bayi), atau jika suhu berubah dengan cepat."
+      "answer": "Anda umumnya tidak perlu khawatir pada 36.1°C (96.98°F) saja. Namun, cari nasihat medis bila disertai gejala seperti lemas berat, sesak napas, bayi sulit minum, atau perubahan suhu yang cepat."
         }
     }
 }

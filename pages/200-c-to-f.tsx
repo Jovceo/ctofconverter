@@ -12,7 +12,7 @@ import { useTranslation, getLocalizedLink, getSceneKeywords } from '../utils/i18
 import { getAvailableTemperaturePages } from '../utils/serverHelpers';
 import { generatePageUrl } from '../utils/temperaturePageHelpers';
 
-const CELSIUS = 180;
+const CELSIUS = 200;
 
 interface PageTranslation {
   page: {
@@ -107,16 +107,16 @@ function mergePageTranslations(
 
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
   const lastUpdatedIso = getLatestModifiedDate([
-    'pages/180-c-to-f.tsx',
+    'pages/200-c-to-f.tsx',
     'components/TemperaturePage.tsx',
-    'public/180-c-to-f.html',
-    'locales/en/180-c-to-f.json',
-    `locales/${locale}/180-c-to-f.json`,
+    'public/200-c-to-f.html',
+    'locales/en/200-c-to-f.json',
+    `locales/${locale}/200-c-to-f.json`,
     'config/migrated-routes.json',
   ]);
 
-  const enTrans = loadJSON('en', '180-c-to-f.json');
-  const locTrans = locale !== 'en' ? loadJSON(locale, '180-c-to-f.json') : {};
+  const enTrans = loadJSON('en', '200-c-to-f.json');
+  const locTrans = locale !== 'en' ? loadJSON(locale, '200-c-to-f.json') : {};
   const pageIntro =
     locale === 'en'
       ? enTrans.page?.customIntro
@@ -132,7 +132,7 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
   };
 };
 
-export default function Temperature180C({
+export default function Temperature200C({
   lastUpdatedIso,
   availablePages,
   pageTrans,
@@ -151,7 +151,7 @@ export default function Temperature180C({
     const localizedKeywords = getSceneKeywords(CELSIUS, 'cooking', locale);
     const baseStrategy = generateContentStrategy(
       CELSIUS,
-      `${localizedKeywords} oven air fryer baking roasting convection fan oven`,
+      `${localizedKeywords} oven air fryer baking roasting pizza bread convection fan oven`,
       t
     );
 
@@ -176,13 +176,6 @@ export default function Temperature180C({
         <h2 className={pageStyles.boxTitle}>{pageT.sections.about.title}</h2>
         <p className={pageStyles.sectionText}>{pageT.sections.about.paragraph1}</p>
         <p className={pageStyles.sectionText}>{pageT.sections.about.paragraph2}</p>
-        <p className={pageStyles.sectionText}>
-          {pageT.sections.about.paragraph3Prefix}
-          <Link href={fanOvenChartUrl} className={pageStyles.sectionLink}>
-            {pageT.sections.about.fanLinkText}
-          </Link>
-          {pageT.sections.about.paragraph3Suffix}
-        </p>
       </section>
 
       <section className={pageStyles.box}>

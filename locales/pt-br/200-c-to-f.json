@@ -1,0 +1,105 @@
+{
+  "page": {
+    "metaTitle": "200°C para Fahrenheit = 392°F | Guia de forno, air fryer e assados",
+    "metaDescription": "Converta 200°C para Fahrenheit (392°F) instantaneamente. Guia completo de temperatura de forno com ajustes para convecção, tempos de preparo e dicas de assados.",
+    "ogDescription": "Converta 200 graus Celsius para Fahrenheit instantaneamente. 200°C = 392°F, com equivalências para forno, air fryer e forno com ventilação.",
+    "headerTitle": "200°C para Fahrenheit (200 graus Celsius = 392°F)",
+    "tagline": "Ferramenta online gratuita que converte instantaneamente 200 graus Celsius (200°C) em graus Fahrenheit (°F), com fórmula e passos detalhados para forno, air fryer e mais.",
+    "resultHeader": "Conversão de 200 graus Celsius para Fahrenheit",
+    "customIntro": "<strong>200 graus Celsius</strong> equivalem a <strong>392 graus Fahrenheit</strong>. Essa é uma temperatura de forno relativamente alta, comum em pães, pizza, legumes assados e receitas que precisam de mais dourado e crocância."
+  },
+  "sections": {
+    "about": {
+      "title": "Guia de 200°C / 392°F: aplicações e contexto",
+      "paragraph1": "200°C equivalem a 392°F e representam uma temperatura de forno relativamente alta, comum para pães, pizza, legumes assados, cookies e receitas que precisam de mais dourado. Em relação a uma temperatura média de forno, ela entrega cor e crocância mais rapidamente.",
+      "paragraph2": "Nessa faixa, as reações de douramento na superfície acontecem com mais velocidade. Por isso 200°C funcionam muito bem quando você quer crosta mais marcada, bordas crocantes ou acabamento mais tostado sem deixar o interior mal cozido.",
+      "paragraph3Prefix": "Se você estiver alternando entre forno convencional, convecção, forno com ventilação ou air fryer, compare os ajustes usando a ",
+      "fanLinkText": "tabela de conversão de forno com ventilação",
+      "paragraph3Suffix": ". Na maioria dos casos, 200°C em um forno convencional se aproximam de 180°C em um forno com ventilação ou air fryer."
+    },
+    "applications": {
+      "title": "Aplicações práticas de 200°C (392°F)",
+      "cards": [
+        {
+          "title": "Pães, pizza e massas",
+          "items": [
+            "Boa escolha para pães com crosta, pizza, tortas salgadas e receitas que pedem maior impulso no forno.",
+            "Ajuda a formar crosta dourada e melhor cor superficial do que temperaturas mais baixas.",
+            "Útil quando se deseja mais dourado sem chegar ao calor extremo do grill."
+          ]
+        },
+        {
+          "title": "Assados e acabamento crocante",
+          "items": [
+            "Funciona bem para legumes assados, pedaços de frango, salmão e refeições em assadeira.",
+            "É quente o suficiente para caramelizar as bordas e deixar a superfície mais crocante.",
+            "Também serve para gratinados, massas ao forno e pratos que pedem topo bem dourado."
+          ]
+        },
+        {
+          "title": "Air fryer e forno ventilado",
+          "items": [
+            "Em muitas receitas, 200°C são reduzidos para cerca de 180°C em air fryer ou forno ventilado.",
+            "O ar circulante cozinha mais rápido, então o tempo total pode ser menor.",
+            "Vale checar o ponto antes, especialmente em cookies, frango e porções menores."
+          ]
+        }
+      ]
+    },
+    "ovenGuide": {
+      "title": "Guia de temperatura do forno (ventilado, convencional e fan-forced)",
+      "headers": {
+        "ovenType": "Tipo de forno",
+        "adjustedTemperature": "Temperatura ajustada",
+        "bestUse": "Melhor para"
+      },
+      "rows": [
+        {
+          "type": "Forno convencional",
+          "temperature": "200°C / 392°F",
+          "bestUse": "Pães, pizza, carnes assadas e assadeiras com acabamento crocante."
+        },
+        {
+          "type": "Forno ventilado (convecção)",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Reduza cerca de 20°C para cozimento mais rápido e uniforme."
+        },
+        {
+          "type": "Fan-forced (AU/UK)",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Mesmo ajuste ventilado comum em receitas da Austrália e do Reino Unido."
+        },
+        {
+          "type": "Air fryer",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Batatas, wings, legumes e pequenas porções em alta temperatura."
+        }
+      ],
+      "notePrefix": "Se precisar de uma referência mais ampla, use a ",
+      "noteLinkText": "tabela de conversão de forno com ventilação",
+      "noteSuffix": " para comparar os ajustes antes de cozinhar."
+    }
+  },
+  "faq": [
+    {
+      "question": "200 graus Celsius equivalem a quantos Fahrenheit?",
+      "answer": "200 graus Celsius equivalem a 392 graus Fahrenheit. A fórmula é: °F = (°C × 9/5) + 32."
+    },
+    {
+      "question": "Quanto é 200°C em forno ventilado?",
+      "answer": "Em forno ventilado, normalmente se reduz cerca de 20°C. Assim, 200°C ficam em torno de 180°C (356°F)."
+    },
+    {
+      "question": "Quanto tempo leva para assar frango a 200°C?",
+      "answer": "Pedaços de frango costumam levar cerca de 20 a 25 minutos a 200°C, dependendo do tamanho e da espessura. A temperatura interna deve atingir 74°C (165°F)."
+    },
+    {
+      "question": "Quanto é 200°C em Fahrenheit para assar?",
+      "answer": "200°C equivalem a 392°F. É uma temperatura de forno alta, comum para pães, pizza, cookies, massas e receitas que precisam de mais dourado."
+    },
+    {
+      "question": "200°C é uma temperatura alta de forno?",
+      "answer": "Sim. 200°C (392°F) são considerados uma temperatura de forno alta, ideal para assados, crocância e formação de uma crosta mais firme."
+    }
+  ]
+}

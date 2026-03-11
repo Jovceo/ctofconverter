@@ -30,6 +30,10 @@
             "normal": "Normal"
         }
     },
+    "researchUpdate": {
+        "title": "📊 Stanford-Studie: Die Körpertemperatur sinkt",
+        "content": "Eine 2020 veröffentlichte Studie der Stanford Medicine analysierte 677.000 Temperaturmessungen über einen Zeitraum von 157 Jahren und stellte fest, dass die durchschnittliche Körpertemperatur pro Jahrzehnt um etwa 0,03°C gesunken ist. Der traditionelle Referenzwert von 37°C (98,6°F) aus dem Jahr 1868 gilt heute als veraltet. Der moderne Normalbereich liegt eher bei 36,4°C bis 36,6°C (97,5°F bis 97,9°F)."
+    },
     "measurementMethods": {
         "title": "Temperaturmessmethoden bei 36,4°C",
         "intro": "36,4°C (97,5°F) Ablesungen variieren je nach Messstelle. Das Verständnis dieser Unterschiede hilft bei der genauen Bewertung der normalen Körpertemperatur.",

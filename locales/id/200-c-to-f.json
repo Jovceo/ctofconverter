@@ -1,0 +1,105 @@
+{
+  "page": {
+    "metaTitle": "200°C ke Fahrenheit = 392°F | Panduan oven, air fryer, dan baking",
+    "metaDescription": "Ubah 200°C ke Fahrenheit (392°F) secara instan. Panduan lengkap suhu oven dengan penyesuaian konveksi, waktu memasak, dan tips baking.",
+    "ogDescription": "Ubah 200 derajat Celsius ke Fahrenheit secara instan. 200°C = 392°F, lengkap dengan referensi oven, air fryer, dan fan oven.",
+    "headerTitle": "200°C ke Fahrenheit (200 Derajat Celsius ke °F)",
+    "tagline": "Alat konversi suhu online gratis yang langsung mengubah 200 derajat Celsius (200°C) ke derajat Fahrenheit (°F), lengkap dengan rumus dan langkah detail untuk oven, air fryer, dan lainnya.",
+    "resultHeader": "Konversi 200 derajat Celsius ke Fahrenheit",
+    "customIntro": "<strong>200 derajat Celsius</strong> sama dengan <strong>392 derajat Fahrenheit</strong>. Ini termasuk suhu oven yang cukup tinggi dan sering dipakai untuk roti, pizza, sayuran panggang, serta resep yang membutuhkan warna panggang lebih kuat dan tekstur lebih renyah."
+  },
+  "sections": {
+    "about": {
+      "title": "Panduan 200°C / 392°F: penggunaan dan konteks",
+      "paragraph1": "200°C sama dengan 392°F dan termasuk suhu oven yang cukup tinggi. Suhu ini sering dipakai untuk roti, pizza, sayuran panggang, cookies, dan resep yang membutuhkan warna panggang lebih kuat. Dibanding suhu baking sedang, hasil kecokelatan dan tekstur renyah muncul lebih cepat.",
+      "paragraph2": "Pada suhu ini, proses browning di permukaan berlangsung lebih cepat. Karena itu 200°C cocok saat Anda ingin kerak lebih tegas, pinggiran lebih renyah, atau hasil panggang yang lebih gelap sambil tetap memastikan bagian dalam matang.",
+      "paragraph3Prefix": "Jika Anda berpindah antara oven biasa, oven konveksi, oven kipas, atau air fryer, bandingkan pengaturannya lewat ",
+      "fanLinkText": "tabel konversi fan oven",
+      "paragraph3Suffix": ". Dalam banyak kasus, 200°C pada oven biasa kira-kira setara dengan 180°C pada oven kipas atau air fryer."
+    },
+    "applications": {
+      "title": "Aplikasi praktis 200°C (392°F)",
+      "cards": [
+        {
+          "title": "Roti, pizza, dan pastry",
+          "items": [
+            "Cocok untuk roti berkerak, pizza, pastry gurih, dan resep yang butuh oven spring lebih kuat.",
+            "Memberi warna keemasan dan permukaan yang lebih bagus dibanding suhu yang lebih rendah.",
+            "Berguna saat Anda ingin browning lebih kuat tanpa masuk ke panas setingkat grill."
+          ]
+        },
+        {
+          "title": "Memanggang dan hasil renyah",
+          "items": [
+            "Bagus untuk sayuran panggang, potongan ayam, fillet salmon, dan sheet-pan meals.",
+            "Cukup panas untuk membuat pinggiran karamelisasi dan permukaan lebih renyah.",
+            "Juga cocok untuk casserole, pasta panggang, dan hidangan oven yang membutuhkan bagian atas kecokelatan."
+          ]
+        },
+        {
+          "title": "Air fryer dan oven kipas",
+          "items": [
+            "Dalam banyak resep, 200°C diturunkan menjadi sekitar 180°C pada air fryer atau oven kipas.",
+            "Sirkulasi udara panas memasak lebih cepat, sehingga waktu masak biasanya lebih singkat.",
+            "Cek kematangan lebih awal, terutama untuk cookies, ayam, dan porsi kecil."
+          ]
+        }
+      ]
+    },
+    "ovenGuide": {
+      "title": "Panduan suhu oven (kipas, biasa, dan kipas paksa)",
+      "headers": {
+        "ovenType": "Jenis oven",
+        "adjustedTemperature": "Suhu penyesuaian",
+        "bestUse": "Paling cocok untuk"
+      },
+      "rows": [
+        {
+          "type": "Oven biasa",
+          "temperature": "200°C / 392°F",
+          "bestUse": "Roti, pizza, daging panggang, dan loyang dengan hasil renyah."
+        },
+        {
+          "type": "Fan oven (convection)",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Turunkan sekitar 20°C untuk pemasakan yang lebih cepat dan merata."
+        },
+        {
+          "type": "Kipas paksa (AU/UK)",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Penyesuaian fan yang sama seperti pada banyak resep Australia dan Inggris."
+        },
+        {
+          "type": "Air fryer",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Kentang goreng, wings, sayuran, dan porsi kecil dengan panas tinggi."
+        }
+      ],
+      "notePrefix": "Jika Anda butuh referensi yang lebih luas, gunakan ",
+      "noteLinkText": "tabel konversi fan oven",
+      "noteSuffix": " untuk membandingkan pengaturan sebelum mulai memasak."
+    }
+  },
+  "faq": [
+    {
+      "question": "200 derajat Celsius berapa Fahrenheit?",
+      "answer": "200 derajat Celsius sama dengan 392 derajat Fahrenheit. Rumusnya adalah: °F = (°C × 9/5) + 32."
+    },
+    {
+      "question": "Berapa setara 200°C pada fan oven?",
+      "answer": "Pada fan oven, 200°C biasanya dikurangi sekitar 20°C menjadi 180°C (356°F) agar hasil masaknya setara."
+    },
+    {
+      "question": "Berapa lama memasak ayam pada 200°C?",
+      "answer": "Potongan ayam biasanya membutuhkan sekitar 20 sampai 25 menit pada 200°C, tergantung ukuran dan ketebalannya. Suhu internal harus mencapai 74°C (165°F)."
+    },
+    {
+      "question": "200°C itu berapa Fahrenheit untuk baking?",
+      "answer": "200°C sama dengan 392°F. Ini termasuk suhu baking yang cukup tinggi, sering dipakai untuk roti, pizza, cookies, pastry, dan resep yang butuh browning lebih kuat."
+    },
+    {
+      "question": "Apakah 200°C termasuk oven yang panas?",
+      "answer": "Ya. 200°C (392°F) tergolong suhu oven yang panas dan cocok untuk memanggang, membuat permukaan renyah, dan menghasilkan kerak yang lebih kuat."
+    }
+  ]
+}

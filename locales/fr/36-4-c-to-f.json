@@ -30,6 +30,10 @@
             "normal": "Normal"
         }
     },
+    "researchUpdate": {
+        "title": "📊 Étude de Stanford : la température corporelle baisse",
+        "content": "Une étude publiée par Stanford Medicine en 2020 a analysé 677 000 mesures de température sur 157 ans et a constaté que la température corporelle moyenne a diminué d’environ 0,03°C par décennie. La référence traditionnelle de 37°C (98,6°F), issue de 1868, est désormais dépassée. La plage normale moderne se situe plutôt autour de 36,4°C à 36,6°C (97,5°F à 97,9°F)."
+    },
     "measurementMethods": {
         "title": "Méthodes de Mesure de la Température à 36,4°C",
         "intro": "Les lectures de 36,4°C (97,5°F) varient selon le site de mesure. Comprendre ces différences aide à assurer une évaluation précise de la température corporelle normale.",

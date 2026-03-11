@@ -1,0 +1,105 @@
+{
+  "page": {
+    "metaTitle": "200°C in Fahrenheit = 392°F | Ofen-, Airfryer- und Backleitfaden",
+    "metaDescription": "200°C sofort in 392°F umrechnen. Vollständiger Ofenleitfaden mit Umluft-Anpassungen, Garzeiten und praktischen Backtipps.",
+    "ogDescription": "200 Grad Celsius sofort in Fahrenheit umrechnen. 200°C = 392°F mit Vergleich für Ofen, Airfryer und Umluft.",
+    "headerTitle": "200°C in Fahrenheit (200 Grad Celsius in °F)",
+    "tagline": "Kostenloses Online-Tool, das 200 Grad Celsius (200°C) sofort in Grad Fahrenheit (°F) umrechnet, inklusive Formel und detaillierter Schritte für Ofen, Airfryer und mehr.",
+    "resultHeader": "Umrechnung von 200 Grad Celsius in Fahrenheit",
+    "customIntro": "<strong>200 Grad Celsius</strong> entsprechen <strong>392 Grad Fahrenheit</strong>. Das ist eine eher heiße Ofentemperatur, die häufig für Brot, Pizza, Ofengemüse und Rezepte mit stärkerer Bräunung und knusprigeren Rändern verwendet wird."
+  },
+  "sections": {
+    "about": {
+      "title": "200°C / 392°F Leitfaden: Einsatz und Kontext",
+      "paragraph1": "200°C entsprechen 392°F und sind eine recht heiße Ofeneinstellung, die oft für Brot, Pizza, Ofengemüse, Kekse und Rezepte mit stärkerer Bräunung verwendet wird. Im Vergleich zu mittleren Backtemperaturen entstehen Farbe und Knusprigkeit schneller.",
+      "paragraph2": "Bei dieser Temperatur laufen Bräunungsreaktionen an der Oberfläche deutlich schneller ab. Deshalb eignet sich 200°C gut, wenn eine kräftige Kruste, knusprige Ränder oder ein stärker geröstetes Finish gewünscht sind, während das Innere trotzdem gut durchgart.",
+      "paragraph3Prefix": "Wenn du zwischen Ober-/Unterhitze, Umluft, Ventilatorofen oder Airfryer wechselst, vergleiche die Einstellungen mit der ",
+      "fanLinkText": "Umluft-Umrechnungstabelle",
+      "paragraph3Suffix": ". In den meisten Fällen entsprechen 200°C im normalen Ofen ungefähr 180°C im Umluftofen oder Airfryer."
+    },
+    "applications": {
+      "title": "Praktische Anwendungen von 200°C (392°F)",
+      "cards": [
+        {
+          "title": "Brot, Pizza und Gebäck",
+          "items": [
+            "Gut geeignet für Brot mit Kruste, Pizza, herzhaftes Gebäck und Rezepte mit stärkerem Ofentrieb.",
+            "Sorgt für mehr Farbe und eine kräftigere Oberfläche als niedrigere Temperaturen.",
+            "Praktisch, wenn man mehr Bräunung möchte, ohne direkt auf Grillhitze zu gehen."
+          ]
+        },
+        {
+          "title": "Rösten und knusprige Oberflächen",
+          "items": [
+            "Funktioniert gut für Ofengemüse, Hähnchenteile, Lachs und Blechgerichte.",
+            "Heiß genug, um Ränder zu karamellisieren und die Oberfläche knusprig zu machen.",
+            "Auch passend für Aufläufe, Ofennudeln und Gerichte mit gewünschter Kruste oben."
+          ]
+        },
+        {
+          "title": "Airfryer und Umluft",
+          "items": [
+            "In vielen Rezepten werden 200°C im Airfryer oder Umluftofen auf etwa 180°C reduziert.",
+            "Die zirkulierende heiße Luft gart schneller, daher verkürzt sich oft auch die Garzeit.",
+            "Gerade bei Keksen, Hähnchen und kleineren Backwaren besser frühzeitig kontrollieren."
+          ]
+        }
+      ]
+    },
+    "ovenGuide": {
+      "title": "Ofentemperatur-Leitfaden (Umluft, klassisch und Fan-Forced)",
+      "headers": {
+        "ovenType": "Ofentyp",
+        "adjustedTemperature": "Angepasste Temperatur",
+        "bestUse": "Am besten für"
+      },
+      "rows": [
+        {
+          "type": "Klassischer Ofen",
+          "temperature": "200°C / 392°F",
+          "bestUse": "Brot, Pizza, Braten und knusprige Blechgerichte."
+        },
+        {
+          "type": "Umluftofen (Convection)",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Meist etwa 20°C niedriger für schnelleres und gleichmäßigeres Garen."
+        },
+        {
+          "type": "Fan-Forced (AU/UK)",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Dieselbe Umluft-Anpassung wie in vielen australischen und britischen Rezepten."
+        },
+        {
+          "type": "Airfryer",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Pommes, Wings, Gemüse und kleine Portionen bei hoher Hitze."
+        }
+      ],
+      "notePrefix": "Wenn du eine breitere Referenz brauchst, nutze die ",
+      "noteLinkText": "Umluft-Umrechnungstabelle",
+      "noteSuffix": ", um die Einstellungen vor dem Kochen zu vergleichen."
+    }
+  },
+  "faq": [
+    {
+      "question": "Wie viel sind 200 Grad Celsius in Fahrenheit?",
+      "answer": "200 Grad Celsius entsprechen 392 Grad Fahrenheit. Die Formel lautet: °F = (°C × 9/5) + 32."
+    },
+    {
+      "question": "Was entsprechen 200°C im Umluftofen?",
+      "answer": "Im Umluftofen reduziert man meist um etwa 20°C. 200°C entsprechen dort also ungefähr 180°C (356°F)."
+    },
+    {
+      "question": "Wie lange braucht Hähnchen bei 200°C?",
+      "answer": "Hähnchenteile brauchen bei 200°C meist etwa 20 bis 25 Minuten, abhängig von Größe und Dicke. Die Kerntemperatur sollte 74°C (165°F) erreichen."
+    },
+    {
+      "question": "Wie viel sind 200°C in Fahrenheit beim Backen?",
+      "answer": "200°C entsprechen 392°F. Das ist eine recht heiße Backtemperatur für Brot, Pizza, Kekse, Gebäck und Rezepte mit stärkerer Bräunung."
+    },
+    {
+      "question": "Sind 200°C eine hohe Ofentemperatur?",
+      "answer": "Ja. 200°C (392°F) gelten als heiße Ofentemperatur und eignen sich gut zum Rösten, Bräunen und für eine kräftigere Kruste."
+    }
+  ]
+}

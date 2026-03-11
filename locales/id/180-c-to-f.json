@@ -1,54 +1,55 @@
 {
   "page": {
     "metaTitle": "180°C ke Fahrenheit = 356°F | Panduan oven, air fryer, dan baking",
-    "metaDescription": "Ubah 180°C ke Fahrenheit (356°F) secara instan. Panduan lengkap dengan penyesuaian konveksi, waktu memasak, dan tips baking.",
-    "ogDescription": "Ubah 180 derajat Celsius ke Fahrenheit dengan cepat. 180°C sama dengan 356°F. Lihat padanan untuk oven, air fryer, dan oven kipas.",
-    "headerTitle": "Konversi 180°C ke Fahrenheit (356°F) - Oven dan baking",
-    "tagline": "Alat online gratis untuk mengubah 180 derajat Celsius (180°C) ke Fahrenheit (°F), lengkap dengan rumus dan langkah detail untuk oven, air fryer, dan lainnya.",
-    "resultHeader": "Konversi 180 derajat Celsius ke Fahrenheit"
+    "metaDescription": "Ubah 180°C ke Fahrenheit (356°F) secara instan. Panduan suhu oven lengkap dengan penyesuaian konveksi, waktu memasak, dan tips baking praktis.",
+    "ogDescription": "Ubah 180 derajat Celsius ke Fahrenheit secara instan. 180°C sama dengan 356°F. Lihat padanan suhu untuk oven, air fryer, dan oven kipas.",
+    "headerTitle": "Konversi 180°C ke Fahrenheit (356°F) - Suhu oven dan baking",
+    "tagline": "Alat konversi suhu gratis yang langsung mengubah 180 derajat Celsius (180°C) ke derajat Fahrenheit (°F), lengkap dengan rumus dan langkah untuk oven, air fryer, dan lainnya.",
+    "resultHeader": "Konversi 180 derajat Celsius ke Fahrenheit",
+    "customIntro": "<strong>180 derajat Celsius</strong> sama dengan <strong>356 derajat Fahrenheit</strong>. Ini adalah salah satu suhu oven yang paling umum untuk cake, kukis, sayuran panggang, dan baking sehari-hari."
   },
   "sections": {
     "about": {
-      "title": "Tentang 180°C / 356°F: konteks dan penggunaan di dapur",
-      "paragraph1": "180°C sama dengan 356°F dan merupakan salah satu suhu oven yang paling umum dipakai untuk memasak di rumah. Ini adalah suhu yang sering digunakan untuk cake, sayuran panggang, cookies, dan banyak resep oven sehari-hari.",
-      "paragraph2": "Suhu ini bekerja baik karena cukup panas untuk membuat makanan kecokelatan dan matang dengan efisien, tetapi tidak terlalu agresif hingga bagian luar gosong sebelum bagian tengah matang. Itu sebabnya banyak resep memakai 180°C sebagai suhu standar.",
-      "paragraph3Prefix": "Jika Anda berpindah antara oven biasa, konveksi, oven kipas, atau air fryer, bandingkan pengaturannya lewat ",
-      "fanLinkText": "bagan konversi oven kipas",
+      "title": "Tentang 180°C / 356°F: konteks dan penggunaan memasak",
+      "paragraph1": "180°C sama dengan 356°F dan merupakan salah satu suhu oven yang paling sering dipakai di rumah. Kisaran ini sangat andal untuk cake, sayuran panggang, kukis, dan banyak resep oven sehari-hari.",
+      "paragraph2": "Suhu ini bekerja baik karena cukup panas untuk memberi warna kecokelatan dan memasak dengan efisien, tetapi tidak terlalu agresif sampai bagian luar gosong sebelum bagian dalam matang. Karena itu, banyak resep memakai 180°C sebagai suhu standar memanggang atau memanggang-roasting.",
+      "paragraph3Prefix": "Jika Anda berpindah antara oven biasa, konveksi, oven kipas, atau air fryer, bandingkan pengaturannya dengan ",
+      "fanLinkText": "tabel konversi oven kipas",
       "paragraph3Suffix": ". Dalam banyak kasus, 180°C pada oven biasa lebih dekat ke 160°C pada oven kipas atau air fryer."
     },
     "applications": {
-      "title": "Aplikasi praktis 180°C (356°F)",
+      "title": "Penggunaan praktis 180°C (356°F)",
       "cards": [
         {
           "title": "Baking dan cake",
           "items": [
-            "Suhu standar untuk banyak cake, muffin, cupcake, dan loyang panggang.",
-            "Baik untuk cookies saat Anda ingin pinggiran keemasan dan bagian tengah matang.",
-            "Sering dipakai sebagai suhu dasar pada resep rumahan."
+            "Pilihan standar untuk cake, cupcake, muffin, dan kue loyang.",
+            "Cocok untuk kukis dan biskuit saat Anda menginginkan pinggiran keemasan dan bagian tengah matang.",
+            "Sering dipakai sebagai suhu default dalam resep baking rumahan."
           ]
         },
         {
           "title": "Roasting dan masakan gurih",
           "items": [
-            "Cocok untuk sayuran panggang, ayam, ikan, dan berbagai hidangan oven.",
-            "Cukup panas untuk membuat warna panggang yang baik tanpa terlalu keras untuk waktu masak yang lebih lama.",
-            "Berguna untuk casserole, pasta panggang, dan hidangan yang memerlukan panas stabil."
+            "Bagus untuk sayuran panggang, potongan ayam, ikan, dan menu oven sehari-hari.",
+            "Cukup panas untuk memberi warna yang baik tanpa terlalu keras untuk waktu masak yang lebih lama.",
+            "Cocok untuk casserole, pasta panggang, dan hidangan yang membutuhkan panas oven stabil."
           ]
         },
         {
           "title": "Air fryer dan oven kipas",
           "items": [
-            "Dalam banyak resep, 180°C diturunkan menjadi sekitar 160°C untuk air fryer atau oven kipas.",
-            "Panas yang bersirkulasi membuat makanan matang lebih cepat, jadi waktu dan suhu mungkin perlu disesuaikan.",
-            "Saat mengadaptasi resep oven biasa, periksa kematangan lebih awal."
+            "Dalam banyak resep, 180°C diturunkan menjadi sekitar 160°C di oven kipas atau air fryer.",
+            "Udara yang bersirkulasi membuat makanan matang lebih cepat, jadi waktu dan suhu sering perlu disesuaikan.",
+            "Periksa kematangan lebih awal saat mengadaptasi resep dari oven biasa."
           ]
         }
       ]
     },
     "ovenGuide": {
-      "title": "Panduan suhu (oven biasa, kipas, dan air fryer)",
+      "title": "Panduan suhu oven (kipas, biasa, dan air fryer)",
       "headers": {
-        "ovenType": "Perangkat",
+        "ovenType": "Jenis alat",
         "adjustedTemperature": "Suhu setara",
         "bestUse": "Paling cocok untuk"
       },
@@ -56,27 +57,27 @@
         {
           "type": "Oven biasa",
           "temperature": "180°C / 356°F",
-          "bestUse": "Suhu standar untuk banyak cake, cookies, dan hidangan keluarga."
+          "bestUse": "Suhu standar untuk banyak cake, kukis, dan masakan keluarga."
         },
         {
-          "type": "Oven kipas",
+          "type": "Oven kipas (konveksi)",
           "temperature": "160°C / 320°F",
-          "bestUse": "Lebih rendah karena sirkulasi udara memasak lebih cepat dan merata."
+          "bestUse": "Disetel lebih rendah karena sirkulasi udara memasak lebih cepat dan merata."
         },
         {
           "type": "Air fryer",
           "temperature": "160°C / 320°F",
-          "bestUse": "Titik awal yang baik untuk makanan renyah dan porsi kecil."
+          "bestUse": "Titik awal yang bagus untuk makanan renyah dan porsi kecil."
         },
         {
           "type": "Gas Mark",
           "temperature": "Gas Mark 4",
-          "bestUse": "Berguna untuk resep lama dengan acuan gas."
+          "bestUse": "Berguna untuk resep lama yang hanya menuliskan tingkat gas."
         }
       ],
-      "notePrefix": "Butuh referensi yang lebih luas? Gunakan ",
-      "noteLinkText": "bagan konversi oven kipas",
-      "noteSuffix": " untuk membandingkan oven biasa, kipas, dan pengaturan terkait."
+      "notePrefix": "Jika Anda butuh referensi yang lebih luas, gunakan ",
+      "noteLinkText": "tabel konversi oven kipas",
+      "noteSuffix": " untuk membandingkan oven biasa, oven kipas, dan pengaturan sejenis sebelum memasak."
     }
   },
   "faq": [
@@ -86,19 +87,19 @@
     },
     {
       "question": "Apa arti 180°C pada oven atau air fryer?",
-      "answer": "Pada oven biasa, 180°C sama dengan 356°F. Dalam banyak resep air fryer atau oven kipas, suhu ini biasanya diturunkan menjadi sekitar 160°C (320°F) karena panas bersirkulasi lebih efisien."
+      "answer": "Pada oven biasa, 180°C setara dengan 356°F. Dalam banyak resep air fryer atau konveksi, suhu ini biasanya diturunkan ke sekitar 160°C (320°F) karena udara yang bersirkulasi memasak lebih efisien."
     },
     {
-      "question": "Apa rumus konversi 180 Celsius ke Fahrenheit?",
-      "answer": "Rumusnya adalah °F = (°C × 9/5) + 32. Untuk 180°C: (180 × 9/5) + 32 = 356°F."
+      "question": "Apa rumus untuk mengubah 180 Celsius ke Fahrenheit?",
+      "answer": "Rumus untuk mengubah Celsius ke Fahrenheit adalah °F = (°C × 9/5) + 32. Untuk 180°C: (180 × 9/5) + 32 = 356°F."
     },
     {
-      "question": "Berapa 180°C pada oven kipas?",
-      "answer": "Pada oven kipas, 180°C biasanya diturunkan sekitar 20°C menjadi 160°C (320°F), karena panas tersebar lebih efisien."
+      "question": "Berapa setara 180°C di oven kipas?",
+      "answer": "Di oven kipas, 180°C biasanya diturunkan sekitar 20°C menjadi 160°C (320°F). Oven kipas menyebarkan panas lebih efisien, jadi pengaturan yang lebih rendah biasanya cukup."
     },
     {
       "question": "Berapa lama memanggang cake pada 180°C?",
-      "answer": "Banyak cake dipanggang sekitar 25 sampai 35 menit pada 180°C (356°F), tetapi waktu pastinya tergantung ukuran loyang, ketebalan adonan, dan akurasi oven. Tusuk gigi yang ditancapkan di tengah seharusnya keluar bersih."
+      "answer": "Banyak cake membutuhkan sekitar 25 hingga 35 menit pada 180°C (356°F), tetapi waktu tepatnya tergantung ukuran loyang, ketebalan adonan, dan akurasi oven. Tusuk gigi yang keluar bersih dari tengah biasanya menandakan cake sudah matang."
     }
   ]
 }
