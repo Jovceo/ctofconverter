@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import Analytics from '../components/Analytics';
 
 // 导入 F→C 转换工具函数
 import {
@@ -282,9 +281,6 @@ export default function FahrenheitToCelsiusPage({ canonicalUrl, lastUpdated }: F
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }} />
             </Head>
-
-            <Analytics />
-
             <div dir={locale === 'ar' ? 'rtl' : 'ltr'} className={locale === 'ar' ? 'font-ar' : ''}>
                 <a className="skip-link" href="#main-content">Skip to main content</a>
 

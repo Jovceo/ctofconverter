@@ -5,7 +5,6 @@ import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import Analytics from '../components/Analytics';
 import { getLocalizedLink } from '../utils/i18n';
 import styles from '../styles/fan-oven-conversion-chart.module.css';
 import { GetStaticProps } from 'next';
@@ -435,7 +434,6 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </Head>
-      <Analytics />
       <Header />
       <Navigation />
       <main className="container" id="main-content">

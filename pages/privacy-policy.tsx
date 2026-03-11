@@ -6,6 +6,9 @@ import Layout from '../components/Layout';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { getLocalizedLink } from '../utils/i18n';
+import { getLatestModifiedDate } from '../utils/dateHelpers';
+import fs from 'fs';
+import path from 'path';
 
 interface PrivacyPolicyProps {
     title: string;
@@ -14,9 +17,10 @@ interface PrivacyPolicyProps {
     homeText: string;
     logoText: string;
     locale: string;
+    lastUpdatedIso: string;
 }
 
-export default function PrivacyPolicy({ title, description, content, homeText, logoText, locale }: PrivacyPolicyProps) {
+export default function PrivacyPolicy({ title, description, content, homeText, logoText, locale, lastUpdatedIso }: PrivacyPolicyProps) {
     return (
         <Layout
             seo={{
@@ -49,7 +53,7 @@ export default function PrivacyPolicy({ title, description, content, homeText, l
                     </div>
                 </main>
 
-                <Footer />
+                <Footer lastUpdated={lastUpdatedIso} />
             </div>
 
             <style jsx>{`
@@ -104,8 +108,6 @@ export default function PrivacyPolicy({ title, description, content, homeText, l
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
     const loc = locale || 'en';
-    const path = require('path');
-    const fs = require('fs');
     const jsonPath = path.join(process.cwd(), 'public', 'locales', loc, 'privacy-policy.json');
     const commonPath = path.join(process.cwd(), 'locales', loc, 'common.json');
 
@@ -117,6 +119,12 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     const homeText = commonData.nav?.home || 'Home';
     const logoText = commonData.nav?.logoText || 'Celsius to Fahrenheit Converter';
 
+    const lastUpdatedIso = getLatestModifiedDate([
+        'pages/privacy-policy.tsx',
+        `public/locales/${loc}/privacy-policy.json`,
+        `locales/${loc}/common.json`
+    ]);
+
     return {
         props: {
             title: data.title,
@@ -125,6 +133,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
             homeText,
             logoText,
             locale: loc,
+            lastUpdatedIso,
         },
     };
 };

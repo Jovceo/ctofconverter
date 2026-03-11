@@ -8,6 +8,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import CalculatorWidget from '../components/CalculatorWidget';
 import { getLocalizedLink } from '../utils/i18n';
+import { getLatestModifiedDate } from '../utils/dateHelpers';
 
 interface CalculatorPageProps {
     lastUpdatedIso: string;
@@ -269,7 +270,11 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     const t = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
     const common = JSON.parse(fs.readFileSync(commonPath, 'utf-8'));
 
-    const lastUpdatedIso = '2026-01-12';
+    const lastUpdatedIso = getLatestModifiedDate([
+        'pages/c-to-f-calculator.tsx',
+        `public/locales/${loc}/c-to-f-calculator.json`,
+        `locales/${loc}/common.json`
+    ]);
     return {
         props: {
             lastUpdatedIso,

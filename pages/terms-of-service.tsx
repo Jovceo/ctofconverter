@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { getLocalizedLink } from '../utils/i18n';
+import { getLatestModifiedDate } from '../utils/dateHelpers';
 import path from 'path';
 import fs from 'fs';
 
@@ -100,7 +101,11 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     const homeText = commonData.nav?.home || 'Home';
     const logoText = commonData.nav?.logoText || 'Celsius to Fahrenheit Converter';
 
-    const lastUpdatedIso = '2026-01-12';
+    const lastUpdatedIso = getLatestModifiedDate([
+        'pages/terms-of-service.tsx',
+        `public/locales/${loc}/terms-of-service.json`,
+        `locales/${loc}/common.json`
+    ]);
     return {
         props: {
             title: data.title,
