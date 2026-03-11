@@ -16,19 +16,23 @@
         "imageAlt": "Rumus konversi dan langkah perhitungan 36,4°C ke Fahrenheit"
     },
     "bodyTempRanges": {
-        "title": "Penilaian Suhu 36,4°C: Rentang Normal",
-        "subtitle": "Apakah 36,4°C Normal?",
-        "intro": "36,4°C (97,5°F) berada dalam rentang suhu tubuh normal. Ini adalah suhu yang sehat untuk sebagian besar dewasa dan merupakan pembacaan normal rentang menengah yang nyaman.",
-        "normalHighlight": "✅ SUHU NORMAL<br>36,4°C = 97,5°F adalah sehat",
-        "adultStatus": "Normal<br>Rentang menengah sehat",
-        "babyStatus": "Normal<br>Tipikal untuk bayi",
-        "underArmStatus": "Normal<br>Pembacaan ketiak",
+        "title": "36,4°C: patokan suhu tubuh normal menurut riset modern",
+        "subtitle": "Mengapa 36,4°C penting pada 2025?",
+        "intro": "36,4°C (97,5°F) mewakili batas bawah dari rata-rata suhu tubuh normal modern. Riset Stanford Medicine menunjukkan bahwa standar lama 37°C (98,6°F) tidak lagi sepenuhnya mencerminkan kondisi saat ini. Karena itu, 36,4°C dinilai sehat dan kini makin umum dijumpai.",
+        "normalHighlight": "✅ BATAS BAWAH RATA-RATA MODERN<br>36,4°C = 97,5°F adalah lantai baru kisaran normal",
+        "adultStatus": "Normal<br>Sisi bawah kisaran rata-rata",
+        "babyStatus": "Normal<br>Patokan sehat",
+        "underArmStatus": "Normal<br>Pembacaan yang umum",
         "ranges": {
             "adult": "Dewasa",
             "baby": "Bayi",
             "underArm": "Ketiak",
             "normal": "Normal"
         }
+    },
+    "researchUpdate": {
+        "title": "📊 Riset Stanford: Rata-rata suhu tubuh manusia makin menurun",
+        "content": "Studi Stanford Medicine pada tahun 2020 menganalisis 677.000 pengukuran suhu selama rentang 157 tahun dan menemukan bahwa rata-rata suhu tubuh menurun sekitar 0,03°C per dekade. Standar tradisional 37°C (98,6°F) yang digunakan sejak 1868 kini dinilai sudah ketinggalan. Kisaran normal modern dinilai lebih dekat ke 36,4°C hingga 36,6°C (97,5°F hingga 97,9°F)."
     },
     "measurementMethods": {
         "title": "Metode Pengukuran Suhu pada 36,4°C",
@@ -145,28 +149,28 @@
     },
     "faq": {
         "q1": {
-            "question": "Apakah 36,4°C (97,5°F) adalah suhu normal?",
-            "answer": "Ya, 36,4°C (97,5°F) berada dalam rentang suhu tubuh normal. Rentang suhu normal untuk dewasa adalah 36,0-37,2°C (96,8-99,0°F). 36,4°C mewakili pembacaan normal rentang menengah yang nyaman dan adalah suhu yang sehat untuk sebagian besar orang."
+            "question": "Apakah 36,4°C (97,5°F) terlalu rendah? Mengapa saya berada di bawah 98,6°F?",
+            "answer": "Tidak, 36,4°C tidak terlalu rendah. Riset Stanford Medicine tahun 2020 menunjukkan bahwa suhu tubuh rata-rata telah turun sekitar 0,03°C per dekade sejak abad ke-19. Artinya, standar lama 37°C (98,6°F) tidak lagi selalu menjadi patokan paling akurat. Kisaran 36,4°C hingga 36,6°C kini dinilai lebih mencerminkan normal modern."
         },
         "q2": {
-            "question": "Apakah 36,4°C terlalu rendah untuk dewasa?",
-            "answer": "36,4°C (97,5°F) TIDAK terlalu rendah untuk dewasa. Ini berada dengan baik dalam rentang normal. Kekhawatiran hipotermia biasanya muncul di bawah 35,0°C (95°F). 36,4°C adalah suhu sehat rentang menengah yang dimiliki banyak dewasa secara alami."
+            "question": "Mengapa suhu tubuh turun dibandingkan era 1800-an?",
+            "answer": "Para peneliti mengaitkannya dengan kesehatan yang lebih baik, tingkat peradangan yang lebih rendah, perubahan gaya hidup, dan lingkungan modern yang lebih terkontrol suhunya. Jadi, suhu 36,4°C lebih mencerminkan perubahan rata-rata modern daripada tanda adanya masalah."
         },
         "q3": {
-            "question": "Apa arti 36,4°C untuk bayi?",
-            "answer": "36,4°C (97,5°F) adalah suhu normal untuk bayi. Bayi sering memiliki suhu antara 36,0-37,5°C. Bayi baru lahir memiliki regulasi suhu yang lebih rendah, jadi pantau pola daripada pembacaan tunggal. Hubungi dokter anak jika secara konsisten di bawah 35,8°C atau di atas 37,5°C, atau jika bayi menunjukkan tanda-tanda penyakit."
+            "question": "Apa temuan utama studi Stanford tentang suhu tubuh?",
+            "answer": "Studi Stanford tahun 2020 menganalisis lebih dari 677 ribu pengukuran suhu dari 1892 hingga 2017. Hasilnya menunjukkan bahwa suhu tubuh rata-rata turun sedikit demi sedikit dari generasi ke generasi. Karena itu, patokan 37°C dari tahun 1868 kini dianggap kurang mewakili populasi modern."
         },
         "q4": {
-            "question": "Mengapa suhu saya 36,4°C di pagi hari?",
-            "answer": "Suhu pagi biasanya 0,3-0,5°C lebih rendah dari sore/malam karena ritme sirkadian. 36,4°C di pagi hari sepenuhnya normal dan sehat. Suhu tubuh berfluktuasi secara alami sepanjang hari, paling rendah sekitar pukul 6 pagi dan paling tinggi sekitar pukul 16-18."
+            "question": "Apakah 36,4°C normal untuk bayi dan anak-anak juga?",
+            "answer": "Ya. Suhu 36,4°C (97,5°F) umumnya masih tergolong normal dan sehat untuk bayi maupun anak-anak. Yang lebih penting adalah melihat pola suhu yang konsisten dan gejala yang menyertainya. Hubungi dokter jika suhu terus berada di bawah 35,5°C atau anak tampak sakit."
         },
         "q5": {
-            "question": "Haruskah saya khawatir tentang suhu 36,4°C?",
-            "answer": "36,4°C (97,5°F) sendiri bukan alasan untuk khawatir. Tanda-tanda peringatan termasuk: Suhu secara konsisten di bawah 35,5°C; Penurunan tiba-tiba dari garis dasar normal Anda; Disertai gejala seperti menggigil, kebingungan, atau kelelahan; Pada bayi: makan buruk, lesu, atau anggota tubuh dingin. Jika tidak, 36,4°C adalah suhu yang sehat."
+            "question": "Haruskah saya mengikuti standar modern 36,4°C atau standar lama 37°C?",
+            "answer": "Patokan modern lebih layak dijadikan acuan. Standar 37°C (98,6°F) berasal dari data lama yang lebih terbatas, sedangkan riset modern seperti studi Stanford menggunakan jumlah pengukuran yang jauh lebih besar. Karena itu, kisaran 36,4°C hingga 36,6°C sekarang dianggap lebih realistis."
         },
         "q6": {
-            "question": "Bagaimana cara mengkonversi 36,4°C ke Fahrenheit?",
-            "answer": "Untuk mengkonversi 36,4°C ke Fahrenheit: Kalikan 36,4 dengan 9/5 (atau 1,8) = 65,52; Tambahkan 32 ke hasilnya: 65,52 + 32 = 97,52; Jawaban akhir: 36,4°C = 97,5°F. Ini adalah suhu tubuh normal dalam rentang sehat."
+            "question": "Bagaimana cara mengonversi 36,4°C ke Fahrenheit dengan benar?",
+            "answer": "Kalikan 36,4 dengan 9/5 atau 1,8 sehingga hasilnya 65,52. Lalu tambahkan 32, sehingga menjadi 97,52. Jika dibulatkan, hasil akhirnya adalah 97,5°F. Suhu ini juga sering dipakai sebagai batas bawah rata-rata suhu tubuh normal modern."
         }
     }
 }

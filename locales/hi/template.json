@@ -76,9 +76,9 @@
     "introValue": "<strong>{celsius} डिग्री सेल्सियस</strong>, <strong>{fahrenheit} डिग्री फ़ारेनहाइट</strong> के बराबर है।",
     "introConnect": [
       "यह तापमान रूपांतरण आमतौर पर इनके लिए उपयोग किया जाता है",
-      "You will often encounter this temperature in",
-      "This specific value is frequently seen in contexts like",
-      "Common applications for this temperature include"
+      "आपको यह तापमान अक्सर इन संदर्भों में मिलेगा",
+      "यह विशिष्ट मान अक्सर इन संदर्भों में देखा जाता है",
+      "इस तापमान के सामान्य उपयोगों में शामिल हैं"
     ],
     "linkBodyTemp": "शरीर के तापमान का मापन",
     "linkFeverChart": "बुखार तापमान चार्ट",

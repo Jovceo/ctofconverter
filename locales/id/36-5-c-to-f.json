@@ -16,13 +16,13 @@
         "imageAlt": "Rumus konversi dan langkah perhitungan 36,5°C ke Fahrenheit"
     },
     "bodyTempRanges": {
-        "title": "Penilaian Suhu 36,5°C: Rentang Normal",
-        "subtitle": "Apakah 36,5°C Normal?",
-        "intro": "36,5°C (97,7°F) berada dalam rentang suhu tubuh normal. Ini mewakili suhu normal rentang menengah yang nyaman, sedikit di atas rata-rata tetapi sepenuhnya sehat.",
-        "normalHighlight": "✅ SUHU NORMAL<br>36,5°C = 97,7°F adalah sehat",
-        "adultStatus": "Normal<br>Rentang sehat menengah",
-        "babyStatus": "Normal<br>Khas untuk bayi",
-        "underArmStatus": "Normal<br>Pembacaan aksila",
+        "title": "36,5°C: standar utama suhu tubuh normal",
+        "subtitle": "Mengapa 36,5°C dianggap ideal?",
+        "intro": "36,5°C (97,7°F) merupakan suhu tubuh normal standar yang banyak dipakai dalam panduan medis di seluruh dunia. Suhu ini menandakan fungsi tubuh yang optimal dan sering dijadikan patokan saat menilai kondisi kesehatan.",
+        "normalHighlight": "✅ SUHU NORMAL STANDAR<br>36,5°C = 97,7°F adalah patokan medis utama",
+        "adultStatus": "Normal<br>Kisaran optimal",
+        "babyStatus": "Normal<br>Patokan sehat",
+        "underArmStatus": "Normal<br>Pembacaan ideal",
         "ranges": {
             "adult": "Dewasa",
             "baby": "Bayi",
@@ -153,28 +153,28 @@
     },
     "faq": {
         "q1": {
-            "question": "Apakah 36,5°C (97,7°F) adalah suhu normal?",
-            "answer": "Ya, 36,5°C (97,7°F) berada dalam rentang suhu tubuh normal. Rentang suhu normal untuk dewasa adalah 36,0-37,2°C (96,8-99,0°F). 36,5°C mewakili pembacaan normal yang nyaman di rentang menengah dan merupakan suhu yang sehat untuk kebanyakan orang."
+            "question": "Apakah 36,5°C (97,7°F) merupakan suhu tubuh normal yang ideal?",
+            "answer": "36,5°C (97,7°F) sering dianggap sebagai standar utama suhu tubuh normal. Banyak panduan medis menempatkan kisaran normal pada 36,5°C hingga 37,5°C, sehingga 36,5°C menjadi titik acuan yang sangat umum."
         },
         "q2": {
-            "question": "Apakah 36,5°C terlalu tinggi atau terlalu rendah?",
-            "answer": "36,5°C (97,7°F) tidak terlalu tinggi maupun terlalu rendah. Ini adalah suhu sehat di rentang menengah. Kekhawatiran hipotermia muncul di bawah 35,0°C (95°F), dan demam biasanya dimulai pada 38,0°C (100,4°F). 36,5°C adalah suhu yang nyaman dan normal."
+            "question": "Mengapa 36,5°C dipakai sebagai standar medis suhu normal?",
+            "answer": "36,5°C sering dipakai sebagai acuan karena pada kisaran ini banyak fungsi tubuh bekerja secara optimal, termasuk aktivitas enzim, respons imun, sirkulasi darah, dan keseimbangan metabolisme. Itulah sebabnya angka ini sering muncul di rumah sakit dan buku medis."
         },
         "q3": {
-            "question": "Apa artinya 36,5°C untuk bayi?",
-            "answer": "36,5°C (97,7°F) adalah suhu normal untuk bayi. Bayi sering memiliki suhu antara 36,0-37,5°C. Bayi baru lahir memiliki regulasi suhu yang lebih rendah, jadi pantau pola daripada pembacaan tunggal. Hubungi dokter anak jika secara konsisten di bawah 35,8°C atau di atas 37,5°C, atau jika bayi menunjukkan tanda-tanda penyakit."
+            "question": "Apakah 36,5°C normal untuk bayi, anak-anak, dan orang dewasa?",
+            "answer": "Ya, 36,5°C (97,7°F) dianggap normal untuk semua kelompok usia. Pada bayi, suhu ini mencerminkan pengaturan suhu yang baik. Pada anak-anak, suhu ini mendukung pertumbuhan dan aktivitas. Pada orang dewasa, ini menunjukkan fungsi tubuh yang seimbang dan sehat."
         },
         "q4": {
-            "question": "Apakah 36,5°C demam?",
-            "answer": "Tidak, 36,5°C (97,7°F) bukan demam. Demam biasanya didefinisikan sebagai 38,0°C (100,4°F) atau lebih tinggi. 36,5°C adalah suhu tubuh normal dan sehat. Beberapa orang secara alami memiliki suhu yang sedikit lebih dingin atau lebih hangat dari rata-rata 37,0°C (98,6°F)."
+            "question": "Apa perbedaan antara 36,4°C dan 36,5°C?",
+            "answer": "36,4°C sering dipandang sebagai batas bawah rata-rata suhu tubuh modern, sedangkan 36,5°C adalah patokan medis klasik yang lebih umum digunakan. Keduanya normal, tetapi 36,5°C lebih sering dipakai sebagai titik acuan klinis."
         },
         "q5": {
-            "question": "Haruskah saya khawatir tentang suhu 36,5°C?",
-            "answer": "36,5°C (97,7°F) sendiri bukan penyebab kekhawatiran. Ini adalah suhu yang sehat dan normal. Tanda-tanda peringatan meliputi: Suhu secara konsisten di bawah 35,5°C atau di atas 37,8°C; Perubahan mendadak dari garis dasar normal Anda; Disertai gejala seperti kelelahan, kebingungan, atau tanda-tanda penyakit. Selain itu, 36,5°C sepenuhnya sehat."
+            "question": "Haruskah saya khawatir jika suhu saya tidak tepat 36,5°C?",
+            "answer": "Tidak. Suhu tubuh normal umumnya berada di kisaran 36,0°C hingga 37,5°C. Walaupun 36,5°C adalah patokan standar, suhu lain dalam kisaran itu tetap dianggap sehat. Kekhawatiran biasanya muncul jika suhu terus di bawah 35,5°C atau di atas 37,8°C, atau bila disertai gejala sakit."
         },
         "q6": {
-            "question": "Bagaimana cara mengkonversi 36,5°C ke Fahrenheit?",
-            "answer": "Untuk mengkonversi 36,5°C ke Fahrenheit: Kalikan 36,5 dengan 9/5 (atau 1,8) = 65,7; Tambahkan 32 ke hasilnya: 65,7 + 32 = 97,7; Jawaban akhir: 36,5°C = 97,7°F. Ini adalah suhu tubuh normal dalam rentang yang sehat."
+            "question": "Bagaimana cara mengonversi 36,5°C ke Fahrenheit dengan akurat?",
+            "answer": "Kalikan 36,5 dengan 9/5 atau 1,8 sehingga hasilnya 65,7. Lalu tambahkan 32 sehingga menjadi 97,7. Jadi, 36,5°C = 97,7°F. Ini adalah suhu yang sering dipakai sebagai standar suhu tubuh normal dalam pedoman medis."
         }
     }
 }

@@ -189,11 +189,11 @@ export default function Temperature36_5C({ lastUpdatedIso, pageTrans, availableP
         }, {
             type: 'fact' as const,
             title: safeTranslate(pageT, 'medicalGuidelines.title', locale),
-            content: `<div style="background: #e8f5e9; padding: 20px; border-radius: 8px; border-left: 4px solid #4caf50;"><h4 style="margin-top: 0; color: #2e7d32;">🏥 WHO & Medical Standards</h4><p>${safeTranslate(pageT, 'medicalGuidelines.content', locale)}</p></div>`
+            content: `<div style="background: #e8f5e9; padding: 20px; border-radius: 8px; border-left: 4px solid #4caf50;"><p style="margin: 0;">${safeTranslate(pageT, 'medicalGuidelines.content', locale)}</p></div>`
         }, {
             type: 'fact' as const,
             title: safeTranslate(pageT, 'optimalFunction.title', locale),
-            content: `<div style="background: #fff3e0; padding: 20px; border-radius: 8px; border-left: 4px solid #ff9800;"><h4 style="margin-top: 0; color: #e65100;">🔬 Peak Physiological Function</h4><p>${safeTranslate(pageT, 'optimalFunction.content', locale)}</p></div>`
+            content: `<div style="background: #fff3e0; padding: 20px; border-radius: 8px; border-left: 4px solid #ff9800;"><p style="margin: 0;">${safeTranslate(pageT, 'optimalFunction.content', locale)}</p></div>`
         }, {
             type: 'fact' as const,
             title: safeTranslate(pageT, 'measurementMethods.title', locale),
@@ -315,6 +315,8 @@ export default function Temperature36_5C({ lastUpdatedIso, pageTrans, availableP
         }
 
         // 配置模块
+        s.meta = s.meta || {};
+        s.meta.ogDescription = replacePlaceholders(pageT.meta?.ogDescription || '', replacements);
         s.modules.showHealthAlert = true;
         s.modules.showHumanFeel = false;
         s.modules.showOvenGuide = false;
@@ -327,8 +329,18 @@ export default function Temperature36_5C({ lastUpdatedIso, pageTrans, availableP
     const canonicalUrl = generatePageUrl(celsius, locale);
 
     // 自定义Title和Description
-    const customTitle = replacePlaceholders(pageT.meta?.title || '', replacements);
-    const customDescription = replacePlaceholders(pageT.meta?.description || '', replacements);
+    const customMetaTitle = replacePlaceholders(pageT.meta?.title || '', replacements);
+    const customMetaDescription = replacePlaceholders(pageT.meta?.description || '', replacements);
+    const customHeaderTitle = customMetaTitle;
+    const customTagline = customMetaDescription;
+    const customResultHeader = replacePlaceholders(
+        pageT.conversionFormula?.title || pageT.meta?.ogTitle || `${celsius}°C to Fahrenheit Converter`,
+        replacements
+    );
+    const customIntro = replacePlaceholders(
+        pageT.bodyTempRanges?.intro || customMetaDescription,
+        replacements
+    );
 
     return (
         <TemperaturePage
@@ -337,8 +349,12 @@ export default function Temperature36_5C({ lastUpdatedIso, pageTrans, availableP
             customNamespace="36-5-c-to-f"
             lastUpdated={lastUpdatedIso}
             canonicalUrl={canonicalUrl}
-            customTitle={customTitle}
-            customDescription={customDescription}
+            customMetaTitle={customMetaTitle}
+            customMetaDescription={customMetaDescription}
+            customHeaderTitle={customHeaderTitle}
+            customTagline={customTagline}
+            customResultHeader={customResultHeader}
+            customIntro={customIntro}
             availablePages={availablePages}
             disableSmartFaqs={true}
             showEditorialNote={true}

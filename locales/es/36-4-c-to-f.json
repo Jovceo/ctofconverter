@@ -30,6 +30,10 @@
             "normal": "Normal"
         }
     },
+    "researchUpdate": {
+        "title": "📊 Investigación de Stanford: la temperatura corporal está disminuyendo",
+        "content": "Un estudio de Stanford Medicine de 2020 analizó 677.000 mediciones de temperatura a lo largo de 157 años y descubrió que la temperatura corporal promedio ha disminuido 0,03°C por década. El estándar tradicional de 37°C (98,6°F), establecido en 1868, ya está desactualizado. El rango normal moderno se sitúa más cerca de 36,4°C a 36,6°C (97,5°F a 97,9°F)."
+    },
     "measurementMethods": {
         "title": "Métodos de Medición de Temperatura a 36,4°C",
         "intro": "Las lecturas de 36,4°C (97,5°F) varían según el sitio de medición. Comprender estas diferencias ayuda a asegurar una evaluación precisa de la temperatura corporal normal.",

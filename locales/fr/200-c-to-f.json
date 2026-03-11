@@ -1,0 +1,105 @@
+{
+  "page": {
+    "metaTitle": "200°C en Fahrenheit = 392°F | Guide four, friteuse à air et cuisson au four",
+    "metaDescription": "Convertissez 200°C en Fahrenheit (392°F) instantanément. Guide complet des températures de four avec réglages convection, temps de cuisson et conseils pratiques.",
+    "ogDescription": "Convertissez 200 degrés Celsius en Fahrenheit instantanément. 200°C = 392°F avec repères pour four, friteuse à air et four ventilé.",
+    "headerTitle": "200°C en Fahrenheit (200 degrés Celsius en °F)",
+    "tagline": "Outil gratuit en ligne pour convertir instantanément 200 degrés Celsius (200°C) en degrés Fahrenheit (°F), avec formule et étapes détaillées pour four, friteuse à air et plus.",
+    "resultHeader": "Conversion de 200 degrés Celsius en Fahrenheit",
+    "customIntro": "<strong>200 degrés Celsius</strong> correspondent à <strong>392 degrés Fahrenheit</strong>. C’est une température de four assez élevée, souvent utilisée pour le pain, la pizza, les légumes rôtis et les recettes qui demandent plus de coloration et de croustillant."
+  },
+  "sections": {
+    "about": {
+      "title": "Guide 200°C / 392°F : usages et contexte",
+      "paragraph1": "200°C correspondent à 392°F et représentent une température de four assez élevée, courante pour le pain, la pizza, les légumes rôtis, les biscuits et les recettes qui demandent plus de coloration. Cette chaleur donne plus vite une belle surface dorée et croustillante qu'une cuisson moyenne.",
+      "paragraph2": "À cette température, le brunissement de surface s'accélère nettement. 200°C convient donc très bien lorsque l'on veut une croûte plus marquée, des bords croustillants ou une finition plus rôtie tout en gardant une cuisson correcte à cœur.",
+      "paragraph3Prefix": "Si vous passez d'un four traditionnel à la convection, au four ventilé ou à la friteuse à air, comparez les réglages avec le ",
+      "fanLinkText": "tableau de conversion four ventilé",
+      "paragraph3Suffix": ". Dans la plupart des cas, 200°C dans un four traditionnel correspondent plutôt à 180°C dans un four ventilé ou une friteuse à air."
+    },
+    "applications": {
+      "title": "Applications pratiques de 200°C (392°F)",
+      "cards": [
+        {
+          "title": "Pain, pizza et pâtes",
+          "items": [
+            "Très utile pour les pains à croûte, la pizza, les tourtes salées et les recettes qui demandent plus de poussée au four.",
+            "Donne une croûte plus dorée et une meilleure coloration de surface qu'à plus basse température.",
+            "Pratique quand on veut davantage de brunissement sans aller jusqu'à une chaleur de grill très forte."
+          ]
+        },
+        {
+          "title": "Rôtissage et finition croustillante",
+          "items": [
+            "Fonctionne bien pour les légumes rôtis, les morceaux de poulet, le saumon et les plats sur plaque.",
+            "Suffisamment chaud pour caraméliser les bords et sécher la surface tout en cuisant l'intérieur efficacement.",
+            "Adapté aussi aux gratins, pâtes au four et plats qui gagnent à être bien dorés dessus."
+          ]
+        },
+        {
+          "title": "Friteuse à air et four ventilé",
+          "items": [
+            "Dans beaucoup de recettes, 200°C sont abaissés à environ 180°C dans une friteuse à air ou un four ventilé.",
+            "L'air en circulation cuit plus vite, donc le temps total peut être plus court.",
+            "Mieux vaut vérifier la cuisson plus tôt, surtout pour les biscuits, le poulet et les petites portions."
+          ]
+        }
+      ]
+    },
+    "ovenGuide": {
+      "title": "Guide de température du four (ventilé, traditionnel et ventilateur forcé)",
+      "headers": {
+        "ovenType": "Type de four",
+        "adjustedTemperature": "Température ajustée",
+        "bestUse": "Idéal pour"
+      },
+      "rows": [
+        {
+          "type": "Four traditionnel",
+          "temperature": "200°C / 392°F",
+          "bestUse": "Pain, pizza, viandes rôties et cuissons sur plaque croustillantes."
+        },
+        {
+          "type": "Four ventilé (convection)",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Réduire d'environ 20°C pour une cuisson plus rapide et plus homogène."
+        },
+        {
+          "type": "Ventilateur forcé (AU/UK)",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Même réglage ventilé que dans de nombreuses recettes australiennes et britanniques."
+        },
+        {
+          "type": "Friteuse à air",
+          "temperature": "180°C / 356°F",
+          "bestUse": "Frites, ailes de poulet, légumes et petites portions à chaleur élevée."
+        }
+      ],
+      "notePrefix": "Pour une référence plus large, consultez le ",
+      "noteLinkText": "tableau de conversion four ventilé",
+      "noteSuffix": " afin de comparer les réglages avant de cuisiner."
+    }
+  },
+  "faq": [
+    {
+      "question": "Combien font 200 degrés Celsius en Fahrenheit ?",
+      "answer": "200 degrés Celsius correspondent à 392 degrés Fahrenheit. La formule est : °F = (°C × 9/5) + 32."
+    },
+    {
+      "question": "À quoi correspondent 200°C dans un four ventilé ?",
+      "answer": "Dans un four ventilé, on baisse généralement d'environ 20°C, donc 200°C deviennent environ 180°C (356°F)."
+    },
+    {
+      "question": "Combien de temps cuire du poulet à 200°C ?",
+      "answer": "Les morceaux de poulet prennent souvent 20 à 25 minutes à 200°C selon leur taille et leur épaisseur. La température interne doit atteindre 74°C (165°F)."
+    },
+    {
+      "question": "200°C en Fahrenheit pour la pâtisserie, cela fait combien ?",
+      "answer": "200°C correspondent à 392°F. C'est une température de four assez élevée, souvent utilisée pour le pain, la pizza, les biscuits et les recettes qui demandent plus de coloration."
+    },
+    {
+      "question": "200°C, est-ce une température de four élevée ?",
+      "answer": "Oui. 200°C (392°F) sont considérés comme une température de four élevée, idéale pour rôtir, croustiller et obtenir une croûte plus marquée."
+    }
+  ]
+}

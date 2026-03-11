@@ -76,9 +76,9 @@
     "introValue": "<strong>{celsius} degrés Celsius</strong> est égal à <strong>{fahrenheit} degrés Fahrenheit</strong>.",
     "introConnect": [
       "Cette conversion de température est couramment utilisée pour",
-      "You will often encounter this temperature in",
-      "This specific value is frequently seen in contexts like",
-      "Common applications for this temperature include"
+      "Vous rencontrerez souvent cette température dans",
+      "Cette valeur précise apparaît fréquemment dans des contextes comme",
+      "Les usages courants de cette température incluent"
     ],
     "linkBodyTemp": "les mesures de température corporelle",
     "linkFeverChart": "tableau des températures de fièvre",

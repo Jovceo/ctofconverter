@@ -1,193 +1,193 @@
 {
-  "meta": {
-    "title": "36.6°C ke Fahrenheit (97.9°F) | Panduan Suhu Tubuh Normal",
-    "description": "Ubah 36.6°C ke Fahrenheit (97.9°F). Pelajari apakah 36.6°C normal dan panduan suhu modern untuk semua usia.",
-    "ogTitle": "36.6°C ke Fahrenheit – Panduan Suhu Tubuh",
-    "ogDescription": "Konversi 36.6°C ke Fahrenheit untuk semua usia."
-  },
-  "conversionFormula": {
-    "title": "Konversi 36.6°C ke Fahrenheit",
-    "formula": "(36.6°C × 9/5) + 32 = 97.9°F",
-    "steps": [
-      "36.6 × 1.8 = 65.88",
-      "65.88 + 32 = 97.88",
-      "Hasil: 36.6°C ≈ 97.88°F"
-    ],
-    "imageAlt": "Rumus konversi 36.6°C ke Fahrenheit"
-  },
-  "bodyTempRanges": {
-    "title": "Pengukuran Suhu 36.6°C: Rentang Normal",
-    "subtitle": "Apakah 36.6°C normal?",
-    "intro": "36.6°C (97.88°F) berada dalam rentang normal suhu tubuh modern.",
-    "normalHighlight": "✅ SUHU NORMAL<br>36.6°C = 97.88°F",
-    "adultStatus": "Normal",
-    "babyStatus": "Normal",
-    "underArmStatus": "Normal",
-    "ranges": {
-      "adult": "Dewasa",
-      "baby": "Bayi",
-      "underArm": "Ketiak",
-      "normal": "Normal",
-      "fever": "Demam"
-    }
-  },
-  "measurementMethods": {
-    "title": "Metode Pengukuran pada 36.6°C",
-    "intro": "Pembacaan 36.6°C (97.88°F) bervariasi tergantung lokasi pengukuran.",
-    "oral": {
-      "icon": "🌡️",
-      "temp": "36.6°C = 97.88°F",
-      "title": "Mulut",
-      "description": "Pembacaan mulut normal"
-    },
-    "underArm": {
-      "icon": "💪",
-      "temp": "36.6°C = 97.88°F",
-      "title": "Ketiak",
-      "description": "Pengukuran axillary normal"
-    },
-    "ear": {
-      "icon": "👂",
-      "temp": "36.6°C = 97.88°F",
-      "title": "Telinga",
-      "description": "Pembacaan tympanic normal"
-    },
-    "rectal": {
-      "icon": "👶",
-      "temp": "36.6°C = 97.88°F",
-      "title": "Rektal",
-      "description": "Normal untuk bayi"
-    }
-  },
-  "ageGroups": {
-    "title": "Panduan Suhu 36.6°C per Kelompok Usia",
-    "newborn": {
-      "title": "👶 Bayi Baru Lahir (0-3 bulan)",
-      "points": [
-        "36.6°C (97.88°F) berada dalam rentang normal Bayi Baru Lahir",
-        "Bayi baru lahir lebih sedikit mengatur suhu",
-        "Amati pola daripada satu pembacaan",
-        "Hubungi dokter jika terus di bawah 36.0°C"
-      ],
-      "range": "36.4-37.4°C (97.5-99.3°F)"
-    },
-    "infant": {
-      "title": "👶 Balita (3-6 bulan)",
-      "points": [
-        "36.6°C adalah suhu sehat untuk usia ini",
-        "Rentang normal: 36.0-37.5°C",
-        "Pantau pemberian makan dan aktivitas",
-        "Hubungi dokter jika di bawah 35.5°C atau di atas 38°C"
-      ],
-      "range": "36.5-37.5°C (97.7-99.5°F)"
-    },
-    "children": {
-      "title": "🧒 Anak-anak (6 bulan+)",
-      "points": [
-        "36.6°C merupakan suhu normal bagi anak-anak",
-        "Fluktuasi harian sekitar 0.5°C umum",
-        "Rentang menengah sehat",
-        "Perhatikan jika secara konsisten di bawah 35.8°C"
-      ],
-      "range": "36.4-37.2°C (97.5-99°F)"
-    },
-    "adults": {
-      "title": "👨‍🦳 Dewasa",
-      "points": [
-        "36.6°C dalam rentang normal (36.0-37.2°C)",
-        "Kebiasaan siang hari bisa lebih tinggi",
-        "Perbedaan baseline individu 0.3-0.5°C",
-        "Tidak ada kekhawatiran medis"
-      ],
-      "range": "36.1-37.2°C (97-99°F)"
-    }
-  },
-  "temperatureScale": {
-    "title": "Skala Suhu Tubuh: 36.6°C sebagai Standar",
-    "intro": "Bandingkan standar lama dan baru:",
-    "tableHeaders": {
-      "celsius": "Celsius (°C)",
-      "fahrenheit": "Fahrenheit (°F)",
-      "assessment": "Penilaian"
-    },
-    "rows": [
-      {
-        "celsius": "35.5°C",
-        "fahrenheit": "95.9°F",
-        "assessment": "Rendah normal - Pantau"
-      },
-      {
-        "celsius": "36.0°C",
-        "fahrenheit": "96.8°F",
-        "assessment": "Normal - batas bawah"
-      },
-      {
-        "celsius": "36.4°C",
-        "fahrenheit": "97.5°F",
-        "assessment": "Normal - batas bawah"
-      },
-      {
-        "celsius": "36.6°C",
-        "fahrenheit": "97.9°F",
-        "assessment": "Normal - batas bawah disempurnakan"
-      },
-      {
-        "celsius": "37.0°C",
-        "fahrenheit": "98.6°F",
-        "assessment": "Normal - rata-rata klasik"
-      },
-      {
-        "celsius": "37.5°C",
-        "fahrenheit": "99.5°F",
-        "assessment": "Tinggi normal / Demam ringan"
-      },
-      {
-        "celsius": "38.0°C",
-        "fahrenheit": "100.4°F",
-        "assessment": "Ambang batas demam"
-      }
-    ]
-  },
-  "medicalReview": {
-    "title": "Tinjauan medis dan interpretasi",
-    "intro": "Halaman ini dibuat untuk edukasi, bukan diagnosis. Angka {celsius}°C ({fahrenheit}°F) biasanya masih berada dalam rentang suhu tubuh normal, tetapi interpretasinya tetap bergantung pada gejala, usia, waktu pengukuran, dan cara pengukuran.",
-    "guidance": "Panduan ini mengikuti rujukan kesehatan masyarakat yang umum dipakai untuk ambang demam, termasuk batas klinis 38°C (100.4°F). Pengukuran lewat mulut, telinga, rektal, dan ketiak dapat berbeda, jadi angka yang sama tidak selalu berarti hal yang sama pada setiap metode.",
-    "bullets": [
-      "Dewasa: {celsius}°C biasanya merupakan pembacaan normal di kisaran tengah.",
-      "Bayi dan anak-anak: rentang normal sedikit lebih lebar dan lebih bergantung pada metode ukur.",
-      "Ketiak: hasilnya sering lebih rendah dibandingkan pengukuran oral atau rektal."
-    ],
-    "linksIntro": "Untuk konteks yang lebih lengkap, lihat juga",
-    "guideLabel": "Panduan Suhu Tubuh & Demam",
-    "chartLabel": "Bagan Suhu Demam",
-    "note": "Jika ada gejala seperti menggigil, lesu, sesak napas, ruam, dehidrasi, atau perilaku yang tidak biasa, sebaiknya cari bantuan medis daripada mengandalkan satu angka suhu saja."
-  },
-  "faq": {
-    "q1": {
-      "question": "Apakah 36.6°C normal?",
-      "answer": "Ya, 36.6°C berada dalam kisaran normal."
-    },
-    "q2": {
-      "question": "Mengapa ini dianggap normal?",
-      "answer": "Penelitian modern menunjukkan norma yang diperbarui; 36.6°C termasuk di dalamnya."
-    },
-    "q3": {
-      "question": "36.6°C untuk bayi?",
-      "answer": "36.6°C normal untuk bayi; monitor pola."
-    },
-    "q4": {
-      "question": "Apa yang dilakukan jika suhu berfluktuasi?",
-      "answer": "Lacak pola; konsultasikan dengan dokter jika penyimpangan berlanjut."
-    },
-    "q5": {
-      "question": "Mengonversi 36.6°C ke Fahrenheit?",
-      "answer": "36.6 × 9/5 + 32 ≈ 97.9°F"
-    },
-    "q6": {
-      "question": "Kapan harus mencari pertolongan medis?",
-      "answer": "Penyimpangan permanen atau gejala mengkhawatirkan."
-    }
-  },
-  "translationStatus": "pending",
-  "notes": "Struktur sejajar dengan template bahasa Inggris; terjemahan pending untuk bodyTempRanges, measurementMethods, ageGroups, temperatureScale, dan faq. Pastikan rendering placeholder {fahrenheit}, {celsius}, {celsiusNoDecimal}."
+    "meta":  {
+                 "title":  "36.6°C ke Fahrenheit (97.9°F) | Panduan Suhu Tubuh Normal",
+                 "description":  "Ubah 36.6°C ke Fahrenheit (97.9°F). Pelajari apakah 36.6°C normal dan panduan suhu modern untuk semua usia.",
+                 "ogTitle":  "36.6°C ke Fahrenheit – Panduan Suhu Tubuh",
+                 "ogDescription":  "Konversi 36.6°C ke Fahrenheit untuk semua usia."
+             },
+    "conversionFormula":  {
+                              "title":  "Konversi 36.6°C ke Fahrenheit",
+                              "formula":  "(36.6°C × 9/5) + 32 = 97.9°F",
+                              "steps":  [
+                                            "36.6 × 1.8 = 65.88",
+                                            "65.88 + 32 = 97.88",
+                                            "Hasil: 36.6°C ≈ 97.88°F"
+                                        ],
+                              "imageAlt":  "Rumus konversi 36.6°C ke Fahrenheit"
+                          },
+    "bodyTempRanges":  {
+                           "title":  "Pengukuran Suhu 36.6°C: Rentang Normal",
+                           "subtitle":  "Apakah 36.6°C normal?",
+                           "intro":  "36.6°C (97.88°F) berada dalam rentang normal suhu tubuh menurut acuan modern. Ini adalah angka yang umum terlihat pada orang dewasa maupun anak-anak saat kondisi tubuh stabil.",
+                           "normalHighlight":  "✅ SUHU NORMAL\u003cbr\u003e36.6°C = 97.88°F",
+                           "adultStatus":  "Normal\nSuhu sehat di kisaran tengah",
+                           "babyStatus":  "Normal\nUmumnya juga wajar untuk bayi",
+                           "underArmStatus":  "Normal\nMasih wajar untuk pengukuran ketiak",
+                           "ranges":  {
+                                          "adult":  "Dewasa",
+                                          "baby":  "Bayi",
+                                          "underArm":  "Ketiak",
+                                          "normal":  "Normal",
+                                          "fever":  "Demam"
+                                      }
+                       },
+    "measurementMethods":  {
+                               "title":  "Metode Pengukuran pada 36.6°C",
+                               "intro":  "Pembacaan 36.6°C (97.88°F) bervariasi tergantung lokasi pengukuran.",
+                               "oral":  {
+                                            "icon":  "🌡️",
+                                            "temp":  "36.6°C = 97.88°F",
+                                            "title":  "Mulut",
+                                            "description":  "Pembacaan mulut normal"
+                                        },
+                               "underArm":  {
+                                                "icon":  "💪",
+                                                "temp":  "36.6°C = 97.88°F",
+                                                "title":  "Ketiak",
+                                                "description":  "Hasil pengukuran ketiak yang masih normal"
+                                            },
+                               "ear":  {
+                                           "icon":  "👂",
+                                           "temp":  "36.6°C = 97.88°F",
+                                           "title":  "Telinga",
+                                           "description":  "Hasil pengukuran telinga yang masih normal"
+                                       },
+                               "rectal":  {
+                                              "icon":  "👶",
+                                              "temp":  "36.6°C = 97.88°F",
+                                              "title":  "Rektal",
+                                              "description":  "Normal untuk bayi"
+                                          }
+                           },
+    "ageGroups":  {
+                      "title":  "Panduan Suhu 36.6°C per Kelompok Usia",
+                      "newborn":  {
+                                      "title":  "👶 Bayi Baru Lahir (0-3 bulan)",
+                                      "points":  [
+                                                     "36.6°C (97.88°F) berada dalam rentang normal untuk bayi baru lahir",
+                                                     "Bayi baru lahir masih belum stabil dalam mengatur suhu tubuh",
+                                                     "Amati polanya, bukan hanya satu kali pembacaan",
+                                                     "Hubungi dokter jika terus di bawah 36.0°C"
+                                                 ],
+                                      "range":  "36.4-37.4°C (97.5-99.3°F)"
+                                  },
+                      "infant":  {
+                                     "title":  "👶 Bayi (3-6 bulan)",
+                                     "points":  [
+                                                    "36.6°C adalah suhu sehat untuk usia ini",
+                                                    "Rentang normal: 36.0-37.5°C",
+                                                    "Pantau pemberian makan dan aktivitas",
+                                                    "Hubungi dokter jika di bawah 35.5°C atau di atas 38°C"
+                                                ],
+                                     "range":  "36.5-37.5°C (97.7-99.5°F)"
+                                 },
+                      "children":  {
+                                       "title":  "🧒 Anak-anak (6 bulan+)",
+                                       "points":  [
+                                                      "36.6°C merupakan suhu normal bagi anak-anak",
+                                                      "Fluktuasi harian sekitar 0.5°C umum",
+                                                      "Rentang menengah sehat",
+                                                      "Perhatikan jika secara konsisten di bawah 35.8°C"
+                                                  ],
+                                       "range":  "36.4-37.2°C (97.5-99°F)"
+                                   },
+                      "adults":  {
+                                     "title":  "👨‍🦳 Dewasa",
+                                     "points":  [
+                                                    "36.6°C dalam rentang normal (36.0-37.2°C)",
+                                                    "Kebiasaan siang hari bisa lebih tinggi",
+                                                    "Perbedaan baseline individu 0.3-0.5°C",
+                                                    "Tidak ada kekhawatiran medis"
+                                                ],
+                                     "range":  "36.1-37.2°C (97-99°F)"
+                                 }
+                  },
+    "temperatureScale":  {
+                             "title":  "Skala Suhu Tubuh: 36.6°C sebagai Standar",
+                             "intro":  "Bandingkan standar lama 37°C dengan pemahaman modern tentang suhu tubuh normal.",
+                             "tableHeaders":  {
+                                                  "celsius":  "Celsius (°C)",
+                                                  "fahrenheit":  "Fahrenheit (°F)",
+                                                  "assessment":  "Penilaian"
+                                              },
+                             "rows":  [
+                                          {
+                                              "celsius":  "35.5°C",
+                                              "fahrenheit":  "95.9°F",
+                                              "assessment":  "Rendah normal - Pantau"
+                                          },
+                                          {
+                                              "celsius":  "36.0°C",
+                                              "fahrenheit":  "96.8°F",
+                                              "assessment":  "Normal - batas bawah"
+                                          },
+                                          {
+                                              "celsius":  "36.4°C",
+                                              "fahrenheit":  "97.5°F",
+                                              "assessment":  "Normal - batas bawah"
+                                          },
+                                          {
+                                              "celsius":  "36.6°C",
+                                              "fahrenheit":  "97.9°F",
+                                              "assessment":  "Normal - bagian bawah kisaran tengah"
+                                          },
+                                          {
+                                              "celsius":  "37.0°C",
+                                              "fahrenheit":  "98.6°F",
+                                              "assessment":  "Normal - rata-rata klasik"
+                                          },
+                                          {
+                                              "celsius":  "37.5°C",
+                                              "fahrenheit":  "99.5°F",
+                                              "assessment":  "Tinggi normal / Demam ringan"
+                                          },
+                                          {
+                                              "celsius":  "38.0°C",
+                                              "fahrenheit":  "100.4°F",
+                                              "assessment":  "Ambang batas demam"
+                                          }
+                                      ]
+                         },
+    "medicalReview":  {
+                          "title":  "Tinjauan medis dan interpretasi",
+                          "intro":  "Halaman ini dibuat untuk edukasi, bukan diagnosis medis. Angka {celsius}°C ({fahrenheit}°F) biasanya masih berada dalam rentang suhu tubuh normal, tetapi maknanya tetap perlu dilihat bersama gejala, usia, waktu pengukuran, dan metode yang dipakai.",
+                          "guidance":  "Panduan ini mengikuti rujukan kesehatan masyarakat yang umum dipakai untuk ambang demam, termasuk batas klinis 38°C (100.4°F). Pengukuran lewat mulut, telinga, rektal, dan ketiak dapat menghasilkan angka yang berbeda, jadi nilai yang sama tidak selalu berarti hal yang persis sama pada setiap metode.",
+                          "bullets":  [
+                                          "Dewasa: {celsius}°C biasanya merupakan pembacaan normal di kisaran tengah.",
+                                          "Bayi dan anak-anak: rentang normal sedikit lebih lebar dan lebih bergantung pada metode ukur.",
+                                          "Ketiak: hasilnya sering lebih rendah dibandingkan pengukuran oral atau rektal."
+                                      ],
+                          "linksIntro":  "Untuk konteks yang lebih lengkap, lihat juga",
+                          "guideLabel":  "Panduan Suhu Tubuh \u0026 Demam",
+                          "chartLabel":  "Bagan Suhu Demam",
+                          "note":  "Jika ada gejala seperti menggigil, lesu, sesak napas, ruam, dehidrasi, atau perilaku yang tidak biasa, sebaiknya cari bantuan medis daripada mengandalkan satu angka suhu saja."
+                      },
+    "faq":  {
+                "q1":  {
+                           "question":  "Apakah 36.6°C normal?",
+                           "answer":  "Ya, 36.6°C berada dalam kisaran normal suhu tubuh. Bagi kebanyakan orang dewasa, angka ini dianggap wajar dan tidak menunjukkan demam."
+                       },
+                "q2":  {
+                           "question":  "Mengapa ini dianggap normal?",
+                           "answer":  "Karena penelitian modern menunjukkan bahwa suhu tubuh normal tidak selalu tepat 37°C. Rentang normal cukup luas, dan 36.6°C termasuk jelas di dalamnya."
+                       },
+                "q3":  {
+                           "question":  "36.6°C untuk bayi?",
+                           "answer":  "Ya, 36.6°C biasanya juga normal untuk bayi, terutama jika bayi terlihat nyaman, aktif, dan tidak menunjukkan gejala lain yang mengkhawatirkan."
+                       },
+                "q4":  {
+                           "question":  "Apa yang dilakukan jika suhu berfluktuasi?",
+                           "answer":  "Perubahan kecil di sekitar 36.6°C biasanya normal sepanjang hari. Pantau polanya, dan konsultasikan dengan tenaga medis jika suhu terus menyimpang atau disertai gejala lain."
+                       },
+                "q5":  {
+                           "question":  "Mengonversi 36.6°C ke Fahrenheit?",
+                           "answer":  "Gunakan rumus: °F = (°C × 9/5) + 32. Untuk 36.6°C, hasilnya adalah 97.88°F dan biasanya dibulatkan menjadi 97.9°F."
+                       },
+                "q6":  {
+                           "question":  "Kapan harus mencari pertolongan medis?",
+                           "answer":  "Cari bantuan medis jika suhu terus naik atau turun tidak biasa, atau jika muncul gejala seperti lemas berat, sesak napas, kebingungan, atau tanda infeksi. Nilai 36.6°C saja biasanya tidak mengkhawatirkan."
+                       }
+            },
+    "translationStatus":  "reviewed",
+    "notes":  "Bagian utama terkait suhu tubuh untuk locale ini sudah dilokalkan dan ditinjau. Pastikan placeholder {fahrenheit}, {celsius}, dan {celsiusNoDecimal} dirender dengan benar."
 }
