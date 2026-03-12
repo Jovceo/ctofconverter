@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "21 °C a Fahrenheit (69,8 °F): confort interior y descanso",
+    "description": "Convierte 21 °C a 69,8 °F y revisa si esta temperatura funciona bien para casa, oficina o dormitorio."
+  },
+  "header": {
+    "title": "21 °C a Fahrenheit (69,8 °F)",
+    "tagline": "Herramienta gratuita para convertir 21 °C a 69,8 °F y valorar si la temperatura es cómoda para trabajar, estudiar o dormir."
+  },
+  "conversion": {
+    "intro": "21 °C en Fahrenheit son 69,8 °F."
+  },
+  "strategy": {
+    "keywords": "Convierte 21 °C a 69,8 °F y revisa si esta temperatura funciona bien para casa, oficina o dormitorio."
+  },
+  "comfortGuide": {
+    "title": "Guía de confort interior para 21 °C",
+    "subtitle": "¿Mejor para casa, oficina o descanso?",
+    "intro": "21 °C (69,8 °F) suele estar dentro del rango cómodo para interiores y se percibe bastante equilibrado.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Todavía pide una capa ligera"
+      },
+      "moderate": {
+        "label": "Cómodo",
+        "value": "18-23°C",
+        "desc": "64-73.4°F<br>Zona cómoda para interior"
+      },
+      "warm": {
+        "label": "Cálido",
+        "value": "24-29°C",
+        "desc": "75.2-84.2°F<br>Empieza a sentirse más cálido"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensación",
+        "typicalUse": "Uso habitual"
+      },
+      "rows": [
+        {
+          "href": "/10-c-to-f.html",
+          "temp": "10°C (50°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/18-c-to-f.html",
+          "temp": "18°C (64.4°F)",
+          "desc": "Fresco",
+          "use": "Mañanas y tardes frescas"
+        },
+        {
+          "highlight": true,
+          "temp": "21°C (69.8°F)",
+          "desc": "Cómodo",
+          "use": "Interior cómodo para la mayoría"
+        },
+        {
+          "href": "/25-c-to-f",
+          "temp": "25°C (77°F)",
+          "desc": "Cálido agradable",
+          "use": "Día de verano suave"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Comparación con el cuerpo humano"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> en ambientes secos 21 °C suele sentirse neutro; con humedad alta, la misma cifra puede parecer más cálida."
+  },
+  "faq": [
+    {
+      "question": "¿21 °C se siente frío o calor?",
+      "answerHtml": "<p>21 °C (69,8 °F) suele sentirse cómodo, no especialmente frío ni caluroso.</p>"
+    },
+    {
+      "question": "¿Cómo convierto 21 °C a Fahrenheit?",
+      "answerHtml": "<p>La fórmula es: °F = (°C × 9/5) + 32. Si multiplicas 21 por 1,8 obtienes 37,8; al sumar 32 llegas a 69,8 °F.</p>"
+    },
+    {
+      "question": "¿21 °C va bien para casa u oficina?",
+      "answerHtml": "<p>21 °C suele funcionar bien para teletrabajo, oficina y estudio.</p>"
+    },
+    {
+      "question": "¿Qué ropa conviene con 21 °C?",
+      "answerHtml": "<p>Lo normal es vestir ropa diaria ligera y cómoda:</p><ul><li>Camiseta o manga larga fina</li><li>Pantalón ligero, vaqueros o falda</li><li>Chaqueta fina para interiores con aire</li></ul>"
+    },
+    {
+      "question": "¿21 °C se siente igual en interior seco que en costa húmeda?",
+      "answerHtml": "<p>En interior seco 21 °C suele sentirse equilibrado; en zonas húmedas puede dar una sensación algo más cálida.</p>"
+    },
+    {
+      "question": "¿21 °C es fiebre?",
+      "answerHtml": "<p>No. La fiebre humana suele empezar cerca de 38 °C. Si 21 °C fuera temperatura corporal, estaría muy por debajo de lo normal.</p>"
+    }
+  ]
+}

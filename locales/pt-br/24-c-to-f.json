@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "24°C para 75,2°F: sensação térmica, clima e roupa",
+    "description": "Converta 24°C para 75,2°F e entenda como essa faixa se sente no dia a dia, com clima agradável e roupa leve."
+  },
+  "header": {
+    "title": "24°C para 75,2°F",
+    "tagline": "Ferramenta gratuita para converter 24°C em 75,2°F com contexto de clima, sensação térmica e escolha de roupa."
+  },
+  "conversion": {
+    "intro": "24°C equivalem a 75,2°F."
+  },
+  "strategy": {
+    "keywords": "Converta 24°C para 75,2°F e entenda como essa faixa se sente no dia a dia, com clima agradável e roupa leve."
+  },
+  "comfortGuide": {
+    "title": "Guia de sensação térmica para 24°C",
+    "subtitle": "Parece clima agradável ou já fica quente?",
+    "intro": "24°C (75,2°F) já passa da temperatura ambiente neutra e tende ao morno. Ao ar livre é agradável; em locais fechados pode parecer um pouco quente.",
+    "chart": {
+      "cold": {
+        "label": "Mais fresco",
+        "value": "15-19°C",
+        "desc": "59-66.2°F<br>Manhã mais fresca"
+      },
+      "moderate": {
+        "label": "Confortável",
+        "value": "20-24°C",
+        "desc": "68-75.2°F<br>Boa temperatura para sair"
+      },
+      "warm": {
+        "label": "Mais quente",
+        "value": "25-31°C",
+        "desc": "77-87.8°F<br>Mais quente no meio do dia"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensação",
+        "typicalUse": "Uso típico"
+      },
+      "rows": [
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Temperatura ambiente",
+          "use": "Casa e escritório"
+        },
+        {
+          "href": "/22-c-to-f",
+          "temp": "22°C (71.6°F)",
+          "desc": "Confortável",
+          "use": "Trabalho e descanso"
+        },
+        {
+          "highlight": true,
+          "temp": "24°C (75.2°F)",
+          "desc": "Morno",
+          "use": "Passeio e roupa leve"
+        },
+        {
+          "href": "/26-c-to-f",
+          "temp": "26°C (78.8°F)",
+          "desc": "Quente agradável",
+          "use": "Dia de verão"
+        },
+        {
+          "href": "/28-c-to-f.html",
+          "temp": "28°C (82.4°F)",
+          "desc": "Quente",
+          "use": "Água e sombra ajudam"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Comparação com o corpo humano"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> com 24°C, sol, sombra, vento e umidade fazem bastante diferença na sensação final."
+  },
+  "faq": [
+    {
+      "question": "24°C é frio ou calor?",
+      "answerHtml": "<p>24°C (75,2°F) tende a parecer agradável para sair, com uma sensação levemente morna.</p>"
+    },
+    {
+      "question": "Como converter 24°C para Fahrenheit?",
+      "answerHtml": "<p>A fórmula é: °F = (°C × 9/5) + 32. 24 vezes 1,8 dá 43,2; somando 32, o resultado é 75,2°F.</p>"
+    },
+    {
+      "question": "24°C é bom para atividades ao ar livre?",
+      "answerHtml": "<p>24°C costuma ser bom para caminhar, correr leve, ir ao parque ou ficar em áreas externas.</p>"
+    },
+    {
+      "question": "O que vestir com 24°C?",
+      "answerHtml": "<p>Nessa faixa, roupas leves e confortáveis funcionam melhor:</p><ul><li>Camiseta, camisa leve ou vestido confortável</li><li>Tecidos leves e respiráveis</li><li>Camada fina para fim de tarde</li></ul>"
+    },
+    {
+      "question": "24°C muda muito entre sol e sombra?",
+      "answerHtml": "<p>No sol, 24°C pode parecer bem mais quente; na sombra ou com vento, o clima fica bem mais agradável.</p>"
+    },
+    {
+      "question": "24°C é febre?",
+      "answerHtml": "<p>Não. Febre normalmente começa perto de 38°C. Se 24°C fosse temperatura corporal, estaria muito abaixo do normal.</p>"
+    }
+  ]
+}

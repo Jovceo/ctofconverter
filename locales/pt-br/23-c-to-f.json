@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "23°C para 73,4°F: sensação térmica, clima e roupa",
+    "description": "Converta 23°C para 73,4°F e entenda como essa faixa se sente no dia a dia, com clima agradável e roupa leve."
+  },
+  "header": {
+    "title": "23°C para 73,4°F",
+    "tagline": "Ferramenta gratuita para converter 23°C em 73,4°F com contexto de clima, sensação térmica e escolha de roupa."
+  },
+  "conversion": {
+    "intro": "23°C equivalem a 73,4°F."
+  },
+  "strategy": {
+    "keywords": "Converta 23°C para 73,4°F e entenda como essa faixa se sente no dia a dia, com clima agradável e roupa leve."
+  },
+  "comfortGuide": {
+    "title": "Guia de sensação térmica para 23°C",
+    "subtitle": "Parece clima agradável ou já fica quente?",
+    "intro": "23°C (73,4°F) já passa da temperatura ambiente neutra e tende ao morno. Ao ar livre é agradável; em locais fechados pode parecer um pouco quente.",
+    "chart": {
+      "cold": {
+        "label": "Mais fresco",
+        "value": "14-18°C",
+        "desc": "57.2-64.4°F<br>Manhã mais fresca"
+      },
+      "moderate": {
+        "label": "Confortável",
+        "value": "20-23°C",
+        "desc": "68-73.4°F<br>Boa temperatura para sair"
+      },
+      "warm": {
+        "label": "Mais quente",
+        "value": "24-30°C",
+        "desc": "75.2-86°F<br>Mais quente no meio do dia"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensação",
+        "typicalUse": "Uso típico"
+      },
+      "rows": [
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Temperatura ambiente",
+          "use": "Casa e escritório"
+        },
+        {
+          "href": "/22-c-to-f",
+          "temp": "22°C (71.6°F)",
+          "desc": "Confortável",
+          "use": "Trabalho e descanso"
+        },
+        {
+          "highlight": true,
+          "temp": "23°C (73.4°F)",
+          "desc": "Morno",
+          "use": "Passeio e roupa leve"
+        },
+        {
+          "href": "/26-c-to-f",
+          "temp": "26°C (78.8°F)",
+          "desc": "Quente agradável",
+          "use": "Dia de verão"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Quente",
+          "use": "Água e sombra ajudam"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Comparação com o corpo humano"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> com 23°C, sol, sombra, vento e umidade fazem bastante diferença na sensação final."
+  },
+  "faq": [
+    {
+      "question": "23°C é frio ou calor?",
+      "answerHtml": "<p>23°C (73,4°F) tende a parecer agradável para sair, com uma sensação levemente morna.</p>"
+    },
+    {
+      "question": "Como converter 23°C para Fahrenheit?",
+      "answerHtml": "<p>A fórmula é: °F = (°C × 9/5) + 32. 23 vezes 1,8 dá 41,4; somando 32, o resultado é 73,4°F.</p>"
+    },
+    {
+      "question": "23°C lembra clima de primavera ou outono?",
+      "answerHtml": "<p>Em muitas cidades do Brasil, 23°C lembra um dia agradável de outono ou primavera.</p>"
+    },
+    {
+      "question": "O que vestir com 23°C?",
+      "answerHtml": "<p>Nessa faixa, roupas leves e confortáveis funcionam melhor:</p><ul><li>Camiseta, camisa leve ou vestido confortável</li><li>Tecidos leves e respiráveis</li><li>Camada fina para fim de tarde</li></ul>"
+    },
+    {
+      "question": "23°C muda muito entre sol e sombra?",
+      "answerHtml": "<p>No sol, 23°C pode parecer bem mais quente; na sombra ou com vento, o clima fica bem mais agradável.</p>"
+    },
+    {
+      "question": "23°C é febre?",
+      "answerHtml": "<p>Não. Febre normalmente começa perto de 38°C. Se 23°C fosse temperatura corporal, estaria muito abaixo do normal.</p>"
+    }
+  ]
+}

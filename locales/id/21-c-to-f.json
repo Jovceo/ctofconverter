@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "21°C ke 69,8°F: suhu ruangan, kerja, dan tidur",
+    "description": "Ubah 21°C ke 69,8°F dan lihat apakah suhu ini nyaman untuk rumah, kantor, atau kamar tidur."
+  },
+  "header": {
+    "title": "21°C ke 69,8°F",
+    "tagline": "Konverter gratis untuk mengubah 21°C ke 69,8°F sambil menilai apakah suhu ini nyaman untuk bekerja, belajar, atau tidur."
+  },
+  "conversion": {
+    "intro": "21°C sama dengan 69,8°F."
+  },
+  "strategy": {
+    "keywords": "Ubah 21°C ke 69,8°F dan lihat apakah suhu ini nyaman untuk rumah, kantor, atau kamar tidur."
+  },
+  "comfortGuide": {
+    "title": "Panduan kenyamanan indoor untuk 21°C",
+    "subtitle": "Lebih cocok untuk kerja, rumah, atau tidur?",
+    "intro": "21°C (69,8°F) biasanya masuk rentang suhu ruangan yang nyaman. Di rumah atau kantor, banyak orang merasa suhu ini stabil dan mudah diterima.",
+    "chart": {
+      "cold": {
+        "label": "Lebih sejuk",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Lapisan tipis masih berguna"
+      },
+      "moderate": {
+        "label": "Nyaman",
+        "value": "18-23°C",
+        "desc": "64-73.4°F<br>Nyaman untuk dalam ruang"
+      },
+      "warm": {
+        "label": "Lebih hangat",
+        "value": "24-29°C",
+        "desc": "75.2-84.2°F<br>Mulai terasa lebih hangat"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Suhu",
+        "description": "Kesan",
+        "typicalUse": "Penggunaan umum"
+      },
+      "rows": [
+        {
+          "href": "/10-c-to-f.html",
+          "temp": "10°C (50°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/18-c-to-f.html",
+          "temp": "18°C (64.4°F)",
+          "desc": "Sejuk",
+          "use": "Cuaca santai dengan lapisan tipis"
+        },
+        {
+          "highlight": true,
+          "temp": "21°C (69.8°F)",
+          "desc": "Nyaman",
+          "use": "Kerja dan belajar nyaman"
+        },
+        {
+          "href": "/25-c-to-f",
+          "temp": "25°C (77°F)",
+          "desc": "Hangat dan enak",
+          "use": "Cuaca hangat khas tropis"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Panas",
+          "use": "Perlu air dan tempat teduh"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Suhu tubuh normal",
+          "use": "Pembanding suhu tubuh"
+        }
+      ]
+    },
+    "note": "<strong>Catatan:</strong> di ruangan kering 21°C bisa terasa netral, sedangkan di kota lembap suhu yang sama bisa terasa lebih hangat."
+  },
+  "faq": [
+    {
+      "question": "Apakah 21°C terasa dingin atau panas?",
+      "answerHtml": "<p>21°C (69,8°F) biasanya terasa nyaman, tidak dingin dan tidak terlalu panas.</p>"
+    },
+    {
+      "question": "Bagaimana cara mengubah 21°C ke Fahrenheit?",
+      "answerHtml": "<p>Rumusnya adalah: °F = (°C × 9/5) + 32. 21 dikali 1,8 menghasilkan 37,8, lalu ditambah 32 menjadi 69,8°F.</p>"
+    },
+    {
+      "question": "Apakah 21°C cocok untuk kantor atau belajar?",
+      "answerHtml": "<p>21°C cukup nyaman untuk bekerja, belajar, atau aktivitas indoor yang tenang.</p>"
+    },
+    {
+      "question": "Pakaian apa yang cocok pada 21°C?",
+      "answerHtml": "<p>Biasanya cukup pakaian harian yang ringan:</p><ul><li>Kaos atau atasan lengan panjang tipis</li><li>Celana ringan atau pakaian kasual</li><li>Lapisan tipis untuk ruang ber-AC</li></ul>"
+    },
+    {
+      "question": "Apakah 21°C terasa sama di ruang ber-AC dan di kota lembap?",
+      "answerHtml": "<p>Di ruang ber-AC, 21°C bisa terasa netral; di kota tropis yang lembap, suhu yang sama bisa terasa lebih hangat.</p>"
+    },
+    {
+      "question": "Apakah 21°C termasuk demam?",
+      "answerHtml": "<p>Tidak. Demam biasanya mulai mendekati 38°C. Jika 21°C adalah suhu tubuh, nilainya justru jauh di bawah normal.</p>"
+    }
+  ]
+}

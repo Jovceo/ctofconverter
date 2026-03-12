@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "24°C in Fahrenheit (75,2°F): Gefühlte Temperatur, Wetter und Kleidung",
+    "description": "Wandle 24°C in 75,2°F um und verstehe, wie sich diese Temperatur draußen und im Alltag anfühlt."
+  },
+  "header": {
+    "title": "24°C in Fahrenheit (75,2°F)",
+    "tagline": "Kostenloser Umrechner für 24°C zu 75,2°F mit alltagsnaher Einschätzung zu Wettergefühl, Kleidung und Innenraumkomfort."
+  },
+  "conversion": {
+    "intro": "24°C entsprechen 75,2°F."
+  },
+  "strategy": {
+    "keywords": "Wandle 24°C in 75,2°F um und verstehe, wie sich diese Temperatur draußen und im Alltag anfühlt."
+  },
+  "comfortGuide": {
+    "title": "Gefühlte-Temperatur-Guide für 24°C",
+    "subtitle": "Angenehm mild oder schon spürbar warm?",
+    "intro": "24°C (75,2°F) fühlen sich bereits etwas wärmer als klassische Raumtemperatur an. Draußen oft angenehm, drinnen bei wenig Bewegung leicht warm.",
+    "chart": {
+      "cold": {
+        "label": "Kühler",
+        "value": "15-19°C",
+        "desc": "59-66.2°F<br>Morgens frischer"
+      },
+      "moderate": {
+        "label": "Angenehm",
+        "value": "20-24°C",
+        "desc": "68-75.2°F<br>Gut für draußen"
+      },
+      "warm": {
+        "label": "Wärmer",
+        "value": "25-31°C",
+        "desc": "77-87.8°F<br>Mittags etwas wärmer"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatur",
+        "description": "Eindruck",
+        "typicalUse": "Typischer Einsatz"
+      },
+      "rows": [
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Normale Raumtemperatur",
+          "use": "Wohnung und Büro"
+        },
+        {
+          "href": "/22-c-to-f",
+          "temp": "22°C (71.6°F)",
+          "desc": "Angenehm",
+          "use": "Gut für ruhige Tätigkeiten"
+        },
+        {
+          "highlight": true,
+          "temp": "24°C (75.2°F)",
+          "desc": "Mild bis warm",
+          "use": "Spaziergang und leichte Kleidung"
+        },
+        {
+          "href": "/26-c-to-f",
+          "temp": "26°C (78.8°F)",
+          "desc": "Sommerlich warm",
+          "use": "Sommerlicher Alltag"
+        },
+        {
+          "href": "/28-c-to-f.html",
+          "temp": "28°C (82.4°F)",
+          "desc": "Heiß",
+          "use": "Schatten und Wasser wichtig"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Normale Körpertemperatur",
+          "use": "Vergleich zur Körpertemperatur"
+        }
+      ]
+    },
+    "note": "<strong>Hinweis:</strong> Bei 24°C verändern Sonne, Schatten und Wind das Empfinden stark."
+  },
+  "faq": [
+    {
+      "question": "Sind 24°C eher kalt oder warm?",
+      "answerHtml": "<p>24°C (75,2°F) wirken meist mild bis leicht warm.</p>"
+    },
+    {
+      "question": "Wie rechnet man 24°C in Fahrenheit um?",
+      "answerHtml": "<p>Die Formel lautet: °F = (°C × 9/5) + 32. 24 mal 1,8 ergibt 43,2; plus 32 sind es 75,2°F.</p>"
+    },
+    {
+      "question": "Sind 24°C gut für Aktivitäten draußen?",
+      "answerHtml": "<p>24°C sind häufig gut für Spaziergänge, Radfahren oder Cafébesuche im Freien geeignet.</p>"
+    },
+    {
+      "question": "Was trägt man bei 24°C?",
+      "answerHtml": "<p>Bei dieser Temperatur funktionieren lockere, leichte Sachen gut:</p><ul><li>T-Shirt, Hemd oder leichte Bluse</li><li>Leichte Hose oder Rock</li><li>Dünne Jacke für Abend oder Wind</li></ul>"
+    },
+    {
+      "question": "Machen Sonne und Schatten bei 24°C einen großen Unterschied?",
+      "answerHtml": "<p>Ja. In der Sonne können 24°C deutlich wärmer wirken, während Schatten und Wind das Empfinden schnell wieder abmildern.</p>"
+    },
+    {
+      "question": "Sind 24°C Fieber?",
+      "answerHtml": "<p>Nein. Fieber beginnt meist erst in der Nähe von 38°C. Als Körpertemperatur wäre 24°C deutlich zu niedrig.</p>"
+    }
+  ]
+}

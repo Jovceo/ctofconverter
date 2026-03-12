@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "25°C para 77°F: calor leve, ar-condicionado e verão",
+    "description": "Converta 25°C para 77°F e descubra se essa temperatura combina com verão, ar-condicionado e atividades ao ar livre."
+  },
+  "header": {
+    "title": "25°C para 77°F",
+    "tagline": "Ferramenta gratuita para converter 25°C em 77°F com orientação prática sobre calor, roupas leves e uso de ar-condicionado."
+  },
+  "conversion": {
+    "intro": "25°C equivalem a 77°F."
+  },
+  "strategy": {
+    "keywords": "Converta 25°C para 77°F e descubra se essa temperatura combina com verão, ar-condicionado e atividades ao ar livre."
+  },
+  "comfortGuide": {
+    "title": "Guia de calor leve para 25°C",
+    "subtitle": "É um calor confortável de verão ou já pede refrigeração?",
+    "intro": "25°C (77°F) já tem cara de dia quente. Com roupa leve costuma ser tranquilo, mas em ambientes fechados muita gente prefere ventilador ou ar-condicionado.",
+    "chart": {
+      "cold": {
+        "label": "Mais fresco",
+        "value": "15-19°C",
+        "desc": "59-66.2°F<br>Melhor com um pouco de vento"
+      },
+      "moderate": {
+        "label": "Confortável",
+        "value": "20-24°C",
+        "desc": "68-75.2°F<br>Ainda dá para levar"
+      },
+      "warm": {
+        "label": "Mais quente",
+        "value": "25-28°C",
+        "desc": "77-82.4°F<br>Calor leve de verão"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensação",
+        "typicalUse": "Uso típico"
+      },
+      "rows": [
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Temperatura ambiente",
+          "use": "Casa e escritório"
+        },
+        {
+          "href": "/22-c-to-f",
+          "temp": "22°C (71.6°F)",
+          "desc": "Confortável",
+          "use": "Trabalho e descanso"
+        },
+        {
+          "highlight": true,
+          "temp": "25°C (77°F)",
+          "desc": "Quente agradável",
+          "use": "Dia de verão"
+        },
+        {
+          "href": "/26-c-to-f",
+          "temp": "26°C (78.8°F)",
+          "desc": "Quente agradável",
+          "use": "Dia de verão"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Quente",
+          "use": "Água e sombra ajudam"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Comparação com o corpo humano"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 25°C pode ser agradável na rua com vento, mas dentro de casa, sem ventilação, a sensação sobe rápido."
+  },
+  "faq": [
+    {
+      "question": "25°C é frio ou calor?",
+      "answerHtml": "<p>25°C (77°F) já entra na faixa de dia quente.</p>"
+    },
+    {
+      "question": "Como converter 25°C para Fahrenheit?",
+      "answerHtml": "<p>A fórmula é: °F = (°C × 9/5) + 32. 25 vezes 1,8 dá 45; somando 32, o resultado é 77°F.</p>"
+    },
+    {
+      "question": "25°C combina com piscina ou praia?",
+      "answerHtml": "<p>25°C combina bem com piscina, praia ou passeio ao ar livre.</p>"
+    },
+    {
+      "question": "O que vestir com 25°C?",
+      "answerHtml": "<p>Aqui já vale apostar em peças mais frescas:</p><ul><li>Roupa leve e fresca</li><li>Short, saia ou tecido fino</li><li>Boné, água e proteção solar</li></ul>"
+    },
+    {
+      "question": "25°C costuma ser mais fácil na rua do que dentro de casa?",
+      "answerHtml": "<p>Com vento, 25°C na rua pode ser suportável; em casa sem ventilação, a sensação térmica sobe bastante.</p>"
+    },
+    {
+      "question": "25°C é febre?",
+      "answerHtml": "<p>Não. Febre normalmente começa perto de 38°C. Se 25°C fosse temperatura corporal, estaria muito abaixo do normal.</p>"
+    }
+  ]
+}

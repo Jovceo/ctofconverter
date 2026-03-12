@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "25 °C a Fahrenheit (77 °F): calor suave, aire acondicionado y verano",
+    "description": "Convierte 25 °C a 77 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
+  },
+  "header": {
+    "title": "25 °C a Fahrenheit (77 °F)",
+    "tagline": "Herramienta gratuita para convertir 25 °C a 77 °F con consejos sobre calor suave, aire acondicionado y ropa ligera."
+  },
+  "conversion": {
+    "intro": "25 °C en Fahrenheit son 77 °F."
+  },
+  "strategy": {
+    "keywords": "Convierte 25 °C a 77 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
+  },
+  "comfortGuide": {
+    "title": "Guía de calor suave para 25 °C",
+    "subtitle": "¿Es calor agradable o una temperatura para enfriar?",
+    "intro": "25 °C (77 °F) ya transmite sensación de verano. Con ropa ligera suele ir bien, aunque en interiores cerrados apetece más ventilación.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "15-19°C",
+        "desc": "59-66.2°F<br>Mejor con brisa"
+      },
+      "moderate": {
+        "label": "Cómodo",
+        "value": "20-24°C",
+        "desc": "68-75.2°F<br>Todavía manejable"
+      },
+      "warm": {
+        "label": "Cálido",
+        "value": "25-28°C",
+        "desc": "77-82.4°F<br>Calor suave de verano"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensación",
+        "typicalUse": "Uso habitual"
+      },
+      "rows": [
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Temperatura ambiente",
+          "use": "Casa, oficina o estudio"
+        },
+        {
+          "href": "/22-c-to-f",
+          "temp": "22°C (71.6°F)",
+          "desc": "Cómodo",
+          "use": "Interior cómodo para la mayoría"
+        },
+        {
+          "highlight": true,
+          "temp": "25°C (77°F)",
+          "desc": "Cálido agradable",
+          "use": "Día de verano suave"
+        },
+        {
+          "href": "/26-c-to-f",
+          "temp": "26°C (78.8°F)",
+          "desc": "Cálido agradable",
+          "use": "Día de verano suave"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Comparación con el cuerpo humano"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 25 °C puede sentirse bien con brisa, pero en un piso cerrado suele parecer bastante más cálido."
+  },
+  "faq": [
+    {
+      "question": "¿25 °C se siente frío o calor?",
+      "answerHtml": "<p>25 °C (77 °F) ya encaja con un día cálido de verano.</p>"
+    },
+    {
+      "question": "¿Cómo convierto 25 °C a Fahrenheit?",
+      "answerHtml": "<p>La fórmula es: °F = (°C × 9/5) + 32. Si multiplicas 25 por 1,8 obtienes 45; al sumar 32 llegas a 77 °F.</p>"
+    },
+    {
+      "question": "¿25 °C es agradable para piscina o playa?",
+      "answerHtml": "<p>25 °C encaja bien con planes de piscina, playa o paseo marítimo.</p>"
+    },
+    {
+      "question": "¿Qué ropa conviene con 25 °C?",
+      "answerHtml": "<p>Con esta temperatura suele bastar ropa fresca y transpirable:</p><ul><li>Camiseta, vestido ligero o ropa fresca</li><li>Pantalón corto o tejidos muy transpirables</li><li>Gafas de sol, gorra y protección solar</li></ul>"
+    },
+    {
+      "question": "¿25 °C se lleva mejor en la calle que dentro de casa?",
+      "answerHtml": "<p>Con algo de brisa, 25 °C al aire libre puede resultar agradable; en un piso cerrado suele sentirse más pesado.</p>"
+    },
+    {
+      "question": "¿25 °C es fiebre?",
+      "answerHtml": "<p>No. La fiebre humana suele empezar cerca de 38 °C. Si 25 °C fuera temperatura corporal, estaría muy por debajo de lo normal.</p>"
+    }
+  ]
+}

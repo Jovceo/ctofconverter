@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "21°C in Fahrenheit (69,8°F): Raumtemperatur, Arbeit und Schlaf",
+    "description": "Wandle 21°C in 69,8°F um und prüfe, ob diese Temperatur für Wohnung, Büro oder Schlafzimmer angenehm ist."
+  },
+  "header": {
+    "title": "21°C in Fahrenheit (69,8°F)",
+    "tagline": "Kostenloser Umrechner für 21°C zu 69,8°F mit Einordnung, ob die Temperatur für Wohnen, Arbeiten oder Schlafen angenehm ist."
+  },
+  "conversion": {
+    "intro": "21°C entsprechen 69,8°F."
+  },
+  "strategy": {
+    "keywords": "Wandle 21°C in 69,8°F um und prüfe, ob diese Temperatur für Wohnung, Büro oder Schlafzimmer angenehm ist."
+  },
+  "comfortGuide": {
+    "title": "Komfort-Guide für 21°C innen",
+    "subtitle": "Eher ideal für Wohnung, Büro oder Schlafzimmer?",
+    "intro": "21°C (69,8°F) liegen oft im angenehmen Bereich für Innenräume. Viele empfinden diese Temperatur als ausgewogen und leicht nutzbar.",
+    "chart": {
+      "cold": {
+        "label": "Kühler",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Leichte Schicht bleibt sinnvoll"
+      },
+      "moderate": {
+        "label": "Angenehm",
+        "value": "18-23°C",
+        "desc": "64-73.4°F<br>Angenehm für Innenräume"
+      },
+      "warm": {
+        "label": "Wärmer",
+        "value": "24-29°C",
+        "desc": "75.2-84.2°F<br>Wird langsam wärmer"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatur",
+        "description": "Eindruck",
+        "typicalUse": "Typischer Einsatz"
+      },
+      "rows": [
+        {
+          "href": "/10-c-to-f.html",
+          "temp": "10°C (50°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "href": "/18-c-to-f.html",
+          "temp": "18°C (64.4°F)",
+          "desc": "Kühl",
+          "use": "Frische Morgen- oder Abendluft"
+        },
+        {
+          "highlight": true,
+          "temp": "21°C (69.8°F)",
+          "desc": "Angenehm",
+          "use": "Gut für ruhige Tätigkeiten"
+        },
+        {
+          "href": "/25-c-to-f",
+          "temp": "25°C (77°F)",
+          "desc": "Sommerlich warm",
+          "use": "Sommerlicher Alltag"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Heiß",
+          "use": "Schatten und Wasser wichtig"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Normale Körpertemperatur",
+          "use": "Vergleich zur Körpertemperatur"
+        }
+      ]
+    },
+    "note": "<strong>Hinweis:</strong> In trockenen Räumen wirken 21°C oft neutral, bei höherer Luftfeuchtigkeit können sie deutlich wärmer erscheinen."
+  },
+  "faq": [
+    {
+      "question": "Sind 21°C eher kalt oder warm?",
+      "answerHtml": "<p>21°C (69,8°F) gelten meist als angenehm und weder deutlich kalt noch heiß.</p>"
+    },
+    {
+      "question": "Wie rechnet man 21°C in Fahrenheit um?",
+      "answerHtml": "<p>Die Formel lautet: °F = (°C × 9/5) + 32. 21 mal 1,8 ergibt 37,8; plus 32 sind es 69,8°F.</p>"
+    },
+    {
+      "question": "Sind 21°C gut für Büro oder Homeoffice?",
+      "answerHtml": "<p>21°C passen oft gut zu Büroarbeit, Lernen und ruhigen Innenräumen.</p>"
+    },
+    {
+      "question": "Was trägt man bei 21°C?",
+      "answerHtml": "<p>Meist reicht leichte Alltagskleidung:</p><ul><li>T-Shirt oder dünnes Langarmshirt</li><li>Jeans oder leichte Hose</li><li>Leichte Schicht für klimatisierte Räume</li></ul>"
+    },
+    {
+      "question": "Fühlen sich 21°C in trockener Luft anders an als in feuchter Wohnungsluft?",
+      "answerHtml": "<p>In trockener Luft wirken 21°C oft neutraler, bei hoher Luftfeuchtigkeit dagegen spürbar wärmer.</p>"
+    },
+    {
+      "question": "Sind 21°C Fieber?",
+      "answerHtml": "<p>Nein. Fieber beginnt meist erst in der Nähe von 38°C. Als Körpertemperatur wäre 21°C deutlich zu niedrig.</p>"
+    }
+  ]
+}

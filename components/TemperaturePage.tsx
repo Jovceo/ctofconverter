@@ -40,6 +40,7 @@ type TFunction = (key: string, replacements?: Record<string, string | number>) =
  * Temperature page props
  */
 export interface TemperaturePageProps {
+  alternateLocales?: string[];
   celsius: number;
   canonicalUrl?: string;
   lastUpdated?: string;
@@ -742,7 +743,8 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   customSections,
   disableSmartFaqs = false,
   showEditorialNote = true,
-  customOgImage
+  customOgImage,
+  alternateLocales
 }) => {
   const { t: tTemplate, locale } = useTranslation('template');
   const { t: tPage } = useTranslation(customNamespace);
@@ -863,6 +865,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
 
   // SEO: Generate explicit alternates for Layout to render
   const alternates = useMemo(() => {
+    const locales = alternateLocales && alternateLocales.length > 0 ? alternateLocales : SUPPORTED_LOCALES;
     // Add x-default (pointing to English/Default URL)
     const links = [
       {
@@ -871,7 +874,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
       }
     ];
 
-    SUPPORTED_LOCALES.forEach(l => {
+    locales.forEach(l => {
       links.push({
         href: generatePageUrl(celsius, l),
         hreflang: HREFLANG_MAP[l] || l
@@ -879,7 +882,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
     });
 
     return links;
-  }, [celsius]);
+  }, [alternateLocales, celsius]);
 
   // Granular analysis box helper
   const renderGranularInsight = () => {

@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "26 °C en Fahrenheit (78,8 °F) : chaleur douce, climatisation et été",
+    "description": "Convertissez 26 °C en 78,8 °F et voyez si cette température appelle une tenue légère, un ventilateur ou la climatisation."
+  },
+  "header": {
+    "title": "26 °C en Fahrenheit (78,8 °F)",
+    "tagline": "Outil gratuit pour convertir 26 °C en 78,8 °F avec des repères pratiques sur la chaleur, la climatisation et les vêtements légers."
+  },
+  "conversion": {
+    "intro": "26 °C correspondent à 78,8 °F."
+  },
+  "strategy": {
+    "keywords": "Convertissez 26 °C en 78,8 °F et voyez si cette température appelle une tenue légère, un ventilateur ou la climatisation."
+  },
+  "comfortGuide": {
+    "title": "Guide de chaleur légère pour 26 °C",
+    "subtitle": "Chaleur d’été agréable ou besoin de rafraîchir ?",
+    "intro": "26 °C (78,8 °F) correspond déjà à une vraie ambiance estivale. En extérieur, une tenue légère suffit souvent ; en intérieur, un peu d’air frais aide.",
+    "chart": {
+      "cold": {
+        "label": "Frais",
+        "value": "15-19°C",
+        "desc": "59-66.2°F<br>Mieux avec un peu d’air"
+      },
+      "moderate": {
+        "label": "Confortable",
+        "value": "20-24°C",
+        "desc": "68-75.2°F<br>Encore supportable"
+      },
+      "warm": {
+        "label": "Plus chaud",
+        "value": "25-30°C",
+        "desc": "77-86°F<br>Chaleur douce d’été"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Température",
+        "description": "Ressenti",
+        "typicalUse": "Usage typique"
+      },
+      "rows": [
+        {
+          "href": "/22-c-to-f",
+          "temp": "22°C (71.6°F)",
+          "desc": "Confortable",
+          "use": "Travail assis ou détente"
+        },
+        {
+          "href": "/24-c-to-f",
+          "temp": "24°C (75.2°F)",
+          "desc": "Doux et un peu chaud",
+          "use": "Promenade, terrasse, sortie"
+        },
+        {
+          "highlight": true,
+          "temp": "26°C (78.8°F)",
+          "desc": "Chaud agréable",
+          "use": "Journée d’été légère"
+        },
+        {
+          "href": "/28-c-to-f.html",
+          "temp": "28°C (82.4°F)",
+          "desc": "Chaud",
+          "use": "Hydratation et ombre utiles"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Chaud",
+          "use": "Hydratation et ombre utiles"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Température corporelle normale",
+          "use": "Repère pour le corps humain"
+        }
+      ]
+    },
+    "note": "<strong>Note :</strong> 26 °C peut être agréable dehors avec de l’air, mais plus lourd dans un appartement mal ventilé."
+  },
+  "faq": [
+    {
+      "question": "26 °C, c’est froid ou chaud ?",
+      "answerHtml": "<p>26 °C (78,8 °F) correspond déjà à un temps chaud d’été.</p>"
+    },
+    {
+      "question": "Comment convertir 26 °C en Fahrenheit ?",
+      "answerHtml": "<p>La formule est : °F = (°C × 9/5) + 32. 26 multiplié par 1,8 donne 46,8, puis on ajoute 32 pour obtenir 78,8 °F.</p>"
+    },
+    {
+      "question": "26 °C est-il un bon réglage pour la climatisation ?",
+      "answerHtml": "<p>26 °C est souvent vu comme un réglage de climatisation raisonnable et économe.</p>"
+    },
+    {
+      "question": "Que porter quand il fait 26 °C ?",
+      "answerHtml": "<p>On peut souvent passer à des vêtements clairement estivaux :</p><ul><li>Tenue légère et respirante</li><li>Short ou tissu fin</li><li>Lunettes, eau et protection solaire</li></ul>"
+    },
+    {
+      "question": "26 °C se supporte-t-il mieux dehors qu’en intérieur ?",
+      "answerHtml": "<p>Souvent oui. En extérieur avec un peu d’air, 26 °C peut rester agréable ; en intérieur, cela paraît rapidement plus chaud.</p>"
+    },
+    {
+      "question": "26 °C, est-ce une fièvre ?",
+      "answerHtml": "<p>Non. La fièvre commence généralement autour de 38 °C. Si 26 °C était une température corporelle, ce serait bien en dessous de la normale.</p>"
+    }
+  ]
+}
