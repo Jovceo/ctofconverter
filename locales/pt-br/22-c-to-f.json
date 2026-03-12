@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "22°C para 71,6°F: temperatura ambiente, trabalho e sono",
+    "description": "Converta 22°C para 71,6°F e veja se essa temperatura funciona bem em casa, no escritório ou no quarto."
+  },
+  "header": {
+    "title": "22°C para 71,6°F",
+    "tagline": "Ferramenta gratuita para converter 22°C em 71,6°F e avaliar se a temperatura é boa para trabalhar, estudar ou dormir."
+  },
+  "conversion": {
+    "intro": "22°C equivalem a 71,6°F."
+  },
+  "strategy": {
+    "keywords": "Converta 22°C para 71,6°F e veja se essa temperatura funciona bem em casa, no escritório ou no quarto."
+  },
+  "comfortGuide": {
+    "title": "Guia de conforto interno para 22°C",
+    "subtitle": "Melhor para trabalhar, ficar em casa ou dormir?",
+    "intro": "22°C (71,6°F) costuma ficar numa faixa confortável para ambientes internos. Em casa e no trabalho, muita gente sente essa temperatura como equilibrada.",
+    "chart": {
+      "cold": {
+        "label": "Mais fresco",
+        "value": "12-17°C",
+        "desc": "53.6-62.6°F<br>Ainda combina com camada leve"
+      },
+      "moderate": {
+        "label": "Confortável",
+        "value": "20-23°C",
+        "desc": "68-73.4°F<br>Faixa confortável para dentro"
+      },
+      "warm": {
+        "label": "Mais quente",
+        "value": "24-29°C",
+        "desc": "75.2-84.2°F<br>Começa a ficar mais quente"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensação",
+        "typicalUse": "Uso típico"
+      },
+      "rows": [
+        {
+          "href": "/18-c-to-f.html",
+          "temp": "18°C (64.4°F)",
+          "desc": "Fresco",
+          "use": "Manhã ou fim de tarde"
+        },
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Temperatura ambiente",
+          "use": "Casa e escritório"
+        },
+        {
+          "highlight": true,
+          "temp": "22°C (71.6°F)",
+          "desc": "Confortável",
+          "use": "Trabalho e descanso"
+        },
+        {
+          "href": "/25-c-to-f",
+          "temp": "25°C (77°F)",
+          "desc": "Quente agradável",
+          "use": "Dia de verão"
+        },
+        {
+          "href": "/28-c-to-f.html",
+          "temp": "28°C (82.4°F)",
+          "desc": "Quente",
+          "use": "Água e sombra ajudam"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Comparação com o corpo humano"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> em regiões mais secas, 22°C pode parecer bem neutro; em locais úmidos, a mesma marca costuma parecer mais quente."
+  },
+  "faq": [
+    {
+      "question": "22°C é frio ou calor?",
+      "answerHtml": "<p>22°C (71,6°F) costuma ser visto como confortável, sem parecer frio nem calor forte.</p>"
+    },
+    {
+      "question": "Como converter 22°C para Fahrenheit?",
+      "answerHtml": "<p>A fórmula é: °F = (°C × 9/5) + 32. 22 vezes 1,8 dá 39,6; somando 32, o resultado é 71,6°F.</p>"
+    },
+    {
+      "question": "22°C é bom para dormir?",
+      "answerHtml": "<p>Para algumas pessoas, sim. Para quem sente calor fácil, pode parecer um pouco quente.</p>"
+    },
+    {
+      "question": "O que vestir com 22°C?",
+      "answerHtml": "<p>Em geral, roupa leve do dia a dia já resolve:</p><ul><li>Camiseta ou manga longa fina</li><li>Calça leve, jeans ou saia</li><li>Camada fina para locais com ar-condicionado</li></ul>"
+    },
+    {
+      "question": "22°C parece igual no Sul e no litoral úmido?",
+      "answerHtml": "<p>Em locais secos, 22°C parece mais neutro; em cidades úmidas, a mesma temperatura costuma parecer mais quente.</p>"
+    },
+    {
+      "question": "22°C é febre?",
+      "answerHtml": "<p>Não. Febre normalmente começa perto de 38°C. Se 22°C fosse temperatura corporal, estaria muito abaixo do normal.</p>"
+    }
+  ]
+}

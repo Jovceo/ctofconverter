@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "24°C ke 75,2°F: rasa cuaca, pakaian, dan aktivitas harian",
+    "description": "Ubah 24°C ke 75,2°F dan pahami rasanya untuk cuaca sehari-hari, jalan santai, dan pakaian ringan."
+  },
+  "header": {
+    "title": "24°C ke 75,2°F",
+    "tagline": "Konverter gratis untuk mengubah 24°C ke 75,2°F dengan panduan rasa suhu, pakaian, dan kenyamanan ruangan."
+  },
+  "conversion": {
+    "intro": "24°C sama dengan 75,2°F."
+  },
+  "strategy": {
+    "keywords": "Ubah 24°C ke 75,2°F dan pahami rasanya untuk cuaca sehari-hari, jalan santai, dan pakaian ringan."
+  },
+  "comfortGuide": {
+    "title": "Panduan rasa cuaca untuk 24°C",
+    "subtitle": "Masih nyaman atau sudah terasa hangat?",
+    "intro": "24°C (75,2°F) terasa sedikit lebih hangat daripada suhu ruangan biasa. Di luar ruangan terasa enak, tetapi di dalam ruang tertutup bisa sedikit gerah.",
+    "chart": {
+      "cold": {
+        "label": "Lebih sejuk",
+        "value": "15-19°C",
+        "desc": "59-66.2°F<br>Pagi lebih sejuk"
+      },
+      "moderate": {
+        "label": "Nyaman",
+        "value": "20-24°C",
+        "desc": "68-75.2°F<br>Enak untuk keluar"
+      },
+      "warm": {
+        "label": "Lebih hangat",
+        "value": "25-31°C",
+        "desc": "77-87.8°F<br>Siang terasa lebih hangat"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Suhu",
+        "description": "Kesan",
+        "typicalUse": "Penggunaan umum"
+      },
+      "rows": [
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Suhu ruangan biasa",
+          "use": "Rumah dan kantor"
+        },
+        {
+          "href": "/22-c-to-f",
+          "temp": "22°C (71.6°F)",
+          "desc": "Nyaman",
+          "use": "Kerja dan belajar nyaman"
+        },
+        {
+          "highlight": true,
+          "temp": "24°C (75.2°F)",
+          "desc": "Sedikit hangat",
+          "use": "Jalan santai dan pakaian ringan"
+        },
+        {
+          "href": "/26-c-to-f",
+          "temp": "26°C (78.8°F)",
+          "desc": "Hangat dan enak",
+          "use": "Cuaca hangat khas tropis"
+        },
+        {
+          "href": "/28-c-to-f.html",
+          "temp": "28°C (82.4°F)",
+          "desc": "Panas",
+          "use": "Perlu air dan tempat teduh"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Suhu tubuh normal",
+          "use": "Pembanding suhu tubuh"
+        }
+      ]
+    },
+    "note": "<strong>Catatan:</strong> pada 24°C, sinar matahari, kelembapan, dan angin sangat memengaruhi rasa suhu."
+  },
+  "faq": [
+    {
+      "question": "Apakah 24°C terasa dingin atau panas?",
+      "answerHtml": "<p>24°C (75,2°F) cenderung terasa hangat ringan.</p>"
+    },
+    {
+      "question": "Bagaimana cara mengubah 24°C ke Fahrenheit?",
+      "answerHtml": "<p>Rumusnya adalah: °F = (°C × 9/5) + 32. 24 dikali 1,8 menghasilkan 43,2, lalu ditambah 32 menjadi 75,2°F.</p>"
+    },
+    {
+      "question": "Apakah 24°C cocok untuk aktivitas luar ruang?",
+      "answerHtml": "<p>24°C cocok untuk jalan kaki, belanja, atau olahraga ringan, terutama pagi atau sore hari.</p>"
+    },
+    {
+      "question": "Pakaian apa yang cocok pada 24°C?",
+      "answerHtml": "<p>Pada suhu ini, pakaian ringan dan mudah menyerap keringat paling nyaman:</p><ul><li>Kaos, kemeja tipis, atau blouse ringan</li><li>Celana ringan, rok, atau bahan adem</li><li>Lapisan tipis untuk sore atau angin</li></ul>"
+    },
+    {
+      "question": "Apakah 24°C berbeda jauh antara matahari dan tempat teduh?",
+      "answerHtml": "<p>Ya. Pada 24°C, sinar matahari langsung bisa membuat suhu terasa naik cepat, sedangkan tempat teduh dan angin membuatnya jauh lebih nyaman.</p>"
+    },
+    {
+      "question": "Apakah 24°C termasuk demam?",
+      "answerHtml": "<p>Tidak. Demam biasanya mulai mendekati 38°C. Jika 24°C adalah suhu tubuh, nilainya justru jauh di bawah normal.</p>"
+    }
+  ]
+}

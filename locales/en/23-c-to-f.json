@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "23\u00b0C to Fahrenheit (73.4\u00b0F) | Conversion Guide & Calculator",
+    "description": "Convert 23 degrees Celsius to Fahrenheit quickly. Learn that 23\u00b0C equals 73.4\u00b0F, see the calculation steps, and understand if 23\u00b0C is hot or cold."
+  },
+  "header": {
+    "title": "23\u00b0C to Fahrenheit (23 Degrees Celsius to \u00b0F)",
+    "tagline": "Free online temperature conversion tool that instantly converts 23 degrees Celsius (23\u00b0C) to degrees Fahrenheit (\u00b0F), with conversion formulas and detailed steps."
+  },
+  "conversion": {
+    "intro": "23\u00b0C in Fahrenheit is 73.4\u00b0F."
+  },
+  "strategy": {
+    "keywords": "23 celsius to fahrenheit mild warm weather room temperature comfortable conversion"
+  },
+  "comfortGuide": {
+    "title": "23\u00b0C weather and comfort guide",
+    "subtitle": "Is 23\u00b0C hot or cold?",
+    "intro": "23\u00b0C (73.4\u00b0F) usually feels mildly warm. It is still comfortable for indoor spaces, but it starts to feel more summery outdoors, especially in direct sun or high humidity.",
+    "chart": {
+      "cold": {
+        "label": "Cool",
+        "value": "14-18\u00b0C",
+        "desc": "57.2-64.4\u00b0F<br>Light layers still help"
+      },
+      "moderate": {
+        "label": "Comfortable",
+        "value": "20-23\u00b0C",
+        "desc": "68-73.4\u00b0F<br>Comfortable indoors and mild outdoors"
+      },
+      "warm": {
+        "label": "Warm",
+        "value": "24-30\u00b0C",
+        "desc": "75.2-86\u00b0F<br>Summer-like daytime conditions"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "20\u00b0C (68\u00b0F)",
+          "desc": "Neutral room temperature",
+          "use": "Classic indoor comfort point",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "22\u00b0C (71.6\u00b0F)",
+          "desc": "Comfortably warm",
+          "use": "Living rooms and office spaces",
+          "href": "/22-c-to-f"
+        },
+        {
+          "temp": "23\u00b0C (73.4\u00b0F)",
+          "desc": "Mild warm comfort",
+          "use": "Pleasant indoor climate and mild outdoor weather",
+          "highlight": true
+        },
+        {
+          "temp": "26\u00b0C (78.8\u00b0F)",
+          "desc": "Warm summer feel",
+          "use": "Outdoor dining, open windows, and light clothing",
+          "href": "/26-c-to-f"
+        },
+        {
+          "temp": "30\u00b0C (86\u00b0F)",
+          "desc": "Hot weather",
+          "use": "Heat management and hydration become more important",
+          "href": "/30-c-to-f.html"
+        },
+        {
+          "temp": "37\u00b0C (98.6\u00b0F)",
+          "desc": "Normal body temperature",
+          "use": "Body temperature comparison point",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 23\u00b0C often feels ideal outdoors when humidity is low. In humid rooms, the same number can feel warmer than expected."
+  },
+  "faq": [
+    {
+      "question": "Is 23\u00b0C hot or cold?",
+      "answerHtml": "<p>23\u00b0C (73.4\u00b0F) is generally considered a comfortable temperature, neither hot nor cold. It's ideal for indoor environments and is often described as &quot;room temperature.&quot;</p><p>Perception can vary based on:</p><ul><li><strong>Season:</strong> 23\u00b0C feels warmer in winter than in summer</li><li><strong>Humidity:</strong> Higher humidity can make it feel warmer</li><li><strong>Personal preference:</strong> Some prefer slightly cooler or warmer temperatures</li><li><strong>Activity level:</strong> More active people may prefer cooler temperatures</li></ul>"
+    },
+    {
+      "question": "What is negative 23 Celsius in Fahrenheit?",
+      "answerHtml": "<p>Negative 23\u00b0C (-23\u00b0C) equals -9.4\u00b0F. This is a very cold temperature typically experienced in:</p><ul><li>Northern regions during winter</li><li>High-altitude locations</li><li>Freezer storage conditions</li><li>Extreme weather events</li></ul><p>At -23\u00b0C, exposed skin can freeze in minutes, and appropriate winter clothing is essential for safety.</p>"
+    },
+    {
+      "question": "Is 23\u00b0C a fever temperature?",
+      "answerHtml": "<p>No, 23\u00b0C is not a fever temperature. This is a common misunderstanding from temperature conversion searches.</p><p>Actual fever temperatures are:</p><ul><li>Normal body temperature: 36.5-37.5\u00b0C (97.7-99.5\u00b0F)</li><li>Fever: 38\u00b0C+ (100.4\u00b0F+)</li><li>23\u00b0C would be hypothermia, not fever</li></ul>"
+    },
+    {
+      "question": "What is 23.5\u00b0C in Fahrenheit?",
+      "answerHtml": "<p>23.5\u00b0C converts to 74.3\u00b0F. The calculation is:</p><p>\u00b0F = (23.5 \u00d7 9/5) + 32 = (42.3) + 32 = 74.3\u00b0F</p><p>This is still within the comfortable room temperature range, just slightly warmer than 23\u00b0C.</p>"
+    },
+    {
+      "question": "Can 23\u00b0C be used for oven cooking?",
+      "answerHtml": "<p>23\u00b0C is far too low for oven cooking. Standard oven temperatures are much higher:</p><ul><li>Very low oven: 120\u00b0C (250\u00b0F)</li><li>Moderate oven: 180\u00b0C (350\u00b0F)</li><li>Hot oven: 220\u00b0C (425\u00b0F)</li></ul><p>23\u00b0C is closer to room temperature than cooking temperature. It might be used for proofing bread or slow fermentation but not for actual baking.</p>"
+    },
+    {
+      "question": "How do I convert 23\u00b0C to Fahrenheit in my head?",
+      "answerHtml": "<p>Here's a quick mental calculation method:</p><ol><li>Double the Celsius value: 23 \u00d7 2 = 46</li><li>Subtract 10%: 46 - 4.6 = 41.4</li><li>Add 32: 41.4 + 32 = 73.4\u00b0F</li></ol><p>This gives you the exact conversion of 73.4\u00b0F.</p><p>For more conversion techniques, check our <a href=\"https://ctofconverter.com/c-to-f-formula\">C to F formula guide</a>.</p>"
+    }
+  ]
+}

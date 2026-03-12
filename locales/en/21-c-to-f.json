@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "21\u00b0C to Fahrenheit (69.8\u00b0F) | Conversion Guide & Calculator",
+    "description": "Convert 21 degrees Celsius to Fahrenheit quickly. Learn that 21\u00b0C equals 69.8\u00b0F, see the calculation steps, and understand temperature context."
+  },
+  "header": {
+    "title": "21\u00b0C to Fahrenheit (21 Degrees Celsius to \u00b0F)",
+    "tagline": "Free online temperature conversion tool that instantly converts 21 degrees Celsius (21\u00b0C) to degrees Fahrenheit (\u00b0F), with conversion formulas and detailed steps."
+  },
+  "conversion": {
+    "intro": "21\u00b0C in Fahrenheit is 69.8\u00b0F."
+  },
+  "strategy": {
+    "keywords": "21 celsius to fahrenheit room temperature comfortable mild indoor weather conversion"
+  },
+  "comfortGuide": {
+    "title": "21\u00b0C comfort guide",
+    "subtitle": "What 21\u00b0C feels like indoors and outdoors",
+    "intro": "21\u00b0C (69.8\u00b0F) sits in the middle of the comfort range. It is mild for daily life, easy to manage indoors, and usually pleasant for walking, commuting, or office work.",
+    "chart": {
+      "cold": {
+        "label": "Cool",
+        "value": "10-15\u00b0C",
+        "desc": "50-59\u00b0F<br>Light jacket weather"
+      },
+      "moderate": {
+        "label": "Comfortable",
+        "value": "18-23\u00b0C",
+        "desc": "64-73.4\u00b0F<br>Comfortable homes and offices"
+      },
+      "warm": {
+        "label": "Warm",
+        "value": "24-29\u00b0C",
+        "desc": "75.2-84.2\u00b0F<br>Light clothing and open windows"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "10\u00b0C (50\u00b0F)",
+          "desc": "Cool outdoor weather",
+          "use": "Spring or autumn conditions with a light jacket",
+          "href": "/10-c-to-f.html"
+        },
+        {
+          "temp": "18\u00b0C (64.4\u00b0F)",
+          "desc": "Mild and slightly cool",
+          "use": "Comfortable walking weather and cooler rooms",
+          "href": "/18-c-to-f.html"
+        },
+        {
+          "temp": "21\u00b0C (69.8\u00b0F)",
+          "desc": "Comfortable room temperature",
+          "use": "Balanced indoor comfort for work, reading, and daily routines",
+          "highlight": true
+        },
+        {
+          "temp": "25\u00b0C (77\u00b0F)",
+          "desc": "Pleasantly warm",
+          "use": "Mild summer weather and relaxed outdoor activities",
+          "href": "/25-c-to-f"
+        },
+        {
+          "temp": "30\u00b0C (86\u00b0F)",
+          "desc": "Hot",
+          "use": "Warm summer afternoons where shade and hydration matter",
+          "href": "/30-c-to-f.html"
+        },
+        {
+          "temp": "37\u00b0C (98.6\u00b0F)",
+          "desc": "Normal body temperature",
+          "use": "Human body temperature benchmark",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 21\u00b0C is often close to a thermostat setting people describe as neutral. Humidity, airflow, and sunlight can still make it feel slightly cooler or warmer."
+  },
+  "faq": [
+    {
+      "question": "Is 21 degrees Celsius hot or cold?",
+      "answerHtml": "<p>21\u00b0C (69.8\u00b0F) is generally considered a comfortable room temperature - neither hot nor cold. It's the standard temperature recommended for indoor environments in many countries. Most people find this temperature ideal for sedentary activities and can wear normal indoor clothing without feeling either chilly or warm.</p><p>In outdoor contexts, 21\u00b0C would be described as mild or pleasant - perfect for light outdoor activities without needing heavy clothing.</p>"
+    },
+    {
+      "question": "Is 21\u00b0C a fever temperature?",
+      "answerHtml": "<p><strong>No, 21\u00b0C is not a fever temperature.</strong> Normal human body temperature is approximately 37\u00b0C (98.6\u00b0F). A fever typically begins at 38\u00b0C (100.4\u00b0F). 21\u00b0C is significantly below normal body temperature and would represent a life-threatening hypothermic condition if it were body temperature.</p><p>This confusion sometimes arises from misreading thermometers or misunderstanding temperature scales. Always ensure you're reading body temperature measurements correctly.</p>"
+    },
+    {
+      "question": "What is 18-21\u00b0C in Fahrenheit?",
+      "answerHtml": "<p>The temperature range of 18-21\u00b0C converts to 64.4-69.8\u00b0F. This range represents the energy-efficient comfort zone:</p><ul><li>18\u00b0C = 64.4\u00b0F (cool but comfortable with light activity)</li><li>19\u00b0C = 66.2\u00b0F (comfortable for active households)</li><li>20\u00b0C = 68\u00b0F (standard comfortable temperature)</li><li>21\u00b0C = 69.8\u00b0F (ideal for sedentary activities)</li></ul><p>Many energy efficiency programs recommend keeping thermostats within this range to balance comfort and energy consumption.</p>"
+    },
+    {
+      "question": "What is 21-25\u00b0C in Fahrenheit?",
+      "answerHtml": "<p>The temperature range of 21-25\u00b0C converts to 69.8-77\u00b0F. This represents the warm comfort range:</p><ul><li>21\u00b0C = 69.8\u00b0F (standard room temperature)</li><li>22\u00b0C = 71.6\u00b0F (very comfortable for most people)</li><li>23\u00b0C = 73.4\u00b0F (slightly warm for sedentary activities)</li><li>24\u00b0C = 75.2\u00b0F (comfortable for those who prefer warmth)</li><li>25\u00b0C = 77\u00b0F (warm, may require light clothing)</li></ul><p>This range is common in tropical countries or during summer in temperate regions.</p>"
+    },
+    {
+      "question": "How do I convert negative 21 Celsius to Fahrenheit?",
+      "answerHtml": "<p>To convert -21\u00b0C to Fahrenheit, use the same formula: \u00b0F = (\u00b0C \u00d7 9/5) + 32</p><p>Calculation: (-21 \u00d7 9/5) + 32 = (-37.8) + 32 = -5.8\u00b0F</p><p>So -21\u00b0C equals -5.8\u00b0F, which is well below freezing and considered very cold weather.</p>"
+    },
+    {
+      "question": "Is 21\u00b0C warm enough for a T-shirt?",
+      "answerHtml": "<p>Indoors at 21\u00b0C (69.8\u00b0F), most people find a T-shirt comfortable, especially when active. However, individual comfort varies, and some people might prefer a light long-sleeve shirt or sweater, particularly if they're sedentary.</p><p>Outdoors at 21\u00b0C, whether a T-shirt is comfortable depends on additional factors like wind, sun exposure, and humidity. On a calm, sunny day at 21\u00b0C, many people find a T-shirt perfectly comfortable, while on a windy or cloudy day, a light jacket might be preferred.</p>"
+    }
+  ]
+}

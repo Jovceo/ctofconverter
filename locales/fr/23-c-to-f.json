@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "23 °C en Fahrenheit (73,4 °F) : ressenti, météo et tenue",
+    "description": "Convertissez 23 °C en 73,4 °F et comprenez comment cette température se ressent selon la météo et les vêtements."
+  },
+  "header": {
+    "title": "23 °C en Fahrenheit (73,4 °F)",
+    "tagline": "Outil gratuit pour convertir 23 °C en 73,4 °F avec un contexte clair sur le ressenti météo, la tenue et le confort."
+  },
+  "conversion": {
+    "intro": "23 °C correspondent à 73,4 °F."
+  },
+  "strategy": {
+    "keywords": "Convertissez 23 °C en 73,4 °F et comprenez comment cette température se ressent selon la météo et les vêtements."
+  },
+  "comfortGuide": {
+    "title": "Guide de ressenti pour 23 °C",
+    "subtitle": "Température douce ou déjà un peu chaude ?",
+    "intro": "23 °C (73,4 °F) paraît un peu plus chaud que la température ambiante classique. Dehors, c’est souvent agréable ; dedans, cela peut sembler légèrement chaud.",
+    "chart": {
+      "cold": {
+        "label": "Frais",
+        "value": "14-18°C",
+        "desc": "57.2-64.4°F<br>Matin plus frais"
+      },
+      "moderate": {
+        "label": "Confortable",
+        "value": "20-23°C",
+        "desc": "68-73.4°F<br>Sortie agréable"
+      },
+      "warm": {
+        "label": "Plus chaud",
+        "value": "24-30°C",
+        "desc": "75.2-86°F<br>Plus chaud à midi"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Température",
+        "description": "Ressenti",
+        "typicalUse": "Usage typique"
+      },
+      "rows": [
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Température ambiante",
+          "use": "Maison et bureau"
+        },
+        {
+          "href": "/22-c-to-f",
+          "temp": "22°C (71.6°F)",
+          "desc": "Confortable",
+          "use": "Travail assis ou détente"
+        },
+        {
+          "highlight": true,
+          "temp": "23°C (73.4°F)",
+          "desc": "Doux et un peu chaud",
+          "use": "Promenade, terrasse, sortie"
+        },
+        {
+          "href": "/26-c-to-f",
+          "temp": "26°C (78.8°F)",
+          "desc": "Chaud agréable",
+          "use": "Journée d’été légère"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Chaud",
+          "use": "Hydratation et ombre utiles"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Température corporelle normale",
+          "use": "Repère pour le corps humain"
+        }
+      ]
+    },
+    "note": "<strong>Note :</strong> à 23 °C, le soleil, l’ombre et le vent changent nettement le ressenti."
+  },
+  "faq": [
+    {
+      "question": "23 °C, c’est froid ou chaud ?",
+      "answerHtml": "<p>23 °C (73,4 °F) donne une sensation douce à légèrement chaude.</p>"
+    },
+    {
+      "question": "Comment convertir 23 °C en Fahrenheit ?",
+      "answerHtml": "<p>La formule est : °F = (°C × 9/5) + 32. 23 multiplié par 1,8 donne 41,4, puis on ajoute 32 pour obtenir 73,4 °F.</p>"
+    },
+    {
+      "question": "23 °C ressemble-t-il à un temps de printemps ou d’automne ?",
+      "answerHtml": "<p>23 °C évoque souvent un beau jour de printemps ou de début d’automne.</p>"
+    },
+    {
+      "question": "Que porter quand il fait 23 °C ?",
+      "answerHtml": "<p>À cette température, une tenue souple et légère fonctionne bien :</p><ul><li>T-shirt, chemise légère ou blouse</li><li>Pantalon léger ou robe fluide</li><li>Petite couche pour le soir</li></ul>"
+    },
+    {
+      "question": "À 23 °C, le soleil et l’ombre changent-ils beaucoup la sensation ?",
+      "answerHtml": "<p>Oui. En plein soleil, 23 °C paraît plus chaud ; avec de l’ombre et du vent, le ressenti redevient plus doux.</p>"
+    },
+    {
+      "question": "23 °C, est-ce une fièvre ?",
+      "answerHtml": "<p>Non. La fièvre commence généralement autour de 38 °C. Si 23 °C était une température corporelle, ce serait bien en dessous de la normale.</p>"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "22 °C en Fahrenheit (71,6 °F) : confort intérieur et sommeil",
+    "description": "Convertissez 22 °C en 71,6 °F et voyez si cette température convient à la maison, au bureau ou à la chambre."
+  },
+  "header": {
+    "title": "22 °C en Fahrenheit (71,6 °F)",
+    "tagline": "Outil gratuit pour convertir 22 °C en 71,6 °F et juger si cette température est agréable pour travailler, se reposer ou dormir."
+  },
+  "conversion": {
+    "intro": "22 °C correspondent à 71,6 °F."
+  },
+  "strategy": {
+    "keywords": "Convertissez 22 °C en 71,6 °F et voyez si cette température convient à la maison, au bureau ou à la chambre."
+  },
+  "comfortGuide": {
+    "title": "Guide de confort intérieur pour 22 °C",
+    "subtitle": "Mieux pour la maison, le bureau ou la nuit ?",
+    "intro": "22 °C (71,6 °F) se situe souvent dans une zone agréable en intérieur. Beaucoup de personnes le trouvent stable et facile à vivre.",
+    "chart": {
+      "cold": {
+        "label": "Frais",
+        "value": "12-17°C",
+        "desc": "53.6-62.6°F<br>Une couche légère aide encore"
+      },
+      "moderate": {
+        "label": "Confortable",
+        "value": "20-23°C",
+        "desc": "68-73.4°F<br>Zone confortable en intérieur"
+      },
+      "warm": {
+        "label": "Plus chaud",
+        "value": "24-29°C",
+        "desc": "75.2-84.2°F<br>Commence à sembler plus chaud"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Température",
+        "description": "Ressenti",
+        "typicalUse": "Usage typique"
+      },
+      "rows": [
+        {
+          "href": "/18-c-to-f.html",
+          "temp": "18°C (64.4°F)",
+          "desc": "Frais",
+          "use": "Matinée fraîche ou mi-saison"
+        },
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Température ambiante",
+          "use": "Maison et bureau"
+        },
+        {
+          "highlight": true,
+          "temp": "22°C (71.6°F)",
+          "desc": "Confortable",
+          "use": "Travail assis ou détente"
+        },
+        {
+          "href": "/25-c-to-f",
+          "temp": "25°C (77°F)",
+          "desc": "Chaud agréable",
+          "use": "Journée d’été légère"
+        },
+        {
+          "href": "/28-c-to-f.html",
+          "temp": "28°C (82.4°F)",
+          "desc": "Chaud",
+          "use": "Hydratation et ombre utiles"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Température corporelle normale",
+          "use": "Repère pour le corps humain"
+        }
+      ]
+    },
+    "note": "<strong>Note :</strong> dans un logement sec, 22 °C paraît souvent neutre ; avec davantage d’humidité, la même valeur semble plus chaude."
+  },
+  "faq": [
+    {
+      "question": "22 °C, c’est froid ou chaud ?",
+      "answerHtml": "<p>22 °C (71,6 °F) est généralement perçu comme confortable, ni vraiment froid ni vraiment chaud.</p>"
+    },
+    {
+      "question": "Comment convertir 22 °C en Fahrenheit ?",
+      "answerHtml": "<p>La formule est : °F = (°C × 9/5) + 32. 22 multiplié par 1,8 donne 39,6, puis on ajoute 32 pour obtenir 71,6 °F.</p>"
+    },
+    {
+      "question": "22 °C est-il adapté pour dormir ?",
+      "answerHtml": "<p>22 °C peut convenir, mais certaines personnes le trouveront un peu chaud pour la nuit.</p>"
+    },
+    {
+      "question": "Que porter quand il fait 22 °C ?",
+      "answerHtml": "<p>En général, une tenue légère du quotidien suffit :</p><ul><li>T-shirt ou haut fin</li><li>Jean, pantalon léger ou jupe</li><li>Petite veste pour les lieux climatisés</li></ul>"
+    },
+    {
+      "question": "22 °C se ressent-il pareil dans un appartement sec et dans une ville humide ?",
+      "answerHtml": "<p>Dans un logement sec, 22 °C paraît équilibré ; avec plus d’humidité, la même température semble plus chaude.</p>"
+    },
+    {
+      "question": "22 °C, est-ce une fièvre ?",
+      "answerHtml": "<p>Non. La fièvre commence généralement autour de 38 °C. Si 22 °C était une température corporelle, ce serait bien en dessous de la normale.</p>"
+    }
+  ]
+}

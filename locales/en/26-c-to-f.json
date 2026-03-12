@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "26\u00b0C to Fahrenheit: Conversion, Weather Guide & Temperature Facts",
+    "description": "Convert 26\u00b0C to Fahrenheit (78.8\u00b0F) with formula, chart & calculator. Learn if 26\u00b0C is hot or cold, weather applications, and temperature comparisons."
+  },
+  "header": {
+    "title": "26\u00b0C to Fahrenheit (26 Degrees Celsius to \u00b0F)",
+    "tagline": "Free online temperature conversion tool that instantly converts 26 degrees Celsius (26\u00b0C) to degrees Fahrenheit (\u00b0F), with conversion formulas and detailed steps."
+  },
+  "conversion": {
+    "intro": "26\u00b0C in Fahrenheit is 78.8\u00b0F."
+  },
+  "strategy": {
+    "keywords": "26 celsius to fahrenheit weather guide warm summer temperature facts conversion"
+  },
+  "comfortGuide": {
+    "title": "26\u00b0C weather guide",
+    "subtitle": "Where 26\u00b0C sits on the warmth scale",
+    "intro": "26\u00b0C (78.8\u00b0F) is solidly warm. Outdoors it feels like comfortable summer weather for many people. Indoors, especially without airflow, it often feels warmer than ideal room temperature.",
+    "chart": {
+      "cold": {
+        "label": "Cool",
+        "value": "15-19\u00b0C",
+        "desc": "59-66.2\u00b0F<br>Fresh air and light layers"
+      },
+      "moderate": {
+        "label": "Comfortable",
+        "value": "20-24\u00b0C",
+        "desc": "68-75.2\u00b0F<br>Comfortable indoor range"
+      },
+      "warm": {
+        "label": "Warm summer weather",
+        "value": "25-30\u00b0C",
+        "desc": "77-86\u00b0F<br>Warm afternoons and light clothing"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "22\u00b0C (71.6\u00b0F)",
+          "desc": "Comfortable indoor climate",
+          "use": "Common thermostat target",
+          "href": "/22-c-to-f"
+        },
+        {
+          "temp": "24\u00b0C (75.2\u00b0F)",
+          "desc": "Warm but manageable",
+          "use": "Pleasant weather and slightly warm rooms",
+          "href": "/24-c-to-f"
+        },
+        {
+          "temp": "26\u00b0C (78.8\u00b0F)",
+          "desc": "Warm summer feel",
+          "use": "Outdoor activity weather and warm indoor spaces",
+          "highlight": true
+        },
+        {
+          "temp": "28\u00b0C (82.4\u00b0F)",
+          "desc": "Hot",
+          "use": "Fans, shade, and hydration become more useful",
+          "href": "/28-c-to-f.html"
+        },
+        {
+          "temp": "30\u00b0C (86\u00b0F)",
+          "desc": "Very warm",
+          "use": "Hot afternoons and stronger cooling needs",
+          "href": "/30-c-to-f.html"
+        },
+        {
+          "temp": "37\u00b0C (98.6\u00b0F)",
+          "desc": "Normal body temperature",
+          "use": "Useful body-heat comparison",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 26\u00b0C may feel pleasant outdoors with a breeze, but indoors it can feel much warmer if humidity rises or the room lacks ventilation."
+  },
+  "faq": [
+    {
+      "question": "Is 26 degrees Celsius hot or cold?",
+      "answerHtml": "<p>26\u00b0C (78.8\u00b0F) is generally considered <strong>warm and pleasant</strong>. It's not hot enough to be uncomfortable for most people, but it's definitely warmer than typical room temperature. Many describe it as a &quot;nice warm day&quot; - perfect for outdoor activities with light clothing.</p>"
+    },
+    {
+      "question": "What is 26\u00b0C in Fahrenheit for weather?",
+      "answerHtml": "<p>26\u00b0C converts to 78.8\u00b0F. In weather terms, this is considered a <strong>warm day</strong> - ideal for outdoor activities, comfortable for most people, and typically experienced during spring and summer months in temperate climates.</p>"
+    },
+    {
+      "question": "Is 26\u00b0C a fever temperature?",
+      "answerHtml": "<p><strong>No, absolutely not.</strong> 26\u00b0C (78.8\u00b0F) is <strong>much cooler than human body temperature</strong>. Normal body temperature ranges from 36.5\u00b0C to 37.5\u00b0C (97.7\u00b0F to 99.5\u00b0F). A reading of 26\u00b0C would indicate severe hypothermia, not fever.</p>"
+    },
+    {
+      "question": "How do I convert minus 26 Celsius to Fahrenheit?",
+      "answerHtml": "<p>To convert -26\u00b0C to Fahrenheit, use the same formula: \u00b0F = (-26 \u00d7 9/5) + 32 = -14.8\u00b0F. This extremely cold temperature is found in polar regions or during severe winter conditions.</p>"
+    },
+    {
+      "question": "What should I wear in 26\u00b0C weather?",
+      "answerHtml": "<p>At 26\u00b0C (78.8\u00b0F), light summer clothing is appropriate:</p><ul><li>T-shirts, shorts, or light dresses</li><li>Sun protection (hat, sunglasses)</li><li>Comfortable shoes for walking</li><li>Light layers for evening if temperature drops</li></ul>"
+    },
+    {
+      "question": "Is 26\u00b0C good for air conditioning setting?",
+      "answerHtml": "<p>Yes, 26\u00b0C (78.8\u00b0F) is often recommended as an <strong>energy-efficient air conditioning setting</strong>. It provides comfort while reducing energy consumption compared to lower temperature settings. Many energy agencies suggest <a href=\"https://ctofconverter.com/celsius-to-fahrenheit-chart\">24-26\u00b0C</a> for optimal balance of comfort and efficiency.</p>"
+    }
+  ]
+}

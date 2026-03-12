@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "21 °C en Fahrenheit (69,8 °F) : confort intérieur et sommeil",
+    "description": "Convertissez 21 °C en 69,8 °F et voyez si cette température convient à la maison, au bureau ou à la chambre."
+  },
+  "header": {
+    "title": "21 °C en Fahrenheit (69,8 °F)",
+    "tagline": "Outil gratuit pour convertir 21 °C en 69,8 °F et juger si cette température est agréable pour travailler, se reposer ou dormir."
+  },
+  "conversion": {
+    "intro": "21 °C correspondent à 69,8 °F."
+  },
+  "strategy": {
+    "keywords": "Convertissez 21 °C en 69,8 °F et voyez si cette température convient à la maison, au bureau ou à la chambre."
+  },
+  "comfortGuide": {
+    "title": "Guide de confort intérieur pour 21 °C",
+    "subtitle": "Mieux pour la maison, le bureau ou la nuit ?",
+    "intro": "21 °C (69,8 °F) se situe souvent dans une zone agréable en intérieur. Beaucoup de personnes le trouvent stable et facile à vivre.",
+    "chart": {
+      "cold": {
+        "label": "Frais",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Une couche légère aide encore"
+      },
+      "moderate": {
+        "label": "Confortable",
+        "value": "18-23°C",
+        "desc": "64-73.4°F<br>Zone confortable en intérieur"
+      },
+      "warm": {
+        "label": "Plus chaud",
+        "value": "24-29°C",
+        "desc": "75.2-84.2°F<br>Commence à sembler plus chaud"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Température",
+        "description": "Ressenti",
+        "typicalUse": "Usage typique"
+      },
+      "rows": [
+        {
+          "href": "/10-c-to-f.html",
+          "temp": "10°C (50°F)",
+          "desc": "Assez frais",
+          "use": "Aération ou veste légère"
+        },
+        {
+          "href": "/18-c-to-f.html",
+          "temp": "18°C (64.4°F)",
+          "desc": "Frais",
+          "use": "Matinée fraîche ou mi-saison"
+        },
+        {
+          "highlight": true,
+          "temp": "21°C (69.8°F)",
+          "desc": "Confortable",
+          "use": "Travail assis ou détente"
+        },
+        {
+          "href": "/25-c-to-f",
+          "temp": "25°C (77°F)",
+          "desc": "Chaud agréable",
+          "use": "Journée d’été légère"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Chaud",
+          "use": "Hydratation et ombre utiles"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Température corporelle normale",
+          "use": "Repère pour le corps humain"
+        }
+      ]
+    },
+    "note": "<strong>Note :</strong> dans un logement sec, 21 °C paraît souvent neutre ; avec davantage d’humidité, la même valeur semble plus chaude."
+  },
+  "faq": [
+    {
+      "question": "21 °C, c’est froid ou chaud ?",
+      "answerHtml": "<p>21 °C (69,8 °F) est généralement perçu comme confortable, ni vraiment froid ni vraiment chaud.</p>"
+    },
+    {
+      "question": "Comment convertir 21 °C en Fahrenheit ?",
+      "answerHtml": "<p>La formule est : °F = (°C × 9/5) + 32. 21 multiplié par 1,8 donne 37,8, puis on ajoute 32 pour obtenir 69,8 °F.</p>"
+    },
+    {
+      "question": "21 °C convient-il au bureau ou au télétravail ?",
+      "answerHtml": "<p>21 °C fonctionne bien pour un bureau ou une journée de télétravail.</p>"
+    },
+    {
+      "question": "Que porter quand il fait 21 °C ?",
+      "answerHtml": "<p>En général, une tenue légère du quotidien suffit :</p><ul><li>T-shirt ou haut fin</li><li>Jean, pantalon léger ou jupe</li><li>Petite veste pour les lieux climatisés</li></ul>"
+    },
+    {
+      "question": "21 °C se ressent-il pareil dans un appartement sec et dans une ville humide ?",
+      "answerHtml": "<p>Dans un logement sec, 21 °C paraît équilibré ; avec plus d’humidité, la même température semble plus chaude.</p>"
+    },
+    {
+      "question": "21 °C, est-ce une fièvre ?",
+      "answerHtml": "<p>Non. La fièvre commence généralement autour de 38 °C. Si 21 °C était une température corporelle, ce serait bien en dessous de la normale.</p>"
+    }
+  ]
+}

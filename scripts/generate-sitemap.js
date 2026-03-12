@@ -258,7 +258,18 @@ function getAllPages() {
 
 function getAvailableLocales(pageSlug) {
     if (NON_EN_EXCLUDED.includes(pageSlug)) return ['en'];
-    return LOCALES;
+    const jsonName = pageSlug === '' ? 'home.json' : `${pageSlug}.json`;
+    const detectedLocales = LOCALES.filter((locale) => {
+        const localeFile = path.join(localesDir, locale, jsonName);
+        const publicLocaleFile = path.join(publicLocalesDir, locale, jsonName);
+        return fs.existsSync(localeFile) || fs.existsSync(publicLocaleFile);
+    });
+
+    if (detectedLocales.length === 0) {
+        return LOCALES;
+    }
+
+    return detectedLocales.sort((a, b) => LOCALES.indexOf(a) - LOCALES.indexOf(b));
 }
 
 function getSitemapPages() {

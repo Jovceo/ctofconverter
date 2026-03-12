@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "26°C para 78,8°F: calor leve, ar-condicionado e verão",
+    "description": "Converta 26°C para 78,8°F e descubra se essa temperatura combina com verão, ar-condicionado e atividades ao ar livre."
+  },
+  "header": {
+    "title": "26°C para 78,8°F",
+    "tagline": "Ferramenta gratuita para converter 26°C em 78,8°F com orientação prática sobre calor, roupas leves e uso de ar-condicionado."
+  },
+  "conversion": {
+    "intro": "26°C equivalem a 78,8°F."
+  },
+  "strategy": {
+    "keywords": "Converta 26°C para 78,8°F e descubra se essa temperatura combina com verão, ar-condicionado e atividades ao ar livre."
+  },
+  "comfortGuide": {
+    "title": "Guia de calor leve para 26°C",
+    "subtitle": "É um calor confortável de verão ou já pede refrigeração?",
+    "intro": "26°C (78,8°F) já tem cara de dia quente. Com roupa leve costuma ser tranquilo, mas em ambientes fechados muita gente prefere ventilador ou ar-condicionado.",
+    "chart": {
+      "cold": {
+        "label": "Mais fresco",
+        "value": "15-19°C",
+        "desc": "59-66.2°F<br>Melhor com um pouco de vento"
+      },
+      "moderate": {
+        "label": "Confortável",
+        "value": "20-24°C",
+        "desc": "68-75.2°F<br>Ainda dá para levar"
+      },
+      "warm": {
+        "label": "Mais quente",
+        "value": "25-30°C",
+        "desc": "77-86°F<br>Calor leve de verão"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensação",
+        "typicalUse": "Uso típico"
+      },
+      "rows": [
+        {
+          "href": "/22-c-to-f",
+          "temp": "22°C (71.6°F)",
+          "desc": "Confortável",
+          "use": "Trabalho e descanso"
+        },
+        {
+          "href": "/24-c-to-f",
+          "temp": "24°C (75.2°F)",
+          "desc": "Morno",
+          "use": "Passeio e roupa leve"
+        },
+        {
+          "highlight": true,
+          "temp": "26°C (78.8°F)",
+          "desc": "Quente agradável",
+          "use": "Dia de verão"
+        },
+        {
+          "href": "/28-c-to-f.html",
+          "temp": "28°C (82.4°F)",
+          "desc": "Quente",
+          "use": "Água e sombra ajudam"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Quente",
+          "use": "Água e sombra ajudam"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Comparação com o corpo humano"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 26°C pode ser agradável na rua com vento, mas dentro de casa, sem ventilação, a sensação sobe rápido."
+  },
+  "faq": [
+    {
+      "question": "26°C é frio ou calor?",
+      "answerHtml": "<p>26°C (78,8°F) já entra na faixa de dia quente.</p>"
+    },
+    {
+      "question": "Como converter 26°C para Fahrenheit?",
+      "answerHtml": "<p>A fórmula é: °F = (°C × 9/5) + 32. 26 vezes 1,8 dá 46,8; somando 32, o resultado é 78,8°F.</p>"
+    },
+    {
+      "question": "26°C é uma boa configuração para o ar-condicionado?",
+      "answerHtml": "<p>26°C costuma ser visto como um ajuste equilibrado do ar-condicionado.</p>"
+    },
+    {
+      "question": "O que vestir com 26°C?",
+      "answerHtml": "<p>Aqui já vale apostar em peças mais frescas:</p><ul><li>Roupa leve e fresca</li><li>Short, saia ou tecido fino</li><li>Boné, água e proteção solar</li></ul>"
+    },
+    {
+      "question": "26°C costuma ser mais fácil na rua do que dentro de casa?",
+      "answerHtml": "<p>Com vento, 26°C na rua pode ser suportável; em casa sem ventilação, a sensação térmica sobe bastante.</p>"
+    },
+    {
+      "question": "26°C é febre?",
+      "answerHtml": "<p>Não. Febre normalmente começa perto de 38°C. Se 26°C fosse temperatura corporal, estaria muito abaixo do normal.</p>"
+    }
+  ]
+}

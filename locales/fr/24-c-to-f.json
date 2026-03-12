@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "24 °C en Fahrenheit (75,2 °F) : ressenti, météo et tenue",
+    "description": "Convertissez 24 °C en 75,2 °F et comprenez comment cette température se ressent selon la météo et les vêtements."
+  },
+  "header": {
+    "title": "24 °C en Fahrenheit (75,2 °F)",
+    "tagline": "Outil gratuit pour convertir 24 °C en 75,2 °F avec un contexte clair sur le ressenti météo, la tenue et le confort."
+  },
+  "conversion": {
+    "intro": "24 °C correspondent à 75,2 °F."
+  },
+  "strategy": {
+    "keywords": "Convertissez 24 °C en 75,2 °F et comprenez comment cette température se ressent selon la météo et les vêtements."
+  },
+  "comfortGuide": {
+    "title": "Guide de ressenti pour 24 °C",
+    "subtitle": "Température douce ou déjà un peu chaude ?",
+    "intro": "24 °C (75,2 °F) paraît un peu plus chaud que la température ambiante classique. Dehors, c’est souvent agréable ; dedans, cela peut sembler légèrement chaud.",
+    "chart": {
+      "cold": {
+        "label": "Frais",
+        "value": "15-19°C",
+        "desc": "59-66.2°F<br>Matin plus frais"
+      },
+      "moderate": {
+        "label": "Confortable",
+        "value": "20-24°C",
+        "desc": "68-75.2°F<br>Sortie agréable"
+      },
+      "warm": {
+        "label": "Plus chaud",
+        "value": "25-31°C",
+        "desc": "77-87.8°F<br>Plus chaud à midi"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Température",
+        "description": "Ressenti",
+        "typicalUse": "Usage typique"
+      },
+      "rows": [
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Température ambiante",
+          "use": "Maison et bureau"
+        },
+        {
+          "href": "/22-c-to-f",
+          "temp": "22°C (71.6°F)",
+          "desc": "Confortable",
+          "use": "Travail assis ou détente"
+        },
+        {
+          "highlight": true,
+          "temp": "24°C (75.2°F)",
+          "desc": "Doux et un peu chaud",
+          "use": "Promenade, terrasse, sortie"
+        },
+        {
+          "href": "/26-c-to-f",
+          "temp": "26°C (78.8°F)",
+          "desc": "Chaud agréable",
+          "use": "Journée d’été légère"
+        },
+        {
+          "href": "/28-c-to-f.html",
+          "temp": "28°C (82.4°F)",
+          "desc": "Chaud",
+          "use": "Hydratation et ombre utiles"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Température corporelle normale",
+          "use": "Repère pour le corps humain"
+        }
+      ]
+    },
+    "note": "<strong>Note :</strong> à 24 °C, le soleil, l’ombre et le vent changent nettement le ressenti."
+  },
+  "faq": [
+    {
+      "question": "24 °C, c’est froid ou chaud ?",
+      "answerHtml": "<p>24 °C (75,2 °F) donne une sensation douce à légèrement chaude.</p>"
+    },
+    {
+      "question": "Comment convertir 24 °C en Fahrenheit ?",
+      "answerHtml": "<p>La formule est : °F = (°C × 9/5) + 32. 24 multiplié par 1,8 donne 43,2, puis on ajoute 32 pour obtenir 75,2 °F.</p>"
+    },
+    {
+      "question": "24 °C convient-il aux activités extérieures ?",
+      "answerHtml": "<p>24 °C convient bien à la marche, aux terrasses ou à une activité légère.</p>"
+    },
+    {
+      "question": "Que porter quand il fait 24 °C ?",
+      "answerHtml": "<p>À cette température, une tenue souple et légère fonctionne bien :</p><ul><li>T-shirt, chemise légère ou blouse</li><li>Pantalon léger ou robe fluide</li><li>Petite couche pour le soir</li></ul>"
+    },
+    {
+      "question": "À 24 °C, le soleil et l’ombre changent-ils beaucoup la sensation ?",
+      "answerHtml": "<p>Oui. En plein soleil, 24 °C paraît plus chaud ; avec de l’ombre et du vent, le ressenti redevient plus doux.</p>"
+    },
+    {
+      "question": "24 °C, est-ce une fièvre ?",
+      "answerHtml": "<p>Non. La fièvre commence généralement autour de 38 °C. Si 24 °C était une température corporelle, ce serait bien en dessous de la normale.</p>"
+    }
+  ]
+}

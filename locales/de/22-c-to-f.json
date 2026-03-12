@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "22°C in Fahrenheit (71,6°F): Raumtemperatur, Arbeit und Schlaf",
+    "description": "Wandle 22°C in 71,6°F um und prüfe, ob diese Temperatur für Wohnung, Büro oder Schlafzimmer angenehm ist."
+  },
+  "header": {
+    "title": "22°C in Fahrenheit (71,6°F)",
+    "tagline": "Kostenloser Umrechner für 22°C zu 71,6°F mit Einordnung, ob die Temperatur für Wohnen, Arbeiten oder Schlafen angenehm ist."
+  },
+  "conversion": {
+    "intro": "22°C entsprechen 71,6°F."
+  },
+  "strategy": {
+    "keywords": "Wandle 22°C in 71,6°F um und prüfe, ob diese Temperatur für Wohnung, Büro oder Schlafzimmer angenehm ist."
+  },
+  "comfortGuide": {
+    "title": "Komfort-Guide für 22°C innen",
+    "subtitle": "Eher ideal für Wohnung, Büro oder Schlafzimmer?",
+    "intro": "22°C (71,6°F) liegen oft im angenehmen Bereich für Innenräume. Viele empfinden diese Temperatur als ausgewogen und leicht nutzbar.",
+    "chart": {
+      "cold": {
+        "label": "Kühler",
+        "value": "12-17°C",
+        "desc": "53.6-62.6°F<br>Leichte Schicht bleibt sinnvoll"
+      },
+      "moderate": {
+        "label": "Angenehm",
+        "value": "20-23°C",
+        "desc": "68-73.4°F<br>Angenehm für Innenräume"
+      },
+      "warm": {
+        "label": "Wärmer",
+        "value": "24-29°C",
+        "desc": "75.2-84.2°F<br>Wird langsam wärmer"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatur",
+        "description": "Eindruck",
+        "typicalUse": "Typischer Einsatz"
+      },
+      "rows": [
+        {
+          "href": "/18-c-to-f.html",
+          "temp": "18°C (64.4°F)",
+          "desc": "Kühl",
+          "use": "Frische Morgen- oder Abendluft"
+        },
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Normale Raumtemperatur",
+          "use": "Wohnung und Büro"
+        },
+        {
+          "highlight": true,
+          "temp": "22°C (71.6°F)",
+          "desc": "Angenehm",
+          "use": "Gut für ruhige Tätigkeiten"
+        },
+        {
+          "href": "/25-c-to-f",
+          "temp": "25°C (77°F)",
+          "desc": "Sommerlich warm",
+          "use": "Sommerlicher Alltag"
+        },
+        {
+          "href": "/28-c-to-f.html",
+          "temp": "28°C (82.4°F)",
+          "desc": "Heiß",
+          "use": "Schatten und Wasser wichtig"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Normale Körpertemperatur",
+          "use": "Vergleich zur Körpertemperatur"
+        }
+      ]
+    },
+    "note": "<strong>Hinweis:</strong> In trockenen Räumen wirken 22°C oft neutral, bei höherer Luftfeuchtigkeit können sie deutlich wärmer erscheinen."
+  },
+  "faq": [
+    {
+      "question": "Sind 22°C eher kalt oder warm?",
+      "answerHtml": "<p>22°C (71,6°F) gelten meist als angenehm und weder deutlich kalt noch heiß.</p>"
+    },
+    {
+      "question": "Wie rechnet man 22°C in Fahrenheit um?",
+      "answerHtml": "<p>Die Formel lautet: °F = (°C × 9/5) + 32. 22 mal 1,8 ergibt 39,6; plus 32 sind es 71,6°F.</p>"
+    },
+    {
+      "question": "Sind 22°C gut zum Schlafen?",
+      "answerHtml": "<p>Für manche ja, für andere schon etwas warm. Wer kühl schläft, bevorzugt oft ein paar Grad weniger.</p>"
+    },
+    {
+      "question": "Was trägt man bei 22°C?",
+      "answerHtml": "<p>Meist reicht leichte Alltagskleidung:</p><ul><li>T-Shirt oder dünnes Langarmshirt</li><li>Jeans oder leichte Hose</li><li>Leichte Schicht für klimatisierte Räume</li></ul>"
+    },
+    {
+      "question": "Fühlen sich 22°C in trockener Luft anders an als in feuchter Wohnungsluft?",
+      "answerHtml": "<p>In trockener Luft wirken 22°C oft neutraler, bei hoher Luftfeuchtigkeit dagegen spürbar wärmer.</p>"
+    },
+    {
+      "question": "Sind 22°C Fieber?",
+      "answerHtml": "<p>Nein. Fieber beginnt meist erst in der Nähe von 38°C. Als Körpertemperatur wäre 22°C deutlich zu niedrig.</p>"
+    }
+  ]
+}

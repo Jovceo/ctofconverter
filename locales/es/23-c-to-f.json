@@ -1,0 +1,110 @@
+{
+  "seo": {
+    "title": "23 °C a Fahrenheit (73,4 °F): sensación térmica, clima y ropa",
+    "description": "Convierte 23 °C a 73,4 °F y entiende cómo se siente en primavera, otoño y salidas diarias."
+  },
+  "header": {
+    "title": "23 °C a Fahrenheit (73,4 °F)",
+    "tagline": "Herramienta gratuita para convertir 23 °C a 73,4 °F con contexto de clima, sensación térmica y ropa recomendada."
+  },
+  "conversion": {
+    "intro": "23 °C en Fahrenheit son 73,4 °F."
+  },
+  "strategy": {
+    "keywords": "Convierte 23 °C a 73,4 °F y entiende cómo se siente en primavera, otoño y salidas diarias."
+  },
+  "comfortGuide": {
+    "title": "Guía de sensación térmica para 23 °C",
+    "subtitle": "¿Se siente templado o ya algo cálido?",
+    "intro": "23 °C (73,4 °F) ya se siente algo más cálido que la temperatura ambiente clásica. Afuera resulta agradable; dentro puede parecer tibio.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "14-18°C",
+        "desc": "57.2-64.4°F<br>Mañana fresca"
+      },
+      "moderate": {
+        "label": "Cómodo",
+        "value": "20-23°C",
+        "desc": "68-73.4°F<br>Buena temperatura para salir"
+      },
+      "warm": {
+        "label": "Cálido",
+        "value": "24-30°C",
+        "desc": "75.2-86°F<br>Más cálido al mediodía"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensación",
+        "typicalUse": "Uso habitual"
+      },
+      "rows": [
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Temperatura ambiente",
+          "use": "Casa, oficina o estudio"
+        },
+        {
+          "href": "/22-c-to-f",
+          "temp": "22°C (71.6°F)",
+          "desc": "Cómodo",
+          "use": "Interior cómodo para la mayoría"
+        },
+        {
+          "highlight": true,
+          "temp": "23°C (73.4°F)",
+          "desc": "Templado",
+          "use": "Terraza, paseo y ropa ligera"
+        },
+        {
+          "href": "/26-c-to-f",
+          "temp": "26°C (78.8°F)",
+          "desc": "Cálido agradable",
+          "use": "Día de verano suave"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Comparación con el cuerpo humano"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> a 23 °C cambian mucho el sol, la sombra, el viento y la humedad."
+  },
+  "faq": [
+    {
+      "question": "¿23 °C se siente frío o calor?",
+      "answerHtml": "<p>23 °C (73,4 °F) suele sentirse templado tirando a cálido y bastante agradable para salir.</p>"
+    },
+    {
+      "question": "¿Cómo convierto 23 °C a Fahrenheit?",
+      "answerHtml": "<p>La fórmula es: °F = (°C × 9/5) + 32. Si multiplicas 23 por 1,8 obtienes 41,4; al sumar 32 llegas a 73,4 °F.</p>"
+    },
+    {
+      "question": "¿23 °C se parece más a primavera u otoño?",
+      "answerHtml": "<p>En gran parte del mundo hispano, 23 °C recuerda a un día templado de primavera o de inicios de otoño.</p>"
+    },
+    {
+      "question": "¿Qué ropa conviene con 23 °C?",
+      "answerHtml": "<p>En esta franja suele funcionar mejor una combinación ligera:</p><ul><li>Camiseta, blusa o camisa ligera</li><li>Pantalón fino, falda o vestido cómodo</li><li>Una capa ligera si anochece o corre aire</li></ul>"
+    },
+    {
+      "question": "¿A 23 °C cambia mucho la sensación entre sol y sombra?",
+      "answerHtml": "<p>Sí. Con sol directo 23 °C puede sentirse bastante más cálido, mientras que en sombra o con viento se vuelve más suave.</p>"
+    },
+    {
+      "question": "¿23 °C es fiebre?",
+      "answerHtml": "<p>No. La fiebre humana suele empezar cerca de 38 °C. Si 23 °C fuera temperatura corporal, estaría muy por debajo de lo normal.</p>"
+    }
+  ]
+}
