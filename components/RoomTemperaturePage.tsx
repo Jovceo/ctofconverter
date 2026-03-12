@@ -172,6 +172,13 @@ export default function RoomTemperaturePage({
   const strategy = useMemo(() => {
     const baseStrategy = generateContentStrategy(celsius, pageT.strategy?.keywords || getDefaultKeywords(celsius));
 
+    baseStrategy.meta = {
+      ...baseStrategy.meta,
+      description: pageT.seo?.description || baseStrategy.meta?.description,
+      ogDescription: pageT.seo?.description || baseStrategy.meta?.ogDescription,
+      title: pageT.seo?.title || baseStrategy.meta?.title,
+    };
+
     baseStrategy.insights = [
       {
         type: 'fact',
