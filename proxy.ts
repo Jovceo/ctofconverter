@@ -47,10 +47,6 @@ export function proxy(request: NextRequest) {
 export const config = {
   matcher: [
     {
-      source: '/en/:path+',
-      locale: false,
-    },
-    {
       source: '/:path*',
       has: [
         {
