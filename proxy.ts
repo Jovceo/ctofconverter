@@ -45,5 +45,23 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: '/:path*',
+  matcher: [
+    {
+      source: '/en',
+      locale: false,
+    },
+    {
+      source: '/en/:path*',
+      locale: false,
+    },
+    {
+      source: '/:path*',
+      has: [
+        {
+          type: 'host',
+          value: 'www.ctofconverter.com',
+        },
+      ],
+    },
+  ],
 };
