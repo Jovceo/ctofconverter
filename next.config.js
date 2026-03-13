@@ -121,19 +121,6 @@ const nextConfig = {
 
   async redirects() {
     return [
-      // Canonical host/protocol redirects
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.ctofconverter.com',
-          },
-        ],
-        destination: 'https://ctofconverter.com/:path*',
-        locale: false,
-        statusCode: 301,
-      },
       ...legacyAliasRedirects,
       ...migratedHtmlRedirects,
       ...migratedIndexHtmlRedirects,
