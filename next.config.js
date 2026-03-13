@@ -2,6 +2,43 @@ const migratedRoutes = require('./config/migrated-routes.json');
 
 const migratedHtmlRoutePattern = migratedRoutes.htmlRoutes.join('|');
 const migratedIndexHtmlRoutePattern = migratedRoutes.indexHtmlRoutes.join('|');
+const legacyAliasRedirects = [
+  {
+    source: '/about',
+    destination: '/about-us',
+    statusCode: 301,
+  },
+  {
+    source: '/formula',
+    destination: '/c-to-f-formula',
+    statusCode: 301,
+  },
+  {
+    source: '/index.html',
+    destination: '/',
+    statusCode: 301,
+  },
+  {
+    source: '/index2.html',
+    destination: '/',
+    statusCode: 301,
+  },
+  {
+    source: '/body-temperature-conversion-chart/:path*',
+    destination: '/body-temperature-chart-fever-guide',
+    statusCode: 301,
+  },
+  {
+    source: '/oven-temperature-chart/:path*',
+    destination: '/fan-oven-conversion-chart',
+    statusCode: 301,
+  },
+  {
+    source: '/oven-temperature-conversion-chart/:path*',
+    destination: '/fan-oven-conversion-chart',
+    statusCode: 301,
+  },
+];
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -80,6 +117,20 @@ const nextConfig = {
         destination: 'https://ctofconverter.com/:path*',
         statusCode: 301,
       },
+      // Prevent duplicate default-locale URLs from staying indexable.
+      {
+        source: '/en',
+        destination: '/',
+        locale: false,
+        statusCode: 301,
+      },
+      {
+        source: '/en/:path*',
+        destination: '/:path*',
+        locale: false,
+        statusCode: 301,
+      },
+      ...legacyAliasRedirects,
       // 1. Surgical Redirects: Only for pages that exist in Next.js (pages/ directory)
       {
         // Redirect top-level legacy .html pages that already have Next.js replacements.
