@@ -134,23 +134,6 @@ const nextConfig = {
         locale: false,
         statusCode: 301,
       },
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'ctofconverter.com',
-          },
-          {
-            type: 'header',
-            key: 'x-forwarded-proto',
-            value: 'http',
-          },
-        ],
-        destination: 'https://ctofconverter.com/:path*',
-        locale: false,
-        statusCode: 301,
-      },
       ...legacyAliasRedirects,
       ...migratedHtmlRedirects,
       ...migratedIndexHtmlRedirects,
