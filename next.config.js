@@ -75,6 +75,7 @@ const migratedIndexHtmlRedirects = expandLocalizedRedirect({
 const nextConfig = {
   // 基础配置
   reactStrictMode: true,
+  skipProxyUrlNormalize: true,
 
   // Enable internationalization - Support multiple locales
   i18n: {
@@ -154,7 +155,7 @@ const nextConfig = {
       ...migratedHtmlRedirects,
       ...migratedIndexHtmlRedirects,
       // Do not add a generic `/en/:path* -> /:path*` redirect here.
-      // Keep default-locale deduplication at the edge layer (vercel.json), otherwise
+      // Keep default-locale deduplication in request-level proxy logic, otherwise
       // Next's default-locale routing turns bare English URLs into self-redirect loops.
       // Note: All other static .html files (e.g., 13-c-to-f.html) in public/ will be served as-is.
       // Note: Trailing slash normalization is handled natively by Next.js (308 redirect).
