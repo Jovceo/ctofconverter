@@ -154,7 +154,8 @@ const nextConfig = {
       ...migratedHtmlRedirects,
       ...migratedIndexHtmlRedirects,
       // Do not add a generic `/en/:path* -> /:path*` redirect here.
-      // With Next's default-locale routing, that turns bare English URLs into self-redirect loops.
+      // Keep default-locale deduplication at the edge layer (vercel.json), otherwise
+      // Next's default-locale routing turns bare English URLs into self-redirect loops.
       // Note: All other static .html files (e.g., 13-c-to-f.html) in public/ will be served as-is.
       // Note: Trailing slash normalization is handled natively by Next.js (308 redirect).
     ];
