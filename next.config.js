@@ -1,44 +1,75 @@
 const migratedRoutes = require('./config/migrated-routes.json');
 
+const supportedLocales = ['en', 'zh', 'es', 'hi', 'ar', 'ja', 'fr', 'de', 'id', 'pt-br'];
+const defaultLocale = 'en';
+const nonDefaultLocalePattern = supportedLocales
+  .filter((locale) => locale !== defaultLocale)
+  .map((locale) => locale.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&'))
+  .join('|');
+
 const migratedHtmlRoutePattern = migratedRoutes.htmlRoutes.join('|');
 const migratedIndexHtmlRoutePattern = migratedRoutes.indexHtmlRoutes.join('|');
+
+function prefixLocalizedDestination(destination) {
+  return destination === '/' ? '/:locale' : `/:locale${destination}`;
+}
+
+function expandLocalizedRedirect({ source, destination, statusCode = 301 }) {
+  const redirects = [
+    {
+      source,
+      destination,
+      locale: false,
+      statusCode,
+    },
+    {
+      source: `/${defaultLocale}${source}`,
+      destination,
+      locale: false,
+      statusCode,
+    },
+  ];
+
+  if (nonDefaultLocalePattern) {
+    redirects.push({
+      source: `/:locale(${nonDefaultLocalePattern})${source}`,
+      destination: prefixLocalizedDestination(destination),
+      locale: false,
+      statusCode,
+    });
+  }
+
+  return redirects;
+}
+
 const legacyAliasRedirects = [
-  {
-    source: '/about',
-    destination: '/about-us',
-    statusCode: 301,
-  },
-  {
-    source: '/formula',
-    destination: '/c-to-f-formula',
-    statusCode: 301,
-  },
-  {
-    source: '/index.html',
-    destination: '/',
-    statusCode: 301,
-  },
-  {
-    source: '/index2.html',
-    destination: '/',
-    statusCode: 301,
-  },
+  { source: '/about', destination: '/about-us' },
+  { source: '/formula', destination: '/c-to-f-formula' },
+  { source: '/index.html', destination: '/' },
+  { source: '/index2.html', destination: '/' },
   {
     source: '/body-temperature-conversion-chart/:path*',
     destination: '/body-temperature-chart-fever-guide',
-    statusCode: 301,
   },
   {
     source: '/oven-temperature-chart/:path*',
     destination: '/fan-oven-conversion-chart',
-    statusCode: 301,
   },
   {
     source: '/oven-temperature-conversion-chart/:path*',
     destination: '/fan-oven-conversion-chart',
-    statusCode: 301,
   },
-];
+].flatMap(expandLocalizedRedirect);
+
+const migratedHtmlRedirects = expandLocalizedRedirect({
+  source: `/:path(${migratedHtmlRoutePattern}).html`,
+  destination: '/:path',
+});
+
+const migratedIndexHtmlRedirects = expandLocalizedRedirect({
+  source: `/:path(${migratedIndexHtmlRoutePattern})/index.html`,
+  destination: '/:path',
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -47,8 +78,8 @@ const nextConfig = {
 
   // Enable internationalization - Support multiple locales
   i18n: {
-    locales: ['en', 'zh', 'es', 'hi', 'ar', 'ja', 'fr', 'de', 'id', 'pt-br'],
-    defaultLocale: 'en',
+    locales: supportedLocales,
+    defaultLocale,
     localeDetection: false,
   },
 
@@ -99,6 +130,7 @@ const nextConfig = {
           },
         ],
         destination: 'https://ctofconverter.com/:path*',
+        locale: false,
         statusCode: 301,
       },
       {
@@ -115,8 +147,12 @@ const nextConfig = {
           },
         ],
         destination: 'https://ctofconverter.com/:path*',
+        locale: false,
         statusCode: 301,
       },
+      ...legacyAliasRedirects,
+      ...migratedHtmlRedirects,
+      ...migratedIndexHtmlRedirects,
       // Prevent duplicate default-locale URLs from staying indexable.
       {
         source: '/en',
@@ -128,20 +164,6 @@ const nextConfig = {
         source: '/en/:path*',
         destination: '/:path*',
         locale: false,
-        statusCode: 301,
-      },
-      ...legacyAliasRedirects,
-      // 1. Surgical Redirects: Only for pages that exist in Next.js (pages/ directory)
-      {
-        // Redirect top-level legacy .html pages that already have Next.js replacements.
-        source: `/:path(${migratedHtmlRoutePattern}).html`,
-        destination: '/:path',
-        statusCode: 301,
-      },
-      {
-        // Redirect legacy section index pages that already have Next.js replacements.
-        source: `/:path(${migratedIndexHtmlRoutePattern})/index.html`,
-        destination: '/:path',
         statusCode: 301,
       },
       // Note: All other static .html files (e.g., 13-c-to-f.html) in public/ will be served as-is.
