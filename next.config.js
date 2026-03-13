@@ -153,19 +153,8 @@ const nextConfig = {
       ...legacyAliasRedirects,
       ...migratedHtmlRedirects,
       ...migratedIndexHtmlRedirects,
-      // Prevent duplicate default-locale URLs from staying indexable.
-      {
-        source: '/en',
-        destination: '/',
-        locale: false,
-        statusCode: 301,
-      },
-      {
-        source: '/en/:path*',
-        destination: '/:path*',
-        locale: false,
-        statusCode: 301,
-      },
+      // Do not add a generic `/en/:path* -> /:path*` redirect here.
+      // With Next's default-locale routing, that turns bare English URLs into self-redirect loops.
       // Note: All other static .html files (e.g., 13-c-to-f.html) in public/ will be served as-is.
       // Note: Trailing slash normalization is handled natively by Next.js (308 redirect).
     ];
