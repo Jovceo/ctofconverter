@@ -5,6 +5,7 @@ import { ReactNode, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import { useCommonTranslation } from '../utils/common-i18n';
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES, HREFLANG_MAP } from '../utils/locale-config';
+import { AlternateLanguageLinksContext } from './AlternateLanguageLinksContext';
 
 export interface SEOProps {
   title?: string;
@@ -97,6 +98,29 @@ export default function Layout({ children, seo }: LayoutProps) {
     locale: DEFAULT_LOCALE,
     href: canonicalUrl,
   };
+  const visibleAlternateLinks = useMemo(() => {
+    const sourceLinks = seo?.alternates && seo.alternates.length > 0 ? seo.alternates : alternateLinks;
+    const deduped = new Map<string, { href: string; hreflang: string; locale?: string }>();
+
+    sourceLinks.forEach((link) => {
+      if (link.hreflang === 'x-default') {
+        return;
+      }
+
+      const localeKey =
+        link.locale ||
+        Object.keys(HREFLANG_MAP).find((key) => HREFLANG_MAP[key] === link.hreflang) ||
+        link.hreflang.toLowerCase();
+
+      deduped.set(localeKey, {
+        href: link.href,
+        hreflang: link.hreflang,
+        locale: localeKey,
+      });
+    });
+
+    return Array.from(deduped.values());
+  }, [alternateLinks, seo?.alternates]);
 
   // SEO Helpers: Prioritize props over default translations
   const title = seo?.title || meta.defaultTitle || 'Celsius to Fahrenheit | °C to °F Converter';
@@ -166,7 +190,9 @@ export default function Layout({ children, seo }: LayoutProps) {
       <a className="sr-only sr-only-focusable" href="#main-content">
         Skip to main content
       </a>
-      {children}
+      <AlternateLanguageLinksContext.Provider value={visibleAlternateLinks}>
+        {children}
+      </AlternateLanguageLinksContext.Provider>
     </>
   );
 }

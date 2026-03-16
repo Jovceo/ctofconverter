@@ -5,15 +5,15 @@ import { useCommonTranslation } from '../utils/common-i18n';
 
 const LOCALES = [
   { code: 'en', label: 'English' },
-  { code: 'zh', label: '中文' },
-  { code: 'es', label: 'Español' },
-  { code: 'hi', label: 'हिन्दी' },
-  { code: 'ar', label: 'العربية' },
-  { code: 'ja', label: '日本語' },
-  { code: 'fr', label: 'Français' },
-  { code: 'de', label: 'Deutsch' },
-  { code: 'id', label: 'Bahasa Indonesia' },
-  { code: 'pt-br', label: 'Português (Brasil)' },
+  { code: 'zh', label: 'Chinese' },
+  { code: 'es', label: 'Spanish' },
+  { code: 'hi', label: 'Hindi' },
+  { code: 'ar', label: 'Arabic' },
+  { code: 'ja', label: 'Japanese' },
+  { code: 'fr', label: 'French' },
+  { code: 'de', label: 'German' },
+  { code: 'id', label: 'Indonesian' },
+  { code: 'pt-br', label: 'Portuguese (Brazil)' },
 ];
 
 export default function LanguageSwitcher() {
@@ -39,13 +39,13 @@ export default function LanguageSwitcher() {
         className="language-select"
         value={currentLocale}
         onChange={handleChange}
-      >
-        {LOCALES.map((lang) => (
-          <option key={lang.code} value={lang.code}>
-            {lang.label}
-          </option>
-        ))}
-      </select>
+        >
+          {LOCALES.map((lang) => (
+            <option key={lang.code} value={lang.code}>
+              {lang.label}
+            </option>
+          ))}
+        </select>
       <style jsx>{`
         .language-switcher {
           display: flex;
@@ -79,4 +79,3 @@ export default function LanguageSwitcher() {
     </div>
   );
 }
-
