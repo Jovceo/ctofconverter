@@ -19,7 +19,7 @@
         "title": "Temperature Scale Comparison",
         "subtitle": "Key Temperature Points Across Scales",
         "intro": "0°C (32°F) is a fundamental reference point across temperature scales. Here's how it compares to other important temperatures:",
-        "chartLink": "For a comprehensive view of temperature conversions across different values, check out our <a href=\"https://ctofconverter.com/celsius-to-fahrenheit-chart/\" target=\"_blank\" rel=\"noopener noreferrer\">Celsius to Fahrenheit Chart</a>.",
+        "chartLink": "For a comprehensive view of temperature conversions across different values, check out our <a href=\"/celsius-to-fahrenheit-chart\" target=\"_blank\" rel=\"noopener noreferrer\">Celsius to Fahrenheit Chart</a>.",
         "scales": {
             "celsius": "Celsius (°C)",
             "fahrenheit": "Fahrenheit (°F)",

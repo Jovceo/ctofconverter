@@ -88,10 +88,15 @@ function normalizeHtmlLinks(html: string, locale: string): string {
   });
 }
 
-function renderTableRows(rows: GuideRow[] = []): string {
+function renderTableRows(rows: GuideRow[] = [], locale: string): string {
   return rows
     .map((row) => {
-      const temperature = row.href ? `<a href="${row.href}">${row.temp || ''}</a>` : row.temp || '';
+      const normalizedHref = row.href ? normalizeMigratedUrl(row.href) : '';
+      const resolvedHref =
+        normalizedHref.startsWith('/') && !normalizedHref.endsWith('.html')
+          ? getLocalizedLink(normalizedHref, locale)
+          : normalizedHref;
+      const temperature = row.href ? `<a href="${resolvedHref}">${row.temp || ''}</a>` : row.temp || '';
       const rowStyle = row.highlight ? ' style="background-color: #e8f5e9;"' : '';
 
       return `
@@ -105,7 +110,7 @@ function renderTableRows(rows: GuideRow[] = []): string {
     .join('');
 }
 
-function buildComfortGuideHtml(guide?: RoomTemperaturePageTranslation['comfortGuide']): string {
+function buildComfortGuideHtml(guide: RoomTemperaturePageTranslation['comfortGuide'] | undefined, locale: string): string {
   const rows = guide?.table?.rows || [];
 
   return `
@@ -141,7 +146,7 @@ function buildComfortGuideHtml(guide?: RoomTemperaturePageTranslation['comfortGu
         </tr>
       </thead>
       <tbody>
-        ${renderTableRows(rows)}
+        ${renderTableRows(rows, locale)}
       </tbody>
     </table>
 
@@ -183,7 +188,7 @@ export default function RoomTemperaturePage({
       {
         type: 'fact',
         title: pageT.comfortGuide?.title || 'Temperature comfort guide',
-        content: buildComfortGuideHtml(pageT.comfortGuide),
+        content: buildComfortGuideHtml(pageT.comfortGuide, locale),
       },
     ];
 

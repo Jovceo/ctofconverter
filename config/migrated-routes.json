@@ -37,7 +37,8 @@
     "fahrenheit-to-celsius",
     "fan-oven-conversion-chart",
     "temperature-conversion-challenge",
-    "body-temperature-chart-fever-guide"
+    "body-temperature-chart-fever-guide",
+    "fever-temperature-chart"
   ],
   "indexHtmlRoutes": [
     "c-to-f-calculator",
