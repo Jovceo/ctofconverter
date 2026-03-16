@@ -104,7 +104,7 @@
     },
     {
       "question": "How do I convert 23\u00b0C to Fahrenheit in my head?",
-      "answerHtml": "<p>Here's a quick mental calculation method:</p><ol><li>Double the Celsius value: 23 \u00d7 2 = 46</li><li>Subtract 10%: 46 - 4.6 = 41.4</li><li>Add 32: 41.4 + 32 = 73.4\u00b0F</li></ol><p>This gives you the exact conversion of 73.4\u00b0F.</p><p>For more conversion techniques, check our <a href=\"https://ctofconverter.com/c-to-f-formula\">C to F formula guide</a>.</p>"
+      "answerHtml": "<p>Here's a quick mental calculation method:</p><ol><li>Double the Celsius value: 23 \u00d7 2 = 46</li><li>Subtract 10%: 46 - 4.6 = 41.4</li><li>Add 32: 41.4 + 32 = 73.4\u00b0F</li></ol><p>This gives you the exact conversion of 73.4\u00b0F.</p><p>For more conversion techniques, check our <a href=\"/c-to-f-formula\">C to F formula guide</a>.</p>"
     }
   ]
 }

@@ -10,7 +10,7 @@ interface ConversionCard {
 
 const conversionCards: ConversionCard[] = [
   { title: '38.5°C to Fahrenheit (101.7°F)', url: 'https://ctofconverter.com/38-5-c-to-f.html', date: '2025-11-11' },
-  { title: '36.5°C to Fahrenheit (97.7°F)', url: 'https://ctofconverter.com/36-5-c-to-f.html', date: '2025-11-05' },
+  { title: '36.5°C to Fahrenheit (97.7°F)', url: '/36-5-c-to-f', date: '2025-11-05' },
   { title: '36.8°C to Fahrenheit (98.24°F)', url: 'https://ctofconverter.com/36-8-c-to-f.html', date: '2025-10-28' },
   { title: '90°C to Fahrenheit (162°F)', url: 'https://ctofconverter.com/90-c-to-f.html', date: '2025-10-27' },
   { title: '38.2°C to Fahrenheit (100.76°F)', url: 'https://ctofconverter.com/38-2-c-to-f.html', date: '2025-10-26' },
@@ -28,7 +28,7 @@ const conversionCards: ConversionCard[] = [
   { title: '105°C to Fahrenheit (221°F)', url: '105-c-to-f.html', date: '2025-05-13' },
   { title: '73°C to Fahrenheit (163.4°F)', url: '73-c-to-f.html', date: '2025-05-09' },
   { title: '210°C to Fahrenheit (410°F)', url: '210-c-to-f.html', date: '2025-05-08' },
-  { title: '39°C to Fahrenheit (102.2°F)', url: '39-c-to-f.html', date: '2025-05-06' },
+  { title: '39°C to Fahrenheit (102.2°F)', url: '/39-c-to-f', date: '2025-05-06' },
   { title: '76°C to Fahrenheit (168.8°F)', url: 'https://ctofconverter.com/76-c-to-f.html', date: '2025-04-25' },
   { title: '48°C to Fahrenheit (118.4°F)', url: 'https://ctofconverter.com/48-c-to-f.html', date: '2025-04-24' },
   { title: '36.7°C to Fahrenheit (98.06°F)', url: 'https://ctofconverter.com/36-7-c-to-f.html', date: '2025-04-14' },
