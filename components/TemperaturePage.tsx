@@ -867,7 +867,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   const alternates = useMemo(() => {
     const locales = alternateLocales && alternateLocales.length > 0 ? alternateLocales : SUPPORTED_LOCALES;
     // Add x-default (pointing to English/Default URL)
-    const links = [
+    const links: Array<{ href: string; hreflang: string; locale?: string }> = [
       {
         href: generatePageUrl(celsius, 'en'),
         hreflang: 'x-default'
@@ -877,7 +877,8 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
     locales.forEach(l => {
       links.push({
         href: generatePageUrl(celsius, l),
-        hreflang: HREFLANG_MAP[l] || l
+        hreflang: HREFLANG_MAP[l] || l,
+        locale: l
       });
     });
 
