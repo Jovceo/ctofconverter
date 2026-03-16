@@ -88,7 +88,7 @@
     },
     {
       "question": "Is 25\u00b0C a fever temperature?",
-      "answerHtml": "<p><strong>No, 25\u00b0C is not a fever temperature.</strong> Normal human body temperature ranges from 36.5\u00b0C to 37.5\u00b0C (97.7\u00b0F to 99.5\u00b0F). A fever typically starts at 38\u00b0C (100.4\u00b0F). If you're concerned about body temperature, check our <a href=\"https://ctofconverter.com/body-temperature-chart-fever-guide\">body temperature chart and fever guide</a> for more information.</p>"
+      "answerHtml": "<p><strong>No, 25\u00b0C is not a fever temperature.</strong> Normal human body temperature ranges from 36.5\u00b0C to 37.5\u00b0C (97.7\u00b0F to 99.5\u00b0F). A fever typically starts at 38\u00b0C (100.4\u00b0F). If you're concerned about body temperature, check our <a href=\"/body-temperature-chart-fever-guide\">body temperature chart and fever guide</a> for more information.</p>"
     },
     {
       "question": "What should I wear in 25\u00b0C weather?",
@@ -104,7 +104,7 @@
     },
     {
       "question": "What other common temperatures are near 25\u00b0C?",
-      "answerHtml": "<p>Common nearby temperatures include:</p><ul><li><a href=\"https://ctofconverter.com/20-c-to-f\">20\u00b0C = 68\u00b0F</a> - Standard room temperature</li><li><a href=\"https://ctofconverter.com/22-c-to-f.html\">22\u00b0C = 71.6\u00b0F</a> - Comfortable indoor temperature</li><li><a href=\"https://ctofconverter.com/30-c-to-f.html\">30\u00b0C = 86\u00b0F</a> - Warm summer day</li></ul>"
+      "answerHtml": "<p>Common nearby temperatures include:</p><ul><li><a href=\"/20-c-to-f\">20\u00b0C = 68\u00b0F</a> - Standard room temperature</li><li><a href=\"/22-c-to-f\">22\u00b0C = 71.6\u00b0F</a> - Comfortable indoor temperature</li><li><a href=\"https://ctofconverter.com/30-c-to-f.html\">30\u00b0C = 86\u00b0F</a> - Warm summer day</li></ul>"
     }
   ]
 }
