@@ -367,11 +367,17 @@ export function useTranslation(page?: string) {
 }
 
 export function getLocalizedLink(path: string, locale: string): string {
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+
   if (locale === DEFAULT_LOCALE) {
-    return path.startsWith('/') ? path : `/${path}`;
+    return normalizedPath;
   }
-  const cleanPath = path.startsWith('/') ? path.substring(1) : path;
-  return `/${locale}/${cleanPath}`;
+
+  if (normalizedPath === '/') {
+    return `/${locale}`;
+  }
+
+  return `/${locale}${normalizedPath}`;
 }
 
 export function getDisplayLocale(locale: string): string {
