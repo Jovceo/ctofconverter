@@ -47,7 +47,7 @@ export const COMMON_TRANSLATIONS: Record<string, any> = {
 
 export const HREFLANG_MAP: Record<string, string> = {
   en: 'en',
-  zh: 'zh-CN',
+  zh: 'zh-Hans',
   es: 'es',
   hi: 'hi',
   ar: 'ar',
