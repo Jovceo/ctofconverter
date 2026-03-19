@@ -81,6 +81,23 @@
     },
     "note": "<strong>Nota:</strong> 26 °C puede sentirse bien con brisa, pero en un piso cerrado suele parecer bastante más cálido."
   },
+  "practicalApplications": {
+    "title": "26 °C (78,8 °F) ya se acerca a un calor suave de verano",
+    "cards": [
+      {
+        "title": "Calor de mediodía",
+        "body": "Con sol directo, 26 °C ya deja de sentirse simplemente agradable y empieza a notarse claramente cálido, sobre todo a mediodía o primera hora de la tarde."
+      },
+      {
+        "title": "El famoso aire a 26 °C",
+        "body": "Mucha gente asocia 26 °C con un ajuste razonable del aire acondicionado. Suele verse como un equilibrio entre confort y ahorro, aunque depende mucho de la humedad."
+      },
+      {
+        "title": "Moverse con ropa fresca",
+        "body": "Para caminar, hacer recados o moverse por la ciudad, conviene ropa transpirable, agua y algo de protección solar si vas a pasar tiempo al aire libre."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "¿26 °C se siente frío o calor?",

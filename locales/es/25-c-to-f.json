@@ -81,6 +81,23 @@
     },
     "note": "<strong>Nota:</strong> 25 °C puede sentirse bien con brisa, pero en un piso cerrado suele parecer bastante más cálido."
   },
+  "practicalApplications": {
+    "title": "25 °C (77 °F) ya transmite sensación clara de verano",
+    "cards": [
+      {
+        "title": "Tarde de verano y exteriores",
+        "body": "25 °C encaja muy bien con terrazas, paseo al atardecer, parque o planes tranquilos al aire libre. Ya pide ropa fresca y un ritmo más veraniego."
+      },
+      {
+        "title": "Aire acondicionado y ventilación",
+        "body": "En interior, 25 °C suele marcar el punto en el que mucha gente empieza a valorar ventilador, sombra o aire acondicionado suave para mantenerse cómoda."
+      },
+      {
+        "title": "Piscina, playa y ocio",
+        "body": "A esta temperatura el ambiente ya acompaña bien para piscina, playa o paseo marítimo. Gafas de sol, agua y protección solar ganan importancia."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "¿25 °C se siente frío o calor?",

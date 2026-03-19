@@ -1,0 +1,115 @@
+{
+  "seo": {
+    "title": "28°C to Fahrenheit (82.4°F) | Conversion Guide & Calculator",
+    "description": "Convert 28 degrees Celsius to Fahrenheit quickly. Learn that 28°C equals 82.4°F, see the calculation steps, and understand how this temperature feels for summer days and warm nights."
+  },
+  "header": {
+    "title": "28°C to Fahrenheit (28 Degrees Celsius to °F)",
+    "tagline": "Free online temperature conversion tool that instantly converts 28 degrees Celsius (28°C) to degrees Fahrenheit (°F), with conversion formulas and detailed steps."
+  },
+  "conversion": {
+    "intro": "28°C in Fahrenheit is 82.4°F."
+  },
+  "strategy": {
+    "keywords": "28 celsius to fahrenheit calculator warm day summer temperature weather conversion"
+  },
+  "comfortGuide": {
+    "title": "28°C summer comfort guide",
+    "subtitle": "Warm day, hot room, or just right outside?",
+    "intro": "28°C (82.4°F) is clearly warm. Outdoors many people still find it pleasant with shade and light clothing. Indoors, especially at night or in closed rooms, it can start to feel hot.",
+    "chart": {
+      "cold": {
+        "label": "Cool",
+        "value": "16-20°C",
+        "desc": "60.8-68°F<br>Fresh air and a light layer"
+      },
+      "moderate": {
+        "label": "Comfortable",
+        "value": "21-24°C",
+        "desc": "69.8-75.2°F<br>More typical indoor comfort"
+      },
+      "warm": {
+        "label": "Warm to hot",
+        "value": "25-31°C",
+        "desc": "77-87.8°F<br>Shade and airflow help"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "24°C (75.2°F)",
+          "desc": "Warm but easy",
+          "use": "Comfortable walking and open-window weather",
+          "href": "/24-c-to-f"
+        },
+        {
+          "temp": "26°C (78.8°F)",
+          "desc": "Warm summer feel",
+          "use": "Outdoor comfort with light clothes",
+          "href": "/26-c-to-f"
+        },
+        {
+          "temp": "28°C (82.4°F)",
+          "desc": "Warm day",
+          "use": "Summer afternoons and warmer indoor spaces",
+          "highlight": true
+        },
+        {
+          "temp": "30°C (86°F)",
+          "desc": "Hot",
+          "use": "Cooling and hydration become more important",
+          "href": "/30-c-to-f.html"
+        },
+        {
+          "temp": "32°C (89.6°F)",
+          "desc": "Very hot",
+          "use": "Limit intense outdoor activity at midday",
+          "href": "/32-c-to-f.html"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normal body temperature",
+          "use": "Body-temperature comparison",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 28°C often feels much better with shade, wind, or lower humidity. In sun-heavy cities or humid regions it can feel noticeably hotter."
+  },
+  "faq": [
+    {
+      "question": "What is 28 degrees Celsius in Fahrenheit?",
+      "answerHtml": "<p>28°C equals 82.4°F. Using °F = (°C × 9/5) + 32, you get 28 × 1.8 = 50.4, then 50.4 + 32 = 82.4°F.</p>"
+    },
+    {
+      "question": "Is 28°C hot or cold?",
+      "answerHtml": "<p>28°C (82.4°F) is usually warm to hot, depending on humidity and what climate you are used to. In dry weather it can feel pleasant; in humid weather it often feels noticeably hotter.</p>"
+    },
+    {
+      "question": "What should I wear in 28°C weather?",
+      "answerHtml": "<p>At 28°C, light and breathable clothing is usually best:</p><ul><li>T-shirts, airy shirts, or summer dresses</li><li>Shorts, skirts, or thin trousers</li><li>Sunscreen, sunglasses, and water if you will be outside for long</li></ul>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "28°C (82.4°F) in daily life",
+    "cards": [
+      {
+        "title": "Warm day, warmer night",
+        "body": "At 28°C, daytime can still feel enjoyable, but the evening often stops feeling neutral. Bedrooms usually hold heat longer than living rooms do."
+      },
+      {
+        "title": "Sleep comfort starts dropping",
+        "body": "Many people begin sleeping less comfortably around this point, especially with humidity or weak airflow. Lighter bedding and moving air help a lot."
+      },
+      {
+        "title": "Cooling makes a real difference",
+        "body": "A fan, open window, or air conditioning matters much more at 28°C than it does in milder weather."
+      }
+    ]
+  }
+}

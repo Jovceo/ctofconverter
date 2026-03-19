@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "32°C ke 89,6°F: cuaca hangat, AC, dan kebutuhan musim panas",
+    "description": "Ubah 32°C ke 89,6°F dan lihat apakah suhu ini cocok untuk cuaca tropis hangat, AC, dan aktivitas luar ruang."
+  },
+  "header": {
+    "title": "32°C ke 89,6°F",
+    "tagline": "Konverter gratis untuk mengubah 32°C ke 89,6°F dengan panduan soal cuaca hangat, kipas, AC, dan pakaian ringan."
+  },
+  "conversion": {
+    "intro": "32°C sama dengan 89,6°F."
+  },
+  "strategy": {
+    "keywords": "Ubah 32°C ke 89,6°F dan lihat apakah suhu ini cocok untuk cuaca tropis hangat, AC, dan aktivitas luar ruang."
+  },
+  "comfortGuide": {
+    "title": "Panduan cuaca hangat untuk 32°C",
+    "subtitle": "Masih enak tanpa AC atau sudah perlu pendinginan?",
+    "intro": "32°C (89,6°F) sudah terasa seperti hari hangat. Dengan pakaian ringan masih nyaman, tetapi di ruangan tanpa sirkulasi orang sering memilih kipas atau AC.",
+    "chart": {
+      "cold": {
+        "label": "Lebih sejuk",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Lebih nyaman kalau ada angin"
+      },
+      "moderate": {
+        "label": "Nyaman",
+        "value": "23-27°C",
+        "desc": "73.4-80.6°F<br>Masih cukup nyaman"
+      },
+      "warm": {
+        "label": "Lebih hangat",
+        "value": "28-35°C",
+        "desc": "82.4-95°F<br>Hangat khas musim panas"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Suhu",
+        "description": "Kesan",
+        "typicalUse": "Penggunaan umum"
+      },
+      "rows": [
+        {
+          "href": "/28-c-to-f",
+          "temp": "28°C (82.4°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/30-c-to-f",
+          "temp": "30°C (86°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "highlight": true,
+          "temp": "32°C (89.6°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/33-c-to-f.html",
+          "temp": "33°C (91.4°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/35-c-to-f.html",
+          "temp": "35°C (95°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        }
+      ]
+    },
+    "note": "<strong>Catatan:</strong> 32°C bisa terasa nyaman di luar dengan angin, tetapi di ruangan tropis yang lembap bisa terasa jauh lebih panas."
+  },
+  "faq": [
+    {
+      "question": "Apakah 32°C terasa dingin atau panas?",
+      "answerHtml": "<p>32°C (89,6°F) sudah masuk kategori hangat.</p>"
+    },
+    {
+      "question": "Bagaimana cara mengubah 32°C ke Fahrenheit?",
+      "answerHtml": "<p>Rumusnya adalah: °F = (°C × 9/5) + 32. 32 dikali 1,8 menghasilkan 57,6, lalu ditambah 32 menjadi 89,6°F.</p>"
+    },
+    {
+      "question": "Apakah 32°C cocok sebagai setelan AC?",
+      "answerHtml": "<p>32°C sering dianggap setelan AC yang hemat energi dan tetap nyaman.</p>"
+    },
+    {
+      "question": "Pakaian apa yang cocok pada 32°C?",
+      "answerHtml": "<p>Pada suhu seperti ini, pakaian tipis dan adem biasanya paling pas:</p><ul><li>Kaos, dress ringan, atau bahan cepat kering</li><li>Celana pendek atau pakaian sangat adem</li><li>Topi, air minum, dan pelindung matahari</li></ul>"
+    },
+    {
+      "question": "Apakah 32°C lebih enak di luar daripada di dalam ruangan?",
+      "answerHtml": "<p>Dengan angin, 32°C di luar bisa terasa enak; di ruangan tertutup tanpa sirkulasi bisa terasa jauh lebih panas.</p>"
+    },
+    {
+      "question": "Apakah 32°C termasuk demam?",
+      "answerHtml": "<p>Tidak. Demam biasanya mulai mendekati 38°C. Jika 32°C adalah suhu tubuh, nilainya justru jauh di bawah normal.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "32°C (89,6°F) dalam keseharian",
+    "cards": [
+      {
+        "title": "Tengah hari terasa benar-benar panas",
+        "body": "Pada 32°C, akhir pagi sampai sore biasanya sudah terasa panas sungguhan, apalagi di jalan aspal atau bawah matahari langsung."
+      },
+      {
+        "title": "Kipas membantu, AC lebih terasa",
+        "body": "Di dalam ruangan, ventilasi silang dan kipas tetap membantu, tetapi banyak orang mulai memilih AC saat suhu mendekati 32°C."
+      },
+      {
+        "title": "Atur aktivitas menghindari panas",
+        "body": "Belanja, olahraga, dan jalan jauh biasanya terasa lebih enak pagi atau sore, sambil tetap dekat dengan air minum dan tempat teduh."
+      }
+    ]
+  }
+}

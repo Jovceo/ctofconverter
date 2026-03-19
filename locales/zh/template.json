@@ -154,7 +154,7 @@
         },
         "weather": {
             "title": "天气与气候",
-            "description": "{celsius}°C ({fahrenheit}°F) 代表了 {condition} 的天气状况。{tip}",
+            "description": "{celsius}°C ({fahrenheit}°F) 属于 {condition} 的天气范围。{tip}",
             "conditions": {
                 "freezing": "极寒结冰",
                 "cold": "寒冷",
@@ -200,7 +200,7 @@
                 "frozen": "冷冻储存 (Frozen storage)",
                 "refrigerated": "冷藏储存 (Refrigerated storage)",
                 "cool": "凉爽阴暗处储存",
-                "room": "常温/室温储存"
+                "room": "常温储存"
             }
         },
         "extreme": "{celsius}°C 即 {fahrenheit}°F，这是一个具有特定用途的 {type}。请使用上方的转换器获得精确数值。",
@@ -249,7 +249,7 @@
         "freezing": "极其寒冷！结冰预警。需要穿着厚冬装、帽子和围巾。",
         "chilly": "非常寒冷。您需要穿着厚夹克或大衣。",
         "cool": "凉爽到微冷。建议穿着毛衣或轻便外套。",
-        "warm": "温暖宜人。T恤衫的好天气！",
+        "warm": "温暖宜人，穿 T 恤或薄外套都很舒服。",
         "hot": "炎热天气！请穿着轻便衣物并注意防晒补水。",
         "veryHot": "酷热/极端高温。请限制户外活动并待在阴凉处。"
     },

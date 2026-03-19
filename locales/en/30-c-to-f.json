@@ -1,0 +1,115 @@
+{
+  "seo": {
+    "title": "30°C to Fahrenheit (86°F) | Formula, Heat Guide & Calculator",
+    "description": "Convert 30°C to Fahrenheit in seconds. 30 Celsius equals 86°F. Includes formula, calculation steps, and practical guidance for heat, air conditioning, clothing, and common everyday uses."
+  },
+  "header": {
+    "title": "30°C to Fahrenheit (30 Degrees Celsius to °F)",
+    "tagline": "Free online temperature conversion tool that instantly converts 30 degrees Celsius (30°C) to degrees Fahrenheit (°F), with conversion formulas and detailed steps."
+  },
+  "conversion": {
+    "intro": "30°C in Fahrenheit is 86°F."
+  },
+  "strategy": {
+    "keywords": "30 celsius to fahrenheit formula heat guide calculator room temperature weather fever"
+  },
+  "comfortGuide": {
+    "title": "30°C heat guide",
+    "subtitle": "When 30°C moves from warm to properly hot",
+    "intro": "30°C (86°F) is a hot-weather temperature for most people. Outdoors it feels like a classic summer afternoon. Indoors, it usually feels too warm for comfort unless the space is airy or cooled.",
+    "chart": {
+      "cold": {
+        "label": "Cool",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Fresh and easier indoors"
+      },
+      "moderate": {
+        "label": "Comfortable",
+        "value": "23-26°C",
+        "desc": "73.4-78.8°F<br>Manageable with light clothes"
+      },
+      "warm": {
+        "label": "Hot",
+        "value": "27-33°C",
+        "desc": "80.6-91.4°F<br>Shade, cooling, and hydration help"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "26°C (78.8°F)",
+          "desc": "Warm summer feel",
+          "use": "Light clothing and outdoor comfort",
+          "href": "/26-c-to-f"
+        },
+        {
+          "temp": "28°C (82.4°F)",
+          "desc": "Warm to hot",
+          "use": "Shade and airflow start to matter",
+          "href": "/28-c-to-f.html"
+        },
+        {
+          "temp": "30°C (86°F)",
+          "desc": "Hot",
+          "use": "Afternoon heat and indoor cooling needs",
+          "highlight": true
+        },
+        {
+          "temp": "32°C (89.6°F)",
+          "desc": "Very hot",
+          "use": "Keep outdoor effort lighter",
+          "href": "/32-c-to-f.html"
+        },
+        {
+          "temp": "35°C (95°F)",
+          "desc": "Intense heat",
+          "use": "Heat precautions become more important",
+          "href": "/35-c-to-f.html"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normal body temperature",
+          "use": "Useful body-temperature comparison",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 30°C can still feel pleasant in dry air with breeze, but in humid cities or closed rooms it quickly starts to feel tiring."
+  },
+  "faq": [
+    {
+      "question": "What is 30 degrees Celsius in Fahrenheit?",
+      "answerHtml": "<p>30°C equals 86°F. The formula is °F = (°C × 9/5) + 32, so 30 × 1.8 = 54, and 54 + 32 = 86°F.</p>"
+    },
+    {
+      "question": "Is 30°C a fever?",
+      "answerHtml": "<p>No. Fever usually starts around 38°C (100.4°F). If 30°C were a body-temperature reading, it would actually be much too low, not a fever.</p>"
+    },
+    {
+      "question": "What are the practical applications of 30°C?",
+      "answerHtml": "<p>30°C often shows up in weather planning, travel decisions, summer routines, and air-conditioning discussions. It is also a useful reference point for hot indoor rooms, greenhouse checks, and heat-related comfort comparisons.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "30°C (86°F) in daily life",
+    "cards": [
+      {
+        "title": "Midday feels properly hot",
+        "body": "At 30°C, late morning and afternoon usually feel genuinely hot, especially on pavement, in traffic, or under direct sun."
+      },
+      {
+        "title": "Fans help, AC helps more",
+        "body": "Indoors, cross-ventilation and fans still help, but many people start preferring air conditioning once rooms sit near 30°C."
+      },
+      {
+        "title": "Plan around the heat",
+        "body": "Errands, workouts, and longer walks feel easier earlier or later in the day, with water and shade close by."
+      }
+    ]
+  }
+}

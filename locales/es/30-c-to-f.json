@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "30 °C a Fahrenheit (86 °F): calor suave, aire acondicionado y verano",
+    "description": "Convierte 30 °C a 86 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
+  },
+  "header": {
+    "title": "30 °C a Fahrenheit (86 °F)",
+    "tagline": "Herramienta gratuita para convertir 30 °C a 86 °F con consejos sobre calor suave, aire acondicionado y ropa ligera."
+  },
+  "conversion": {
+    "intro": "30 °C en Fahrenheit son 86 °F."
+  },
+  "strategy": {
+    "keywords": "Convierte 30 °C a 86 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
+  },
+  "comfortGuide": {
+    "title": "Guía de calor suave para 30 °C",
+    "subtitle": "¿Es calor agradable o una temperatura para enfriar?",
+    "intro": "30 °C (86 °F) ya transmite sensación de verano. Con ropa ligera suele ir bien, aunque en interiores cerrados apetece más ventilación.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Mejor con brisa"
+      },
+      "moderate": {
+        "label": "Cómodo",
+        "value": "23-26°C",
+        "desc": "73.4-78.8°F<br>Todavía manejable"
+      },
+      "warm": {
+        "label": "Cálido",
+        "value": "27-33°C",
+        "desc": "80.6-91.4°F<br>Calor suave de verano"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensación",
+        "typicalUse": "Uso habitual"
+      },
+      "rows": [
+        {
+          "href": "/26-c-to-f",
+          "temp": "26°C (78.8°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/28-c-to-f.html",
+          "temp": "28°C (82.4°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "highlight": true,
+          "temp": "30°C (86°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/32-c-to-f.html",
+          "temp": "32°C (89.6°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/35-c-to-f.html",
+          "temp": "35°C (95°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 30 °C puede sentirse bien con brisa, pero en un piso cerrado suele parecer bastante más cálido."
+  },
+  "faq": [
+    {
+      "question": "¿30 °C se siente frío o calor?",
+      "answerHtml": "<p>30 °C (86 °F) ya encaja con un día cálido de verano.</p>"
+    },
+    {
+      "question": "¿Cómo convierto 30 °C a Fahrenheit?",
+      "answerHtml": "<p>La fórmula es: °F = (°C × 9/5) + 32. Si multiplicas 30 por 1,8 obtienes 54; al sumar 32 llegas a 86 °F.</p>"
+    },
+    {
+      "question": "¿30 °C funciona bien como ajuste del aire acondicionado?",
+      "answerHtml": "<p>30 °C se ve a menudo como un ajuste razonable del aire acondicionado.</p>"
+    },
+    {
+      "question": "¿Qué ropa conviene con 30 °C?",
+      "answerHtml": "<p>Con esta temperatura suele bastar ropa fresca y transpirable:</p><ul><li>Camiseta, vestido ligero o ropa fresca</li><li>Pantalón corto o tejidos muy transpirables</li><li>Gafas de sol, gorra y protección solar</li></ul>"
+    },
+    {
+      "question": "¿30 °C se lleva mejor en la calle que dentro de casa?",
+      "answerHtml": "<p>Con algo de brisa, 30 °C al aire libre puede resultar agradable; en un piso cerrado suele sentirse más pesado.</p>"
+    },
+    {
+      "question": "¿30 °C es fiebre?",
+      "answerHtml": "<p>No. La fiebre humana suele empezar cerca de 38 °C. Si 30 °C fuera temperatura corporal, estaría muy por debajo de lo normal.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Dónde suele encajar 30 °C (86 °F)",
+    "cards": [
+      {
+        "title": "El mediodía ya se nota",
+        "body": "A 30 °C las últimas horas de la mañana y la tarde suelen sentirse claramente calurosas, sobre todo con asfalto, tráfico o sol directo."
+      },
+      {
+        "title": "Ventilador ayuda; AC ayuda más",
+        "body": "Dentro de casa, el aire cruzado y los ventiladores sirven, pero muchas personas ya prefieren aire acondicionado en esta franja."
+      },
+      {
+        "title": "Mejor mover los planes",
+        "body": "Recados, deporte y caminatas largas suelen llevarse mejor a primera hora o al final del día, con agua a mano."
+      }
+    ]
+  }
+}

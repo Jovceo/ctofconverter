@@ -81,6 +81,23 @@
     },
     "note": "<strong>Nota:</strong> en ambientes secos 22 °C suele sentirse neutro; con humedad alta, la misma cifra puede parecer más cálida."
   },
+  "practicalApplications": {
+    "title": "Cuándo encajan mejor 22 °C (71,6 °F)",
+    "cards": [
+      {
+        "title": "Teletrabajo y estudio",
+        "body": "22 °C va muy bien para pasar varias horas trabajando o estudiando. Sigue siendo cómodo para la mayoría y se nota un punto más cálido que 21 °C."
+      },
+      {
+        "title": "Dormitorio templado",
+        "body": "Para algunas personas 22 °C es una temperatura aceptable para dormir, aunque quien prefiera un dormitorio fresco probablemente la notará algo cálida."
+      },
+      {
+        "title": "Interiores con aire",
+        "body": "Es una sensación parecida a la de muchos centros de estudio, oficinas y locales climatizados. Una capa fina ayuda cuando entras y sales de espacios con aire acondicionado."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "¿22 °C se siente frío o calor?",

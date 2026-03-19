@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "27°C para 80,6°F: calor leve, ar-condicionado e verão",
+    "description": "Converta 27°C para 80,6°F e descubra se essa temperatura combina com verão, ar-condicionado e atividades ao ar livre."
+  },
+  "header": {
+    "title": "27°C para 80,6°F",
+    "tagline": "Ferramenta gratuita para converter 27°C em 80,6°F com orientação prática sobre calor, roupas leves e uso de ar-condicionado."
+  },
+  "conversion": {
+    "intro": "27°C equivalem a 80,6°F."
+  },
+  "strategy": {
+    "keywords": "Converta 27°C para 80,6°F e descubra se essa temperatura combina com verão, ar-condicionado e atividades ao ar livre."
+  },
+  "comfortGuide": {
+    "title": "Guia de calor leve para 27°C",
+    "subtitle": "É um calor confortável de verão ou já pede refrigeração?",
+    "intro": "27°C (80,6°F) já tem cara de dia quente. Com roupa leve costuma ser tranquilo, mas em ambientes fechados muita gente prefere ventilador ou ar-condicionado.",
+    "chart": {
+      "cold": {
+        "label": "Mais fresco",
+        "value": "16-20°C",
+        "desc": "60.8-68°F<br>Melhor com um pouco de vento"
+      },
+      "moderate": {
+        "label": "Confortável",
+        "value": "21-24°C",
+        "desc": "69.8-75.2°F<br>Ainda dá para levar"
+      },
+      "warm": {
+        "label": "Mais quente",
+        "value": "25-30°C",
+        "desc": "77-86°F<br>Calor leve de verão"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensação",
+        "typicalUse": "Uso típico"
+      },
+      "rows": [
+        {
+          "href": "/23-c-to-f",
+          "temp": "23°C (73.4°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        },
+        {
+          "href": "/25-c-to-f",
+          "temp": "25°C (77°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        },
+        {
+          "highlight": true,
+          "temp": "27°C (80.6°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        },
+        {
+          "href": "/29-c-to-f.html",
+          "temp": "29°C (84.2°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 27°C pode ser agradável na rua com vento, mas dentro de casa, sem ventilação, a sensação sobe rápido."
+  },
+  "faq": [
+    {
+      "question": "27°C é frio ou calor?",
+      "answerHtml": "<p>27°C (80,6°F) já entra na faixa de dia quente.</p>"
+    },
+    {
+      "question": "Como converter 27°C para Fahrenheit?",
+      "answerHtml": "<p>A fórmula é: °F = (°C × 9/5) + 32. 27 vezes 1,8 dá 48,6; somando 32, o resultado é 80,6°F.</p>"
+    },
+    {
+      "question": "27°C é bom para atividades ao ar livre?",
+      "answerHtml": "<p>27°C costuma ser bom para caminhar, correr leve, ir ao parque ou ficar em áreas externas.</p>"
+    },
+    {
+      "question": "O que vestir com 27°C?",
+      "answerHtml": "<p>Aqui já vale apostar em peças mais frescas:</p><ul><li>Roupa leve e fresca</li><li>Short, saia ou tecido fino</li><li>Boné, água e proteção solar</li></ul>"
+    },
+    {
+      "question": "27°C costuma ser mais fácil na rua do que dentro de casa?",
+      "answerHtml": "<p>Com vento, 27°C na rua pode ser suportável; em casa sem ventilação, a sensação térmica sobe bastante.</p>"
+    },
+    {
+      "question": "27°C é febre?",
+      "answerHtml": "<p>Não. Febre normalmente começa perto de 38°C. Se 27°C fosse temperatura corporal, estaria muito abaixo do normal.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Onde 27°C (80,6°F) entram no dia a dia",
+    "cards": [
+      {
+        "title": "Quente, mas ainda dá para levar",
+        "body": "Com 27°C, o dia já fica claramente quente, mas ainda combina com caminhada, recados, café na rua e planos leves se houver água e um pouco de sombra."
+      },
+      {
+        "title": "Melhor para programas tranquilos",
+        "body": "Essa faixa combina mais com andar sem pressa, fazer pequenas saídas e ficar ao ar livre sem esforço pesado do que com exercício forte no sol."
+      },
+      {
+        "title": "Dentro de casa, o ar faz diferença",
+        "body": "Em ambiente interno, 27°C ficam bem mais suportáveis com janela aberta, ventilador ou circulação de ar. Em cômodo fechado costuma parecer mais quente."
+      }
+    ]
+  }
+}

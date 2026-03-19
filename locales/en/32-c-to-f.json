@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "32°C to Fahrenheit (89.6°F) | Hot Weather Guide & Calculator",
+    "description": "Convert 32°C to Fahrenheit quickly. Learn that 32°C equals 89.6°F, see the formula, and understand how hot it feels for clothing, exercise, air conditioning, and everyday summer routines."
+  },
+  "header": {
+    "title": "32°C to Fahrenheit (32 Degrees Celsius to °F)",
+    "tagline": "Convert 32°C to Fahrenheit with practical guidance for hot weather, summer clothing, exercise, and air conditioning."
+  },
+  "conversion": {
+    "intro": "32°C in Fahrenheit is 89.6°F."
+  },
+  "strategy": {
+    "keywords": "32 celsius to fahrenheit hot weather exercise clothing air conditioning summer heat"
+  },
+  "comfortGuide": {
+    "title": "32°C hot weather guide",
+    "subtitle": "When 32°C moves from summer warmth into real heat",
+    "intro": "32°C (89.6°F) is hot enough that comfort starts depending on shade, timing, hydration, and cooling. Outdoors it can feel intense in direct sun, and indoors many people prefer fans or air conditioning.",
+    "chart": {
+      "cold": {
+        "label": "Cool",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Much easier for work and sleep"
+      },
+      "moderate": {
+        "label": "Comfortable",
+        "value": "23-27°C",
+        "desc": "73.4-80.6°F<br>Warm but still manageable"
+      },
+      "warm": {
+        "label": "Hot",
+        "value": "28-35°C",
+        "desc": "82.4-95°F<br>Cooling plans start to matter"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "28°C (82.4°F)",
+          "desc": "Warm to hot",
+          "use": "Still manageable with airflow",
+          "href": "/28-c-to-f"
+        },
+        {
+          "temp": "30°C (86°F)",
+          "desc": "Hot",
+          "use": "Cooling and shade become more useful",
+          "href": "/30-c-to-f"
+        },
+        {
+          "temp": "32°C (89.6°F)",
+          "desc": "Very hot",
+          "use": "Lighter plans, more water, more cooling",
+          "highlight": true
+        },
+        {
+          "temp": "33°C (91.4°F)",
+          "desc": "Very hot",
+          "use": "Outdoor timing matters more",
+          "href": "/33-c-to-f.html"
+        },
+        {
+          "temp": "35°C (95°F)",
+          "desc": "Intense heat",
+          "use": "Heat safety becomes more important",
+          "href": "/35-c-to-f.html"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normal body temperature",
+          "use": "Useful fever comparison",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 32°C can feel much harsher when humidity is high or there is little airflow. The number alone does not tell the whole story."
+  },
+  "faq": [
+    {
+      "question": "Is 32°C considered hot?",
+      "answerHtml": "<p>Yes. 32°C (89.6°F) is hot, especially in direct sun or humid weather. It is the kind of temperature where people usually slow down, look for shade, and think about cooling.</p>"
+    },
+    {
+      "question": "Is 32°C a fever temperature?",
+      "answerHtml": "<p>No. Fever normally starts near 38°C (100.4°F). If 32°C were your body temperature, it would be dangerously low, not a fever.</p>"
+    },
+    {
+      "question": "What should I wear in 32°C weather?",
+      "answerHtml": "<p>At 32°C, light and breathable clothing is the safest bet:</p><ul><li>Thin T-shirt, sleeveless top, or airy shirt</li><li>Shorts, loose trousers, or a light skirt</li><li>Sunscreen, water, a hat, and sunglasses for outdoor time</li></ul>"
+    },
+    {
+      "question": "How do I convert 32 degrees Celsius to Fahrenheit in my head?",
+      "answerHtml": "<p>A quick way is to double 32, subtract 10%, then add 32.</p><p>32 × 2 = 64, 64 - 6.4 = 57.6, and 57.6 + 32 = 89.6°F.</p><p>For a rough estimate, doubling and adding 30 gets you close, but it runs a little high.</p>"
+    },
+    {
+      "question": "Is 32°C too hot for exercise?",
+      "answerHtml": "<p>It can be, especially for hard exercise. Easy movement may still be fine, but running, cycling, or sport in direct sun gets much tougher at 32°C.</p><ul><li>Go early or late if possible</li><li>Drink more water than usual</li><li>Lower the intensity if you start feeling dizzy or drained</li></ul>"
+    },
+    {
+      "question": "What other common temperatures are near 32°C?",
+      "answerHtml": "<p>Nearby reference points help put it in context:</p><ul><li>30°C = 86°F, a hot summer day</li><li>31°C = 87.8°F, very warm and clearly summery</li><li>35°C = 95°F, where heat safety becomes more important</li></ul>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "32°C (89.6°F) in daily life",
+    "cards": [
+      {
+        "title": "Midday feels properly hot",
+        "body": "At 32°C, late morning and afternoon usually feel genuinely hot, especially on pavement, in traffic, or under direct sun."
+      },
+      {
+        "title": "Fans help, AC helps more",
+        "body": "Indoors, cross-ventilation and fans still help, but many people start preferring air conditioning once rooms sit near 32°C."
+      },
+      {
+        "title": "Plan around the heat",
+        "body": "Errands, workouts, and longer walks feel easier earlier or later in the day, with water and shade close by."
+      }
+    ]
+  }
+}

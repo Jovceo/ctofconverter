@@ -67,11 +67,21 @@ export function generateHowToStructuredData(celsius: number, fahrenheit: number,
 function stripHtml(html: string): string {
   if (!html) return '';
   return html
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, ' ')
     .replace(/<br\s*\/?>/gi, ' ')
     .replace(/<\/p>/gi, ' ')
-    .replace(/<\/li>/gi, '. ')
+    .replace(/<(ul|ol)[^>]*>/gi, ' ')
+    .replace(/<li[^>]*>/gi, '• ')
+    .replace(/<\/li>/gi, ' ')
+    .replace(/<\/(ul|ol)>/gi, ' ')
     .replace(/<[^>]+>/g, '') // Strip remaining tags
-    .replace(/\s+/g, ' ') // Collapse multiple spaces
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;/gi, "'")
+    .replace(/\s+([,.;!?])/g, '$1')
+    .replace(/\s*•\s*/g, ' • ')
     .trim();
 }
 

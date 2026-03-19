@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "29°C ke 84,2°F: cuaca hangat, AC, dan kebutuhan musim panas",
+    "description": "Ubah 29°C ke 84,2°F dan lihat apakah suhu ini cocok untuk cuaca tropis hangat, AC, dan aktivitas luar ruang."
+  },
+  "header": {
+    "title": "29°C ke 84,2°F",
+    "tagline": "Konverter gratis untuk mengubah 29°C ke 84,2°F dengan panduan soal cuaca hangat, kipas, AC, dan pakaian ringan."
+  },
+  "conversion": {
+    "intro": "29°C sama dengan 84,2°F."
+  },
+  "strategy": {
+    "keywords": "Ubah 29°C ke 84,2°F dan lihat apakah suhu ini cocok untuk cuaca tropis hangat, AC, dan aktivitas luar ruang."
+  },
+  "comfortGuide": {
+    "title": "Panduan cuaca hangat untuk 29°C",
+    "subtitle": "Masih enak tanpa AC atau sudah perlu pendinginan?",
+    "intro": "29°C (84,2°F) sudah terasa seperti hari hangat. Dengan pakaian ringan masih nyaman, tetapi di ruangan tanpa sirkulasi orang sering memilih kipas atau AC.",
+    "chart": {
+      "cold": {
+        "label": "Lebih sejuk",
+        "value": "17-21°C",
+        "desc": "62.6-69.8°F<br>Lebih nyaman kalau ada angin"
+      },
+      "moderate": {
+        "label": "Nyaman",
+        "value": "22-25°C",
+        "desc": "71.6-77°F<br>Masih cukup nyaman"
+      },
+      "warm": {
+        "label": "Lebih hangat",
+        "value": "26-32°C",
+        "desc": "78.8-89.6°F<br>Hangat khas musim panas"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Suhu",
+        "description": "Kesan",
+        "typicalUse": "Penggunaan umum"
+      },
+      "rows": [
+        {
+          "href": "/25-c-to-f",
+          "temp": "25°C (77°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/27-c-to-f.html",
+          "temp": "27°C (80.6°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "highlight": true,
+          "temp": "29°C (84.2°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/33-c-to-f.html",
+          "temp": "33°C (91.4°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        }
+      ]
+    },
+    "note": "<strong>Catatan:</strong> 29°C bisa terasa nyaman di luar dengan angin, tetapi di ruangan tropis yang lembap bisa terasa jauh lebih panas."
+  },
+  "faq": [
+    {
+      "question": "Apakah 29°C terasa dingin atau panas?",
+      "answerHtml": "<p>29°C (84,2°F) sudah masuk kategori hangat.</p>"
+    },
+    {
+      "question": "Bagaimana cara mengubah 29°C ke Fahrenheit?",
+      "answerHtml": "<p>Rumusnya adalah: °F = (°C × 9/5) + 32. 29 dikali 1,8 menghasilkan 52,2, lalu ditambah 32 menjadi 84,2°F.</p>"
+    },
+    {
+      "question": "Apakah 29°C cocok untuk aktivitas luar ruang?",
+      "answerHtml": "<p>29°C cocok untuk jalan kaki, belanja, atau olahraga ringan, terutama pagi atau sore hari.</p>"
+    },
+    {
+      "question": "Pakaian apa yang cocok pada 29°C?",
+      "answerHtml": "<p>Pada suhu seperti ini, pakaian tipis dan adem biasanya paling pas:</p><ul><li>Kaos, dress ringan, atau bahan cepat kering</li><li>Celana pendek atau pakaian sangat adem</li><li>Topi, air minum, dan pelindung matahari</li></ul>"
+    },
+    {
+      "question": "Apakah 29°C lebih enak di luar daripada di dalam ruangan?",
+      "answerHtml": "<p>Dengan angin, 29°C di luar bisa terasa enak; di ruangan tertutup tanpa sirkulasi bisa terasa jauh lebih panas.</p>"
+    },
+    {
+      "question": "Apakah 29°C termasuk demam?",
+      "answerHtml": "<p>Tidak. Demam biasanya mulai mendekati 38°C. Jika 29°C adalah suhu tubuh, nilainya justru jauh di bawah normal.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "29°C (84,2°F) dalam keseharian",
+    "cards": [
+      {
+        "title": "Hangat, tapi masih enak dijalani",
+        "body": "Pada 29°C, siang terasa jelas hangat, tetapi masih cocok untuk jalan santai, belanja ringan, nongkrong, dan aktivitas luar yang tidak terlalu berat kalau ada air dan tempat teduh."
+      },
+      {
+        "title": "Lebih cocok untuk aktivitas ringan",
+        "body": "Suhu ini lebih pas untuk jalan kaki, urusan harian, dan kegiatan santai di luar daripada olahraga berat di bawah matahari."
+      },
+      {
+        "title": "Di dalam ruangan, angin sangat membantu",
+        "body": "Di dalam rumah, 29°C terasa jauh lebih nyaman kalau ada jendela terbuka, kipas, atau aliran udara. Ruangan tertutup biasanya terasa lebih panas dari angkanya."
+      }
+    ]
+  }
+}

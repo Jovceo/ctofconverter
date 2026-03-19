@@ -23,6 +23,12 @@ const PAGES = {
   24: { slug: '24-c-to-f', band: 'mild', nuance: 'outdoor' },
   25: { slug: '25-c-to-f', band: 'summer', nuance: 'swim' },
   26: { slug: '26-c-to-f', band: 'summer', nuance: 'ac' },
+  27: { slug: '27-c-to-f', band: 'summer', nuance: 'outdoor' },
+  28: { slug: '28-c-to-f', band: 'summer', nuance: 'sleep' },
+  29: { slug: '29-c-to-f', band: 'summer', nuance: 'outdoor' },
+  30: { slug: '30-c-to-f', band: 'summer', nuance: 'ac' },
+  31: { slug: '31-c-to-f', band: 'summer', nuance: 'sleep' },
+  32: { slug: '32-c-to-f', band: 'summer', nuance: 'ac' },
 };
 
 const INTRO_TEMPLATES = {
@@ -126,7 +132,7 @@ function faqHtml(lead, items) {
 }
 
 function parseTemp(tempText) {
-  const match = tempText.match(/(-?\d+(?:\.\d+)?)°C/);
+  const match = tempText.match(/(-?\d+(?:\.\d+)?)\s*[???]?C/i);
   return match ? parseFloat(match[1]) : 0;
 }
 
@@ -137,7 +143,7 @@ function classifyTemp(temp) {
   if (temp <= 20) return 'neutral';
   if (temp <= 22) return 'comfortable';
   if (temp <= 24) return 'mildWarm';
-  if (temp <= 26) return 'warm';
+  if (temp <= 27) return 'warm';
   return 'hot';
 }
 
@@ -560,7 +566,12 @@ function buildLocaleJson(locale, profile, english) {
   };
 }
 
-Object.values(PAGES).forEach((profile) => {
+const requestedSlugs = new Set(process.argv.slice(2));
+const profilesToGenerate = Object.values(PAGES).filter(
+  (profile) => requestedSlugs.size === 0 || requestedSlugs.has(profile.slug)
+);
+
+profilesToGenerate.forEach((profile) => {
   const english = JSON.parse(fs.readFileSync(path.join(EN_DIR, `${profile.slug}.json`), 'utf8'));
   OUT_LOCALES.forEach((locale) => {
     const filePath = path.join(ROOT, 'locales', locale, `${profile.slug}.json`);

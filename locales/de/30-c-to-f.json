@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "30°C in Fahrenheit (86°F): Sommerwärme, Klimaanlage und Alltag",
+    "description": "Wandle 30°C in 86°F um und finde heraus, ob diese Temperatur nach Sommerkleidung, Lüften oder Klimaanlage verlangt."
+  },
+  "header": {
+    "title": "30°C in Fahrenheit (86°F)",
+    "tagline": "Kostenloser Umrechner für 30°C zu 86°F mit Hinweisen zu Sommerwärme, leichter Kleidung und sinnvollen Klimaeinstellungen."
+  },
+  "conversion": {
+    "intro": "30°C entsprechen 86°F."
+  },
+  "strategy": {
+    "keywords": "Wandle 30°C in 86°F um und finde heraus, ob diese Temperatur nach Sommerkleidung, Lüften oder Klimaanlage verlangt."
+  },
+  "comfortGuide": {
+    "title": "Sommer-Guide für 30°C",
+    "subtitle": "Sommerlich angenehm oder eher ein Fall für Kühlung?",
+    "intro": "30°C (86°F) wirken deutlich sommerlich. Im Freien mit leichter Kleidung meist gut, in Innenräumen aber oft schon warm genug für Ventilator oder Klima.",
+    "chart": {
+      "cold": {
+        "label": "Kühler",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Mit Luftzug angenehmer"
+      },
+      "moderate": {
+        "label": "Angenehm",
+        "value": "23-26°C",
+        "desc": "73.4-78.8°F<br>Noch gut machbar"
+      },
+      "warm": {
+        "label": "Wärmer",
+        "value": "27-33°C",
+        "desc": "80.6-91.4°F<br>Sommerlich warm"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatur",
+        "description": "Eindruck",
+        "typicalUse": "Typischer Einsatz"
+      },
+      "rows": [
+        {
+          "href": "/26-c-to-f",
+          "temp": "26°C (78.8°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "href": "/28-c-to-f.html",
+          "temp": "28°C (82.4°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "highlight": true,
+          "temp": "30°C (86°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "href": "/32-c-to-f.html",
+          "temp": "32°C (89.6°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "href": "/35-c-to-f.html",
+          "temp": "35°C (95°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        }
+      ]
+    },
+    "note": "<strong>Hinweis:</strong> 30°C können draußen mit Luftzug angenehm sein, in einer warmen Wohnung aber deutlich drückender wirken."
+  },
+  "faq": [
+    {
+      "question": "Sind 30°C eher kalt oder warm?",
+      "answerHtml": "<p>30°C (86°F) sind klar sommerlich.</p>"
+    },
+    {
+      "question": "Wie rechnet man 30°C in Fahrenheit um?",
+      "answerHtml": "<p>Die Formel lautet: °F = (°C × 9/5) + 32. 30 mal 1,8 ergibt 54; plus 32 sind es 86°F.</p>"
+    },
+    {
+      "question": "Sind 30°C eine gute Einstellung für die Klimaanlage?",
+      "answerHtml": "<p>30°C gelten häufig als vernünftige Klimaanlagen-Einstellung.</p>"
+    },
+    {
+      "question": "Was trägt man bei 30°C?",
+      "answerHtml": "<p>Hier passt meist schon klar sommerliche Kleidung:</p><ul><li>Leichte, luftige Kleidung</li><li>Kurze Hose oder dünne Stoffe</li><li>Wasser, Sonnenbrille und Kopfbedeckung</li></ul>"
+    },
+    {
+      "question": "Sind 30°C draußen oft angenehmer als drinnen?",
+      "answerHtml": "<p>Mit Luftzug draußen sind 30°C oft angenehmer, während Innenräume ohne Lüftung schnell wärmer wirken.</p>"
+    },
+    {
+      "question": "Sind 30°C Fieber?",
+      "answerHtml": "<p>Nein. Fieber beginnt meist erst in der Nähe von 38°C. Als Körpertemperatur wäre 30°C deutlich zu niedrig.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "30°C (86°F) im Alltag",
+    "cards": [
+      {
+        "title": "Mittags wird es richtig heiß",
+        "body": "Bei 30°C fühlt sich besonders die Zeit vom späten Vormittag bis zum Nachmittag spürbar heiß an, vor allem auf Asphalt oder in direkter Sonne."
+      },
+      {
+        "title": "Ventilator hilft, Klima oft mehr",
+        "body": "Innen helfen Luftzug und Ventilator noch, aber viele empfinden bei Raumwerten um 30°C eine Klimaanlage als deutlich angenehmer."
+      },
+      {
+        "title": "Tagespläne an die Wärme anpassen",
+        "body": "Erledigungen, Sport und längere Wege fühlen sich morgens oder abends leichter an, mit Wasser und Schatten in der Nähe."
+      }
+    ]
+  }
+}

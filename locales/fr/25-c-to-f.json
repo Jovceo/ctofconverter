@@ -81,6 +81,23 @@
     },
     "note": "<strong>Note :</strong> 25 °C peut être agréable dehors avec de l’air, mais plus lourd dans un appartement mal ventilé."
   },
+  "practicalApplications": {
+    "title": "25 °C (77 °F) donnent déjà une vraie sensation d'été",
+    "cards": [
+      {
+        "title": "Soirée d'été et extérieur",
+        "body": "25 °C conviennent bien à une terrasse, une promenade du soir, un parc ou un moment dehors avec une tenue légère et un rythme plus estival."
+      },
+      {
+        "title": "Ventilation et climatisation",
+        "body": "En intérieur, 25 °C correspondent souvent au seuil où beaucoup de personnes commencent à chercher un ventilateur, de l'ombre ou une climatisation douce."
+      },
+      {
+        "title": "Piscine, plage et loisirs",
+        "body": "À cette température, l'ambiance se prête déjà bien à la piscine, au bord de mer ou aux activités de détente dehors, avec eau et protection solaire."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "25 °C, c’est froid ou chaud ?",

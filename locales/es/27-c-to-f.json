@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "27 °C a Fahrenheit (80,6 °F): calor suave, aire acondicionado y verano",
+    "description": "Convierte 27 °C a 80,6 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
+  },
+  "header": {
+    "title": "27 °C a Fahrenheit (80,6 °F)",
+    "tagline": "Herramienta gratuita para convertir 27 °C a 80,6 °F con consejos sobre calor suave, aire acondicionado y ropa ligera."
+  },
+  "conversion": {
+    "intro": "27 °C en Fahrenheit son 80,6 °F."
+  },
+  "strategy": {
+    "keywords": "Convierte 27 °C a 80,6 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
+  },
+  "comfortGuide": {
+    "title": "Guía de calor suave para 27 °C",
+    "subtitle": "¿Es calor agradable o una temperatura para enfriar?",
+    "intro": "27 °C (80,6 °F) ya transmite sensación de verano. Con ropa ligera suele ir bien, aunque en interiores cerrados apetece más ventilación.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "16-20°C",
+        "desc": "60.8-68°F<br>Mejor con brisa"
+      },
+      "moderate": {
+        "label": "Cómodo",
+        "value": "21-24°C",
+        "desc": "69.8-75.2°F<br>Todavía manejable"
+      },
+      "warm": {
+        "label": "Cálido",
+        "value": "25-30°C",
+        "desc": "77-86°F<br>Calor suave de verano"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensación",
+        "typicalUse": "Uso habitual"
+      },
+      "rows": [
+        {
+          "href": "/23-c-to-f",
+          "temp": "23°C (73.4°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/25-c-to-f",
+          "temp": "25°C (77°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "highlight": true,
+          "temp": "27°C (80.6°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/29-c-to-f.html",
+          "temp": "29°C (84.2°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 27 °C puede sentirse bien con brisa, pero en un piso cerrado suele parecer bastante más cálido."
+  },
+  "faq": [
+    {
+      "question": "¿27 °C se siente frío o calor?",
+      "answerHtml": "<p>27 °C (80,6 °F) ya encaja con un día cálido de verano.</p>"
+    },
+    {
+      "question": "¿Cómo convierto 27 °C a Fahrenheit?",
+      "answerHtml": "<p>La fórmula es: °F = (°C × 9/5) + 32. Si multiplicas 27 por 1,8 obtienes 48,6; al sumar 32 llegas a 80,6 °F.</p>"
+    },
+    {
+      "question": "¿27 °C es buena temperatura para actividades al aire libre?",
+      "answerHtml": "<p>27 °C suele ir bien para caminar, ir a una terraza o hacer ejercicio suave.</p>"
+    },
+    {
+      "question": "¿Qué ropa conviene con 27 °C?",
+      "answerHtml": "<p>Con esta temperatura suele bastar ropa fresca y transpirable:</p><ul><li>Camiseta, vestido ligero o ropa fresca</li><li>Pantalón corto o tejidos muy transpirables</li><li>Gafas de sol, gorra y protección solar</li></ul>"
+    },
+    {
+      "question": "¿27 °C se lleva mejor en la calle que dentro de casa?",
+      "answerHtml": "<p>Con algo de brisa, 27 °C al aire libre puede resultar agradable; en un piso cerrado suele sentirse más pesado.</p>"
+    },
+    {
+      "question": "¿27 °C es fiebre?",
+      "answerHtml": "<p>No. La fiebre humana suele empezar cerca de 38 °C. Si 27 °C fuera temperatura corporal, estaría muy por debajo de lo normal.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Dónde suele encajar 27 °C (80,6 °F)",
+    "cards": [
+      {
+        "title": "Cálido pero llevadero",
+        "body": "A 27 °C el día ya se siente claramente cálido, pero todavía encaja bien con paseos, terrazas, recados y planes suaves si hay agua y algo de sombra."
+      },
+      {
+        "title": "Mejor para planes tranquilos",
+        "body": "Esta temperatura va mejor con caminar, moverse con calma o estar al aire libre sin demasiada intensidad. El sol y la humedad marcan la diferencia."
+      },
+      {
+        "title": "Dentro manda el aire",
+        "body": "En interior, 27 °C se lleva mucho mejor con ventanas abiertas, ventilador o corriente. En un piso cerrado suele parecer más caliente."
+      }
+    ]
+  }
+}

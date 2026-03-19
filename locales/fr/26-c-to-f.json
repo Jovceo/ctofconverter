@@ -81,6 +81,23 @@
     },
     "note": "<strong>Note :</strong> 26 °C peut être agréable dehors avec de l’air, mais plus lourd dans un appartement mal ventilé."
   },
+  "practicalApplications": {
+    "title": "26 °C (78,8 °F) se rapprochent d'une vraie chaleur douce d'été",
+    "cards": [
+      {
+        "title": "Chaleur de milieu de journée",
+        "body": "Avec du soleil direct, 26 °C cessent d'être simplement agréables et commencent à sembler franchement chauds, surtout vers midi et en début d'après-midi."
+      },
+      {
+        "title": "Le réglage de clim à 26 °C",
+        "body": "Beaucoup associent 26 °C à un réglage raisonnable de climatisation, entre confort et économies. L'humidité et la circulation d'air changent beaucoup le ressenti."
+      },
+      {
+        "title": "Bouger avec une tenue estivale",
+        "body": "Pour marcher, faire des courses ou se déplacer en ville, mieux vaut des vêtements respirants, de l'eau et une protection solaire si l'on reste dehors."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "26 °C, c’est froid ou chaud ?",
