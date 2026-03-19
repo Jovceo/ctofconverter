@@ -81,6 +81,23 @@
     },
     "note": "<strong>Hinweis:</strong> 26°C können draußen mit Luftzug angenehm sein, in einer warmen Wohnung aber deutlich drückender wirken."
   },
+  "practicalApplications": {
+    "title": "26 °C (78,8 °F) gehen schon deutlich in Richtung Sommerwärme",
+    "cards": [
+      {
+        "title": "Mittagshitze wird spürbar",
+        "body": "Bei direkter Sonne fühlen sich 26 °C nicht nur angenehm, sondern schon klar warm an, besonders rund um Mittag und am frühen Nachmittag."
+      },
+      {
+        "title": "Die bekannte Klima-Einstellung 26 °C",
+        "body": "Viele sehen 26 °C als vernünftige Klimaanlagen-Einstellung zwischen Komfort und Stromsparen. Luftfeuchtigkeit und Luftbewegung ändern das Gefühl deutlich."
+      },
+      {
+        "title": "Unterwegs in Sommerkleidung",
+        "body": "Für Wege durch die Stadt, Einkäufe oder Spaziergänge sind atmungsaktive Kleidung, Wasser und Sonnenschutz sinnvoll, wenn man länger draußen bleibt."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "Sind 26°C eher kalt oder warm?",

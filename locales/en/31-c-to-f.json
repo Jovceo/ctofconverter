@@ -1,0 +1,135 @@
+{
+  "seo": {
+    "title": "31°C to Fahrenheit (87.8°F): Is It Hot? What to Wear & More",
+    "description": "Instantly convert 31°C to 87.8°F. This guide explains what 31°C feels like, what to wear, whether it is good for sleep or swimming, and how heat and sun exposure change the experience."
+  },
+  "header": {
+    "title": "31°C to Fahrenheit (31 Degrees Celsius to °F)",
+    "tagline": "Convert 31°C to Fahrenheit with practical help on summer heat, clothing, sleep, outdoor comfort, and sun exposure."
+  },
+  "conversion": {
+    "intro": "31°C in Fahrenheit is 87.8°F."
+  },
+  "strategy": {
+    "keywords": "31 celsius to fahrenheit hot weather clothing sleep swimming sunburn summer heat"
+  },
+  "comfortGuide": {
+    "title": "31°C summer heat guide",
+    "subtitle": "Where 31°C starts to feel properly hot for daily life",
+    "intro": "31°C (87.8°F) is clearly hot for most people. Outdoors it feels like a strong summer afternoon. Indoors, many people start wanting shade, fans, or air conditioning, especially if the room is humid or still.",
+    "chart": {
+      "cold": {
+        "label": "Cool",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Easy for indoor comfort"
+      },
+      "moderate": {
+        "label": "Comfortable",
+        "value": "23-27°C",
+        "desc": "73.4-80.6°F<br>Still manageable with light clothing"
+      },
+      "warm": {
+        "label": "Hot summer weather",
+        "value": "28-35°C",
+        "desc": "82.4-95°F<br>Shade, water, and cooling matter"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "27°C (80.6°F)",
+          "desc": "Warm and summery",
+          "use": "Light clothing and easy outdoor plans",
+          "href": "/27-c-to-f"
+        },
+        {
+          "temp": "29°C (84.2°F)",
+          "desc": "Hot",
+          "use": "Hydration and slower pacing help",
+          "href": "/29-c-to-f"
+        },
+        {
+          "temp": "31°C (87.8°F)",
+          "desc": "Hot summer weather",
+          "use": "Shade, cooling, and lighter activity",
+          "highlight": true
+        },
+        {
+          "temp": "32°C (89.6°F)",
+          "desc": "Very hot",
+          "use": "Outdoor effort gets harder",
+          "href": "/32-c-to-f.html"
+        },
+        {
+          "temp": "35°C (95°F)",
+          "desc": "Intense heat",
+          "use": "Heat precautions become important",
+          "href": "/35-c-to-f.html"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normal body temperature",
+          "use": "Useful body-temperature comparison",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 31°C may still feel fairly manageable in dry air or near water, but in humid places or sun-heavy cities it often feels much more draining."
+  },
+  "faq": [
+    {
+      "question": "Is 31°C hot or cold?",
+      "answerHtml": "<p>31°C (87.8°F) is definitely hot for most people. It is the kind of temperature where light clothes, shade, and cold drinks start sounding like a very good idea.</p>"
+    },
+    {
+      "question": "What is negative 31 Celsius in Fahrenheit?",
+      "answerHtml": "<p>-31°C equals -23.8°F. That is extremely cold weather, not just a chilly day.</p><ul><li>Exposed skin can become dangerous quickly</li><li>Heavy winter clothing is essential</li><li>Cars and outdoor plans can both become a problem</li></ul>"
+    },
+    {
+      "question": "Is 31°C a fever temperature?",
+      "answerHtml": "<p>No. Fever usually starts around 38°C (100.4°F). If 31°C were a body-temperature reading, it would actually be far too low, not a fever.</p>"
+    },
+    {
+      "question": "How long does it take to get a sunburn at 31°C?",
+      "answerHtml": "<p>Sunburn comes from UV, not the air temperature itself. But at 31°C, people usually stay outside longer and wear less coverage, so sunburn can happen fast on a high-UV day.</p><p>If the UV index is high, fair skin can start burning in under 15 minutes without protection.</p>"
+    },
+    {
+      "question": "Can you sleep comfortably at 31°C?",
+      "answerHtml": "<p>For most people, not really. Bedrooms usually feel best around 18-20°C (65-68°F), so 31°C often leads to sticky, restless sleep.</p><p>A fan, light bedding, and airflow help, but many people still find it too warm.</p>"
+    },
+    {
+      "question": "What should I wear at 31°C?",
+      "answerHtml": "<p>Go with breathable summer clothes:</p><ul><li>T-shirt, tank top, or light dress</li><li>Shorts, loose trousers, or a skirt in airy fabric</li><li>Hat, sunglasses, sunscreen, and water if you will be outside</li></ul>"
+    },
+    {
+      "question": "Is 31°C good for swimming?",
+      "answerHtml": "<p>Yes, 31°C air temperature is great for swimming. It usually feels warm enough for pool time, the beach, or water parks.</p><p>The air is warm when you get out, so the water often feels refreshing rather than shocking.</p>"
+    },
+    {
+      "question": "How do I convert 31°C to Fahrenheit in my head?",
+      "answerHtml": "<p>A simple mental shortcut is:</p><ol><li>Double 31 to get 62</li><li>Take off 10% to get 55.8</li><li>Add 32 to get 87.8°F</li></ol><p>If you just need a quick estimate, doubling it and adding 30 gets you close.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "31°C (87.8°F) in daily life",
+    "cards": [
+      {
+        "title": "Warm day, warmer night",
+        "body": "At 31°C, daytime can still feel enjoyable, but the evening often stops feeling neutral. Bedrooms usually hold heat longer than living rooms do."
+      },
+      {
+        "title": "Sleep comfort starts dropping",
+        "body": "Many people begin sleeping less comfortably around this point, especially with humidity or weak airflow. Lighter bedding and moving air help a lot."
+      },
+      {
+        "title": "Cooling makes a real difference",
+        "body": "A fan, open window, or air conditioning matters much more at 31°C than it does in milder weather."
+      }
+    ]
+  }
+}

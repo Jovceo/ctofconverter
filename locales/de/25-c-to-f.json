@@ -81,6 +81,23 @@
     },
     "note": "<strong>Hinweis:</strong> 25°C können draußen mit Luftzug angenehm sein, in einer warmen Wohnung aber deutlich drückender wirken."
   },
+  "practicalApplications": {
+    "title": "25 °C (77 °F) fühlen sich schon klar nach Sommer an",
+    "cards": [
+      {
+        "title": "Sommerabend und draußen sitzen",
+        "body": "25 °C passen gut zu Terrasse, Abendspaziergang, Park oder lockeren Sommerplänen draußen. Leichte Kleidung fühlt sich hier meist richtig an."
+      },
+      {
+        "title": "Ventilator und leichte Kühlung",
+        "body": "Innenräume erreichen bei 25 °C oft den Bereich, in dem viele lieber lüften, einen Ventilator nutzen oder milde Klimatisierung angenehm finden."
+      },
+      {
+        "title": "Pool, See und Freizeit",
+        "body": "Diese Temperatur passt schon gut zu Freibad, See, Wasser oder entspannten Sommeraktivitäten draußen, am besten mit Wasser und Sonnenschutz."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "Sind 25°C eher kalt oder warm?",

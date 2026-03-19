@@ -81,6 +81,23 @@
     },
     "note": "<strong>Hinweis:</strong> In trockenen Räumen wirken 21°C oft neutral, bei höherer Luftfeuchtigkeit können sie deutlich wärmer erscheinen."
   },
+  "practicalApplications": {
+    "title": "Wo 21 °C (69,8 °F) im Alltag gut passen",
+    "cards": [
+      {
+        "title": "Büro und Lesen",
+        "body": "21 °C passen gut zu Büroarbeit, Lesen, Homeoffice und ruhigen Innenräumen. Es wirkt meist weder kühl noch stickig."
+      },
+      {
+        "title": "Wohnung und Abend",
+        "body": "Im Wohnzimmer oder Schlafzimmer vor dem Schlafengehen fühlen sich 21 °C oft ausgewogen an. Wer schnell warm wird, möchte eventuell etwas niedriger gehen."
+      },
+      {
+        "title": "Übergangszeit und Wege draußen",
+        "body": "In vielen Städten erinnern 21 °C an einen angenehmen Frühlingstag oder frühen Herbsttag. Morgens oder abends reicht oft eine leichte Schicht."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "Sind 21°C eher kalt oder warm?",

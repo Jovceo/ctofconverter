@@ -1,0 +1,119 @@
+{
+  "seo": {
+    "title": "27°C to Fahrenheit (80.6°F) | Conversion Guide & Temperature Analysis",
+    "description": "Convert 27 degrees Celsius to Fahrenheit (80.6°F) instantly. Learn the formula, see the steps, and understand how 27°C feels for warm weather, clothing, and daily comfort."
+  },
+  "header": {
+    "title": "27°C to Fahrenheit (27 Degrees Celsius to °F)",
+    "tagline": "Free online temperature conversion tool that instantly converts 27 degrees Celsius (27°C) to degrees Fahrenheit (°F), with conversion formulas and detailed steps."
+  },
+  "conversion": {
+    "intro": "27°C in Fahrenheit is 80.6°F."
+  },
+  "strategy": {
+    "keywords": "27 celsius to fahrenheit temperature analysis warm weather clothing comfort conversion"
+  },
+  "comfortGuide": {
+    "title": "27°C warm weather guide",
+    "subtitle": "Where 27°C sits between pleasant and hot",
+    "intro": "27°C (80.6°F) feels warmly summery. Outdoors it usually feels pleasant rather than oppressive. Indoors, it often feels a little warmer than ideal room temperature unless there is airflow.",
+    "chart": {
+      "cold": {
+        "label": "Cool",
+        "value": "16-20°C",
+        "desc": "60.8-68°F<br>Fresh air and light layers"
+      },
+      "moderate": {
+        "label": "Comfortable",
+        "value": "21-24°C",
+        "desc": "69.8-75.2°F<br>Classic indoor comfort"
+      },
+      "warm": {
+        "label": "Warm summer weather",
+        "value": "25-30°C",
+        "desc": "77-86°F<br>Light clothing and shade help"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "23°C (73.4°F)",
+          "desc": "Comfortably warm",
+          "use": "Indoor comfort and easy outdoor walking",
+          "href": "/23-c-to-f"
+        },
+        {
+          "temp": "25°C (77°F)",
+          "desc": "Warm",
+          "use": "Light summer clothing and open windows",
+          "href": "/25-c-to-f"
+        },
+        {
+          "temp": "27°C (80.6°F)",
+          "desc": "Warm and summery",
+          "use": "Outdoor errands, patios, and warm rooms",
+          "highlight": true
+        },
+        {
+          "temp": "29°C (84.2°F)",
+          "desc": "Hot",
+          "use": "Hydration and shade matter more",
+          "href": "/29-c-to-f.html"
+        },
+        {
+          "temp": "30°C (86°F)",
+          "desc": "Hot summer weather",
+          "use": "Fans, cooling, and lighter activity",
+          "href": "/30-c-to-f.html"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normal body temperature",
+          "use": "Useful body-heat comparison",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 27°C can feel easy outdoors with a breeze, but the same number often feels warmer in a still room, especially with humidity."
+  },
+  "faq": [
+    {
+      "question": "What is 27 degrees Celsius in Fahrenheit?",
+      "answerHtml": "<p>27°C equals 80.6°F. The quick formula is °F = (°C × 9/5) + 32, so 27 × 1.8 = 48.6, and 48.6 + 32 = 80.6°F.</p>"
+    },
+    {
+      "question": "Is 27°C hot or cold?",
+      "answerHtml": "<p>27°C (80.6°F) usually feels warm, not extreme. Outdoors it often feels like a nice summer day, but indoors it can start to feel a bit stuffy if there is no airflow.</p>"
+    },
+    {
+      "question": "What should I wear at 27°C?",
+      "answerHtml": "<p>Light summer clothes usually make the most sense at 27°C:</p><ul><li>T-shirt, short sleeves, or a light dress</li><li>Shorts, skirts, or breathable trousers</li><li>Hat, sunglasses, and water if you will be out in the sun</li></ul>"
+    },
+    {
+      "question": "Is 27°C considered a fever temperature?",
+      "answerHtml": "<p>No. Fever usually starts around 38°C (100.4°F). If 27°C were a body temperature, it would actually be dangerously low, not a fever.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "27°C (80.6°F) in daily life",
+    "cards": [
+      {
+        "title": "Warm but still manageable",
+        "body": "At 27°C, the day feels clearly warm, but many people still find it workable for walking, cafés, markets, and light outdoor plans if shade and water are nearby."
+      },
+      {
+        "title": "Best for easy outdoor time",
+        "body": "This temperature suits commuting, casual errands, terrace seating, and gentle movement better than intense sport. Sun and humidity decide how quickly it starts feeling hot."
+      },
+      {
+        "title": "Indoors depend on airflow",
+        "body": "Inside, 27°C feels much easier with open windows, fans, or a breeze. Closed rooms usually feel warmer than the number suggests."
+      }
+    ]
+  }
+}

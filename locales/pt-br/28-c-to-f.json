@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "28°C para 82,4°F: calor leve, ar-condicionado e verão",
+    "description": "Converta 28°C para 82,4°F e descubra se essa temperatura combina com verão, ar-condicionado e atividades ao ar livre."
+  },
+  "header": {
+    "title": "28°C para 82,4°F",
+    "tagline": "Ferramenta gratuita para converter 28°C em 82,4°F com orientação prática sobre calor, roupas leves e uso de ar-condicionado."
+  },
+  "conversion": {
+    "intro": "28°C equivalem a 82,4°F."
+  },
+  "strategy": {
+    "keywords": "Converta 28°C para 82,4°F e descubra se essa temperatura combina com verão, ar-condicionado e atividades ao ar livre."
+  },
+  "comfortGuide": {
+    "title": "Guia de calor leve para 28°C",
+    "subtitle": "É um calor confortável de verão ou já pede refrigeração?",
+    "intro": "28°C (82,4°F) já tem cara de dia quente. Com roupa leve costuma ser tranquilo, mas em ambientes fechados muita gente prefere ventilador ou ar-condicionado.",
+    "chart": {
+      "cold": {
+        "label": "Mais fresco",
+        "value": "16-20°C",
+        "desc": "60.8-68°F<br>Melhor com um pouco de vento"
+      },
+      "moderate": {
+        "label": "Confortável",
+        "value": "21-24°C",
+        "desc": "69.8-75.2°F<br>Ainda dá para levar"
+      },
+      "warm": {
+        "label": "Mais quente",
+        "value": "25-31°C",
+        "desc": "77-87.8°F<br>Calor leve de verão"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensação",
+        "typicalUse": "Uso típico"
+      },
+      "rows": [
+        {
+          "href": "/24-c-to-f",
+          "temp": "24°C (75.2°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        },
+        {
+          "href": "/26-c-to-f",
+          "temp": "26°C (78.8°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        },
+        {
+          "highlight": true,
+          "temp": "28°C (82.4°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        },
+        {
+          "href": "/32-c-to-f.html",
+          "temp": "32°C (89.6°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 28°C pode ser agradável na rua com vento, mas dentro de casa, sem ventilação, a sensação sobe rápido."
+  },
+  "faq": [
+    {
+      "question": "28°C é frio ou calor?",
+      "answerHtml": "<p>28°C (82,4°F) já entra na faixa de dia quente.</p>"
+    },
+    {
+      "question": "Como converter 28°C para Fahrenheit?",
+      "answerHtml": "<p>A fórmula é: °F = (°C × 9/5) + 32. 28 vezes 1,8 dá 50,4; somando 32, o resultado é 82,4°F.</p>"
+    },
+    {
+      "question": "28°C é bom para dormir?",
+      "answerHtml": "<p>Para algumas pessoas, sim. Para quem sente calor fácil, pode parecer um pouco quente.</p>"
+    },
+    {
+      "question": "O que vestir com 28°C?",
+      "answerHtml": "<p>Aqui já vale apostar em peças mais frescas:</p><ul><li>Roupa leve e fresca</li><li>Short, saia ou tecido fino</li><li>Boné, água e proteção solar</li></ul>"
+    },
+    {
+      "question": "28°C costuma ser mais fácil na rua do que dentro de casa?",
+      "answerHtml": "<p>Com vento, 28°C na rua pode ser suportável; em casa sem ventilação, a sensação térmica sobe bastante.</p>"
+    },
+    {
+      "question": "28°C é febre?",
+      "answerHtml": "<p>Não. Febre normalmente começa perto de 38°C. Se 28°C fosse temperatura corporal, estaria muito abaixo do normal.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Onde 28°C (82,4°F) entram no dia a dia",
+    "cards": [
+      {
+        "title": "Dia quente, noite mais pesada",
+        "body": "Em 28°C o dia ainda pode passar bem, mas à noite a sensação costuma ficar menos neutra e o quarto segura calor por mais tempo."
+      },
+      {
+        "title": "O sono perde conforto",
+        "body": "Muita gente começa a dormir pior nessa faixa, especialmente com umidade alta ou pouco vento."
+      },
+      {
+        "title": "Ventilar ou resfriar ajuda muito",
+        "body": "Ventilador, janela aberta ou ar-condicionado fazem bem mais diferença em 28°C do que em temperaturas mais suaves."
+      }
+    ]
+  }
+}

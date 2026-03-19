@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "29°C to Fahrenheit (84.2°F) | Complete Conversion Guide & Practical Applications",
+    "description": "Convert 29°C to Fahrenheit (84.2°F) with formula, calculation steps, and practical guidance for humidity, hot weather, outdoor exercise, and daily summer use."
+  },
+  "header": {
+    "title": "29°C to Fahrenheit (29 Degrees Celsius to °F)",
+    "tagline": "Convert 29°C to Fahrenheit with a practical guide for weather, humidity, activity planning, and everyday hot-weather decisions."
+  },
+  "conversion": {
+    "intro": "29°C in Fahrenheit is 84.2°F."
+  },
+  "strategy": {
+    "keywords": "29 celsius to fahrenheit humidity hot weather outdoor exercise practical applications"
+  },
+  "comfortGuide": {
+    "title": "29°C heat and humidity guide",
+    "subtitle": "Where 29°C starts to feel properly hot",
+    "intro": "29°C (84.2°F) usually feels hot, especially in strong sun or humid air. It is still manageable for daily life, but many people start adjusting plans, clothing, and activity times around it.",
+    "chart": {
+      "cold": {
+        "label": "Cool",
+        "value": "17-21°C",
+        "desc": "62.6-69.8°F<br>Fresh and easy"
+      },
+      "moderate": {
+        "label": "Comfortable",
+        "value": "22-25°C",
+        "desc": "71.6-77°F<br>Usually easy indoors"
+      },
+      "warm": {
+        "label": "Hot weather",
+        "value": "26-32°C",
+        "desc": "78.8-89.6°F<br>Sun, shade, and water matter"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "25°C (77°F)",
+          "desc": "Warm and easy",
+          "use": "Pleasant summer weather",
+          "href": "/25-c-to-f"
+        },
+        {
+          "temp": "27°C (80.6°F)",
+          "desc": "Clearly warm",
+          "use": "Light clothing and outdoor comfort",
+          "href": "/27-c-to-f.html"
+        },
+        {
+          "temp": "29°C (84.2°F)",
+          "desc": "Hot",
+          "use": "Hydration, shade, and slower pace",
+          "highlight": true
+        },
+        {
+          "temp": "30°C (86°F)",
+          "desc": "Hot summer weather",
+          "use": "Cooling strategies matter more",
+          "href": "/30-c-to-f.html"
+        },
+        {
+          "temp": "33°C (91.4°F)",
+          "desc": "Very hot",
+          "use": "Plan around morning and evening hours",
+          "href": "/33-c-to-f.html"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normal body temperature",
+          "use": "Useful fever comparison",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> at 29°C, humidity makes a big difference. Dry air may feel tolerable, but humid air can push the perceived temperature much higher."
+  },
+  "faq": [
+    {
+      "question": "What is 29 degrees Celsius in Fahrenheit?",
+      "answerHtml": "<p>29°C equals 84.2°F. The formula is °F = (°C × 9/5) + 32, so 29 × 1.8 = 52.2, then 52.2 + 32 = 84.2°F.</p>"
+    },
+    {
+      "question": "Is 29°C a fever temperature?",
+      "answerHtml": "<p>No. Normal body temperature is around 37°C, and fever usually starts near 38°C. If 29°C were a body-temperature reading, it would be far below normal.</p>"
+    },
+    {
+      "question": "What is negative 29 Celsius in Fahrenheit?",
+      "answerHtml": "<p>-29°C converts to -20.2°F. The same formula still works: °F = (-29 × 9/5) + 32 = -20.2°F.</p>"
+    },
+    {
+      "question": "Is 29°C hot or cold?",
+      "answerHtml": "<p>29°C (84.2°F) is generally hot for everyday life, especially if the sun is strong. Some people in tropical climates may find it normal, but it is clearly above standard room temperature.</p>"
+    },
+    {
+      "question": "How does humidity affect 29°C temperature?",
+      "answerHtml": "<p>Humidity can change the feel of 29°C a lot. In dry air it may feel manageable, but in humid air it can feel much hotter and more tiring because sweat does not evaporate as easily.</p>"
+    },
+    {
+      "question": "Is 29°C safe for outdoor exercise?",
+      "answerHtml": "<p>It can be, but it is smarter to keep the intensity lower and pick morning or evening hours. Drink water, wear breathable clothes, and back off if the sun or humidity feels heavy.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "29°C (84.2°F) in daily life",
+    "cards": [
+      {
+        "title": "Warm but still manageable",
+        "body": "At 29°C, the day feels clearly warm, but many people still find it workable for walking, cafés, markets, and light outdoor plans if shade and water are nearby."
+      },
+      {
+        "title": "Best for easy outdoor time",
+        "body": "This temperature suits commuting, casual errands, terrace seating, and gentle movement better than intense sport. Sun and humidity decide how quickly it starts feeling hot."
+      },
+      {
+        "title": "Indoors depend on airflow",
+        "body": "Inside, 29°C feels much easier with open windows, fans, or a breeze. Closed rooms usually feel warmer than the number suggests."
+      }
+    ]
+  }
+}

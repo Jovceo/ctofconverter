@@ -81,6 +81,23 @@
     },
     "note": "<strong>Nota:</strong> en ambientes secos 21 °C suele sentirse neutro; con humedad alta, la misma cifra puede parecer más cálida."
   },
+  "practicalApplications": {
+    "title": "Dónde suele encajar 21 °C (69,8 °F)",
+    "cards": [
+      {
+        "title": "Oficina y lectura",
+        "body": "21 °C suele funcionar muy bien para oficina, biblioteca, estudio o trabajo sentado. No se siente frío y tampoco suele cargar el ambiente."
+      },
+      {
+        "title": "Casa y rato antes de dormir",
+        "body": "En salón, dormitorio o despacho de casa, 21 °C suele verse como una temperatura bastante equilibrada. A quien le da calor con facilidad quizá le apetezca bajar un poco más."
+      },
+      {
+        "title": "Entretiempo y desplazamientos",
+        "body": "En muchas ciudades, 21 °C recuerda a un día cómodo de primavera u otoño. Con una capa ligera por la mañana o al caer la tarde suele bastar."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "¿21 °C se siente frío o calor?",

@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "28°C ke 82,4°F: cuaca hangat, AC, dan kebutuhan musim panas",
+    "description": "Ubah 28°C ke 82,4°F dan lihat apakah suhu ini cocok untuk cuaca tropis hangat, AC, dan aktivitas luar ruang."
+  },
+  "header": {
+    "title": "28°C ke 82,4°F",
+    "tagline": "Konverter gratis untuk mengubah 28°C ke 82,4°F dengan panduan soal cuaca hangat, kipas, AC, dan pakaian ringan."
+  },
+  "conversion": {
+    "intro": "28°C sama dengan 82,4°F."
+  },
+  "strategy": {
+    "keywords": "Ubah 28°C ke 82,4°F dan lihat apakah suhu ini cocok untuk cuaca tropis hangat, AC, dan aktivitas luar ruang."
+  },
+  "comfortGuide": {
+    "title": "Panduan cuaca hangat untuk 28°C",
+    "subtitle": "Masih enak tanpa AC atau sudah perlu pendinginan?",
+    "intro": "28°C (82,4°F) sudah terasa seperti hari hangat. Dengan pakaian ringan masih nyaman, tetapi di ruangan tanpa sirkulasi orang sering memilih kipas atau AC.",
+    "chart": {
+      "cold": {
+        "label": "Lebih sejuk",
+        "value": "16-20°C",
+        "desc": "60.8-68°F<br>Lebih nyaman kalau ada angin"
+      },
+      "moderate": {
+        "label": "Nyaman",
+        "value": "21-24°C",
+        "desc": "69.8-75.2°F<br>Masih cukup nyaman"
+      },
+      "warm": {
+        "label": "Lebih hangat",
+        "value": "25-31°C",
+        "desc": "77-87.8°F<br>Hangat khas musim panas"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Suhu",
+        "description": "Kesan",
+        "typicalUse": "Penggunaan umum"
+      },
+      "rows": [
+        {
+          "href": "/24-c-to-f",
+          "temp": "24°C (75.2°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/26-c-to-f",
+          "temp": "26°C (78.8°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "highlight": true,
+          "temp": "28°C (82.4°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/32-c-to-f.html",
+          "temp": "32°C (89.6°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        }
+      ]
+    },
+    "note": "<strong>Catatan:</strong> 28°C bisa terasa nyaman di luar dengan angin, tetapi di ruangan tropis yang lembap bisa terasa jauh lebih panas."
+  },
+  "faq": [
+    {
+      "question": "Apakah 28°C terasa dingin atau panas?",
+      "answerHtml": "<p>28°C (82,4°F) sudah masuk kategori hangat.</p>"
+    },
+    {
+      "question": "Bagaimana cara mengubah 28°C ke Fahrenheit?",
+      "answerHtml": "<p>Rumusnya adalah: °F = (°C × 9/5) + 32. 28 dikali 1,8 menghasilkan 50,4, lalu ditambah 32 menjadi 82,4°F.</p>"
+    },
+    {
+      "question": "Apakah 28°C enak untuk tidur?",
+      "answerHtml": "<p>Bisa cocok untuk sebagian orang, tetapi yang mudah gerah mungkin ingin suhu sedikit lebih rendah.</p>"
+    },
+    {
+      "question": "Pakaian apa yang cocok pada 28°C?",
+      "answerHtml": "<p>Pada suhu seperti ini, pakaian tipis dan adem biasanya paling pas:</p><ul><li>Kaos, dress ringan, atau bahan cepat kering</li><li>Celana pendek atau pakaian sangat adem</li><li>Topi, air minum, dan pelindung matahari</li></ul>"
+    },
+    {
+      "question": "Apakah 28°C lebih enak di luar daripada di dalam ruangan?",
+      "answerHtml": "<p>Dengan angin, 28°C di luar bisa terasa enak; di ruangan tertutup tanpa sirkulasi bisa terasa jauh lebih panas.</p>"
+    },
+    {
+      "question": "Apakah 28°C termasuk demam?",
+      "answerHtml": "<p>Tidak. Demam biasanya mulai mendekati 38°C. Jika 28°C adalah suhu tubuh, nilainya justru jauh di bawah normal.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "28°C (82,4°F) dalam keseharian",
+    "cards": [
+      {
+        "title": "Siang hangat, malam lebih terasa",
+        "body": "Pada 28°C, siang mungkin masih terasa oke, tetapi malam biasanya tidak lagi netral dan kamar tidur menahan panas lebih lama."
+      },
+      {
+        "title": "Tidur mulai kurang nyaman",
+        "body": "Banyak orang mulai merasa tidur kurang nyenyak pada suhu seperti ini, terutama jika lembap atau aliran udaranya lemah."
+      },
+      {
+        "title": "Pendinginan jadi lebih penting",
+        "body": "Kipas, jendela terbuka, atau AC memberi perbedaan jauh lebih besar pada 28°C dibanding cuaca yang lebih sejuk."
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "31°C ke 87,8°F: cuaca hangat, AC, dan kebutuhan musim panas",
+    "description": "Ubah 31°C ke 87,8°F dan lihat apakah suhu ini cocok untuk cuaca tropis hangat, AC, dan aktivitas luar ruang."
+  },
+  "header": {
+    "title": "31°C ke 87,8°F",
+    "tagline": "Konverter gratis untuk mengubah 31°C ke 87,8°F dengan panduan soal cuaca hangat, kipas, AC, dan pakaian ringan."
+  },
+  "conversion": {
+    "intro": "31°C sama dengan 87,8°F."
+  },
+  "strategy": {
+    "keywords": "Ubah 31°C ke 87,8°F dan lihat apakah suhu ini cocok untuk cuaca tropis hangat, AC, dan aktivitas luar ruang."
+  },
+  "comfortGuide": {
+    "title": "Panduan cuaca hangat untuk 31°C",
+    "subtitle": "Masih enak tanpa AC atau sudah perlu pendinginan?",
+    "intro": "31°C (87,8°F) sudah terasa seperti hari hangat. Dengan pakaian ringan masih nyaman, tetapi di ruangan tanpa sirkulasi orang sering memilih kipas atau AC.",
+    "chart": {
+      "cold": {
+        "label": "Lebih sejuk",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Lebih nyaman kalau ada angin"
+      },
+      "moderate": {
+        "label": "Nyaman",
+        "value": "23-27°C",
+        "desc": "73.4-80.6°F<br>Masih cukup nyaman"
+      },
+      "warm": {
+        "label": "Lebih hangat",
+        "value": "28-35°C",
+        "desc": "82.4-95°F<br>Hangat khas musim panas"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Suhu",
+        "description": "Kesan",
+        "typicalUse": "Penggunaan umum"
+      },
+      "rows": [
+        {
+          "href": "/27-c-to-f",
+          "temp": "27°C (80.6°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/29-c-to-f",
+          "temp": "29°C (84.2°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "highlight": true,
+          "temp": "31°C (87.8°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/32-c-to-f.html",
+          "temp": "32°C (89.6°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/35-c-to-f.html",
+          "temp": "35°C (95°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        }
+      ]
+    },
+    "note": "<strong>Catatan:</strong> 31°C bisa terasa nyaman di luar dengan angin, tetapi di ruangan tropis yang lembap bisa terasa jauh lebih panas."
+  },
+  "faq": [
+    {
+      "question": "Apakah 31°C terasa dingin atau panas?",
+      "answerHtml": "<p>31°C (87,8°F) sudah masuk kategori hangat.</p>"
+    },
+    {
+      "question": "Bagaimana cara mengubah 31°C ke Fahrenheit?",
+      "answerHtml": "<p>Rumusnya adalah: °F = (°C × 9/5) + 32. 31 dikali 1,8 menghasilkan 55,8, lalu ditambah 32 menjadi 87,8°F.</p>"
+    },
+    {
+      "question": "Apakah 31°C enak untuk tidur?",
+      "answerHtml": "<p>Bisa cocok untuk sebagian orang, tetapi yang mudah gerah mungkin ingin suhu sedikit lebih rendah.</p>"
+    },
+    {
+      "question": "Pakaian apa yang cocok pada 31°C?",
+      "answerHtml": "<p>Pada suhu seperti ini, pakaian tipis dan adem biasanya paling pas:</p><ul><li>Kaos, dress ringan, atau bahan cepat kering</li><li>Celana pendek atau pakaian sangat adem</li><li>Topi, air minum, dan pelindung matahari</li></ul>"
+    },
+    {
+      "question": "Apakah 31°C lebih enak di luar daripada di dalam ruangan?",
+      "answerHtml": "<p>Dengan angin, 31°C di luar bisa terasa enak; di ruangan tertutup tanpa sirkulasi bisa terasa jauh lebih panas.</p>"
+    },
+    {
+      "question": "Apakah 31°C termasuk demam?",
+      "answerHtml": "<p>Tidak. Demam biasanya mulai mendekati 38°C. Jika 31°C adalah suhu tubuh, nilainya justru jauh di bawah normal.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "31°C (87,8°F) dalam keseharian",
+    "cards": [
+      {
+        "title": "Siang hangat, malam lebih terasa",
+        "body": "Pada 31°C, siang mungkin masih terasa oke, tetapi malam biasanya tidak lagi netral dan kamar tidur menahan panas lebih lama."
+      },
+      {
+        "title": "Tidur mulai kurang nyaman",
+        "body": "Banyak orang mulai merasa tidur kurang nyenyak pada suhu seperti ini, terutama jika lembap atau aliran udaranya lemah."
+      },
+      {
+        "title": "Pendinginan jadi lebih penting",
+        "body": "Kipas, jendela terbuka, atau AC memberi perbedaan jauh lebih besar pada 31°C dibanding cuaca yang lebih sejuk."
+      }
+    ]
+  }
+}

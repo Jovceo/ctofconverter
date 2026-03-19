@@ -81,6 +81,23 @@
     },
     "note": "<strong>Nota:</strong> a 24 °C cambian mucho el sol, la sombra, el viento y la humedad."
   },
+  "practicalApplications": {
+    "title": "24 °C (75,2 °F) ya se mueve en una franja templada-cálida",
+    "cards": [
+      {
+        "title": "Salidas de fin de semana",
+        "body": "24 °C suele ser muy buena temperatura para pasear, ir de compras, comer fuera o moverse un rato al aire libre sin sensación fuerte de calor."
+      },
+      {
+        "title": "Límite entre cómodo y algo cálido",
+        "body": "En casa, oficina o aula, 24 °C ya entra en la zona en la que mucha gente empieza a pensar en abrir una ventana o encender un ventilador."
+      },
+      {
+        "title": "Ropa ligera",
+        "body": "Camiseta, camisa fina, vestido o tejidos transpirables suelen encajar bien. Si refresca a última hora, una capa fina suele resolverlo."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "¿24 °C se siente frío o calor?",

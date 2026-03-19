@@ -81,6 +81,23 @@
     },
     "note": "<strong>Hinweis:</strong> Bei 23°C verändern Sonne, Schatten und Wind das Empfinden stark."
   },
+  "practicalApplications": {
+    "title": "Typische Situationen bei 23 °C (73,4 °F)",
+    "cards": [
+      {
+        "title": "Spaziergang und Café draußen",
+        "body": "23 °C fühlen sich oft ideal für Spaziergänge, kurze Erledigungen oder einen Platz draußen im Café an, ohne dass man schwere Kleidung braucht."
+      },
+      {
+        "title": "Innenräume mit etwas mehr Wärme",
+        "body": "In Klassenräumen, Cafés oder vollen Büros können 23 °C wärmer wirken als klassische Raumtemperatur, vor allem bei wenig Luftbewegung."
+      },
+      {
+        "title": "Leichte Aktivität",
+        "body": "Für lockeres Radfahren, Gehen oder leichte Bewegung im Freien sind 23 °C meist sehr angenehm, solange die Luftfeuchtigkeit nicht zu hoch ist."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "Sind 23°C eher kalt oder warm?",

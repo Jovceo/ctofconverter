@@ -81,6 +81,23 @@
     },
     "note": "<strong>Note :</strong> à 23 °C, le soleil, l’ombre et le vent changent nettement le ressenti."
   },
+  "practicalApplications": {
+    "title": "Situations courantes pour 23 °C (73,4 °F)",
+    "cards": [
+      {
+        "title": "Balade et terrasse",
+        "body": "23 °C sont souvent parfaits pour marcher, faire quelques courses ou s'installer en terrasse sans avoir besoin d'une veste lourde."
+      },
+      {
+        "title": "Intérieur un peu plus chaud",
+        "body": "Dans une salle de classe, un café ou un bureau occupé, 23 °C peuvent sembler plus chauds que la température intérieure classique, surtout avec peu d'aération."
+      },
+      {
+        "title": "Activité légère",
+        "body": "Pour une promenade rapide, du vélo tranquille ou un peu d'activité dehors, 23 °C fonctionnent très bien tant que l'humidité reste modérée."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "23 °C, c’est froid ou chaud ?",

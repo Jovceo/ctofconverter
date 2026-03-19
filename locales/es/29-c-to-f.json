@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "29 °C a Fahrenheit (84,2 °F): calor suave, aire acondicionado y verano",
+    "description": "Convierte 29 °C a 84,2 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
+  },
+  "header": {
+    "title": "29 °C a Fahrenheit (84,2 °F)",
+    "tagline": "Herramienta gratuita para convertir 29 °C a 84,2 °F con consejos sobre calor suave, aire acondicionado y ropa ligera."
+  },
+  "conversion": {
+    "intro": "29 °C en Fahrenheit son 84,2 °F."
+  },
+  "strategy": {
+    "keywords": "Convierte 29 °C a 84,2 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
+  },
+  "comfortGuide": {
+    "title": "Guía de calor suave para 29 °C",
+    "subtitle": "¿Es calor agradable o una temperatura para enfriar?",
+    "intro": "29 °C (84,2 °F) ya transmite sensación de verano. Con ropa ligera suele ir bien, aunque en interiores cerrados apetece más ventilación.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "17-21°C",
+        "desc": "62.6-69.8°F<br>Mejor con brisa"
+      },
+      "moderate": {
+        "label": "Cómodo",
+        "value": "22-25°C",
+        "desc": "71.6-77°F<br>Todavía manejable"
+      },
+      "warm": {
+        "label": "Cálido",
+        "value": "26-32°C",
+        "desc": "78.8-89.6°F<br>Calor suave de verano"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensación",
+        "typicalUse": "Uso habitual"
+      },
+      "rows": [
+        {
+          "href": "/25-c-to-f",
+          "temp": "25°C (77°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/27-c-to-f.html",
+          "temp": "27°C (80.6°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "highlight": true,
+          "temp": "29°C (84.2°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/33-c-to-f.html",
+          "temp": "33°C (91.4°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 29 °C puede sentirse bien con brisa, pero en un piso cerrado suele parecer bastante más cálido."
+  },
+  "faq": [
+    {
+      "question": "¿29 °C se siente frío o calor?",
+      "answerHtml": "<p>29 °C (84,2 °F) ya encaja con un día cálido de verano.</p>"
+    },
+    {
+      "question": "¿Cómo convierto 29 °C a Fahrenheit?",
+      "answerHtml": "<p>La fórmula es: °F = (°C × 9/5) + 32. Si multiplicas 29 por 1,8 obtienes 52,2; al sumar 32 llegas a 84,2 °F.</p>"
+    },
+    {
+      "question": "¿29 °C es buena temperatura para actividades al aire libre?",
+      "answerHtml": "<p>29 °C suele ir bien para caminar, ir a una terraza o hacer ejercicio suave.</p>"
+    },
+    {
+      "question": "¿Qué ropa conviene con 29 °C?",
+      "answerHtml": "<p>Con esta temperatura suele bastar ropa fresca y transpirable:</p><ul><li>Camiseta, vestido ligero o ropa fresca</li><li>Pantalón corto o tejidos muy transpirables</li><li>Gafas de sol, gorra y protección solar</li></ul>"
+    },
+    {
+      "question": "¿29 °C se lleva mejor en la calle que dentro de casa?",
+      "answerHtml": "<p>Con algo de brisa, 29 °C al aire libre puede resultar agradable; en un piso cerrado suele sentirse más pesado.</p>"
+    },
+    {
+      "question": "¿29 °C es fiebre?",
+      "answerHtml": "<p>No. La fiebre humana suele empezar cerca de 38 °C. Si 29 °C fuera temperatura corporal, estaría muy por debajo de lo normal.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Dónde suele encajar 29 °C (84,2 °F)",
+    "cards": [
+      {
+        "title": "Cálido pero llevadero",
+        "body": "A 29 °C el día ya se siente claramente cálido, pero todavía encaja bien con paseos, terrazas, recados y planes suaves si hay agua y algo de sombra."
+      },
+      {
+        "title": "Mejor para planes tranquilos",
+        "body": "Esta temperatura va mejor con caminar, moverse con calma o estar al aire libre sin demasiada intensidad. El sol y la humedad marcan la diferencia."
+      },
+      {
+        "title": "Dentro manda el aire",
+        "body": "En interior, 29 °C se lleva mucho mejor con ventanas abiertas, ventilador o corriente. En un piso cerrado suele parecer más caliente."
+      }
+    ]
+  }
+}

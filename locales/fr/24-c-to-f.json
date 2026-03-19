@@ -81,6 +81,23 @@
     },
     "note": "<strong>Note :</strong> à 24 °C, le soleil, l’ombre et le vent changent nettement le ressenti."
   },
+  "practicalApplications": {
+    "title": "24 °C (75,2 °F) arrivent déjà dans une zone tiède à chaude",
+    "cards": [
+      {
+        "title": "Sorties du week-end",
+        "body": "24 °C sont agréables pour se promener, déjeuner dehors, faire du shopping ou passer du temps en extérieur sans forte sensation de chaleur."
+      },
+      {
+        "title": "Frontière entre confortable et un peu chaud",
+        "body": "À la maison ou au bureau, 24 °C marquent souvent le moment où l'on pense à ouvrir une fenêtre, chercher un courant d'air ou allumer un ventilateur."
+      },
+      {
+        "title": "Vêtements légers",
+        "body": "T-shirt, chemise légère, robe ou matières respirantes conviennent bien. En fin de journée, une couche fine peut suffire si l'air se rafraîchit."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "24 °C, c’est froid ou chaud ?",

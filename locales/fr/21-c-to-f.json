@@ -81,6 +81,23 @@
     },
     "note": "<strong>Note :</strong> dans un logement sec, 21 °C paraît souvent neutre ; avec davantage d’humidité, la même valeur semble plus chaude."
   },
+  "practicalApplications": {
+    "title": "Où 21 °C (69,8 °F) s'intègrent bien au quotidien",
+    "cards": [
+      {
+        "title": "Bureau et lecture",
+        "body": "21 °C conviennent bien au bureau, à la lecture, au télétravail ou à une journée d'étude. La pièce reste généralement agréable sans sembler fraîche."
+      },
+      {
+        "title": "Maison et fin de soirée",
+        "body": "Dans le salon ou la chambre avant de dormir, 21 °C donnent souvent une impression équilibrée. Les personnes vite trop chaudes préféreront parfois un peu moins."
+      },
+      {
+        "title": "Mi-saison et déplacements",
+        "body": "Dans beaucoup de villes, 21 °C rappellent une journée douce de printemps ou de début d'automne. Une couche légère le matin ou le soir suffit souvent."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "21 °C, c’est froid ou chaud ?",

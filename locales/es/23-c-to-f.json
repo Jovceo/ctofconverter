@@ -81,6 +81,23 @@
     },
     "note": "<strong>Nota:</strong> a 23 °C cambian mucho el sol, la sombra, el viento y la humedad."
   },
+  "practicalApplications": {
+    "title": "Escenarios habituales para 23 °C (73,4 °F)",
+    "cards": [
+      {
+        "title": "Paseo y terrazas",
+        "body": "23 °C suele sentirse ideal para caminar, sentarse en una terraza o hacer recados sin abrigo pesado. Ya hay sensación templada, pero todavía amable."
+      },
+      {
+        "title": "Interior con algo de calor",
+        "body": "En cafeterías, aulas u oficinas con gente y poca ventilación, 23 °C puede notarse más cálido que la temperatura ambiente clásica."
+      },
+      {
+        "title": "Actividad suave",
+        "body": "Para paseo rápido, bici tranquila o estiramientos al aire libre, 23 °C suele ir muy bien, sobre todo si no hay humedad alta."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "¿23 °C se siente frío o calor?",

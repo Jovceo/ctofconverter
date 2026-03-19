@@ -81,6 +81,23 @@
     },
     "note": "<strong>Note :</strong> dans un logement sec, 22 °C paraît souvent neutre ; avec davantage d’humidité, la même valeur semble plus chaude."
   },
+  "practicalApplications": {
+    "title": "Quand 22 °C (71,6 °F) fonctionnent le mieux",
+    "cards": [
+      {
+        "title": "Télétravail et étude",
+        "body": "22 °C conviennent bien pour plusieurs heures de travail ou d'étude. La sensation reste confortable, avec un léger côté plus chaud que 21 °C."
+      },
+      {
+        "title": "Chambre tempérée",
+        "body": "Pour certaines personnes, 22 °C restent acceptables pour dormir. Celles qui préfèrent une chambre fraîche trouveront cependant la pièce un peu plus chaude."
+      },
+      {
+        "title": "Bâtiments climatisés",
+        "body": "Cette température ressemble à celle de nombreux bureaux, commerces et lieux d'étude climatisés. Une petite veste peut rester utile en entrant ou en sortant."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "22 °C, c’est froid ou chaud ?",

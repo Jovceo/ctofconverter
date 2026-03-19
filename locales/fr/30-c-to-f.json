@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "30 °C en Fahrenheit (86 °F) : chaleur douce, climatisation et été",
+    "description": "Convertissez 30 °C en 86 °F et voyez si cette température appelle une tenue légère, un ventilateur ou la climatisation."
+  },
+  "header": {
+    "title": "30 °C en Fahrenheit (86 °F)",
+    "tagline": "Outil gratuit pour convertir 30 °C en 86 °F avec des repères pratiques sur la chaleur, la climatisation et les vêtements légers."
+  },
+  "conversion": {
+    "intro": "30 °C correspondent à 86 °F."
+  },
+  "strategy": {
+    "keywords": "Convertissez 30 °C en 86 °F et voyez si cette température appelle une tenue légère, un ventilateur ou la climatisation."
+  },
+  "comfortGuide": {
+    "title": "Guide de chaleur légère pour 30 °C",
+    "subtitle": "Chaleur d’été agréable ou besoin de rafraîchir ?",
+    "intro": "30 °C (86 °F) correspond déjà à une vraie ambiance estivale. En extérieur, une tenue légère suffit souvent ; en intérieur, un peu d’air frais aide.",
+    "chart": {
+      "cold": {
+        "label": "Frais",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Mieux avec un peu d’air"
+      },
+      "moderate": {
+        "label": "Confortable",
+        "value": "23-26°C",
+        "desc": "73.4-78.8°F<br>Encore supportable"
+      },
+      "warm": {
+        "label": "Plus chaud",
+        "value": "27-33°C",
+        "desc": "80.6-91.4°F<br>Chaleur douce d’été"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Température",
+        "description": "Ressenti",
+        "typicalUse": "Usage typique"
+      },
+      "rows": [
+        {
+          "href": "/26-c-to-f",
+          "temp": "26°C (78.8°F)",
+          "desc": "Assez frais",
+          "use": "Aération ou veste légère"
+        },
+        {
+          "href": "/28-c-to-f.html",
+          "temp": "28°C (82.4°F)",
+          "desc": "Assez frais",
+          "use": "Aération ou veste légère"
+        },
+        {
+          "highlight": true,
+          "temp": "30°C (86°F)",
+          "desc": "Assez frais",
+          "use": "Aération ou veste légère"
+        },
+        {
+          "href": "/32-c-to-f.html",
+          "temp": "32°C (89.6°F)",
+          "desc": "Assez frais",
+          "use": "Aération ou veste légère"
+        },
+        {
+          "href": "/35-c-to-f.html",
+          "temp": "35°C (95°F)",
+          "desc": "Assez frais",
+          "use": "Aération ou veste légère"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Assez frais",
+          "use": "Aération ou veste légère"
+        }
+      ]
+    },
+    "note": "<strong>Note :</strong> 30 °C peut être agréable dehors avec de l’air, mais plus lourd dans un appartement mal ventilé."
+  },
+  "faq": [
+    {
+      "question": "30 °C, c’est froid ou chaud ?",
+      "answerHtml": "<p>30 °C (86 °F) correspond déjà à un temps chaud d’été.</p>"
+    },
+    {
+      "question": "Comment convertir 30 °C en Fahrenheit ?",
+      "answerHtml": "<p>La formule est : °F = (°C × 9/5) + 32. 30 multiplié par 1,8 donne 54, puis on ajoute 32 pour obtenir 86 °F.</p>"
+    },
+    {
+      "question": "30 °C est-il un bon réglage pour la climatisation ?",
+      "answerHtml": "<p>30 °C est souvent vu comme un réglage de climatisation raisonnable et économe.</p>"
+    },
+    {
+      "question": "Que porter quand il fait 30 °C ?",
+      "answerHtml": "<p>On peut souvent passer à des vêtements clairement estivaux :</p><ul><li>Tenue légère et respirante</li><li>Short ou tissu fin</li><li>Lunettes, eau et protection solaire</li></ul>"
+    },
+    {
+      "question": "30 °C se supporte-t-il mieux dehors qu’en intérieur ?",
+      "answerHtml": "<p>Souvent oui. En extérieur avec un peu d’air, 30 °C peut rester agréable ; en intérieur, cela paraît rapidement plus chaud.</p>"
+    },
+    {
+      "question": "30 °C, est-ce une fièvre ?",
+      "answerHtml": "<p>Non. La fièvre commence généralement autour de 38 °C. Si 30 °C était une température corporelle, ce serait bien en dessous de la normale.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Où 30 °C (86 °F) se placent dans la vie quotidienne",
+    "cards": [
+      {
+        "title": "Le milieu de journée devient chaud",
+        "body": "À 30 °C, la fin de matinée et l’après-midi paraissent franchement chaudes, surtout sur le bitume ou en plein soleil."
+      },
+      {
+        "title": "Le ventilateur aide, la clim plus encore",
+        "body": "En intérieur, l’aération aide encore, mais beaucoup préfèrent déjà la climatisation autour de 30 °C."
+      },
+      {
+        "title": "Mieux vaut organiser sa journée",
+        "body": "Courses, sport et longues marches sont souvent plus faciles tôt ou tard, avec de l’eau et un peu d’ombre."
+      }
+    ]
+  }
+}

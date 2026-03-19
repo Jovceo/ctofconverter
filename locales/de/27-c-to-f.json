@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "27°C in Fahrenheit (80,6°F): Sommerwärme, Klimaanlage und Alltag",
+    "description": "Wandle 27°C in 80,6°F um und finde heraus, ob diese Temperatur nach Sommerkleidung, Lüften oder Klimaanlage verlangt."
+  },
+  "header": {
+    "title": "27°C in Fahrenheit (80,6°F)",
+    "tagline": "Kostenloser Umrechner für 27°C zu 80,6°F mit Hinweisen zu Sommerwärme, leichter Kleidung und sinnvollen Klimaeinstellungen."
+  },
+  "conversion": {
+    "intro": "27°C entsprechen 80,6°F."
+  },
+  "strategy": {
+    "keywords": "Wandle 27°C in 80,6°F um und finde heraus, ob diese Temperatur nach Sommerkleidung, Lüften oder Klimaanlage verlangt."
+  },
+  "comfortGuide": {
+    "title": "Sommer-Guide für 27°C",
+    "subtitle": "Sommerlich angenehm oder eher ein Fall für Kühlung?",
+    "intro": "27°C (80,6°F) wirken deutlich sommerlich. Im Freien mit leichter Kleidung meist gut, in Innenräumen aber oft schon warm genug für Ventilator oder Klima.",
+    "chart": {
+      "cold": {
+        "label": "Kühler",
+        "value": "16-20°C",
+        "desc": "60.8-68°F<br>Mit Luftzug angenehmer"
+      },
+      "moderate": {
+        "label": "Angenehm",
+        "value": "21-24°C",
+        "desc": "69.8-75.2°F<br>Noch gut machbar"
+      },
+      "warm": {
+        "label": "Wärmer",
+        "value": "25-30°C",
+        "desc": "77-86°F<br>Sommerlich warm"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatur",
+        "description": "Eindruck",
+        "typicalUse": "Typischer Einsatz"
+      },
+      "rows": [
+        {
+          "href": "/23-c-to-f",
+          "temp": "23°C (73.4°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "href": "/25-c-to-f",
+          "temp": "25°C (77°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "highlight": true,
+          "temp": "27°C (80.6°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "href": "/29-c-to-f.html",
+          "temp": "29°C (84.2°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        }
+      ]
+    },
+    "note": "<strong>Hinweis:</strong> 27°C können draußen mit Luftzug angenehm sein, in einer warmen Wohnung aber deutlich drückender wirken."
+  },
+  "faq": [
+    {
+      "question": "Sind 27°C eher kalt oder warm?",
+      "answerHtml": "<p>27°C (80,6°F) sind klar sommerlich.</p>"
+    },
+    {
+      "question": "Wie rechnet man 27°C in Fahrenheit um?",
+      "answerHtml": "<p>Die Formel lautet: °F = (°C × 9/5) + 32. 27 mal 1,8 ergibt 48,6; plus 32 sind es 80,6°F.</p>"
+    },
+    {
+      "question": "Sind 27°C gut für Aktivitäten draußen?",
+      "answerHtml": "<p>27°C sind häufig gut für Spaziergänge, Radfahren oder Cafébesuche im Freien geeignet.</p>"
+    },
+    {
+      "question": "Was trägt man bei 27°C?",
+      "answerHtml": "<p>Hier passt meist schon klar sommerliche Kleidung:</p><ul><li>Leichte, luftige Kleidung</li><li>Kurze Hose oder dünne Stoffe</li><li>Wasser, Sonnenbrille und Kopfbedeckung</li></ul>"
+    },
+    {
+      "question": "Sind 27°C draußen oft angenehmer als drinnen?",
+      "answerHtml": "<p>Mit Luftzug draußen sind 27°C oft angenehmer, während Innenräume ohne Lüftung schnell wärmer wirken.</p>"
+    },
+    {
+      "question": "Sind 27°C Fieber?",
+      "answerHtml": "<p>Nein. Fieber beginnt meist erst in der Nähe von 38°C. Als Körpertemperatur wäre 27°C deutlich zu niedrig.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "27°C (80,6°F) im Alltag",
+    "cards": [
+      {
+        "title": "Warm, aber noch gut machbar",
+        "body": "Bei 27°C fühlt sich der Tag klar warm an, ist für Spaziergänge, Erledigungen, Cafébesuche und lockere Außenpläne aber oft noch gut machbar, wenn Wasser und Schatten da sind."
+      },
+      {
+        "title": "Besser für ruhige Outdoor-Zeit",
+        "body": "Diese Temperatur passt eher zu lockerem Gehen, kurzen Wegen und entspannten Aktivitäten draußen als zu hartem Sport in der Sonne."
+      },
+      {
+        "title": "Drinnen zählt Luftbewegung",
+        "body": "In Innenräumen sind 27°C mit offenen Fenstern, Ventilator oder Luftzug deutlich angenehmer. Geschlossene Räume fühlen sich meist wärmer an als die Zahl vermuten lässt."
+      }
+    ]
+  }
+}

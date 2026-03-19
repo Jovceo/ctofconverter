@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "28 °C a Fahrenheit (82,4 °F): calor suave, aire acondicionado y verano",
+    "description": "Convierte 28 °C a 82,4 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
+  },
+  "header": {
+    "title": "28 °C a Fahrenheit (82,4 °F)",
+    "tagline": "Herramienta gratuita para convertir 28 °C a 82,4 °F con consejos sobre calor suave, aire acondicionado y ropa ligera."
+  },
+  "conversion": {
+    "intro": "28 °C en Fahrenheit son 82,4 °F."
+  },
+  "strategy": {
+    "keywords": "Convierte 28 °C a 82,4 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
+  },
+  "comfortGuide": {
+    "title": "Guía de calor suave para 28 °C",
+    "subtitle": "¿Es calor agradable o una temperatura para enfriar?",
+    "intro": "28 °C (82,4 °F) ya transmite sensación de verano. Con ropa ligera suele ir bien, aunque en interiores cerrados apetece más ventilación.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "16-20°C",
+        "desc": "60.8-68°F<br>Mejor con brisa"
+      },
+      "moderate": {
+        "label": "Cómodo",
+        "value": "21-24°C",
+        "desc": "69.8-75.2°F<br>Todavía manejable"
+      },
+      "warm": {
+        "label": "Cálido",
+        "value": "25-31°C",
+        "desc": "77-87.8°F<br>Calor suave de verano"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensación",
+        "typicalUse": "Uso habitual"
+      },
+      "rows": [
+        {
+          "href": "/24-c-to-f",
+          "temp": "24°C (75.2°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/26-c-to-f",
+          "temp": "26°C (78.8°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "highlight": true,
+          "temp": "28°C (82.4°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/30-c-to-f.html",
+          "temp": "30°C (86°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/32-c-to-f.html",
+          "temp": "32°C (89.6°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 28 °C puede sentirse bien con brisa, pero en un piso cerrado suele parecer bastante más cálido."
+  },
+  "faq": [
+    {
+      "question": "¿28 °C se siente frío o calor?",
+      "answerHtml": "<p>28 °C (82,4 °F) ya encaja con un día cálido de verano.</p>"
+    },
+    {
+      "question": "¿Cómo convierto 28 °C a Fahrenheit?",
+      "answerHtml": "<p>La fórmula es: °F = (°C × 9/5) + 32. Si multiplicas 28 por 1,8 obtienes 50,4; al sumar 32 llegas a 82,4 °F.</p>"
+    },
+    {
+      "question": "¿28 °C es buena temperatura para dormir?",
+      "answerHtml": "<p>Puede ser aceptable, aunque a quien le guste dormir fresco le parecerá algo cálido.</p>"
+    },
+    {
+      "question": "¿Qué ropa conviene con 28 °C?",
+      "answerHtml": "<p>Con esta temperatura suele bastar ropa fresca y transpirable:</p><ul><li>Camiseta, vestido ligero o ropa fresca</li><li>Pantalón corto o tejidos muy transpirables</li><li>Gafas de sol, gorra y protección solar</li></ul>"
+    },
+    {
+      "question": "¿28 °C se lleva mejor en la calle que dentro de casa?",
+      "answerHtml": "<p>Con algo de brisa, 28 °C al aire libre puede resultar agradable; en un piso cerrado suele sentirse más pesado.</p>"
+    },
+    {
+      "question": "¿28 °C es fiebre?",
+      "answerHtml": "<p>No. La fiebre humana suele empezar cerca de 38 °C. Si 28 °C fuera temperatura corporal, estaría muy por debajo de lo normal.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Dónde suele encajar 28 °C (82,4 °F)",
+    "cards": [
+      {
+        "title": "Día cálido, noche más pesada",
+        "body": "Con 28 °C el día aún puede ser agradable, pero por la noche la sensación suele volverse menos neutra y el dormitorio guarda más calor."
+      },
+      {
+        "title": "Dormir empieza a costar",
+        "body": "A partir de esta franja mucha gente duerme peor, sobre todo con humedad o poco movimiento de aire."
+      },
+      {
+        "title": "Ventilar o enfriar ayuda",
+        "body": "Ventilador, ventana abierta o aire acondicionado marcan bastante más diferencia a 28 °C que en temperaturas suaves."
+      }
+    ]
+  }
+}

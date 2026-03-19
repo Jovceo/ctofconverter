@@ -6,6 +6,7 @@ import { getLocalizedLink, useTranslation } from '../utils/i18n';
 import { generatePageUrl } from '../utils/temperaturePageHelpers';
 import { normalizeMigratedUrl } from '../utils/normalizeMigratedUrl';
 import { LocalizedTemperaturePageProps } from '../utils/temperaturePageStaticProps';
+import practicalAppsStyles from './PracticalApps/index.module.css';
 
 interface GuideCard {
   desc?: string;
@@ -52,6 +53,13 @@ export interface RoomTemperaturePageTranslation {
   }>;
   header?: {
     tagline?: string;
+    title?: string;
+  };
+  practicalApplications?: {
+    cards?: Array<{
+      body?: string;
+      title?: string;
+    }>;
     title?: string;
   };
   seo?: {
@@ -173,6 +181,29 @@ export default function RoomTemperaturePage({
 }: RoomTemperaturePageProps) {
   const { locale } = useTranslation('template');
   const pageT = useMemo(() => pageTrans || {}, [pageTrans]);
+  const customPracticalSection = useMemo(() => {
+    const cards = pageT.practicalApplications?.cards || [];
+
+    if (cards.length === 0) {
+      return null;
+    }
+
+    return (
+      <div className={practicalAppsStyles.formulaSection}>
+        <h2 id="practical-title">{pageT.practicalApplications?.title || `${celsius}°C practical uses`}</h2>
+        <div className={practicalAppsStyles.practicalUses}>
+          {cards.map((card, index) => (
+            <div key={`${card.title || 'card'}-${index}`} className={practicalAppsStyles.useCase}>
+              <div className={practicalAppsStyles.useCaseHeader}>{card.title || ''}</div>
+              <div className={practicalAppsStyles.useCaseBody}>
+                <p>{card.body || ''}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }, [celsius, pageT.practicalApplications]);
 
   const strategy = useMemo(() => {
     const baseStrategy = generateContentStrategy(celsius, pageT.strategy?.keywords || getDefaultKeywords(celsius));
@@ -209,10 +240,10 @@ export default function RoomTemperaturePage({
     baseStrategy.modules.showHealthAlert = false;
     baseStrategy.modules.showHumanFeel = true;
     baseStrategy.modules.showOvenGuide = false;
-    baseStrategy.modules.showPracticalApps = true;
+    baseStrategy.modules.showPracticalApps = !customPracticalSection;
 
     return baseStrategy;
-  }, [celsius, locale, pageT]);
+  }, [celsius, customPracticalSection, locale, pageT]);
 
   return (
     <TemperaturePage
@@ -223,6 +254,7 @@ export default function RoomTemperaturePage({
       customDescription={pageT.seo?.description}
       customHeaderTitle={pageT.header?.title}
       customIntro={pageT.conversion?.intro}
+      customSections={customPracticalSection}
       customTagline={pageT.header?.tagline}
       customTitle={pageT.seo?.title}
       disableSmartFaqs={true}

@@ -81,6 +81,23 @@
     },
     "note": "<strong>Hinweis:</strong> In trockenen Räumen wirken 22°C oft neutral, bei höherer Luftfeuchtigkeit können sie deutlich wärmer erscheinen."
   },
+  "practicalApplications": {
+    "title": "Wann 22 °C (71,6 °F) besonders gut passen",
+    "cards": [
+      {
+        "title": "Homeoffice und Lernen",
+        "body": "22 °C eignen sich gut für mehrere Stunden Arbeit oder Lernen. Es bleibt angenehm, wirkt aber schon etwas wärmer als 21 °C."
+      },
+      {
+        "title": "Mäßig warmes Schlafzimmer",
+        "body": "Für manche Menschen sind 22 °C noch in Ordnung zum Schlafen. Wer es im Schlafzimmer lieber kühl mag, empfindet das schon etwas wärmer."
+      },
+      {
+        "title": "Klimatisierte Gebäude",
+        "body": "Diese Temperatur erinnert an viele Büros, Geschäfte und Lernorte mit Klimaanlage. Eine leichte Schicht ist beim Rein- und Rausgehen oft praktisch."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "Sind 22°C eher kalt oder warm?",

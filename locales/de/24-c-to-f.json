@@ -81,6 +81,23 @@
     },
     "note": "<strong>Hinweis:</strong> Bei 24°C verändern Sonne, Schatten und Wind das Empfinden stark."
   },
+  "practicalApplications": {
+    "title": "24 °C (75,2 °F) liegen schon im angenehm warmen Bereich",
+    "cards": [
+      {
+        "title": "Wochenende und draußen unterwegs",
+        "body": "24 °C passen gut zu Spaziergängen, Einkäufen, Essen draußen oder einer Weile an der frischen Luft, ohne dass es sofort richtig heiß wird."
+      },
+      {
+        "title": "Grenze zwischen angenehm und etwas warm",
+        "body": "Zu Hause oder im Büro sind 24 °C oft der Punkt, an dem viele ans Fensteröffnen, Lüften oder einen Ventilator denken."
+      },
+      {
+        "title": "Leichte Kleidung",
+        "body": "T-Shirt, dünnes Hemd, Kleid oder atmungsaktive Stoffe funktionieren hier gut. Wenn es abends abkühlt, reicht meist eine leichte Lage."
+      }
+    ]
+  },
   "faq": [
     {
       "question": "Sind 24°C eher kalt oder warm?",
