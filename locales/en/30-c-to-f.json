@@ -51,7 +51,7 @@
           "temp": "28°C (82.4°F)",
           "desc": "Warm to hot",
           "use": "Shade and airflow start to matter",
-          "href": "/28-c-to-f.html"
+          "href": "/28-c-to-f"
         },
         {
           "temp": "30°C (86°F)",
@@ -63,7 +63,7 @@
           "temp": "32°C (89.6°F)",
           "desc": "Very hot",
           "use": "Keep outdoor effort lighter",
-          "href": "/32-c-to-f.html"
+          "href": "/32-c-to-f"
         },
         {
           "temp": "35°C (95°F)",
