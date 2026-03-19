@@ -63,13 +63,13 @@
           "temp": "30°C (86°F)",
           "desc": "Hot",
           "use": "Cooling and hydration become more important",
-          "href": "/30-c-to-f.html"
+          "href": "/30-c-to-f"
         },
         {
           "temp": "32°C (89.6°F)",
           "desc": "Very hot",
           "use": "Limit intense outdoor activity at midday",
-          "href": "/32-c-to-f.html"
+          "href": "/32-c-to-f"
         },
         {
           "temp": "37°C (98.6°F)",
