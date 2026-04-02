@@ -16,7 +16,7 @@ interface ConversionHistoryItem {
     timestamp: number;
 }
 
-import { getLatestModifiedDate } from '../utils/dateHelpers';
+import { getLatestModifiedDate, getLatestModifiedDatePreferGit } from '../utils/dateHelpers';
 import fs from 'fs';
 import path from 'path';
 
@@ -27,6 +27,9 @@ interface HomeProps {
     dynamicRecentUpdates: Array<{ c: number; f: number; date: string; url: string }>;
     lastUpdatedIso: string;
 }
+
+const RECENT_UPDATE_WINDOW_DAYS = 90;
+const MAX_RECENT_UPDATE_LINKS = 12;
 
 function loadLocaleMessages(locale: string, namespace: string) {
     const localePath = path.join(process.cwd(), 'locales', locale, `${namespace}.json`);
@@ -473,12 +476,15 @@ export default function Home({ locale, commonMessages, homeMessages, dynamicRece
 
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     const currentLocale = typeof locale === 'string' ? locale : 'en';
+    const cutoffDate = new Date();
+    cutoffDate.setUTCDate(cutoffDate.getUTCDate() - RECENT_UPDATE_WINDOW_DAYS);
+    const cutoffIso = cutoffDate.toISOString().split('T')[0];
 
     // 动态扫描pages目录下的温度转换页面
     const pagesDir = path.join(process.cwd(), 'pages');
     const filenames = fs.readdirSync(pagesDir);
 
-    const dynamicRecentUpdates = filenames
+    const allTemperatureUpdates = filenames
         .filter(name => name.match(/^(-?\d+(?:-\d+)?)-c-to-f\.tsx$/))
         .map(name => {
             const match = name.match(/^(-?\d+(?:-\d+)?)-c-to-f\.tsx$/);
@@ -488,8 +494,8 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
             const f = celsiusToFahrenheit(c);
             const filePath = path.join(pagesDir, name);
 
-            // Use getLatestModifiedDate to check both the page file and its locale JSON
-            const lastUpdatedIso = getLatestModifiedDate([
+            // Keep homepage recent-conversion ordering stable across local and CI.
+            const lastUpdatedIso = getLatestModifiedDatePreferGit([
                 filePath,
                 path.join(process.cwd(), `locales/${currentLocale}/${match![1]}-c-to-f.json`)
             ]);
@@ -501,9 +507,18 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
                 url: `/${name.replace('.tsx', '')}`
             };
         })
-        .sort((a, b) => b.date.localeCompare(a.date))
+        .sort((a, b) => {
+            const dateCompare = b.date.localeCompare(a.date);
+            if (dateCompare !== 0) return dateCompare;
+            return a.url.localeCompare(b.url, undefined, { numeric: true, sensitivity: 'base' });
+        })
         .slice(0, 12); // 只显示最新的 12 个
     // 核心逻辑：按修改时间倒序排列，取最新的 12 个”
+
+    const recentTemperatureUpdates = allTemperatureUpdates.filter(item => item.date >= cutoffIso);
+    const dynamicRecentUpdates = (recentTemperatureUpdates.length > 0
+        ? recentTemperatureUpdates
+        : allTemperatureUpdates).slice(0, MAX_RECENT_UPDATE_LINKS);
 
     const pageFileDate = getLatestModifiedDate([
         'pages/index.tsx',
