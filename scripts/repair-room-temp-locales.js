@@ -24,6 +24,8 @@ const PAGES = {
   30: { slug: '30-c-to-f', c: 30, f: '86', nuance: 'ac' },
   31: { slug: '31-c-to-f', c: 31, f: '87.8', nuance: 'sleep' },
   32: { slug: '32-c-to-f', c: 32, f: '89.6', nuance: 'ac' },
+  33: { slug: '33-c-to-f', c: 33, f: '91.4', nuance: 'ac' },
+  35: { slug: '35-c-to-f', c: 35, f: '95', nuance: 'heatwave' },
 };
 
 const PRACTICAL = {
@@ -45,6 +47,11 @@ const PRACTICAL = {
         ['Fans help, AC helps more', 'Indoors, cross-ventilation and fans still help, but many people start preferring air conditioning once rooms sit near {c}°C.'],
         ['Plan around the heat', 'Errands, workouts, and longer walks feel easier earlier or later in the day, with water and shade close by.'],
       ],
+      heatwave: [
+        ['Heat starts shaping the day', 'At {c}°C, the hottest hours often decide when people go out, exercise, or even run basic errands. The weather stops feeling merely summery and starts feeling demanding.'],
+        ['Cooling becomes part of the routine', 'Shade, cold drinks, fans, and air conditioning matter more at {c}°C because the body has less margin for extra heat.'],
+        ['Indoors can stay hot after sunset', 'At this temperature, rooms often hold onto the day’s heat. Even evenings can feel heavy if airflow is weak or humidity is high.'],
+      ],
     },
   },
   zh: {
@@ -64,6 +71,11 @@ const PRACTICAL = {
         ['午后热感更突出', '{c}°C 到了中午和下午通常就不是“有点暖”了，而是会让人明显想找阴凉或降温。'],
         ['风扇有帮助，空调更稳', '在这个温度下，风扇和通风能缓解闷热，但很多人会更偏向直接开空调。'],
         ['出门和运动最好错峰', '跑腿、散步和运动放到早晚更轻松，白天则更需要水分和遮阳。'],
+      ],
+      heatwave: [
+        ['一天会被高温重新安排', '{c}°C 往往会让人开始围着高温来安排一天：什么时候出门、什么时候运动、什么时候待在室内，都会明显受影响。'],
+        ['降温不再只是舒服，而是必要', '到了 {c}°C，阴凉、水分、风扇和空调不只是提升舒适度，而是很实际的降温手段。'],
+        ['夜里也未必轻松', '这种温度下，房间和墙体很容易把白天的热留到晚上，睡前和入夜后的闷热感通常更明显。'],
       ],
     },
   },
@@ -85,6 +97,11 @@ const PRACTICAL = {
         ['Ventilador ayuda; AC ayuda más', 'Dentro de casa, el aire cruzado y los ventiladores sirven, pero muchas personas ya prefieren aire acondicionado en esta franja.'],
         ['Mejor mover los planes', 'Recados, deporte y caminatas largas suelen llevarse mejor a primera hora o al final del día, con agua a mano.'],
       ],
+      heatwave: [
+        ['El calor ya manda el horario', 'A {c} °C mucha gente empieza a organizar el día alrededor del calor: salir antes, moverse menos al mediodía y buscar sombra con más intención.'],
+        ['Enfriar deja de ser un lujo', 'Sombra, agua, ventiladores y aire acondicionado dejan de sentirse opcionales y pasan a ser parte práctica del día.'],
+        ['La noche también puede pesar', 'Con {c} °C, las casas suelen guardar calor durante más tiempo, así que incluso al anochecer el ambiente puede seguir cargado.'],
+      ],
     },
   },
   hi: {
@@ -104,6 +121,11 @@ const PRACTICAL = {
         ['दोपहर सच में गर्म लगती है', '{c}°C पर देर सुबह और दोपहर का समय खास तौर पर गर्म महसूस होता है, खासकर धूप, सड़क और ट्रैफ़िक के बीच।'],
         ['पंखा मदद करता है, AC और ज्यादा', 'घर के अंदर हवा का बहाव और पंखा राहत देते हैं, लेकिन इस तापमान पर कई लोग AC को ज्यादा आरामदायक मानते हैं।'],
         ['काम समय देखकर करें', 'बाहर के काम, वॉक और वर्कआउट सुबह या शाम को आसान लगते हैं। दिन में पानी और छाया ज़्यादा जरूरी हो जाते हैं।'],
+      ],
+      heatwave: [
+        ['दिन की रफ्तार गर्मी तय करती है', '{c}°C पर लोग अक्सर दिन की योजना ही गर्मी देखकर बनाते हैं—कब बाहर निकलना है, कब काम निपटाना है और कब ठंडी जगह ढूँढनी है।'],
+        ['कूलिंग ज़रूरत बन जाती है', 'इस तापमान पर छाया, पानी, पंखा और AC केवल आराम की चीज़ें नहीं रहते, बल्कि शरीर को संभालने के साधन बन जाते हैं।'],
+        ['रात भी जल्दी हल्की नहीं होती', '{c}°C पर कमरा अक्सर देर तक गर्म रहता है, इसलिए शाम और रात में भी घुटन या बेचैनी बनी रह सकती है।'],
       ],
     },
   },
@@ -125,6 +147,11 @@ const PRACTICAL = {
         ['المروحة تساعد والمكيف أكثر', 'في الداخل تفيد التهوية والمراوح، لكن كثيراً من الناس يفضّلون المكيف عندما تقترب الغرف من {c}°C.'],
         ['من الأفضل ترتيب اليوم حول الحر', 'المشاوير والرياضة والمشي الطويل تصبح أسهل صباحاً أو مساءً مع ماء وظل قريبين.'],
       ],
+      heatwave: [
+        ['الحر يبدأ بترتيب اليوم', 'عند {c}°C يبدأ كثير من الناس بتنظيم اليوم كله حول الحر: متى يخرجون، ومتى يتحركون، ومتى يبحثون عن مكان أبرد.'],
+        ['التبريد يصبح حاجة عملية', 'الظل والماء والمراوح والمكيف لا تعود مجرد وسائل راحة، بل تصبح أدوات أساسية للتعامل مع الجو.'],
+        ['الليل قد يبقى ثقيلاً', 'في هذه الدرجة تحتفظ البيوت بالحرارة لفترة أطول، لذلك قد يبقى المساء والليل خانقين حتى بعد غياب الشمس.'],
+      ],
     },
   },
   ja: {
@@ -144,6 +171,11 @@ const PRACTICAL = {
         ['昼前後はしっかり暑い', '{c}°C になると午前後半から午後にかけては、直射日光やアスファルトの上でかなり暑く感じやすくなります。'],
         ['扇風機も効くが、冷房が楽', '室内では風通しや扇風機でも助かりますが、この気温帯では冷房を入れたくなる人が増えます。'],
         ['予定は暑さを避けて組む', '買い物や運動、長めの移動は朝夕のほうが楽で、水分と日陰の確保が大切になります。'],
+      ],
+      heatwave: [
+        ['一日の動きが暑さ中心になる', '{c}°C では、外に出る時間や移動の仕方を暑さに合わせて考える人が増えます。昼の行動はかなり重く感じやすくなります。'],
+        ['冷やす工夫が実用品になる', '日陰、水分、扇風機、冷房は快適さのためだけでなく、体を保つための現実的な対策になります。'],
+        ['夜も熱が残りやすい', 'この温度では部屋が昼の熱を抱え込みやすく、日が落ちても寝苦しさが残ることがあります。'],
       ],
     },
   },
@@ -165,6 +197,11 @@ const PRACTICAL = {
         ['Le ventilateur aide, la clim plus encore', 'En intérieur, l’aération aide encore, mais beaucoup préfèrent déjà la climatisation autour de {c} °C.'],
         ['Mieux vaut organiser sa journée', 'Courses, sport et longues marches sont souvent plus faciles tôt ou tard, avec de l’eau et un peu d’ombre.'],
       ],
+      heatwave: [
+        ['La chaleur commence à organiser la journée', 'À {c} °C, beaucoup de gens adaptent déjà leurs horaires au pic de chaleur: sortir plus tôt, ralentir à midi et chercher l’ombre plus souvent.'],
+        ['Le rafraîchissement devient concret', 'L’ombre, l’eau, les ventilateurs et la climatisation ne relèvent plus seulement du confort: ils deviennent de vrais outils du quotidien.'],
+        ['La soirée peut rester lourde', 'À cette température, les logements gardent souvent la chaleur plus longtemps, si bien que la nuit ne rafraîchit pas toujours assez vite.'],
+      ],
     },
   },
   de: {
@@ -184,6 +221,11 @@ const PRACTICAL = {
         ['Mittags wird es richtig heiß', 'Bei {c}°C fühlt sich besonders die Zeit vom späten Vormittag bis zum Nachmittag spürbar heiß an, vor allem auf Asphalt oder in direkter Sonne.'],
         ['Ventilator hilft, Klima oft mehr', 'Innen helfen Luftzug und Ventilator noch, aber viele empfinden bei Raumwerten um {c}°C eine Klimaanlage als deutlich angenehmer.'],
         ['Tagespläne an die Wärme anpassen', 'Erledigungen, Sport und längere Wege fühlen sich morgens oder abends leichter an, mit Wasser und Schatten in der Nähe.'],
+      ],
+      heatwave: [
+        ['Die Hitze bestimmt den Tagesablauf', 'Bei {c}°C richten viele Menschen den Tag bereits nach der Wärme aus: früher raus, mittags weniger tun, schneller wieder in den Schatten.'],
+        ['Kühlung wird praktisch notwendig', 'Schatten, Wasser, Ventilator und Klimaanlage wirken nicht mehr wie Extras, sondern wie echte Hilfen, um den Tag gut zu überstehen.'],
+        ['Abends bleibt Wärme oft hängen', 'Bei dieser Temperatur speichern Wohnungen und Straßen viel Wärme, sodass sich auch der Abend noch schwer und heiß anfühlen kann.'],
       ],
     },
   },
@@ -205,6 +247,11 @@ const PRACTICAL = {
         ['Kipas membantu, AC lebih terasa', 'Di dalam ruangan, ventilasi silang dan kipas tetap membantu, tetapi banyak orang mulai memilih AC saat suhu mendekati {c}°C.'],
         ['Atur aktivitas menghindari panas', 'Belanja, olahraga, dan jalan jauh biasanya terasa lebih enak pagi atau sore, sambil tetap dekat dengan air minum dan tempat teduh.'],
       ],
+      heatwave: [
+        ['Panas mulai mengatur ritme hari', 'Pada {c}°C, banyak orang mulai mengatur kegiatan berdasarkan panas: keluar lebih pagi, mengurangi aktivitas siang, dan lebih sering mencari tempat teduh.'],
+        ['Pendinginan jadi kebutuhan nyata', 'Tempat teduh, air minum, kipas, dan AC terasa jauh lebih penting karena tubuh punya ruang lebih kecil untuk menahan tambahan panas.'],
+        ['Malam pun bisa tetap gerah', 'Pada suhu ini, rumah sering menyimpan panas sampai malam, jadi suasana berat dan gerah bisa bertahan lebih lama.'],
+      ],
     },
   },
   'pt-br': {
@@ -225,8 +272,122 @@ const PRACTICAL = {
         ['Ventilador ajuda; ar ajuda mais', 'Dentro de casa, ventilação cruzada e ventilador aliviam, mas muita gente já prefere ar-condicionado quando o ambiente fica perto de {c}°C.'],
         ['Vale organizar o dia pelo calor', 'Caminhada, exercício e recados longos costumam render melhor cedo ou mais no fim do dia, com água e sombra por perto.'],
       ],
+      heatwave: [
+        ['O calor começa a mandar no dia', 'Com {c}°C, muita gente passa a organizar horários e deslocamentos em função do calor: sair cedo, fazer menos no pico e procurar sombra mais rápido.'],
+        ['Resfriar deixa de ser luxo', 'Sombra, água, ventilador e ar-condicionado deixam de parecer extras e passam a ser recursos práticos para atravessar o dia.'],
+        ['A noite também segura calor', 'Nessa faixa, casas e quartos costumam guardar o calor do dia por mais tempo, então o fim da tarde e a noite ainda podem pesar bastante.'],
+      ],
     },
   },
+};
+
+const FAQ_OVERRIDES = {
+  35: {
+    en: [
+      {
+        question: 'Is 35°C hot or cold for weather?',
+        answerHtml:
+          '<p>For weather, 35°C (95°F) is very hot. In many places it is the kind of temperature where people change outdoor plans, look for shade, and treat the afternoon as serious heat rather than normal summer warmth.</p>',
+      },
+      {
+        question: 'Is 35°C a fever temperature?',
+        answerHtml:
+          '<p>No. As a body-temperature reading, 35°C is actually below normal. Fever usually starts around 38°C (100.4°F), while 35°C body temperature points toward hypothermia, not fever.</p>',
+      },
+      {
+        question: 'Is 35°C dangerous for a baby?',
+        answerHtml:
+          '<p>It can be risky. Babies heat up faster than adults and depend on adults to keep them cool, shaded, and hydrated.</p><ul><li>Limit direct sun and hot-stroller time</li><li>Keep air moving and dress them lightly</li><li>If a baby seems unusually sleepy, flushed, or hard to settle, cool them down and seek medical advice if needed</li></ul>',
+      },
+      {
+        question: 'What is wet-bulb temperature and why is 35°C dangerous?',
+        answerHtml:
+          '<p>Wet-bulb temperature reflects how well sweating can cool the body. When humidity rises, sweat stops evaporating efficiently, so heat stress builds much faster.</p><p>A wet-bulb temperature near 35°C is considered critical because the body can no longer cool itself effectively, even in the shade.</p>',
+      },
+      {
+        question: 'How do I convert 35 degrees Celsius to Fahrenheit in my head?',
+        answerHtml:
+          '<p>A quick mental shortcut is to double 35, subtract 10%, then add 32.</p><p>35 × 2 = 70, 70 - 7 = 63, and 63 + 32 = 95°F.</p><p>It is fast, and in this case it gives the exact answer.</p>',
+      },
+      {
+        question: 'What other common temperatures are near 35°C?',
+        answerHtml:
+          '<p>Nearby temperatures help show where 35°C sits on the heat scale:</p><ul><li>33°C = 91.4°F, already very hot</li><li>35°C = 95°F, where heat precautions become more important</li><li>37°C = 98.6°F, normal human body temperature</li><li>40°C = 104°F, extreme heat in many regions</li></ul>',
+      },
+    ],
+    zh: [
+      { question: '35°C 算冷还是热？', answerHtml: '<p>如果是天气，35°C（95°F）已经属于明显炎热的范围。很多人会开始避开正午、缩短户外停留时间，并把防晒、补水和找阴凉当成必要安排。</p>' },
+      { question: '35°C 是发烧吗？', answerHtml: '<p>不是。作为体温读数，35°C 反而低于正常值。人体发烧通常从 38°C（100.4°F）附近开始，而 35°C 体温更接近失温风险，不是发烧。</p>' },
+      { question: '35°C 对婴儿危险吗？', answerHtml: '<p>有可能。婴儿比成年人更容易受热，也更依赖大人帮助降温。</p><ul><li>尽量避免暴晒和闷热的婴儿车环境</li><li>保持通风，穿轻薄透气的衣物</li><li>如果宝宝明显发红、烦躁、嗜睡或不容易安抚，要尽快降温并按情况咨询医生</li></ul>' },
+      { question: '什么是湿球温度？为什么 35°C 会危险？', answerHtml: '<p>湿球温度反映的是人体靠出汗蒸发来散热的效率。空气越潮湿，汗越难蒸发，热压力就会上升得更快。</p><p>当湿球温度接近 35°C 时，人体几乎无法有效散热，即使在阴凉处也会非常危险。</p>' },
+      { question: '35°C 怎么心算成华氏度？', answerHtml: '<p>一个好记的方法是先把 35 翻倍，再减去 10%，最后加 32。</p><p>35 × 2 = 70，70 - 7 = 63，63 + 32 = 95°F。</p><p>这个温度刚好可以算到精确值。</p>' },
+      { question: '35°C 附近还有哪些常见温度？', answerHtml: '<p>附近几个温度能帮助判断 35°C 的位置：</p><ul><li>33°C = 91.4°F，已经很热</li><li>35°C = 95°F，高温防护要更认真</li><li>37°C = 98.6°F，正常人体体温</li><li>40°C = 104°F，很多地区会被视为极端高温</li></ul>' }
+    ],
+    es: [
+      { question: '¿35 °C se siente frío o calor?', answerHtml: '<p>Si hablamos del tiempo, 35 °C (95 °F) ya es un calor fuerte. En muchas zonas es la clase de temperatura que hace cambiar horarios, buscar sombra y tratar la tarde como calor serio, no como simple verano agradable.</p>' },
+      { question: '¿35 °C es fiebre?', answerHtml: '<p>No. Como temperatura corporal, 35 °C está por debajo de lo normal. La fiebre suele empezar cerca de 38 °C (100,4 °F), mientras que 35 °C en el cuerpo apunta más a hipotermia que a fiebre.</p>' },
+      { question: '¿35 °C es peligroso para un bebé?', answerHtml: '<p>Puede serlo. Los bebés se recalientan más rápido y dependen de los adultos para mantenerse frescos.</p><ul><li>Evita el sol directo y el carrito caliente</li><li>Mantén el aire en movimiento y viste al bebé con ropa ligera</li><li>Si se ve muy rojo, adormilado o difícil de calmar, conviene enfriarlo y pedir consejo médico si hace falta</li></ul>' },
+      { question: '¿Qué es la temperatura de bulbo húmedo y por qué 35 °C es peligrosa?', answerHtml: '<p>La temperatura de bulbo húmedo muestra hasta qué punto el sudor puede enfriar el cuerpo. Cuando hay mucha humedad, el sudor evapora peor y el estrés térmico sube mucho más rápido.</p><p>Un bulbo húmedo cercano a 35 °C se considera crítico porque el cuerpo deja de poder enfriarse bien, incluso a la sombra.</p>' },
+      { question: '¿Cómo convierto 35 °C a Fahrenheit mentalmente?', answerHtml: '<p>Un truco rápido es doblar 35, restar un 10 % y sumar 32.</p><p>35 × 2 = 70, 70 - 7 = 63, y 63 + 32 = 95 °F.</p><p>En este caso, además, te da la cifra exacta.</p>' },
+      { question: '¿Qué otras temperaturas comunes están cerca de 35 °C?', answerHtml: '<p>Estas referencias ayudan a ubicarlo:</p><ul><li>33 °C = 91,4 °F, ya muy caluroso</li><li>35 °C = 95 °F, donde las precauciones importan más</li><li>37 °C = 98,6 °F, temperatura corporal normal</li><li>40 °C = 104 °F, calor extremo en muchas regiones</li></ul>' }
+    ],
+    hi: [
+      { question: '35°C मौसम के हिसाब से गर्म है या ठंडा?', answerHtml: '<p>मौसम के लिहाज़ से 35°C (95°F) बहुत गर्म माना जाता है। कई जगहों पर यह वह तापमान होता है जहाँ लोग दोपहर से बचते हैं, छाया ढूँढते हैं और बाहर की योजना बदल देते हैं।</p>' },
+      { question: 'क्या 35°C बुखार है?', answerHtml: '<p>नहीं। अगर यह शरीर का तापमान हो, तो 35°C सामान्य से नीचे है। बुखार आम तौर पर 38°C (100.4°F) के आसपास शुरू होता है, जबकि 35°C शरीर के लिए हाइपोथर्मिया की तरफ इशारा करता है।</p>' },
+      { question: 'क्या 35°C शिशु के लिए खतरनाक हो सकता है?', answerHtml: '<p>हाँ, जोखिम हो सकता है। छोटे बच्चे जल्दी गर्म होते हैं और उन्हें ठंडा रखना पूरी तरह बड़ों पर निर्भर रहता है।</p><ul><li>सीधी धूप और गरम स्ट्रोलर से बचाएँ</li><li>हल्के कपड़े पहनाएँ और हवा चलती रहे</li><li>अगर बच्चा बहुत लाल, सुस्त या चिड़चिड़ा लगे, तो उसे तुरंत ठंडा करें और जरूरत पड़े तो डॉक्टर से बात करें</li></ul>' },
+      { question: 'वेट-बल्ब तापमान क्या है और 35°C क्यों खतरनाक माना जाता है?', answerHtml: '<p>वेट-बल्ब तापमान बताता है कि पसीने के ज़रिए शरीर कितनी अच्छी तरह ठंडा हो सकता है। नमी बढ़ने पर पसीना ठीक से सूख नहीं पाता और गर्मी का दबाव तेजी से बढ़ता है।</p><p>अगर वेट-बल्ब तापमान 35°C के करीब पहुँच जाए, तो शरीर प्रभावी रूप से खुद को ठंडा नहीं रख पाता।</p>' },
+      { question: '35°C को दिमाग में Fahrenheit में कैसे बदलें?', answerHtml: '<p>एक आसान तरीका है 35 को दोगुना करें, फिर 10% घटाएँ, फिर 32 जोड़ दें।</p><p>35 × 2 = 70, 70 - 7 = 63, और 63 + 32 = 95°F।</p><p>इस तापमान पर यह शॉर्टकट बिल्कुल सही जवाब देता है।</p>' },
+      { question: '35°C के आसपास कौन-से आम तापमान आते हैं?', answerHtml: '<p>यह कुछ पास के तापमान हैं:</p><ul><li>33°C = 91.4°F, पहले से बहुत गर्म</li><li>35°C = 95°F, जहाँ गर्मी से बचाव ज़्यादा जरूरी हो जाता है</li><li>37°C = 98.6°F, सामान्य शरीर का तापमान</li><li>40°C = 104°F, कई जगहों पर अत्यधिक गर्मी</li></ul>' }
+    ],
+    ar: [
+      { question: 'هل 35°C باردة أم حارة من ناحية الطقس؟', answerHtml: '<p>من ناحية الطقس، 35°C (95°F) تعني جواً حاراً جداً. في كثير من المناطق هي درجة تدفع الناس لتغيير المواعيد وتجنب الظهيرة والبحث عن الظل باستمرار.</p>' },
+      { question: 'هل 35°C تعني حمى؟', answerHtml: '<p>لا. إذا كانت 35°C قراءة لحرارة الجسم فهي أقل من الطبيعي. الحمى تبدأ عادة قرب 38°C (100.4°F)، بينما 35°C كحرارة جسم تشير أكثر إلى انخفاض حرارة الجسم لا إلى الحمى.</p>' },
+      { question: 'هل 35°C خطيرة على الرضيع؟', answerHtml: '<p>قد تكون كذلك. الرضع يسخنون أسرع من البالغين ويعتمدون على الكبار في إبقائهم في جو أبرد.</p><ul><li>تجنب الشمس المباشرة وعربات الأطفال الساخنة</li><li>حافظ على حركة الهواء وألبسه ملابس خفيفة</li><li>إذا بدا عليه احمرار شديد أو خمول أو صعوبة في الهدوء، فابدأ بتبريده واطلب مشورة طبية عند الحاجة</li></ul>' },
+      { question: 'ما هي حرارة البصيلة الرطبة ولماذا تكون 35°C خطيرة؟', answerHtml: '<p>حرارة البصيلة الرطبة تعكس قدرة الجسم على التبريد عبر التعرق. عندما ترتفع الرطوبة، يقل تبخر العرق ويزداد الضغط الحراري بسرعة.</p><p>إذا اقتربت حرارة البصيلة الرطبة من 35°C، يصبح الجسم عاجزاً تقريباً عن تبريد نفسه بشكل فعال حتى في الظل.</p>' },
+      { question: 'كيف أحول 35°C إلى فهرنهايت في ذهني؟', answerHtml: '<p>طريقة سريعة هي أن تضاعف 35، ثم تطرح 10%، ثم تضيف 32.</p><p>35 × 2 = 70، ثم 70 - 7 = 63، ثم 63 + 32 = 95°F.</p><p>وفي هذه الحالة تحصل على الإجابة الدقيقة.</p>' },
+      { question: 'ما درجات الحرارة القريبة الشائعة من 35°C؟', answerHtml: '<p>هذه نقاط مرجعية مفيدة:</p><ul><li>33°C = 91.4°F وهي حارة جداً بالفعل</li><li>35°C = 95°F حيث تصبح احتياطات الحر أكثر أهمية</li><li>37°C = 98.6°F وهي حرارة جسم طبيعية</li><li>40°C = 104°F وهي حرارة شديدة في كثير من المناطق</li></ul>' }
+    ],
+    ja: [
+      { question: '35°Cは天気として暑いですか、それとも寒いですか？', answerHtml: '<p>天気としての 35°C（95°F）はかなり暑い部類です。多くの地域では、外出時間をずらしたり、真昼を避けたり、日陰を探したりするレベルの暑さです。</p>' },
+      { question: '35°Cは発熱ですか？', answerHtml: '<p>いいえ。体温として 35°C はむしろ平熱より低めです。発熱は通常 38°C（100.4°F）前後からで、35°C の体温は低体温側の心配になります。</p>' },
+      { question: '35°Cは赤ちゃんに危険ですか？', answerHtml: '<p>注意が必要です。赤ちゃんは大人より熱がこもりやすく、自分でうまく調整できません。</p><ul><li>直射日光や暑いベビーカーを避ける</li><li>薄着にして風を通す</li><li>赤みが強い、ぐったりしている、機嫌が極端に悪いときは早めに涼しくする</li></ul>' },
+      { question: '湿球温度とは何ですか？なぜ35°Cが危険なのですか？', answerHtml: '<p>湿球温度は、汗の蒸発で体をどれだけ冷やせるかを表す指標です。湿度が高いほど汗が蒸発しにくくなり、体に熱がたまりやすくなります。</p><p>湿球温度が 35°C 近くになると、日陰でも体が十分に熱を逃がせなくなるため、非常に危険と考えられています。</p>' },
+      { question: '35°Cを頭の中で華氏に換算するには？', answerHtml: '<p>35 を 2 倍し、そこから 10% 引いて、最後に 32 を足す方法が使えます。</p><p>35 × 2 = 70、70 - 7 = 63、63 + 32 = 95°F です。</p><p>この温度ではちょうど正確な答えになります。</p>' },
+      { question: '35°Cの近くにはどんな代表的な温度がありますか？', answerHtml: '<p>近い温度を並べると位置づけが分かりやすくなります。</p><ul><li>33°C = 91.4°F、すでにかなり暑い</li><li>35°C = 95°F、暑さ対策が重要になる</li><li>37°C = 98.6°F、平熱の目安</li><li>40°C = 104°F、多くの地域で厳しい猛暑</li></ul>' }
+    ],
+    fr: [
+      { question: '35 °C, c’est chaud ou froid pour la météo ?', answerHtml: '<p>Pour la météo, 35 °C (95 °F) correspondent à une forte chaleur. Dans beaucoup de régions, c’est une température qui pousse à éviter midi, chercher l’ombre et ralentir les activités extérieures.</p>' },
+      { question: '35 °C, est-ce une fièvre ?', answerHtml: '<p>Non. Comme température corporelle, 35 °C sont en dessous de la normale. La fièvre commence généralement autour de 38 °C (100,4 °F), alors que 35 °C évoquent plutôt une hypothermie qu’une fièvre.</p>' },
+      { question: '35 °C sont-ils dangereux pour un bébé ?', answerHtml: '<p>Oui, cela peut l’être. Les bébés montent en température plus vite et comptent sur les adultes pour rester au frais.</p><ul><li>Éviter le soleil direct et les poussettes qui chauffent</li><li>Mettre des vêtements légers et garder de l’air en mouvement</li><li>Si le bébé paraît très rouge, somnolent ou difficile à calmer, il faut le rafraîchir vite et demander un avis médical si besoin</li></ul>' },
+      { question: 'Qu’est-ce que la température au thermomètre mouillé et pourquoi 35 °C sont-ils dangereux ?', answerHtml: '<p>La température au thermomètre mouillé reflète la capacité du corps à se refroidir par évaporation de la sueur. Quand l’humidité grimpe, cette évaporation marche moins bien et le stress thermique augmente plus vite.</p><p>Un thermomètre mouillé proche de 35 °C est considéré comme critique, car le corps ne parvient alors presque plus à se refroidir correctement, même à l’ombre.</p>' },
+      { question: 'Comment convertir 35 °C en Fahrenheit de tête ?', answerHtml: '<p>Un raccourci mental simple consiste à doubler 35, retirer 10 %, puis ajouter 32.</p><p>35 × 2 = 70, 70 - 7 = 63, puis 63 + 32 = 95 °F.</p><p>Ici, ce calcul donne même le résultat exact.</p>' },
+      { question: 'Quelles températures courantes sont proches de 35 °C ?', answerHtml: '<p>Quelques repères utiles :</p><ul><li>33 °C = 91,4 °F, déjà très chaud</li><li>35 °C = 95 °F, où les précautions chaleur comptent davantage</li><li>37 °C = 98,6 °F, température corporelle normale</li><li>40 °C = 104 °F, chaleur extrême dans de nombreuses régions</li></ul>' }
+    ],
+    de: [
+      { question: 'Sind 35°C wetterbezogen heiß oder kalt?', answerHtml: '<p>Als Wettertemperatur sind 35°C (95°F) klar sehr heiß. In vielen Regionen ist das die Art von Hitze, bei der Menschen ihre Tagesplanung anpassen, Mittagssonne meiden und gezielt Schatten suchen.</p>' },
+      { question: 'Sind 35°C Fieber?', answerHtml: '<p>Nein. Als Körpertemperatur liegen 35°C unter dem Normalbereich. Fieber beginnt meist erst in der Nähe von 38°C (100.4°F), während 35°C eher auf Unterkühlung als auf Fieber hindeuten.</p>' },
+      { question: 'Sind 35°C für ein Baby gefährlich?', answerHtml: '<p>Das kann riskant sein. Babys überhitzen schneller als Erwachsene und brauchen Hilfe von außen, um kühl zu bleiben.</p><ul><li>Direkte Sonne und aufgeheizte Kinderwagen meiden</li><li>Leicht anziehen und Luft bewegen</li><li>Wenn ein Baby stark gerötet, ungewöhnlich schläfrig oder schwer zu beruhigen ist, sollte es schnell gekühlt werden</li></ul>' },
+      { question: 'Was ist die Feuchtkugeltemperatur und warum sind 35°C gefährlich?', answerHtml: '<p>Die Feuchtkugeltemperatur zeigt, wie gut der Körper sich durch Verdunstungskälte abkühlen kann. Bei hoher Luftfeuchtigkeit verdunstet Schweiß schlechter und Hitzestress steigt schneller.</p><p>Eine Feuchtkugeltemperatur nahe 35°C gilt als kritisch, weil der Körper dann selbst im Schatten kaum noch wirksam Wärme abgeben kann.</p>' },
+      { question: 'Wie rechnet man 35°C im Kopf in Fahrenheit um?', answerHtml: '<p>Ein einfacher Merktrick: 35 verdoppeln, 10 % abziehen, dann 32 addieren.</p><p>35 × 2 = 70, 70 - 7 = 63 und 63 + 32 = 95°F.</p><p>In diesem Fall liefert die Faustregel sogar den exakten Wert.</p>' },
+      { question: 'Welche typischen Temperaturen liegen nahe bei 35°C?', answerHtml: '<p>Ein paar Vergleichswerte helfen:</p><ul><li>33°C = 91.4°F, bereits sehr heiß</li><li>35°C = 95°F, wo Hitzeschutz wichtiger wird</li><li>37°C = 98.6°F, normale Körpertemperatur</li><li>40°C = 104°F, extreme Hitze in vielen Regionen</li></ul>' }
+    ],
+    id: [
+      { question: 'Apakah 35°C termasuk panas atau dingin untuk cuaca?', answerHtml: '<p>Untuk cuaca, 35°C (95°F) jelas termasuk sangat panas. Di banyak tempat, suhu seperti ini membuat orang mengubah jadwal, menghindari tengah hari, dan lebih sering mencari tempat teduh.</p>' },
+      { question: 'Apakah 35°C termasuk demam?', answerHtml: '<p>Tidak. Jika itu suhu tubuh, 35°C justru lebih rendah dari normal. Demam biasanya mulai mendekati 38°C (100.4°F), sedangkan 35°C lebih mengarah ke risiko hipotermia.</p>' },
+      { question: 'Apakah 35°C berbahaya untuk bayi?', answerHtml: '<p>Bisa berisiko. Bayi lebih cepat kepanasan dan bergantung pada orang dewasa untuk tetap sejuk.</p><ul><li>Hindari matahari langsung dan stroller yang panas</li><li>Pakaikan baju tipis dan jaga aliran udara</li><li>Jika bayi terlihat sangat merah, lemas, atau sulit ditenangkan, segera bantu mendinginkannya</li></ul>' },
+      { question: 'Apa itu suhu wet-bulb dan mengapa 35°C dianggap berbahaya?', answerHtml: '<p>Suhu wet-bulb menunjukkan seberapa efektif tubuh bisa mendingin lewat penguapan keringat. Saat kelembapan tinggi, keringat lebih sulit menguap dan stres panas naik jauh lebih cepat.</p><p>Wet-bulb mendekati 35°C dianggap kritis karena tubuh hampir tidak bisa lagi membuang panas dengan efektif, bahkan di tempat teduh.</p>' },
+      { question: 'Bagaimana cara menghitung 35°C ke Fahrenheit di kepala?', answerHtml: '<p>Cara cepatnya adalah menggandakan 35, kurangi 10%, lalu tambah 32.</p><p>35 × 2 = 70, 70 - 7 = 63, lalu 63 + 32 = 95°F.</p><p>Pada suhu ini, hasilnya juga tepat.</p>' },
+      { question: 'Suhu umum apa yang dekat dengan 35°C?', answerHtml: '<p>Beberapa patokan yang dekat:</p><ul><li>33°C = 91.4°F, sudah sangat panas</li><li>35°C = 95°F, saat perlindungan dari panas makin penting</li><li>37°C = 98.6°F, suhu tubuh normal</li><li>40°C = 104°F, panas ekstrem di banyak wilayah</li></ul>' }
+    ],
+    'pt-br': [
+      { question: '35°C é quente ou frio para o clima?', answerHtml: '<p>Para o clima, 35°C (95°F) já representam calor forte. Em muitas regiões, é a temperatura que faz as pessoas mudar horários, evitar o sol do meio do dia e procurar sombra com mais frequência.</p>' },
+      { question: '35°C é febre?', answerHtml: '<p>Não. Como temperatura corporal, 35°C ficam abaixo do normal. A febre costuma começar perto de 38°C (100.4°F), enquanto 35°C no corpo apontam mais para hipotermia do que para febre.</p>' },
+      { question: '35°C podem ser perigosos para um bebê?', answerHtml: '<p>Podem sim. Bebês esquentam mais rápido que adultos e dependem dos adultos para continuar frescos.</p><ul><li>Evite sol direto e carrinho superaquecido</li><li>Use roupa leve e mantenha o ar circulando</li><li>Se o bebê parecer muito vermelho, sonolento ou difícil de acalmar, vale resfriar rápido e buscar orientação médica se necessário</li></ul>' },
+      { question: 'O que é temperatura de bulbo úmido e por que 35°C são perigosos?', answerHtml: '<p>A temperatura de bulbo úmido mostra o quanto o suor ainda consegue resfriar o corpo. Quando a umidade sobe, a evaporação piora e o estresse térmico aumenta muito mais rápido.</p><p>Bulbo úmido perto de 35°C é considerado crítico porque o corpo praticamente deixa de conseguir se resfriar bem, mesmo na sombra.</p>' },
+      { question: 'Como converter 35°C para Fahrenheit de cabeça?', answerHtml: '<p>Um atalho simples é dobrar 35, tirar 10% e depois somar 32.</p><p>35 × 2 = 70, 70 - 7 = 63, e 63 + 32 = 95°F.</p><p>Neste caso, o atalho dá exatamente o valor final.</p>' },
+      { question: 'Quais temperaturas comuns ficam perto de 35°C?', answerHtml: '<p>Alguns pontos de comparação ajudam:</p><ul><li>33°C = 91.4°F, já muito quente</li><li>35°C = 95°F, quando o cuidado com o calor pesa mais</li><li>37°C = 98.6°F, temperatura corporal normal</li><li>40°C = 104°F, calor extremo em muitas regiões</li></ul>' }
+    ]
+  }
 };
 
 function fill(template, tokens) {
@@ -279,6 +440,9 @@ for (const profile of Object.values(PAGES)) {
   const filePath = path.join(EN_DIR, `${profile.slug}.json`);
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   const cleaned = deepClean(data);
+  if (FAQ_OVERRIDES[profile.c]?.en) {
+    cleaned.faq = FAQ_OVERRIDES[profile.c].en;
+  }
   cleaned.practicalApplications = buildPractical('en', profile);
   fs.writeFileSync(filePath, `${JSON.stringify(cleaned, null, 2)}\n`, 'utf8');
 }
@@ -293,6 +457,9 @@ for (const locale of LOCALES) {
   for (const profile of Object.values(PAGES)) {
     const filePath = path.join(ROOT, 'locales', locale, `${profile.slug}.json`);
     const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    if (FAQ_OVERRIDES[profile.c]?.[locale]) {
+      data.faq = FAQ_OVERRIDES[profile.c][locale];
+    }
     data.practicalApplications = buildPractical(locale, profile);
     fs.writeFileSync(filePath, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
   }

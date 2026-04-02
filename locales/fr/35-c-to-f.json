@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "35 °C en Fahrenheit (95 °F) : chaleur douce, climatisation et été",
+    "description": "Convertissez 35 °C en 95 °F et voyez si cette température appelle une tenue légère, un ventilateur ou la climatisation."
+  },
+  "header": {
+    "title": "35 °C en Fahrenheit (95 °F)",
+    "tagline": "Outil gratuit pour convertir 35 °C en 95 °F avec des repères pratiques sur la chaleur, la climatisation et les vêtements légers."
+  },
+  "conversion": {
+    "intro": "35 °C correspondent à 95 °F."
+  },
+  "strategy": {
+    "keywords": "Convertissez 35 °C en 95 °F et voyez si cette température appelle une tenue légère, un ventilateur ou la climatisation."
+  },
+  "comfortGuide": {
+    "title": "Guide de chaleur légère pour 35 °C",
+    "subtitle": "Chaleur d’été agréable ou besoin de rafraîchir ?",
+    "intro": "35 °C (95 °F) correspond déjà à une vraie ambiance estivale. En extérieur, une tenue légère suffit souvent ; en intérieur, un peu d’air frais aide.",
+    "chart": {
+      "cold": {
+        "label": "Frais",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Mieux avec un peu d’air"
+      },
+      "moderate": {
+        "label": "Confortable",
+        "value": "23-27°C",
+        "desc": "73.4-80.6°F<br>Encore supportable"
+      },
+      "warm": {
+        "label": "Plus chaud",
+        "value": "30-40°C",
+        "desc": "86-104°F<br>Chaleur douce d’été"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Température",
+        "description": "Ressenti",
+        "typicalUse": "Usage typique"
+      },
+      "rows": [
+        {
+          "href": "/32-c-to-f",
+          "temp": "32°C (89.6°F)",
+          "desc": "Assez frais",
+          "use": "Aération ou veste légère"
+        },
+        {
+          "href": "/33-c-to-f",
+          "temp": "33°C (91.4°F)",
+          "desc": "Assez frais",
+          "use": "Aération ou veste légère"
+        },
+        {
+          "highlight": true,
+          "temp": "35°C (95°F)",
+          "desc": "Assez frais",
+          "use": "Aération ou veste légère"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Assez frais",
+          "use": "Aération ou veste légère"
+        },
+        {
+          "href": "/38-c-to-f",
+          "temp": "38°C (100.4°F)",
+          "desc": "Assez frais",
+          "use": "Aération ou veste légère"
+        },
+        {
+          "href": "/40-c-to-f",
+          "temp": "40°C (104°F)",
+          "desc": "Assez frais",
+          "use": "Aération ou veste légère"
+        }
+      ]
+    },
+    "note": "<strong>Note :</strong> 35 °C peut être agréable dehors avec de l’air, mais plus lourd dans un appartement mal ventilé."
+  },
+  "faq": [
+    {
+      "question": "35 °C, c’est chaud ou froid pour la météo ?",
+      "answerHtml": "<p>Pour la météo, 35 °C (95 °F) correspondent à une forte chaleur. Dans beaucoup de régions, c’est une température qui pousse à éviter midi, chercher l’ombre et ralentir les activités extérieures.</p>"
+    },
+    {
+      "question": "35 °C, est-ce une fièvre ?",
+      "answerHtml": "<p>Non. Comme température corporelle, 35 °C sont en dessous de la normale. La fièvre commence généralement autour de 38 °C (100,4 °F), alors que 35 °C évoquent plutôt une hypothermie qu’une fièvre.</p>"
+    },
+    {
+      "question": "35 °C sont-ils dangereux pour un bébé ?",
+      "answerHtml": "<p>Oui, cela peut l’être. Les bébés montent en température plus vite et comptent sur les adultes pour rester au frais.</p><ul><li>Éviter le soleil direct et les poussettes qui chauffent</li><li>Mettre des vêtements légers et garder de l’air en mouvement</li><li>Si le bébé paraît très rouge, somnolent ou difficile à calmer, il faut le rafraîchir vite et demander un avis médical si besoin</li></ul>"
+    },
+    {
+      "question": "Qu’est-ce que la température au thermomètre mouillé et pourquoi 35 °C sont-ils dangereux ?",
+      "answerHtml": "<p>La température au thermomètre mouillé reflète la capacité du corps à se refroidir par évaporation de la sueur. Quand l’humidité grimpe, cette évaporation marche moins bien et le stress thermique augmente plus vite.</p><p>Un thermomètre mouillé proche de 35 °C est considéré comme critique, car le corps ne parvient alors presque plus à se refroidir correctement, même à l’ombre.</p>"
+    },
+    {
+      "question": "Comment convertir 35 °C en Fahrenheit de tête ?",
+      "answerHtml": "<p>Un raccourci mental simple consiste à doubler 35, retirer 10 %, puis ajouter 32.</p><p>35 × 2 = 70, 70 - 7 = 63, puis 63 + 32 = 95 °F.</p><p>Ici, ce calcul donne même le résultat exact.</p>"
+    },
+    {
+      "question": "Quelles températures courantes sont proches de 35 °C ?",
+      "answerHtml": "<p>Quelques repères utiles :</p><ul><li>33 °C = 91,4 °F, déjà très chaud</li><li>35 °C = 95 °F, où les précautions chaleur comptent davantage</li><li>37 °C = 98,6 °F, température corporelle normale</li><li>40 °C = 104 °F, chaleur extrême dans de nombreuses régions</li></ul>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Où 35 °C (95 °F) se placent dans la vie quotidienne",
+    "cards": [
+      {
+        "title": "La chaleur commence à organiser la journée",
+        "body": "À 35 °C, beaucoup de gens adaptent déjà leurs horaires au pic de chaleur: sortir plus tôt, ralentir à midi et chercher l’ombre plus souvent."
+      },
+      {
+        "title": "Le rafraîchissement devient concret",
+        "body": "L’ombre, l’eau, les ventilateurs et la climatisation ne relèvent plus seulement du confort: ils deviennent de vrais outils du quotidien."
+      },
+      {
+        "title": "La soirée peut rester lourde",
+        "body": "À cette température, les logements gardent souvent la chaleur plus longtemps, si bien que la nuit ne rafraîchit pas toujours assez vite."
+      }
+    ]
+  }
+}

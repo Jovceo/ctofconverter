@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "35°C to Fahrenheit (95°F) | Heat Guide, Formula & Safety Tips",
+    "description": "Convert 35°C to Fahrenheit and understand what 95°F means for heat, body temperature, outdoor safety, cooling, and daily summer planning."
+  },
+  "header": {
+    "title": "35°C to Fahrenheit (35 Degrees Celsius to °F)",
+    "tagline": "Convert 35°C to Fahrenheit with practical guidance for hot weather, heat safety, home cooling, and real-world summer decisions."
+  },
+  "conversion": {
+    "intro": "35°C in Fahrenheit is 95°F."
+  },
+  "strategy": {
+    "keywords": "35 celsius to fahrenheit 95 fahrenheit heat safety fever hypothermia wet bulb temperature"
+  },
+  "comfortGuide": {
+    "title": "35°C heat and safety guide",
+    "subtitle": "When hot weather starts becoming a real heat-risk conversation",
+    "intro": "35°C (95°F) is not just warm summer weather. Outdoors, it often means slower movement, more shade, and real attention to hydration. Indoors, many people start relying on stronger cooling, especially in humid places.",
+    "chart": {
+      "cold": {
+        "label": "Cool",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Much easier for work and sleep"
+      },
+      "moderate": {
+        "label": "Comfortable",
+        "value": "23-27°C",
+        "desc": "73.4-80.6°F<br>Warm but still manageable"
+      },
+      "warm": {
+        "label": "Intense heat",
+        "value": "30-40°C",
+        "desc": "86-104°F<br>Heat safety starts to matter"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "32°C (89.6°F)",
+          "desc": "Very hot",
+          "use": "Midday activity already feels heavier",
+          "href": "/32-c-to-f"
+        },
+        {
+          "temp": "33°C (91.4°F)",
+          "desc": "Very hot",
+          "use": "Cooling and timing matter more",
+          "href": "/33-c-to-f"
+        },
+        {
+          "temp": "35°C (95°F)",
+          "desc": "Intense heat",
+          "use": "Heat precautions become much more important",
+          "highlight": true
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normal body temperature",
+          "use": "Useful comparison for body heat",
+          "href": "/37-c-to-f"
+        },
+        {
+          "temp": "38°C (100.4°F)",
+          "desc": "Fever threshold",
+          "use": "Important body-temperature comparison",
+          "href": "/38-c-to-f"
+        },
+        {
+          "temp": "40°C (104°F)",
+          "desc": "Extreme heat",
+          "use": "Outdoor exposure becomes far tougher",
+          "href": "/40-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 35°C can feel dangerous much faster when humidity is high, shade is limited, or the air is still. The same number feels very different in dry wind than in a humid city."
+  },
+  "faq": [
+    {
+      "question": "Is 35°C hot or cold for weather?",
+      "answerHtml": "<p>For weather, 35°C (95°F) is very hot. In many places it is the kind of temperature where people change outdoor plans, look for shade, and treat the afternoon as serious heat rather than normal summer warmth.</p>"
+    },
+    {
+      "question": "Is 35°C a fever temperature?",
+      "answerHtml": "<p>No. As a body-temperature reading, 35°C is actually below normal. Fever usually starts around 38°C (100.4°F), while 35°C body temperature points toward hypothermia, not fever.</p>"
+    },
+    {
+      "question": "Is 35°C dangerous for a baby?",
+      "answerHtml": "<p>It can be risky. Babies heat up faster than adults and depend on adults to keep them cool, shaded, and hydrated.</p><ul><li>Limit direct sun and hot-stroller time</li><li>Keep air moving and dress them lightly</li><li>If a baby seems unusually sleepy, flushed, or hard to settle, cool them down and seek medical advice if needed</li></ul>"
+    },
+    {
+      "question": "What is wet-bulb temperature and why is 35°C dangerous?",
+      "answerHtml": "<p>Wet-bulb temperature reflects how well sweating can cool the body. When humidity rises, sweat stops evaporating efficiently, so heat stress builds much faster.</p><p>A wet-bulb temperature near 35°C is considered critical because the body can no longer cool itself effectively, even in the shade.</p>"
+    },
+    {
+      "question": "How do I convert 35 degrees Celsius to Fahrenheit in my head?",
+      "answerHtml": "<p>A quick mental shortcut is to double 35, subtract 10%, then add 32.</p><p>35 × 2 = 70, 70 - 7 = 63, and 63 + 32 = 95°F.</p><p>It is fast, and in this case it gives the exact answer.</p>"
+    },
+    {
+      "question": "What other common temperatures are near 35°C?",
+      "answerHtml": "<p>Nearby temperatures help show where 35°C sits on the heat scale:</p><ul><li>33°C = 91.4°F, already very hot</li><li>35°C = 95°F, where heat precautions become more important</li><li>37°C = 98.6°F, normal human body temperature</li><li>40°C = 104°F, extreme heat in many regions</li></ul>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "35°C (95°F) in daily life",
+    "cards": [
+      {
+        "title": "Heat starts shaping the day",
+        "body": "At 35°C, the hottest hours often decide when people go out, exercise, or even run basic errands. The weather stops feeling merely summery and starts feeling demanding."
+      },
+      {
+        "title": "Cooling becomes part of the routine",
+        "body": "Shade, cold drinks, fans, and air conditioning matter more at 35°C because the body has less margin for extra heat."
+      },
+      {
+        "title": "Indoors can stay hot after sunset",
+        "body": "At this temperature, rooms often hold onto the day’s heat. Even evenings can feel heavy if airflow is weak or humidity is high."
+      }
+    ]
+  }
+}

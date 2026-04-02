@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "35°C in Fahrenheit (95°F): Sommerwärme, Klimaanlage und Alltag",
+    "description": "Wandle 35°C in 95°F um und finde heraus, ob diese Temperatur nach Sommerkleidung, Lüften oder Klimaanlage verlangt."
+  },
+  "header": {
+    "title": "35°C in Fahrenheit (95°F)",
+    "tagline": "Kostenloser Umrechner für 35°C zu 95°F mit Hinweisen zu Sommerwärme, leichter Kleidung und sinnvollen Klimaeinstellungen."
+  },
+  "conversion": {
+    "intro": "35°C entsprechen 95°F."
+  },
+  "strategy": {
+    "keywords": "Wandle 35°C in 95°F um und finde heraus, ob diese Temperatur nach Sommerkleidung, Lüften oder Klimaanlage verlangt."
+  },
+  "comfortGuide": {
+    "title": "Sommer-Guide für 35°C",
+    "subtitle": "Sommerlich angenehm oder eher ein Fall für Kühlung?",
+    "intro": "35°C (95°F) wirken deutlich sommerlich. Im Freien mit leichter Kleidung meist gut, in Innenräumen aber oft schon warm genug für Ventilator oder Klima.",
+    "chart": {
+      "cold": {
+        "label": "Kühler",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Mit Luftzug angenehmer"
+      },
+      "moderate": {
+        "label": "Angenehm",
+        "value": "23-27°C",
+        "desc": "73.4-80.6°F<br>Noch gut machbar"
+      },
+      "warm": {
+        "label": "Wärmer",
+        "value": "30-40°C",
+        "desc": "86-104°F<br>Sommerlich warm"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatur",
+        "description": "Eindruck",
+        "typicalUse": "Typischer Einsatz"
+      },
+      "rows": [
+        {
+          "href": "/32-c-to-f",
+          "temp": "32°C (89.6°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "href": "/33-c-to-f",
+          "temp": "33°C (91.4°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "highlight": true,
+          "temp": "35°C (95°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "href": "/38-c-to-f",
+          "temp": "38°C (100.4°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "href": "/40-c-to-f",
+          "temp": "40°C (104°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        }
+      ]
+    },
+    "note": "<strong>Hinweis:</strong> 35°C können draußen mit Luftzug angenehm sein, in einer warmen Wohnung aber deutlich drückender wirken."
+  },
+  "faq": [
+    {
+      "question": "Sind 35°C wetterbezogen heiß oder kalt?",
+      "answerHtml": "<p>Als Wettertemperatur sind 35°C (95°F) klar sehr heiß. In vielen Regionen ist das die Art von Hitze, bei der Menschen ihre Tagesplanung anpassen, Mittagssonne meiden und gezielt Schatten suchen.</p>"
+    },
+    {
+      "question": "Sind 35°C Fieber?",
+      "answerHtml": "<p>Nein. Als Körpertemperatur liegen 35°C unter dem Normalbereich. Fieber beginnt meist erst in der Nähe von 38°C (100.4°F), während 35°C eher auf Unterkühlung als auf Fieber hindeuten.</p>"
+    },
+    {
+      "question": "Sind 35°C für ein Baby gefährlich?",
+      "answerHtml": "<p>Das kann riskant sein. Babys überhitzen schneller als Erwachsene und brauchen Hilfe von außen, um kühl zu bleiben.</p><ul><li>Direkte Sonne und aufgeheizte Kinderwagen meiden</li><li>Leicht anziehen und Luft bewegen</li><li>Wenn ein Baby stark gerötet, ungewöhnlich schläfrig oder schwer zu beruhigen ist, sollte es schnell gekühlt werden</li></ul>"
+    },
+    {
+      "question": "Was ist die Feuchtkugeltemperatur und warum sind 35°C gefährlich?",
+      "answerHtml": "<p>Die Feuchtkugeltemperatur zeigt, wie gut der Körper sich durch Verdunstungskälte abkühlen kann. Bei hoher Luftfeuchtigkeit verdunstet Schweiß schlechter und Hitzestress steigt schneller.</p><p>Eine Feuchtkugeltemperatur nahe 35°C gilt als kritisch, weil der Körper dann selbst im Schatten kaum noch wirksam Wärme abgeben kann.</p>"
+    },
+    {
+      "question": "Wie rechnet man 35°C im Kopf in Fahrenheit um?",
+      "answerHtml": "<p>Ein einfacher Merktrick: 35 verdoppeln, 10 % abziehen, dann 32 addieren.</p><p>35 × 2 = 70, 70 - 7 = 63 und 63 + 32 = 95°F.</p><p>In diesem Fall liefert die Faustregel sogar den exakten Wert.</p>"
+    },
+    {
+      "question": "Welche typischen Temperaturen liegen nahe bei 35°C?",
+      "answerHtml": "<p>Ein paar Vergleichswerte helfen:</p><ul><li>33°C = 91.4°F, bereits sehr heiß</li><li>35°C = 95°F, wo Hitzeschutz wichtiger wird</li><li>37°C = 98.6°F, normale Körpertemperatur</li><li>40°C = 104°F, extreme Hitze in vielen Regionen</li></ul>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "35°C (95°F) im Alltag",
+    "cards": [
+      {
+        "title": "Die Hitze bestimmt den Tagesablauf",
+        "body": "Bei 35°C richten viele Menschen den Tag bereits nach der Wärme aus: früher raus, mittags weniger tun, schneller wieder in den Schatten."
+      },
+      {
+        "title": "Kühlung wird praktisch notwendig",
+        "body": "Schatten, Wasser, Ventilator und Klimaanlage wirken nicht mehr wie Extras, sondern wie echte Hilfen, um den Tag gut zu überstehen."
+      },
+      {
+        "title": "Abends bleibt Wärme oft hängen",
+        "body": "Bei dieser Temperatur speichern Wohnungen und Straßen viel Wärme, sodass sich auch der Abend noch schwer und heiß anfühlen kann."
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "35°C para 95°F: calor leve, ar-condicionado e verão",
+    "description": "Converta 35°C para 95°F e descubra se essa temperatura combina com verão, ar-condicionado e atividades ao ar livre."
+  },
+  "header": {
+    "title": "35°C para 95°F",
+    "tagline": "Ferramenta gratuita para converter 35°C em 95°F com orientação prática sobre calor, roupas leves e uso de ar-condicionado."
+  },
+  "conversion": {
+    "intro": "35°C equivalem a 95°F."
+  },
+  "strategy": {
+    "keywords": "Converta 35°C para 95°F e descubra se essa temperatura combina com verão, ar-condicionado e atividades ao ar livre."
+  },
+  "comfortGuide": {
+    "title": "Guia de calor leve para 35°C",
+    "subtitle": "É um calor confortável de verão ou já pede refrigeração?",
+    "intro": "35°C (95°F) já tem cara de dia quente. Com roupa leve costuma ser tranquilo, mas em ambientes fechados muita gente prefere ventilador ou ar-condicionado.",
+    "chart": {
+      "cold": {
+        "label": "Mais fresco",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Melhor com um pouco de vento"
+      },
+      "moderate": {
+        "label": "Confortável",
+        "value": "23-27°C",
+        "desc": "73.4-80.6°F<br>Ainda dá para levar"
+      },
+      "warm": {
+        "label": "Mais quente",
+        "value": "30-40°C",
+        "desc": "86-104°F<br>Calor leve de verão"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensação",
+        "typicalUse": "Uso típico"
+      },
+      "rows": [
+        {
+          "href": "/32-c-to-f",
+          "temp": "32°C (89.6°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        },
+        {
+          "href": "/33-c-to-f",
+          "temp": "33°C (91.4°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        },
+        {
+          "highlight": true,
+          "temp": "35°C (95°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        },
+        {
+          "href": "/38-c-to-f",
+          "temp": "38°C (100.4°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        },
+        {
+          "href": "/40-c-to-f",
+          "temp": "40°C (104°F)",
+          "desc": "Bem fresco",
+          "use": "Ventilação ou camada leve"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 35°C pode ser agradável na rua com vento, mas dentro de casa, sem ventilação, a sensação sobe rápido."
+  },
+  "faq": [
+    {
+      "question": "35°C é quente ou frio para o clima?",
+      "answerHtml": "<p>Para o clima, 35°C (95°F) já representam calor forte. Em muitas regiões, é a temperatura que faz as pessoas mudar horários, evitar o sol do meio do dia e procurar sombra com mais frequência.</p>"
+    },
+    {
+      "question": "35°C é febre?",
+      "answerHtml": "<p>Não. Como temperatura corporal, 35°C ficam abaixo do normal. A febre costuma começar perto de 38°C (100.4°F), enquanto 35°C no corpo apontam mais para hipotermia do que para febre.</p>"
+    },
+    {
+      "question": "35°C podem ser perigosos para um bebê?",
+      "answerHtml": "<p>Podem sim. Bebês esquentam mais rápido que adultos e dependem dos adultos para continuar frescos.</p><ul><li>Evite sol direto e carrinho superaquecido</li><li>Use roupa leve e mantenha o ar circulando</li><li>Se o bebê parecer muito vermelho, sonolento ou difícil de acalmar, vale resfriar rápido e buscar orientação médica se necessário</li></ul>"
+    },
+    {
+      "question": "O que é temperatura de bulbo úmido e por que 35°C são perigosos?",
+      "answerHtml": "<p>A temperatura de bulbo úmido mostra o quanto o suor ainda consegue resfriar o corpo. Quando a umidade sobe, a evaporação piora e o estresse térmico aumenta muito mais rápido.</p><p>Bulbo úmido perto de 35°C é considerado crítico porque o corpo praticamente deixa de conseguir se resfriar bem, mesmo na sombra.</p>"
+    },
+    {
+      "question": "Como converter 35°C para Fahrenheit de cabeça?",
+      "answerHtml": "<p>Um atalho simples é dobrar 35, tirar 10% e depois somar 32.</p><p>35 × 2 = 70, 70 - 7 = 63, e 63 + 32 = 95°F.</p><p>Neste caso, o atalho dá exatamente o valor final.</p>"
+    },
+    {
+      "question": "Quais temperaturas comuns ficam perto de 35°C?",
+      "answerHtml": "<p>Alguns pontos de comparação ajudam:</p><ul><li>33°C = 91.4°F, já muito quente</li><li>35°C = 95°F, quando o cuidado com o calor pesa mais</li><li>37°C = 98.6°F, temperatura corporal normal</li><li>40°C = 104°F, calor extremo em muitas regiões</li></ul>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Onde 35°C (95°F) entram no dia a dia",
+    "cards": [
+      {
+        "title": "O calor começa a mandar no dia",
+        "body": "Com 35°C, muita gente passa a organizar horários e deslocamentos em função do calor: sair cedo, fazer menos no pico e procurar sombra mais rápido."
+      },
+      {
+        "title": "Resfriar deixa de ser luxo",
+        "body": "Sombra, água, ventilador e ar-condicionado deixam de parecer extras e passam a ser recursos práticos para atravessar o dia."
+      },
+      {
+        "title": "A noite também segura calor",
+        "body": "Nessa faixa, casas e quartos costumam guardar o calor do dia por mais tempo, então o fim da tarde e a noite ainda podem pesar bastante."
+      }
+    ]
+  }
+}
