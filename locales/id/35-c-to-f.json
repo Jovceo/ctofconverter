@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "35°C ke 95°F: cuaca hangat, AC, dan kebutuhan musim panas",
+    "description": "Ubah 35°C ke 95°F dan lihat apakah suhu ini cocok untuk cuaca tropis hangat, AC, dan aktivitas luar ruang."
+  },
+  "header": {
+    "title": "35°C ke 95°F",
+    "tagline": "Konverter gratis untuk mengubah 35°C ke 95°F dengan panduan soal cuaca hangat, kipas, AC, dan pakaian ringan."
+  },
+  "conversion": {
+    "intro": "35°C sama dengan 95°F."
+  },
+  "strategy": {
+    "keywords": "Ubah 35°C ke 95°F dan lihat apakah suhu ini cocok untuk cuaca tropis hangat, AC, dan aktivitas luar ruang."
+  },
+  "comfortGuide": {
+    "title": "Panduan cuaca hangat untuk 35°C",
+    "subtitle": "Masih enak tanpa AC atau sudah perlu pendinginan?",
+    "intro": "35°C (95°F) sudah terasa seperti hari hangat. Dengan pakaian ringan masih nyaman, tetapi di ruangan tanpa sirkulasi orang sering memilih kipas atau AC.",
+    "chart": {
+      "cold": {
+        "label": "Lebih sejuk",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Lebih nyaman kalau ada angin"
+      },
+      "moderate": {
+        "label": "Nyaman",
+        "value": "23-27°C",
+        "desc": "73.4-80.6°F<br>Masih cukup nyaman"
+      },
+      "warm": {
+        "label": "Lebih hangat",
+        "value": "30-40°C",
+        "desc": "86-104°F<br>Hangat khas musim panas"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Suhu",
+        "description": "Kesan",
+        "typicalUse": "Penggunaan umum"
+      },
+      "rows": [
+        {
+          "href": "/32-c-to-f",
+          "temp": "32°C (89.6°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/33-c-to-f",
+          "temp": "33°C (91.4°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "highlight": true,
+          "temp": "35°C (95°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/38-c-to-f",
+          "temp": "38°C (100.4°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "href": "/40-c-to-f",
+          "temp": "40°C (104°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        }
+      ]
+    },
+    "note": "<strong>Catatan:</strong> 35°C bisa terasa nyaman di luar dengan angin, tetapi di ruangan tropis yang lembap bisa terasa jauh lebih panas."
+  },
+  "faq": [
+    {
+      "question": "Apakah 35°C termasuk panas atau dingin untuk cuaca?",
+      "answerHtml": "<p>Untuk cuaca, 35°C (95°F) jelas termasuk sangat panas. Di banyak tempat, suhu seperti ini membuat orang mengubah jadwal, menghindari tengah hari, dan lebih sering mencari tempat teduh.</p>"
+    },
+    {
+      "question": "Apakah 35°C termasuk demam?",
+      "answerHtml": "<p>Tidak. Jika itu suhu tubuh, 35°C justru lebih rendah dari normal. Demam biasanya mulai mendekati 38°C (100.4°F), sedangkan 35°C lebih mengarah ke risiko hipotermia.</p>"
+    },
+    {
+      "question": "Apakah 35°C berbahaya untuk bayi?",
+      "answerHtml": "<p>Bisa berisiko. Bayi lebih cepat kepanasan dan bergantung pada orang dewasa untuk tetap sejuk.</p><ul><li>Hindari matahari langsung dan stroller yang panas</li><li>Pakaikan baju tipis dan jaga aliran udara</li><li>Jika bayi terlihat sangat merah, lemas, atau sulit ditenangkan, segera bantu mendinginkannya</li></ul>"
+    },
+    {
+      "question": "Apa itu suhu wet-bulb dan mengapa 35°C dianggap berbahaya?",
+      "answerHtml": "<p>Suhu wet-bulb menunjukkan seberapa efektif tubuh bisa mendingin lewat penguapan keringat. Saat kelembapan tinggi, keringat lebih sulit menguap dan stres panas naik jauh lebih cepat.</p><p>Wet-bulb mendekati 35°C dianggap kritis karena tubuh hampir tidak bisa lagi membuang panas dengan efektif, bahkan di tempat teduh.</p>"
+    },
+    {
+      "question": "Bagaimana cara menghitung 35°C ke Fahrenheit di kepala?",
+      "answerHtml": "<p>Cara cepatnya adalah menggandakan 35, kurangi 10%, lalu tambah 32.</p><p>35 × 2 = 70, 70 - 7 = 63, lalu 63 + 32 = 95°F.</p><p>Pada suhu ini, hasilnya juga tepat.</p>"
+    },
+    {
+      "question": "Suhu umum apa yang dekat dengan 35°C?",
+      "answerHtml": "<p>Beberapa patokan yang dekat:</p><ul><li>33°C = 91.4°F, sudah sangat panas</li><li>35°C = 95°F, saat perlindungan dari panas makin penting</li><li>37°C = 98.6°F, suhu tubuh normal</li><li>40°C = 104°F, panas ekstrem di banyak wilayah</li></ul>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "35°C (95°F) dalam keseharian",
+    "cards": [
+      {
+        "title": "Panas mulai mengatur ritme hari",
+        "body": "Pada 35°C, banyak orang mulai mengatur kegiatan berdasarkan panas: keluar lebih pagi, mengurangi aktivitas siang, dan lebih sering mencari tempat teduh."
+      },
+      {
+        "title": "Pendinginan jadi kebutuhan nyata",
+        "body": "Tempat teduh, air minum, kipas, dan AC terasa jauh lebih penting karena tubuh punya ruang lebih kecil untuk menahan tambahan panas."
+      },
+      {
+        "title": "Malam pun bisa tetap gerah",
+        "body": "Pada suhu ini, rumah sering menyimpan panas sampai malam, jadi suasana berat dan gerah bisa bertahan lebih lama."
+      }
+    ]
+  }
+}

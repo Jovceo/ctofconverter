@@ -29,6 +29,8 @@ const PAGES = {
   30: { slug: '30-c-to-f', band: 'summer', nuance: 'ac' },
   31: { slug: '31-c-to-f', band: 'summer', nuance: 'sleep' },
   32: { slug: '32-c-to-f', band: 'summer', nuance: 'ac' },
+  33: { slug: '33-c-to-f', band: 'summer', nuance: 'ac' },
+  35: { slug: '35-c-to-f', band: 'summer', nuance: 'ac' },
 };
 
 const INTRO_TEMPLATES = {

@@ -63,13 +63,13 @@
           "temp": "33°C (91.4°F)",
           "desc": "Very hot",
           "use": "Outdoor timing matters more",
-          "href": "/33-c-to-f.html"
+          "href": "/33-c-to-f"
         },
         {
           "temp": "35°C (95°F)",
           "desc": "Intense heat",
           "use": "Heat safety becomes more important",
-          "href": "/35-c-to-f.html"
+          "href": "/35-c-to-f"
         },
         {
           "temp": "37°C (98.6°F)",

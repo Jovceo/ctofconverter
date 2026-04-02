@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "35 °C a Fahrenheit (95 °F): calor suave, aire acondicionado y verano",
+    "description": "Convierte 35 °C a 95 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
+  },
+  "header": {
+    "title": "35 °C a Fahrenheit (95 °F)",
+    "tagline": "Herramienta gratuita para convertir 35 °C a 95 °F con consejos sobre calor suave, aire acondicionado y ropa ligera."
+  },
+  "conversion": {
+    "intro": "35 °C en Fahrenheit son 95 °F."
+  },
+  "strategy": {
+    "keywords": "Convierte 35 °C a 95 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
+  },
+  "comfortGuide": {
+    "title": "Guía de calor suave para 35 °C",
+    "subtitle": "¿Es calor agradable o una temperatura para enfriar?",
+    "intro": "35 °C (95 °F) ya transmite sensación de verano. Con ropa ligera suele ir bien, aunque en interiores cerrados apetece más ventilación.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Mejor con brisa"
+      },
+      "moderate": {
+        "label": "Cómodo",
+        "value": "23-27°C",
+        "desc": "73.4-80.6°F<br>Todavía manejable"
+      },
+      "warm": {
+        "label": "Cálido",
+        "value": "30-40°C",
+        "desc": "86-104°F<br>Calor suave de verano"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensación",
+        "typicalUse": "Uso habitual"
+      },
+      "rows": [
+        {
+          "href": "/32-c-to-f",
+          "temp": "32°C (89.6°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/33-c-to-f",
+          "temp": "33°C (91.4°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "highlight": true,
+          "temp": "35°C (95°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/38-c-to-f",
+          "temp": "38°C (100.4°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "href": "/40-c-to-f",
+          "temp": "40°C (104°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 35 °C puede sentirse bien con brisa, pero en un piso cerrado suele parecer bastante más cálido."
+  },
+  "faq": [
+    {
+      "question": "¿35 °C se siente frío o calor?",
+      "answerHtml": "<p>Si hablamos del tiempo, 35 °C (95 °F) ya es un calor fuerte. En muchas zonas es la clase de temperatura que hace cambiar horarios, buscar sombra y tratar la tarde como calor serio, no como simple verano agradable.</p>"
+    },
+    {
+      "question": "¿35 °C es fiebre?",
+      "answerHtml": "<p>No. Como temperatura corporal, 35 °C está por debajo de lo normal. La fiebre suele empezar cerca de 38 °C (100,4 °F), mientras que 35 °C en el cuerpo apunta más a hipotermia que a fiebre.</p>"
+    },
+    {
+      "question": "¿35 °C es peligroso para un bebé?",
+      "answerHtml": "<p>Puede serlo. Los bebés se recalientan más rápido y dependen de los adultos para mantenerse frescos.</p><ul><li>Evita el sol directo y el carrito caliente</li><li>Mantén el aire en movimiento y viste al bebé con ropa ligera</li><li>Si se ve muy rojo, adormilado o difícil de calmar, conviene enfriarlo y pedir consejo médico si hace falta</li></ul>"
+    },
+    {
+      "question": "¿Qué es la temperatura de bulbo húmedo y por qué 35 °C es peligrosa?",
+      "answerHtml": "<p>La temperatura de bulbo húmedo muestra hasta qué punto el sudor puede enfriar el cuerpo. Cuando hay mucha humedad, el sudor evapora peor y el estrés térmico sube mucho más rápido.</p><p>Un bulbo húmedo cercano a 35 °C se considera crítico porque el cuerpo deja de poder enfriarse bien, incluso a la sombra.</p>"
+    },
+    {
+      "question": "¿Cómo convierto 35 °C a Fahrenheit mentalmente?",
+      "answerHtml": "<p>Un truco rápido es doblar 35, restar un 10 % y sumar 32.</p><p>35 × 2 = 70, 70 - 7 = 63, y 63 + 32 = 95 °F.</p><p>En este caso, además, te da la cifra exacta.</p>"
+    },
+    {
+      "question": "¿Qué otras temperaturas comunes están cerca de 35 °C?",
+      "answerHtml": "<p>Estas referencias ayudan a ubicarlo:</p><ul><li>33 °C = 91,4 °F, ya muy caluroso</li><li>35 °C = 95 °F, donde las precauciones importan más</li><li>37 °C = 98,6 °F, temperatura corporal normal</li><li>40 °C = 104 °F, calor extremo en muchas regiones</li></ul>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Dónde suele encajar 35 °C (95 °F)",
+    "cards": [
+      {
+        "title": "El calor ya manda el horario",
+        "body": "A 35 °C mucha gente empieza a organizar el día alrededor del calor: salir antes, moverse menos al mediodía y buscar sombra con más intención."
+      },
+      {
+        "title": "Enfriar deja de ser un lujo",
+        "body": "Sombra, agua, ventiladores y aire acondicionado dejan de sentirse opcionales y pasan a ser parte práctica del día."
+      },
+      {
+        "title": "La noche también puede pesar",
+        "body": "Con 35 °C, las casas suelen guardar calor durante más tiempo, así que incluso al anochecer el ambiente puede seguir cargado."
+      }
+    ]
+  }
+}
