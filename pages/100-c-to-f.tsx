@@ -97,7 +97,7 @@ export default function Temperature100C({ lastUpdatedIso, availablePages, pageTr
         const baseStrategy = generateContentStrategy(celsius, 'boiling point water steam cooking temperature celsius fahrenheit conversion science', t);
 
         // Inject Boiling Point Feature as an Insight
-        // We replicate the HTML structure from public/100-c-to-f.html using inline styles for React
+        // We replicate the HTML structure from public/100-c-to-f using inline styles for React
         const featureTitle = pageT.boilingPointFeature?.title || 'Water Boiling Point Reference';
         const featureDesc = pageT.boilingPointFeature?.description || '100°C (212°F) is the standard boiling point of water at sea level.';
 

@@ -19,7 +19,7 @@ const conversionCards: ConversionCard[] = [
   { title: '103°F to Celsius (39.44°C)', url: 'fahrenheit-to-celsius/103-f-to-c.html', date: '2025-08-03' },
   { title: '1°C to Fahrenheit (33.8°F)', url: '1-c-to-f.html', date: '2025-07-26' },
   { title: '60°C to Fahrenheit (140°F)', url: '60-c-to-f.html', date: '2025-06-30' },
-  { title: '35°C to Fahrenheit (95°F)', url: '35-c-to-f.html', date: '2025-05-23' },
+  { title: '35°C to Fahrenheit (95°F)', url: '35-c-to-f', date: '2025-05-23' },
   { title: '46°C to Fahrenheit (114.8°F)', url: '46-c-to-f.html', date: '2025-05-22' },
   { title: '13°C to Fahrenheit (55.4°F)', url: '13-c-to-f.html', date: '2025-05-21' },
   { title: '44°C to Fahrenheit (111.2°F)', url: '44-c-to-f.html', date: '2025-05-16' },
