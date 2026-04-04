@@ -109,7 +109,7 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
   const lastUpdatedIso = getLatestModifiedDate([
     'pages/180-c-to-f.tsx',
     'components/TemperaturePage.tsx',
-    'public/180-c-to-f.html',
+    'public/180-c-to-f',
     'locales/en/180-c-to-f.json',
     `locales/${locale}/180-c-to-f.json`,
     'config/migrated-routes.json',
