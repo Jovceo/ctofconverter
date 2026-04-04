@@ -1,0 +1,125 @@
+{
+  "seo": {
+    "title": "18°C ke 64,4°F: suhu ruangan, kerja, dan tidur",
+    "description": "Ubah 18°C ke 64,4°F dan lihat apakah suhu ini nyaman untuk rumah, kantor, atau kamar tidur."
+  },
+  "header": {
+    "title": "18°C ke 64,4°F",
+    "tagline": "Konverter gratis untuk mengubah 18°C ke 64,4°F sambil menilai apakah suhu ini nyaman untuk bekerja, belajar, atau tidur."
+  },
+  "conversion": {
+    "intro": "18°C sama dengan 64,4°F."
+  },
+  "strategy": {
+    "keywords": "Ubah 18°C ke 64,4°F dan lihat apakah suhu ini nyaman untuk rumah, kantor, atau kamar tidur."
+  },
+  "comfortGuide": {
+    "title": "Panduan kenyamanan indoor untuk 18°C",
+    "subtitle": "Lebih cocok untuk kerja, rumah, atau tidur?",
+    "intro": "18°C (64,4°F) biasanya masuk rentang suhu ruangan yang nyaman. Di rumah atau kantor, banyak orang merasa suhu ini stabil dan mudah diterima.",
+    "chart": {
+      "cold": {
+        "label": "Lebih sejuk",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Lapisan tipis masih berguna"
+      },
+      "moderate": {
+        "label": "Nyaman",
+        "value": "16-21°C",
+        "desc": "60.8-69.8°F<br>Nyaman untuk dalam ruang"
+      },
+      "warm": {
+        "label": "Lebih hangat",
+        "value": "22-27°C",
+        "desc": "71.6-80.6°F<br>Mulai terasa lebih hangat"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Suhu",
+        "description": "Kesan",
+        "typicalUse": "Penggunaan umum"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Cukup sejuk",
+          "use": "Pagi sejuk atau ruangan berventilasi"
+        },
+        {
+          "temp": "16°C (60.8°F)",
+          "desc": "Sejuk",
+          "use": "Cuaca santai dengan lapisan tipis"
+        },
+        {
+          "highlight": true,
+          "temp": "18°C (64.4°F)",
+          "desc": "Sejuk",
+          "use": "Cuaca santai dengan lapisan tipis"
+        },
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Suhu ruangan biasa",
+          "use": "Rumah dan kantor"
+        },
+        {
+          "href": "/21-c-to-f",
+          "temp": "21°C (69.8°F)",
+          "desc": "Nyaman",
+          "use": "Kerja dan belajar nyaman"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Suhu tubuh normal",
+          "use": "Pembanding suhu tubuh"
+        }
+      ]
+    },
+    "note": "<strong>Catatan:</strong> di ruangan kering 18°C bisa terasa netral, sedangkan di kota lembap suhu yang sama bisa terasa lebih hangat."
+  },
+  "faq": [
+    {
+      "question": "Apakah 18°C terasa dingin atau panas?",
+      "answerHtml": "<p>18°C (64,4°F) biasanya terasa nyaman, tidak dingin dan tidak terlalu panas.</p>"
+    },
+    {
+      "question": "Bagaimana cara mengubah 18°C ke Fahrenheit?",
+      "answerHtml": "<p>Rumusnya adalah: °F = (°C × 9/5) + 32. 18 dikali 1,8 menghasilkan 32,4, lalu ditambah 32 menjadi 64,4°F.</p>"
+    },
+    {
+      "question": "Apakah 18°C enak untuk tidur?",
+      "answerHtml": "<p>Bisa cocok untuk sebagian orang, tetapi yang mudah gerah mungkin ingin suhu sedikit lebih rendah.</p>"
+    },
+    {
+      "question": "Pakaian apa yang cocok pada 18°C?",
+      "answerHtml": "<p>Biasanya cukup pakaian harian yang ringan:</p><ul><li>Kaos atau atasan lengan panjang tipis</li><li>Celana ringan atau pakaian kasual</li><li>Lapisan tipis untuk ruang ber-AC</li></ul>"
+    },
+    {
+      "question": "Apakah 18°C terasa sama di ruang ber-AC dan di kota lembap?",
+      "answerHtml": "<p>Di ruang ber-AC, 18°C bisa terasa netral; di kota tropis yang lembap, suhu yang sama bisa terasa lebih hangat.</p>"
+    },
+    {
+      "question": "Apakah 18°C termasuk demam?",
+      "answerHtml": "<p>Tidak. Demam biasanya mulai mendekati 38°C. Jika 18°C adalah suhu tubuh, nilainya justru jauh di bawah normal.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "18°C (64,4°F) dalam keseharian",
+    "cards": [
+      {
+        "title": "Sejuk, tapi tidak dingin",
+        "body": "Pada 18°C, banyak ruangan terasa sejuk dan segar, bukan dingin. Lapisan tipis biasanya sudah cukup untuk menyesuaikan rasa nyaman."
+      },
+      {
+        "title": "Cocok untuk tidur dan aktivitas indoor yang tenang",
+        "body": "18°C sering terasa pas untuk tidur, membaca, bekerja fokus, atau santai di rumah karena ruangannya tidak terasa pengap."
+      },
+      {
+        "title": "Di luar biasanya cukup lapisan ringan",
+        "body": "Di luar ruangan, 18°C sering terasa ringan dan enak. Yang paling membuatnya terasa lebih dingin biasanya angin, bayangan, atau cuaca mendung."
+      }
+    ]
+  }
+}

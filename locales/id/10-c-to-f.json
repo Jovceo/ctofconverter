@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "10°C ke Fahrenheit (50°F): konversi, rasa suhu, dan pakaian",
+    "description": "Ubah 10°C menjadi 50°F, lihat cara hitungnya, dan pahami bagaimana suhu ini terasa dalam cuaca dan kehidupan sehari-hari."
+  },
+  "header": {
+    "title": "10°C ke Fahrenheit (50°F)",
+    "tagline": "Alat gratis untuk mengubah 10°C ke 50°F dengan panduan praktis soal cuaca sejuk, pakaian berlapis, dan rasa suhu sehari-hari."
+  },
+  "conversion": {
+    "intro": "10°C sama dengan 50°F."
+  },
+  "strategy": {
+    "keywords": "10 celsius ke fahrenheit 50 fahrenheit dingin tidak pakaian minus 10 demam"
+  },
+  "comfortGuide": {
+    "title": "Panduan rasa suhu 10°C",
+    "subtitle": "Sudah terasa sejuk, bukan suhu netral",
+    "intro": "10°C (50°F) biasanya terasa sejuk. Belum mendekati beku, tetapi cukup rendah sehingga banyak orang akan memilih jaket tipis, sweater, atau lapisan tambahan sebelum keluar.",
+    "chart": {
+      "cold": {
+        "label": "Dingin",
+        "value": "0-9°C",
+        "desc": "32-48.2°F<br>Lapisan yang lebih hangat biasanya lebih nyaman"
+      },
+      "moderate": {
+        "label": "Sejuk",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Buat banyak orang, ini sudah cuaca jaket"
+      },
+      "warm": {
+        "label": "Lebih ringan",
+        "value": "16-21°C",
+        "desc": "60.8-69.8°F<br>Lapisan tipis sering sudah cukup"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Suhu",
+        "description": "Kesan",
+        "typicalUse": "Situasi umum"
+      },
+      "rows": [
+        {
+          "temp": "5°C (41°F)",
+          "desc": "Dingin",
+          "use": "Jaket yang lebih tebal biasanya terasa lebih pas"
+        },
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Lumayan dingin",
+          "use": "Angin atau tempat teduh membuatnya terasa lebih tajam"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Sejuk",
+          "use": "Jaket tipis, celana panjang, dan sepatu tertutup cocok dipakai",
+          "highlight": true
+        },
+        {
+          "temp": "12°C (53.6°F)",
+          "desc": "Masih sejuk tapi lebih mudah",
+          "use": "Saat bergerak biasanya terasa lebih nyaman"
+        },
+        {
+          "temp": "15°C (59°F)",
+          "desc": "Ringan dan agak sejuk",
+          "use": "Lapisan tipis sering sudah cukup"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Suhu tubuh normal",
+          "use": "Berguna untuk membedakan cuaca dan demam",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Catatan:</strong> 10°C dengan matahari dan angin lemah bisa terasa cukup bersahabat. Kalau hujan, lembap, atau berangin, rasanya turun cepat jadi jauh lebih dingin."
+  },
+  "faq": [
+    {
+      "question": "10°C itu berapa Fahrenheit?",
+      "answerHtml": "<p>10°C sama dengan 50°F. Rumusnya adalah °F = (°C × 9/5) + 32. Jika 10 dikali 1,8 hasilnya 18, lalu ditambah 32 menjadi 50°F.</p>"
+    },
+    {
+      "question": "Apakah 10°C terasa dingin atau biasa saja?",
+      "answerHtml": "<p>10°C (50°F) umumnya terasa sejuk sampai dingin ringan. Ini bukan dingin ekstrem, tetapi cukup rendah sehingga banyak orang akan memilih jaket atau lapisan tambahan.</p><p>Kalau ada angin, hujan, atau kelembapan tinggi, suhu yang sama biasanya terasa jauh lebih dingin.</p>"
+    },
+    {
+      "question": "Minus 10°C itu berapa Fahrenheit?",
+      "answerHtml": "<p>Minus 10°C sama dengan 14°F. Ini sudah masuk suhu musim dingin yang jauh lebih berat daripada 10°C.</p><ul><li>Biasanya perlu jaket tebal, topi, dan sarung tangan</li><li>Terlalu lama di luar bisa cepat tidak nyaman</li><li>Perjalanan dan aktivitas luar ruangan perlu persiapan lebih</li></ul>"
+    },
+    {
+      "question": "Apakah 10°C termasuk demam?",
+      "answerHtml": "<p>Tidak. Demam pada manusia biasanya mulai di sekitar 38°C (100.4°F), sedangkan suhu tubuh normal mendekati 37°C.</p><p>Kalau 10°C adalah suhu tubuh, itu justru sangat rendah dan berbahaya, bukan demam.</p>"
+    },
+    {
+      "question": "Apa yang sebaiknya dipakai saat 10°C?",
+      "answerHtml": "<p>Pada 10°C, pakaian berlapis ringan sampai sedang biasanya paling masuk akal.</p><ul><li>Atasan lengan panjang, sweater tipis, atau hoodie</li><li>Jaket tipis, overshirt, atau windbreaker</li><li>Celana panjang daripada celana pendek</li><li>Sepatu tertutup atau sneaker</li></ul><p>Kalau berangin atau lembap, satu lapisan tipis tambahan bisa sangat membantu.</p>"
+    },
+    {
+      "question": "Apakah air 10°C bisa membeku?",
+      "answerHtml": "<p>Tidak. Air membeku pada 0°C (32°F), jadi 10°C masih cukup jauh di atas titik beku.</p><p>Tetapi air 10°C tetap terasa sangat dingin di tubuh dan jauh dari suhu renang yang nyaman bagi kebanyakan orang.</p>"
+    },
+    {
+      "question": "Bagaimana menghitung 10°C ke Fahrenheit di kepala?",
+      "answerHtml": "<p>Cara cepatnya adalah menggandakan angkanya, mengurangi 10%, lalu menambah 32.</p><ol><li>10 × 2 = 20</li><li>Kurangi 2, hasilnya 18</li><li>18 + 32 = 50°F</li></ol><p>Di titik ini, trik cepat tersebut memberi hasil yang tepat.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Bagaimana 10°C (50°F) terasa dalam keseharian",
+    "cards": [
+      {
+        "title": "Sudah waktunya berpikir soal lapisan",
+        "body": "Pada 10°C, banyak orang tidak lagi nyaman hanya dengan kaus tipis. Dengan pakaian yang pas, suhu ini masih enak dijalani; tanpa lapisan, rasa sejuknya cepat terasa."
+      },
+      {
+        "title": "Sangat khas pagi sejuk atau musim peralihan",
+        "body": "10°C terasa seperti pagi yang segar, sore musim hujan yang adem, atau hari dingin yang masih bisa dinikmati. Masih sangat bisa dipakai beraktivitas, tapi jelas tidak netral."
+      },
+      {
+        "title": "Angin dan hujan mengubah rasa suhu",
+        "body": "10°C yang kering dan cerah masih bisa terasa ringan. Kalau ditambah angin, awan, atau udara lembap, suhu yang sama cepat terasa jauh lebih dingin."
+      }
+    ]
+  }
+}

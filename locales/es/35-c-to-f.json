@@ -44,38 +44,38 @@
         {
           "href": "/32-c-to-f",
           "temp": "32°C (89.6°F)",
-          "desc": "Bastante fresco",
-          "use": "Ventilar o llevar chaqueta ligera"
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
         },
         {
           "href": "/33-c-to-f",
           "temp": "33°C (91.4°F)",
-          "desc": "Bastante fresco",
-          "use": "Ventilar o llevar chaqueta ligera"
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
         },
         {
           "highlight": true,
           "temp": "35°C (95°F)",
-          "desc": "Bastante fresco",
-          "use": "Ventilar o llevar chaqueta ligera"
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
         },
         {
           "href": "/37-c-to-f",
           "temp": "37°C (98.6°F)",
-          "desc": "Bastante fresco",
-          "use": "Ventilar o llevar chaqueta ligera"
+          "desc": "Temperatura corporal normal",
+          "use": "Comparación con el cuerpo humano"
         },
         {
           "href": "/38-c-to-f",
           "temp": "38°C (100.4°F)",
-          "desc": "Bastante fresco",
-          "use": "Ventilar o llevar chaqueta ligera"
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
         },
         {
           "href": "/40-c-to-f",
           "temp": "40°C (104°F)",
-          "desc": "Bastante fresco",
-          "use": "Ventilar o llevar chaqueta ligera"
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
         }
       ]
     },

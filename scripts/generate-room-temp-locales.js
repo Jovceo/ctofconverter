@@ -17,6 +17,7 @@ const LOCALE_TAGS = {
 };
 
 const PAGES = {
+  18: { slug: '18-c-to-f', band: 'indoor', nuance: 'sleep' },
   21: { slug: '21-c-to-f', band: 'indoor', nuance: 'work' },
   22: { slug: '22-c-to-f', band: 'indoor', nuance: 'sleep' },
   23: { slug: '23-c-to-f', band: 'mild', nuance: 'season' },
@@ -30,6 +31,7 @@ const PAGES = {
   31: { slug: '31-c-to-f', band: 'summer', nuance: 'sleep' },
   32: { slug: '32-c-to-f', band: 'summer', nuance: 'ac' },
   33: { slug: '33-c-to-f', band: 'summer', nuance: 'ac' },
+  34: { slug: '34-c-to-f', band: 'summer', nuance: 'ac' },
   35: { slug: '35-c-to-f', band: 'summer', nuance: 'ac' },
 };
 
@@ -134,12 +136,12 @@ function faqHtml(lead, items) {
 }
 
 function parseTemp(tempText) {
-  const match = tempText.match(/(-?\d+(?:\.\d+)?)\s*[???]?C/i);
-  return match ? parseFloat(match[1]) : 0;
+  const match = tempText.match(/-?\d+(?:\.\d+)?/);
+  return match ? parseFloat(match[0]) : 0;
 }
 
 function classifyTemp(temp) {
-  if (temp >= 37) return 'body';
+  if (temp >= 36 && temp < 38) return 'body';
   if (temp <= 10) return 'veryCool';
   if (temp <= 18) return 'cool';
   if (temp <= 20) return 'neutral';

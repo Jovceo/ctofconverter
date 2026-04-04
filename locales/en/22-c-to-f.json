@@ -45,7 +45,7 @@
           "temp": "18\u00b0C (64.4\u00b0F)",
           "desc": "Mild and cool",
           "use": "Fresh indoor air or cooler spring evenings",
-          "href": "/18-c-to-f.html"
+          "href": "/18-c-to-f"
         },
         {
           "temp": "20\u00b0C (68\u00b0F)",
@@ -84,7 +84,7 @@
   "faq": [
     {
       "question": "Is 22 degrees Celsius hot or cold?",
-      "answerHtml": "<p>22\u00b0C (71.6\u00b0F) is generally considered a warm and comfortable temperature - definitely not cold, but not hot either. It's at the upper end of what most people consider ideal room temperature. In outdoor contexts, 22\u00b0C would be described as pleasantly warm - perfect for light clothing and outdoor activities.</p><p>Individual perception varies, and people from cooler climates might find 22\u00b0C quite warm, while those from warmer regions might consider it mild. Compare this to <a href=\"https://ctofconverter.com/18-c-to-f.html\">18\u00b0C (64.4\u00b0F)</a> which is cooler, or <a href=\"/25-c-to-f\" class=\"update-link\">25 Celsius to Fahrenheit</a></p>"
+      "answerHtml": "<p>22\u00b0C (71.6\u00b0F) is generally considered a warm and comfortable temperature - definitely not cold, but not hot either. It's at the upper end of what most people consider ideal room temperature. In outdoor contexts, 22\u00b0C would be described as pleasantly warm - perfect for light clothing and outdoor activities.</p><p>Individual perception varies, and people from cooler climates might find 22\u00b0C quite warm, while those from warmer regions might consider it mild. Compare this to <a href=\"https://ctofconverter.com/18-c-to-f\">18\u00b0C (64.4\u00b0F)</a> which is cooler, or <a href=\"/25-c-to-f\" class=\"update-link\">25 Celsius to Fahrenheit</a></p>"
     },
     {
       "question": "Is 22\u00b0C a fever temperature?",
@@ -108,3 +108,4 @@
     }
   ]
 }
+

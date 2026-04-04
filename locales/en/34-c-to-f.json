@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "34°C to Fahrenheit (93.2°F) | Hot Weather Guide, Formula & Daily Use",
+    "description": "Convert 34°C to Fahrenheit and understand what 93.2°F means for strong summer heat, cooling, outdoor plans, sleep, and everyday heat precautions."
+  },
+  "header": {
+    "title": "34°C to Fahrenheit (34 Degrees Celsius to °F)",
+    "tagline": "Convert 34°C to Fahrenheit with practical guidance for hot afternoons, indoor cooling, lighter routines, and real summer decisions."
+  },
+  "conversion": {
+    "intro": "34°C in Fahrenheit is 93.2°F."
+  },
+  "strategy": {
+    "keywords": "34 celsius to fahrenheit 93.2 fahrenheit hot weather cooling sleep summer heat outdoors"
+  },
+  "comfortGuide": {
+    "title": "34°C heat guide",
+    "subtitle": "When a hot summer day starts shaping your plans",
+    "intro": "34°C (93.2°F) sits in a clearly hot range. Outdoors, midday plans usually feel heavier, and indoors many people stop relying on airflow alone. It is still manageable with good timing and cooling, but it no longer feels mild.",
+    "chart": {
+      "cold": {
+        "label": "Cool",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Much easier for work and sleep"
+      },
+      "moderate": {
+        "label": "Comfortable",
+        "value": "23-27°C",
+        "desc": "73.4-80.6°F<br>Warm but still manageable"
+      },
+      "warm": {
+        "label": "Very hot",
+        "value": "30-36°C",
+        "desc": "86-96.8°F<br>Cooling and timing matter"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "32°C (89.6°F)",
+          "desc": "Very hot",
+          "use": "Midday already feels tiring",
+          "href": "/32-c-to-f"
+        },
+        {
+          "temp": "33°C (91.4°F)",
+          "desc": "Very hot",
+          "use": "Shade and water matter more",
+          "href": "/33-c-to-f"
+        },
+        {
+          "temp": "34°C (93.2°F)",
+          "desc": "Very hot",
+          "use": "Plan around the hottest hours",
+          "highlight": true
+        },
+        {
+          "temp": "35°C (95°F)",
+          "desc": "Intense heat",
+          "use": "Heat precautions become more serious",
+          "href": "/35-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normal body temperature",
+          "use": "Useful comparison for body heat",
+          "href": "/37-c-to-f"
+        },
+        {
+          "temp": "40°C (104°F)",
+          "desc": "Extreme heat",
+          "use": "Outdoor exposure becomes much tougher",
+          "href": "/40-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 34°C can feel much harder in humid air, still rooms, and direct sun. With shade, airflow, and lower humidity, it feels more manageable than the number alone suggests."
+  },
+  "faq": [
+    {
+      "question": "Is 34°C hot or cold for weather?",
+      "answerHtml": "<p>For weather, 34°C (93.2°F) is hot. It is the kind of temperature where people often change plans, look for shade, and treat the afternoon as something to manage rather than ignore.</p>"
+    },
+    {
+      "question": "Is 34°C too hot to walk or exercise outside?",
+      "answerHtml": "<p>It depends on sun, humidity, and intensity, but 34°C is hot enough that heavy exercise feels much harder for most people.</p><ul><li>Short walks and light errands are usually still fine with water and shade</li><li>Midday runs, hard workouts, or long outdoor exposure can become draining quickly</li><li>If you feel dizzy, weak, or unusually flushed, it is time to cool down</li></ul>"
+    },
+    {
+      "question": "Is 34°C a fever temperature?",
+      "answerHtml": "<p>No. As a body-temperature reading, 34°C is below normal. Fever usually starts around 38°C (100.4°F), so 34°C body temperature would be concerning for the opposite reason.</p>"
+    },
+    {
+      "question": "What should you wear in 34°C weather?",
+      "answerHtml": "<p>Most people do best with light, breathable clothing at 34°C.</p><ul><li>T-shirts, sleeveless tops, or loose lightweight shirts</li><li>Shorts, skirts, or light trousers in breathable fabric</li><li>A hat, sunglasses, and water if you expect direct sun</li></ul>"
+    },
+    {
+      "question": "Do you need air conditioning at 34°C?",
+      "answerHtml": "<p>Not always, but many people prefer it at this temperature, especially indoors with weak airflow or high humidity. Fans can help, but they do not remove heat from the room the way AC does.</p>"
+    },
+    {
+      "question": "What nearby temperatures help compare 34°C?",
+      "answerHtml": "<p>These nearby points help place it on the heat scale:</p><ul><li>33°C = 91.4°F, already very hot</li><li>34°C = 93.2°F, where planning around heat becomes common</li><li>35°C = 95°F, where heat precautions matter even more</li><li>37°C = 98.6°F, normal human body temperature</li></ul>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "34°C (93.2°F) in daily life",
+    "cards": [
+      {
+        "title": "Midday feels properly hot",
+        "body": "At 34°C, late morning and afternoon usually feel genuinely hot, especially on pavement, in traffic, or under direct sun."
+      },
+      {
+        "title": "Fans help, AC helps more",
+        "body": "Indoors, cross-ventilation and fans still help, but many people start preferring air conditioning once rooms sit near 34°C."
+      },
+      {
+        "title": "Plan around the heat",
+        "body": "Errands, workouts, and longer walks feel easier earlier or later in the day, with water and shade close by."
+      }
+    ]
+  }
+}

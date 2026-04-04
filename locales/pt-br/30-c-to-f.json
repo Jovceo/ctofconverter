@@ -44,38 +44,38 @@
         {
           "href": "/26-c-to-f",
           "temp": "26°C (78.8°F)",
-          "desc": "Bem fresco",
-          "use": "Ventilação ou camada leve"
+          "desc": "Quente agradável",
+          "use": "Dia de verão"
         },
         {
           "href": "/28-c-to-f",
           "temp": "28°C (82.4°F)",
-          "desc": "Bem fresco",
-          "use": "Ventilação ou camada leve"
+          "desc": "Quente",
+          "use": "Água e sombra ajudam"
         },
         {
           "highlight": true,
           "temp": "30°C (86°F)",
-          "desc": "Bem fresco",
-          "use": "Ventilação ou camada leve"
+          "desc": "Quente",
+          "use": "Água e sombra ajudam"
         },
         {
           "href": "/32-c-to-f",
           "temp": "32°C (89.6°F)",
-          "desc": "Bem fresco",
-          "use": "Ventilação ou camada leve"
+          "desc": "Quente",
+          "use": "Água e sombra ajudam"
         },
         {
           "href": "/35-c-to-f",
           "temp": "35°C (95°F)",
-          "desc": "Bem fresco",
-          "use": "Ventilação ou camada leve"
+          "desc": "Quente",
+          "use": "Água e sombra ajudam"
         },
         {
           "href": "/37-c-to-f",
           "temp": "37°C (98.6°F)",
-          "desc": "Bem fresco",
-          "use": "Ventilação ou camada leve"
+          "desc": "Temperatura corporal normal",
+          "use": "Comparação com o corpo humano"
         }
       ]
     },

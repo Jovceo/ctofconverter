@@ -44,38 +44,38 @@
         {
           "href": "/32-c-to-f",
           "temp": "32°C (89.6°F)",
-          "desc": "Ziemlich kühl",
-          "use": "Lüften oder leichte Jacke"
+          "desc": "Heiß",
+          "use": "Schatten und Wasser wichtig"
         },
         {
           "href": "/33-c-to-f",
           "temp": "33°C (91.4°F)",
-          "desc": "Ziemlich kühl",
-          "use": "Lüften oder leichte Jacke"
+          "desc": "Heiß",
+          "use": "Schatten und Wasser wichtig"
         },
         {
           "highlight": true,
           "temp": "35°C (95°F)",
-          "desc": "Ziemlich kühl",
-          "use": "Lüften oder leichte Jacke"
+          "desc": "Heiß",
+          "use": "Schatten und Wasser wichtig"
         },
         {
           "href": "/37-c-to-f",
           "temp": "37°C (98.6°F)",
-          "desc": "Ziemlich kühl",
-          "use": "Lüften oder leichte Jacke"
+          "desc": "Normale Körpertemperatur",
+          "use": "Vergleich zur Körpertemperatur"
         },
         {
           "href": "/38-c-to-f",
           "temp": "38°C (100.4°F)",
-          "desc": "Ziemlich kühl",
-          "use": "Lüften oder leichte Jacke"
+          "desc": "Heiß",
+          "use": "Schatten und Wasser wichtig"
         },
         {
           "href": "/40-c-to-f",
           "temp": "40°C (104°F)",
-          "desc": "Ziemlich kühl",
-          "use": "Lüften oder leichte Jacke"
+          "desc": "Heiß",
+          "use": "Schatten und Wasser wichtig"
         }
       ]
     },

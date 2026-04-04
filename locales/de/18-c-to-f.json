@@ -1,0 +1,125 @@
+{
+  "seo": {
+    "title": "18°C in Fahrenheit (64,4°F): Umrechnungsanleitung und Rechner",
+    "description": "Rechne 18°C schnell in 64,4°F um, sieh dir die Formel an und verstehe, wie sich diese Temperatur im Alltag anfühlt."
+  },
+  "header": {
+    "title": "18°C in Fahrenheit (64,4°F)",
+    "tagline": "Kostenloser Umrechner für 18°C zu 64,4°F mit Einordnung, ob die Temperatur für Wohnen, Arbeiten oder Schlafen angenehm ist."
+  },
+  "conversion": {
+    "intro": "18°C entsprechen 64,4°F."
+  },
+  "strategy": {
+    "keywords": "Wandle 18°C in 64,4°F um und prüfe, ob diese Temperatur für Wohnung, Büro oder Schlafzimmer angenehm ist."
+  },
+  "comfortGuide": {
+    "title": "Komfort-Guide für 18°C innen",
+    "subtitle": "Eher ideal für Wohnung, Büro oder Schlafzimmer?",
+    "intro": "18°C (64,4°F) liegen oft im angenehmen Bereich für Innenräume. Viele empfinden diese Temperatur als ausgewogen und leicht nutzbar.",
+    "chart": {
+      "cold": {
+        "label": "Kühler",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Leichte Schicht bleibt sinnvoll"
+      },
+      "moderate": {
+        "label": "Angenehm",
+        "value": "16-21°C",
+        "desc": "60.8-69.8°F<br>Angenehm für Innenräume"
+      },
+      "warm": {
+        "label": "Wärmer",
+        "value": "22-27°C",
+        "desc": "71.6-80.6°F<br>Wird langsam wärmer"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatur",
+        "description": "Eindruck",
+        "typicalUse": "Typischer Einsatz"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Ziemlich kühl",
+          "use": "Lüften oder leichte Jacke"
+        },
+        {
+          "temp": "16°C (60.8°F)",
+          "desc": "Kühl",
+          "use": "Frische Morgen- oder Abendluft"
+        },
+        {
+          "highlight": true,
+          "temp": "18°C (64.4°F)",
+          "desc": "Kühl",
+          "use": "Frische Morgen- oder Abendluft"
+        },
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Normale Raumtemperatur",
+          "use": "Wohnung und Büro"
+        },
+        {
+          "href": "/21-c-to-f",
+          "temp": "21°C (69.8°F)",
+          "desc": "Angenehm",
+          "use": "Gut für ruhige Tätigkeiten"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Normale Körpertemperatur",
+          "use": "Vergleich zur Körpertemperatur"
+        }
+      ]
+    },
+    "note": "<strong>Hinweis:</strong> In trockenen Räumen wirken 18°C oft neutral, bei höherer Luftfeuchtigkeit können sie deutlich wärmer erscheinen."
+  },
+  "faq": [
+    {
+      "question": "Wie rechnet man 18°C in Fahrenheit um?",
+      "answerHtml": "<p>Die Formel lautet: °F = (°C × 9/5) + 32. 18 mal 1,8 ergibt 32,4; plus 32 sind es 64,4°F.</p>"
+    },
+    {
+      "question": "Sind 18°C eher kalt oder warm?",
+      "answerHtml": "<p>18°C (64,4°F) wirken meist kühl bis mild. Es ist nicht wirklich kalt, aber spürbar frischer als eine klassische Raumtemperatur.</p><p>Draußen fühlen sich 18°C oft nach angenehmer Frühlings- oder Herbstluft an, meist mit einer leichten zusätzlichen Schicht.</p>"
+    },
+    {
+      "question": "Sind 18°C Fieber?",
+      "answerHtml": "<p>Nein. Fieber beginnt meist erst um 38°C. Als Körpertemperatur wären 18°C nicht Fieber, sondern deutlich zu niedrig und gefährlich.</p>"
+    },
+    {
+      "question": "Sind 18°C gut zum Schlafen?",
+      "answerHtml": "<p>Ja, für viele Menschen ist 18°C eine sehr gute Schlaftemperatur. Das Zimmer bleibt frisch, ohne unangenehm kalt zu wirken, und oft schläft es sich so besser als in einem wärmeren Raum.</p>"
+    },
+    {
+      "question": "Was trägt man bei 18°C?",
+      "answerHtml": "<p>Bei 18°C passt leichte Kleidung mit flexiblen Schichten oft am besten:</p><ul><li>T-Shirt oder dünnes Oberteil mit leichter Jacke, Strickjacke oder Overshirt</li><li>Jeans, lange Hose oder etwas geschlossenere Alltagskleidung</li><li>Bei Wind oder Schatten ist eine zusätzliche leichte Lage sinnvoll</li></ul>"
+    },
+    {
+      "question": "Fühlen sich 18°C in trockener Luft anders an als in feuchter Wohnungsluft?",
+      "answerHtml": "<p>Ja, oft schon. In trockener Luft wirken 18°C klarer und angenehmer, während dieselbe Temperatur bei Feuchtigkeit oder fehlender Sonne kühler erscheinen kann.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "18°C (64,4°F) im Alltag",
+    "cards": [
+      {
+        "title": "Frisch, aber nicht kalt",
+        "body": "Bei 18°C fühlen sich viele Räume angenehm frisch statt richtig kalt an. Mit einer leichten Schicht lässt sich der Komfort schnell anpassen."
+      },
+      {
+        "title": "Gut zum Schlafen und für ruhige Innenräume",
+        "body": "18°C passen oft gut zu Schlafzimmern, Lesen, konzentrierter Arbeit oder entspanntem Zuhause-Sein, ohne dass die Luft stickig wirkt."
+      },
+      {
+        "title": "Draußen reicht oft eine leichte Schicht",
+        "body": "Im Freien fühlen sich 18°C meist mild an. Kälter wirkt es vor allem durch Wind, Schatten oder fehlende Sonne."
+      }
+    ]
+  }
+}

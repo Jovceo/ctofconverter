@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "34 °C a Fahrenheit (93,2 °F): calor suave, aire acondicionado y verano",
+    "description": "Convierte 34 °C a 93,2 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
+  },
+  "header": {
+    "title": "34 °C a Fahrenheit (93,2 °F)",
+    "tagline": "Herramienta gratuita para convertir 34 °C a 93,2 °F con consejos sobre calor suave, aire acondicionado y ropa ligera."
+  },
+  "conversion": {
+    "intro": "34 °C en Fahrenheit son 93,2 °F."
+  },
+  "strategy": {
+    "keywords": "Convierte 34 °C a 93,2 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
+  },
+  "comfortGuide": {
+    "title": "Guía de calor suave para 34 °C",
+    "subtitle": "¿Es calor agradable o una temperatura para enfriar?",
+    "intro": "34 °C (93,2 °F) ya transmite sensación de verano. Con ropa ligera suele ir bien, aunque en interiores cerrados apetece más ventilación.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "18-22°C",
+        "desc": "64.4-71.6°F<br>Mejor con brisa"
+      },
+      "moderate": {
+        "label": "Cómodo",
+        "value": "23-27°C",
+        "desc": "73.4-80.6°F<br>Todavía manejable"
+      },
+      "warm": {
+        "label": "Cálido",
+        "value": "30-36°C",
+        "desc": "86-96.8°F<br>Calor suave de verano"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensación",
+        "typicalUse": "Uso habitual"
+      },
+      "rows": [
+        {
+          "href": "/32-c-to-f",
+          "temp": "32°C (89.6°F)",
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
+        },
+        {
+          "href": "/33-c-to-f",
+          "temp": "33°C (91.4°F)",
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
+        },
+        {
+          "highlight": true,
+          "temp": "34°C (93.2°F)",
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
+        },
+        {
+          "href": "/35-c-to-f",
+          "temp": "35°C (95°F)",
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Comparación con el cuerpo humano"
+        },
+        {
+          "href": "/40-c-to-f",
+          "temp": "40°C (104°F)",
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 34 °C puede sentirse bien con brisa, pero en un piso cerrado suele parecer bastante más cálido."
+  },
+  "faq": [
+    {
+      "question": "¿34 °C se siente frío o calor?",
+      "answerHtml": "<p>34 °C (93,2 °F) ya encaja con un día cálido de verano.</p>"
+    },
+    {
+      "question": "¿Cómo convierto 34 °C a Fahrenheit?",
+      "answerHtml": "<p>La fórmula es: °F = (°C × 9/5) + 32. Si multiplicas 34 por 1,8 obtienes 61,2; al sumar 32 llegas a 93,2 °F.</p>"
+    },
+    {
+      "question": "¿34 °C funciona bien como ajuste del aire acondicionado?",
+      "answerHtml": "<p>34 °C se ve a menudo como un ajuste razonable del aire acondicionado.</p>"
+    },
+    {
+      "question": "¿Qué ropa conviene con 34 °C?",
+      "answerHtml": "<p>Con esta temperatura suele bastar ropa fresca y transpirable:</p><ul><li>Camiseta, vestido ligero o ropa fresca</li><li>Pantalón corto o tejidos muy transpirables</li><li>Gafas de sol, gorra y protección solar</li></ul>"
+    },
+    {
+      "question": "¿34 °C se lleva mejor en la calle que dentro de casa?",
+      "answerHtml": "<p>Con algo de brisa, 34 °C al aire libre puede resultar agradable; en un piso cerrado suele sentirse más pesado.</p>"
+    },
+    {
+      "question": "¿34 °C es fiebre?",
+      "answerHtml": "<p>No. La fiebre humana suele empezar cerca de 38 °C. Si 34 °C fuera temperatura corporal, estaría muy por debajo de lo normal.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Dónde suele encajar 34 °C (93,2 °F)",
+    "cards": [
+      {
+        "title": "El mediodía ya se nota",
+        "body": "A 34 °C las últimas horas de la mañana y la tarde suelen sentirse claramente calurosas, sobre todo con asfalto, tráfico o sol directo."
+      },
+      {
+        "title": "Ventilador ayuda; AC ayuda más",
+        "body": "Dentro de casa, el aire cruzado y los ventiladores sirven, pero muchas personas ya prefieren aire acondicionado en esta franja."
+      },
+      {
+        "title": "Mejor mover los planes",
+        "body": "Recados, deporte y caminatas largas suelen llevarse mejor a primera hora o al final del día, con agua a mano."
+      }
+    ]
+  }
+}
