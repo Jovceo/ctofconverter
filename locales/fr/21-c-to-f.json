@@ -42,13 +42,13 @@
       },
       "rows": [
         {
-          "href": "/10-c-to-f.html",
+          "href": "/10-c-to-f",
           "temp": "10°C (50°F)",
           "desc": "Assez frais",
           "use": "Aération ou veste légère"
         },
         {
-          "href": "/18-c-to-f.html",
+          "href": "/18-c-to-f",
           "temp": "18°C (64.4°F)",
           "desc": "Frais",
           "use": "Matinée fraîche ou mi-saison"
@@ -125,3 +125,4 @@
     }
   ]
 }
+

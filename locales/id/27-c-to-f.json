@@ -44,38 +44,38 @@
         {
           "href": "/23-c-to-f",
           "temp": "23°C (73.4°F)",
-          "desc": "Cukup sejuk",
-          "use": "Pagi sejuk atau ruangan berventilasi"
+          "desc": "Sedikit hangat",
+          "use": "Jalan santai dan pakaian ringan"
         },
         {
           "href": "/25-c-to-f",
           "temp": "25°C (77°F)",
-          "desc": "Cukup sejuk",
-          "use": "Pagi sejuk atau ruangan berventilasi"
+          "desc": "Hangat dan enak",
+          "use": "Cuaca hangat khas tropis"
         },
         {
           "highlight": true,
           "temp": "27°C (80.6°F)",
-          "desc": "Cukup sejuk",
-          "use": "Pagi sejuk atau ruangan berventilasi"
+          "desc": "Hangat dan enak",
+          "use": "Cuaca hangat khas tropis"
         },
         {
           "href": "/29-c-to-f",
           "temp": "29°C (84.2°F)",
-          "desc": "Cukup sejuk",
-          "use": "Pagi sejuk atau ruangan berventilasi"
+          "desc": "Panas",
+          "use": "Perlu air dan tempat teduh"
         },
         {
           "href": "/30-c-to-f",
           "temp": "30°C (86°F)",
-          "desc": "Cukup sejuk",
-          "use": "Pagi sejuk atau ruangan berventilasi"
+          "desc": "Panas",
+          "use": "Perlu air dan tempat teduh"
         },
         {
           "href": "/37-c-to-f",
           "temp": "37°C (98.6°F)",
-          "desc": "Cukup sejuk",
-          "use": "Pagi sejuk atau ruangan berventilasi"
+          "desc": "Suhu tubuh normal",
+          "use": "Pembanding suhu tubuh"
         }
       ]
     },

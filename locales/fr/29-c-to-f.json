@@ -44,38 +44,38 @@
         {
           "href": "/25-c-to-f",
           "temp": "25°C (77°F)",
-          "desc": "Assez frais",
-          "use": "Aération ou veste légère"
+          "desc": "Chaud agréable",
+          "use": "Journée d’été légère"
         },
         {
           "href": "/27-c-to-f",
           "temp": "27°C (80.6°F)",
-          "desc": "Assez frais",
-          "use": "Aération ou veste légère"
+          "desc": "Chaud agréable",
+          "use": "Journée d’été légère"
         },
         {
           "highlight": true,
           "temp": "29°C (84.2°F)",
-          "desc": "Assez frais",
-          "use": "Aération ou veste légère"
+          "desc": "Chaud",
+          "use": "Hydratation et ombre utiles"
         },
         {
           "href": "/30-c-to-f",
           "temp": "30°C (86°F)",
-          "desc": "Assez frais",
-          "use": "Aération ou veste légère"
+          "desc": "Chaud",
+          "use": "Hydratation et ombre utiles"
         },
         {
           "href": "/33-c-to-f",
           "temp": "33°C (91.4°F)",
-          "desc": "Assez frais",
-          "use": "Aération ou veste légère"
+          "desc": "Chaud",
+          "use": "Hydratation et ombre utiles"
         },
         {
           "href": "/37-c-to-f",
           "temp": "37°C (98.6°F)",
-          "desc": "Assez frais",
-          "use": "Aération ou veste légère"
+          "desc": "Température corporelle normale",
+          "use": "Repère pour le corps humain"
         }
       ]
     },

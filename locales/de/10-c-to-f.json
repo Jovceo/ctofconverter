@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "10°C in Fahrenheit (50°F): Umrechnung, Gefühl und Kleidung",
+    "description": "Rechne 10°C in 50°F um, sieh dir die Formel an und verstehe, wie sich diese Temperatur im Alltag anfühlt."
+  },
+  "header": {
+    "title": "10°C in Fahrenheit (50°F)",
+    "tagline": "Kostenloser Umrechner für 10°C in 50°F mit praktischen Hinweisen zu kühlem Wetter, Kleidung in Schichten und realem Alltagsempfinden."
+  },
+  "conversion": {
+    "intro": "10°C entsprechen 50°F."
+  },
+  "strategy": {
+    "keywords": "10 celsius in fahrenheit 50 fahrenheit kalt oder mild was anziehen minus 10 fieber"
+  },
+  "comfortGuide": {
+    "title": "10°C im Gefühl",
+    "subtitle": "Klar kühl, nicht mehr neutral",
+    "intro": "10°C (50°F) sind kühles Wetter. Es friert noch nicht, aber für viele Menschen ist es bereits der Punkt, an dem eine leichte Jacke, ein Pullover oder eine windfeste Schicht sinnvoll werden.",
+    "chart": {
+      "cold": {
+        "label": "Kalt",
+        "value": "0-9°C",
+        "desc": "32-48.2°F<br>Wärmere Schichten fühlen sich meist besser an"
+      },
+      "moderate": {
+        "label": "Kühl",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Jackenwetter für viele"
+      },
+      "warm": {
+        "label": "Mild",
+        "value": "16-21°C",
+        "desc": "60.8-69.8°F<br>Leichte Schichten reichen oft"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatur",
+        "description": "Eindruck",
+        "typicalUse": "Typische Situation"
+      },
+      "rows": [
+        {
+          "temp": "5°C (41°F)",
+          "desc": "Kalt",
+          "use": "Eine deutlich wärmere Jacke passt oft besser"
+        },
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Kühl bis kalt",
+          "use": "Mit Wind oder im Schatten wirkt es schärfer"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Kühl",
+          "use": "Leichte Jacke, lange Hose und geschlossene Schuhe passen gut",
+          "highlight": true
+        },
+        {
+          "temp": "12°C (53.6°F)",
+          "desc": "Noch kühl, aber leichter",
+          "use": "In Bewegung wirkt es oft angenehmer"
+        },
+        {
+          "temp": "15°C (59°F)",
+          "desc": "Mild mit frischer Note",
+          "use": "Eine leichte Schicht reicht oft aus"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normale Körpertemperatur",
+          "use": "Hilfreich gegen die Verwechslung von Wetter und Fieber",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Hinweis:</strong> 10°C mit Sonne und wenig Wind können recht angenehm wirken. Bei Regen, Feuchtigkeit oder Zugluft fühlt sich dieselbe Zahl deutlich kälter an."
+  },
+  "faq": [
+    {
+      "question": "Wie viel sind 10°C in Fahrenheit?",
+      "answerHtml": "<p>10°C sind 50°F. Die Formel lautet: °F = (°C × 9/5) + 32. 10 × 1,8 = 18, danach 18 + 32 = 50°F.</p>"
+    },
+    {
+      "question": "Sind 10°C kalt oder eher mild?",
+      "answerHtml": "<p>10°C (50°F) gelten meist als kühl. Es ist kein harter Winterfrost, aber deutlich kühl genug, dass viele Menschen zu Jacke, Pullover oder einer zusätzlichen Schicht greifen.</p><p>Mit Wind, Regen oder hoher Luftfeuchtigkeit wirkt es meist spürbar kälter.</p>"
+    },
+    {
+      "question": "Wie viel sind minus 10°C in Fahrenheit?",
+      "answerHtml": "<p>Minus 10°C entsprechen 14°F. Das ist echtes Winterwetter und liegt deutlich unter dem Gefühl von 10°C.</p><ul><li>Dicke Jacke, Mütze und Handschuhe werden meist sinnvoll</li><li>Längere Zeit draußen wird schnell unangenehm</li><li>Auch Wege und Aktivitäten brauchen mehr Planung</li></ul>"
+    },
+    {
+      "question": "Sind 10°C Fieber?",
+      "answerHtml": "<p>Nein. Fieber beginnt beim Menschen meist erst um 38°C (100.4°F), während normale Körpertemperatur ungefähr bei 37°C liegt.</p><p>Wären 10°C ein Körperwert, wäre das nicht Fieber, sondern gefährlich zu niedrig.</p>"
+    },
+    {
+      "question": "Was sollte man bei 10°C anziehen?",
+      "answerHtml": "<p>Bei 10°C funktionieren leichte bis mittlere Schichten meist am besten.</p><ul><li>Langarmshirt, dünner Pullover oder Hoodie</li><li>Leichte Jacke, Overshirt oder Windjacke</li><li>Lange Hose statt Shorts</li><li>Geschlossene Schuhe oder leichte Boots</li></ul><p>Bei Wind oder Nässe bringt schon eine zusätzliche dünne Lage deutlich mehr Komfort.</p>"
+    },
+    {
+      "question": "Kann Wasser bei 10°C gefrieren?",
+      "answerHtml": "<p>Nein. Wasser gefriert bei 0°C (32°F), also deutlich unter 10°C.</p><p>Trotzdem fühlt sich Wasser bei 10°C sehr kalt an und liegt weit entfernt von angenehmen Badetemperaturen.</p>"
+    },
+    {
+      "question": "Wie rechne ich 10°C im Kopf in Fahrenheit um?",
+      "answerHtml": "<p>Ein einfacher Trick ist: verdoppeln, 10 % abziehen und dann 32 addieren.</p><ol><li>10 × 2 = 20</li><li>10 % von 20 sind 2, also bleibt 18</li><li>18 + 32 = 50°F</li></ol><p>Bei 10°C ergibt diese Faustregel sogar genau den exakten Wert.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Wie sich 10°C (50°F) im Alltag anfühlen",
+    "cards": [
+      {
+        "title": "Ab hier denkt man in Schichten",
+        "body": "Bei 10°C reicht für viele ein T-Shirt allein nicht mehr. Mit der richtigen Lage ist es gut machbar, ohne sie fühlt sich die Kühle schnell deutlich an."
+      },
+      {
+        "title": "Typisch für Frühling und Herbst",
+        "body": "10°C passen gut zu frischen Morgenstunden, herbstlichen Nachmittagen oder milderen Wintertagen. Die Temperatur ist gut nutzbar, aber klar spürbar."
+      },
+      {
+        "title": "Wind und Regen verändern viel",
+        "body": "Trockene 10°C mit Sonne können noch recht freundlich wirken. Mit Feuchtigkeit, Wolken oder Wind kippt das Gefühl schnell in deutlich kühler."
+      }
+    ]
+  }
+}

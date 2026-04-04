@@ -1,0 +1,125 @@
+{
+  "seo": {
+    "title": "18 °C a Fahrenheit (64,4 °F): guía de conversión y calculadora",
+    "description": "Convierte 18 °C a 64,4 °F rápidamente, revisa la fórmula y entiende qué sensación deja esta temperatura en la vida diaria."
+  },
+  "header": {
+    "title": "18 °C a Fahrenheit (64,4 °F)",
+    "tagline": "Herramienta gratuita para convertir 18 °C a 64,4 °F y valorar si la temperatura es cómoda para trabajar, estudiar o dormir."
+  },
+  "conversion": {
+    "intro": "18 °C en Fahrenheit son 64,4 °F."
+  },
+  "strategy": {
+    "keywords": "Convierte 18 °C a 64,4 °F y revisa si esta temperatura funciona bien para casa, oficina o dormitorio."
+  },
+  "comfortGuide": {
+    "title": "Guía de confort interior para 18 °C",
+    "subtitle": "¿Mejor para casa, oficina o descanso?",
+    "intro": "18 °C (64,4 °F) suele estar dentro del rango cómodo para interiores y se percibe bastante equilibrado.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Todavía pide una capa ligera"
+      },
+      "moderate": {
+        "label": "Cómodo",
+        "value": "16-21°C",
+        "desc": "60.8-69.8°F<br>Zona cómoda para interior"
+      },
+      "warm": {
+        "label": "Cálido",
+        "value": "22-27°C",
+        "desc": "71.6-80.6°F<br>Empieza a sentirse más cálido"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensación",
+        "typicalUse": "Uso habitual"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Bastante fresco",
+          "use": "Ventilar o llevar chaqueta ligera"
+        },
+        {
+          "temp": "16°C (60.8°F)",
+          "desc": "Fresco",
+          "use": "Mañanas y tardes frescas"
+        },
+        {
+          "highlight": true,
+          "temp": "18°C (64.4°F)",
+          "desc": "Fresco",
+          "use": "Mañanas y tardes frescas"
+        },
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Temperatura ambiente",
+          "use": "Casa, oficina o estudio"
+        },
+        {
+          "href": "/21-c-to-f",
+          "temp": "21°C (69.8°F)",
+          "desc": "Cómodo",
+          "use": "Interior cómodo para la mayoría"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Comparación con el cuerpo humano"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> en ambientes secos 18 °C suele sentirse neutro; con humedad alta, la misma cifra puede parecer más cálida."
+  },
+  "faq": [
+    {
+      "question": "¿Cómo convierto 18 °C a Fahrenheit?",
+      "answerHtml": "<p>La fórmula es: °F = (°C × 9/5) + 32. Si multiplicas 18 por 1,8 obtienes 32,4; al sumar 32 llegas a 64,4 °F.</p>"
+    },
+    {
+      "question": "¿18 °C se siente frío o calor?",
+      "answerHtml": "<p>18 °C (64,4 °F) suele sentirse fresco o templado, no frío fuerte. Está un poco por debajo de la temperatura ambiente estándar, así que mucha gente lo nota agradable para pasear o estar en casa con una capa ligera.</p>"
+    },
+    {
+      "question": "¿18 °C es fiebre?",
+      "answerHtml": "<p>No. La fiebre humana suele empezar cerca de 38 °C. Si 18 °C fuera temperatura corporal, estaría muy por debajo de lo normal y sería una situación preocupante por lo contrario.</p>"
+    },
+    {
+      "question": "¿18 °C es buena temperatura para dormir?",
+      "answerHtml": "<p>Sí, para mucha gente 18 °C entra en una franja muy buena para dormir. Se siente fresco sin volverse incómodo, y suele ayudar más al descanso que un dormitorio cargado o demasiado cálido.</p>"
+    },
+    {
+      "question": "¿Qué ropa conviene con 18 °C?",
+      "answerHtml": "<p>Con 18 °C normalmente funciona bien vestir por capas ligeras:</p><ul><li>Camiseta o manga larga fina con chaqueta ligera, cárdigan o sobrecamisa</li><li>Vaqueros, pantalón largo o ropa algo más cerrada que en verano</li><li>Si hay viento o es a primera hora, una capa extra viene bien</li></ul>"
+    },
+    {
+      "question": "¿18 °C se siente igual en interior seco que en costa húmeda?",
+      "answerHtml": "<p>No siempre. En aire seco, 18 °C suele sentirse más limpio y neutro; con humedad o poco sol puede notarse más fresco, especialmente por la mañana o al atardecer.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Dónde suele encajar 18 °C (64,4 °F)",
+    "cards": [
+      {
+        "title": "Fresco, pero no frío",
+        "body": "A 18 °C muchas habitaciones se sienten frescas y agradables, no frías. Una capa ligera suele bastar para cambiar mucho la sensación."
+      },
+      {
+        "title": "Muy bueno para dormir y estar dentro",
+        "body": "A 18 °C mucha gente duerme bien y también se siente cómoda leyendo, trabajando o descansando sin notar el aire cargado."
+      },
+      {
+        "title": "Fuera suele bastar una capa ligera",
+        "body": "En la calle, 18 °C suelen sentirse suaves. Lo que más enfría suele ser la sombra, el viento o un día nublado."
+      }
+    ]
+  }
+}

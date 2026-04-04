@@ -44,38 +44,38 @@
         {
           "href": "/26-c-to-f",
           "temp": "26°C (78.8°F)",
-          "desc": "Bastante fresco",
-          "use": "Ventilar o llevar chaqueta ligera"
+          "desc": "Cálido agradable",
+          "use": "Día de verano suave"
         },
         {
           "href": "/28-c-to-f",
           "temp": "28°C (82.4°F)",
-          "desc": "Bastante fresco",
-          "use": "Ventilar o llevar chaqueta ligera"
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
         },
         {
           "highlight": true,
           "temp": "30°C (86°F)",
-          "desc": "Bastante fresco",
-          "use": "Ventilar o llevar chaqueta ligera"
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
         },
         {
           "href": "/32-c-to-f",
           "temp": "32°C (89.6°F)",
-          "desc": "Bastante fresco",
-          "use": "Ventilar o llevar chaqueta ligera"
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
         },
         {
           "href": "/35-c-to-f",
           "temp": "35°C (95°F)",
-          "desc": "Bastante fresco",
-          "use": "Ventilar o llevar chaqueta ligera"
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
         },
         {
           "href": "/37-c-to-f",
           "temp": "37°C (98.6°F)",
-          "desc": "Bastante fresco",
-          "use": "Ventilar o llevar chaqueta ligera"
+          "desc": "Temperatura corporal normal",
+          "use": "Comparación con el cuerpo humano"
         }
       ]
     },

@@ -44,38 +44,38 @@
         {
           "href": "/30-c-to-f",
           "temp": "30°C (86°F)",
-          "desc": "Assez frais",
-          "use": "Aération ou veste légère"
+          "desc": "Chaud",
+          "use": "Hydratation et ombre utiles"
         },
         {
           "href": "/31-c-to-f",
           "temp": "31°C (87.8°F)",
-          "desc": "Assez frais",
-          "use": "Aération ou veste légère"
+          "desc": "Chaud",
+          "use": "Hydratation et ombre utiles"
         },
         {
           "highlight": true,
           "temp": "33°C (91.4°F)",
-          "desc": "Assez frais",
-          "use": "Aération ou veste légère"
+          "desc": "Chaud",
+          "use": "Hydratation et ombre utiles"
         },
         {
           "href": "/35-c-to-f",
           "temp": "35°C (95°F)",
-          "desc": "Assez frais",
-          "use": "Aération ou veste légère"
+          "desc": "Chaud",
+          "use": "Hydratation et ombre utiles"
         },
         {
           "href": "/37-c-to-f",
           "temp": "37°C (98.6°F)",
-          "desc": "Assez frais",
-          "use": "Aération ou veste légère"
+          "desc": "Température corporelle normale",
+          "use": "Repère pour le corps humain"
         },
         {
           "href": "/40-c-to-f",
           "temp": "40°C (104°F)",
-          "desc": "Assez frais",
-          "use": "Aération ou veste légère"
+          "desc": "Chaud",
+          "use": "Hydratation et ombre utiles"
         }
       ]
     },

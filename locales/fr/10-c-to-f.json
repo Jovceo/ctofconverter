@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "10 °C en Fahrenheit (50 °F) : conversion, ressenti et vêtements",
+    "description": "Convertissez 10 °C en 50 °F, voyez le calcul et comprenez ce que cette température représente dans la vie quotidienne."
+  },
+  "header": {
+    "title": "10 °C en Fahrenheit (50 °F)",
+    "tagline": "Outil gratuit pour convertir 10 °C en 50 °F avec des repères concrets sur la fraîcheur, les couches de vêtements et le ressenti réel."
+  },
+  "conversion": {
+    "intro": "10 °C correspondent à 50 °F."
+  },
+  "strategy": {
+    "keywords": "10 celsius en fahrenheit 50 fahrenheit froid ou doux quoi porter moins 10 fièvre"
+  },
+  "comfortGuide": {
+    "title": "Repère de ressenti à 10 °C",
+    "subtitle": "Une température fraîche, pas vraiment douce",
+    "intro": "10 °C (50 °F) correspondent à un temps frais. On est loin du gel, mais suffisamment bas pour que beaucoup de gens prennent une veste légère, un pull ou une couche coupe-vent avant de sortir.",
+    "chart": {
+      "cold": {
+        "label": "Froid",
+        "value": "0-9°C",
+        "desc": "32-48.2°F<br>Des couches plus chaudes sont souvent utiles"
+      },
+      "moderate": {
+        "label": "Frais",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Température de veste pour beaucoup"
+      },
+      "warm": {
+        "label": "Doux",
+        "value": "16-21°C",
+        "desc": "60.8-69.8°F<br>Une couche légère suffit souvent"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Température",
+        "description": "Ressenti",
+        "typicalUse": "Usage typique"
+      },
+      "rows": [
+        {
+          "temp": "5°C (41°F)",
+          "desc": "Froid",
+          "use": "Un manteau un peu plus marqué est souvent préférable"
+        },
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Frais tirant vers le froid",
+          "use": "Le vent et l’ombre le rendent plus vif"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Frais",
+          "use": "Veste légère, pantalon long et chaussures fermées",
+          "highlight": true
+        },
+        {
+          "temp": "12°C (53.6°F)",
+          "desc": "Toujours frais mais plus souple",
+          "use": "En marchant, la température paraît plus facile"
+        },
+        {
+          "temp": "15°C (59°F)",
+          "desc": "Doux avec une pointe de fraîcheur",
+          "use": "Une couche légère suffit souvent"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Température corporelle normale",
+          "use": "Utile pour éviter de confondre météo et fièvre",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note :</strong> 10 °C au soleil et sans vent peuvent sembler assez supportables ; avec pluie, humidité ou courant d’air, la sensation descend vite."
+  },
+  "faq": [
+    {
+      "question": "Combien font 10 °C en Fahrenheit ?",
+      "answerHtml": "<p>10 °C correspondent à 50 °F. La formule est : °F = (°C × 9/5) + 32. 10 × 1,8 = 18, puis 18 + 32 = 50 °F.</p>"
+    },
+    {
+      "question": "10 °C, c’est froid ou doux ?",
+      "answerHtml": "<p>10 °C (50 °F) sont généralement perçus comme frais. Ce n’est pas un froid dur, mais suffisamment bas pour qu’une veste légère ou un pull paraissent utiles.</p><p>Avec du vent, de la pluie ou de l’humidité, la sensation devient nettement plus froide.</p>"
+    },
+    {
+      "question": "Combien font moins 10 °C en Fahrenheit ?",
+      "answerHtml": "<p>Moins 10 °C correspondent à 14 °F. On est alors dans un vrai froid hivernal, très différent de 10 °C.</p><ul><li>Manteau épais, bonnet et gants deviennent courants</li><li>Rester longtemps dehors devient vite inconfortable</li><li>Les trajets et activités extérieures demandent plus d’anticipation</li></ul>"
+    },
+    {
+      "question": "10 °C, est-ce une fièvre ?",
+      "answerHtml": "<p>Non. La fièvre commence plutôt autour de 38 °C (100,4 °F), alors que la température corporelle normale tourne autour de 37 °C.</p><p>Si 10 °C étaient une température corporelle, ce serait au contraire dangereusement trop bas.</p>"
+    },
+    {
+      "question": "Que porter quand il fait 10 °C ?",
+      "answerHtml": "<p>À 10 °C, des couches légères à moyennes sont souvent le meilleur choix.</p><ul><li>Haut à manches longues, pull fin ou sweat</li><li>Veste légère, surchemise ou coupe-vent</li><li>Pantalon long ou jean plutôt qu’un short</li><li>Chaussures fermées ou baskets</li></ul><p>Par temps humide ou venteux, une couche supplémentaire change vite le confort.</p>"
+    },
+    {
+      "question": "L’eau à 10 °C peut-elle geler ?",
+      "answerHtml": "<p>Non. L’eau gèle à 0 °C (32 °F), donc 10 °C restent bien au-dessus du point de congélation.</p><p>En revanche, de l’eau à 10 °C paraît très froide au contact et reste loin d’une température de baignade confortable.</p>"
+    },
+    {
+      "question": "Comment convertir 10 °C en Fahrenheit de tête ?",
+      "answerHtml": "<p>Une astuce simple consiste à doubler la valeur, enlever 10 %, puis ajouter 32.</p><ol><li>10 × 2 = 20</li><li>On enlève 2, il reste 18</li><li>18 + 32 = 50 °F</li></ol><p>À cette température, ce raccourci donne exactement le bon résultat.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Comment 10 °C (50 °F) se vivent au quotidien",
+    "cards": [
+      {
+        "title": "Une température de couches",
+        "body": "À 10 °C, beaucoup de gens ne sortent plus en simple T-shirt. Avec la bonne couche, le temps reste agréable ; sans elle, la fraîcheur se fait sentir rapidement."
+      },
+      {
+        "title": "Très typique du printemps et de l’automne",
+        "body": "10 °C rappellent un matin de printemps, une fin d’après-midi d’automne ou un hiver plutôt doux. C’est une température facile à vivre, mais pas neutre."
+      },
+      {
+        "title": "Vent et pluie changent beaucoup la sensation",
+        "body": "Un 10 °C sec et ensoleillé peut sembler supportable. Avec de l’humidité, des nuages ou du vent, la même valeur paraît beaucoup plus froide."
+      }
+    ]
+  }
+}

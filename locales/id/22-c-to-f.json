@@ -42,7 +42,7 @@
       },
       "rows": [
         {
-          "href": "/18-c-to-f.html",
+          "href": "/18-c-to-f",
           "temp": "18°C (64.4°F)",
           "desc": "Sejuk",
           "use": "Cuaca santai dengan lapisan tipis"
@@ -108,3 +108,4 @@
     }
   ]
 }
+

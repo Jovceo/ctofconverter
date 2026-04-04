@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "10°C to Fahrenheit (50°F) | Conversion Guide & Calculator",
+    "description": "Convert 10 degrees Celsius to Fahrenheit quickly. Learn that 10°C equals 50°F, see the calculation steps, and understand temperature context."
+  },
+  "header": {
+    "title": "10°C to Fahrenheit (10 Degrees Celsius to °F)",
+    "tagline": "Convert 10°C to Fahrenheit with practical help for cool weather, layering, spring and fall routines, and everyday temperature questions."
+  },
+  "conversion": {
+    "intro": "10°C in Fahrenheit is 50°F."
+  },
+  "strategy": {
+    "keywords": "10 celsius to fahrenheit 50 fahrenheit cool weather jacket temperature formula fever negative 10 celsius"
+  },
+  "comfortGuide": {
+    "title": "10°C comfort guide",
+    "subtitle": "When the air feels cool, fresh, and clearly below room temperature",
+    "intro": "10°C (50°F) is cool weather. It is not freezing, but it is cold enough that most people reach for a light jacket, sweater, or another layer before heading out. It often feels like spring mornings, fall afternoons, or a mild winter day.",
+    "chart": {
+      "cold": {
+        "label": "Cold",
+        "value": "0-9°C",
+        "desc": "32-48.2°F<br>Heavier layers usually feel better"
+      },
+      "moderate": {
+        "label": "Cool",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Jacket weather for many people"
+      },
+      "warm": {
+        "label": "Mild",
+        "value": "16-21°C",
+        "desc": "60.8-69.8°F<br>More comfortable with lighter layers"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "5°C (41°F)",
+          "desc": "Cold outdoor weather",
+          "use": "A proper coat or several layers usually feel right"
+        },
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Chilly and brisk",
+          "use": "Often feels cold in wind or shade"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Cool",
+          "use": "Light jacket, long trousers, and closed shoes work well",
+          "highlight": true
+        },
+        {
+          "temp": "12°C (53.6°F)",
+          "desc": "Cool but easier",
+          "use": "Still layer weather, but more comfortable with movement"
+        },
+        {
+          "temp": "15°C (59°F)",
+          "desc": "Mild and fresh",
+          "use": "A lighter layer often feels enough"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normal body temperature",
+          "use": "Useful comparison when people confuse weather with fever",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 10°C often feels much colder in wind, rain, or shade than it does in still, dry air with sunshine."
+  },
+  "faq": [
+    {
+      "question": "What is 10 degrees Celsius in Fahrenheit?",
+      "answerHtml": "<p>10 degrees Celsius equals 50 degrees Fahrenheit. To convert it, use the formula °F = (°C × 9/5) + 32. Multiply 10 by 1.8 to get 18, then add 32 to reach 50°F.</p>"
+    },
+    {
+      "question": "Is 10°C cold or warm?",
+      "answerHtml": "<p>10°C (50°F) is generally considered cool. It is not freezing, but most people would want a light jacket, sweater, or another layer at this temperature.</p><p>How it feels can change a lot with wind, humidity, rain, or direct sun. In bright sunshine it may feel mild; in damp or windy weather it can feel much colder.</p>"
+    },
+    {
+      "question": "What is negative 10 Celsius in Fahrenheit?",
+      "answerHtml": "<p>Negative 10°C converts to 14°F. That is proper winter cold and far more severe than 10°C.</p><ul><li>It usually requires a heavy coat, hat, and gloves</li><li>Long exposure can become uncomfortable quickly</li><li>Driving and outdoor activity often need extra preparation</li></ul>"
+    },
+    {
+      "question": "Is 10°C a fever temperature?",
+      "answerHtml": "<p>No. 10°C is not a fever temperature. Human fever usually starts around 38°C (100.4°F), while normal body temperature is around 37°C (98.6°F).</p><p>If 10°C were a body-temperature reading, it would be dangerously below normal, not a fever.</p>"
+    },
+    {
+      "question": "What should I wear at 10°C?",
+      "answerHtml": "<p>At 10°C, light-to-medium layering is usually the most practical choice.</p><ul><li>A long-sleeve top, light sweater, or hoodie</li><li>A light jacket, overshirt, or windbreaker</li><li>Long trousers or jeans rather than shorts</li><li>Closed shoes, trainers, or light boots</li></ul><p>If it is windy or damp, a scarf or one extra layer can make a big difference.</p>"
+    },
+    {
+      "question": "Can 10°C water freeze?",
+      "answerHtml": "<p>No. Water at 10°C does not freeze. Water freezes at 0°C (32°F), so 10°C is well above the freezing point.</p><p>That said, 10°C water still feels very cold to the body. It is much colder than comfortable swimming water and can feel like a shock if entered suddenly.</p>"
+    },
+    {
+      "question": "How do I convert 10°C to Fahrenheit in my head?",
+      "answerHtml": "<p>A quick mental method is to double the Celsius value, subtract about 10%, then add 32.</p><ol><li>10 × 2 = 20</li><li>Take away 10% of 20, which is 2, so you get 18</li><li>Add 32 to get 50°F</li></ol><p>For rough everyday estimates, “double it and add 30” also works around this range.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "10°C (50°F) in daily life",
+    "cards": [
+      {
+        "title": "Cool enough to plan layers",
+        "body": "At 10°C, most people stop thinking in T-shirts alone and start thinking in layers. It is cool weather that feels easy with the right clothes and noticeably less comfortable without them."
+      },
+      {
+        "title": "Typical spring and fall weather",
+        "body": "10°C often shows up on fresh mornings, late autumn afternoons, and milder winter days. It sits in that range where the season feels cool but still very usable for everyday errands and walks."
+      },
+      {
+        "title": "Wind and rain change everything",
+        "body": "A dry, sunny 10°C can feel fairly mild. A windy or damp 10°C often feels sharper, especially if you are standing still, waiting for transport, or outdoors for a while."
+      }
+    ]
+  }
+}

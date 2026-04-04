@@ -1,0 +1,125 @@
+{
+  "seo": {
+    "title": "18 °C en Fahrenheit (64,4 °F) : guide de conversion et calculateur",
+    "description": "Convertissez rapidement 18 °C en 64,4 °F, revoyez le calcul et comprenez ce que cette température représente au quotidien."
+  },
+  "header": {
+    "title": "18 °C en Fahrenheit (64,4 °F)",
+    "tagline": "Outil gratuit pour convertir 18 °C en 64,4 °F et juger si cette température est agréable pour travailler, se reposer ou dormir."
+  },
+  "conversion": {
+    "intro": "18 °C correspondent à 64,4 °F."
+  },
+  "strategy": {
+    "keywords": "Convertissez 18 °C en 64,4 °F et voyez si cette température convient à la maison, au bureau ou à la chambre."
+  },
+  "comfortGuide": {
+    "title": "Guide de confort intérieur pour 18 °C",
+    "subtitle": "Mieux pour la maison, le bureau ou la nuit ?",
+    "intro": "18 °C (64,4 °F) se situe souvent dans une zone agréable en intérieur. Beaucoup de personnes le trouvent stable et facile à vivre.",
+    "chart": {
+      "cold": {
+        "label": "Frais",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Une couche légère aide encore"
+      },
+      "moderate": {
+        "label": "Confortable",
+        "value": "16-21°C",
+        "desc": "60.8-69.8°F<br>Zone confortable en intérieur"
+      },
+      "warm": {
+        "label": "Plus chaud",
+        "value": "22-27°C",
+        "desc": "71.6-80.6°F<br>Commence à sembler plus chaud"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Température",
+        "description": "Ressenti",
+        "typicalUse": "Usage typique"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Assez frais",
+          "use": "Aération ou veste légère"
+        },
+        {
+          "temp": "16°C (60.8°F)",
+          "desc": "Frais",
+          "use": "Matinée fraîche ou mi-saison"
+        },
+        {
+          "highlight": true,
+          "temp": "18°C (64.4°F)",
+          "desc": "Frais",
+          "use": "Matinée fraîche ou mi-saison"
+        },
+        {
+          "href": "/20-c-to-f",
+          "temp": "20°C (68°F)",
+          "desc": "Température ambiante",
+          "use": "Maison et bureau"
+        },
+        {
+          "href": "/21-c-to-f",
+          "temp": "21°C (69.8°F)",
+          "desc": "Confortable",
+          "use": "Travail assis ou détente"
+        },
+        {
+          "href": "/37-c-to-f",
+          "temp": "37°C (98.6°F)",
+          "desc": "Température corporelle normale",
+          "use": "Repère pour le corps humain"
+        }
+      ]
+    },
+    "note": "<strong>Note :</strong> dans un logement sec, 18 °C paraît souvent neutre ; avec davantage d’humidité, la même valeur semble plus chaude."
+  },
+  "faq": [
+    {
+      "question": "Comment convertir 18 °C en Fahrenheit ?",
+      "answerHtml": "<p>La formule est : °F = (°C × 9/5) + 32. 18 multiplié par 1,8 donne 32,4, puis on ajoute 32 pour obtenir 64,4 °F.</p>"
+    },
+    {
+      "question": "18 °C, c’est froid ou chaud ?",
+      "answerHtml": "<p>18 °C (64,4 °F) sont généralement perçus comme frais à doux. Ce n’est pas un froid marqué, mais c’est tout de même plus frais qu’une température intérieure classique.</p><p>En extérieur, cela ressemble souvent à un temps agréable de mi-saison avec une petite couche légère.</p>"
+    },
+    {
+      "question": "18 °C, est-ce une fièvre ?",
+      "answerHtml": "<p>Non. La fièvre commence généralement autour de 38 °C. Si 18 °C étaient une température corporelle, ce serait au contraire très en dessous de la normale.</p>"
+    },
+    {
+      "question": "18 °C est-il adapté pour dormir ?",
+      "answerHtml": "<p>Oui, pour beaucoup de personnes 18 °C sont une très bonne température de chambre. L’air reste frais sans devenir inconfortable, ce qui aide souvent davantage au sommeil qu’une pièce trop chaude.</p>"
+    },
+    {
+      "question": "Que porter quand il fait 18 °C ?",
+      "answerHtml": "<p>À 18 °C, une tenue légère avec une petite couche supplémentaire fonctionne souvent bien :</p><ul><li>T-shirt ou haut fin avec gilet, surchemise ou veste légère</li><li>Jean, pantalon long ou bas un peu plus couvrant qu’en plein été</li><li>Si le vent souffle ou qu’il y a de l’ombre, une couche en plus reste utile</li></ul>"
+    },
+    {
+      "question": "18 °C se ressent-il pareil dans un appartement sec et dans une ville humide ?",
+      "answerHtml": "<p>Pas toujours. En air sec, 18 °C paraissent souvent plus nets et équilibrés ; avec davantage d’humidité ou moins de soleil, la même valeur peut sembler plus fraîche.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Où 18 °C (64,4 °F) se placent dans la vie quotidienne",
+    "cards": [
+      {
+        "title": "Frais, sans être froid",
+        "body": "À 18 °C, beaucoup de pièces paraissent fraîches et agréables plutôt que froides. Une couche légère suffit souvent à ajuster le confort."
+      },
+      {
+        "title": "Très bon pour dormir et rester au calme",
+        "body": "Autour de 18 °C, beaucoup de gens dorment bien et se sentent à l’aise pour lire, travailler ou se reposer sans sensation d’air lourd."
+      },
+      {
+        "title": "Dehors, une couche légère suffit souvent",
+        "body": "En extérieur, 18 °C donnent souvent une impression douce. Ce sont surtout le vent, l’ombre ou les nuages qui rendent l’air plus frais."
+      }
+    ]
+  }
+}

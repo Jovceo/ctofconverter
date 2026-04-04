@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "10°C em Fahrenheit (50°F): conversão, sensação e roupa",
+    "description": "Converta 10°C em 50°F, veja a conta e entenda como essa temperatura costuma ser sentida no dia a dia."
+  },
+  "header": {
+    "title": "10°C em Fahrenheit (50°F)",
+    "tagline": "Ferramenta gratuita para converter 10°C em 50°F com contexto prático sobre clima fresco, roupa em camadas e sensação real."
+  },
+  "conversion": {
+    "intro": "10°C equivalem a 50°F."
+  },
+  "strategy": {
+    "keywords": "10 celsius em fahrenheit 50 fahrenheit frio o que vestir menos 10 febre"
+  },
+  "comfortGuide": {
+    "title": "Guia de sensação térmica para 10°C",
+    "subtitle": "Já é uma faixa fresca, não neutra",
+    "intro": "10°C (50°F) costumam ser percebidos como clima fresco. Está longe de congelar, mas já é um ponto em que muita gente prefere sair com jaqueta leve, moletom ou uma camada extra.",
+    "chart": {
+      "cold": {
+        "label": "Frio",
+        "value": "0-9°C",
+        "desc": "32-48.2°F<br>Camadas mais quentes costumam fazer sentido"
+      },
+      "moderate": {
+        "label": "Fresco",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Temperatura de jaqueta para muita gente"
+      },
+      "warm": {
+        "label": "Mais ameno",
+        "value": "16-21°C",
+        "desc": "60.8-69.8°F<br>Camada leve costuma bastar"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensação",
+        "typicalUse": "Uso típico"
+      },
+      "rows": [
+        {
+          "temp": "5°C (41°F)",
+          "desc": "Frio",
+          "use": "Uma jaqueta mais forte costuma combinar melhor"
+        },
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Bem fresco",
+          "use": "Vento e sombra deixam a sensação mais forte"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Fresco",
+          "use": "Jaqueta leve, calça comprida e calçado fechado funcionam bem",
+          "highlight": true
+        },
+        {
+          "temp": "12°C (53.6°F)",
+          "desc": "Ainda fresco, mas mais fácil",
+          "use": "Em movimento costuma parecer melhor"
+        },
+        {
+          "temp": "15°C (59°F)",
+          "desc": "Ameno com toque fresco",
+          "use": "Camada leve muitas vezes já resolve"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Ajuda a não confundir clima com febre",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 10°C com sol e pouco vento podem parecer bem mais tranquilos. Com chuva, umidade ou vento, a mesma temperatura pesa muito mais."
+  },
+  "faq": [
+    {
+      "question": "Quanto é 10°C em Fahrenheit?",
+      "answerHtml": "<p>10°C equivalem a 50°F. A fórmula é °F = (°C × 9/5) + 32. Fazendo 10 × 1,8 = 18 e depois 18 + 32, você chega a 50°F.</p>"
+    },
+    {
+      "question": "10°C são frios ou amenos?",
+      "answerHtml": "<p>10°C (50°F) costumam ser considerados frescos. Não é um frio pesado, mas já é uma temperatura em que muita gente prefere jaqueta, moletom ou uma camada extra.</p><p>Com vento, chuva ou umidade, a sensação fica claramente mais fria.</p>"
+    },
+    {
+      "question": "Quanto é menos 10°C em Fahrenheit?",
+      "answerHtml": "<p>Menos 10°C equivalem a 14°F. Aí já entramos em frio de inverno de verdade, bem diferente dos 10°C.</p><ul><li>Casaco grosso, gorro e luvas passam a fazer sentido</li><li>Ficar muito tempo fora fica bem mais desconfortável</li><li>Passeios e deslocamentos pedem mais preparo</li></ul>"
+    },
+    {
+      "question": "10°C são febre?",
+      "answerHtml": "<p>Não. Febre normalmente começa perto de 38°C (100.4°F), enquanto a temperatura corporal normal fica por volta de 37°C.</p><p>Se 10°C fossem temperatura do corpo, seria algo perigosamente baixo, não febre.</p>"
+    },
+    {
+      "question": "Que roupa usar com 10°C?",
+      "answerHtml": "<p>Com 10°C, roupas em camadas leves ou médias costumam funcionar melhor.</p><ul><li>Blusa de manga longa, moletom fino ou suéter leve</li><li>Jaqueta leve, sobrecamisa ou corta-vento</li><li>Calça comprida em vez de bermuda</li><li>Tênis ou calçado fechado</li></ul><p>Se estiver ventando ou com garoa, uma camada extra muda bastante o conforto.</p>"
+    },
+    {
+      "question": "Água a 10°C pode congelar?",
+      "answerHtml": "<p>Não. A água congela a 0°C (32°F), então 10°C ainda ficam bem acima do ponto de congelamento.</p><p>Mesmo assim, água a 10°C ainda parece bem fria no corpo e está longe de uma temperatura confortável para nadar.</p>"
+    },
+    {
+      "question": "Como converter 10°C para Fahrenheit de cabeça?",
+      "answerHtml": "<p>Um jeito rápido é dobrar o número, tirar 10% e depois somar 32.</p><ol><li>10 × 2 = 20</li><li>Tira 2 e fica 18</li><li>18 + 32 = 50°F</li></ol><p>Nesse caso, o atalho dá exatamente o valor certo.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Como 10°C (50°F) costumam aparecer no dia a dia",
+    "cards": [
+      {
+        "title": "Já é temperatura de pensar em camada",
+        "body": "Com 10°C, muita gente deixa de sair só de camiseta. Com a roupa certa, o dia segue tranquilo; sem camada, o fresco aparece rápido."
+      },
+      {
+        "title": "Bem típico de manhã fria ou meia-estação",
+        "body": "10°C lembram manhãs frescas, fim de tarde de outono ou dias de inverno mais leves. Dá para fazer tudo normalmente, mas o clima já se faz sentir."
+      },
+      {
+        "title": "Vento e chuva mudam bastante a sensação",
+        "body": "Um 10°C seco e com sol pode parecer bem suportável. Com umidade, nuvens ou vento, a mesma marca fica muito mais fria."
+      }
+    ]
+  }
+}

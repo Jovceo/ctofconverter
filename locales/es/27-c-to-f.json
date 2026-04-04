@@ -1,37 +1,37 @@
 {
   "seo": {
-    "title": "27 °C a Fahrenheit (80,6 °F): sensación térmica, aire y descanso",
-    "description": "Convierte 27 °C a 80,6 °F y entiende qué significa esta temperatura para ropa ligera, sueño, aire acondicionado y vida diaria."
+    "title": "27 °C a Fahrenheit (80,6 °F): calor suave, aire acondicionado y verano",
+    "description": "Convierte 27 °C a 80,6 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
   },
   "header": {
     "title": "27 °C a Fahrenheit (80,6 °F)",
-    "tagline": "Herramienta gratuita para convertir 27 °C a 80,6 °F con una explicación clara de cómo se siente esta temperatura en casa, en la calle y por la noche."
+    "tagline": "Herramienta gratuita para convertir 27 °C a 80,6 °F con consejos sobre calor suave, aire acondicionado y ropa ligera."
   },
   "conversion": {
     "intro": "27 °C en Fahrenheit son 80,6 °F."
   },
   "strategy": {
-    "keywords": "27 c a fahrenheit 27 c a f 27 grados sensación aire acondicionado dormir kelvin fiebre"
+    "keywords": "Convierte 27 °C a 80,6 °F y descubre si esta temperatura pide ropa ligera, ventilación o aire acondicionado."
   },
   "comfortGuide": {
     "title": "Guía de calor suave para 27 °C",
-    "subtitle": "¿Temperatura agradable o punto en el que ya apetece enfriar?",
-    "intro": "27 °C (80,6 °F) ya se sienten claramente veraniegos. En la calle con algo de aire puede ser agradable, pero dentro de casa muchas personas empiezan a notar calor acumulado.",
+    "subtitle": "¿Es calor agradable o una temperatura para enfriar?",
+    "intro": "27 °C (80,6 °F) ya transmite sensación de verano. Con ropa ligera suele ir bien, aunque en interiores cerrados apetece más ventilación.",
     "chart": {
       "cold": {
         "label": "Fresco",
         "value": "16-20°C",
-        "desc": "60.8-68°F<br>Mejor con algo de sol o movimiento"
+        "desc": "60.8-68°F<br>Mejor con brisa"
       },
       "moderate": {
         "label": "Cómodo",
         "value": "21-24°C",
-        "desc": "69.8-75.2°F<br>Más cerca de la comodidad interior"
+        "desc": "69.8-75.2°F<br>Todavía manejable"
       },
       "warm": {
         "label": "Cálido",
         "value": "25-30°C",
-        "desc": "77-86°F<br>Verano suave con sensación clara de calor"
+        "desc": "77-86°F<br>Calor suave de verano"
       }
     },
     "table": {
@@ -44,91 +44,83 @@
         {
           "href": "/23-c-to-f",
           "temp": "23°C (73.4°F)",
-          "desc": "Templado agradable",
-          "use": "Casa, oficina y paseos cómodos"
+          "desc": "Templado",
+          "use": "Terraza, paseo y ropa ligera"
         },
         {
           "href": "/25-c-to-f",
           "temp": "25°C (77°F)",
-          "desc": "Cálido suave",
-          "use": "Ropa ligera y ventanas abiertas"
+          "desc": "Cálido agradable",
+          "use": "Día de verano suave"
         },
         {
           "highlight": true,
           "temp": "27°C (80.6°F)",
-          "desc": "Cálido claro",
-          "use": "Terrazas, recados y necesidad de algo de ventilación"
+          "desc": "Cálido agradable",
+          "use": "Día de verano suave"
         },
         {
           "href": "/29-c-to-f",
           "temp": "29°C (84.2°F)",
-          "desc": "Bastante cálido",
-          "use": "Más sombra, agua y menos esfuerzo"
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
         },
         {
           "href": "/30-c-to-f",
           "temp": "30°C (86°F)",
-          "desc": "Calor de verano",
-          "use": "El mediodía ya se nota pesado"
+          "desc": "Caluroso",
+          "use": "Conviene sombra e hidratación"
         },
         {
           "href": "/37-c-to-f",
           "temp": "37°C (98.6°F)",
           "desc": "Temperatura corporal normal",
-          "use": "Referencia útil frente al cuerpo humano"
+          "use": "Comparación con el cuerpo humano"
         }
       ]
     },
-    "note": "<strong>Nota:</strong> 27 °C con brisa pueden sentirse bastante bien, pero en una habitación cerrada o con humedad suelen parecer más calientes."
+    "note": "<strong>Nota:</strong> 27 °C puede sentirse bien con brisa, pero en un piso cerrado suele parecer bastante más cálido."
   },
   "faq": [
     {
       "question": "¿27 °C se siente frío o calor?",
-      "answerHtml": "<p>27 °C (80,6 °F) ya se sienten cálidos. No suele ser un calor extremo, pero tampoco es una temperatura neutra.</p><p>En la calle con algo de aire puede resultar agradable; dentro de casa, sin ventilación, suele sentirse más pesado.</p>"
+      "answerHtml": "<p>27 °C (80,6 °F) ya encaja con un día cálido de verano.</p>"
     },
     {
       "question": "¿Cómo convierto 27 °C a Fahrenheit?",
       "answerHtml": "<p>La fórmula es: °F = (°C × 9/5) + 32. Si multiplicas 27 por 1,8 obtienes 48,6; al sumar 32 llegas a 80,6 °F.</p>"
     },
     {
-      "question": "¿Qué significan 27 °C en la vida diaria?",
-      "answerHtml": "<p>En la práctica, 27 °C suelen significar día claramente cálido.</p><ul><li>Ya apetece ropa fresca</li><li>Caminar o hacer recados sigue siendo fácil</li><li>En interiores cerrados empieza a notarse la necesidad de ventilador o aire</li></ul>"
+      "question": "¿27 °C es buena temperatura para actividades al aire libre?",
+      "answerHtml": "<p>27 °C suele ir bien para caminar, ir a una terraza o hacer ejercicio suave.</p>"
     },
     {
       "question": "¿Qué ropa conviene con 27 °C?",
       "answerHtml": "<p>Con esta temperatura suele bastar ropa fresca y transpirable:</p><ul><li>Camiseta, vestido ligero o ropa fresca</li><li>Pantalón corto o tejidos muy transpirables</li><li>Gafas de sol, gorra y protección solar</li></ul>"
     },
     {
-      "question": "¿27 °C es demasiado para dormir bien?",
-      "answerHtml": "<p>Para mucha gente, sí. Dormir suele ser más cómodo bastante por debajo, así que 27 °C ya pueden sentirse algo pesados en el dormitorio, sobre todo con humedad.</p><p>Ventilador, ropa de cama ligera y algo de corriente ayudan, pero muchas personas seguirían prefiriendo la habitación más fresca.</p>"
-    },
-    {
-      "question": "¿Hace falta aire acondicionado a 27 °C?",
-      "answerHtml": "<p>No siempre, pero depende mucho del lugar. Con ventilación y sombra puede bastar. En un piso cerrado, una cocina o un dormitorio orientado al sol, 27 °C hacen que bastante gente ya piense en aire o ventilador.</p>"
+      "question": "¿27 °C se lleva mejor en la calle que dentro de casa?",
+      "answerHtml": "<p>Con algo de brisa, 27 °C al aire libre puede resultar agradable; en un piso cerrado suele sentirse más pesado.</p>"
     },
     {
       "question": "¿27 °C es fiebre?",
-      "answerHtml": "<p>No. La fiebre humana suele empezar cerca de 38 °C. Si 27 °C fuera temperatura corporal, estaría muy por debajo de lo normal.</p><p>Esta duda suele aparecer cuando se mezcla temperatura ambiente con temperatura del cuerpo.</p>"
-    },
-    {
-      "question": "¿Cuánto son 27 °C en Kelvin?",
-      "answerHtml": "<p>27 °C equivalen a 300,15 K. Para pasar de Celsius a Kelvin, solo hay que sumar 273,15.</p>"
+      "answerHtml": "<p>No. La fiebre humana suele empezar cerca de 38 °C. Si 27 °C fuera temperatura corporal, estaría muy por debajo de lo normal.</p>"
     }
   ],
   "practicalApplications": {
     "title": "Dónde suele encajar 27 °C (80,6 °F)",
     "cards": [
       {
-        "title": "Ya es calor claro, pero aún llevadero",
-        "body": "A 27 °C el día ya se siente de verano. Pasear, hacer recados o sentarse en una terraza sigue siendo cómodo, aunque la sombra empieza a importar."
+        "title": "Cálido pero llevadero",
+        "body": "A 27 °C el día ya se siente claramente cálido, pero todavía encaja bien con paseos, terrazas, recados y planes suaves si hay agua y algo de sombra."
       },
       {
         "title": "Mejor para planes tranquilos",
-        "body": "Esta temperatura funciona mejor para caminar, moverse con calma o hacer actividad ligera que para esfuerzo fuerte a pleno sol."
+        "body": "Esta temperatura va mejor con caminar, moverse con calma o estar al aire libre sin demasiada intensidad. El sol y la humedad marcan la diferencia."
       },
       {
-        "title": "Dentro de casa puede pesar más",
-        "body": "En interior, 27 °C suelen sentirse más cálidos que en la calle. Ventanas abiertas, ventilador o aire acondicionado marcan bastante diferencia."
+        "title": "Dentro manda el aire",
+        "body": "En interior, 27 °C se lleva mucho mejor con ventanas abiertas, ventilador o corriente. En un piso cerrado suele parecer más caliente."
       }
     ]
   }

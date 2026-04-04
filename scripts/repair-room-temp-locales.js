@@ -18,6 +18,7 @@ const LOCALE_TAGS = {
   'pt-br': 'pt-BR',
 };
 const PAGES = {
+  18: { slug: '18-c-to-f', c: 18, f: '64.4', nuance: 'coolSleep' },
   27: { slug: '27-c-to-f', c: 27, f: '80.6', nuance: 'outdoor' },
   28: { slug: '28-c-to-f', c: 28, f: '82.4', nuance: 'sleep' },
   29: { slug: '29-c-to-f', c: 29, f: '84.2', nuance: 'outdoor' },
@@ -25,6 +26,7 @@ const PAGES = {
   31: { slug: '31-c-to-f', c: 31, f: '87.8', nuance: 'sleep' },
   32: { slug: '32-c-to-f', c: 32, f: '89.6', nuance: 'ac' },
   33: { slug: '33-c-to-f', c: 33, f: '91.4', nuance: 'ac' },
+  34: { slug: '34-c-to-f', c: 34, f: '93.2', nuance: 'ac' },
   35: { slug: '35-c-to-f', c: 35, f: '95', nuance: 'heatwave' },
 };
 
@@ -32,6 +34,11 @@ const PRACTICAL = {
   en: {
     title: '{c}°C ({f}°F) in daily life',
     cards: {
+      coolSleep: [
+        ['Cool enough to feel fresh', 'At {c}°C, many rooms feel pleasantly cool rather than cold. It is the kind of temperature where a light layer can change comfort quickly.'],
+        ['Great for sleep and quiet indoor time', 'At {c}°C, bedrooms often feel comfortable for sleep, reading, or focused work without the room feeling stuffy.'],
+        ['Outside, it usually means light layers', 'For walks and everyday errands, {c}°C often feels mild outdoors. Wind, shade, and cloud cover are what usually make it feel cooler.'],
+      ],
       outdoor: [
         ['Warm but still manageable', 'At {c}°C, the day feels clearly warm, but many people still find it workable for walking, cafés, markets, and light outdoor plans if shade and water are nearby.'],
         ['Best for easy outdoor time', 'This temperature suits commuting, casual errands, terrace seating, and gentle movement better than intense sport. Sun and humidity decide how quickly it starts feeling hot.'],
@@ -57,6 +64,11 @@ const PRACTICAL = {
   zh: {
     title: '{c}°C（{f}°F）在日常里的常见场景',
     cards: {
+      coolSleep: [
+        ['偏凉，但通常不冷', '{c}°C 的房间多数时候会让人觉得清爽，而不是发冷。加一件薄外套或盖上薄毯，舒适度就会明显上来。'],
+        ['很适合睡觉和安静待着', '{c}°C 常常落在很多人觉得好睡的区间里，也适合阅读、办公和在家慢慢待着，不容易觉得闷。'],
+        ['出门多半只要轻薄加层', '在户外，{c}°C 往往更像舒服的春秋天。真正让人觉得凉的，通常是阴天、风大或晒不到太阳。'],
+      ],
       outdoor: [
         ['偏暖，但还算好安排', '{c}°C 已经有明显暖意，不过多数人仍会觉得它适合散步、通勤、逛街或坐在户外喝点东西，只是最好顺手带水。'],
         ['更适合轻量户外活动', '这个温度更适合慢走、聊天、露台用餐和轻运动，不太适合长时间暴晒或高强度锻炼。'],
@@ -82,6 +94,11 @@ const PRACTICAL = {
   es: {
     title: 'Dónde suele encajar {c} °C ({f} °F)',
     cards: {
+      coolSleep: [
+        ['Fresco, pero no frío', 'A {c} °C muchas habitaciones se sienten frescas y agradables, no frías. Una capa ligera suele bastar para cambiar mucho la sensación.'],
+        ['Muy bueno para dormir y estar dentro', 'A {c} °C mucha gente duerme bien y también se siente cómoda leyendo, trabajando o descansando sin notar el aire cargado.'],
+        ['Fuera suele bastar una capa ligera', 'En la calle, {c} °C suelen sentirse suaves. Lo que más enfría suele ser la sombra, el viento o un día nublado.'],
+      ],
       outdoor: [
         ['Cálido pero llevadero', 'A {c} °C el día ya se siente claramente cálido, pero todavía encaja bien con paseos, terrazas, recados y planes suaves si hay agua y algo de sombra.'],
         ['Mejor para planes tranquilos', 'Esta temperatura va mejor con caminar, moverse con calma o estar al aire libre sin demasiada intensidad. El sol y la humedad marcan la diferencia.'],
@@ -107,6 +124,11 @@ const PRACTICAL = {
   hi: {
     title: '{c}°C ({f}°F) रोजमर्रा में कैसा लगता है',
     cards: {
+      coolSleep: [
+        ['हल्का ठंडा, लेकिन असुविधाजनक नहीं', '{c}°C पर कमरा अक्सर ठंडा नहीं बल्कि ताज़ा महसूस होता है। हल्की परत या पतला कंबल आराम को जल्दी बेहतर बना देता है।'],
+        ['नींद और शांत इनडोर समय के लिए अच्छा', '{c}°C पर बहुत लोगों को सोना, पढ़ना या शांति से काम करना आसान लगता है क्योंकि कमरा घुटनभरा नहीं लगता।'],
+        ['बाहर बस हल्की परत काफी रहती है', 'बाहर {c}°C अक्सर सुहावना लगता है। हवा, छाया और बादल ही इसे ज़्यादा ठंडा महसूस कराते हैं।'],
+      ],
       outdoor: [
         ['गर्म, लेकिन संभालने लायक', '{c}°C पर मौसम साफ तौर पर गर्म लगता है, फिर भी टहलने, छोटे काम, हल्की आउटडोर प्लानिंग और कैफ़े जैसी चीज़ों के लिए ठीक रहता है, अगर पानी और थोड़ी छाया मिल जाए।'],
         ['हल्की आउटडोर गतिविधियों के लिए बेहतर', 'यह तापमान आराम से चलने-फिरने, हल्के व्यायाम और बाहर बैठने के लिए ठीक है, लेकिन तेज़ धूप में ज़्यादा मेहनत जल्दी भारी लग सकती है।'],
@@ -132,6 +154,11 @@ const PRACTICAL = {
   ar: {
     title: 'أين تناسب {c}°C ({f}°F) في الحياة اليومية',
     cards: {
+      coolSleep: [
+        ['مائل للبرودة لكنه غير مزعج', 'عند {c}°C تبدو كثير من الغرف منعشة أكثر من كونها باردة، وغالباً تكفي طبقة خفيفة لتعديل الإحساس بسرعة.'],
+        ['مناسب للنوم والجلوس الهادئ', 'كثير من الناس يجدون {c}°C مريحاً للنوم والقراءة والعمل الهادئ لأن الجو لا يكون خانقاً.'],
+        ['في الخارج تكفي طبقة خفيفة غالباً', 'في الخارج تبدو {c}°C معتدلة في العادة، وما يجعلها أبرد غالباً هو الظل أو الرياح أو غياب الشمس.'],
+      ],
       outdoor: [
         ['دافئة لكن ما زالت محتملة', 'عند {c}°C يصبح الجو دافئاً بوضوح، لكنه ما زال مناسباً للمشي والمشاوير الخفيفة والجلوس في الخارج إذا توفّر ماء وظل قريب.'],
         ['أفضل للأنشطة الخفيفة', 'هذه الدرجة تناسب المشي الهادئ والتنقل اليومي والجلوس في الهواء الطلق أكثر من الرياضة القوية تحت الشمس.'],
@@ -157,6 +184,11 @@ const PRACTICAL = {
   ja: {
     title: '{c}°C（{f}°F）が日常でどう感じるか',
     cards: {
+      coolSleep: [
+        ['涼しめだが寒すぎない', '{c}°C の部屋は、寒いというより少しひんやりして気持ちいいと感じる人が多い温度です。薄手を一枚足すだけで快適さが変わりやすくなります。'],
+        ['睡眠や静かな室内時間に向く', '{c}°C は寝室にも合いやすく、読書やデスクワーク、家でゆっくり過ごす時間にも向いています。'],
+        ['外では薄手を一枚足す程度', '外では {c}°C は穏やかに感じやすく、肌寒さを決めるのは風や日陰、曇り空であることが多いです。'],
+      ],
       outdoor: [
         ['暖かいが、まだ動きやすい', '{c}°C になると日中はしっかり暖かく感じますが、水分と日陰があれば散歩、買い物、カフェなどの軽い外出にはまだ向いています。'],
         ['軽めの外出向き', 'この気温はゆっくり歩く、短い移動をする、外で少し過ごすといった場面に向いていて、強い運動にはあまり向きません。'],
@@ -182,6 +214,11 @@ const PRACTICAL = {
   fr: {
     title: 'Où {c} °C ({f} °F) se placent dans la vie quotidienne',
     cards: {
+      coolSleep: [
+        ['Frais, sans être froid', 'À {c} °C, beaucoup de pièces paraissent fraîches et agréables plutôt que froides. Une couche légère suffit souvent à ajuster le confort.'],
+        ['Très bon pour dormir et rester au calme', 'Autour de {c} °C, beaucoup de gens dorment bien et se sentent à l’aise pour lire, travailler ou se reposer sans sensation d’air lourd.'],
+        ['Dehors, une couche légère suffit souvent', 'En extérieur, {c} °C donnent souvent une impression douce. Ce sont surtout le vent, l’ombre ou les nuages qui rendent l’air plus frais.'],
+      ],
       outdoor: [
         ['Chaud, mais encore gérable', 'À {c} °C, la journée paraît clairement chaude, mais reste encore adaptée à la marche, aux courses, aux terrasses et aux sorties légères avec de l’eau et un peu d’ombre.'],
         ['Mieux pour les activités tranquilles', 'Cette température convient mieux aux déplacements calmes, à la promenade et à une activité légère qu’au sport intense en plein soleil.'],
@@ -207,6 +244,11 @@ const PRACTICAL = {
   de: {
     title: '{c}°C ({f}°F) im Alltag',
     cards: {
+      coolSleep: [
+        ['Frisch, aber nicht kalt', 'Bei {c}°C fühlen sich viele Räume angenehm frisch statt richtig kalt an. Mit einer leichten Schicht lässt sich der Komfort schnell anpassen.'],
+        ['Gut zum Schlafen und für ruhige Innenräume', '{c}°C passen oft gut zu Schlafzimmern, Lesen, konzentrierter Arbeit oder entspanntem Zuhause-Sein, ohne dass die Luft stickig wirkt.'],
+        ['Draußen reicht oft eine leichte Schicht', 'Im Freien fühlen sich {c}°C meist mild an. Kälter wirkt es vor allem durch Wind, Schatten oder fehlende Sonne.'],
+      ],
       outdoor: [
         ['Warm, aber noch gut machbar', 'Bei {c}°C fühlt sich der Tag klar warm an, ist für Spaziergänge, Erledigungen, Cafébesuche und lockere Außenpläne aber oft noch gut machbar, wenn Wasser und Schatten da sind.'],
         ['Besser für ruhige Outdoor-Zeit', 'Diese Temperatur passt eher zu lockerem Gehen, kurzen Wegen und entspannten Aktivitäten draußen als zu hartem Sport in der Sonne.'],
@@ -232,6 +274,11 @@ const PRACTICAL = {
   id: {
     title: '{c}°C ({f}°F) dalam keseharian',
     cards: {
+      coolSleep: [
+        ['Sejuk, tapi tidak dingin', 'Pada {c}°C, banyak ruangan terasa sejuk dan segar, bukan dingin. Lapisan tipis biasanya sudah cukup untuk menyesuaikan rasa nyaman.'],
+        ['Cocok untuk tidur dan aktivitas indoor yang tenang', '{c}°C sering terasa pas untuk tidur, membaca, bekerja fokus, atau santai di rumah karena ruangannya tidak terasa pengap.'],
+        ['Di luar biasanya cukup lapisan ringan', 'Di luar ruangan, {c}°C sering terasa ringan dan enak. Yang paling membuatnya terasa lebih dingin biasanya angin, bayangan, atau cuaca mendung.'],
+      ],
       outdoor: [
         ['Hangat, tapi masih enak dijalani', 'Pada {c}°C, siang terasa jelas hangat, tetapi masih cocok untuk jalan santai, belanja ringan, nongkrong, dan aktivitas luar yang tidak terlalu berat kalau ada air dan tempat teduh.'],
         ['Lebih cocok untuk aktivitas ringan', 'Suhu ini lebih pas untuk jalan kaki, urusan harian, dan kegiatan santai di luar daripada olahraga berat di bawah matahari.'],
@@ -257,6 +304,11 @@ const PRACTICAL = {
   'pt-br': {
     title: 'Onde {c}°C ({f}°F) entram no dia a dia',
     cards: {
+      coolSleep: [
+        ['Fresco, sem ficar frio', 'Com {c}°C, muitos ambientes internos parecem frescos e agradáveis, não frios. Uma camada leve já muda bastante o conforto.'],
+        ['Muito bom para dormir e ficar em casa', '{c}°C costumam funcionar bem para dormir, ler, trabalhar com calma ou ficar em casa sem sensação de abafamento.'],
+        ['Na rua, uma camada leve costuma bastar', 'Ao ar livre, {c}°C geralmente parecem amenos. O que mais puxa para o frio costuma ser vento, sombra ou falta de sol.'],
+      ],
       outdoor: [
         ['Quente, mas ainda dá para levar', 'Com {c}°C, o dia já fica claramente quente, mas ainda combina com caminhada, recados, café na rua e planos leves se houver água e um pouco de sombra.'],
         ['Melhor para programas tranquilos', 'Essa faixa combina mais com andar sem pressa, fazer pequenas saídas e ficar ao ar livre sem esforço pesado do que com exercício forte no sol.'],
@@ -427,9 +479,10 @@ function deepClean(value) {
 function buildPractical(locale, profile) {
   const copy = PRACTICAL[locale];
   const tokens = { c: formatNumber(locale, profile.c), f: formatNumber(locale, Number(profile.f)) };
+  const nuance = profile.c === 18 ? 'coolSleep' : profile.nuance;
   return {
     title: fill(copy.title, tokens),
-    cards: copy.cards[profile.nuance].map(([title, body]) => ({
+    cards: copy.cards[nuance].map(([title, body]) => ({
       title: fill(title, tokens),
       body: fill(body, tokens),
     })),

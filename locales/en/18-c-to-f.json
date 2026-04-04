@@ -1,0 +1,125 @@
+{
+  "seo": {
+    "title": "18°C to Fahrenheit (64.4°F) | Conversion Guide & Calculator",
+    "description": "Convert 18 degrees Celsius to Fahrenheit quickly. Learn that 18°C equals 64.4°F, see the calculation steps, and understand temperature context."
+  },
+  "header": {
+    "title": "18°C to Fahrenheit (18 Degrees Celsius to °F)",
+    "tagline": "Convert 18°C to Fahrenheit with practical guidance for cool indoor comfort, sleep, light clothing, and everyday weather decisions."
+  },
+  "conversion": {
+    "intro": "18°C in Fahrenheit is 64.4°F."
+  },
+  "strategy": {
+    "keywords": "18 celsius to fahrenheit 64.4 fahrenheit cool room temperature sleep weather clothing fever"
+  },
+  "comfortGuide": {
+    "title": "18°C comfort guide",
+    "subtitle": "When a temperature feels fresh, calm, and easy to live with",
+    "intro": "18°C (64.4°F) sits at the cool end of the comfortable range. Indoors, some people find it ideal for sleeping or focused work, while others may want a light layer. Outdoors, it usually feels mild and pleasant rather than cold.",
+    "chart": {
+      "cold": {
+        "label": "Cool",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Jacket weather for many people"
+      },
+      "moderate": {
+        "label": "Comfortable",
+        "value": "16-21°C",
+        "desc": "60.8-69.8°F<br>Fresh indoor and outdoor comfort"
+      },
+      "warm": {
+        "label": "Warm",
+        "value": "22-27°C",
+        "desc": "71.6-80.6°F<br>Lighter clothes and more airflow"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Cool outdoor weather",
+          "use": "A jacket or extra layer usually feels right"
+        },
+        {
+          "temp": "16°C (60.8°F)",
+          "desc": "Fresh and slightly cool",
+          "use": "Comfortable for walks, but cooler indoors"
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Cool but comfortable",
+          "use": "Good for sleep, light layers, and everyday routines",
+          "highlight": true
+        },
+        {
+          "temp": "20°C (68°F)",
+          "desc": "Standard room temperature",
+          "use": "Balanced comfort for homes and offices",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Comfortable room temperature",
+          "use": "A little warmer for sitting, reading, and desk work",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normal body temperature",
+          "use": "Useful comparison if someone confuses weather with body heat",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 18°C often feels great with light movement or under a blanket, but it can feel cooler in a still room, early morning shade, or windy weather."
+  },
+  "faq": [
+    {
+      "question": "What is 18 degrees Celsius in Fahrenheit?",
+      "answerHtml": "<p>18 degrees Celsius equals 64.4 degrees Fahrenheit. To convert it, use the formula °F = (°C × 9/5) + 32. Multiply 18 by 1.8 to get 32.4, then add 32 to reach 64.4°F.</p>"
+    },
+    {
+      "question": "Is 18°C hot or cold?",
+      "answerHtml": "<p>18°C (64.4°F) is generally considered cool to mild. It sits near the lower end of the comfortable room-temperature range, and outdoors many people would want light layers rather than summer clothing.</p><p>It usually feels fresh rather than cold, especially if you are walking, commuting, or in spring or autumn weather.</p>"
+    },
+    {
+      "question": "Is 18°C a fever temperature?",
+      "answerHtml": "<p>No, 18°C is not a fever temperature. Normal human body temperature is around 37°C (98.6°F), and fever typically starts at 38°C (100.4°F).</p><p>If 18°C were a body-temperature reading, it would be dangerously below normal, not a fever.</p>"
+    },
+    {
+      "question": "Is 18°C good for sleeping?",
+      "answerHtml": "<p>Yes. 18°C is often considered an excellent sleeping temperature. Many sleep recommendations place bedrooms around 16-19°C because cooler air can make it easier for the body to settle into sleep.</p><p>If you run cold easily, you may just want a slightly heavier blanket or sleepwear.</p>"
+    },
+    {
+      "question": "What should you wear in 18°C weather?",
+      "answerHtml": "<p>18°C usually calls for light layers rather than heavy winter clothing.</p><ul><li>A T-shirt with a cardigan, overshirt, or light jacket</li><li>Jeans, trousers, or other full-length bottoms</li><li>Closed shoes or comfortable sneakers for everyday use</li></ul><p>Sun, wind, and time of day can make it feel either softer or sharper.</p>"
+    },
+    {
+      "question": "What is negative 18°C in Fahrenheit?",
+      "answerHtml": "<p>Negative 18°C converts to -0.4°F. That is just below zero Fahrenheit and clearly in very cold weather territory.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "18°C (64.4°F) in daily life",
+    "cards": [
+      {
+        "title": "Cool enough to feel fresh",
+        "body": "At 18°C, many rooms feel pleasantly cool rather than cold. It is the kind of temperature where a light layer can change comfort quickly."
+      },
+      {
+        "title": "Great for sleep and quiet indoor time",
+        "body": "At 18°C, bedrooms often feel comfortable for sleep, reading, or focused work without the room feeling stuffy."
+      },
+      {
+        "title": "Outside, it usually means light layers",
+        "body": "For walks and everyday errands, 18°C often feels mild outdoors. Wind, shade, and cloud cover are what usually make it feel cooler."
+      }
+    ]
+  }
+}
