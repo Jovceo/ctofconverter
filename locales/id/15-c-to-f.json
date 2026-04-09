@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "15°C ke Fahrenheit (59°F)",
+    "description": "Ubah 15°C menjadi 59°F dan pahami apakah suhu ini terasa sejuk, ringan, atau nyaman untuk aktivitas harian."
+  },
+  "header": {
+    "title": "15°C ke Fahrenheit (59°F)",
+    "tagline": "Ubah 15°C menjadi 59°F dan pahami apakah suhu ini terasa sejuk, ringan, atau nyaman untuk aktivitas harian."
+  },
+  "conversion": {
+    "intro": "15°C = 59°F."
+  },
+  "strategy": {
+    "keywords": "15 c to f, 15 celsius to fahrenheit"
+  },
+  "comfortGuide": {
+    "title": "Panduan rasa suhu 15?C",
+    "subtitle": "Suhu ini biasanya terasa sejuk, tetapi belum terlalu dingin.",
+    "intro": "Ubah 15°C menjadi 59°F dan pahami apakah suhu ini terasa sejuk, ringan, atau nyaman untuk aktivitas harian.",
+    "chart": {
+      "cold": {
+        "label": "Sejuk",
+        "value": "8-12°C",
+        "desc": "46.4-53.6°F<br>Sering perlu jaket"
+      },
+      "moderate": {
+        "label": "Ringan",
+        "value": "13-18°C",
+        "desc": "55.4-64.4°F<br>Lapisan ringan cocok"
+      },
+      "warm": {
+        "label": "Nyaman",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Dekat ke rasa nyaman indoor"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Suhu",
+        "description": "Kesan",
+        "typicalUse": "Penggunaan"
+      },
+      "rows": [
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Lebih sejuk",
+          "use": "Sering butuh jaket"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Sejuk",
+          "use": "Cuaca jaket tipis",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "15°C (59°F)",
+          "desc": "Aman dengan rasa sejuk tipis",
+          "use": "Nyaman untuk jalan santai",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Segar",
+          "use": "Lapisan ringan cukup",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Nyaman",
+          "use": "Dekat ke rasa nyaman indoor",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Suhu tubuh normal",
+          "use": "Untuk perbandingan",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Catatan:</strong> Angin, bayangan, dan kelembapan bisa membuatnya terasa lebih dingin."
+  },
+  "faq": [
+    {
+      "question": "Berapa 15?C dalam Fahrenheit?",
+      "answerHtml": "<p>15?C sama dengan 59?F.</p>"
+    },
+    {
+      "question": "Apakah 15?C terasa sejuk?",
+      "answerHtml": "<p>15?C terasa ringan dan cukup nyaman bagi banyak orang.</p>"
+    },
+    {
+      "question": "Berapa minus 15?C dalam Fahrenheit?",
+      "answerHtml": "<p>Minus 15?C sama dengan 5?F.</p>"
+    },
+    {
+      "question": "Apa yang cocok dipakai saat 15?C?",
+      "answerHtml": "<p>Lapisan ringan, jaket tipis, atau pakaian harian yang mudah ditambah-lepas biasanya paling cocok.</p>"
+    },
+    {
+      "question": "Apakah 15?C termasuk suhu yang nyaman?",
+      "answerHtml": "<p>15?C biasanya masih enak untuk jalan santai, urusan harian, dan waktu singkat di luar ruangan.</p>"
+    },
+    {
+      "question": "Apakah 15?C termasuk demam?",
+      "answerHtml": "<p>Tidak. Demam pada manusia biasanya mulai sekitar 38?C.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "15?C (59?F) dalam keseharian",
+    "cards": [
+      {
+        "title": "Suhu ini biasanya terasa sejuk, tetapi belum terlalu dingin.",
+        "body": "Suhu ini biasanya terasa sejuk, tetapi belum terlalu dingin."
+      },
+      {
+        "title": "Lapisan ringan atau jaket tipis biasanya paling pas.",
+        "body": "Lapisan ringan atau jaket tipis biasanya paling pas."
+      },
+      {
+        "title": "Angin, bayangan, dan kelembapan bisa membuatnya terasa lebih dingin.",
+        "body": "Angin, bayangan, dan kelembapan bisa membuatnya terasa lebih dingin."
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "13°C to Fahrenheit (55.4°F) | Temperature Conversion Guide",
+    "description": "Convert 13 degrees Celsius to Fahrenheit quickly. Learn that 13°C equals 55.4°F and understand temperature context for weather and daily life."
+  },
+  "header": {
+    "title": "13°C to Fahrenheit (13 Degrees Celsius to °F)",
+    "tagline": "Convert 13°C to Fahrenheit with practical help for cool weather, light layers, walking outside, and daily temperature questions."
+  },
+  "conversion": {
+    "intro": "13°C in Fahrenheit is 55.4°F."
+  },
+  "strategy": {
+    "keywords": "13 celsius to fahrenheit 55.4 fahrenheit cool weather clothes negative 13 celsius formula"
+  },
+  "comfortGuide": {
+    "title": "13°C comfort guide",
+    "subtitle": "Still cool, but a little easier than 10°C or 12°C",
+    "intro": "13°C (55.4°F) is cool, fresh weather. It often feels comfortable for walking and daily errands, though many people still prefer a light layer.",
+    "chart": {
+      "cold": {
+        "label": "Cold",
+        "value": "0-9°C",
+        "desc": "32-48.2°F<br>Heavier layers usually feel better"
+      },
+      "moderate": {
+        "label": "Cool",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Light jacket weather for many people"
+      },
+      "warm": {
+        "label": "Mild",
+        "value": "16-21°C",
+        "desc": "60.8-69.8°F<br>Comfortable with lighter layers"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Cool",
+          "use": "Jacket weather for many people",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "12°C (53.6°F)",
+          "desc": "Cool and fresh",
+          "use": "Light layers feel practical",
+          "href": "/12-c-to-f"
+        },
+        {
+          "temp": "13°C (55.4°F)",
+          "desc": "Fresh and cool",
+          "use": "A light jacket or overshirt is often enough",
+          "highlight": true
+        },
+        {
+          "temp": "15°C (59°F)",
+          "desc": "Mild and easy",
+          "use": "One lighter layer often works well",
+          "href": "/15-c-to-f"
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Comfortably cool",
+          "use": "Feels easier indoors and outdoors",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normal body temperature",
+          "use": "Useful comparison when fever confusion appears",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 13°C is often comfortable when moving around, but sitting still in wind or shade can make it feel much cooler."
+  },
+  "faq": [
+    {
+      "question": "What is 13 degrees Celsius in Fahrenheit?",
+      "answerHtml": "<p>13 degrees Celsius equals 55.4 degrees Fahrenheit. Use the formula °F = (°C × 9/5) + 32. Multiply 13 by 1.8 to get 23.4, then add 32 to get 55.4°F.</p>"
+    },
+    {
+      "question": "Is 13°C cold or warm?",
+      "answerHtml": "<p>13°C (55.4°F) is generally cool, not warm. It usually feels like jacket weather, although some people find it pleasant once they start walking or if the sun is out.</p>"
+    },
+    {
+      "question": "What is negative 13 Celsius in Fahrenheit?",
+      "answerHtml": "<p>Negative 13°C converts to 8.6°F. That is proper winter cold and a long way from the feel of 13°C above zero.</p>"
+    },
+    {
+      "question": "What should I wear at 13°C?",
+      "answerHtml": "<p>At 13°C, most people feel best in light layers.</p><ul><li>A T-shirt or long-sleeve top with a cardigan, overshirt, or light jacket</li><li>Jeans or full-length trousers</li><li>Closed shoes or trainers</li></ul>"
+    },
+    {
+      "question": "Is 13°C good weather for walking or commuting?",
+      "answerHtml": "<p>Yes. 13°C is often a very usable temperature for walking, commuting, shopping, and casual outdoor time. It feels fresh rather than harsh unless wind or rain changes it.</p>"
+    },
+    {
+      "question": "Is 13°C a fever temperature?",
+      "answerHtml": "<p>No. Fever usually starts around 38°C (100.4°F), so 13°C is nowhere near a fever temperature. As a body reading, it would be far below normal.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "13°C (55.4°F) in daily life",
+    "cards": [
+      {
+        "title": "Fresh, not severe",
+        "body": "At 13°C, the weather still feels cool, but it usually does not feel difficult or uncomfortable once you are dressed for it."
+      },
+      {
+        "title": "Good for moving around",
+        "body": "This is the kind of temperature that often feels best when you are walking, commuting, or doing everyday errands."
+      },
+      {
+        "title": "Shade can shift the feel",
+        "body": "Direct sun can make 13°C feel mild, while shade, wind, or damp air can push it back into clearly cool territory."
+      }
+    ]
+  }
+}

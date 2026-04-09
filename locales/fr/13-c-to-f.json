@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "13 °C en Fahrenheit (55,4 °F) : conversion, ressenti et vêtements",
+    "description": "Convertissez 13 °C en 55,4 °F et voyez si cette température paraît fraîche, douce ou facile à vivre au quotidien."
+  },
+  "header": {
+    "title": "13 °C en Fahrenheit (55,4 °F)",
+    "tagline": "Convertissez 13 °C en 55,4 °F et voyez si cette température paraît fraîche, douce ou facile à vivre au quotidien."
+  },
+  "conversion": {
+    "intro": "13 °C correspondent à 55,4 °F."
+  },
+  "strategy": {
+    "keywords": "13 c en fahrenheit, 13 celsius en fahrenheit, 13 degrés ressenti"
+  },
+  "comfortGuide": {
+    "title": "Ressenti autour de 13 °C",
+    "subtitle": "Toujours frais, mais plus simple à gérer",
+    "intro": "13 °C (55,4 °F) restent dans une zone fraîche, mais déjà plus facile à vivre que 10 ou 12 °C. Cela fonctionne bien pour les trajets, la marche et les sorties ordinaires avec une couche légère.",
+    "chart": {
+      "cold": {
+        "label": "Frais",
+        "value": "8-12°C",
+        "desc": "46.4-53.6°F<br>Veste légère utile"
+      },
+      "moderate": {
+        "label": "Léger",
+        "value": "13-18°C",
+        "desc": "55.4-64.4°F<br>Les couches fines fonctionnent bien"
+      },
+      "warm": {
+        "label": "Confortable",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Proche du confort intérieur"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Température",
+        "description": "Ressenti",
+        "typicalUse": "Usage typique"
+      },
+      "rows": [
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Plus frais",
+          "use": "Demande souvent une veste"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Frais",
+          "use": "Temps de veste légère",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "13°C (55.4°F)",
+          "desc": "Frais mais assez facile",
+          "use": "Pratique pour marcher et se déplacer",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Frais agréable",
+          "use": "Couches plus légères",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Confortable",
+          "use": "Près du confort intérieur",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Température corporelle normale",
+          "use": "Repère",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Remarque :</strong> La meilleure option est souvent une couche qu'on peut garder dehors puis enlever à l'intérieur."
+  },
+  "faq": [
+    {
+      "question": "13 °C, cela fait combien en Fahrenheit ?",
+      "answerHtml": "<p>13 °C correspondent à 55,4 °F.</p>"
+    },
+    {
+      "question": "13 °C, est-ce encore frais ?",
+      "answerHtml": "<p>Oui. 13 °C restent frais, même si la sensation est souvent plus souple qu’à 12 °C.</p>"
+    },
+    {
+      "question": "Que valent -13 °C en Fahrenheit ?",
+      "answerHtml": "<p>-13 °C correspondent à 8,6 °F.</p>"
+    },
+    {
+      "question": "Que porter à 13 °C ?",
+      "answerHtml": "<p>Une veste légère, un sweat ou une surchemise fonctionnent bien avec un pantalon long.</p>"
+    },
+    {
+      "question": "13 °C, est-ce pratique pour les trajets quotidiens ?",
+      "answerHtml": "<p>Oui. C’est une température très gérable pour les déplacements ordinaires si l’on est habillé légèrement mais correctement.</p>"
+    },
+    {
+      "question": "13 °C, est-ce de la fièvre ?",
+      "answerHtml": "<p>Non. La fièvre humaine commence plutôt vers 38 °C.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "13 °C (55,4 °F) au quotidien",
+    "cards": [
+      {
+        "title": "Un temps frais mais simple à porter",
+        "body": "13 °C ne demandent pas une tenue lourde, mais une couche reste souvent bienvenue."
+      },
+      {
+        "title": "Très correct pour la routine",
+        "body": "Cette température convient bien aux trajets, à la marche et aux petites sorties du quotidien."
+      },
+      {
+        "title": "Une tenue facile à enlever fonctionne bien",
+        "body": "La meilleure option est souvent une couche qu'on peut garder dehors puis enlever à l'intérieur."
+      }
+    ]
+  }
+}

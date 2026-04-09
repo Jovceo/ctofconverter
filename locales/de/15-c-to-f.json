@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "15°C in Fahrenheit (59°F): Umrechnung, Gefühl und Kleidung",
+    "description": "Rechnen Sie 15°C in 59°F um und sehen Sie, wie sich diese Temperatur zwischen leichter Frische und mildem Wetter anfühlt."
+  },
+  "header": {
+    "title": "15°C in Fahrenheit (59°F)",
+    "tagline": "Rechnen Sie 15°C in 59°F um und sehen Sie, wie sich diese Temperatur zwischen leichter Frische und mildem Wetter anfühlt."
+  },
+  "conversion": {
+    "intro": "15°C entsprechen 59°F."
+  },
+  "strategy": {
+    "keywords": "15 c in fahrenheit, 15 celsius in fahrenheit, 15 grad gefühl"
+  },
+  "comfortGuide": {
+    "title": "So fühlen sich 15°C an",
+    "subtitle": "Schon mild, aber noch mit etwas frischer Luft",
+    "intro": "15°C (59°F) wirken für viele Menschen schon recht mild, haben aber oft noch einen frischen Rand. Draußen fühlt sich das meist angenehm an, während drinnen oder im Wind eine leichte Schicht weiter helfen kann.",
+    "chart": {
+      "cold": {
+        "label": "Kühl",
+        "value": "8-12°C",
+        "desc": "46.4-53.6°F<br>Jacke oft sinnvoll"
+      },
+      "moderate": {
+        "label": "Frisch",
+        "value": "13-18°C",
+        "desc": "55.4-64.4°F<br>Leichte Schichten passen gut"
+      },
+      "warm": {
+        "label": "Angenehm",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Näher an Raumkomfort"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatur",
+        "description": "Eindruck",
+        "typicalUse": "Typischer Einsatz"
+      },
+      "rows": [
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Kühler",
+          "use": "Oft schon Jackenwetter"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Kühl",
+          "use": "Leichte Jacke passt",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "15°C (59°F)",
+          "desc": "Mild mit frischem Rand",
+          "use": "Gut für Spaziergang und Alltag",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Frisch",
+          "use": "Leichtere Schichten reichen",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Angenehm",
+          "use": "Nahe an normalem Raumgefühl",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normale Körpertemperatur",
+          "use": "Zum Vergleich",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Hinweis:</strong> Auch bei 15°C können Wind und Schatten die Temperatur noch einmal spürbar frischer wirken lassen."
+  },
+  "faq": [
+    {
+      "question": "Wie viel sind 15°C in Fahrenheit?",
+      "answerHtml": "<p>15°C entsprechen 59°F.</p>"
+    },
+    {
+      "question": "Fühlen sich 15°C noch frisch an?",
+      "answerHtml": "<p>Oft ja, aber eher mild-frisch als richtig kühl.</p>"
+    },
+    {
+      "question": "Wie viel sind minus 15°C in Fahrenheit?",
+      "answerHtml": "<p>-15°C entsprechen 5°F.</p>"
+    },
+    {
+      "question": "Was zieht man bei 15°C an?",
+      "answerHtml": "<p>Eine leichte Jacke, eine dünne Strickschicht oder lange Ärmel reichen oft schon aus.</p>"
+    },
+    {
+      "question": "Sind 15°C eine angenehme Temperatur?",
+      "answerHtml": "<p>Für viele Menschen ja, vor allem draußen. Im Schatten oder bei Wind kann es aber noch frisch wirken.</p>"
+    },
+    {
+      "question": "Ist 15°C Fieber?",
+      "answerHtml": "<p>Nein. Fieber beginnt beim Menschen in der Regel erst in der Nähe von 38°C.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "15°C (59°F) im Alltag",
+    "cards": [
+      {
+        "title": "Mehr mild als kalt",
+        "body": "Bei 15°C fühlen sich viele schon eher in mildem Wetter als in Kälte."
+      },
+      {
+        "title": "Gut für Alltag und leichte Pläne draußen",
+        "body": "Spaziergänge, Wege und normale Außenzeit funktionieren bei 15°C meist sehr gut."
+      },
+      {
+        "title": "Wind und Schatten bleiben wichtig",
+        "body": "Auch bei 15°C können Wind und Schatten die Temperatur noch einmal spürbar frischer wirken lassen."
+      }
+    ]
+  }
+}

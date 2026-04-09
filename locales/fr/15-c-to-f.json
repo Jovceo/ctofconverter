@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "15 °C en Fahrenheit (59 °F) : conversion, ressenti et vêtements",
+    "description": "Convertissez 15 °C en 59 °F et voyez comment cette température se ressent entre fraîcheur légère et temps doux."
+  },
+  "header": {
+    "title": "15 °C en Fahrenheit (59 °F)",
+    "tagline": "Convertissez 15 °C en 59 °F et voyez comment cette température se ressent entre fraîcheur légère et temps doux."
+  },
+  "conversion": {
+    "intro": "15 °C correspondent à 59 °F."
+  },
+  "strategy": {
+    "keywords": "15 c en fahrenheit, 15 celsius en fahrenheit, 15 degrés ressenti"
+  },
+  "comfortGuide": {
+    "title": "Ressenti autour de 15 °C",
+    "subtitle": "Une météo douce avec encore un fond frais",
+    "intro": "15 °C (59 °F) sont souvent perçus comme une température douce, avec encore une petite fraîcheur. En extérieur, cela semble agréable à beaucoup de gens ; à l’ombre ou sans bouger, une couche légère reste utile.",
+    "chart": {
+      "cold": {
+        "label": "Frais",
+        "value": "8-12°C",
+        "desc": "46.4-53.6°F<br>Veste légère utile"
+      },
+      "moderate": {
+        "label": "Léger",
+        "value": "13-18°C",
+        "desc": "55.4-64.4°F<br>Les couches fines fonctionnent bien"
+      },
+      "warm": {
+        "label": "Confortable",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Proche du confort intérieur"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Température",
+        "description": "Ressenti",
+        "typicalUse": "Usage typique"
+      },
+      "rows": [
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Plus frais",
+          "use": "Demande souvent une veste"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Frais",
+          "use": "Temps de veste légère",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "15°C (59°F)",
+          "desc": "Doux avec un fond frais",
+          "use": "Très correct pour sortir",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Frais agréable",
+          "use": "Couches plus légères",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Confortable",
+          "use": "Près du confort intérieur",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Température corporelle normale",
+          "use": "Repère",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Remarque :</strong> Même à 15 °C, une zone ombragée ou venteuse peut vite redonner une impression de fraîcheur."
+  },
+  "faq": [
+    {
+      "question": "15 °C, cela fait combien en Fahrenheit ?",
+      "answerHtml": "<p>15 °C correspondent à 59 °F.</p>"
+    },
+    {
+      "question": "15 °C, est-ce encore frais ?",
+      "answerHtml": "<p>15 °C paraissent souvent doux, même si l’air garde encore un côté frais.</p>"
+    },
+    {
+      "question": "Que valent -15 °C en Fahrenheit ?",
+      "answerHtml": "<p>-15 °C correspondent à 5 °F.</p>"
+    },
+    {
+      "question": "Que porter à 15 °C ?",
+      "answerHtml": "<p>Une veste légère, un gilet ou un haut à manches longues fonctionnent bien dans cette plage.</p>"
+    },
+    {
+      "question": "15 °C, est-ce une température confortable ?",
+      "answerHtml": "<p>Pour beaucoup de gens, oui, surtout dehors. À l’intérieur ou avec du vent, une petite couche peut encore être utile.</p>"
+    },
+    {
+      "question": "15 °C, est-ce de la fièvre ?",
+      "answerHtml": "<p>Non. Une fièvre humaine se situe généralement autour de 38 °C ou plus.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "15 °C (59 °F) au quotidien",
+    "cards": [
+      {
+        "title": "Déjà plus doux que froid",
+        "body": "À 15 °C, on n’est plus vraiment dans la sensation de froid pour la plupart des gens."
+      },
+      {
+        "title": "Très bien pour les plans du quotidien",
+        "body": "Cette température convient bien aux sorties, aux trajets et aux activités légères."
+      },
+      {
+        "title": "L'ombre et le vent gardent de l'importance",
+        "body": "Même à 15 °C, une zone ombragée ou venteuse peut vite redonner une impression de fraîcheur."
+      }
+    ]
+  }
+}

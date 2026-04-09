@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "14 °C a Fahrenheit (57.2 °F): sensación térmica y ropa",
+    "description": "Convierte 14 °C a 57.2 °F y entiende si se siente fresco, suave o cómodo para salir."
+  },
+  "header": {
+    "title": "14 °C a Fahrenheit (57.2 °F)",
+    "tagline": "Herramienta gratuita para convertir 14 °C a 57.2 °F y entender cómo se siente en clima diario, ropa y salidas."
+  },
+  "conversion": {
+    "intro": "14 °C en Fahrenheit son 57.2 °F."
+  },
+  "strategy": {
+    "keywords": "14 c a fahrenheit, 14 celsius a fahrenheit, 14 grados hace frío"
+  },
+  "comfortGuide": {
+    "title": "Guía de sensación térmica para 14 °C",
+    "subtitle": "Fresco cómodo para una capa ligera",
+    "intro": "14 °C (57.2 °F) suele sentirse fresco y cómodo. Encaja bien con caminar, moverse y salir con una chaqueta ligera.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "8-12°C",
+        "desc": "46.4-53.6°F<br>Suele pedir chaqueta"
+      },
+      "moderate": {
+        "label": "Ligero",
+        "value": "13-18°C",
+        "desc": "55.4-64.4°F<br>Capas suaves funcionan bien"
+      },
+      "warm": {
+        "label": "Cómodo",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Más cerca del confort interior"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensación",
+        "typicalUse": "Uso habitual"
+      },
+      "rows": [
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Frío suave",
+          "use": "Normalmente ya pide abrigo"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Fresco",
+          "use": "Tiempo de chaqueta ligera",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "14°C (57.2°F)",
+          "desc": "Fresco cómodo",
+          "use": "Buena temperatura para chaqueta ligera",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Fresco agradable",
+          "use": "Capas más ligeras",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Cómodo",
+          "use": "Rango interior muy habitual",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Comparación con el cuerpo",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> a 14 °C la sombra, el aire y la humedad siguen cambiando bastante el cuerpo."
+  },
+  "faq": [
+    {
+      "question": "¿Cuánto son 14 °C en Fahrenheit?",
+      "answerHtml": "<p>14 °C equivalen a 57.2 °F.</p>"
+    },
+    {
+      "question": "¿14 °C se siente frío o templado?",
+      "answerHtml": "<p>14 °C suele sentirse fresco y agradable, con una capa ligera.</p>"
+    },
+    {
+      "question": "¿Qué son -14 °C en Fahrenheit?",
+      "answerHtml": "<p>-14 °C equivalen a 6.8 °F. Eso ya es un frío de invierno muy distinto a 14 °C positivos.</p>"
+    },
+    {
+      "question": "¿Qué ropa conviene con 14 °C?",
+      "answerHtml": "<p>Suele ir bien una capa ligera: camiseta o manga larga fina, pantalón largo y una chaqueta ligera u overshirt.</p>"
+    },
+    {
+      "question": "¿14 °C es agradable para estar fuera?",
+      "answerHtml": "<p>En muchos lugares sí. Suele sentirse fresca, pero cómoda para pasar tiempo fuera.</p>"
+    },
+    {
+      "question": "¿14 °C es fiebre?",
+      "answerHtml": "<p>No. La fiebre humana suele empezar cerca de 38 °C.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Dónde suele encajar 14 °C (57.2 °F)",
+    "cards": [
+      {
+        "title": "Fresco cómodo",
+        "body": "14 °C suelen dar sensación de frescor agradable y fácil de llevar."
+      },
+      {
+        "title": "Una chaqueta ligera suele bastar",
+        "body": "Sirve bien para caminar, ir al parque o hacer vida normal sin calor fuerte."
+      },
+      {
+        "title": "Moverse se siente mejor que quedarse quieto",
+        "body": "Al caminar suele sentirse más agradable que al estar sentado en sombra."
+      }
+    ]
+  }
+}

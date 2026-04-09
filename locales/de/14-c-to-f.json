@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "14°C in Fahrenheit (57,2°F): Umrechnung, Gefühl und Kleidung",
+    "description": "Rechnen Sie 14°C in 57,2°F um und sehen Sie, ob sich diese Temperatur eher frisch, angenehm oder leicht zu tragen anfühlt."
+  },
+  "header": {
+    "title": "14°C in Fahrenheit (57,2°F)",
+    "tagline": "Rechnen Sie 14°C in 57,2°F um und sehen Sie, ob sich diese Temperatur eher frisch, angenehm oder leicht zu tragen anfühlt."
+  },
+  "conversion": {
+    "intro": "14°C entsprechen 57,2°F."
+  },
+  "strategy": {
+    "keywords": "14 c in fahrenheit, 14 celsius in fahrenheit, 14 grad gefühl"
+  },
+  "comfortGuide": {
+    "title": "So fühlen sich 14°C an",
+    "subtitle": "Frisch und angenehm mit leichter Jacke",
+    "intro": "14°C (57,2°F) wirken oft frisch, aber angenehm. Für Spaziergänge, Alltag und draußen sein ist das häufig eine Temperatur, die mit leichter Jacke sehr gut funktioniert.",
+    "chart": {
+      "cold": {
+        "label": "Kühl",
+        "value": "8-12°C",
+        "desc": "46.4-53.6°F<br>Jacke oft sinnvoll"
+      },
+      "moderate": {
+        "label": "Frisch",
+        "value": "13-18°C",
+        "desc": "55.4-64.4°F<br>Leichte Schichten passen gut"
+      },
+      "warm": {
+        "label": "Angenehm",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Näher an Raumkomfort"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatur",
+        "description": "Eindruck",
+        "typicalUse": "Typischer Einsatz"
+      },
+      "rows": [
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Kühler",
+          "use": "Oft schon Jackenwetter"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Kühl",
+          "use": "Leichte Jacke passt",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "14°C (57.2°F)",
+          "desc": "Frisch und angenehm",
+          "use": "Gut für leichte Jacke",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Frisch",
+          "use": "Leichtere Schichten reichen",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Angenehm",
+          "use": "Nahe an normalem Raumgefühl",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normale Körpertemperatur",
+          "use": "Zum Vergleich",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Hinweis:</strong> Wer läuft, empfindet 14°C meist milder als jemand, der still im Schatten sitzt."
+  },
+  "faq": [
+    {
+      "question": "Wie viel sind 14°C in Fahrenheit?",
+      "answerHtml": "<p>14°C entsprechen 57,2°F.</p>"
+    },
+    {
+      "question": "Sind 14°C noch kühl?",
+      "answerHtml": "<p>Ja, aber oft auf eine angenehme Art. Viele Menschen empfinden diese Temperatur eher als frisch als als kalt.</p>"
+    },
+    {
+      "question": "Wie viel sind minus 14°C in Fahrenheit?",
+      "answerHtml": "<p>-14°C entsprechen 6,8°F.</p>"
+    },
+    {
+      "question": "Was zieht man bei 14°C an?",
+      "answerHtml": "<p>Eine leichte Jacke, ein dünner Pullover oder eine zusätzliche Lage reichen meist aus.</p>"
+    },
+    {
+      "question": "Sind 14°C angenehm für draußen?",
+      "answerHtml": "<p>Ja. Für Spaziergänge, Wege und normale Außenaktivitäten passen 14°C in vielen Fällen gut.</p>"
+    },
+    {
+      "question": "Ist 14°C Fieber?",
+      "answerHtml": "<p>Nein. Eine Körpertemperatur in diesem Bereich wäre viel zu niedrig, nicht zu hoch.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "14°C (57,2°F) im Alltag",
+    "cards": [
+      {
+        "title": "Frische, die gut funktioniert",
+        "body": "14°C sind oft genau die Art von Wetter, bei der eine leichte Jacke reicht und man sich draußen gut bewegen kann."
+      },
+      {
+        "title": "Für draußen meist sehr brauchbar",
+        "body": "Spazieren, kurze Wege und Alltag draußen fühlen sich bei dieser Temperatur oft angenehm an."
+      },
+      {
+        "title": "In Bewegung oft besser als im Sitzen",
+        "body": "Wer läuft, empfindet 14°C meist milder als jemand, der still im Schatten sitzt."
+      }
+    ]
+  }
+}

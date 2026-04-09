@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "15 °C a Fahrenheit (59 °F): sensación térmica y ropa",
+    "description": "Convierte 15 °C a 59 °F y entiende si se siente fresco, suave o cómodo para salir."
+  },
+  "header": {
+    "title": "15 °C a Fahrenheit (59 °F)",
+    "tagline": "Herramienta gratuita para convertir 15 °C a 59 °F y entender cómo se siente en clima diario, ropa y salidas."
+  },
+  "conversion": {
+    "intro": "15 °C en Fahrenheit son 59 °F."
+  },
+  "strategy": {
+    "keywords": "15 c a fahrenheit, 15 celsius a fahrenheit, 15 grados hace frío"
+  },
+  "comfortGuide": {
+    "title": "Guía de sensación térmica para 15 °C",
+    "subtitle": "Más cerca de templado fresco que de calor",
+    "intro": "15 °C (59 °F) suele sentirse suave con un punto fresco. Fuera puede resultar agradable, aunque dentro o con viento todavía se nota fresco.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "8-12°C",
+        "desc": "46.4-53.6°F<br>Suele pedir chaqueta"
+      },
+      "moderate": {
+        "label": "Ligero",
+        "value": "13-18°C",
+        "desc": "55.4-64.4°F<br>Capas suaves funcionan bien"
+      },
+      "warm": {
+        "label": "Cómodo",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Más cerca del confort interior"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensación",
+        "typicalUse": "Uso habitual"
+      },
+      "rows": [
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Frío suave",
+          "use": "Normalmente ya pide abrigo"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Fresco",
+          "use": "Tiempo de chaqueta ligera",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "15°C (59°F)",
+          "desc": "Suave con punto fresco",
+          "use": "Muy llevadera para pasear y salir",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Fresco agradable",
+          "use": "Capas más ligeras",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Cómodo",
+          "use": "Rango interior muy habitual",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Comparación con el cuerpo",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> a 15 °C la sombra, el aire y la humedad siguen cambiando bastante el cuerpo."
+  },
+  "faq": [
+    {
+      "question": "¿Cuánto son 15 °C en Fahrenheit?",
+      "answerHtml": "<p>15 °C equivalen a 59 °F.</p>"
+    },
+    {
+      "question": "¿15 °C se siente frío o templado?",
+      "answerHtml": "<p>15 °C suele sentirse suave, aunque todavía con un punto fresco.</p>"
+    },
+    {
+      "question": "¿Qué son -15 °C en Fahrenheit?",
+      "answerHtml": "<p>-15 °C equivalen a 5 °F. Eso ya es un frío de invierno muy distinto a 15 °C positivos.</p>"
+    },
+    {
+      "question": "¿Qué ropa conviene con 15 °C?",
+      "answerHtml": "<p>Suele ir bien una capa ligera: camiseta o manga larga fina, pantalón largo y una chaqueta ligera u overshirt.</p>"
+    },
+    {
+      "question": "¿15 °C es una temperatura cómoda para caminar?",
+      "answerHtml": "<p>Para mucha gente sí, sobre todo al aire libre y con algo ligero encima.</p>"
+    },
+    {
+      "question": "¿15 °C es fiebre?",
+      "answerHtml": "<p>No. La fiebre humana suele empezar cerca de 38 °C.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Dónde suele encajar 15 °C (59 °F)",
+    "cards": [
+      {
+        "title": "Más suave que frío",
+        "body": "15 °C muchas veces ya no se sienten como frío, sino como un día templado con un punto fresco."
+      },
+      {
+        "title": "Fuera puede sentirse mejor que dentro",
+        "body": "Con algo de sol y movimiento suele ir muy bien; en interior quieto puede pedir una capa."
+      },
+      {
+        "title": "Muy útil para planes diarios",
+        "body": "Es una temperatura buena para caminar, moverse y hacer planes tranquilos."
+      }
+    ]
+  }
+}

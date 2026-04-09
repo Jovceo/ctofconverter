@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "12°C in Fahrenheit (53,6°F): Umrechnung, Gefühl und Kleidung",
+    "description": "Rechnen Sie 12°C in 53,6°F um und sehen Sie, wie sich diese Temperatur draußen, im Alltag und bei der Kleidung anfühlt."
+  },
+  "header": {
+    "title": "12°C in Fahrenheit (53,6°F)",
+    "tagline": "Rechnen Sie 12°C in 53,6°F um und sehen Sie, wie sich diese Temperatur draußen, im Alltag und bei der Kleidung anfühlt."
+  },
+  "conversion": {
+    "intro": "12°C entsprechen 53,6°F."
+  },
+  "strategy": {
+    "keywords": "12 c in fahrenheit, 12 celsius in fahrenheit, 12 grad gefühl"
+  },
+  "comfortGuide": {
+    "title": "So fühlen sich 12°C an",
+    "subtitle": "Kühl genug für eine leichte Jacke",
+    "intro": "12°C (53,6°F) fühlen sich für viele Menschen klar kühl an, aber nicht hart kalt. Eine leichte Jacke oder zusätzliche Schicht macht hier oft schon viel aus.",
+    "chart": {
+      "cold": {
+        "label": "Kühl",
+        "value": "8-12°C",
+        "desc": "46.4-53.6°F<br>Jacke oft sinnvoll"
+      },
+      "moderate": {
+        "label": "Frisch",
+        "value": "13-18°C",
+        "desc": "55.4-64.4°F<br>Leichte Schichten passen gut"
+      },
+      "warm": {
+        "label": "Angenehm",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Näher an Raumkomfort"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatur",
+        "description": "Eindruck",
+        "typicalUse": "Typischer Einsatz"
+      },
+      "rows": [
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Kühler",
+          "use": "Oft schon Jackenwetter"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Kühl",
+          "use": "Leichte Jacke passt",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "12°C (53.6°F)",
+          "desc": "Kühl, aber gut machbar",
+          "use": "Mit einer Schicht deutlich angenehmer",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Frisch",
+          "use": "Leichtere Schichten reichen",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Angenehm",
+          "use": "Nahe an normalem Raumgefühl",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normale Körpertemperatur",
+          "use": "Zum Vergleich",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Hinweis:</strong> Wind, Schatten und feuchte Luft lassen 12°C deutlich kühler wirken."
+  },
+  "faq": [
+    {
+      "question": "Wie viel sind 12°C in Fahrenheit?",
+      "answerHtml": "<p>12°C entsprechen 53,6°F.</p>"
+    },
+    {
+      "question": "Fühlen sich 12°C eher kühl an?",
+      "answerHtml": "<p>Ja. 12°C wirken für die meisten Menschen kühl, aber noch nicht unangenehm hart.</p>"
+    },
+    {
+      "question": "Wie viel sind minus 12°C in Fahrenheit?",
+      "answerHtml": "<p>-12°C entsprechen 10,4°F.</p>"
+    },
+    {
+      "question": "Was zieht man bei 12°C an?",
+      "answerHtml": "<p>Eine leichte Jacke, ein dünner Pullover oder eine zusätzliche Schicht passt hier oft gut.</p>"
+    },
+    {
+      "question": "Sind 12°C gut zum Spazieren?",
+      "answerHtml": "<p>Ja. Mit einer leichten Schicht sind 12°C meist gut für Spaziergänge und normale Wege im Alltag geeignet.</p>"
+    },
+    {
+      "question": "Ist 12°C Fieber?",
+      "answerHtml": "<p>Nein. Fieber beginnt beim Menschen meist erst ab etwa 38°C.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "12°C (53,6°F) im Alltag",
+    "cards": [
+      {
+        "title": "Eine klare Jacken-Temperatur",
+        "body": "Bei 12°C denken viele Menschen schon automatisch an eine leichte Jacke oder zusätzliche Schicht."
+      },
+      {
+        "title": "In Bewegung meist angenehmer",
+        "body": "Beim Gehen fühlen sich 12°C oft besser an als beim stillen Warten im Schatten."
+      },
+      {
+        "title": "Wind und Feuchtigkeit zählen mit",
+        "body": "Wind, Schatten und feuchte Luft lassen 12°C deutlich kühler wirken."
+      }
+    ]
+  }
+}

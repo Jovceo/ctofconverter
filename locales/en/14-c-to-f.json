@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "14°C to Fahrenheit (57.2°F) | Temperature Conversion Guide",
+    "description": "Convert 14 degrees Celsius to Fahrenheit quickly. Learn that 14°C equals 57.2°F and understand if 14°C is hot or cold in different contexts."
+  },
+  "header": {
+    "title": "14°C to Fahrenheit (14 Degrees Celsius to °F)",
+    "tagline": "Convert 14°C to Fahrenheit with practical context for fresh weather, light outer layers, and daily comfort."
+  },
+  "conversion": {
+    "intro": "14°C in Fahrenheit is 57.2°F."
+  },
+  "strategy": {
+    "keywords": "14 celsius to fahrenheit 57.2 fahrenheit hot or cold cool weather negative 14 celsius"
+  },
+  "comfortGuide": {
+    "title": "14°C comfort guide",
+    "subtitle": "A cool, easy temperature that often feels pleasant with one layer",
+    "intro": "14°C (57.2°F) is cool, but not particularly harsh. For many people it feels like classic light-jacket weather and works well for walking, commuting, and mild days outside.",
+    "chart": {
+      "cold": {
+        "label": "Cold",
+        "value": "0-9°C",
+        "desc": "32-48.2°F<br>Heavier layers usually feel better"
+      },
+      "moderate": {
+        "label": "Cool",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Light jacket weather for many people"
+      },
+      "warm": {
+        "label": "Mild",
+        "value": "16-21°C",
+        "desc": "60.8-69.8°F<br>Comfortable with lighter layers"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "12°C (53.6°F)",
+          "desc": "Cool",
+          "use": "Still clearly jacket weather",
+          "href": "/12-c-to-f"
+        },
+        {
+          "temp": "14°C (57.2°F)",
+          "desc": "Fresh and light",
+          "use": "A light outer layer is usually enough",
+          "highlight": true
+        },
+        {
+          "temp": "15°C (59°F)",
+          "desc": "Mild and fresh",
+          "use": "Comfortable for many people with one light layer",
+          "href": "/15-c-to-f"
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Comfortably cool",
+          "use": "Works well for indoors, sleep, and easy outdoor time",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "20°C (68°F)",
+          "desc": "Standard room temperature",
+          "use": "Balanced indoor comfort for most people",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normal body temperature",
+          "use": "Helpful body-temperature comparison",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 14°C can feel almost mild in sunshine, but once the wind picks up or the sun drops, it often returns to a clearly cool feel."
+  },
+  "faq": [
+    {
+      "question": "What is 14 degrees Celsius in Fahrenheit?",
+      "answerHtml": "<p>14 degrees Celsius equals 57.2 degrees Fahrenheit. Use the formula °F = (°C × 9/5) + 32. Multiply 14 by 1.8 to get 25.2, then add 32 to get 57.2°F.</p>"
+    },
+    {
+      "question": "Is 14°C hot or cold?",
+      "answerHtml": "<p>14°C (57.2°F) is usually considered cool rather than hot. It often feels pleasant outside with a light jacket or another thin layer, especially in spring or autumn.</p>"
+    },
+    {
+      "question": "What is negative 14 Celsius in Fahrenheit?",
+      "answerHtml": "<p>Negative 14°C converts to 6.8°F. That is solid winter weather and much colder than 14°C above zero.</p>"
+    },
+    {
+      "question": "What should I wear at 14°C?",
+      "answerHtml": "<p>At 14°C, a light outer layer is usually enough for many people.</p><ul><li>A T-shirt or thin knit with a light jacket</li><li>Jeans, chinos, or similar full-length bottoms</li><li>Closed shoes or trainers</li></ul>"
+    },
+    {
+      "question": "Is 14°C good weather for being outside?",
+      "answerHtml": "<p>Yes. 14°C is often comfortable for walking, commuting, sitting outside for a short time, or doing light activity. Wind and shade matter more than the number itself.</p>"
+    },
+    {
+      "question": "Is 14°C a fever temperature?",
+      "answerHtml": "<p>No. Fever normally starts near 38°C (100.4°F), so 14°C is nowhere near a fever temperature. As body heat, it would be far below normal.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "14°C (57.2°F) in daily life",
+    "cards": [
+      {
+        "title": "Comfortable with one layer",
+        "body": "At 14°C, many people feel comfortable with just one light outer layer rather than heavier cold-weather clothing."
+      },
+      {
+        "title": "Good everyday weather",
+        "body": "This temperature often works well for daily errands, school runs, commuting, and walking without feeling too cold or too warm."
+      },
+      {
+        "title": "Sun and wind decide the mood",
+        "body": "In sun, 14°C can feel mild. In wind or shade, it quickly shifts back toward a cooler spring or autumn feel."
+      }
+    ]
+  }
+}
