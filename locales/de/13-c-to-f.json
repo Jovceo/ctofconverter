@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "13°C in Fahrenheit (55,4°F): Umrechnung, Gefühl und Kleidung",
+    "description": "Rechnen Sie 13°C in 55,4°F um und sehen Sie, ob sich diese Temperatur eher frisch, mild oder gut alltagstauglich anfühlt."
+  },
+  "header": {
+    "title": "13°C in Fahrenheit (55,4°F)",
+    "tagline": "Rechnen Sie 13°C in 55,4°F um und sehen Sie, ob sich diese Temperatur eher frisch, mild oder gut alltagstauglich anfühlt."
+  },
+  "conversion": {
+    "intro": "13°C entsprechen 55,4°F."
+  },
+  "strategy": {
+    "keywords": "13 c in fahrenheit, 13 celsius in fahrenheit, 13 grad gefühl"
+  },
+  "comfortGuide": {
+    "title": "So fühlen sich 13°C an",
+    "subtitle": "Noch kühl, aber schon leichter zu tragen",
+    "intro": "13°C (55,4°F) bleiben frisch, fühlen sich aber meist etwas leichter an als 10 oder 12°C. Für Alltag, Wege und normale Außenzeit ist das oft eine gut machbare Temperatur.",
+    "chart": {
+      "cold": {
+        "label": "Kühl",
+        "value": "8-12°C",
+        "desc": "46.4-53.6°F<br>Jacke oft sinnvoll"
+      },
+      "moderate": {
+        "label": "Frisch",
+        "value": "13-18°C",
+        "desc": "55.4-64.4°F<br>Leichte Schichten passen gut"
+      },
+      "warm": {
+        "label": "Angenehm",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Näher an Raumkomfort"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatur",
+        "description": "Eindruck",
+        "typicalUse": "Typischer Einsatz"
+      },
+      "rows": [
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Kühler",
+          "use": "Oft schon Jackenwetter"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Kühl",
+          "use": "Leichte Jacke passt",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "13°C (55.4°F)",
+          "desc": "Frisch, aber gut alltagstauglich",
+          "use": "Passt gut zu Wegen und Alltag",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Frisch",
+          "use": "Leichtere Schichten reichen",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Angenehm",
+          "use": "Nahe an normalem Raumgefühl",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normale Körpertemperatur",
+          "use": "Zum Vergleich",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Hinweis:</strong> Am besten funktionieren leichte Lagen, die man draußen tragen und drinnen schnell ablegen kann."
+  },
+  "faq": [
+    {
+      "question": "Wie viel sind 13°C in Fahrenheit?",
+      "answerHtml": "<p>13°C entsprechen 55,4°F.</p>"
+    },
+    {
+      "question": "Sind 13°C noch eher kühl?",
+      "answerHtml": "<p>Ja. 13°C bleiben klar frisch, auch wenn sie im Alltag oft schon recht angenehm wirken.</p>"
+    },
+    {
+      "question": "Wie viel sind minus 13°C in Fahrenheit?",
+      "answerHtml": "<p>-13°C entsprechen 8,6°F.</p>"
+    },
+    {
+      "question": "Was zieht man bei 13°C an?",
+      "answerHtml": "<p>Eine leichte Jacke, ein Sweatshirt oder eine Overshirt-Schicht funktionieren hier meist gut.</p>"
+    },
+    {
+      "question": "Sind 13°C für Alltag und Wege angenehm?",
+      "answerHtml": "<p>Ja. Für kurze Wege, Pendeln und normale Erledigungen sind 13°C meist gut machbar.</p>"
+    },
+    {
+      "question": "Ist 13°C Fieber?",
+      "answerHtml": "<p>Nein. Fieber liegt beim Menschen deutlich höher, meist erst ab etwa 38°C.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "13°C (55,4°F) im Alltag",
+    "cards": [
+      {
+        "title": "Klar frisch, aber nicht schwer",
+        "body": "13°C fühlen sich noch kühl an, ohne gleich unangenehm zu werden."
+      },
+      {
+        "title": "Gut für den normalen Tagesablauf",
+        "body": "Wege, kurze Besorgungen und Bewegung draußen passen oft gut zu dieser Temperatur."
+      },
+      {
+        "title": "Praktisch sind Schichten zum An- und Ausziehen",
+        "body": "Am besten funktionieren leichte Lagen, die man draußen tragen und drinnen schnell ablegen kann."
+      }
+    ]
+  }
+}

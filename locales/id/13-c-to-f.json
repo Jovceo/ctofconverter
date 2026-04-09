@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "13°C ke Fahrenheit (55.4°F)",
+    "description": "Ubah 13°C menjadi 55.4°F dan pahami apakah suhu ini terasa sejuk, ringan, atau nyaman untuk aktivitas harian."
+  },
+  "header": {
+    "title": "13°C ke Fahrenheit (55.4°F)",
+    "tagline": "Ubah 13°C menjadi 55.4°F dan pahami apakah suhu ini terasa sejuk, ringan, atau nyaman untuk aktivitas harian."
+  },
+  "conversion": {
+    "intro": "13°C = 55.4°F."
+  },
+  "strategy": {
+    "keywords": "13 c to f, 13 celsius to fahrenheit"
+  },
+  "comfortGuide": {
+    "title": "Panduan rasa suhu 13?C",
+    "subtitle": "Suhu ini biasanya terasa sejuk, tetapi belum terlalu dingin.",
+    "intro": "Ubah 13°C menjadi 55.4°F dan pahami apakah suhu ini terasa sejuk, ringan, atau nyaman untuk aktivitas harian.",
+    "chart": {
+      "cold": {
+        "label": "Sejuk",
+        "value": "8-12°C",
+        "desc": "46.4-53.6°F<br>Sering perlu jaket"
+      },
+      "moderate": {
+        "label": "Ringan",
+        "value": "13-18°C",
+        "desc": "55.4-64.4°F<br>Lapisan ringan cocok"
+      },
+      "warm": {
+        "label": "Nyaman",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Dekat ke rasa nyaman indoor"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Suhu",
+        "description": "Kesan",
+        "typicalUse": "Penggunaan"
+      },
+      "rows": [
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Lebih sejuk",
+          "use": "Sering butuh jaket"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Sejuk",
+          "use": "Cuaca jaket tipis",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "13°C (55.4°F)",
+          "desc": "Sejuk tapi masih nyaman",
+          "use": "Lebih enak dengan satu lapisan",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Segar",
+          "use": "Lapisan ringan cukup",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Nyaman",
+          "use": "Dekat ke rasa nyaman indoor",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Suhu tubuh normal",
+          "use": "Untuk perbandingan",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Catatan:</strong> Angin, bayangan, dan kelembapan bisa membuatnya terasa lebih dingin."
+  },
+  "faq": [
+    {
+      "question": "Berapa 13?C dalam Fahrenheit?",
+      "answerHtml": "<p>13?C sama dengan 55.4?F.</p>"
+    },
+    {
+      "question": "Apakah 13?C terasa sejuk?",
+      "answerHtml": "<p>13?C biasanya terasa sejuk, tetapi belum terlalu dingin.</p>"
+    },
+    {
+      "question": "Berapa minus 13?C dalam Fahrenheit?",
+      "answerHtml": "<p>Minus 13?C sama dengan 8.6?F.</p>"
+    },
+    {
+      "question": "Apa yang cocok dipakai saat 13?C?",
+      "answerHtml": "<p>Lapisan ringan, jaket tipis, atau pakaian harian yang mudah ditambah-lepas biasanya paling cocok.</p>"
+    },
+    {
+      "question": "Apakah 13?C nyaman untuk aktivitas harian dan perjalanan singkat?",
+      "answerHtml": "<p>13?C biasanya masih enak untuk jalan santai, urusan harian, dan waktu singkat di luar ruangan.</p>"
+    },
+    {
+      "question": "Apakah 13?C termasuk demam?",
+      "answerHtml": "<p>Tidak. Demam pada manusia biasanya mulai sekitar 38?C.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "13?C (55.4?F) dalam keseharian",
+    "cards": [
+      {
+        "title": "Suhu ini biasanya terasa sejuk, tetapi belum terlalu dingin.",
+        "body": "Suhu ini biasanya terasa sejuk, tetapi belum terlalu dingin."
+      },
+      {
+        "title": "Lapisan ringan atau jaket tipis biasanya paling pas.",
+        "body": "Lapisan ringan atau jaket tipis biasanya paling pas."
+      },
+      {
+        "title": "Angin, bayangan, dan kelembapan bisa membuatnya terasa lebih dingin.",
+        "body": "Angin, bayangan, dan kelembapan bisa membuatnya terasa lebih dingin."
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "15°C to Fahrenheit (59°F) | Temperature Conversion Guide",
+    "description": "Convert 15 degrees Celsius to Fahrenheit quickly. Learn that 15°C equals 59°F and understand temperature context for weather and daily life."
+  },
+  "header": {
+    "title": "15°C to Fahrenheit (15 Degrees Celsius to °F)",
+    "tagline": "Convert 15°C to Fahrenheit with practical context for mild weather, light layers, and comfortable daily routines."
+  },
+  "conversion": {
+    "intro": "15°C in Fahrenheit is 59°F."
+  },
+  "strategy": {
+    "keywords": "15 celsius to fahrenheit 59 fahrenheit formula mild weather negative 15 celsius what to wear"
+  },
+  "comfortGuide": {
+    "title": "15°C comfort guide",
+    "subtitle": "Near the top of the cool range and often close to mild weather",
+    "intro": "15°C (59°F) often feels fresh rather than cold. Many people are comfortable with one light layer, and in sunshine it can already start to feel mild.",
+    "chart": {
+      "cold": {
+        "label": "Cold",
+        "value": "0-9°C",
+        "desc": "32-48.2°F<br>Heavier layers usually feel better"
+      },
+      "moderate": {
+        "label": "Cool",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Often comfortable with one light layer"
+      },
+      "warm": {
+        "label": "Mild",
+        "value": "16-21°C",
+        "desc": "60.8-69.8°F<br>Comfortable for many indoor and outdoor routines"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "12°C (53.6°F)",
+          "desc": "Cool",
+          "use": "Still more clearly jacket weather",
+          "href": "/12-c-to-f"
+        },
+        {
+          "temp": "14°C (57.2°F)",
+          "desc": "Fresh and easy",
+          "use": "A light jacket usually feels enough",
+          "href": "/14-c-to-f"
+        },
+        {
+          "temp": "15°C (59°F)",
+          "desc": "Fresh to mild",
+          "use": "Many people are fine with one light layer",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Comfortably cool",
+          "use": "Good for sleep, home, and easy outdoor plans",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "20°C (68°F)",
+          "desc": "Standard room temperature",
+          "use": "Balanced comfort for most indoor settings",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normal body temperature",
+          "use": "Useful if someone mixes up weather and body heat",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 15°C can feel almost mild in direct sun, but breeze, cloud cover, and shade can still keep it squarely in the cool-weather range."
+  },
+  "faq": [
+    {
+      "question": "What is 15 degrees Celsius in Fahrenheit?",
+      "answerHtml": "<p>15 degrees Celsius equals 59 degrees Fahrenheit. Use the formula °F = (°C × 9/5) + 32. Multiply 15 by 1.8 to get 27, then add 32 to reach 59°F.</p>"
+    },
+    {
+      "question": "What is the formula for 15 Celsius to Fahrenheit?",
+      "answerHtml": "<p>The formula is °F = (°C × 9/5) + 32. For 15°C, that becomes (15 × 1.8) + 32 = 27 + 32 = 59°F.</p>"
+    },
+    {
+      "question": "What is negative 15 Celsius in Fahrenheit?",
+      "answerHtml": "<p>Negative 15°C converts to 5°F. That is very cold winter weather and far colder than the feel of 15°C above zero.</p>"
+    },
+    {
+      "question": "Is 15°C cold or mild?",
+      "answerHtml": "<p>15°C (59°F) usually sits between cool and mild. Many people still want a light jacket, but it no longer feels sharply cold in the way 10°C or lower often does.</p>"
+    },
+    {
+      "question": "What should I wear at 15°C?",
+      "answerHtml": "<p>At 15°C, most people are comfortable in light layers.</p><ul><li>A T-shirt, blouse, or thin knit with a light jacket</li><li>Jeans, trousers, or a longer skirt</li><li>Trainers, loafers, or other closed shoes</li></ul>"
+    },
+    {
+      "question": "Is 15°C a good room or walking temperature?",
+      "answerHtml": "<p>For walking outside, yes, 15°C is often very pleasant. Indoors, it can feel a little cool unless you are moving around, so many people would add a light layer or prefer a few more degrees.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "15°C (59°F) in daily life",
+    "cards": [
+      {
+        "title": "Close to mild weather",
+        "body": "At 15°C, the weather often starts to feel less like obvious jacket weather and more like fresh, easy conditions with one light layer."
+      },
+      {
+        "title": "Good for walking and day-to-day plans",
+        "body": "This temperature suits commuting, walking, parks, and general outdoor errands without feeling too demanding."
+      },
+      {
+        "title": "Indoors still feel cooler than outdoors",
+        "body": "Outside, 15°C can feel pleasant in motion, but indoors the same number may still feel a bit cool if the room is quiet and unheated."
+      }
+    ]
+  }
+}

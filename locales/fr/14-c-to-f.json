@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "14 °C en Fahrenheit (57,2 °F) : conversion, ressenti et vêtements",
+    "description": "Convertissez 14 °C en 57,2 °F et voyez si cette température paraît fraîche, agréable ou facile à porter au quotidien."
+  },
+  "header": {
+    "title": "14 °C en Fahrenheit (57,2 °F)",
+    "tagline": "Convertissez 14 °C en 57,2 °F et voyez si cette température paraît fraîche, agréable ou facile à porter au quotidien."
+  },
+  "conversion": {
+    "intro": "14 °C correspondent à 57,2 °F."
+  },
+  "strategy": {
+    "keywords": "14 c en fahrenheit, 14 celsius en fahrenheit, 14 degrés ressenti"
+  },
+  "comfortGuide": {
+    "title": "Ressenti autour de 14 °C",
+    "subtitle": "Frais et agréable avec une couche légère",
+    "intro": "14 °C (57,2 °F) donnent souvent une impression fraîche mais confortable. Beaucoup de gens y voient un temps agréable pour marcher, sortir ou passer du temps dehors avec une veste légère.",
+    "chart": {
+      "cold": {
+        "label": "Frais",
+        "value": "8-12°C",
+        "desc": "46.4-53.6°F<br>Veste légère utile"
+      },
+      "moderate": {
+        "label": "Léger",
+        "value": "13-18°C",
+        "desc": "55.4-64.4°F<br>Les couches fines fonctionnent bien"
+      },
+      "warm": {
+        "label": "Confortable",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Proche du confort intérieur"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Température",
+        "description": "Ressenti",
+        "typicalUse": "Usage typique"
+      },
+      "rows": [
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Plus frais",
+          "use": "Demande souvent une veste"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Frais",
+          "use": "Temps de veste légère",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "14°C (57.2°F)",
+          "desc": "Frais et agréable",
+          "use": "Bien avec une veste légère",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Frais agréable",
+          "use": "Couches plus légères",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Confortable",
+          "use": "Près du confort intérieur",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Température corporelle normale",
+          "use": "Repère",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Remarque :</strong> En marchant, 14 °C paraissent souvent plus doux qu'en restant assis dans l'ombre."
+  },
+  "faq": [
+    {
+      "question": "14 °C, cela fait combien en Fahrenheit ?",
+      "answerHtml": "<p>14 °C correspondent à 57,2 °F.</p>"
+    },
+    {
+      "question": "14 °C, est-ce encore frais ?",
+      "answerHtml": "<p>Oui, mais souvent d’une manière agréable. On est plus dans la fraîcheur confortable que dans le froid.</p>"
+    },
+    {
+      "question": "Que valent -14 °C en Fahrenheit ?",
+      "answerHtml": "<p>-14 °C correspondent à 6,8 °F.</p>"
+    },
+    {
+      "question": "Que porter à 14 °C ?",
+      "answerHtml": "<p>Une veste légère, un petit pull ou une surchemise suffisent souvent.</p>"
+    },
+    {
+      "question": "14 °C, est-ce une bonne température pour rester dehors ?",
+      "answerHtml": "<p>Oui, dans beaucoup de cas. C’est une température qui se prête bien à la marche et aux sorties ordinaires.</p>"
+    },
+    {
+      "question": "14 °C, est-ce de la fièvre ?",
+      "answerHtml": "<p>Non. La fièvre ne commence pas à 14 °C, mais bien plus haut, autour de 38 °C.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "14 °C (57,2 °F) au quotidien",
+    "cards": [
+      {
+        "title": "Une fraîcheur facile à vivre",
+        "body": "14 °C donnent souvent envie d'une petite veste, mais restent confortables pour les sorties ordinaires."
+      },
+      {
+        "title": "Dehors, on est souvent bien",
+        "body": "Pour marcher, bouger ou passer un peu de temps dehors, cette température est souvent agréable."
+      },
+      {
+        "title": "Le mouvement change beaucoup la sensation",
+        "body": "En marchant, 14 °C paraissent souvent plus doux qu'en restant assis dans l'ombre."
+      }
+    ]
+  }
+}

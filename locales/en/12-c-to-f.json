@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "12°C to Fahrenheit (53.6°F) | Conversion Guide & Calculator",
+    "description": "Convert 12 degrees Celsius to Fahrenheit quickly. Learn that 12°C equals 53.6°F, see the calculation steps, and understand temperature context."
+  },
+  "header": {
+    "title": "12°C to Fahrenheit (12 Degrees Celsius to °F)",
+    "tagline": "Convert 12°C to Fahrenheit with practical guidance for cool weather, layering, fresh outdoor air, and everyday temperature questions."
+  },
+  "conversion": {
+    "intro": "12°C in Fahrenheit is 53.6°F."
+  },
+  "strategy": {
+    "keywords": "12 celsius to fahrenheit 53.6 fahrenheit cool weather jacket formula fever what to wear"
+  },
+  "comfortGuide": {
+    "title": "12°C comfort guide",
+    "subtitle": "Cool enough for layers, but usually still pleasant outdoors",
+    "intro": "12°C (53.6°F) is cool weather that many people find comfortable with a light jacket or sweater. It often feels like a fresh spring or autumn day rather than real cold.",
+    "chart": {
+      "cold": {
+        "label": "Cold",
+        "value": "0-9°C",
+        "desc": "32-48.2°F<br>Heavier layers usually feel better"
+      },
+      "moderate": {
+        "label": "Cool",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Light jacket weather for many people"
+      },
+      "warm": {
+        "label": "Mild",
+        "value": "16-21°C",
+        "desc": "60.8-69.8°F<br>Comfortable with lighter layers"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Cool",
+          "use": "A light jacket or extra layer usually feels right",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "12°C (53.6°F)",
+          "desc": "Cool but manageable",
+          "use": "A jumper, light coat, or overshirt is often enough",
+          "highlight": true
+        },
+        {
+          "temp": "15°C (59°F)",
+          "desc": "Mild and fresh",
+          "use": "Many people are comfortable with one lighter layer",
+          "href": "/15-c-to-f"
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Comfortably cool",
+          "use": "Good for walking, home, and sleep",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "20°C (68°F)",
+          "desc": "Standard room temperature",
+          "use": "Balanced comfort for most indoor routines",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normal body temperature",
+          "use": "Useful comparison if someone confuses weather with fever",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 12°C can feel noticeably colder in wind, rain, or early morning shade than it does in calm sunshine."
+  },
+  "faq": [
+    {
+      "question": "What is 12 degrees Celsius in Fahrenheit?",
+      "answerHtml": "<p>12 degrees Celsius equals 53.6 degrees Fahrenheit. Use the formula °F = (°C × 9/5) + 32. Multiply 12 by 1.8 to get 21.6, then add 32 to reach 53.6°F.</p>"
+    },
+    {
+      "question": "Is 12°C cold or warm?",
+      "answerHtml": "<p>12°C (53.6°F) is usually considered cool rather than warm. Many people would want a light jacket, jumper, or another layer, especially if they are standing still or there is wind.</p><p>It is often the kind of temperature that feels fresh and pleasant outdoors, but cooler indoors if the room is not heated.</p>"
+    },
+    {
+      "question": "Is 12°C a fever temperature?",
+      "answerHtml": "<p>No. 12°C is not a fever temperature. Human fever usually starts near 38°C (100.4°F), while normal body temperature is around 37°C (98.6°F).</p><p>If 12°C were a body-temperature reading, it would be far below normal, not a fever.</p>"
+    },
+    {
+      "question": "What should I wear at 12°C?",
+      "answerHtml": "<p>At 12°C, light layering usually works best.</p><ul><li>A T-shirt or long-sleeve top with a light jacket or cardigan</li><li>Jeans, trousers, or other full-length bottoms</li><li>Closed shoes or trainers for everyday comfort</li></ul><p>If it is windy or damp, an extra thin layer can make a big difference.</p>"
+    },
+    {
+      "question": "Is 12°C good weather for walking or being outside?",
+      "answerHtml": "<p>Yes. 12°C is often good for walks, commuting, errands, and other everyday outdoor plans. It usually feels fresher than cold, especially if you keep moving.</p><p>What changes the experience most is wind, rain, and whether the sun is out.</p>"
+    },
+    {
+      "question": "What is negative 12 Celsius in Fahrenheit?",
+      "answerHtml": "<p>Negative 12°C converts to 10.4°F. That is well into winter-cold conditions and far more severe than 12°C above zero.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "12°C (53.6°F) in daily life",
+    "cards": [
+      {
+        "title": "Cool enough to notice",
+        "body": "At 12°C, most people notice the coolness right away, but it still feels easy to manage with the right layer."
+      },
+      {
+        "title": "Classic spring or autumn weather",
+        "body": "This temperature often feels like fresh daytime weather in spring and autumn, especially when the sun is out and the air is dry."
+      },
+      {
+        "title": "Wind matters a lot",
+        "body": "A calm 12°C can feel pleasant, while the same number with wind, drizzle, or shade can feel quite a bit sharper."
+      }
+    ]
+  }
+}

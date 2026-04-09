@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "12°C para Fahrenheit (53.6°F)",
+    "description": "Converta 12°C em 53.6°F e entenda se essa temperatura parece fresca, amena ou confortável para o dia a dia."
+  },
+  "header": {
+    "title": "12°C para Fahrenheit (53.6°F)",
+    "tagline": "Converta 12°C em 53.6°F e entenda se essa temperatura parece fresca, amena ou confortável para o dia a dia."
+  },
+  "conversion": {
+    "intro": "12°C = 53.6°F."
+  },
+  "strategy": {
+    "keywords": "12 c to f, 12 celsius to fahrenheit"
+  },
+  "comfortGuide": {
+    "title": "Como 12?C costumam parecer",
+    "subtitle": "Essa faixa costuma parecer fresca, sem ser fria demais.",
+    "intro": "Converta 12°C em 53.6°F e entenda se essa temperatura parece fresca, amena ou confortável para o dia a dia.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "8-12°C",
+        "desc": "46.4-53.6°F<br>Jaqueta leve ajuda"
+      },
+      "moderate": {
+        "label": "Leve",
+        "value": "13-18°C",
+        "desc": "55.4-64.4°F<br>Camadas leves funcionam bem"
+      },
+      "warm": {
+        "label": "Confortável",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Mais perto do conforto interno"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensação",
+        "typicalUse": "Uso comum"
+      },
+      "rows": [
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Mais fresco",
+          "use": "Muita gente já quer jaqueta"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Fresco",
+          "use": "Clima de casaco leve",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "12°C (53.6°F)",
+          "desc": "Fresco, mas tranquilo",
+          "use": "Uma camada ajuda a andar melhor",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Fresco agradável",
+          "use": "Camadas leves bastam",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Confortável",
+          "use": "Perto do conforto interno",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Como referência",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> Vento, sombra e umidade podem deix?-la mais fria do que o n?mero sugere."
+  },
+  "faq": [
+    {
+      "question": "12?C equivalem a quanto em Fahrenheit?",
+      "answerHtml": "<p>12?C equivalem a 53.6?F.</p>"
+    },
+    {
+      "question": "12?C parecem frios ou s? frescos?",
+      "answerHtml": "<p>12?C costumam parecer frescos, sem chegar a um frio pesado.</p>"
+    },
+    {
+      "question": "Quanto ? menos 12?C em Fahrenheit?",
+      "answerHtml": "<p>Menos 12?C equivalem a 10.4?F.</p>"
+    },
+    {
+      "question": "O que vestir com 12?C?",
+      "answerHtml": "<p>Camada leve, jaqueta fina ou blusa leve costumam funcionar bem nessa faixa.</p>"
+    },
+    {
+      "question": "12?C s?o bons para caminhar?",
+      "answerHtml": "<p>12?C costumam ir bem para caminhada, recados e tempo curto ao ar livre com roupa leve.</p>"
+    },
+    {
+      "question": "12?C s?o febre?",
+      "answerHtml": "<p>N?o. Em humanos, febre costuma come?ar perto de 38?C.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "12?C (53.6?F) no dia a dia",
+    "cards": [
+      {
+        "title": "Essa faixa costuma parecer fresca, sem ser fria demais.",
+        "body": "Essa faixa costuma parecer fresca, sem ser fria demais."
+      },
+      {
+        "title": "Uma camada leve ou jaqueta fina costuma funcionar bem.",
+        "body": "Uma camada leve ou jaqueta fina costuma funcionar bem."
+      },
+      {
+        "title": "Vento, sombra e umidade podem deix?-la mais fria do que o n?mero sugere.",
+        "body": "Vento, sombra e umidade podem deix?-la mais fria do que o n?mero sugere."
+      }
+    ]
+  }
+}

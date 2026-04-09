@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "12 °C en Fahrenheit (53,6 °F) : conversion, ressenti et vêtements",
+    "description": "Convertissez 12 °C en 53,6 °F et voyez comment cette température se ressent au quotidien, dehors et côté tenue."
+  },
+  "header": {
+    "title": "12 °C en Fahrenheit (53,6 °F)",
+    "tagline": "Convertissez 12 °C en 53,6 °F et voyez comment cette température se ressent au quotidien, dehors et côté tenue."
+  },
+  "conversion": {
+    "intro": "12 °C correspondent à 53,6 °F."
+  },
+  "strategy": {
+    "keywords": "12 c en fahrenheit, 12 celsius en fahrenheit, 12 degrés ressenti"
+  },
+  "comfortGuide": {
+    "title": "Ressenti autour de 12 °C",
+    "subtitle": "Assez frais pour penser à une veste légère",
+    "intro": "12 °C (53,6 °F) correspondent à une température fraîche, mais pas vraiment froide. Beaucoup de gens pensent déjà à une couche légère, surtout pour marcher ou rester dehors un moment.",
+    "chart": {
+      "cold": {
+        "label": "Frais",
+        "value": "8-12°C",
+        "desc": "46.4-53.6°F<br>Veste légère utile"
+      },
+      "moderate": {
+        "label": "Léger",
+        "value": "13-18°C",
+        "desc": "55.4-64.4°F<br>Les couches fines fonctionnent bien"
+      },
+      "warm": {
+        "label": "Confortable",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Proche du confort intérieur"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Température",
+        "description": "Ressenti",
+        "typicalUse": "Usage typique"
+      },
+      "rows": [
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Plus frais",
+          "use": "Demande souvent une veste"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Frais",
+          "use": "Temps de veste légère",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "12°C (53.6°F)",
+          "desc": "Frais mais supportable",
+          "use": "Une couche aide vite à se sentir mieux",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Frais agréable",
+          "use": "Couches plus légères",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Confortable",
+          "use": "Près du confort intérieur",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Température corporelle normale",
+          "use": "Repère",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Remarque :</strong> À cette température, l'ombre, l'air humide et le vent peuvent faire paraître la journée nettement plus fraîche."
+  },
+  "faq": [
+    {
+      "question": "12 °C, cela fait combien en Fahrenheit ?",
+      "answerHtml": "<p>12 °C correspondent à 53,6 °F.</p>"
+    },
+    {
+      "question": "12 °C, est-ce plutôt frais ?",
+      "answerHtml": "<p>Oui. 12 °C paraissent frais pour la plupart des gens, sans aller jusqu’au froid dur.</p>"
+    },
+    {
+      "question": "Que valent -12 °C en Fahrenheit ?",
+      "answerHtml": "<p>-12 °C correspondent à 10,4 °F.</p>"
+    },
+    {
+      "question": "Que porter à 12 °C ?",
+      "answerHtml": "<p>Une couche légère, une petite veste ou un pull fin suffisent souvent.</p>"
+    },
+    {
+      "question": "12 °C, est-ce agréable pour marcher ?",
+      "answerHtml": "<p>Oui, avec une couche légère, 12 °C conviennent bien à la marche et aux petits trajets du quotidien.</p>"
+    },
+    {
+      "question": "12 °C, est-ce de la fièvre ?",
+      "answerHtml": "<p>Non. Chez l’humain, la fièvre commence en général autour de 38 °C.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "12 °C (53,6 °F) au quotidien",
+    "cards": [
+      {
+        "title": "Une vraie température de veste légère",
+        "body": "À 12 °C, on sort rarement en simple t-shirt. Une couche légère change vite le confort."
+      },
+      {
+        "title": "Bien pour marcher, moins pour rester immobile",
+        "body": "À 12 °C, on est souvent bien en bougeant. À l'arrêt, surtout avec du vent, la fraîcheur se remarque vite."
+      },
+      {
+        "title": "Le vent et l'humidité comptent beaucoup",
+        "body": "À cette température, l'ombre, l'air humide et le vent peuvent faire paraître la journée nettement plus fraîche."
+      }
+    ]
+  }
+}

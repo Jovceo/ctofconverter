@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "12 °C a Fahrenheit (53.6 °F): sensación térmica y ropa",
+    "description": "Convierte 12 °C a 53.6 °F y entiende si se siente fresco, suave o cómodo para salir."
+  },
+  "header": {
+    "title": "12 °C a Fahrenheit (53.6 °F)",
+    "tagline": "Herramienta gratuita para convertir 12 °C a 53.6 °F y entender cómo se siente en clima diario, ropa y salidas."
+  },
+  "conversion": {
+    "intro": "12 °C en Fahrenheit son 53.6 °F."
+  },
+  "strategy": {
+    "keywords": "12 c a fahrenheit, 12 celsius a fahrenheit, 12 grados hace frío"
+  },
+  "comfortGuide": {
+    "title": "Guía de sensación térmica para 12 °C",
+    "subtitle": "Ya se siente fresco y suele pedir una capa",
+    "intro": "12 °C (53.6 °F) suele sentirse claramente fresco, aunque no duro. Es la franja en la que mucha gente ya piensa en sudadera, chaqueta ligera o capa extra.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "8-12°C",
+        "desc": "46.4-53.6°F<br>Suele pedir chaqueta"
+      },
+      "moderate": {
+        "label": "Ligero",
+        "value": "13-18°C",
+        "desc": "55.4-64.4°F<br>Capas suaves funcionan bien"
+      },
+      "warm": {
+        "label": "Cómodo",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Más cerca del confort interior"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensación",
+        "typicalUse": "Uso habitual"
+      },
+      "rows": [
+        {
+          "temp": "8°C (46.4°F)",
+          "desc": "Frío suave",
+          "use": "Normalmente ya pide abrigo"
+        },
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Fresco",
+          "use": "Tiempo de chaqueta ligera",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "12°C (53.6°F)",
+          "desc": "Fresco pero llevadero",
+          "use": "Caminar y moverse se siente mejor con una capa",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Fresco agradable",
+          "use": "Capas más ligeras",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Cómodo",
+          "use": "Rango interior muy habitual",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Comparación con el cuerpo",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> a 12 °C el sol y el viento cambian mucho la sensación."
+  },
+  "faq": [
+    {
+      "question": "¿Cuánto son 12 °C en Fahrenheit?",
+      "answerHtml": "<p>12 °C equivalen a 53.6 °F.</p>"
+    },
+    {
+      "question": "¿12 °C se siente frío o templado?",
+      "answerHtml": "<p>12 °C suele sentirse fresco, no helado, pero ya pide una capa ligera.</p>"
+    },
+    {
+      "question": "¿Qué son -12 °C en Fahrenheit?",
+      "answerHtml": "<p>-12 °C equivalen a 10.4 °F. Eso ya es un frío de invierno muy distinto a 12 °C positivos.</p>"
+    },
+    {
+      "question": "¿Qué ropa conviene con 12 °C?",
+      "answerHtml": "<p>Suele ir bien una capa ligera: camiseta o manga larga fina, pantalón largo y una chaqueta ligera u overshirt.</p>"
+    },
+    {
+      "question": "¿12 °C es bueno para caminar?",
+      "answerHtml": "<p>Sí, suele ser una temperatura agradable para caminar si llevas una capa ligera.</p>"
+    },
+    {
+      "question": "¿12 °C es fiebre?",
+      "answerHtml": "<p>No. La fiebre humana suele empezar cerca de 38 °C.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Dónde suele encajar 12 °C (53.6 °F)",
+    "cards": [
+      {
+        "title": "Ya cambia la forma de vestir",
+        "body": "12 °C no suelen sentirse extremos, pero normalmente dejan de parecer tiempo de manga corta."
+      },
+      {
+        "title": "Buena temperatura para caminar",
+        "body": "Al moverse, 12 °C suelen sentirse bien. La sombra y el viento son lo que más enfría."
+      },
+      {
+        "title": "El sol cambia mucho la experiencia",
+        "body": "Con sol puede sentirse agradable; con humedad o aire se vuelve bastante más fresco."
+      }
+    ]
+  }
+}
