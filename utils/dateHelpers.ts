@@ -5,12 +5,12 @@ import { execSync } from 'child_process';
 function resolveFullPath(filePath: string): string {
     return path.isAbsolute(filePath)
         ? filePath
-        : path.join(process.cwd(), filePath);
+        : path.join(/* turbopackIgnore: true */ process.cwd(), filePath);
 }
 
 function getGitModifiedTime(fullPath: string): number {
     try {
-        const relPath = path.relative(process.cwd(), fullPath).replace(/\\/g, '/');
+        const relPath = path.relative(/* turbopackIgnore: true */ process.cwd(), fullPath).replace(/\\/g, '/');
         const gitCmd = `git log -1 --format=%cI "${relPath}"`;
         const gitDateStr = execSync(gitCmd, {
             encoding: 'utf-8',
