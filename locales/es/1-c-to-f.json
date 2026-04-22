@@ -1,0 +1,83 @@
+{
+  "page": {
+    "title": "1 °C a Fahrenheit (33,8 °F): fórmula, congelación y sensación térmica",
+    "description": "Convierte 1 °C a 33,8 °F y entiende su relación con el punto de congelación, la escarcha, el frío exterior y las dudas sobre temperatura corporal.",
+    "intro": "1 °C (33,8 °F) está apenas por encima del punto de congelación del agua. En la vida diaria importa porque es la clase de temperatura en la que aparecen escarcha, viento frío y superficies resbaladizas aunque el aire todavía no haya bajado oficialmente de cero."
+  },
+  "warning": {
+    "title": "Qué conviene vigilar a 1 °C",
+    "content": "<strong>1 °C todavía no está por debajo de cero, pero sí muy cerca.</strong> Puentes, aceras, hierba, parabrisas y zonas de sombra pueden enfriarse antes que el aire y empezar a mostrar escarcha o hielo fino."
+  },
+  "context": {
+    "weather": {
+      "title": "Qué sensación deja 1 °C",
+      "content": "En términos de tiempo, 1 °C suele sentirse claramente frío. Es típico de mañanas de invierno, trayectos nocturnos o comienzos de primavera en los que todavía hay riesgo de helada.",
+      "items": [
+        "La mayoría de la gente prefiere abrigo o varias capas",
+        "Con viento, 1 °C se siente bastante más frío",
+        "Puede haber escarcha aunque la previsión siga algo por encima de cero",
+        "Si estás quieto mucho rato, el frío se nota enseguida"
+      ]
+    },
+    "safety": {
+      "title": "Por qué 1 °C sigue importando para la seguridad",
+      "content": "Aunque 1 °C está un poco por encima del punto de congelación, el suelo y otras superficies no siempre tienen la misma temperatura que el aire. Algunas zonas pueden helarse antes.",
+      "items": [
+        "Conviene mirar puentes, aceras y parabrisas a primera hora",
+        "El aire frío y húmedo suele sentirse peor que el frío seco",
+        "Si vas a esperar o caminar mucho tiempo, abrígate bien",
+        "Mascotas, plantas y tuberías expuestas pueden necesitar protección según la zona"
+      ]
+    },
+    "environmental": {
+      "title": "Por qué se consulta tanto 1 °C",
+      "content": "1 °C queda justo por encima de uno de los límites más importantes en la vida diaria: el de congelación. Por eso mucha gente busca este valor al revisar carreteras, coches, tiempo o planes al aire libre.",
+      "items": [
+        "1 °C = 33,8 °F, justo por encima del punto de congelación",
+        "El agua se congela a 0 °C (32 °F), solo un grado más abajo",
+        "La lluvia fría a esta temperatura suele sentirse peor que el aire seco",
+        "Mucha gente mezcla estas búsquedas con fiebre o temperatura corporal, así que la comparación resulta útil"
+      ]
+    }
+  },
+  "negative": {
+    "result": "¿Cuánto es -1 °C en Fahrenheit?",
+    "description": "-1 °C equivalen a <strong>{negativeFahrenheit} °F</strong>. Por eso una diferencia tan pequeña entre 1 °C y -1 °C puede cambiar mucho el estado de la carretera y la sensación real."
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "¿Cuánto es 1 °C en Fahrenheit?",
+        "answer": "1 °C equivalen a 33,8 °F. La fórmula es °F = (°C × 9/5) + 32, así que 1 × 1,8 + 32 = 33,8."
+      },
+      {
+        "question": "¿1 °C significa congelación?",
+        "answer": "No exactamente. El agua se congela a 0 °C (32 °F), así que 1 °C está justo por encima. Aun así, puede haber escarcha o placas frías en algunas superficies."
+      },
+      {
+        "question": "¿Cuál es la fórmula para convertir 1 °C a Fahrenheit?",
+        "answer": "La fórmula es °F = (°C × 9/5) + 32. Aplicada a 1 °C, da 33,8 °F."
+      },
+      {
+        "question": "¿Cuánto es 1 °C en Kelvin?",
+        "answer": "1 °C equivalen a 274,15 K. Para convertir, se usa K = °C + 273,15."
+      },
+      {
+        "question": "¿1 °C es fiebre?",
+        "answer": "No. La fiebre humana suele empezar cerca de 38 °C. Si 1 °C fuera una temperatura corporal, estaría muchísimo por debajo de lo normal."
+      },
+      {
+        "question": "¿Qué sensación deja 1 °C en la calle?",
+        "answer": "1 °C suele sentirse frío, sobre todo con viento o humedad. Es una temperatura que hace pensar en abrigo, escarcha y superficies resbaladizas."
+      },
+      {
+        "question": "¿Cómo convierto Celsius a Fahrenheit rápido?",
+        "answer": "Como truco aproximado, puedes duplicar el valor en Celsius y sumar unos 30. Para 1 °C te da cerca de 32 °F, bastante próximo al valor real de 33,8 °F."
+      },
+      {
+        "question": "¿En qué temperatura coinciden Celsius y Fahrenheit?",
+        "answer": "Ambas escalas coinciden en -40, es decir, -40 °C = -40 °F."
+      }
+    ]
+  }
+}

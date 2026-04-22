@@ -1,0 +1,131 @@
+{
+  "seo": {
+    "title": "17 °C in Fahrenheit (62,6 °F) | Leitfaden & Rechner",
+    "description": "Rechne 17 °C schnell in Fahrenheit um. Erfahre, dass 17 °C genau 62,6 °F sind, sieh die Rechenschritte und ordne die Temperatur besser ein."
+  },
+  "header": {
+    "title": "17 °C in Fahrenheit (62,6 °F)",
+    "tagline": "Wandle 17 °C in Fahrenheit um und nutze praktische Hinweise zu frischem Wetter, leichten Schichten, Alltagskomfort und Raumtemperatur."
+  },
+  "conversion": {
+    "intro": "17 °C entsprechen 62,6 °F."
+  },
+  "strategy": {
+    "keywords": "17 c in fahrenheit 17 celsius in fahrenheit 62,6 fahrenheit frisch wetter kleidung schlaf raumtemperatur fieber"
+  },
+  "comfortGuide": {
+    "title": "Komfort bei 17 °C",
+    "subtitle": "Eine frische Temperatur zwischen kühl und angenehm",
+    "intro": "17 °C (62,6 °F) fühlen sich oft angenehm frisch an. Das liegt etwas unter klassischer Raumtemperatur, wirkt aber für Wege, Erledigungen und wenig überheizte Räume auf viele Menschen sehr angenehm.",
+    "chart": {
+      "cold": {
+        "label": "Kühl",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Typisches Wetter für eine leichte Jacke"
+      },
+      "moderate": {
+        "label": "Frisch",
+        "value": "16-18°C",
+        "desc": "60.8-64.4°F<br>Angenehm mit leichter Lage"
+      },
+      "warm": {
+        "label": "Angenehm",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Ausgewogener Innenraumkomfort"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatur",
+        "description": "Beschreibung",
+        "typicalUse": "Typische Nutzung"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Kühles Außenwetter",
+          "use": "Jacke oder Extraschicht ist meist sinnvoll",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "16°C (60.8°F)",
+          "desc": "Frisch und leicht kühl",
+          "use": "Gut für aktive Tage mit leichter Lage",
+          "href": "/16-c-to-f"
+        },
+        {
+          "temp": "17°C (62.6°F)",
+          "desc": "Kühl bis mild",
+          "use": "Praktische Mitte für Spaziergänge, Erledigungen und ruhige Räume",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Kühl, aber angenehm",
+          "use": "Wird oft fürs Schlafen und ruhige Innenräume geschätzt",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "20°C (68°F)",
+          "desc": "Klassische Raumtemperatur",
+          "use": "Häufiges Komfortziel in Wohnungen",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normale Körpertemperatur",
+          "use": "Nützlich, wenn Wetter mit Fieberwerten verwechselt wird",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Hinweis:</strong> 17 °C fühlen sich in Bewegung meist mild an, können aber in stillen Räumen, nachts oder bei Wind deutlich frischer wirken."
+  },
+  "faq": [
+    {
+      "question": "Wie viel sind 17 Grad Celsius in Fahrenheit?",
+      "answerHtml": "<p>17 Grad Celsius sind 62,6 Grad Fahrenheit. Die Formel lautet: °F = (°C × 9/5) + 32. 17 mal 1,8 ergibt 30,6, plus 32 ergibt 62,6 °F.</p>"
+    },
+    {
+      "question": "Sind 17 °C heiß oder kalt?",
+      "answerHtml": "<p>17 °C (62,6 °F) gelten meist als kühl bis mild. Das liegt unter klassischer Raumtemperatur, bleibt aber für viele Alltagsaktivitäten angenehm.</p><p>Die meisten würden es nicht als richtig kalt bezeichnen, aber auch nicht wie Sommerwärme behandeln.</p>"
+    },
+    {
+      "question": "Sind 17 °C Fieber?",
+      "answerHtml": "<p>Nein. Normale Körpertemperatur liegt bei etwa 37 °C (98,6 °F), und Fieber beginnt meist erst um 38 °C (100,4 °F).</p>"
+    },
+    {
+      "question": "Wie warm sind 17 °C in Fahrenheit gefühlt?",
+      "answerHtml": "<p>17 °C entsprechen 62,6 °F. Die meisten empfinden das als frisch bis mild: merklich kühler als klassische Raumtemperatur, aber für normale Alltagswege meist sehr gut machbar.</p>"
+    },
+    {
+      "question": "Was sollte ich bei 17 °C tragen?",
+      "answerHtml": "<p>Bei 17 °C reicht den meisten eine leichte Extraschicht.</p><ul><li>T-Shirt oder leichtes Langarmshirt mit Strickjacke oder dünner Jacke</li><li>Jeans, lange Hosen oder ähnliche Alltagskleidung</li><li>Sneaker oder andere geschlossene Schuhe</li></ul><p>Bei Sonne kann es leichter gehen, aber Wind und Schatten spielen weiter eine Rolle.</p>"
+    },
+    {
+      "question": "Sind 17 °C gut zum Schlafen?",
+      "answerHtml": "<p>Für viele ja. 17 °C liegen in einem Bereich, den viele fürs Schlafen mögen, weil ein Schlafzimmer oft etwas kühler angenehmer ist als ein Wohnraum.</p>"
+    },
+    {
+      "question": "Wie rechne ich -17 °C in Fahrenheit um?",
+      "answerHtml": "<p>-17 °C entsprechen 1,4 °F. Das ist klarer Winterfrost und deutlich strenger als 17 °C über null.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "17 °C (62,6 °F) im Alltag",
+    "cards": [
+      {
+        "title": "Eine flexible Zwischen-Temperatur",
+        "body": "17 °C liegen in dem Bereich, der frisch wirkt, aber selten unangenehm ist. Deshalb passt die Temperatur gut für Wege, Besorgungen und Tage mit Wechsel zwischen drinnen und draußen."
+      },
+      {
+        "title": "Oft angenehmer als überheizte Räume",
+        "body": "Viele empfinden 17 °C als angenehmer als zu warme Räume, besonders beim Schlafen, Konzentrieren oder Bewegen in der Wohnung."
+      },
+      {
+        "title": "Für viele noch kein reines T-Shirt-Wetter",
+        "body": "Manche kommen bei 17 °C schon mit sehr leichter Kleidung aus, viele greifen aber weiterhin gern zu Strickjacke, Hemdjacke oder dünner Jacke."
+      }
+    ]
+  }
+}

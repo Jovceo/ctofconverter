@@ -1,0 +1,79 @@
+{
+  "page": {
+    "title": "1 Celsius en Fahrenheit | Calculatrice, formule et tableau",
+    "description": "Convertissez instantanément 1 degré Celsius en Fahrenheit. Retrouvez la formule (1 °C = 33,8 °F), des repères utiles et le contexte météo autour de cette température proche du gel.",
+    "intro": "1 °C (33,8 °F) se situe juste au-dessus du point de congélation de l’eau. Dans la vie courante, c’est typiquement une température où le givre, le vent froid et les surfaces glissantes commencent à compter."
+  },
+  "warning": {
+    "title": "Prudence par temps froid à 1 °C (33,8 °F)",
+    "content": "<strong>1 °C n’est pas un grand froid, mais c’est suffisamment proche de 0 °C pour que les conditions changent vite.</strong> Routes humides, ponts, pare-brise, pelouses et trottoirs peuvent devenir glissants avant même que l’air ne passe officiellement sous zéro."
+  },
+  "context": {
+    "weather": {
+      "title": "Ce que 1 °C veut dire côté météo",
+      "content": "En météo, 1 °C donne une sensation froide et très proche du gel. On voit souvent cette valeur lors des matins d’hiver, des trajets nocturnes ou des débuts de printemps encore exposés au givre.",
+      "items": [
+        "Un manteau d’hiver ou plusieurs couches chaudes sont souvent adaptés",
+        "Le vent rend 1 °C nettement plus piquant",
+        "Le givre matinal reste possible même si la prévision reste au-dessus de zéro",
+        "Rester immobile devient vite inconfortable"
+      ]
+    },
+    "safety": {
+      "title": "Pourquoi 1 °C compte pour la sécurité",
+      "content": "Même à 1 °C, les surfaces ne suivent pas toujours exactement la température de l’air. L’ombre, l’altitude ou le refroidissement nocturne peuvent créer des plaques glissantes avant 0 °C.",
+      "items": [
+        "Surveillez les ponts, trottoirs et pare-brise tôt le matin",
+        "L’air froid et humide paraît souvent plus rude que le chiffre seul",
+        "Habillez-vous chaudement si vous attendez dehors ou marchez longtemps",
+        "Animaux, plantes et tuyaux exposés peuvent encore avoir besoin de protection"
+      ]
+    },
+    "environmental": {
+      "title": "1 °C dans son contexte",
+      "content": "1 °C se trouve juste au-dessus de l’un des seuils les plus importants du quotidien : le gel. C’est pour cela que beaucoup recherchent cette valeur avant de conduire, sortir ou vérifier la météo.",
+      "items": [
+        "1 °C = 33,8 °F, donc juste au-dessus du point de congélation",
+        "L’eau gèle à 0 °C (32 °F), soit seulement 1 degré plus bas",
+        "La pluie froide à cette température paraît souvent plus dure qu’un air sec",
+        "Certaines recherches mélangent 1 °C et température corporelle, d’où l’intérêt d’une comparaison avec la fièvre"
+      ]
+    }
+  },
+  "negative": {
+    "result": "-1 °C en Fahrenheit",
+    "description": "-1 °C correspondent à <strong>{negativeFahrenheit} °F</strong>. Ce passage juste sous zéro change beaucoup en météo, car on entre réellement sous le point de congélation."
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "Combien font 1 degré Celsius en Fahrenheit ?",
+        "answer": "1 degré Celsius correspond à 33,8 degrés Fahrenheit. La formule est : °F = (°C × 9/5) + 32. Pour 1 °C, on obtient donc (1 × 1,8) + 32 = 33,8 °F."
+      },
+      {
+        "question": "Quelle est la formule pour convertir 1 °C en Fahrenheit ?",
+        "answer": "La formule est : °F = (°C × 9/5) + 32. Pour 1 °C, on multiplie 1 par 1,8 puis on ajoute 32 pour obtenir 33,8 °F."
+      },
+      {
+        "question": "Combien vaut 1 °C en Kelvin ?",
+        "answer": "1 °C correspond à 274,15 Kelvin. Pour convertir des degrés Celsius en Kelvin, on ajoute 273,15."
+      },
+      {
+        "question": "1 °C correspond-il à de la fièvre ?",
+        "answer": "Non. La fièvre humaine commence généralement autour de 38 °C (100,4 °F). 1 °C est extrêmement loin d’une température corporelle normale."
+      },
+      {
+        "question": "Comment convertir rapidement des Celsius en Fahrenheit ?",
+        "answer": "Une astuce approximative consiste à doubler la valeur Celsius puis à ajouter environ 30. Pour 1 °C, cela donne environ 32 °F, ce qui reste proche du résultat exact de 33,8 °F."
+      },
+      {
+        "question": "À quelle température Celsius et Fahrenheit sont-ils égaux ?",
+        "answer": "Les échelles Celsius et Fahrenheit se croisent à -40. Autrement dit, -40 °C = -40 °F."
+      },
+      {
+        "question": "Qu’est-ce que le zéro absolu en Celsius et en Fahrenheit ?",
+        "answer": "Le zéro absolu correspond à -273,15 °C et à -459,67 °F. C’est la température théorique la plus basse possible."
+      }
+    ]
+  }
+}

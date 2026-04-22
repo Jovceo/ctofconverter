@@ -1,0 +1,131 @@
+{
+  "seo": {
+    "title": "17 °C en Fahrenheit (62,6 °F) | Guide et calculateur",
+    "description": "Convertissez rapidement 17 °C en Fahrenheit. Découvrez que 17 °C correspondent à 62,6 °F, voyez le calcul et comprenez le ressenti de cette température."
+  },
+  "header": {
+    "title": "17 °C en Fahrenheit (17 degrés Celsius en °F)",
+    "tagline": "Convertissez 17 °C en Fahrenheit avec des repères utiles pour le temps frais, les couches légères, le confort quotidien et la température intérieure."
+  },
+  "conversion": {
+    "intro": "17 °C correspondent à 62,6 °F."
+  },
+  "strategy": {
+    "keywords": "17 c en fahrenheit 17 celsius en fahrenheit 62,6 fahrenheit temps frais tenue température pièce fièvre"
+  },
+  "comfortGuide": {
+    "title": "Repères de confort à 17 °C",
+    "subtitle": "Une température fraîche qui reste facile au quotidien",
+    "intro": "17 °C (62,6 °F) semblent souvent agréablement frais. C’est un peu en dessous de la température ambiante classique, mais beaucoup de gens trouvent cela très confortable pour marcher, se déplacer ou vivre dans une pièce peu chauffée.",
+    "chart": {
+      "cold": {
+        "label": "Frais",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Temps de veste légère"
+      },
+      "moderate": {
+        "label": "Doux",
+        "value": "16-18°C",
+        "desc": "60.8-64.4°F<br>Bien avec une petite couche"
+      },
+      "warm": {
+        "label": "Confortable",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Confort intérieur équilibré"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Température",
+        "description": "Ressenti",
+        "typicalUse": "Usage habituel"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Temps frais",
+          "use": "Une veste ou une couche en plus est généralement utile",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "16°C (60.8°F)",
+          "desc": "Frais et légèrement vif",
+          "use": "Confortable pour les journées actives avec une couche légère",
+          "href": "/16-c-to-f"
+        },
+        {
+          "temp": "17°C (62.6°F)",
+          "desc": "Frais à doux",
+          "use": "Un bon équilibre pour les marches, trajets et pièces calmes",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Frais mais agréable",
+          "use": "Souvent apprécié pour dormir ou rester tranquille",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "20°C (68°F)",
+          "desc": "Température ambiante classique",
+          "use": "Objectif de confort pour beaucoup de foyers",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Température corporelle normale",
+          "use": "Repère utile si la recherche mélange météo et fièvre",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note :</strong> 17 °C paraissent souvent doux quand on bouge, mais plus frais dans une pièce immobile, le soir ou avec du vent."
+  },
+  "faq": [
+    {
+      "question": "Combien font 17 degrés Celsius en Fahrenheit ?",
+      "answerHtml": "<p>17 degrés Celsius correspondent à 62,6 degrés Fahrenheit. La formule est : °F = (°C × 9/5) + 32. En multipliant 17 par 1,8, on obtient 30,6, puis on ajoute 32 pour atteindre 62,6 °F.</p>"
+    },
+    {
+      "question": "17 °C, est-ce chaud ou froid ?",
+      "answerHtml": "<p>17 °C (62,6 °F) sont généralement considérés comme frais à doux. C’est plus frais qu’une température ambiante classique, mais cela reste confortable pour beaucoup d’activités du quotidien.</p><p>La plupart des gens ne parleraient pas de froid marqué, mais ne s’habilleraient pas non plus comme en plein été.</p>"
+    },
+    {
+      "question": "17 °C correspondent-ils à une fièvre ?",
+      "answerHtml": "<p>Non. Une température corporelle normale tourne autour de 37 °C (98,6 °F), et la fièvre commence en général vers 38 °C (100,4 °F).</p>"
+    },
+    {
+      "question": "À quel ressenti correspond 17 °C en Fahrenheit ?",
+      "answerHtml": "<p>17 °C font 62,6 °F, ce que beaucoup décrivent comme frais à doux. On sent clairement la fraîcheur, mais la température reste agréable pour des activités quotidiennes normales.</p>"
+    },
+    {
+      "question": "Comment s’habiller par 17 °C ?",
+      "answerHtml": "<p>À 17 °C, une petite couche supplémentaire suffit généralement.</p><ul><li>T-shirt ou haut léger avec gilet, surchemise ou veste fine</li><li>Jean, pantalon ou autre bas confortable</li><li>Baskets ou chaussures fermées pour le quotidien</li></ul><p>Avec du soleil, on peut se sentir bien en tenue plus légère, mais le vent et l’ombre comptent encore.</p>"
+    },
+    {
+      "question": "17 °C sont-ils adaptés pour dormir ?",
+      "answerHtml": "<p>Oui, pour beaucoup de personnes. 17 °C restent dans une plage appréciée pour le sommeil, car une chambre un peu plus fraîche qu’un salon est souvent perçue comme plus agréable.</p>"
+    },
+    {
+      "question": "Comment convertir -17 °C en Fahrenheit ?",
+      "answerHtml": "<p>-17 °C correspondent à 1,4 °F. C’est une vraie température de grand froid hivernal, très différente de 17 °C au-dessus de zéro.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "17 °C (62,6 °F) dans la vie courante",
+    "cards": [
+      {
+        "title": "Une température intermédiaire très souple",
+        "body": "17 °C se situent dans cette zone utile où l’on ressent de la fraîcheur sans réelle gêne. Cela convient bien aux trajets, courses et journées mêlant intérieur et extérieur."
+      },
+      {
+        "title": "Souvent plus agréable qu’une pièce surchauffée",
+        "body": "Beaucoup trouvent 17 °C plus confortables qu’un intérieur trop chaud, surtout pour dormir, se concentrer ou bouger dans la maison."
+      },
+      {
+        "title": "Pas encore une vraie météo en T-shirt pour tout le monde",
+        "body": "Certaines personnes se sentent bien très légèrement habillées à 17 °C, mais beaucoup préfèrent encore un gilet ou une veste fine."
+      }
+    ]
+  }
+}

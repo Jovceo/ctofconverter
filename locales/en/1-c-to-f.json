@@ -1,0 +1,79 @@
+{
+  "page": {
+    "title": "1 Celsius to Fahrenheit | Conversion Calculator, Formula & Chart",
+    "description": "Convert 1 degree Celsius to Fahrenheit instantly with our calculator. Learn the formula (1\u00b0C = 33.8\u00b0F), view conversion charts, and understand temperature equivalents for fever and medical contexts.",
+    "intro": "1\u00b0C (33.8\u00b0F) is just above the freezing point of water. In daily life, it is the kind of temperature where frost, cold wind, and slick surfaces start to matter even though the air is technically still above freezing."
+  },
+  "warning": {
+    "title": "Cold-weather caution at 1\u00b0C (33.8\u00b0F)",
+    "content": "<strong>1\u00b0C is not deep winter cold, but it is close enough to freezing that conditions can change quickly.</strong> Wet roads, bridges, grass, and car surfaces can feel colder than the air and may begin to freeze in the right conditions."
+  },
+  "context": {
+    "weather": {
+      "title": "Weather meaning of 1\u00b0C",
+      "content": "In weather terms, 1\u00b0C feels cold and close to freezing. It is common in winter mornings, late-night commutes, and early spring days where frost is still possible.",
+      "items": [
+        "A winter coat or several warm layers usually feel appropriate",
+        "Wind makes 1\u00b0C feel noticeably sharper",
+        "Morning frost is still possible even if the forecast stays just above zero",
+        "It is cold enough that standing still quickly feels uncomfortable"
+      ]
+    },
+    "safety": {
+      "title": "Why 1\u00b0C matters for safety",
+      "content": "Although 1\u00b0C is slightly above freezing, surfaces do not always match the air temperature. Shade, elevation, and overnight cooling can make some spots icy before the official temperature reaches 0\u00b0C.",
+      "items": [
+        "Watch bridges, sidewalks, and car windscreens early in the day",
+        "Cold damp air can feel harsher than the raw number suggests",
+        "Dress warmly if you will be waiting outside or walking for long periods",
+        "Pets, plants, and exposed pipes may still need protection in some areas"
+      ]
+    },
+    "environmental": {
+      "title": "1\u00b0C in context",
+      "content": "1\u00b0C sits right above one of the most important temperature thresholds in daily life: freezing. That is why people often search this value when checking roads, weather, cars, or outdoor plans.",
+      "items": [
+        "1\u00b0C = 33.8\u00b0F, just above freezing point",
+        "Water freezes at 0\u00b0C (32\u00b0F), only 1 degree lower",
+        "Cold rain at this temperature often feels harsher than dry air",
+        "Many people confuse cold-weather values like 1\u00b0C with body-temperature questions, so comparison with fever can be useful"
+      ]
+    }
+  },
+  "negative": {
+    "result": "-1\u00b0C to Fahrenheit",
+    "description": "Negative 1\u00b0C equals <strong>{negativeFahrenheit}\u00b0F</strong>. That is below freezing, which is why the jump from 1\u00b0C to -1\u00b0C can matter so much in weather forecasts."
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "What is 1 degree Celsius in Fahrenheit?",
+        "answer": "1 degree Celsius equals 33.8 degrees Fahrenheit. Use the formula \u00b0F = (\u00b0C \u00d7 9/5) + 32. For 1\u00b0C, that becomes (1 \u00d7 1.8) + 32 = 33.8\u00b0F."
+      },
+      {
+        "question": "What is the formula to convert 1\u00b0C to Fahrenheit?",
+        "answer": "The formula is \u00b0F = (\u00b0C \u00d7 9/5) + 32. For 1\u00b0C, multiply 1 by 1.8 to get 1.8, then add 32 to get 33.8\u00b0F."
+      },
+      {
+        "question": "What is 1\u00b0C in Kelvin?",
+        "answer": "1\u00b0C equals 274.15 Kelvin. To convert Celsius to Kelvin, use K = \u00b0C + 273.15."
+      },
+      {
+        "question": "Is 1\u00b0C considered a fever?",
+        "answer": "No. 1\u00b0C is nowhere near a fever temperature. Human fever usually starts around 38\u00b0C (100.4\u00b0F). If 1\u00b0C were a body-temperature reading, it would be far below survivable human body temperature."
+      },
+      {
+        "question": "How do I convert Celsius to Fahrenheit quickly?",
+        "answer": "A common shortcut is to double the Celsius number and add about 30. For 1\u00b0C, that gives you roughly 32\u00b0F, which is close to the exact answer of 33.8\u00b0F. It is a quick estimate rather than an exact conversion."
+      },
+      {
+        "question": "At what temperature are Celsius and Fahrenheit equal?",
+        "answer": "Celsius and Fahrenheit are equal at -40. In other words, -40\u00b0C is exactly the same as -40\u00b0F."
+      },
+      {
+        "question": "What is absolute zero in Celsius and Fahrenheit?",
+        "answer": "Absolute zero is -273.15\u00b0C and -459.67\u00b0F. It is the theoretical lowest possible temperature."
+      }
+    ]
+  }
+}

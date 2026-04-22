@@ -1,0 +1,131 @@
+{
+  "seo": {
+    "title": "16 °C a Fahrenheit (60,8 °F): sensación, ropa y temperatura interior",
+    "description": "Convierte 16 °C a 60,8 °F y entiende cómo se siente esta temperatura en interiores, al salir y al vestirte."
+  },
+  "header": {
+    "title": "16 °C a Fahrenheit (60,8 °F)",
+    "tagline": "Herramienta gratuita para convertir 16 °C a 60,8 °F y entender si se siente fresco, agradable o algo frío en el día a día."
+  },
+  "conversion": {
+    "intro": "16 °C en Fahrenheit son 60,8 °F."
+  },
+  "strategy": {
+    "keywords": "16 c en fahrenheit 16 celsius en fahrenheit 60,8 fahrenheit clima fresco ropa temperatura ambiente fiebre"
+  },
+  "comfortGuide": {
+    "title": "Guía de confort para 16 °C",
+    "subtitle": "Fresco, pero fácil de llevar con una capa ligera",
+    "intro": "16 °C (60,8 °F) suelen sentirse frescos y un poco fríos. Caminando o moviéndote puede resultar agradable; en interior, en cambio, muchas personas prefieren una sudadera fina, una chaqueta ligera o una sobrecamisa.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Tiempo de chaqueta ligera"
+      },
+      "moderate": {
+        "label": "Suave",
+        "value": "16-19°C",
+        "desc": "60.8-66.2°F<br>Mejor con una capa ligera"
+      },
+      "warm": {
+        "label": "Cómodo",
+        "value": "20-22°C",
+        "desc": "68-71.6°F<br>Más cerca de la temperatura ambiente"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensación",
+        "typicalUse": "Uso habitual"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Fresco",
+          "use": "Suele apetecer una chaqueta ligera",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "16°C (60.8°F)",
+          "desc": "Fresco y algo frío",
+          "use": "Va bien para caminar, hacer recados y vestir por capas",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Fresco pero agradable",
+          "use": "A menudo gusta para dormir o estar tranquilo",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "19°C (66.2°F)",
+          "desc": "Cómodo con un punto fresco",
+          "use": "Interior equilibrado sin sentirse cargado",
+          "href": "/19-c-to-f"
+        },
+        {
+          "temp": "20°C (68°F)",
+          "desc": "Temperatura ambiente",
+          "use": "Ajuste habitual en casa y oficina",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Sirve para comparar si alguien piensa en fiebre",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 16 °C suelen sentirse mejor en movimiento que estando quieto. El viento, la humedad y la sombra de primera hora pueden hacer que parezca más frío."
+  },
+  "faq": [
+    {
+      "question": "¿Cuánto son 16 grados Celsius en Fahrenheit?",
+      "answerHtml": "<p>16 grados Celsius equivalen a 60,8 grados Fahrenheit. La fórmula es °F = (°C × 9/5) + 32. Si multiplicas 16 por 1,8 obtienes 28,8; al sumar 32 llegas a 60,8 °F.</p>"
+    },
+    {
+      "question": "¿16 °C se siente frío o calor?",
+      "answerHtml": "<p>16 °C (60,8 °F) suele describirse como fresco o templado tirando a frío. No hace falta ropa de invierno fuerte, pero a mucha gente le apetece una capa ligera.</p><p>Fuera puede sentirse agradable y fresco; dentro, si estás sentado mucho tiempo, puede parecer un poco frío.</p>"
+    },
+    {
+      "question": "¿Cuánto es -16 °C en Fahrenheit?",
+      "answerHtml": "<p>-16 °C equivalen a 3,2 °F. Eso ya es un frío invernal serio y no tiene nada que ver con 16 °C por encima de cero.</p>"
+    },
+    {
+      "question": "¿16 °C es fiebre?",
+      "answerHtml": "<p>No. 16 °C no es fiebre. La fiebre humana suele empezar alrededor de 38 °C (100,4 °F), mientras que la temperatura corporal normal ronda los 37 °C (98,6 °F).</p><p>Si 16 °C fuera una temperatura corporal, sería peligrosamente baja.</p>"
+    },
+    {
+      "question": "¿Qué ropa conviene a 16 °C?",
+      "answerHtml": "<p>Con 16 °C normalmente basta con vestir por capas ligeras.</p><ul><li>Camiseta o manga larga fina con cárdigan, sobrecamisa o chaqueta ligera</li><li>Vaqueros, pantalón largo u otra prenda similar</li><li>Zapatillas o calzado cerrado para el día a día</li></ul><p>Si hay viento o llovizna, una capa extra suele marcar bastante la diferencia.</p>"
+    },
+    {
+      "question": "¿16 °C es bueno para actividades al aire libre?",
+      "answerHtml": "<p>Sí. 16 °C suele ser una temperatura muy buena para caminar, hacer ejercicio suave, ir y venir o pasar un rato fuera. Normalmente se siente fresca, no dura.</p><p>La mayoría de la gente solo necesita una capa ligera, no ropa de invierno pesada.</p>"
+    },
+    {
+      "question": "¿Cómo calculo 16 °C a Fahrenheit de cabeza?",
+      "answerHtml": "<p>Una estimación rápida es doblar el valor en Celsius y sumar unos 30. Para 16 °C eso da unos 62 °F, bastante cerca del resultado exacto de 60,8 °F.</p><p>No es exacto, pero sirve muy bien para comparar el tiempo de un vistazo.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "16 °C (60,8 °F) en la vida diaria",
+    "cards": [
+      {
+        "title": "Fresco, pero llevadero",
+        "body": "A 16 °C mucha gente está bien fuera con una sola capa ligera. Se nota fresco, pero no suele resultar incómodo."
+      },
+      {
+        "title": "Dentro parece más frío de lo que muchos esperan",
+        "body": "En una habitación, 16 °C está un poco por debajo de la temperatura ambiente clásica. Puede ir muy bien para dormir, pero trabajando o leyendo a veces apetece un jersey fino."
+      },
+      {
+        "title": "La sensación cambia mucho si te mueves",
+        "body": "Caminar o desplazarte con 16 °C suele sentirse bien, mientras que estar quieto en esa misma temperatura hace notar más el frescor."
+      }
+    ]
+  }
+}

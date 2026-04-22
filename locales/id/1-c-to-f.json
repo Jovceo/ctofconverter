@@ -1,0 +1,79 @@
+{
+  "page": {
+    "title": "1 Celsius ke Fahrenheit | Kalkulator, rumus, dan tabel",
+    "description": "Ubah 1 derajat Celsius ke Fahrenheit secara instan. Pelajari rumus (1°C = 33.8°F), lihat perbandingan praktis, dan pahami arti suhu yang sangat dekat dengan titik beku ini.",
+    "intro": "1°C (33.8°F) berada tepat di atas titik beku air. Dalam kehidupan sehari-hari, ini adalah suhu saat embun beku, angin dingin, dan permukaan licin mulai benar-benar terasa penting."
+  },
+  "warning": {
+    "title": "Waspada dingin pada 1°C (33.8°F)",
+    "content": "<strong>1°C memang belum dingin ekstrem, tetapi cukup dekat ke titik beku sehingga kondisi bisa berubah cepat.</strong> Jalan basah, jembatan, rumput, dan kaca mobil bisa terasa lebih dingin daripada suhu udara dan mulai licin dalam kondisi tertentu."
+  },
+  "context": {
+    "weather": {
+      "title": "Arti 1°C dalam cuaca",
+      "content": "Dalam konteks cuaca, 1°C terasa dingin dan sangat dekat ke titik beku. Suhu ini sering muncul pada pagi musim dingin, perjalanan malam, dan awal musim hujan atau musim semi yang masih berisiko embun beku.",
+      "items": [
+        "Jaket tebal atau beberapa layer hangat biasanya cocok",
+        "Angin membuat 1°C terasa jauh lebih tajam",
+        "Embun beku pagi masih mungkin terjadi walau prakiraan sedikit di atas nol",
+        "Berdiri diam lama-lama cepat terasa tidak nyaman"
+      ]
+    },
+    "safety": {
+      "title": "Mengapa 1°C penting untuk keselamatan",
+      "content": "Pada 1°C, permukaan tidak selalu sama suhunya dengan udara. Area teduh, jembatan, dan permukaan yang melepas panas pada malam hari bisa menjadi licin sebelum suhu resmi mencapai 0°C.",
+      "items": [
+        "Perhatikan jembatan, trotoar, dan kaca depan mobil di pagi hari",
+        "Udara dingin yang lembap sering terasa lebih keras daripada angkanya",
+        "Pakai pakaian hangat jika harus menunggu di luar atau berjalan lama",
+        "Di beberapa daerah, tanaman, hewan peliharaan, dan pipa luar masih perlu perlindungan"
+      ]
+    },
+    "environmental": {
+      "title": "Menempatkan 1°C dalam konteks",
+      "content": "1°C berada tepat di atas salah satu ambang paling penting dalam kehidupan sehari-hari: titik beku. Karena itu banyak orang mencari suhu ini saat memeriksa jalan, mobil, dan rencana di luar rumah.",
+      "items": [
+        "1°C = 33.8°F, sedikit di atas titik beku",
+        "Air membeku pada 0°C (32°F), hanya 1 derajat lebih rendah",
+        "Hujan dingin pada suhu ini sering terasa lebih keras daripada udara kering",
+        "Banyak orang juga membandingkan angka seperti 1°C dengan suhu tubuh, sehingga konteks demam masih relevan"
+      ]
+    }
+  },
+  "negative": {
+    "result": "-1°C ke Fahrenheit",
+    "description": "-1°C sama dengan <strong>{negativeFahrenheit}°F</strong>. Turun hanya satu derajat ke bawah nol bisa mengubah banyak hal dalam prakiraan cuaca karena kita benar-benar masuk ke bawah titik beku."
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "1 derajat Celsius sama dengan berapa Fahrenheit?",
+        "answer": "1 derajat Celsius sama dengan 33.8 derajat Fahrenheit. Rumusnya adalah °F = (°C × 9/5) + 32. Untuk 1°C, hasilnya (1 × 1.8) + 32 = 33.8°F."
+      },
+      {
+        "question": "Apa rumus untuk mengubah 1°C ke Fahrenheit?",
+        "answer": "Rumusnya adalah °F = (°C × 9/5) + 32. Pada 1°C, kita mengalikan 1 dengan 1.8 lalu menambah 32 untuk mendapatkan 33.8°F."
+      },
+      {
+        "question": "Berapa 1°C dalam Kelvin?",
+        "answer": "1°C sama dengan 274.15 Kelvin. Untuk mengubah Celsius ke Kelvin, tambahkan 273.15."
+      },
+      {
+        "question": "Apakah 1°C dianggap demam?",
+        "answer": "Tidak. Demam manusia biasanya mulai di sekitar 38°C (100.4°F), jadi 1°C sangat jauh dari suhu tubuh normal."
+      },
+      {
+        "question": "Bagaimana cara cepat mengubah Celsius ke Fahrenheit?",
+        "answer": "Trik kasar yang sering dipakai adalah menggandakan angka Celsius lalu menambah sekitar 30. Untuk 1°C hasilnya kira-kira 32°F, cukup dekat ke hasil tepat 33.8°F."
+      },
+      {
+        "question": "Pada suhu berapa Celsius dan Fahrenheit sama?",
+        "answer": "Celsius dan Fahrenheit bernilai sama pada -40. Artinya -40°C sama persis dengan -40°F."
+      },
+      {
+        "question": "Berapa nol absolut dalam Celsius dan Fahrenheit?",
+        "answer": "Nol absolut adalah -273.15°C dan -459.67°F. Itu adalah suhu teoretis paling rendah yang mungkin dicapai."
+      }
+    ]
+  }
+}

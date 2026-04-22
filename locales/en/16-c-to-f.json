@@ -1,0 +1,131 @@
+{
+  "seo": {
+    "title": "16\u00b0C to Fahrenheit (60.8\u00b0F) | Temperature Conversion Guide",
+    "description": "Convert 16 degrees Celsius to Fahrenheit quickly. Learn that 16\u00b0C equals 60.8\u00b0F and understand if 16\u00b0C is warm or cold in different contexts."
+  },
+  "header": {
+    "title": "16\u00b0C to Fahrenheit (16 Degrees Celsius to \u00b0F)",
+    "tagline": "Convert 16\u00b0C to Fahrenheit with practical guidance for cool indoor comfort, light layers, fresh weather, and everyday temperature questions."
+  },
+  "conversion": {
+    "intro": "16\u00b0C in Fahrenheit is 60.8\u00b0F."
+  },
+  "strategy": {
+    "keywords": "16 celsius to fahrenheit 60.8 fahrenheit cool weather room temperature layering fever"
+  },
+  "comfortGuide": {
+    "title": "16\u00b0C comfort guide",
+    "subtitle": "Cool enough for a layer, but still easy for everyday life",
+    "intro": "16\u00b0C (60.8\u00b0F) feels fresh and slightly cool. Many people like it for walking or commuting, while indoors it can feel a bit cool without a light jumper or overshirt.",
+    "chart": {
+      "cold": {
+        "label": "Cool",
+        "value": "10-15\u00b0C",
+        "desc": "50-59\u00b0F<br>Light jacket weather for many people"
+      },
+      "moderate": {
+        "label": "Fresh",
+        "value": "16-19\u00b0C",
+        "desc": "60.8-66.2\u00b0F<br>Comfortable with one light layer"
+      },
+      "warm": {
+        "label": "Comfortable",
+        "value": "20-22\u00b0C",
+        "desc": "68-71.6\u00b0F<br>Standard indoor comfort"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "10\u00b0C (50\u00b0F)",
+          "desc": "Cool",
+          "use": "A light jacket usually feels right",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "16\u00b0C (60.8\u00b0F)",
+          "desc": "Fresh and slightly cool",
+          "use": "Good for walking, commuting, and rooms with light layers",
+          "highlight": true
+        },
+        {
+          "temp": "18\u00b0C (64.4\u00b0F)",
+          "desc": "Cool but comfortable",
+          "use": "Often ideal for sleep and calmer indoor time",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "19\u00b0C (66.2\u00b0F)",
+          "desc": "Comfortably cool",
+          "use": "Balanced indoor comfort that still feels fresh",
+          "href": "/19-c-to-f"
+        },
+        {
+          "temp": "20\u00b0C (68\u00b0F)",
+          "desc": "Room temperature",
+          "use": "Typical home and office thermostat setting",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "37\u00b0C (98.6\u00b0F)",
+          "desc": "Normal body temperature",
+          "use": "Useful comparison if someone confuses weather with fever",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 16\u00b0C often feels better when moving than when sitting still. Wind, early-morning shade, and damp air can make it feel cooler than the number suggests."
+  },
+  "faq": [
+    {
+      "question": "What is 16 degrees Celsius in Fahrenheit?",
+      "answerHtml": "<p>16 degrees Celsius equals 60.8 degrees Fahrenheit. Use the formula \u00b0F = (\u00b0C \u00d7 9/5) + 32. Multiply 16 by 1.8 to get 28.8, then add 32 to reach 60.8\u00b0F.</p>"
+    },
+    {
+      "question": "Is 16\u00b0C warm or cold?",
+      "answerHtml": "<p>16\u00b0C (60.8\u00b0F) is usually described as cool to mild. It is not cold enough for heavy winter clothing, but most people still prefer a light layer.</p><p>Outdoors it often feels fresh and pleasant. Indoors it can feel a bit cool if you are sitting still for long periods.</p>"
+    },
+    {
+      "question": "What is negative 16 Celsius in Fahrenheit?",
+      "answerHtml": "<p>Negative 16\u00b0C converts to 3.2\u00b0F. That is a genuine winter-cold temperature and far more severe than 16\u00b0C above zero.</p>"
+    },
+    {
+      "question": "Is 16\u00b0C a fever temperature?",
+      "answerHtml": "<p>No. 16\u00b0C is not a fever temperature. Human fever usually starts around 38\u00b0C (100.4\u00b0F), while normal body temperature is around 37\u00b0C (98.6\u00b0F).</p><p>If 16\u00b0C were a body-temperature reading, it would be dangerously below normal.</p>"
+    },
+    {
+      "question": "What should I wear at 16\u00b0C?",
+      "answerHtml": "<p>At 16\u00b0C, light layering is usually enough.</p><ul><li>A T-shirt or long-sleeve top with a cardigan, overshirt, or light jacket</li><li>Jeans, trousers, or other full-length bottoms</li><li>Closed shoes or trainers for everyday use</li></ul><p>If there is wind or drizzle, one extra layer usually makes a noticeable difference.</p>"
+    },
+    {
+      "question": "Is 16\u00b0C good for outdoor activities?",
+      "answerHtml": "<p>Yes. 16\u00b0C is often very good for walking, light exercise, commuting, or spending time outdoors. It usually feels fresh instead of harsh, especially if there is little wind.</p><p>Most people just want one light extra layer rather than heavy winter clothing.</p>"
+    },
+    {
+      "question": "How do I convert 16\u00b0C to Fahrenheit in my head?",
+      "answerHtml": "<p>A quick estimate is to double the Celsius value and add about 30. For 16\u00b0C, that gives you roughly 62\u00b0F, which is close to the exact answer of 60.8\u00b0F.</p><p>It is not exact, but it is usually good enough for quick weather comparisons.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "16\u00b0C (60.8\u00b0F) in daily life",
+    "cards": [
+      {
+        "title": "Fresh weather that still feels easy",
+        "body": "At 16\u00b0C, many people feel comfortable outdoors as long as they have one light layer. It feels fresh rather than harsh."
+      },
+      {
+        "title": "Cooler indoors than many expect",
+        "body": "Inside, 16\u00b0C is often a little cooler than standard room temperature. It can work well for bedrooms, but some people will want a jumper while working or reading."
+      },
+      {
+        "title": "Movement changes the experience",
+        "body": "Walking or commuting at 16\u00b0C often feels comfortable, while sitting still in the same temperature can feel noticeably cooler."
+      }
+    ]
+  }
+}

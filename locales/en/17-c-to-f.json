@@ -1,0 +1,131 @@
+{
+  "seo": {
+    "title": "17\u00b0C to Fahrenheit (62.6\u00b0F) | Conversion Guide & Calculator",
+    "description": "Convert 17 degrees Celsius to Fahrenheit quickly. Learn that 17\u00b0C equals 62.6\u00b0F, see the calculation steps, and understand temperature context."
+  },
+  "header": {
+    "title": "17\u00b0C to Fahrenheit (17 Degrees Celsius to \u00b0F)",
+    "tagline": "Convert 17\u00b0C to Fahrenheit with practical help for cool-mild weather, layering, everyday comfort, and room temperature questions."
+  },
+  "conversion": {
+    "intro": "17\u00b0C in Fahrenheit is 62.6\u00b0F."
+  },
+  "strategy": {
+    "keywords": "17 celsius to fahrenheit 62.6 fahrenheit cool mild weather clothing room temperature fever"
+  },
+  "comfortGuide": {
+    "title": "17\u00b0C comfort guide",
+    "subtitle": "A fresh temperature that sits between cool and comfortable",
+    "intro": "17\u00b0C (62.6\u00b0F) often feels pleasantly fresh. It is a little cooler than standard room temperature, but many people find it very comfortable for walking, daily routines, and rooms that are not overheated.",
+    "chart": {
+      "cold": {
+        "label": "Cool",
+        "value": "10-15\u00b0C",
+        "desc": "50-59\u00b0F<br>Light jacket weather"
+      },
+      "moderate": {
+        "label": "Fresh",
+        "value": "16-18\u00b0C",
+        "desc": "60.8-64.4\u00b0F<br>Comfortable with light layers"
+      },
+      "warm": {
+        "label": "Comfortable",
+        "value": "19-21\u00b0C",
+        "desc": "66.2-69.8\u00b0F<br>Balanced indoor comfort"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "10\u00b0C (50\u00b0F)",
+          "desc": "Cool outdoor weather",
+          "use": "A jacket or extra layer is usually needed",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "16\u00b0C (60.8\u00b0F)",
+          "desc": "Fresh and slightly cool",
+          "use": "Comfortable for active days with light layers",
+          "href": "/16-c-to-f"
+        },
+        {
+          "temp": "17\u00b0C (62.6\u00b0F)",
+          "desc": "Cool to mild",
+          "use": "A good middle point for walks, errands, and calm indoor spaces",
+          "highlight": true
+        },
+        {
+          "temp": "18\u00b0C (64.4\u00b0F)",
+          "desc": "Cool but comfortable",
+          "use": "Often liked for sleep and quiet indoor time",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "20\u00b0C (68\u00b0F)",
+          "desc": "Standard room temperature",
+          "use": "The classic comfort target for many homes",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "37\u00b0C (98.6\u00b0F)",
+          "desc": "Normal body temperature",
+          "use": "Useful reference if someone confuses weather with a fever reading",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 17\u00b0C usually feels mild when you are moving, but can feel cooler in a still room, at night, or when there is wind."
+  },
+  "faq": [
+    {
+      "question": "What is 17 degrees Celsius in Fahrenheit?",
+      "answerHtml": "<p>17 degrees Celsius equals 62.6 degrees Fahrenheit. Use the formula \u00b0F = (\u00b0C \u00d7 9/5) + 32. Multiply 17 by 1.8 to get 30.6, then add 32 to reach 62.6\u00b0F.</p>"
+    },
+    {
+      "question": "Is 17\u00b0C hot or cold?",
+      "answerHtml": "<p>17\u00b0C (62.6\u00b0F) is usually considered cool to mild. It is below classic room temperature, but it is still comfortable for many everyday activities.</p><p>Most people would not call it cold weather, but they also would not dress for summer heat at this temperature.</p>"
+    },
+    {
+      "question": "Is 17\u00b0C a fever temperature?",
+      "answerHtml": "<p>No. 17\u00b0C is not a fever temperature. Normal body temperature is about 37\u00b0C (98.6\u00b0F), and fever usually starts around 38\u00b0C (100.4\u00b0F).</p>"
+    },
+    {
+      "question": "How warm is 17 Celsius in Fahrenheit?",
+      "answerHtml": "<p>17\u00b0C equals 62.6\u00b0F, which most people describe as cool to mild. It feels noticeably fresher than standard room temperature, but it is still comfortable for many normal daily activities.</p>"
+    },
+    {
+      "question": "What should I wear in 17\u00b0C weather?",
+      "answerHtml": "<p>At 17\u00b0C, most people do best with one light extra layer.</p><ul><li>A T-shirt or long-sleeve top with a cardigan or light jacket</li><li>Jeans, trousers, or other comfortable full-length bottoms</li><li>Closed shoes, trainers, or similar everyday footwear</li></ul><p>If it is sunny you may feel fine in lighter clothing, but wind and shade still matter.</p>"
+    },
+    {
+      "question": "Is 17\u00b0C good for sleeping?",
+      "answerHtml": "<p>For many people, yes. 17\u00b0C is within a sleep-friendly range because bedrooms often feel better when they are a little cooler than living spaces.</p><p>Whether it feels ideal depends on your bedding, sleepwear, and whether you personally prefer a cooler or warmer room.</p>"
+    },
+    {
+      "question": "How do I convert negative 17 Celsius to Fahrenheit?",
+      "answerHtml": "<p>Negative 17\u00b0C converts to 1.4\u00b0F. That is well into winter-cold conditions and very different from 17\u00b0C above zero.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "17\u00b0C (62.6\u00b0F) in daily life",
+    "cards": [
+      {
+        "title": "A flexible in-between temperature",
+        "body": "17\u00b0C sits in that useful range where it feels fresh but usually not uncomfortable. That is why it works well for errands, commuting, and mixed indoor-outdoor days."
+      },
+      {
+        "title": "Often better than overheated rooms",
+        "body": "Many people find 17\u00b0C more pleasant than warmer rooms when they are sleeping, concentrating, or moving around the house."
+      },
+      {
+        "title": "Still not T-shirt-only weather for everyone",
+        "body": "Some people feel fine in very light clothes at 17\u00b0C, but many still prefer a cardigan, overshirt, or thin jacket."
+      }
+    ]
+  }
+}

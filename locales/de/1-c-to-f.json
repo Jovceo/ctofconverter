@@ -1,0 +1,79 @@
+{
+  "page": {
+    "title": "1 Celsius in Fahrenheit | Rechner, Formel und Tabelle",
+    "description": "Wandle 1 Grad Celsius sofort in Fahrenheit um. Sieh die Formel (1 °C = 33,8 °F), praktische Vergleichswerte und den Wetterkontext knapp über dem Gefrierpunkt.",
+    "intro": "1 °C (33,8 °F) liegt knapp über dem Gefrierpunkt von Wasser. Im Alltag ist das genau der Bereich, in dem Frost, kalter Wind und rutschige Flächen relevant werden."
+  },
+  "warning": {
+    "title": "Vorsicht bei 1 °C (33,8 °F)",
+    "content": "<strong>1 °C ist noch kein strenger Frost, aber nah genug am Gefrierpunkt, dass sich die Lage schnell ändern kann.</strong> Nasse Straßen, Brücken, Grasflächen und Autoscheiben können sich kälter anfühlen als die Luft und unter passenden Bedingungen bereits glatt werden."
+  },
+  "context": {
+    "weather": {
+      "title": "Was 1 °C beim Wetter bedeutet",
+      "content": "Als Außentemperatur wirken 1 °C kalt und fast schon frostig. Dieser Wert kommt oft an Wintermorgen, bei späten Heimwegen oder an frühen Frühlingstagen mit Restfrost vor.",
+      "items": [
+        "Ein Wintermantel oder mehrere warme Schichten passen meist gut",
+        "Wind macht 1 °C deutlich schärfer",
+        "Morgenfrost ist noch möglich, obwohl die Prognose knapp über null bleibt",
+        "Wer stillsteht, friert bei dieser Temperatur schnell"
+      ]
+    },
+    "safety": {
+      "title": "Warum 1 °C sicherheitsrelevant sind",
+      "content": "Auch bei 1 °C haben Oberflächen nicht immer exakt die gleiche Temperatur wie die Luft. Schatten, Höhe oder Auskühlung über Nacht können schon vor 0 °C für Glätte sorgen.",
+      "items": [
+        "Brücken, Gehwege und Autoscheiben am Morgen im Blick behalten",
+        "Kalte feuchte Luft wirkt oft härter als die Zahl allein",
+        "Wer lange draußen wartet oder läuft, sollte sich warm anziehen",
+        "Haustiere, Pflanzen und freiliegende Leitungen brauchen je nach Region weiter Schutz"
+      ]
+    },
+    "environmental": {
+      "title": "1 °C im Zusammenhang",
+      "content": "1 °C liegen direkt über einer der wichtigsten Alltagsschwellen: dem Gefrierpunkt. Genau deshalb wird dieser Wert oft bei Wetter, Straßen und Fahrtbedingungen gesucht.",
+      "items": [
+        "1 °C = 33,8 °F, also knapp über dem Gefrierpunkt",
+        "Wasser gefriert bei 0 °C (32 °F), nur 1 Grad darunter",
+        "Kalter Regen wirkt bei dieser Temperatur oft unangenehmer als trockene Luft",
+        "Manche Suchanfragen mischen 1 °C mit Körpertemperatur, daher hilft der Vergleich mit Fieberwerten"
+      ]
+    }
+  },
+  "negative": {
+    "result": "-1 °C in Fahrenheit",
+    "description": "-1 °C entsprechen <strong>{negativeFahrenheit} °F</strong>. Dieser kleine Sprung unter null kann im Wetterbericht einen großen Unterschied machen, weil man damit tatsächlich unter dem Gefrierpunkt liegt."
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "Wie viel sind 1 Grad Celsius in Fahrenheit?",
+        "answer": "1 Grad Celsius entsprechen 33,8 Grad Fahrenheit. Die Formel lautet: °F = (°C × 9/5) + 32. Für 1 °C ergibt sich also (1 × 1,8) + 32 = 33,8 °F."
+      },
+      {
+        "question": "Welche Formel nutze ich für 1 °C in Fahrenheit?",
+        "answer": "Die Formel lautet: °F = (°C × 9/5) + 32. Bei 1 °C multipliziert man 1 mit 1,8 und addiert dann 32, um 33,8 °F zu erhalten."
+      },
+      {
+        "question": "Wie viel ist 1 °C in Kelvin?",
+        "answer": "1 °C entsprechen 274,15 Kelvin. Für die Umrechnung addiert man 273,15 zum Celsius-Wert."
+      },
+      {
+        "question": "Gilt 1 °C als Fieber?",
+        "answer": "Nein. Fieber beginnt beim Menschen typischerweise erst um 38 °C (100,4 °F). 1 °C sind extrem weit von normaler Körpertemperatur entfernt."
+      },
+      {
+        "question": "Wie rechne ich Celsius schnell in Fahrenheit um?",
+        "answer": "Als grobe Faustregel kann man den Celsius-Wert verdoppeln und etwa 30 addieren. Bei 1 °C kommt man so auf ungefähr 32 °F, nahe am exakten Wert von 33,8 °F."
+      },
+      {
+        "question": "Bei welcher Temperatur sind Celsius und Fahrenheit gleich?",
+        "answer": "Die beiden Skalen treffen sich bei -40. Das heißt: -40 °C sind genau -40 °F."
+      },
+      {
+        "question": "Was ist der absolute Nullpunkt in Celsius und Fahrenheit?",
+        "answer": "Der absolute Nullpunkt liegt bei -273,15 °C und -459,67 °F. Er beschreibt die theoretisch niedrigste mögliche Temperatur."
+      }
+    ]
+  }
+}
