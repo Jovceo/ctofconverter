@@ -1,0 +1,79 @@
+{
+  "page": {
+    "title": "1 Celsius em Fahrenheit | Calculadora, fórmula e tabela",
+    "description": "Converta 1 grau Celsius em Fahrenheit instantaneamente. Veja a fórmula (1°C = 33,8°F), comparações práticas e o significado dessa temperatura tão próxima do ponto de congelamento.",
+    "intro": "1°C (33,8°F) fica logo acima do ponto de congelamento da água. No dia a dia, é aquela faixa em que geada, vento frio e superfícies escorregadias começam a importar de verdade."
+  },
+  "warning": {
+    "title": "Cuidado com o frio em 1°C (33,8°F)",
+    "content": "<strong>1°C ainda não é frio extremo, mas está perto o bastante do congelamento para que as condições mudem rápido.</strong> Estradas molhadas, pontes, gramados e vidros do carro podem esfriar mais do que o ar e ficar escorregadios nas condições certas."
+  },
+  "context": {
+    "weather": {
+      "title": "O que 1°C significa no tempo",
+      "content": "Em termos de clima, 1°C é frio e muito perto do congelamento. É comum em manhãs de inverno, deslocamentos à noite e dias de transição em que a geada ainda é possível.",
+      "items": [
+        "Casaco de inverno ou várias camadas quentes costumam fazer sentido",
+        "O vento deixa 1°C muito mais cortante",
+        "Geada pela manhã ainda é possível mesmo com previsão um pouco acima de zero",
+        "Ficar parado por muito tempo logo se torna desconfortável"
+      ]
+    },
+    "safety": {
+      "title": "Por que 1°C importa para a segurança",
+      "content": "Mesmo a 1°C, as superfícies nem sempre têm a mesma temperatura do ar. Sombra, altitude e resfriamento noturno podem criar pontos escorregadios antes de a medição oficial chegar a 0°C.",
+      "items": [
+        "Observe pontes, calçadas e para-brisas logo cedo",
+        "Ar frio e úmido costuma parecer mais duro do que o número sugere",
+        "Vale se agasalhar bem se você vai esperar ou caminhar por muito tempo",
+        "Em algumas regiões, plantas, pets e canos expostos ainda precisam de proteção"
+      ]
+    },
+    "environmental": {
+      "title": "1°C em contexto",
+      "content": "1°C fica logo acima de um dos limites mais importantes da vida diária: o congelamento. Por isso tanta gente pesquisa essa temperatura ao conferir estradas, carro, tempo e planos ao ar livre.",
+      "items": [
+        "1°C = 33,8°F, ou seja, um pouco acima do congelamento",
+        "A água congela a 0°C (32°F), só 1 grau abaixo",
+        "Chuva fria nessa faixa costuma parecer mais dura do que ar seco",
+        "Muita gente também confunde 1°C com temperatura corporal, então a comparação com febre pode ajudar"
+      ]
+    }
+  },
+  "negative": {
+    "result": "-1°C em Fahrenheit",
+    "description": "-1°C equivalem a <strong>{negativeFahrenheit}°F</strong>. Essa pequena descida abaixo de zero já muda bastante o cenário no tempo porque você passa de fato para abaixo do congelamento."
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "Quanto é 1 grau Celsius em Fahrenheit?",
+        "answer": "1 grau Celsius equivale a 33,8 graus Fahrenheit. A fórmula é: °F = (°C × 9/5) + 32. Para 1°C, isso vira (1 × 1,8) + 32 = 33,8°F."
+      },
+      {
+        "question": "Qual é a fórmula para converter 1°C em Fahrenheit?",
+        "answer": "A fórmula é: °F = (°C × 9/5) + 32. Em 1°C, basta multiplicar 1 por 1,8 e depois somar 32 para chegar a 33,8°F."
+      },
+      {
+        "question": "Quanto vale 1°C em Kelvin?",
+        "answer": "1°C equivalem a 274,15 Kelvin. Para converter Celsius em Kelvin, some 273,15."
+      },
+      {
+        "question": "1°C é febre?",
+        "answer": "Não. A febre humana normalmente começa em torno de 38°C (100,4°F). 1°C está muito longe da temperatura corporal normal."
+      },
+      {
+        "question": "Como converter Celsius em Fahrenheit rapidamente?",
+        "answer": "Uma aproximação comum é dobrar o número em Celsius e somar cerca de 30. Para 1°C, isso dá perto de 32°F, bem próximo do valor exato de 33,8°F."
+      },
+      {
+        "question": "Em que temperatura Celsius e Fahrenheit são iguais?",
+        "answer": "As duas escalas se igualam em -40. Ou seja: -40°C = -40°F."
+      },
+      {
+        "question": "Qual é o zero absoluto em Celsius e Fahrenheit?",
+        "answer": "O zero absoluto é -273,15°C e -459,67°F. É a menor temperatura teoricamente possível."
+      }
+    ]
+  }
+}

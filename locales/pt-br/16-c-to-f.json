@@ -1,0 +1,131 @@
+{
+  "seo": {
+    "title": "16°C em Fahrenheit (60,8°F) | Guia de conversão",
+    "description": "Converta 16°C para Fahrenheit rapidamente. Veja que 16°C = 60,8°F e entenda se essa temperatura parece fresca, fria leve ou confortável no dia a dia."
+  },
+  "header": {
+    "title": "16°C para Fahrenheit (16 graus Celsius em °F)",
+    "tagline": "Converta 16°C para Fahrenheit com dicas práticas sobre conforto em ambientes internos, roupa em camadas, clima fresco e dúvidas comuns do cotidiano."
+  },
+  "conversion": {
+    "intro": "16°C em Fahrenheit são 60,8°F."
+  },
+  "strategy": {
+    "keywords": "16 c em fahrenheit 16 celsius em fahrenheit 60,8 fahrenheit clima fresco roupa temperatura ambiente febre"
+  },
+  "comfortGuide": {
+    "title": "Guia de conforto para 16°C",
+    "subtitle": "Fresco o suficiente para pedir uma camada leve",
+    "intro": "16°C (60,8°F) costumam parecer frescos e levemente frios. Caminhando ou se movimentando, muita gente acha agradável; em ambientes internos, porém, é comum preferir um casaco leve ou uma sobrecamisa.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Tempo de jaqueta leve para muita gente"
+      },
+      "moderate": {
+        "label": "Agradável",
+        "value": "16-19°C",
+        "desc": "60.8-66.2°F<br>Confortável com uma camada leve"
+      },
+      "warm": {
+        "label": "Confortável",
+        "value": "20-22°C",
+        "desc": "68-71.6°F<br>Perto da temperatura ambiente comum"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensação",
+        "typicalUse": "Uso comum"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Fresco",
+          "use": "Uma jaqueta leve costuma cair bem",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "16°C (60.8°F)",
+          "desc": "Fresco e um pouco frio",
+          "use": "Bom para caminhar, se deslocar e ficar em ambientes internos com camada leve",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Fresco, mas confortável",
+          "use": "Muita gente gosta para dormir e para momentos tranquilos em casa",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "19°C (66.2°F)",
+          "desc": "Confortavelmente fresco",
+          "use": "Conforto interno equilibrado sem sensação abafada",
+          "href": "/19-c-to-f"
+        },
+        {
+          "temp": "20°C (68°F)",
+          "desc": "Temperatura ambiente",
+          "use": "Ajuste comum em casa e no escritório",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Útil para comparar quando alguém confunde clima com febre",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 16°C costumam parecer melhores em movimento do que parado. Vento, umidade e sombra pela manhã podem deixar a sensação mais fria."
+  },
+  "faq": [
+    {
+      "question": "Quanto é 16 graus Celsius em Fahrenheit?",
+      "answerHtml": "<p>16 graus Celsius equivalem a 60,8 graus Fahrenheit. A fórmula é: °F = (°C × 9/5) + 32. Multiplicando 16 por 1,8, você chega a 28,8; somando 32, o resultado é 60,8°F.</p>"
+    },
+    {
+      "question": "16°C é quente ou frio?",
+      "answerHtml": "<p>16°C (60,8°F) normalmente são vistos como frescos a amenos. Não é frio de inverno pesado, mas a maioria das pessoas ainda prefere uma camada leve.</p><p>Ao ar livre, a sensação costuma ser agradável e fresca. Em ambientes internos, pode parecer um pouco frio se você ficar muito tempo parado.</p>"
+    },
+    {
+      "question": "Quanto é -16°C em Fahrenheit?",
+      "answerHtml": "<p>-16°C equivalem a 3,2°F. Aí já estamos falando de frio forte de inverno, bem diferente de 16°C acima de zero.</p>"
+    },
+    {
+      "question": "16°C é febre?",
+      "answerHtml": "<p>Não. Febre em humanos geralmente começa perto de 38°C (100,4°F), enquanto a temperatura corporal normal fica em torno de 37°C (98,6°F).</p><p>Se 16°C fosse uma medição corporal, estaria muito abaixo do normal e seria algo grave.</p>"
+    },
+    {
+      "question": "Que roupa usar com 16°C?",
+      "answerHtml": "<p>Com 16°C, camadas leves costumam ser suficientes.</p><ul><li>Camiseta ou manga longa fina com cardigã, sobrecamisa ou jaqueta leve</li><li>Jeans, calça comprida ou outra peça confortável</li><li>Tênis ou sapato fechado no dia a dia</li></ul><p>Se houver vento ou garoa, uma camada extra costuma fazer bastante diferença.</p>"
+    },
+    {
+      "question": "16°C são bons para atividades ao ar livre?",
+      "answerHtml": "<p>Sim. 16°C costumam ser ótimos para caminhar, se deslocar, fazer atividade leve e passar um tempo do lado de fora. A sensação é mais de frescor do que de frio duro.</p>"
+    },
+    {
+      "question": "Como converter 16°C para Fahrenheit de cabeça?",
+      "answerHtml": "<p>Uma aproximação rápida é dobrar o valor em Celsius e somar cerca de 30. Para 16°C, isso dá perto de 62°F, bem próximo do valor exato de 60,8°F.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "16°C (60,8°F) no dia a dia",
+    "cards": [
+      {
+        "title": "Fresco, mas fácil de encarar",
+        "body": "Com 16°C, muita gente fica bem ao ar livre usando apenas uma camada leve. É fresco, mas não agressivo."
+      },
+      {
+        "title": "Dentro de casa parece mais frio do que muita gente imagina",
+        "body": "Em ambientes internos, 16°C ficam um pouco abaixo da temperatura ambiente mais comum. Pode funcionar bem para quartos, mas quem trabalha parado costuma querer um agasalho leve."
+      },
+      {
+        "title": "Estar em movimento muda bastante a sensação",
+        "body": "Caminhar ou se deslocar com 16°C costuma ser agradável. Já ficar parado na mesma temperatura pode parecer bem mais frio."
+      }
+    ]
+  }
+}

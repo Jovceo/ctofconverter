@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "19\u00b0C to Fahrenheit (66.2\u00b0F) | Conversion Guide & Calculator",
+    "description": "Convert 19 degrees Celsius to Fahrenheit quickly. Learn that 19\u00b0C equals 66.2\u00b0F, see the calculation steps, and understand temperature context."
+  },
+  "header": {
+    "title": "19\u00b0C to Fahrenheit (19 Degrees Celsius to \u00b0F)",
+    "tagline": "Convert 19\u00b0C to Fahrenheit with practical guidance for room temperature, energy-saving comfort, sleep, and everyday indoor questions."
+  },
+  "conversion": {
+    "intro": "19\u00b0C in Fahrenheit is 66.2\u00b0F."
+  },
+  "strategy": {
+    "keywords": "19 celsius to fahrenheit 66.2 fahrenheit room temperature comfortable sleep fever thermostat"
+  },
+  "comfortGuide": {
+    "title": "19\u00b0C comfort guide",
+    "subtitle": "A comfortable temperature that still feels fresh indoors",
+    "intro": "19\u00b0C (66.2\u00b0F) is often seen as a comfortable, slightly cool room temperature. It usually feels balanced indoors, works well for sleep, and can feel pleasantly fresh rather than warm.",
+    "chart": {
+      "cold": {
+        "label": "Cool",
+        "value": "15-17\u00b0C",
+        "desc": "59-62.6\u00b0F<br>Fresh and better with light layers"
+      },
+      "moderate": {
+        "label": "Comfortable",
+        "value": "18-21\u00b0C",
+        "desc": "64.4-69.8\u00b0F<br>Classic comfort range"
+      },
+      "warm": {
+        "label": "Warm",
+        "value": "22-25\u00b0C",
+        "desc": "71.6-77\u00b0F<br>More warmth and lighter clothing"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperature",
+        "description": "Description",
+        "typicalUse": "Typical use"
+      },
+      "rows": [
+        {
+          "temp": "16\u00b0C (60.8\u00b0F)",
+          "desc": "Fresh and slightly cool",
+          "use": "Good for active indoor time or light layers",
+          "href": "/16-c-to-f"
+        },
+        {
+          "temp": "18\u00b0C (64.4\u00b0F)",
+          "desc": "Cool but comfortable",
+          "use": "Often ideal for sleep and quiet routines",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "19\u00b0C (66.2\u00b0F)",
+          "desc": "Comfortable and slightly cool",
+          "use": "A balanced setting for home, study, and energy-efficient comfort",
+          "highlight": true
+        },
+        {
+          "temp": "20\u00b0C (68\u00b0F)",
+          "desc": "Standard room temperature",
+          "use": "A common target for living rooms and offices",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "21\u00b0C (69.8\u00b0F)",
+          "desc": "Comfortable room temperature",
+          "use": "Feels a little warmer for sitting and desk work",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37\u00b0C (98.6\u00b0F)",
+          "desc": "Normal body temperature",
+          "use": "Useful comparison when body temperature is part of the query",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note:</strong> 19\u00b0C often feels comfortable and efficient indoors, but sun, damp air, and airflow can still shift the experience a little warmer or cooler."
+  },
+  "faq": [
+    {
+      "question": "What is 19 degrees Celsius in Fahrenheit?",
+      "answerHtml": "<p>19 degrees Celsius equals 66.2 degrees Fahrenheit. Use the formula \u00b0F = (\u00b0C \u00d7 9/5) + 32. Multiply 19 by 1.8 to get 34.2, then add 32 to reach 66.2\u00b0F.</p>"
+    },
+    {
+      "question": "Is 19\u00b0C a fever temperature?",
+      "answerHtml": "<p>No. 19\u00b0C is not a fever temperature. Normal body temperature is around 37\u00b0C (98.6\u00b0F), and fever usually starts near 38\u00b0C (100.4\u00b0F).</p>"
+    },
+    {
+      "question": "What is 16-19\u00b0C in Fahrenheit?",
+      "answerHtml": "<p>The range from 16\u00b0C to 19\u00b0C converts to 60.8\u00b0F to 66.2\u00b0F. This usually covers fresh indoor comfort and mild outdoor weather where a light layer still makes sense.</p>"
+    },
+    {
+      "question": "What is 19-20\u00b0C in Fahrenheit?",
+      "answerHtml": "<p>The range from 19\u00b0C to 20\u00b0C converts to 66.2\u00b0F to 68\u00b0F. This is a very common room-temperature range for homes, bedrooms, and offices.</p>"
+    },
+    {
+      "question": "How do I convert negative 19 Celsius to Fahrenheit?",
+      "answerHtml": "<p>Negative 19\u00b0C converts to -2.2\u00b0F. That is very cold winter weather and much more severe than 19\u00b0C above zero.</p>"
+    },
+    {
+      "question": "Is 19\u00b0C warm enough for a room?",
+      "answerHtml": "<p>Yes. 19\u00b0C is warm enough for a room, and many people find it comfortably fresh. It is a common choice for energy-efficient heating because it feels comfortable without being stuffy.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "19\u00b0C (66.2\u00b0F) in daily life",
+    "cards": [
+      {
+        "title": "Comfort without stuffiness",
+        "body": "At 19\u00b0C, many homes and bedrooms feel comfortable without becoming stuffy or overly warm."
+      },
+      {
+        "title": "A strong thermostat setting",
+        "body": "19\u00b0C is often used as a practical thermostat target because it balances comfort with lower heating demand."
+      },
+      {
+        "title": "Good for calm indoor routines",
+        "body": "Reading, working, relaxing, and sleeping often feel easy at 19\u00b0C because the room stays comfortable without feeling heavy."
+      }
+    ]
+  }
+}

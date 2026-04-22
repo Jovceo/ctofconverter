@@ -1,0 +1,131 @@
+{
+  "seo": {
+    "title": "17 °C a Fahrenheit (62,6 °F): sensación, ropa y sueño",
+    "description": "Convierte 17 °C a 62,6 °F y revisa cómo se siente en el clima diario, al dormir y al vestirte."
+  },
+  "header": {
+    "title": "17 °C a Fahrenheit (62,6 °F)",
+    "tagline": "Herramienta gratuita para convertir 17 °C a 62,6 °F con contexto real sobre ropa, paseos, descanso y sensación térmica."
+  },
+  "conversion": {
+    "intro": "17 °C en Fahrenheit son 62,6 °F."
+  },
+  "strategy": {
+    "keywords": "17 c en fahrenheit 17 celsius en fahrenheit 62,6 fahrenheit tiempo fresco ropa dormir temperatura ambiente fiebre"
+  },
+  "comfortGuide": {
+    "title": "Guía de confort para 17 °C",
+    "subtitle": "Una temperatura fresca que queda entre lo frío y lo cómodo",
+    "intro": "17 °C (62,6 °F) suele sentirse agradablemente fresco. Está un poco por debajo de la temperatura ambiente clásica, pero mucha gente lo considera muy cómodo para caminar, hacer recados o estar en una habitación que no esté recalentada.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Tiempo de chaqueta ligera"
+      },
+      "moderate": {
+        "label": "Ligero",
+        "value": "16-18°C",
+        "desc": "60.8-64.4°F<br>Cómodo con una capa fina"
+      },
+      "warm": {
+        "label": "Cómodo",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Confort interior equilibrado"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensación",
+        "typicalUse": "Uso habitual"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Fresco en exterior",
+          "use": "Suele hacer falta una chaqueta o una capa extra",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "16°C (60.8°F)",
+          "desc": "Fresco y algo frío",
+          "use": "Cómodo para días activos con una capa ligera",
+          "href": "/16-c-to-f"
+        },
+        {
+          "temp": "17°C (62.6°F)",
+          "desc": "Fresco a templado",
+          "use": "Muy buen punto para paseos, recados y espacios interiores tranquilos",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Fresco pero agradable",
+          "use": "A mucha gente le gusta para dormir o descansar",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "20°C (68°F)",
+          "desc": "Temperatura ambiente estándar",
+          "use": "El nivel clásico de confort para muchos hogares",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Referencia útil si alguien mezcla clima y fiebre",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 17 °C suele sentirse suave cuando te mueves, pero puede parecer más fresco en una habitación quieta, por la noche o con viento."
+  },
+  "faq": [
+    {
+      "question": "¿Cuánto son 17 grados Celsius en Fahrenheit?",
+      "answerHtml": "<p>17 grados Celsius equivalen a 62,6 grados Fahrenheit. La fórmula es °F = (°C × 9/5) + 32. Si multiplicas 17 por 1,8 obtienes 30,6; al sumar 32 llegas a 62,6 °F.</p>"
+    },
+    {
+      "question": "¿17 °C se siente frío o calor?",
+      "answerHtml": "<p>17 °C (62,6 °F) suele considerarse fresco o templado. Está por debajo de la temperatura ambiente clásica, pero sigue siendo cómodo para muchas actividades diarias.</p><p>La mayoría no lo llamaría frío fuerte, aunque tampoco vestiría como en pleno verano.</p>"
+    },
+    {
+      "question": "¿17 °C es fiebre?",
+      "answerHtml": "<p>No. La temperatura corporal normal ronda los 37 °C (98,6 °F), y la fiebre suele empezar cerca de 38 °C (100,4 °F).</p>"
+    },
+    {
+      "question": "¿Qué sensación térmica corresponde a 17 °C?",
+      "answerHtml": "<p>17 °C equivalen a 62,6 °F, una temperatura que mucha gente describe como fresca y agradable. Se nota más fresca que la temperatura ambiente estándar, pero sigue siendo cómoda para la vida diaria.</p>"
+    },
+    {
+      "question": "¿Qué ropa conviene con 17 °C?",
+      "answerHtml": "<p>A 17 °C, la mayoría va bien con una capa ligera extra.</p><ul><li>Camiseta o manga larga con cárdigan o chaqueta fina</li><li>Vaqueros, pantalón largo u otra prenda cómoda</li><li>Zapatillas o calzado cerrado para uso diario</li></ul><p>Si hace sol puedes ir más ligero, pero el viento y la sombra siguen cambiando mucho la sensación.</p>"
+    },
+    {
+      "question": "¿17 °C es buena temperatura para dormir?",
+      "answerHtml": "<p>Para mucha gente, sí. 17 °C entra en una franja muy favorable para dormir porque los dormitorios suelen sentirse mejor un poco más frescos que el salón.</p><p>Eso sí, depende de la ropa de cama, del pijama y de si tú prefieres dormir con más o menos calor.</p>"
+    },
+    {
+      "question": "¿Cuánto es -17 °C en Fahrenheit?",
+      "answerHtml": "<p>-17 °C equivalen a 1,4 °F. Eso ya es un frío claramente invernal y muy distinto de 17 °C por encima de cero.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "17 °C (62,6 °F) en la vida diaria",
+    "cards": [
+      {
+        "title": "Una temperatura intermedia muy útil",
+        "body": "17 °C cae en esa zona práctica en la que se nota fresco, pero normalmente no incomoda. Por eso funciona tan bien para recados, desplazamientos y días con cambios entre interior y exterior."
+      },
+      {
+        "title": "A menudo se agradece más que una habitación recalentada",
+        "body": "Mucha gente encuentra 17 °C más agradable que un interior demasiado cálido cuando está durmiendo, concentrándose o moviéndose por casa."
+      },
+      {
+        "title": "Todavía no es temperatura de manga corta para todo el mundo",
+        "body": "Algunas personas están bien con ropa muy ligera a 17 °C, pero muchas siguen prefiriendo un cárdigan, una sobrecamisa o una chaqueta fina."
+      }
+    ]
+  }
+}

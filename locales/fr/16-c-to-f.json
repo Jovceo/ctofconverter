@@ -1,0 +1,131 @@
+{
+  "seo": {
+    "title": "16 °C en Fahrenheit (60,8 °F) | Guide de conversion",
+    "description": "Convertissez rapidement 16 °C en Fahrenheit. Découvrez que 16 °C correspondent à 60,8 °F et voyez si cette température paraît fraîche ou douce selon le contexte."
+  },
+  "header": {
+    "title": "16 °C en Fahrenheit (16 degrés Celsius en °F)",
+    "tagline": "Convertissez 16 °C en Fahrenheit avec des repères utiles pour l’intérieur, les petites couches, les sorties et les questions du quotidien."
+  },
+  "conversion": {
+    "intro": "16 °C correspondent à 60,8 °F."
+  },
+  "strategy": {
+    "keywords": "16 c en fahrenheit 16 celsius en fahrenheit 60,8 fahrenheit temps frais tenue température intérieure fièvre"
+  },
+  "comfortGuide": {
+    "title": "Repères de confort à 16 °C",
+    "subtitle": "Assez frais pour une couche légère, mais facile à vivre",
+    "intro": "16 °C (60,8 °F) donnent souvent une impression de fraîcheur légère. En marchant ou pendant un trajet, la température reste agréable. À l’intérieur, beaucoup de personnes préfèrent toutefois un pull fin ou une surchemise.",
+    "chart": {
+      "cold": {
+        "label": "Frais",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Une veste légère aide souvent"
+      },
+      "moderate": {
+        "label": "Tempéré",
+        "value": "16-19°C",
+        "desc": "60.8-66.2°F<br>Confortable avec une couche légère"
+      },
+      "warm": {
+        "label": "Confortable",
+        "value": "20-22°C",
+        "desc": "68-71.6°F<br>Confort intérieur classique"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Température",
+        "description": "Ressenti",
+        "typicalUse": "Usage habituel"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Frais",
+          "use": "Une veste légère est souvent utile",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "16°C (60.8°F)",
+          "desc": "Frais et légèrement vif",
+          "use": "Pratique pour marcher, se déplacer et rester dedans avec une petite couche",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Frais mais agréable",
+          "use": "Souvent apprécié pour dormir ou rester au calme",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "19°C (66.2°F)",
+          "desc": "Confortablement frais",
+          "use": "Bon équilibre intérieur sans impression de chaleur",
+          "href": "/19-c-to-f"
+        },
+        {
+          "temp": "20°C (68°F)",
+          "desc": "Température ambiante",
+          "use": "Réglage fréquent à la maison ou au bureau",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Température corporelle normale",
+          "use": "Utile si quelqu’un confond météo et fièvre",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Note :</strong> 16 °C semblent souvent plus agréables en mouvement qu’à l’arrêt. Le vent, l’humidité et l’ombre du matin peuvent accentuer la fraîcheur."
+  },
+  "faq": [
+    {
+      "question": "Combien font 16 degrés Celsius en Fahrenheit ?",
+      "answerHtml": "<p>16 degrés Celsius correspondent à 60,8 degrés Fahrenheit. La formule est : °F = (°C × 9/5) + 32. En multipliant 16 par 1,8, on obtient 28,8, puis on ajoute 32 pour arriver à 60,8 °F.</p>"
+    },
+    {
+      "question": "16 °C, est-ce chaud ou froid ?",
+      "answerHtml": "<p>16 °C (60,8 °F) sont généralement décrits comme frais à doux. Ce n’est pas un froid d’hiver marqué, mais la plupart des gens apprécient quand même une couche légère.</p><p>Dehors, la température peut sembler vivifiante et agréable. Dedans, elle paraît un peu fraîche si l’on reste assis longtemps.</p>"
+    },
+    {
+      "question": "Que valent -16 °C en Fahrenheit ?",
+      "answerHtml": "<p>-16 °C correspondent à 3,2 °F. Là, on parle d’un vrai froid hivernal, sans rapport avec 16 °C au-dessus de zéro.</p>"
+    },
+    {
+      "question": "16 °C correspondent-ils à une fièvre ?",
+      "answerHtml": "<p>Non. Une fièvre commence généralement autour de 38 °C (100,4 °F), alors que la température corporelle normale se situe autour de 37 °C (98,6 °F).</p><p>Si 16 °C étaient une température corporelle, ce serait extrêmement en dessous de la normale.</p>"
+    },
+    {
+      "question": "Comment s’habiller quand il fait 16 °C ?",
+      "answerHtml": "<p>À 16 °C, des couches légères suffisent dans la plupart des cas.</p><ul><li>T-shirt ou haut manches longues avec gilet, surchemise ou veste légère</li><li>Jean, pantalon ou autre bas couvrant</li><li>Chaussures fermées ou baskets au quotidien</li></ul><p>S’il y a du vent ou de la bruine, une couche supplémentaire change souvent le confort.</p>"
+    },
+    {
+      "question": "16 °C sont-ils agréables pour les activités extérieures ?",
+      "answerHtml": "<p>Oui. 16 °C conviennent souvent très bien à la marche, aux déplacements, à une activité physique légère ou à un moment passé dehors. On ressent surtout de la fraîcheur, pas un froid agressif.</p>"
+    },
+    {
+      "question": "Comment convertir 16 °C en Fahrenheit de tête ?",
+      "answerHtml": "<p>Une astuce rapide consiste à doubler la valeur en Celsius puis à ajouter environ 30. Pour 16 °C, cela donne environ 62 °F, ce qui reste proche du résultat exact de 60,8 °F.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "16 °C (60,8 °F) dans la vie courante",
+    "cards": [
+      {
+        "title": "Une fraîcheur facile à vivre",
+        "body": "À 16 °C, beaucoup de personnes sont bien dehors avec une seule couche légère. On sent la fraîcheur sans qu’elle soit dure."
+      },
+      {
+        "title": "À l’intérieur, c’est plus frais qu’on ne l’imagine",
+        "body": "Dans une pièce, 16 °C sont souvent un peu en dessous du confort standard. Cela marche bien pour une chambre, mais pas toujours pour rester immobile longtemps."
+      },
+      {
+        "title": "Le mouvement change beaucoup le ressenti",
+        "body": "Marcher ou faire un trajet à 16 °C est souvent agréable, alors qu’assis au même chiffre, on peut vite chercher un pull."
+      }
+    ]
+  }
+}

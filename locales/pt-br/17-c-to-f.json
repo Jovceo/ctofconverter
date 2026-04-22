@@ -1,0 +1,131 @@
+{
+  "seo": {
+    "title": "17°C em Fahrenheit (62,6°F) | Guia e calculadora",
+    "description": "Converta 17°C para Fahrenheit rapidamente. Veja que 17°C = 62,6°F, confira o cálculo e entenda o contexto dessa temperatura no dia a dia."
+  },
+  "header": {
+    "title": "17°C para Fahrenheit (17 graus Celsius em °F)",
+    "tagline": "Converta 17°C para Fahrenheit com ajuda prática para clima fresco, roupas em camadas, temperatura de ambiente e conforto cotidiano."
+  },
+  "conversion": {
+    "intro": "17°C em Fahrenheit são 62,6°F."
+  },
+  "strategy": {
+    "keywords": "17 c em fahrenheit 17 celsius em fahrenheit 62,6 fahrenheit clima fresco roupa sono temperatura ambiente febre"
+  },
+  "comfortGuide": {
+    "title": "Guia de conforto para 17°C",
+    "subtitle": "Uma faixa fresca que fica entre o frio leve e o confortável",
+    "intro": "17°C (62,6°F) costumam parecer agradavelmente frescos. É um pouco abaixo da temperatura ambiente clássica, mas ainda muito confortável para caminhadas, deslocamentos e ambientes sem excesso de aquecimento.",
+    "chart": {
+      "cold": {
+        "label": "Fresco",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Tempo típico de jaqueta leve"
+      },
+      "moderate": {
+        "label": "Ameno",
+        "value": "16-18°C",
+        "desc": "60.8-64.4°F<br>Confortável com camada leve"
+      },
+      "warm": {
+        "label": "Confortável",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Bom equilíbrio em ambientes internos"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatura",
+        "description": "Sensação",
+        "typicalUse": "Uso comum"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Clima fresco lá fora",
+          "use": "Jaqueta ou camada extra costuma ajudar",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "16°C (60.8°F)",
+          "desc": "Fresco e levemente frio",
+          "use": "Bom para dias ativos com camada leve",
+          "href": "/16-c-to-f"
+        },
+        {
+          "temp": "17°C (62.6°F)",
+          "desc": "Fresco para ameno",
+          "use": "Boa faixa para caminhar, resolver coisas e ficar em ambientes tranquilos",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Fresco, mas confortável",
+          "use": "Muito usado como referência para dormir melhor",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "20°C (68°F)",
+          "desc": "Temperatura ambiente clássica",
+          "use": "Meta comum de conforto em casa",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Temperatura corporal normal",
+          "use": "Útil quando a dúvida mistura clima e febre",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Nota:</strong> 17°C costumam parecer amenos quando você está em movimento, mas podem ficar mais frios à noite, em locais com vento ou em ambientes parados."
+  },
+  "faq": [
+    {
+      "question": "Quanto é 17 graus Celsius em Fahrenheit?",
+      "answerHtml": "<p>17 graus Celsius equivalem a 62,6 graus Fahrenheit. A fórmula é: °F = (°C × 9/5) + 32. Multiplicando 17 por 1,8, o resultado é 30,6; somando 32, chegamos a 62,6°F.</p>"
+    },
+    {
+      "question": "17°C é quente ou frio?",
+      "answerHtml": "<p>17°C (62,6°F) normalmente são considerados frescos para amenos. É uma temperatura abaixo da referência clássica de ambiente, mas ainda confortável para muitas atividades normais.</p><p>A maioria das pessoas não chamaria isso de frio forte, mas também não trataria como calor de verão.</p>"
+    },
+    {
+      "question": "17°C é febre?",
+      "answerHtml": "<p>Não. A temperatura corporal normal fica perto de 37°C (98,6°F), e a febre costuma começar em torno de 38°C (100,4°F).</p>"
+    },
+    {
+      "question": "Quão quente são 17°C em Fahrenheit?",
+      "answerHtml": "<p>17°C equivalem a 62,6°F. Em termos práticos, a sensação costuma ser de clima fresco para ameno: mais fresco que a temperatura ambiente padrão, mas ainda muito tranquilo para a rotina.</p>"
+    },
+    {
+      "question": "Que roupa usar com 17°C?",
+      "answerHtml": "<p>Em 17°C, normalmente basta uma camada leve extra.</p><ul><li>Camiseta ou manga longa fina com cardigã ou jaqueta leve</li><li>Jeans, calça comprida ou outra peça confortável</li><li>Tênis ou sapato fechado</li></ul><p>Se houver sol, a roupa mais leve pode bastar, mas vento e sombra ainda contam bastante.</p>"
+    },
+    {
+      "question": "17°C são bons para dormir?",
+      "answerHtml": "<p>Para muita gente, sim. Quartos costumam parecer mais agradáveis quando ficam um pouco mais frescos do que a sala, e 17°C entram nessa faixa.</p>"
+    },
+    {
+      "question": "Quanto é -17°C em Fahrenheit?",
+      "answerHtml": "<p>-17°C equivalem a 1,4°F. Isso já é frio forte de inverno e não tem nada a ver com 17°C acima de zero.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "17°C (62,6°F) no dia a dia",
+    "cards": [
+      {
+        "title": "Uma faixa intermediária muito versátil",
+        "body": "17°C ficam naquele ponto em que o clima parece fresco, mas normalmente não chega a incomodar. Por isso funciona bem para deslocamentos, tarefas e dias mistos entre rua e ambiente interno."
+      },
+      {
+        "title": "Muitas vezes melhor do que um ambiente superaquecido",
+        "body": "Muita gente acha 17°C mais agradável do que ambientes quentes demais, especialmente para dormir, se concentrar ou se movimentar em casa."
+      },
+      {
+        "title": "Ainda não é clima de camiseta para todo mundo",
+        "body": "Algumas pessoas ficam bem com roupa bem leve a 17°C, mas muitas ainda preferem um cardigã, uma sobrecamisa ou uma jaqueta fina."
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "19 °C in Fahrenheit (66,2 °F) | Leitfaden & Rechner",
+    "description": "Rechne 19 °C schnell in Fahrenheit um. Erfahre, dass 19 °C genau 66,2 °F sind, sieh die Rechenschritte und ordne den Wert praktisch ein."
+  },
+  "header": {
+    "title": "19 °C in Fahrenheit (19 Grad Celsius in °F)",
+    "tagline": "Wandle 19 °C in Fahrenheit um und nutze praktische Hinweise zu Raumtemperatur, energiesparendem Komfort, Schlaf und Innenräumen."
+  },
+  "conversion": {
+    "intro": "19 °C entsprechen 66,2 °F."
+  },
+  "strategy": {
+    "keywords": "19 c in fahrenheit 19 celsius in fahrenheit 66,2 fahrenheit raumtemperatur komfort schlaf thermostat fieber"
+  },
+  "comfortGuide": {
+    "title": "Komfort bei 19 °C",
+    "subtitle": "Angenehm temperiert und drinnen trotzdem noch frisch",
+    "intro": "19 °C (66,2 °F) gelten oft als angenehme, leicht frische Raumtemperatur. Das funktioniert gut zum Schlafen, Arbeiten und für Wohnungen, die komfortabel, aber nicht zu warm sein sollen.",
+    "chart": {
+      "cold": {
+        "label": "Frisch",
+        "value": "15-17°C",
+        "desc": "59-62.6°F<br>Mit leichter Lage meist angenehmer"
+      },
+      "moderate": {
+        "label": "Angenehm",
+        "value": "18-21°C",
+        "desc": "64.4-69.8°F<br>Klassischer Komfortbereich"
+      },
+      "warm": {
+        "label": "Wärmer",
+        "value": "22-25°C",
+        "desc": "71.6-77°F<br>Weniger Schichten, mehr Wärmegefühl"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatur",
+        "description": "Beschreibung",
+        "typicalUse": "Typische Nutzung"
+      },
+      "rows": [
+        {
+          "temp": "16°C (60.8°F)",
+          "desc": "Frisch und leicht kühl",
+          "use": "Gut für aktive Innenräume oder leichte Lagen",
+          "href": "/16-c-to-f"
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Kühl, aber angenehm",
+          "use": "Wird oft fürs Schlafen und ruhige Routinen geschätzt",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "19°C (66.2°F)",
+          "desc": "Angenehm und leicht frisch",
+          "use": "Ausgewogener Wert für Zuhause, Lernen und sparsames Heizen",
+          "highlight": true
+        },
+        {
+          "temp": "20°C (68°F)",
+          "desc": "Klassische Raumtemperatur",
+          "use": "Häufiger Zielwert für Wohnzimmer und Büros",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "21°C (69.8°F)",
+          "desc": "Angenehmer Innenraum",
+          "use": "Etwas wärmer für langes Sitzen oder Schreibtischarbeit",
+          "href": "/21-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normale Körpertemperatur",
+          "use": "Hilfreicher Vergleich bei Fragen zu Körpertemperatur",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Hinweis:</strong> 19 °C fühlen sich drinnen oft komfortabel und effizient an. Sonne, feuchte Luft und Zugluft können den Eindruck aber etwas wärmer oder kühler machen."
+  },
+  "faq": [
+    {
+      "question": "Wie viel sind 19 Grad Celsius in Fahrenheit?",
+      "answerHtml": "<p>19 Grad Celsius sind 66,2 Grad Fahrenheit. Die Formel lautet: °F = (°C × 9/5) + 32. 19 mal 1,8 ergibt 34,2, plus 32 ergibt 66,2 °F.</p>"
+    },
+    {
+      "question": "Sind 19 °C Fieber?",
+      "answerHtml": "<p>Nein. 19 °C sind keine Fiebertemperatur. Normale Körpertemperatur liegt bei etwa 37 °C (98,6 °F), Fieber beginnt meist um 38 °C (100,4 °F).</p>"
+    },
+    {
+      "question": "Wie viel sind 16 bis 19 °C in Fahrenheit?",
+      "answerHtml": "<p>Der Bereich von 16 °C bis 19 °C entspricht 60,8 °F bis 66,2 °F. Das deckt oft frischen Innenraumkomfort und mildes Wetter draußen ab, bei dem eine leichte Schicht noch sinnvoll ist.</p>"
+    },
+    {
+      "question": "Wie viel sind 19 bis 20 °C in Fahrenheit?",
+      "answerHtml": "<p>Der Bereich von 19 °C bis 20 °C entspricht 66,2 °F bis 68 °F. Das ist ein sehr typischer Temperaturbereich für Wohnräume, Schlafzimmer und Büros.</p>"
+    },
+    {
+      "question": "Wie rechne ich -19 °C in Fahrenheit um?",
+      "answerHtml": "<p>-19 °C entsprechen -2,2 °F. Das ist deutliches Winterwetter und viel strenger als 19 °C über null.</p>"
+    },
+    {
+      "question": "Sind 19 °C warm genug für einen Raum?",
+      "answerHtml": "<p>Ja. 19 °C sind für einen Raum warm genug, und viele empfinden das als angenehm frisch. Deshalb ist dieser Wert oft beliebt, wenn Komfort und sparsames Heizen zusammenpassen sollen.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "19 °C (66,2 °F) im Alltag",
+    "cards": [
+      {
+        "title": "Komfort ohne stickige Wärme",
+        "body": "Bei 19 °C fühlen sich viele Wohnungen und Schlafzimmer angenehm an, ohne schwer oder überheizt zu wirken."
+      },
+      {
+        "title": "Eine sinnvolle Thermostateinstellung",
+        "body": "19 °C wird oft als praktische Thermostateinstellung genutzt, weil der Komfort erhalten bleibt und der Heizbedarf etwas niedriger ausfallen kann."
+      },
+      {
+        "title": "Gut für ruhige Innenroutinen",
+        "body": "Lesen, Arbeiten, Entspannen und Schlafen funktionieren bei 19 °C oft sehr gut, weil der Raum angenehm bleibt, ohne drückend zu wirken."
+      }
+    ]
+  }
+}

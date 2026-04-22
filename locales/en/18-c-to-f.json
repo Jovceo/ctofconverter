@@ -44,18 +44,26 @@
         {
           "temp": "10°C (50°F)",
           "desc": "Cool outdoor weather",
-          "use": "A jacket or extra layer usually feels right"
+          "use": "A jacket or extra layer usually feels right",
+          "href": "/10-c-to-f"
         },
         {
           "temp": "16°C (60.8°F)",
           "desc": "Fresh and slightly cool",
-          "use": "Comfortable for walks, but cooler indoors"
+          "use": "Comfortable for walks, but cooler indoors",
+          "href": "/16-c-to-f"
         },
         {
           "temp": "18°C (64.4°F)",
           "desc": "Cool but comfortable",
           "use": "Good for sleep, light layers, and everyday routines",
           "highlight": true
+        },
+        {
+          "temp": "19\u00b0C (66.2\u00b0F)",
+          "desc": "Comfortably cool",
+          "use": "Balanced indoor comfort that still feels fresh",
+          "href": "/19-c-to-f"
         },
         {
           "temp": "20°C (68°F)",

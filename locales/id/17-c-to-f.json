@@ -1,0 +1,131 @@
+{
+  "seo": {
+    "title": "17°C ke Fahrenheit berapa? (62.6°F) | Panduan & Kalkulator",
+    "description": "Ubah 17°C ke Fahrenheit dengan cepat. Ketahui bahwa 17°C = 62.6°F, lihat cara hitungnya, dan pahami konteks suhu ini dalam kehidupan sehari-hari."
+  },
+  "header": {
+    "title": "17°C ke Fahrenheit (17 derajat Celsius ke °F)",
+    "tagline": "Konversi 17°C ke Fahrenheit dengan panduan praktis untuk cuaca sejuk, pakaian harian, suhu ruangan, dan kenyamanan sehari-hari."
+  },
+  "conversion": {
+    "intro": "17°C dalam Fahrenheit adalah 62.6°F."
+  },
+  "strategy": {
+    "keywords": "17 c ke f 17 celsius ke fahrenheit 62.6 fahrenheit sejuk pakaian tidur suhu ruangan demam"
+  },
+  "comfortGuide": {
+    "title": "Panduan kenyamanan 17°C",
+    "subtitle": "Suhu segar yang berada di antara sejuk dan nyaman",
+    "intro": "17°C (62.6°F) sering terasa segar dan enak. Ini sedikit di bawah suhu ruang biasa, tetapi banyak orang merasa nyaman untuk jalan kaki, rutinitas harian, dan ruangan yang tidak terlalu hangat.",
+    "chart": {
+      "cold": {
+        "label": "Sejuk",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Cuaca jaket tipis"
+      },
+      "moderate": {
+        "label": "Segar",
+        "value": "16-18°C",
+        "desc": "60.8-64.4°F<br>Nyaman dengan lapisan ringan"
+      },
+      "warm": {
+        "label": "Nyaman",
+        "value": "19-21°C",
+        "desc": "66.2-69.8°F<br>Keseimbangan nyaman di dalam ruangan"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Suhu",
+        "description": "Deskripsi",
+        "typicalUse": "Kondisi umum"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Cuaca luar cukup sejuk",
+          "use": "Jaket atau lapisan tambahan biasanya membantu",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "16°C (60.8°F)",
+          "desc": "Segar dan sedikit dingin",
+          "use": "Pas untuk hari aktif dengan lapisan ringan",
+          "href": "/16-c-to-f"
+        },
+        {
+          "temp": "17°C (62.6°F)",
+          "desc": "Sejuk ke sedang",
+          "use": "Titik tengah yang enak untuk jalan, urusan harian, dan ruang tenang",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Sejuk tapi nyaman",
+          "use": "Sering enak untuk tidur dan aktivitas santai di dalam ruangan",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "20°C (68°F)",
+          "desc": "Suhu ruang umum",
+          "use": "Target nyaman yang klasik",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Suhu tubuh normal",
+          "use": "Patokan saat orang bingung antara cuaca dan demam",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Catatan:</strong> 17°C terasa cukup nyaman saat bergerak, tetapi bisa terasa lebih dingin di malam hari, di ruangan diam, atau saat berangin."
+  },
+  "faq": [
+    {
+      "question": "17 derajat Celsius sama dengan berapa Fahrenheit?",
+      "answerHtml": "<p>17 derajat Celsius sama dengan 62.6 derajat Fahrenheit. Rumusnya: °F = (°C × 9/5) + 32. Kalikan 17 dengan 1.8 untuk mendapatkan 30.6, lalu tambah 32 menjadi 62.6°F.</p>"
+    },
+    {
+      "question": "17°C itu panas atau dingin?",
+      "answerHtml": "<p>17°C (62.6°F) biasanya dianggap sejuk ke sedang. Suhu ini lebih rendah daripada suhu ruang klasik, tetapi tetap nyaman untuk banyak kegiatan harian.</p><p>Kebanyakan orang tidak akan menyebutnya dingin berat, tetapi juga belum seperti cuaca panas.</p>"
+    },
+    {
+      "question": "Apakah 17°C termasuk demam?",
+      "answerHtml": "<p>Tidak. Suhu tubuh normal sekitar 37°C (98.6°F), dan demam biasanya mulai di sekitar 38°C (100.4°F).</p>"
+    },
+    {
+      "question": "Sehangat apa 17°C itu?",
+      "answerHtml": "<p>17°C sama dengan 62.6°F. Kebanyakan orang menganggapnya segar dan nyaman: lebih dingin daripada suhu ruang biasa, tetapi masih enak untuk aktivitas harian.</p>"
+    },
+    {
+      "question": "Pakaian apa yang cocok saat 17°C?",
+      "answerHtml": "<p>Pada 17°C, satu lapisan tambahan tipis biasanya sudah cukup.</p><ul><li>Kaos atau atasan ringan dengan kardigan atau jaket tipis</li><li>Jeans, celana panjang, atau bawahan nyaman</li><li>Sneakers atau sepatu tertutup</li></ul><p>Kalau ada matahari, pakaian lebih ringan mungkin cukup, tetapi angin dan teduh masih berpengaruh.</p>"
+    },
+    {
+      "question": "Apakah 17°C cocok untuk tidur?",
+      "answerHtml": "<p>Ya, untuk banyak orang. Kamar tidur sering terasa lebih enak saat sedikit lebih sejuk daripada ruang keluarga, dan 17°C berada di rentang itu.</p>"
+    },
+    {
+      "question": "Berapa Fahrenheit untuk -17°C?",
+      "answerHtml": "<p>-17°C setara dengan 1.4°F. Itu sudah masuk kondisi dingin musim dingin yang jelas, jauh berbeda dari 17°C di atas nol.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "Seperti apa 17°C (62.6°F) dalam keseharian",
+    "cards": [
+      {
+        "title": "Suhu tengah yang fleksibel",
+        "body": "17°C berada di zona yang terasa segar tetapi biasanya tidak mengganggu. Karena itu, suhu ini cocok untuk perjalanan, belanja, dan hari yang berganti antara di dalam dan di luar ruangan."
+      },
+      {
+        "title": "Sering terasa lebih enak daripada ruangan terlalu hangat",
+        "body": "Banyak orang merasa 17°C lebih nyaman daripada ruangan yang terlalu panas, terutama saat tidur, fokus, atau bergerak di rumah."
+      },
+      {
+        "title": "Belum tentu cuaca kaos saja untuk semua orang",
+        "body": "Ada yang sudah nyaman dengan pakaian ringan di 17°C, tetapi banyak juga yang tetap memilih kardigan atau jaket tipis."
+      }
+    ]
+  }
+}

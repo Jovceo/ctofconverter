@@ -1,0 +1,131 @@
+{
+  "seo": {
+    "title": "16 °C in Fahrenheit (60,8 °F) | Temperatur-Umrechner",
+    "description": "Rechne 16 °C schnell in Fahrenheit um. Erfahre, dass 16 °C genau 60,8 °F sind, und wie sich diese Temperatur im Alltag anfühlt."
+  },
+  "header": {
+    "title": "16 °C in Fahrenheit (16 Grad Celsius in °F)",
+    "tagline": "Wandle 16 °C in Fahrenheit um und bekomme praktische Hinweise zu frischer Raumluft, leichten Schichten, Alltagswetter und typischen Temperaturfragen."
+  },
+  "conversion": {
+    "intro": "16 °C entsprechen 60,8 °F."
+  },
+  "strategy": {
+    "keywords": "16 c in fahrenheit 16 celsius in fahrenheit 60,8 fahrenheit kühl wetter kleidung raumtemperatur fieber"
+  },
+  "comfortGuide": {
+    "title": "Komfort bei 16 °C",
+    "subtitle": "Frisch genug für eine leichte Schicht, aber gut alltagstauglich",
+    "intro": "16 °C (60,8 °F) fühlen sich meist frisch und leicht kühl an. Beim Gehen oder Pendeln ist das oft angenehm, in Innenräumen wünschen sich viele aber einen dünnen Pullover oder eine leichte Hemdjacke.",
+    "chart": {
+      "cold": {
+        "label": "Kühl",
+        "value": "10-15°C",
+        "desc": "50-59°F<br>Für viele typisches Wetter für eine leichte Jacke"
+      },
+      "moderate": {
+        "label": "Frisch",
+        "value": "16-19°C",
+        "desc": "60.8-66.2°F<br>Angenehm mit einer leichten Lage"
+      },
+      "warm": {
+        "label": "Angenehm",
+        "value": "20-22°C",
+        "desc": "68-71.6°F<br>Klassischer Innenraumkomfort"
+      }
+    },
+    "table": {
+      "headers": {
+        "temperature": "Temperatur",
+        "description": "Beschreibung",
+        "typicalUse": "Typische Nutzung"
+      },
+      "rows": [
+        {
+          "temp": "10°C (50°F)",
+          "desc": "Kühl",
+          "use": "Eine leichte Jacke passt meistens gut",
+          "href": "/10-c-to-f"
+        },
+        {
+          "temp": "16°C (60.8°F)",
+          "desc": "Frisch und leicht kühl",
+          "use": "Gut zum Gehen, Pendeln und für Räume mit leichter Zusatzschicht",
+          "highlight": true
+        },
+        {
+          "temp": "18°C (64.4°F)",
+          "desc": "Kühl, aber angenehm",
+          "use": "Wird oft zum Schlafen oder für ruhige Innenräume geschätzt",
+          "href": "/18-c-to-f"
+        },
+        {
+          "temp": "19°C (66.2°F)",
+          "desc": "Angenehm frisch",
+          "use": "Ausgewogener Innenraumkomfort ohne stickige Wärme",
+          "href": "/19-c-to-f"
+        },
+        {
+          "temp": "20°C (68°F)",
+          "desc": "Raumtemperatur",
+          "use": "Häufige Thermostateinstellung zu Hause und im Büro",
+          "href": "/20-c-to-f"
+        },
+        {
+          "temp": "37°C (98.6°F)",
+          "desc": "Normale Körpertemperatur",
+          "use": "Hilfreicher Vergleich, wenn Wetter und Fieber verwechselt werden",
+          "href": "/37-c-to-f"
+        }
+      ]
+    },
+    "note": "<strong>Hinweis:</strong> 16 °C fühlen sich in Bewegung oft angenehmer an als im Sitzen. Wind, Morgenkühle und feuchte Luft lassen die Temperatur schneller frischer wirken."
+  },
+  "faq": [
+    {
+      "question": "Wie viel sind 16 Grad Celsius in Fahrenheit?",
+      "answerHtml": "<p>16 Grad Celsius sind 60,8 Grad Fahrenheit. Die Formel lautet: °F = (°C × 9/5) + 32. 16 mal 1,8 ergibt 28,8, plus 32 ergibt 60,8 °F.</p>"
+    },
+    {
+      "question": "Sind 16 °C warm oder kalt?",
+      "answerHtml": "<p>16 °C (60,8 °F) gelten meist als kühl bis mild. Für schwere Winterkleidung ist es zu warm, aber die meisten Menschen tragen trotzdem gern eine leichte zusätzliche Schicht.</p><p>Draußen wirkt es oft frisch und angenehm. Drinnen kann es beim langen Sitzen leicht kühl wirken.</p>"
+    },
+    {
+      "question": "Wie viel sind minus 16 °C in Fahrenheit?",
+      "answerHtml": "<p>-16 °C entsprechen 3,2 °F. Das ist echter Winterfrost und deutlich strenger als 16 °C über null.</p>"
+    },
+    {
+      "question": "Sind 16 °C Fieber?",
+      "answerHtml": "<p>Nein. Fieber beginnt beim Menschen meist erst ab etwa 38 °C (100,4 °F), normale Körpertemperatur liegt bei rund 37 °C (98,6 °F).</p><p>Als Körpertemperatur wären 16 °C weit unter jedem lebensfähigen Bereich.</p>"
+    },
+    {
+      "question": "Was sollte ich bei 16 °C anziehen?",
+      "answerHtml": "<p>Bei 16 °C reichen meistens leichte Schichten.</p><ul><li>T-Shirt oder dünnes Langarmshirt mit Strickjacke, Hemdjacke oder leichter Jacke</li><li>Jeans, lange Hosen oder ähnliche Alltagskleidung</li><li>Geschlossene Schuhe oder Sneaker</li></ul><p>Bei Wind oder Nieselregen macht eine zusätzliche Lage schnell einen Unterschied.</p>"
+    },
+    {
+      "question": "Sind 16 °C gut für Aktivitäten draußen?",
+      "answerHtml": "<p>Ja. 16 °C sind oft sehr angenehm zum Spazierengehen, Pendeln, für leichte Bewegung oder Zeit im Freien. Es fühlt sich eher frisch als unangenehm kalt an.</p>"
+    },
+    {
+      "question": "Wie rechne ich 16 °C im Kopf in Fahrenheit um?",
+      "answerHtml": "<p>Eine schnelle Faustregel ist: Celsius verdoppeln und ungefähr 30 addieren. Bei 16 °C kommt man so auf etwa 62 °F, also nahe am exakten Wert von 60,8 °F.</p>"
+    }
+  ],
+  "practicalApplications": {
+    "title": "16 °C (60,8 °F) im Alltag",
+    "cards": [
+      {
+        "title": "Frisch, aber gut machbar",
+        "body": "Bei 16 °C fühlen sich viele draußen mit einer leichten Extraschicht wohl. Es ist frisch, aber nicht hart."
+      },
+      {
+        "title": "Innenräume wirken oft kühler als erwartet",
+        "body": "Drinnen liegen 16 °C etwas unter klassischer Raumtemperatur. Fürs Schlafzimmer kann das gut sein, beim Arbeiten oder Lesen möchte mancher aber einen Pullover."
+      },
+      {
+        "title": "Bewegung verändert das Gefühl deutlich",
+        "body": "Beim Laufen oder Pendeln sind 16 °C oft angenehm, im Sitzen bei derselben Temperatur kann es merklich kühler wirken."
+      }
+    ]
+  }
+}
