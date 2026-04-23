@@ -18,6 +18,23 @@
 - `1-c-to-f`、`16-c-to-f`、`17-c-to-f`、`19-c-to-f` 已完成 Next.js 迁移、多语言复核和旧 `.html` -> 新 URL 的 `301` 规则接入。
 - 当前项目在 `npm run build` 前会自动执行 `scripts/generate-sitemap.js`，因此 sitemap 会随构建自动更新。
 
+## 已完成页面记录
+
+### 2026-04-22
+
+- `1-c-to-f`
+- `16-c-to-f`
+- `17-c-to-f`
+- `19-c-to-f`
+
+完成说明：
+
+- 已接入 Next.js 页面和多语言路由
+- 已完成 `zh / es / hi / de / id / pt-br` 等语言内容复核与润色
+- 已完成运行态检查：`title`、`H1`、`canonical`、`hreflang`、语言切换正常
+- 已补旧 `.html` -> 新 URL 的 `301`
+- 已通过 `npx tsc --noEmit` 和 `npm run build`
+
 ## 尚未迁移的页面清单
 
 ### A. 体温 / 发烧边界带

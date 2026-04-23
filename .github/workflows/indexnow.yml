@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: Wait for Vercel deployment
         run: sleep 120
@@ -26,41 +26,78 @@ jobs:
           # 2. Generate fresh sitemap.xml
           node scripts/generate-sitemap.js
 
-          # 3. Detect Added/Modified .tsx files (New or Updated Pages)
-          # --diff-filter=AM includes newly added and modified files.
-          CHANGED_FILES=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD | grep "^pages/.*\.tsx$" || true)
+          # 3. Detect changed files across the whole push, not just HEAD~1.
+          BEFORE_SHA="${{ github.event.before }}"
+          CURRENT_SHA="${{ github.sha }}"
+          ZERO_SHA="0000000000000000000000000000000000000000"
+
+          if [ -z "$BEFORE_SHA" ] || [ "$BEFORE_SHA" = "$ZERO_SHA" ]; then
+            if git rev-parse HEAD~1 >/dev/null 2>&1; then
+              BEFORE_SHA=$(git rev-parse HEAD~1)
+            else
+              BEFORE_SHA=$CURRENT_SHA
+            fi
+          fi
+
+          if ! git cat-file -e "${BEFORE_SHA}^{commit}" >/dev/null 2>&1; then
+            echo "Base commit $BEFORE_SHA is unavailable locally. Fetching more history..."
+            git fetch --no-tags --prune --depth=100 origin "${GITHUB_REF_NAME:-main}" || true
+          fi
+
+          if ! git cat-file -e "${BEFORE_SHA}^{commit}" >/dev/null 2>&1; then
+            echo "Could not resolve base commit $BEFORE_SHA. Falling back to HEAD~1."
+            if git rev-parse HEAD~1 >/dev/null 2>&1; then
+              BEFORE_SHA=$(git rev-parse HEAD~1)
+            else
+              BEFORE_SHA=$CURRENT_SHA
+            fi
+          fi
+
+          CHANGED_FILES=$(git diff --name-only --diff-filter=AMR "$BEFORE_SHA" "$CURRENT_SHA" || true)
 
           if [ -z "$CHANGED_FILES" ]; then
-            echo "No page changes detected. Skipping IndexNow submission."
+            echo "No changed files detected in push range. Skipping IndexNow submission."
             exit 0
           fi
 
-          echo "Changed pages (added/modified):"
+          echo "Changed files in push range:"
           echo "$CHANGED_FILES"
 
-          # 4. Extract corresponding URLs from sitemap.xml
-          # We search sitemap.xml for URLs matching the filenames
+          PAGE_FILES=$(echo "$CHANGED_FILES" | grep -E '^pages/.*\.tsx$' | grep -vE '^pages/(api/|_app\.tsx|_document\.tsx|_error\.tsx|404\.tsx|sitemap\.xml\.tsx)' || true)
+          LOCALE_FILES=$(echo "$CHANGED_FILES" | grep -E '^locales/[^/]+/.*\.json$' || true)
+          ROUTE_FILES=$(echo "$CHANGED_FILES" | grep -E '^(config/migrated-routes\.json|next\.config\.js)$' || true)
+
+          if [ -z "$PAGE_FILES" ] && [ -z "$LOCALE_FILES" ] && [ -z "$ROUTE_FILES" ]; then
+            echo "No page, locale, or routing changes detected. Skipping IndexNow submission."
+            exit 0
+          fi
+
+          # 4. Resolve URLs from changed page slugs / locale files.
           LOCALES=("en" "zh" "es" "hi" "ar" "ja" "fr" "de" "id" "pt-br")
           EN_ONLY_SLUGS=("privacy-policy" "terms-of-service" "about-us")
           URLS=""
+          ALL_URLS=$(grep -oP '(?<=<loc>).*?(?=</loc>)' public/sitemap.xml || true)
 
-          for FILE in $CHANGED_FILES; do
-            # Convert "pages/foo.tsx" -> "foo"
-            SLUG=$(echo "$FILE" | sed 's/^pages\///' | sed 's/\.tsx$//')
+          add_urls_for_slug() {
+            local SLUG="$1"
+            local MATCHED_URLS=""
+            local IS_EN_ONLY=0
 
-            if [ "$SLUG" == "index" ]; then
-              SLUG=""
-            fi
-
-            # Grep <loc> entries containing the slug.
             if [ -z "$SLUG" ]; then
-              MATCHED_URLS=$(grep -oP '(?<=<loc>).*?(?=</loc>)' public/sitemap.xml | grep -E "^https://ctofconverter.com/([a-z]{2}(-[a-z]{2})?/?)?$" || true)
+              MATCHED_URLS=$(echo "$ALL_URLS" | grep -E '^https://ctofconverter.com(/(zh|es|hi|ar|ja|fr|de|id|pt-br))?$' || true)
             else
-              MATCHED_URLS=$(grep -oP '(?<=<loc>).*?(?=</loc>)' public/sitemap.xml | grep -E "/$SLUG(/)?$" || true)
+              MATCHED_URLS=$(echo "$ALL_URLS" | grep -E "/${SLUG}(/)?$" || true)
             fi
 
             if [ -z "$MATCHED_URLS" ]; then
               echo "Could not find \"$SLUG\" in sitemap.xml. Falling back to computed URLs."
+
+              for EN_ONLY in "${EN_ONLY_SLUGS[@]}"; do
+                if [ "$SLUG" = "$EN_ONLY" ]; then
+                  IS_EN_ONLY=1
+                  break
+                fi
+              done
 
               if [ -z "$SLUG" ]; then
                 MATCHED_URLS="https://ctofconverter.com"
@@ -70,20 +107,18 @@ jobs:
                   fi
                 done
               else
-                IS_EN_ONLY=0
-                for EN_ONLY in "${EN_ONLY_SLUGS[@]}"; do
-                  if [ "$SLUG" == "$EN_ONLY" ]; then
-                    IS_EN_ONLY=1
-                    break
-                  fi
-                done
-
-                MATCHED_URLS="https://ctofconverter.com/${SLUG}"
+                if [ -f "locales/en/${SLUG}.json" ] || [ "$IS_EN_ONLY" -eq 1 ]; then
+                  MATCHED_URLS="https://ctofconverter.com/${SLUG}"
+                fi
 
                 if [ "$IS_EN_ONLY" -eq 0 ]; then
                   for LOCALE in "${LOCALES[@]}"; do
-                    if [ "$LOCALE" != "en" ]; then
-                      MATCHED_URLS="${MATCHED_URLS}"$'\n'"https://ctofconverter.com/${LOCALE}/${SLUG}"
+                    if [ "$LOCALE" != "en" ] && [ -f "locales/${LOCALE}/${SLUG}.json" ]; then
+                      if [ -z "$MATCHED_URLS" ]; then
+                        MATCHED_URLS="https://ctofconverter.com/${LOCALE}/${SLUG}"
+                      else
+                        MATCHED_URLS="${MATCHED_URLS}"$'\n'"https://ctofconverter.com/${LOCALE}/${SLUG}"
+                      fi
                     fi
                   done
                 fi
@@ -94,7 +129,27 @@ jobs:
               ADDED_URLS=$(echo "$MATCHED_URLS" | tr '\n' ',' | sed 's/,$//')
               URLS="${URLS},${ADDED_URLS}"
             fi
+          }
+
+          SLUGS=$( (
+            echo "$PAGE_FILES" | sed '/^$/d' | sed 's#^pages/##' | sed 's#\.tsx$##'
+            echo "$LOCALE_FILES" | sed '/^$/d' | sed 's#^locales/[^/]*/##' | sed 's#\.json$##' | sed 's#^home$#index#'
+          ) | sort -u )
+
+          for SLUG in $SLUGS; do
+            # Convert "pages/foo.tsx" -> "foo"
+            if [ "$SLUG" == "index" ]; then
+              SLUG=""
+            fi
+
+            add_urls_for_slug "$SLUG"
           done
+
+          if [ ! -z "$ROUTE_FILES" ]; then
+            echo "Routing config changed. Re-submitting all sitemap URLs for safety."
+            ADDED_URLS=$(echo "$ALL_URLS" | tr '\n' ',' | sed 's/,$//')
+            URLS="${URLS},${ADDED_URLS}"
+          fi
 
           # Clean up trailing/leading commas
           URLS=$(echo "$URLS" | sed 's/^,//' | sed 's/,$//' | sed 's/,,/,/g')
