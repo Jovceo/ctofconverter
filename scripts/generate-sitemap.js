@@ -165,19 +165,22 @@ function createUrlEntry(loc, lastmod, hreflangLinks, priority, changefreq) {
 // 3. 扫描页面 + priority/changefreq 工具函数
 // ============================================================
 function getPriority(pageSlug) {
-    // 整数温度页 + 首页 + 计算器页：最高
+    // 首页：最高
+    if (pageSlug === '' || pageSlug === 'index') return '1.0';
+    // 整数温度页：最高
     if (/^\d+-c-to-f$/.test(pageSlug)) return '1.0';
     // 小数温度页：次高
     if (/^\d+-\d+-c-to-f$/.test(pageSlug)) return '0.8';
     // 工具页（fan-oven, calculator 等）
-    if (/^(calculator|fan-oven)/.test(pageSlug)) return '0.9';
+    if (pageSlug.includes('calculator') || pageSlug.includes('fan-oven')) return '0.9';
     // 内容页（about, contact, privacy 等）
     return '0.5';
 }
 
 function getChangefreq(pageSlug) {
+    if (pageSlug === '' || pageSlug === 'index') return 'weekly';
     if (/^\d+(-\d+)?-c-to-f$/.test(pageSlug)) return 'weekly';
-    if (/^(calculator|fan-oven)/.test(pageSlug)) return 'weekly';
+    if (pageSlug.includes('calculator') || pageSlug.includes('fan-oven')) return 'weekly';
     return 'monthly';
 }
 
