@@ -13,36 +13,10 @@ const NON_EN_EXCLUDED = ['privacy-policy', 'terms-of-service', 'about-us'];
 const PROJECT_LAUNCH_DATE = '2025-10-19';
 
 // ============================================================
-// 🎯 SEO 战略：只在 sitemap 中收录高价值页面
-//    其他温度页让搜索引擎通过内链自然发现
+// SEO 战略 v2：全量收录所有 Next.js 页面，通过 priority 和 changefreq 控制爬取优先级。
+//   整数温度页 (1.0 weekly) > 小数温度页 (0.8 weekly) > 工具页 (0.9 weekly) > 内容页 (0.5 monthly)
+//   60 页全放不影响爬取预算（通常需要 10,000+ 页才需要担心）。
 // ============================================================
-// 高价值温度页 — 有真实搜索需求的页面：
-//   • 医学体温: 36, 36.1, 36.3, 37, 37.2, 37.5, 38, 39, 41 (发烧判断)
-//   • 关键温度: 0 (冰点), 4 (冰箱), 20 (室温), 40 (高热), 100 (沸点)
-//   • 常用: 47, 75 (烹饪)
-const CORE_TEMP_PAGES = new Set([
-    '0-c-to-f',     // 冰点
-    '4-c-to-f',     // 冰箱温度
-    '20-c-to-f',    // 室温
-    '36-c-to-f',    // 正常体温下限
-    '36-1-c-to-f',  // 正常体温
-    '36-3-c-to-f',  // 正常体温
-    '36-4-c-to-f',  // 正常体温
-    '36-5-c-to-f',  // 正常体温
-    '36-6-c-to-f',  // 正常体温（常见测量值）
-    '37-c-to-f',    // 正常体温上限
-    '37-2-c-to-f',  // 低烧临界
-    '37-5-c-to-f',  // 低烧
-    '38-c-to-f',    // 发烧
-    '39-c-to-f',    // 高烧
-    '40-c-to-f',    // 高热
-    '41-c-to-f',    // 危险高热
-    '47-c-to-f',    // 烹饪相关
-    '75-c-to-f',    // 烹饪安全温度
-    '100-c-to-f',   // 沸点
-]);
-const RECENT_TEMP_UPDATE_WINDOW_DAYS = 90;
-const MAX_RECENT_TEMP_PAGES = 12;
 
 const pagesDir = path.join(__dirname, '../pages');
 const localesDir = path.join(__dirname, '../locales');
@@ -138,34 +112,6 @@ function getPageRollupLastMod(pageSlug) {
     return lastmods.sort().reverse()[0] || PROJECT_LAUNCH_DATE;
 }
 
-function getIncludedTemperaturePages(allPages) {
-    const cutoffMs = Date.now() - (RECENT_TEMP_UPDATE_WINDOW_DAYS * 24 * 60 * 60 * 1000);
-    const tempPages = allPages.filter(isTemperaturePage);
-    const corePages = tempPages.filter((page) => CORE_TEMP_PAGES.has(page));
-
-    const recentPages = tempPages
-        .filter((page) => !CORE_TEMP_PAGES.has(page))
-        .map((page) => ({
-            page,
-            lastmod: getPageRollupLastMod(page),
-        }))
-        .filter(({ lastmod }) => parseDateOnly(lastmod) >= cutoffMs)
-        .sort((a, b) => {
-            const dateCompare = b.lastmod.localeCompare(a.lastmod);
-            if (dateCompare !== 0) return dateCompare;
-            return a.page.localeCompare(b.page, undefined, { numeric: true, sensitivity: 'base' });
-        })
-        .slice(0, MAX_RECENT_TEMP_PAGES)
-        .map(({ page }) => page);
-
-    return {
-        includedTempPages: new Set([...corePages, ...recentPages]),
-        totalTempPages: tempPages.length,
-        coreCount: corePages.length,
-        recentCount: recentPages.length,
-    };
-}
-
 // ============================================================
 // 2. XML 工具函数
 // ============================================================
@@ -200,14 +146,15 @@ function buildUrl(locale, pageSlug) {
 }
 
 /**
- * 构建 URL 条目 — 不再包含 changefreq 和 priority
- * Google 官方已声明忽略这两个字段
+ * 构建 URL 条目 — 包含 priority 和 changefreq
  */
-function createUrlEntry(loc, lastmod, hreflangLinks) {
+function createUrlEntry(loc, lastmod, hreflangLinks, priority, changefreq) {
     const lines = [
         '  <url>',
         `    <loc>${loc}</loc>`,
         `    <lastmod>${lastmod}</lastmod>`,
+        `    <priority>${priority}</priority>`,
+        `    <changefreq>${changefreq}</changefreq>`,
         ...hreflangLinks,
         '  </url>'
     ];
@@ -215,8 +162,25 @@ function createUrlEntry(loc, lastmod, hreflangLinks) {
 }
 
 // ============================================================
-// 3. 扫描页面 + 高价值过滤
+// 3. 扫描页面 + priority/changefreq 工具函数
 // ============================================================
+function getPriority(pageSlug) {
+    // 整数温度页 + 首页 + 计算器页：最高
+    if (/^\d+-c-to-f$/.test(pageSlug)) return '1.0';
+    // 小数温度页：次高
+    if (/^\d+-\d+-c-to-f$/.test(pageSlug)) return '0.8';
+    // 工具页（fan-oven, calculator 等）
+    if (/^(calculator|fan-oven)/.test(pageSlug)) return '0.9';
+    // 内容页（about, contact, privacy 等）
+    return '0.5';
+}
+
+function getChangefreq(pageSlug) {
+    if (/^\d+(-\d+)?-c-to-f$/.test(pageSlug)) return 'weekly';
+    if (/^(calculator|fan-oven)/.test(pageSlug)) return 'weekly';
+    return 'monthly';
+}
+
 function getAllPages() {
     try {
         const files = fs.readdirSync(pagesDir);
@@ -229,18 +193,8 @@ function getAllPages() {
                 && !file.startsWith('[');
         }).map(file => file.replace('.tsx', ''));
 
-        // 过滤：温度页只保留高价值的
-        const filtered = allPages.filter(page => {
-            // 非温度页（首页、工具页、关于页等）全部保留
-            if (!page.match(/^\d+(-\d+)?-c-to-f$/)) return true;
-            // 温度页只保留高价值列表中的
-            return CORE_TEMP_PAGES.has(page);
-        });
-
-        const excluded = allPages.length - filtered.length;
-        if (excluded > 0) {
-            console.log(`🎯 Strategy: ${excluded} low-value temp pages excluded from sitemap`);
-        }
+        // 全量收录：所有 .tsx 页面（排除 EXCLUDED 列表）都直接返回，不做温度页过滤
+        const filtered = [...allPages];
 
         // 排序：首页最前，其他页面按自然顺序排序
         filtered.sort((a, b) => {
@@ -273,51 +227,7 @@ function getAvailableLocales(pageSlug) {
 }
 
 function getSitemapPages() {
-    try {
-        const files = fs.readdirSync(pagesDir);
-        const allPages = files.filter((file) => {
-            const filePath = path.join(pagesDir, file);
-            const stat = fs.statSync(filePath);
-            return stat.isFile()
-                && file.endsWith('.tsx')
-                && !EXCLUDED.includes(file)
-                && !file.startsWith('[');
-        }).map((file) => file.replace('.tsx', ''));
-
-        const {
-            includedTempPages,
-            totalTempPages,
-            coreCount,
-            recentCount,
-        } = getIncludedTemperaturePages(allPages);
-
-        const filtered = allPages.filter((page) => {
-            if (!isTemperaturePage(page)) return true;
-            return includedTempPages.has(page);
-        });
-
-        const includedTempCount = [...includedTempPages].length;
-        const excluded = totalTempPages - includedTempCount;
-
-        console.log(`SEO strategy: ${coreCount} core temp pages kept in sitemap`);
-        if (recentCount > 0) {
-            console.log(`SEO strategy: ${recentCount} recently updated temp pages added (last ${RECENT_TEMP_UPDATE_WINDOW_DAYS} days, cap ${MAX_RECENT_TEMP_PAGES})`);
-        }
-        if (excluded > 0) {
-            console.log(`SEO strategy: ${excluded} older non-core temp pages omitted from sitemap`);
-        }
-
-        filtered.sort((a, b) => {
-            if (a === 'index') return -1;
-            if (b === 'index') return 1;
-            return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
-        });
-
-        return filtered;
-    } catch (e) {
-        console.error('Error reading pages directory:', e);
-        return [];
-    }
+    return getAllPages();
 }
 
 // ============================================================
@@ -348,7 +258,7 @@ pages.forEach(page => {
             hreflangLinks.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${defaultLoc}"/>`);
         }
 
-        urlEntries.push(createUrlEntry(loc, lastmod, hreflangLinks));
+        urlEntries.push(createUrlEntry(loc, lastmod, hreflangLinks, getPriority(pageSlug), getChangefreq(pageSlug)));
     });
 });
 

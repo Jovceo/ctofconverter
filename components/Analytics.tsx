@@ -21,88 +21,52 @@ export default function Analytics() {
     }
   }, []);
 
-  // Load Google AdSense on user interaction (for better performance)
+  // Load Google AdSense immediately
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    let scriptsLoaded = false;
+    // Check if AdSense script is already loaded
+    const existingScript = document.querySelector(
+      'script[src*="adsbygoogle.js"]'
+    );
+    if (existingScript) {
+      // Script already loaded, try to push if there are ins elements
+      const insElements = document.querySelectorAll('ins.adsbygoogle');
+      if (insElements.length > 0 && window.adsbygoogle) {
+        const uninitializedElements = Array.from(insElements).filter(
+          (ins) => !ins.hasAttribute('data-adsbygoogle-status')
+        );
+        if (uninitializedElements.length > 0) {
+          try {
+            window.adsbygoogle.push({});
+          } catch {
+            // Silently ignore if already initialized
+          }
+        }
+      }
+      return;
+    }
 
-    const loadAdSense = () => {
-      if (scriptsLoaded) return;
-      scriptsLoaded = true;
+    // Load Google AdSense script immediately
+    const adsScript = document.createElement('script');
+    adsScript.src =
+      'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1199889942562451';
+    adsScript.async = true;
+    adsScript.crossOrigin = 'anonymous';
+    document.head.appendChild(adsScript);
 
-      // Check if AdSense script is already loaded
-      const existingScript = document.querySelector(
-        'script[src*="adsbygoogle.js"]'
-      );
-      if (existingScript) {
-        // Script already loaded, try to push if there are ins elements
+    adsScript.onload = () => {
+      if (window.adsbygoogle) {
+        // Check if there are any ins.adsbygoogle elements
         const insElements = document.querySelectorAll('ins.adsbygoogle');
-        if (insElements.length > 0 && window.adsbygoogle) {
-          const uninitializedElements = Array.from(insElements).filter(
-            (ins) => !ins.hasAttribute('data-adsbygoogle-status')
-          );
-          if (uninitializedElements.length > 0) {
-            try {
-              window.adsbygoogle.push({});
-            } catch {
-              // Silently ignore if already initialized
-            }
+        if (insElements.length > 0) {
+          try {
+            window.adsbygoogle.push({});
+          } catch {
+            // Silently ignore errors
           }
         }
-        return;
       }
-
-      // Load Google AdSense script
-      const adsScript = document.createElement('script');
-      adsScript.src =
-        'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1199889942562451';
-      adsScript.async = true;
-      adsScript.crossOrigin = 'anonymous';
-      document.head.appendChild(adsScript);
-
-      adsScript.onload = () => {
-        if (window.adsbygoogle) {
-          // Check if there are any ins.adsbygoogle elements
-          const insElements = document.querySelectorAll('ins.adsbygoogle');
-          if (insElements.length > 0) {
-            try {
-              window.adsbygoogle.push({});
-            } catch {
-              // Silently ignore errors
-            }
-          }
-        }
-      };
-    };
-
-    const loadOnInteraction = () => {
-      loadAdSense();
-      document.removeEventListener('scroll', loadOnInteraction);
-      document.removeEventListener('click', loadOnInteraction);
-      document.removeEventListener('mousemove', loadOnInteraction);
-      document.removeEventListener('touchstart', loadOnInteraction);
-    };
-
-    // Load on user interaction for better performance
-    document.addEventListener('scroll', loadOnInteraction, { once: true, passive: true });
-    document.addEventListener('click', loadOnInteraction, { once: true });
-    document.addEventListener('mousemove', loadOnInteraction, { once: true });
-    document.addEventListener('touchstart', loadOnInteraction, { once: true, passive: true });
-
-    // Fallback: Load after 5 seconds if no interaction occurs
-    const timeout = setTimeout(() => {
-      if (!scriptsLoaded) {
-        loadAdSense();
-      }
-    }, 5000);
-
-    return () => {
-      clearTimeout(timeout);
-      document.removeEventListener('scroll', loadOnInteraction);
-      document.removeEventListener('click', loadOnInteraction);
-      document.removeEventListener('mousemove', loadOnInteraction);
-      document.removeEventListener('touchstart', loadOnInteraction);
     };
   }, []);
 
@@ -122,4 +86,3 @@ export default function Analytics() {
     </>
   );
 }
-
