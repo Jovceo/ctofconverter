@@ -4,37 +4,26 @@
 User-agent: *
 
 # ============================================
-# 允许所有页面被索引
-# ============================================
-Allow: /
-
-# ============================================
-# 屏蔽无索引价值的路径
+# 核心策略：拦截数据，开放资源
 # ============================================
 
-# Next.js 构建清单文件（无实际内容）
-Disallow: /_next/static/*-*manifest*.js$
-Disallow: /_next/static/chunks/*.js
-Disallow: /_next/static/webpack/*.js
-
-# Next.js 数据请求（JSON 格式的页面数据）
+# 屏蔽 Next.js 数据请求（JSON 格式的页面数据）
+# 这是最值得屏蔽的部分，能有效减少重复抓取和服务器压力
 Disallow: /_next/data/
 
-# API 路由
-Disallow: /api/
+# 屏蔽内部/构建相关的敏感目录
+Disallow: /_next/server/
+Disallow: /_next/cache/
 
-# Vercel 平台文件
+# 屏蔽 API 和平台特定目录
+Disallow: /api/
 Disallow: /_vercel/
 
-# 标准协议目录
-Disallow: /.well-known/
+# 显式允许静态资源抓取（确保 Googlebot 渲染页面完整）
+# 注意：不要在此处添加任何对 /_next/static/ 子目录的 Disallow
+Allow: /_next/static/
 
 # ============================================
 # 站点地图
 # ============================================
 Sitemap: https://ctofconverter.com/sitemap.xml
-
-# ============================================
-# 主机声明
-# ============================================
-Host: https://ctofconverter.com
