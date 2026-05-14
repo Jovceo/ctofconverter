@@ -1,9 +1,40 @@
-# *
+# https://ctofconverter.com/robots.txt
+# Last updated: 2026-05-15
+
 User-agent: *
+
+# ============================================
+# 允许所有页面被索引
+# ============================================
 Allow: /
 
-# Host
-Host: https://ctofconverter.com
+# ============================================
+# 屏蔽无索引价值的路径
+# ============================================
 
-# Sitemaps
+# Next.js 构建清单文件（无实际内容）
+Disallow: /_next/static/*-*manifest*.js$
+Disallow: /_next/static/chunks/*.js
+Disallow: /_next/static/webpack/*.js
+
+# Next.js 数据请求（JSON 格式的页面数据）
+Disallow: /_next/data/
+
+# API 路由
+Disallow: /api/
+
+# Vercel 平台文件
+Disallow: /_vercel/
+
+# 标准协议目录
+Disallow: /.well-known/
+
+# ============================================
+# 站点地图
+# ============================================
 Sitemap: https://ctofconverter.com/sitemap.xml
+
+# ============================================
+# 主机声明
+# ============================================
+Host: https://ctofconverter.com
