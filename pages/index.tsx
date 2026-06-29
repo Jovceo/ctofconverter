@@ -7,7 +7,7 @@ import Navigation from '../components/Navigation';
 import { getLocalizedLink } from '../utils/locale-config';
 import { createTranslator, TranslationDictionary } from '../utils/translation-runtime';
 import { celsiusToFahrenheit, formatTemperature } from '../utils/temperaturePageHelpers';
-import { getAlternateUrls, getLocalizedAbsoluteUrl, getXDefaultAbsoluteUrl } from '../utils/seo';
+import { getLocalizedAbsoluteUrl } from '../utils/seo';
 
 // 历史记录类型定义
 interface ConversionHistoryItem {
@@ -46,8 +46,6 @@ export default function Home({ locale, commonMessages, homeMessages, dynamicRece
         [currentLocale, commonMessages, homeMessages]
     );
     const homepageUrl = getLocalizedAbsoluteUrl('/', currentLocale);
-    const homepageAlternates = getAlternateUrls('/');
-    const homepageDefaultUrl = getXDefaultAbsoluteUrl('/');
 
     // 转换器状态
     const [celsius, setCelsius] = useState<string>('');
@@ -140,17 +138,7 @@ export default function Home({ locale, commonMessages, homeMessages, dynamicRece
                 <meta name="author" content="Ctofconverter Team" />
                 <meta name="robots" content="index, follow" />
 
-                {/* SEO Multi-language Linking */}
                 <link rel="canonical" href={homepageUrl} />
-                <link rel="alternate" hrefLang="x-default" href={homepageDefaultUrl} />
-                {homepageAlternates.map((alternate) => (
-                    <link
-                        key={alternate.locale}
-                        rel="alternate"
-                        hrefLang={alternate.hreflang}
-                        href={alternate.href}
-                    />
-                ))}
 
                 <meta property="og:title" content={t('meta.ogTitle')} />
                 <meta property="og:description" content={t('meta.ogDescription')} />
