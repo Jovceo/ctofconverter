@@ -8,6 +8,7 @@ const SITE_URL = 'https://ctofconverter.com';
 const LOCALES = ['en', 'zh', 'es', 'hi', 'ar', 'ja', 'fr', 'de', 'id', 'pt-br'];
 const EXCLUDED = ['_app.tsx', '_document.tsx', '_error.tsx', '404.tsx', 'sitemap.xml.tsx', 'api'];
 const NON_EN_EXCLUDED = ['privacy-policy', 'terms-of-service', 'about-us'];
+const SITEMAP_PAGES = ['index', 'oven-temperature-conversion', 'oven-to-air-fryer'];
 
 // 项目上线日期 — 作为 lastmod 的兜底值
 const PROJECT_LAUNCH_DATE = '2025-10-19';
@@ -231,7 +232,7 @@ function getAvailableLocales(pageSlug) {
 }
 
 function getSitemapPages() {
-    return getAllPages();
+    return SITEMAP_PAGES;
 }
 
 // ============================================================
