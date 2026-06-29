@@ -216,7 +216,7 @@ function getAllPages() {
 }
 
 function getAvailableLocales(pageSlug) {
-    if (NON_EN_EXCLUDED.includes(pageSlug)) return ['en'];
+    if (pageSlug === '' || NON_EN_EXCLUDED.includes(pageSlug)) return ['en'];
     const jsonName = pageSlug === '' ? 'home.json' : `${pageSlug}.json`;
     const detectedLocales = LOCALES.filter((locale) => {
         const localeFile = path.join(localesDir, locale, jsonName);
