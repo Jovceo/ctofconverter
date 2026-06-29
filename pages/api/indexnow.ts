@@ -19,7 +19,7 @@ const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     // 简单安全检查：需要 secret 参数（部署后通过环境变量配置更安全的方式）
     const secret = req.query.secret || req.headers['x-indexnow-secret'];
-    const expectedSecret = process.env.INDEXNOW_SECRET || 'ctof-indexnow-2026';
+    const expectedSecret = process.env.INDEXNOW_SECRET;
 
     if (secret !== expectedSecret) {
         return res.status(401).json({ error: 'Unauthorized. Provide ?secret=YOUR_SECRET' });
