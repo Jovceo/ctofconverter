@@ -9,6 +9,7 @@
     "prebuild": "node scripts/generate-sitemap.js",
     "build": "next build",
     "postinstall": "echo 'Sitemap auto-generation configured'",
+    "postbuild": "node scripts/submit-indexnow.js",
     "start": "next start",
     "lint": "next lint",
     "export": "next build && next export",
@@ -16,10 +17,14 @@
   },
   "dependencies": {
     "@vercel/og": "^0.8.6",
+    "google-auth-library": "^9.15.1",
+    "googleapis": "^146.0.0",
+    "https-proxy-agent": "^7.0.6",
     "next": "^16.2.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "styled-jsx": "5.1.6",
+    "undici": "^7.6.0",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"
   },
   "devDependencies": {

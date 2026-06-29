@@ -60,6 +60,11 @@ export default function LanguageSwitcher() {
   const currentLocale = (locale as string) || 'en';
   const { t } = useCommonTranslation();
   const alternateLinks = useContext(AlternateLanguageLinksContext);
+  const hasAlternateLanguages = alternateLinks.some(
+    (link) => link.hreflang !== 'en' && link.hreflang !== 'x-default'
+  );
+  if (!hasAlternateLanguages) return null;
+
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -103,7 +108,7 @@ export default function LanguageSwitcher() {
     return LOCALES.map((lang) => ({
       code: lang.code,
       label: lang.label,
-      href: alternateMap.get(lang.code) || getLocalizedLink(basePath, lang.code),
+      href: alternateMap.get(lang.code) || getLocalizedLink('/', lang.code),
       isCurrent: lang.code === currentLocale,
     }));
   }, [alternateLinks, asPath, currentLocale]);

@@ -171,8 +171,8 @@ function getPriority(pageSlug) {
     if (/^\d+-c-to-f$/.test(pageSlug)) return '1.0';
     // 小数温度页：次高
     if (/^\d+-\d+-c-to-f$/.test(pageSlug)) return '0.8';
-    // 工具页（fan-oven, calculator 等）
-    if (pageSlug.includes('calculator') || pageSlug.includes('fan-oven')) return '0.9';
+    // 工具页（calculator, oven 等）
+    if (pageSlug.includes('calculator') || pageSlug.includes('oven')) return '0.9';
     // 内容页（about, contact, privacy 等）
     return '0.5';
 }
@@ -180,7 +180,7 @@ function getPriority(pageSlug) {
 function getChangefreq(pageSlug) {
     if (pageSlug === '' || pageSlug === 'index') return 'weekly';
     if (/^\d+(-\d+)?-c-to-f$/.test(pageSlug)) return 'weekly';
-    if (pageSlug.includes('calculator') || pageSlug.includes('fan-oven')) return 'weekly';
+    if (pageSlug.includes('calculator') || pageSlug.includes('oven')) return 'weekly';
     return 'monthly';
 }
 
@@ -193,7 +193,8 @@ function getAllPages() {
             return stat.isFile()
                 && file.endsWith('.tsx')
                 && !EXCLUDED.includes(file)
-                && !file.startsWith('[');
+                && !file.startsWith('[')
+                && !/^\d/.test(file);
         }).map(file => file.replace('.tsx', ''));
 
         // 全量收录：所有 .tsx 页面（排除 EXCLUDED 列表）都直接返回，不做温度页过滤
@@ -223,7 +224,7 @@ function getAvailableLocales(pageSlug) {
     });
 
     if (detectedLocales.length === 0) {
-        return LOCALES;
+        return ['en'];
     }
 
     return detectedLocales.sort((a, b) => LOCALES.indexOf(a) - LOCALES.indexOf(b));

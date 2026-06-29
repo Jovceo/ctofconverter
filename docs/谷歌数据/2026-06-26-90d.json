@@ -1,0 +1,1568 @@
+{
+  "site": "ctofconverter.com",
+  "period": "2026-03-28 ~ 2026-06-26",
+  "generatedAt": "2026-06-26T01:24:57.978Z",
+  "gsc": {
+    "totalClicks": 0,
+    "totalImpressions": 122,
+    "avgCtr": 0,
+    "avgPosition": 49.587896825396825,
+    "topQueries": [
+      {
+        "query": "\"-20\" celsius",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 60
+      },
+      {
+        "query": "(0°c × 9/5) + 32 = 32°f",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "-10 c to f",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "query": "-12°c to f",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "query": "-16°c to f",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "query": "-18°c to f",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "query": "-18°c to fahrenheit",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "query": "-18°c to °f conversion",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "-20.c to f",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "query": "-20c to f",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "query": "-20°c to f",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11.5
+      },
+      {
+        "query": "-21°c to fahrenheit",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "-24°c in f",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "query": "-25°c in f",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "-25°c to f",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "-27°c to f",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "query": "-60°c to fahrenheit exact conversion",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "query": "0 c in f",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 78.5
+      },
+      {
+        "query": "0 c in fahrenheit",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 80
+      },
+      {
+        "query": "0 c to f",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 67.5
+      }
+    ],
+    "topPages": [
+      {
+        "page": "https://ctofconverter.com/22-c-to-f",
+        "clicks": 1,
+        "impressions": 506,
+        "ctr": 0.001976284584980237,
+        "position": 51.22529644268775
+      },
+      {
+        "page": "https://ctofconverter.com/36-6-c-to-f",
+        "clicks": 1,
+        "impressions": 120,
+        "ctr": 0.008333333333333333,
+        "position": 45.25833333333333
+      },
+      {
+        "page": "https://ctofconverter.com/fahrenheit-to-celsius",
+        "clicks": 1,
+        "impressions": 499,
+        "ctr": 0.002004008016032064,
+        "position": 85.76152304609218
+      },
+      {
+        "page": "https://ctofconverter.com/fr/c-to-f-calculator",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 3
+      },
+      {
+        "page": "https://ctofconverter.com/id/0-c-to-f",
+        "clicks": 1,
+        "impressions": 19,
+        "ctr": 0.05263157894736842,
+        "position": 7.684210526315789
+      },
+      {
+        "page": "https://ctofconverter.com/ja",
+        "clicks": 1,
+        "impressions": 30,
+        "ctr": 0.03333333333333333,
+        "position": 46.13333333333333
+      },
+      {
+        "page": "https://ctofconverter.com/ja/fan-oven-conversion-chart",
+        "clicks": 1,
+        "impressions": 16,
+        "ctr": 0.0625,
+        "position": 8.6875
+      },
+      {
+        "page": "https://ctofconverter.com/",
+        "clicks": 0,
+        "impressions": 96,
+        "ctr": 0,
+        "position": 64.08333333333334
+      },
+      {
+        "page": "https://ctofconverter.com/0-c-to-f",
+        "clicks": 0,
+        "impressions": 172,
+        "ctr": 0,
+        "position": 74.56395348837209
+      },
+      {
+        "page": "https://ctofconverter.com/1-c-to-f",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 54.6
+      },
+      {
+        "page": "https://ctofconverter.com/1-c-to-f.html",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 38.4
+      },
+      {
+        "page": "https://ctofconverter.com/10-c-to-f",
+        "clicks": 0,
+        "impressions": 34,
+        "ctr": 0,
+        "position": 68.52941176470588
+      },
+      {
+        "page": "https://ctofconverter.com/100-c-to-f",
+        "clicks": 0,
+        "impressions": 33,
+        "ctr": 0,
+        "position": 52.57575757575758
+      },
+      {
+        "page": "https://ctofconverter.com/100-c-to-f.html",
+        "clicks": 0,
+        "impressions": 104,
+        "ctr": 0,
+        "position": 5.644230769230769
+      },
+      {
+        "page": "https://ctofconverter.com/12-c-to-f",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 42.5
+      }
+    ],
+    "pageKeywords": {
+      "/": [
+        {
+          "query": "-10 c to f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 12
+        },
+        {
+          "query": "20-22 celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 44
+        },
+        {
+          "query": "80 degrees celcius to farenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 75
+        },
+        {
+          "query": "800c to f",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 92.5
+        },
+        {
+          "query": "c to f converter",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 79
+        },
+        {
+          "query": "c to f converter temperature",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 90
+        },
+        {
+          "query": "c to fahrenheit calculator",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 84
+        },
+        {
+          "query": "celsius to degrees",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 99
+        },
+        {
+          "query": "celsius to fahrenheit calculator",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 85
+        },
+        {
+          "query": "celsius to fahrenheit calculator fever",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 100
+        },
+        {
+          "query": "celsius to fahrenheit temperature conversion",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 77
+        },
+        {
+          "query": "conversion of degrees to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 76
+        },
+        {
+          "query": "conversion temperatures celsius fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 96
+        },
+        {
+          "query": "conversion to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 98
+        },
+        {
+          "query": "convert celsius to temperature",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 94
+        },
+        {
+          "query": "convert degrees c to degrees f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 100
+        },
+        {
+          "query": "convert degrees celsius to degrees fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 92
+        },
+        {
+          "query": "convert temperature in celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 83
+        },
+        {
+          "query": "convert temperature to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 78
+        },
+        {
+          "query": "convert to f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 91
+        },
+        {
+          "query": "converter to fahrenheit",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 88.6
+        },
+        {
+          "query": "degree to f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 94
+        },
+        {
+          "query": "degree to fernite",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 78
+        },
+        {
+          "query": "degrees to fahrenheit calculator",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 90.66666666666667
+        },
+        {
+          "query": "degrees to fahrenheit converter",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 96
+        },
+        {
+          "query": "fahrenheit conversion",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 90
+        },
+        {
+          "query": "fever celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 87
+        },
+        {
+          "query": "fever conversion",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 89
+        },
+        {
+          "query": "fever temperature c to f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 98
+        },
+        {
+          "query": "fever temperature conversion celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 97
+        },
+        {
+          "query": "oc to f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 98
+        },
+        {
+          "query": "temp converter celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 85
+        },
+        {
+          "query": "temp degree to fahrenheit",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 97
+        },
+        {
+          "query": "temp to f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 90
+        },
+        {
+          "query": "temp to fahrenheit",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 90.5
+        },
+        {
+          "query": "temperature c to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 86
+        },
+        {
+          "query": "temperature conversion c to f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 79
+        },
+        {
+          "query": "temperature conversion from celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 95
+        },
+        {
+          "query": "temperature converter c to f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 82
+        },
+        {
+          "query": "temperature converter from c to f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 79
+        },
+        {
+          "query": "temperature converter to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 83
+        },
+        {
+          "query": "temperature from c to f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 84
+        },
+        {
+          "query": "temperature to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 98
+        },
+        {
+          "query": "to c to f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 92
+        },
+        {
+          "query": "translation celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 90
+        }
+      ],
+      "/0-c-to-f": [
+        {
+          "query": "0 c in f",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 78.5
+        },
+        {
+          "query": "0 c in fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 80
+        },
+        {
+          "query": "0 c to f",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 67.5
+        },
+        {
+          "query": "0 c to fahrenheit",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 70.5
+        },
+        {
+          "query": "0 celcius to farenheit",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 75.33333333333333
+        },
+        {
+          "query": "0 celsius fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 75
+        },
+        {
+          "query": "0 celsius in f",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 77
+        },
+        {
+          "query": "0 celsius in fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 76
+        },
+        {
+          "query": "0 celsius is what in fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 76
+        },
+        {
+          "query": "0 celsius to f",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 75.5
+        },
+        {
+          "query": "0 celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 72.71428571428571
+        },
+        {
+          "query": "0 centigrade in fahrenheit",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 78
+        },
+        {
+          "query": "0 centigrade to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 64
+        },
+        {
+          "query": "0 deg c to f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 74
+        },
+        {
+          "query": "0 deg celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 75
+        },
+        {
+          "query": "0 deg f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 73
+        },
+        {
+          "query": "0 deg f in c",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 92
+        },
+        {
+          "query": "0 degree celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 64.5
+        },
+        {
+          "query": "0 degree in fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 66
+        },
+        {
+          "query": "0 degree to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 67
+        },
+        {
+          "query": "0 degrees c in fahrenheit",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 72
+        },
+        {
+          "query": "0 degrees c to f",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 72.625
+        },
+        {
+          "query": "0 degrees celsius fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 76
+        },
+        {
+          "query": "0 degrees celsius in fahrenheit",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 76
+        },
+        {
+          "query": "0 degrees celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 69.66666666666667
+        },
+        {
+          "query": "0 degrees centigrade to fahrenheit",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 75
+        },
+        {
+          "query": "0 degrees to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 66
+        },
+        {
+          "query": "0 f",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 80.5
+        },
+        {
+          "query": "0 grad celsius in fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 99
+        },
+        {
+          "query": "0 to f",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 23.5
+        },
+        {
+          "query": "0.3 celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 75
+        },
+        {
+          "query": "0.6 celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 97
+        },
+        {
+          "query": "0c in f",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 80.66666666666667
+        },
+        {
+          "query": "0c in fahrenheit",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 77
+        },
+        {
+          "query": "0c to f",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 70.33333333333333
+        },
+        {
+          "query": "0c to fahrenheit",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 65.33333333333333
+        },
+        {
+          "query": "0c to farenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 86
+        },
+        {
+          "query": "0degrees celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 77
+        },
+        {
+          "query": "32 c to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 74
+        },
+        {
+          "query": "32 celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 16,
+          "ctr": 0,
+          "position": 77.9375
+        },
+        {
+          "query": "32 degree celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 82
+        },
+        {
+          "query": "32 degrees c in f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 84
+        },
+        {
+          "query": "32 degrees celcius to farenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 86
+        },
+        {
+          "query": "32 degrees celsius into fahrenheit",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 83.5
+        },
+        {
+          "query": "32 degrees celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 81.33333333333333
+        },
+        {
+          "query": "32 f is equal to",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 84
+        },
+        {
+          "query": "32c is what in f",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 91
+        },
+        {
+          "query": "convert $ 0.00",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 56
+        },
+        {
+          "query": "convert 0",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 60
+        },
+        {
+          "query": "convert 0 c to f",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 81
+        },
+        {
+          "query": "convert 0 c to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 81
+        },
+        {
+          "query": "convert 0 celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 77
+        },
+        {
+          "query": "convert 0 degree celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 80
+        },
+        {
+          "query": "convert 0 degrees celsius to fahrenheit",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 77.5
+        },
+        {
+          "query": "convert 0c to fahrenheit",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 85.5
+        }
+      ]
+    }
+  },
+  "ga4": {
+    "overview": {
+      "activeUsers": 228,
+      "totalUsers": 228,
+      "sessions": 236,
+      "pageViews": 223,
+      "avgSessionDuration": 11,
+      "bounceRate": "0.9"
+    },
+    "trafficSources": [
+      {
+        "source": "(direct)",
+        "medium": "(none)",
+        "users": 212,
+        "sessions": 220
+      },
+      {
+        "source": "(not set)",
+        "medium": "(not set)",
+        "users": 16,
+        "sessions": 16
+      }
+    ],
+    "topPages": [
+      {
+        "path": "/60-c-to-f.html",
+        "views": 30,
+        "users": 31
+      },
+      {
+        "path": "/45-c-to-f.html",
+        "views": 18,
+        "users": 18
+      },
+      {
+        "path": "/46-c-to-f.html",
+        "views": 13,
+        "users": 13
+      },
+      {
+        "path": "/210-c-to-f.html",
+        "views": 12,
+        "users": 11
+      },
+      {
+        "path": "/fahrenheit-to-celsius/110-f-to-c.html",
+        "views": 11,
+        "users": 11
+      },
+      {
+        "path": "/150-c-to-f.html",
+        "views": 10,
+        "users": 13
+      },
+      {
+        "path": "/42-c-to-f.html",
+        "views": 10,
+        "users": 14
+      },
+      {
+        "path": "/fahrenheit-to-celsius/103-f-to-c.html",
+        "views": 8,
+        "users": 8
+      },
+      {
+        "path": "/120-c-to-f.html",
+        "views": 7,
+        "users": 9
+      },
+      {
+        "path": "/175-c-to-f.html",
+        "views": 7,
+        "users": 7
+      },
+      {
+        "path": "/250-c-to-f.html",
+        "views": 7,
+        "users": 7
+      },
+      {
+        "path": "/36-9-c-to-f.html",
+        "views": 7,
+        "users": 7
+      },
+      {
+        "path": "/230-c-to-f.html",
+        "views": 5,
+        "users": 6
+      },
+      {
+        "path": "/44-c-to-f.html",
+        "views": 5,
+        "users": 5
+      },
+      {
+        "path": "/105-c-to-f.html",
+        "views": 4,
+        "users": 5
+      },
+      {
+        "path": "/220-c-to-f.html",
+        "views": 4,
+        "users": 4
+      },
+      {
+        "path": "/48-c-to-f.html",
+        "views": 4,
+        "users": 4
+      },
+      {
+        "path": "/90-c-to-f.html",
+        "views": 4,
+        "users": 4
+      },
+      {
+        "path": "/fahrenheit-to-celsius/105-f-to-c.html",
+        "views": 4,
+        "users": 4
+      },
+      {
+        "path": "/10-c-to-f.html",
+        "views": 3,
+        "users": 1
+      }
+    ],
+    "deviceBreakdown": [
+      {
+        "device": "desktop",
+        "users": 152,
+        "sessions": 159,
+        "pageViews": 146,
+        "avgSessionDuration": 16,
+        "bounceRate": "0.9"
+      },
+      {
+        "device": "mobile",
+        "users": 76,
+        "sessions": 78,
+        "pageViews": 77,
+        "avgSessionDuration": 1,
+        "bounceRate": "1.0"
+      }
+    ],
+    "landingPages": [
+      {
+        "page": "/60-c-to-f.html",
+        "sessions": 30,
+        "users": 30,
+        "pageViews": 30,
+        "avgSessionDuration": 1,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "(not set)",
+        "sessions": 19,
+        "users": 18,
+        "pageViews": 0,
+        "avgSessionDuration": 0,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "/45-c-to-f.html",
+        "sessions": 18,
+        "users": 18,
+        "pageViews": 18,
+        "avgSessionDuration": 0,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "/46-c-to-f.html",
+        "sessions": 13,
+        "users": 13,
+        "pageViews": 13,
+        "avgSessionDuration": 1,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "/210-c-to-f.html",
+        "sessions": 12,
+        "users": 11,
+        "pageViews": 12,
+        "avgSessionDuration": 7,
+        "bounceRate": "0.7"
+      },
+      {
+        "page": "/fahrenheit-to-celsius/110-f-to-c.html",
+        "sessions": 11,
+        "users": 11,
+        "pageViews": 11,
+        "avgSessionDuration": 2,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "/150-c-to-f.html",
+        "sessions": 10,
+        "users": 10,
+        "pageViews": 10,
+        "avgSessionDuration": 3,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "/42-c-to-f.html",
+        "sessions": 10,
+        "users": 10,
+        "pageViews": 10,
+        "avgSessionDuration": 0,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "/fahrenheit-to-celsius/103-f-to-c.html",
+        "sessions": 8,
+        "users": 8,
+        "pageViews": 8,
+        "avgSessionDuration": 0,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "/120-c-to-f.html",
+        "sessions": 7,
+        "users": 7,
+        "pageViews": 7,
+        "avgSessionDuration": 0,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "/175-c-to-f.html",
+        "sessions": 7,
+        "users": 7,
+        "pageViews": 7,
+        "avgSessionDuration": 0,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "/250-c-to-f.html",
+        "sessions": 7,
+        "users": 7,
+        "pageViews": 7,
+        "avgSessionDuration": 2,
+        "bounceRate": "0.9"
+      },
+      {
+        "page": "/36-9-c-to-f.html",
+        "sessions": 7,
+        "users": 7,
+        "pageViews": 7,
+        "avgSessionDuration": 0,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "/230-c-to-f.html",
+        "sessions": 5,
+        "users": 5,
+        "pageViews": 5,
+        "avgSessionDuration": 1,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "/44-c-to-f.html",
+        "sessions": 5,
+        "users": 5,
+        "pageViews": 5,
+        "avgSessionDuration": 1,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "/105-c-to-f.html",
+        "sessions": 4,
+        "users": 4,
+        "pageViews": 4,
+        "avgSessionDuration": 1,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "/220-c-to-f.html",
+        "sessions": 4,
+        "users": 4,
+        "pageViews": 4,
+        "avgSessionDuration": 3,
+        "bounceRate": "0.8"
+      },
+      {
+        "page": "/48-c-to-f.html",
+        "sessions": 4,
+        "users": 4,
+        "pageViews": 4,
+        "avgSessionDuration": 0,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "/90-c-to-f.html",
+        "sessions": 4,
+        "users": 4,
+        "pageViews": 4,
+        "avgSessionDuration": 3,
+        "bounceRate": "1.0"
+      },
+      {
+        "page": "/fahrenheit-to-celsius/105-f-to-c.html",
+        "sessions": 4,
+        "users": 4,
+        "pageViews": 4,
+        "avgSessionDuration": 8,
+        "bounceRate": "0.8"
+      }
+    ],
+    "userJourney": [
+      {
+        "from": "(direct / entry)",
+        "to": "/60-c-to-f.html",
+        "views": 30,
+        "users": 31
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/45-c-to-f.html",
+        "views": 18,
+        "users": 18
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/46-c-to-f.html",
+        "views": 13,
+        "users": 13
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/210-c-to-f.html",
+        "views": 12,
+        "users": 11
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/fahrenheit-to-celsius/110-f-to-c.html",
+        "views": 11,
+        "users": 11
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/150-c-to-f.html",
+        "views": 10,
+        "users": 13
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/42-c-to-f.html",
+        "views": 10,
+        "users": 14
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/fahrenheit-to-celsius/103-f-to-c.html",
+        "views": 8,
+        "users": 8
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/120-c-to-f.html",
+        "views": 7,
+        "users": 9
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/175-c-to-f.html",
+        "views": 7,
+        "users": 7
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/250-c-to-f.html",
+        "views": 7,
+        "users": 7
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/36-9-c-to-f.html",
+        "views": 7,
+        "users": 7
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/230-c-to-f.html",
+        "views": 5,
+        "users": 6
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/44-c-to-f.html",
+        "views": 5,
+        "users": 5
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/105-c-to-f.html",
+        "views": 4,
+        "users": 5
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/220-c-to-f.html",
+        "views": 4,
+        "users": 4
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/48-c-to-f.html",
+        "views": 4,
+        "users": 4
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/90-c-to-f.html",
+        "views": 4,
+        "users": 4
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/fahrenheit-to-celsius/105-f-to-c.html",
+        "views": 4,
+        "users": 4
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/10-c-to-f.html",
+        "views": 3,
+        "users": 1
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/36-7-c-to-f.html",
+        "views": 3,
+        "users": 3
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/37-4-c-to-f.html",
+        "views": 3,
+        "users": 3
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/38-5-c-to-f.html",
+        "views": 3,
+        "users": 3
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/43-c-to-f.html",
+        "views": 3,
+        "users": 3
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/fahrenheit-to-celsius/39-f-to-c.html",
+        "views": 3,
+        "users": 3
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/16-c-to-f.html",
+        "views": 2,
+        "users": 1
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/190-c-to-f.html",
+        "views": 2,
+        "users": 1
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/36-8-c-to-f.html",
+        "views": 2,
+        "users": 2
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/37-6-c-to-f.html",
+        "views": 2,
+        "users": 2
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/38-1-c-to-f.html",
+        "views": 2,
+        "users": 2
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/74-c-to-f.html",
+        "views": 2,
+        "users": 2
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/76-c-to-f.html",
+        "views": 2,
+        "users": 3
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/es/45-c-to-f.html",
+        "views": 2,
+        "users": 2
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/fahrenheit-to-celsius/36-f-to-c.html",
+        "views": 2,
+        "users": 2
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/id/45-c-to-f.html",
+        "views": 2,
+        "users": 2
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/id/73-c-to-f.html",
+        "views": 2,
+        "users": 2
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/zh/60-c-to-f.html",
+        "views": 2,
+        "users": 2
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/1-c-to-f.html",
+        "views": 1,
+        "users": 1
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/12-c-to-f.html",
+        "views": 1,
+        "users": 1
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/13-c-to-f.html",
+        "views": 1,
+        "users": 1
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/17-c-to-f.html",
+        "views": 1,
+        "users": 1
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/18-c-to-f.html",
+        "views": 1,
+        "users": 1
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/19-c-to-f.html",
+        "views": 1,
+        "users": 1
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/37-1-c-to-f.html",
+        "views": 1,
+        "users": 1
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/37-3-c-to-f.html",
+        "views": 1,
+        "users": 1
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/38-2-c-to-f.html",
+        "views": 1,
+        "users": 2
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/fahrenheit-to-celsius/190-f-to-c.html",
+        "views": 1,
+        "users": 1
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/id/42-c-to-f.html",
+        "views": 1,
+        "users": 1
+      },
+      {
+        "from": "(direct / entry)",
+        "to": "/37-7-c-to-f.html",
+        "views": 0,
+        "users": 2
+      }
+    ]
+  }
+}

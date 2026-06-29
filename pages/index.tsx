@@ -328,6 +328,21 @@ export default function Home({ locale, commonMessages, homeMessages, dynamicRece
                         </div>
                     </section>
 
+                    <section style={{ marginTop: '2.5rem', padding: '1.5rem', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                        <h2 style={{ margin: '0 0 0.75rem', fontSize: '1.3rem' }}>Temperature Guides</h2>
+                        <p style={{ margin: '0 0 1rem', color: '#475569' }}>Comprehensive guides for cooking and baking temperature conversions.</p>
+                        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                            <a href="/oven-temperature-conversion" style={{ flex: '1 1 220px', padding: '14px 18px', background: 'white', border: '1px solid #e2e8f0', borderRadius: '10px', textDecoration: 'none', color: '#0f172a', display: 'block' }}>
+                                <strong style={{ color: '#0284c7', display: 'block', marginBottom: '4px' }}>Oven Temperature Conversion</strong>
+                                <span style={{ fontSize: '0.85rem', color: '#64748b' }}>°C to °F, Gas Mark, Fan Oven &amp; Air Fryer</span>
+                            </a>
+                            <a href="/oven-to-air-fryer" style={{ flex: '1 1 220px', padding: '14px 18px', background: 'white', border: '1px solid #e2e8f0', borderRadius: '10px', textDecoration: 'none', color: '#0f172a', display: 'block' }}>
+                                <strong style={{ color: '#ea580c', display: 'block', marginBottom: '4px' }}>Oven to Air Fryer</strong>
+                                <span style={{ fontSize: '0.85rem', color: '#64748b' }}>Convert recipes with temperature &amp; time adjustments</span>
+                            </a>
+                        </div>
+                    </section>
+
                     <section className="formula-section">
                         <h2>{t('practical.title')}</h2>
                         <div className="practical-uses">
