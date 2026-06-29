@@ -26,6 +26,10 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# Google OAuth secrets (NEVER commit these)
+client_secret_*.json
+google-oauth-token.json
+
 # vercel
 .vercel
 
