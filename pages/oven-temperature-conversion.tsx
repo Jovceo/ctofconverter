@@ -16,11 +16,11 @@ const CONVERSION_ROWS = [
   { c: 140, f: 284, fan: 120, gas: '1', use: 'Low — slow roasts, stews' },
   { c: 150, f: 302, fan: 130, gas: '2', use: 'Low — roasting lamb, pork shoulder' },
   { c: 160, f: 320, fan: 140, gas: '3', use: 'Moderate — baked custards, cheesecakes' },
-  { c: 170, f: 338, fan: 150, gas: '3', use: 'Moderate — sponge cakes, cookies' },
+  { c: 170, f: 338, fan: 150, gas: '3–4', use: 'Moderate — sponge cakes, cookies' },
   { c: 180, f: 356, fan: 160, gas: '4', use: 'Moderate — most baking, bread, roasted chicken' },
   { c: 190, f: 374, fan: 170, gas: '5', use: 'Moderately hot — pastries, puff pastry' },
   { c: 200, f: 392, fan: 180, gas: '6', use: 'Hot — roasting vegetables, pizza' },
-  { c: 210, f: 410, fan: 190, gas: '6', use: 'Hot — naan bread, quick roasts' },
+  { c: 210, f: 410, fan: 190, gas: '6–7', use: 'Hot — naan bread, quick roasts' },
   { c: 220, f: 428, fan: 200, gas: '7', use: 'Hot — searing meats, thin-crust pizza' },
   { c: 230, f: 446, fan: 210, gas: '8', use: 'Very hot — broiling, steak' },
   { c: 240, f: 464, fan: 220, gas: '9', use: 'Very hot — high-heat roasting' },
@@ -102,10 +102,10 @@ export default function OvenTemperatureConversion() {
 
   return (
     <Layout seo={{
-      title: 'Oven Temperature Conversion Guide — °C to °F, Gas Mark & Fan Oven',
+      title: 'Oven Temperature Conversion Guide — °C to °F, Gas Mark, Fan & Air Fryer',
       description: 'Convert oven temperatures between Celsius, Fahrenheit, Gas Mark, fan oven, and air fryer. Interactive calculator with quick-reference chart for 120°C to 260°C.',
       canonical: CANONICAL_URL,
-      ogTitle: 'Oven Temperature Conversion Guide — °C to °F, Gas Mark & Fan Oven',
+      ogTitle: 'Oven Temperature Conversion Guide — °C to °F, Gas Mark, Fan & Air Fryer',
       ogDescription: 'Interactive oven temperature converter with quick-reference chart. Convert between conventional °C, °F, Gas Mark, fan oven, and air fryer temperatures.',
       alternates: [{ hreflang: 'en', href: CANONICAL_URL, locale: 'en' }, { hreflang: 'x-default', href: CANONICAL_URL }],
     }}>
@@ -127,7 +127,7 @@ export default function OvenTemperatureConversion() {
         <h1>Oven Temperature Conversion Guide — °C to °F, Gas Mark, Fan &amp; Air Fryer</h1>
 
         <div className={styles.answerCapsule}>
-          <strong>Answer:</strong> Convert oven temperatures between Celsius (°C), Fahrenheit (°F), Gas Mark, fan ovens, and air fryers using the interactive calculator. See the quick-reference chart for common baking and roasting temperatures from 50°C to 300°C.
+          <strong>Answer:</strong> Convert oven temperatures between Celsius (°C), Fahrenheit (°F), Gas Mark, fan ovens, and air fryers using the interactive calculator. See the quick-reference chart for common baking and roasting temperatures from 120°C to 260°C.
         </div>
 
         <section className={styles.toolSection}>
@@ -229,30 +229,28 @@ export default function OvenTemperatureConversion() {
         </section>
 
         <section className={styles.contentSection}>
-          <h2>Common Cooking Temperatures Reference</h2>
+          <h2>Oven Temperature by Dish</h2>
+          <p>Look up the right setting by recipe instead of by temperature. The Gas Mark column uses the same scale as UK and Commonwealth gas ovens.</p>
           <div className={styles.chartWrapper}>
             <table className={styles.conversionTable}>
               <thead>
                 <tr>
                   <th>Dish</th>
-                  <th>Conventional °C</th>
-                  <th>Conventional °F</th>
-                  <th>Fan °C</th>
+                  <th>Conventional Oven (°C / °F)</th>
                   <th>Gas Mark</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>Meringues</td><td>120°C</td><td>248°F</td><td>100°C</td><td>½</td></tr>
-                <tr><td>Slow-roast pork shoulder</td><td>150°C</td><td>302°F</td><td>130°C</td><td>2</td></tr>
-                <tr><td>Sponge cake</td><td>170°C</td><td>338°F</td><td>150°C</td><td>3</td></tr>
-                <tr><td>Bread / sandwich loaf</td><td>180°C</td><td>356°F</td><td>160°C</td><td>4</td></tr>
-                <tr><td>Roast chicken</td><td>190°C</td><td>374°F</td><td>170°C</td><td>5</td></tr>
-                <tr><td>Pizza</td><td>220°C</td><td>428°F</td><td>200°C</td><td>7</td></tr>
-                <tr><td>Steak (broiling)</td><td>230°C</td><td>446°F</td><td>210°C</td><td>8</td></tr>
+                <tr><td>Meringues</td><td>120°C / 248°F</td><td>½</td></tr>
+                <tr><td>Slow-roast pork shoulder</td><td>150°C / 302°F</td><td>2</td></tr>
+                <tr><td>Sponge cake</td><td>170°C / 338°F</td><td>3–4</td></tr>
+                <tr><td>Bread / sandwich loaf</td><td>180°C / 356°F</td><td>4</td></tr>
+                <tr><td>Roast chicken</td><td>190°C / 374°F</td><td>5</td></tr>
+                <tr><td>Pizza</td><td>220°C / 428°F</td><td>7</td></tr>
+                <tr><td>Steak (broiling)</td><td>230°C / 446°F</td><td>8</td></tr>
               </tbody>
             </table>
           </div>
-          <p><small>Source: USDA Safe Minimum Internal Temperature Chart, UK Government Gas Mark standards. Always use a food thermometer for meat doneness.</small></p>
         </section>
 
         <section className={styles.faqSection}>

@@ -30,7 +30,7 @@ const HOWTO_SCHEMA = {
   name: 'How to Convert Oven Recipes for Air Fryer',
   description: 'Convert conventional oven temperatures and cooking times for air fryer use.',
   step: [
-    { '@type': 'HowToStep', name: 'Reduce the temperature', text: 'Subtract 20°C (35°F) from the conventional oven temperature. For example, 200°C becomes 180°C for the air fryer.' },
+    { '@type': 'HowToStep', name: 'Reduce the temperature', text: 'Subtract 20°C (36°F) from the conventional oven temperature. For example, 200°C becomes 180°C for the air fryer.' },
     { '@type': 'HowToStep', name: 'Reduce the cooking time', text: 'Check for doneness 20-25% earlier than the recipe suggests. Start checking at 75% of the original cooking time.' },
     { '@type': 'HowToStep', name: 'Prepare the food', text: 'Lightly coat food with oil for crispiness. Do not overfill the basket — leave space for air circulation.' },
     { '@type': 'HowToStep', name: 'Cook and check', text: 'Shake or flip halfway through cooking. Use a food thermometer to confirm internal temperature meets USDA guidelines.' },
@@ -44,7 +44,7 @@ const FAQ_SCHEMA = {
     {
       '@type': 'Question',
       name: 'How do I convert a conventional oven recipe to air fryer?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Reduce the temperature by 20°C (or 35°F). For example, if a recipe says 200°C/400°F in a conventional oven, set your air fryer to 180°C/350°F. Also reduce cooking time by about 20-25%.' }
+      acceptedAnswer: { '@type': 'Answer', text: 'Reduce the temperature by 20°C (or 36°F). For example, if a recipe says 200°C/400°F in a conventional oven, set your air fryer to 180°C/350°F. Also reduce cooking time by about 20-25%.' }
     },
     {
       '@type': 'Question',
@@ -93,7 +93,7 @@ export default function OvenToAirFryer() {
 
   return (
     <Layout seo={{
-      title: 'Oven to Air Fryer Temperature Conversion — °C to °F Converter',
+      title: 'Oven to Air Fryer Temperature Conversion — °C, °F & Time Chart',
       description: 'Convert conventional oven temperatures to air fryer settings instantly. Interactive tool with cooking chart for chicken, fries, vegetables, steak, and more.',
       canonical: CANONICAL_URL,
       ogTitle: 'Oven to Air Fryer Temperature Conversion',
@@ -118,7 +118,7 @@ export default function OvenToAirFryer() {
         <h1>Oven to Air Fryer Temperature Conversion</h1>
 
         <div className={styles.answerCapsule}>
-          <strong>Answer:</strong> To convert a conventional oven recipe for an air fryer, reduce the temperature by 20°C (or 35°F) and check for doneness about 20-25% earlier. For example, a recipe calling for 200°C (400°F) in a conventional oven should be cooked at 180°C (350°F) in an air fryer.
+          <strong>Answer:</strong> To convert a conventional oven recipe for an air fryer, reduce the temperature by 20°C (or 36°F) and check for doneness about 20-25% earlier. For example, a recipe calling for 200°C (400°F) in a conventional oven should be cooked at 180°C (350°F) in an air fryer.
         </div>
 
         <section className={styles.toolSection}>
@@ -131,8 +131,8 @@ export default function OvenToAirFryer() {
           <h2>How to Convert Oven Recipes for Air Fryer</h2>
           <p>The conversion is straightforward but requires two adjustments:</p>
 
-          <h3>1. Reduce Temperature by 20°C (35°F)</h3>
-          <p>Air fryers are compact convection ovens. The concentrated heat means you need a lower temperature than a conventional oven. The standard reduction is <strong>20°C</strong> or roughly <strong>35°F</strong>.</p>
+          <h3>1. Reduce Temperature by 20°C (36°F)</h3>
+          <p>Air fryers are compact convection ovens. The concentrated heat means you need a lower temperature than a conventional oven. The standard reduction is <strong>20°C</strong> or roughly <strong>36°F</strong>.</p>
 
           <h3>2. Reduce Cooking Time by 20-25%</h3>
           <p>Because air fryers cook faster, start checking your food earlier. If a recipe says 30 minutes in a conventional oven, check at 20-22 minutes in the air fryer. Cooking times vary by air fryer model, batch size, and food density.</p>
@@ -151,7 +151,7 @@ export default function OvenToAirFryer() {
                 <tr>
                   <th>Dish</th>
                   <th>Conventional Oven</th>
-                  <th>Air Fryer</th>
+                  <th>Air Fryer (°C / °F)</th>
                   <th>Air Fryer Time</th>
                 </tr>
               </thead>
@@ -160,14 +160,14 @@ export default function OvenToAirFryer() {
                   <tr key={i}>
                     <td>{row.dish}</td>
                     <td>{row.conventionalC}°C / {row.conventionalF}°F</td>
-                    <td>{row.airFryer}°C</td>
+                    <td>{row.airFryer}°C / {Math.round(row.airFryer * 9 / 5 + 32)}°F</td>
                     <td>{row.time}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p><small>Times are approximate. Always check internal temperature with a food thermometer. USDA recommends 74°C (165°F) for poultry, 63°C (145°F) for steaks and fish. Temperature conversion formula per NIST.</small></p>
+          <p><small>Times are approximate. Always check internal temperature with a food thermometer. USDA recommends 74°C (165°F) for poultry, 63°C (145°F) for steaks and fish. Temperature conversion formula per NIST. Recipe temperatures are commonly rounded to the nearest 10°F (e.g., 180°C ≈ 350°F, 200°C ≈ 400°F), so the chart shows exact values while recipes may list rounded ones.</small></p>
         </section>
 
         <section className={styles.contentSection}>
@@ -190,7 +190,7 @@ export default function OvenToAirFryer() {
           <h2>Frequently Asked Questions</h2>
 
           {[
-            { q: 'How do I convert a conventional oven recipe to air fryer?', a: 'Reduce the temperature by 20°C (or 35°F) and reduce cooking time by about 20-25%. For example, 200°C/400°F for 30 minutes in a conventional oven becomes 180°C/350°F for 20-22 minutes in an air fryer.' },
+            { q: 'How do I convert a conventional oven recipe to air fryer?', a: 'Reduce the temperature by 20°C (or 36°F) and reduce cooking time by about 20-25%. For example, 200°C/400°F for 30 minutes in a conventional oven becomes 180°C/350°F for 20-22 minutes in an air fryer.' },
             { q: 'Can I bake in an air fryer?', a: 'Yes, air fryers work well for small-batch baking. Muffins, cookies, and small cakes bake well at 160°C (fan equivalent) with about 5 minutes less time than a conventional oven recipe calls for.' },
             { q: 'Do I need to preheat an air fryer?', a: 'Most air fryers reach temperature in 3-5 minutes. Preheating is recommended for best results but is not essential for longer cooks (over 15 minutes).' },
             { q: 'Why does air fryer food cook faster than oven food?', a: 'Air fryers are smaller and circulate hot air more intensely than full-size ovens. The concentrated heat cooks food faster, which is why both temperature and time reductions are needed.' },
