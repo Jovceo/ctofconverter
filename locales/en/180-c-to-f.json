@@ -1,21 +1,21 @@
 {
   "page": {
-    "metaTitle": "180°C to Fahrenheit = 356°F | Oven, Air Fryer & Baking Temperature Guide",
-    "metaDescription": "Convert 180°C to Fahrenheit (356°F) instantly. Complete oven temperature guide with convection adjustments, cooking times, and expert tips for perfect baking and roasting results.",
-    "ogDescription": "Convert 180 degrees Celsius to Fahrenheit instantly. 180°C equals 356°F. See oven, air fryer, and fan oven equivalents plus baking tips.",
-    "headerTitle": "180°C to Fahrenheit Conversion (356°F) - Oven & Baking Temperatures",
-    "tagline": "Free online temperature conversion tool that instantly converts 180 degrees Celsius (180°C) to degrees Fahrenheit (°F), with conversion formulas and detailed steps for ovens, air fryers, and more.",
+    "metaTitle": "180°C to F (356°F) - Oven Temperature Guide",
+    "metaDescription": "180°C equals 356°F. Complete oven guide with fan/air fryer equivalents, baking times, and USDA food safety temperatures.",
+    "ogDescription": "180°C equals 356°F. See oven, air fryer, and Gas Mark equivalents plus baking times and food safety temperatures.",
+    "headerTitle": "180°C to Fahrenheit (356°F)",
+    "tagline": "Convert 180°C to Fahrenheit, find fan oven and air fryer equivalents, baking times, and USDA safe internal temperatures.",
     "resultHeader": "180 Degrees Celsius to Fahrenheit Conversion",
-    "customIntro": "<strong>180 degrees Celsius</strong> equals <strong>356 degrees Fahrenheit</strong>. It is one of the most common oven temperatures for cakes, cookies, roast vegetables, and everyday baking."
+    "customIntro": "<strong>180 degrees Celsius equals 356 degrees Fahrenheit</strong>, calculated as (180 × 9/5) + 32 = 356°F. This is the most common conventional oven temperature for baking cakes, cookies, and roasting vegetables. For fan ovens or air fryers, reduce to <strong>160°C (320°F)</strong>. In Gas Mark terms, 180°C corresponds to <strong>Gas Mark 4</strong>."
   },
   "sections": {
     "about": {
-      "title": "About 180°C / 356°F: Temperature Facts and Cooking Context",
-      "paragraph1": "180°C equals 356°F and is one of the most common oven temperatures used in home cooking. It sits in the reliable middle range for baking cakes, roasting vegetables, cooking cookies, and preparing many everyday oven dishes.",
-      "paragraph2": "This temperature works well because it is hot enough to brown and cook food efficiently, but not so aggressive that the outside burns before the center is done. That is why so many recipes use 180°C as a default baking or roasting temperature.",
+      "title": "About 180°C / 356°F: Why It Is the Default Baking Temperature",
+      "paragraph1": "180°C (356°F) is the standard baking temperature because it triggers the Maillard reaction (starting around 140°C / 285°F and peaking near 165°C / 330°F) while staying below the burning point of most sugars (approximately 180°C for sucrose). This means food browns and develops flavor without scorching. At 180°C, most cake batters set their protein structure within 25–35 minutes, long enough for the center to cook through but fast enough to avoid over-browning.",
+      "paragraph2": "Home ovens are often inaccurate: real-world testing shows many run 25–50°F (14–28°C) hotter or cooler than the set temperature. An oven set to 180°C might actually be 155°C or 205°C. A $10–20 oven thermometer is the single most effective tool for consistent baking results.",
       "paragraph3Prefix": "If you are switching between conventional, convection, fan, or air fryer settings, compare them with the ",
       "fanLinkText": "fan oven conversion chart",
-      "paragraph3Suffix": ". In most cases, 180°C in a conventional oven is closer to 160°C in a fan oven or air fryer."
+      "paragraph3Suffix": ". In most cases, 180°C in a conventional oven equals 160°C in a fan oven or air fryer."
     },
     "applications": {
       "title": "Practical Applications of 180°C (356°F)",
@@ -23,31 +23,31 @@
         {
           "title": "Baking and Cakes",
           "items": [
-            "A standard choice for cakes, cupcakes, muffins, and tray bakes.",
-            "Useful for cookies and biscuits when you want golden edges and a cooked center.",
-            "Often used as the default temperature in everyday baking recipes."
+            "The default temperature for sponge cakes, cupcakes, muffins, and tray bakes.",
+            "Produces golden edges and a cooked center for cookies and biscuits.",
+            "Works for banana bread, pound cake, and most quick breads."
           ]
         },
         {
           "title": "Roasting and Savory Cooking",
           "items": [
-            "Works well for roast vegetables, chicken pieces, fish fillets, and oven-baked dinners.",
-            "Hot enough to brown food properly without becoming too harsh for longer cooking times.",
-            "Suitable for casseroles and baked pasta dishes that need steady oven heat."
+            "Ideal for roast vegetables, chicken pieces, fish fillets, and oven-baked dinners.",
+            "Hot enough to brown food properly without burning for 30–90 minute cook times.",
+            "Suitable for casseroles, baked pasta, and sheet-pan meals."
           ]
         },
         {
           "title": "Air Fryer and Fan Oven Use",
           "items": [
-            "For many recipes, reduce 180°C to around 160°C in a fan oven or air fryer.",
-            "Circulating heat cooks faster, so both time and temperature may need adjustment.",
-            "Check doneness early when converting from a conventional oven recipe."
+            "Reduce 180°C to 160°C (320°F) in a fan oven or air fryer for equivalent results.",
+            "Circulating heat cooks 20–25% faster, so check doneness 5–10 minutes early.",
+            "Best for smaller portions and crispy finishes in air fryers."
           ]
         }
       ]
     },
     "ovenGuide": {
-      "title": "Oven Temperature Guide (Fan, Conventional & Air Fryer)",
+      "title": "Oven Temperature Guide: Fan, Conventional & Air Fryer Equivalents",
       "headers": {
         "ovenType": "Oven Type",
         "adjustedTemperature": "Adjusted Temperature",
@@ -57,12 +57,12 @@
         {
           "type": "Conventional oven",
           "temperature": "180°C / 356°F",
-          "bestUse": "Standard baking and roasting temperature for many cakes, cookies, and family meals."
+          "bestUse": "Standard baking and roasting for cakes, cookies, and family meals."
         },
         {
           "type": "Fan oven (convection)",
           "temperature": "160°C / 320°F",
-          "bestUse": "Lower setting because fan circulation cooks faster and more evenly."
+          "bestUse": "Lower by 20°C because fan circulation cooks faster and more evenly."
         },
         {
           "type": "Air fryer",
@@ -72,34 +72,112 @@
         {
           "type": "Gas Mark",
           "temperature": "Gas Mark 4",
-          "bestUse": "Useful for older recipes that list gas settings instead of Celsius or Fahrenheit."
+          "bestUse": "For older recipes that list gas settings instead of Celsius or Fahrenheit."
         }
       ],
       "notePrefix": "Need a broader conversion reference? Use the ",
       "noteLinkText": "fan oven conversion chart",
-      "noteSuffix": " to compare conventional, fan, and related oven settings before you cook."
+      "noteSuffix": " to compare conventional, fan, and air fryer settings."
+    },
+    "bakingTimes": {
+      "title": "Baking Times at 180°C (356°F)",
+      "intro": "These are typical baking times at 180°C in a conventional oven. Always check doneness with a toothpick or thermometer rather than relying on time alone.",
+      "headers": {
+        "food": "Food",
+        "time": "Time at 180°C",
+        "doneness": "Doneness Cue"
+      },
+      "rows": [
+        { "food": "Sponge cake (20cm round)", "time": "25–30 min", "doneness": "Skewer comes out clean, top springs back" },
+        { "food": "Brownies (20cm square)", "time": "22–28 min", "doneness": "Slight wobble in center, edges pulling away" },
+        { "food": "Muffins (standard size)", "time": "18–22 min", "doneness": "Golden top, skewer comes out clean" },
+        { "food": "Cookies (drop cookies)", "time": "10–15 min", "doneness": "Golden edges, centers still soft" },
+        { "food": "Banana bread (900g loaf)", "time": "50–60 min", "doneness": "Skewer comes out clean, cracked top" },
+        { "food": "Roast chicken (1.5 kg)", "time": "80–90 min", "doneness": "Internal temp 74°C / 165°F (USDA)" },
+        { "food": "Roast vegetables", "time": "30–40 min", "doneness": "Caramelized edges, fork-tender" },
+        { "food": "Lasagna / casseroles", "time": "30–40 min", "doneness": "Bubbling edges, golden top" }
+      ],
+      "note": "Times assume a conventional oven. For fan ovens or air fryers, reduce time by 20–25% and check doneness early."
+    },
+    "foodSafety": {
+      "title": "USDA Safe Internal Temperatures",
+      "intro": "Oven temperature is not the same as food internal temperature. The USDA recommends these minimum internal temperatures to ensure food is safe to eat, measured with a food thermometer inserted into the thickest part.",
+      "headers": {
+        "foodType": "Food Type",
+        "tempF": "Safe Internal Temp (°F)",
+        "tempC": "Safe Internal Temp (°C)"
+      },
+      "rows": [
+        { "foodType": "Poultry (whole, ground, stuffing)", "tempF": "165°F", "tempC": "74°C" },
+        { "foodType": "Ground meats (beef, pork, lamb)", "tempF": "160°F", "tempC": "71°C" },
+        { "foodType": "Whole cuts (steaks, roasts, chops)", "tempF": "145°F + 3 min rest", "tempC": "63°C + 3 min rest" },
+        { "foodType": "Fish and shellfish", "tempF": "145°F", "tempC": "63°C" },
+        { "foodType": "Egg dishes", "tempF": "160°F", "tempC": "71°C" },
+        { "foodType": "Casseroles and leftovers", "tempF": "165°F", "tempC": "74°C" }
+      ],
+      "source": "Source: USDA FoodSafety.gov (last reviewed November 2024). Always use a food thermometer to verify doneness."
+    },
+    "whatNotToBake": {
+      "title": "What NOT to Bake at 180°C",
+      "intro": "180°C is versatile, but some foods require a different temperature for proper results. Using the wrong temperature leads to cracked surfaces, burnt edges, or undercooked centers.",
+      "items": [
+        { "food": "Meringues and pavlova", "reason": "Use 120–160°C — 180°C browns and cracks the delicate structure." },
+        { "food": "Cheesecake", "reason": "Use 160°C — 180°C causes cracking without a water bath." },
+        { "food": "Puff pastry", "reason": "Use 190–200°C — needs high heat for steam and layer separation." },
+        { "food": "Crusty bread loaves", "reason": "Use 200–220°C — needs high heat for oven spring and crust." },
+        { "food": "Pizza", "reason": "Use 220°C+ — needs intense heat for blistered crust." },
+        { "food": "Crème brûlée and custards", "reason": "Use 150–160°C in a water bath — 180°C scrambles the eggs." }
+      ]
+    },
+    "troubleshooting": {
+      "title": "Baking Troubleshooting at 180°C",
+      "intro": "If your bakes at 180°C are not turning out right, the problem is often oven accuracy, rack position, or pan choice. Here are the most common issues and how to fix them.",
+      "headers": {
+        "problem": "Problem",
+        "cause": "Likely Cause",
+        "fix": "Fix"
+      },
+      "rows": [
+        { "problem": "Burnt outside, raw inside", "cause": "Oven runs hot, or food too close to heat source", "fix": "Lower to 170°C, move rack to center, use an oven thermometer to verify." },
+        { "problem": "Cake sinks in the middle", "cause": "Underbaked, or too much leavening agent", "fix": "Extend baking time by 5–10 min, reduce baking powder by 1/4 tsp." },
+        { "problem": "Pale, dense bake", "cause": "Oven runs cool, or oven door opened too early", "fix": "Raise to 190°C, avoid opening the door before 20 minutes." },
+        { "problem": "Bottom burns before top browns", "cause": "Dark pan absorbs more heat, or rack too low", "fix": "Move rack up one position, double-pan, or use a lighter-colored pan." },
+        { "problem": "Cakes crack on top", "cause": "Oven too hot, or batter overfilled", "fix": "Reduce to 170°C, fill pans no more than 2/3 full." }
+      ]
     }
   },
   "faq": [
     {
       "question": "What is 180 degrees Celsius in Fahrenheit?",
-      "answer": "180 degrees Celsius equals 356 degrees Fahrenheit. To convert, use the formula: °F = (°C × 9/5) + 32."
+      "answer": "180 degrees Celsius equals 356 degrees Fahrenheit. The conversion formula is °F = (°C × 9/5) + 32, so (180 × 1.8) + 32 = 356°F."
     },
     {
-      "question": "What is 180°C in an oven or air fryer?",
-      "answer": "180°C is equivalent to 356°F in a conventional oven. In many air fryer or convection recipes, you usually reduce this to around 160°C (320°F) because circulating heat cooks more efficiently."
+      "question": "Is 180°C the same as 350°F?",
+      "answer": "Not exactly. 180°C equals 356°F, not 350°F. However, 350°F converts to 176.7°C, so many recipes round to 180°C for convenience. The 6°F difference is small enough that most bakes turn out fine either way."
     },
     {
-      "question": "What is the conversion formula for 180 Celsius to Fahrenheit?",
-      "answer": "The formula to convert Celsius to Fahrenheit is °F = (°C × 9/5) + 32. For 180°C, you calculate (180 × 9/5) + 32 = 356°F."
+      "question": "What is 180°C in a fan oven or air fryer?",
+      "answer": "For fan ovens and air fryers, reduce 180°C by 20°C to 160°C (320°F). Fan circulation cooks food approximately 20% faster, so also check doneness 5–10 minutes earlier than the recipe states."
     },
     {
-      "question": "What is 180°C in a fan oven?",
-      "answer": "For fan ovens, reduce 180°C by about 20°C to 160°C (320°F) for equivalent cooking results. Fan ovens circulate heat more efficiently, so they usually need a lower setting."
+      "question": "What Gas Mark is 180°C?",
+      "answer": "180°C corresponds to Gas Mark 4. This is the standard setting for cakes, cookies, and everyday baking on gas ovens. Gas Mark 4 equals approximately 180°C (356°F)."
     },
     {
-      "question": "How long to bake cakes at 180°C?",
-      "answer": "Many cakes bake for about 25 to 35 minutes at 180°C (356°F), but the exact time depends on pan size, batter depth, and oven accuracy. A toothpick inserted in the center should come out clean when the cake is done."
+      "question": "How long to bake a cake at 180°C?",
+      "answer": "Most sponge cakes bake in 25–30 minutes at 180°C in a conventional oven. A 900g banana bread loaf takes 50–60 minutes. Always test doneness with a skewer — it should come out clean when inserted into the center."
+    },
+    {
+      "question": "Can I bake bread at 180°C?",
+      "answer": "180°C is too low for most bread. Crusty loaves need 200–220°C for proper oven spring and crust formation. Soft rolls can work at 180°C, but expect a lighter crust. For sourdough or artisan bread, use at least 220°C."
+    },
+    {
+      "question": "Why do my cakes crack on top at 180°C?",
+      "answer": "Cakes crack when the oven runs hotter than the set temperature, causing the top to set before the center finishes rising. Use an oven thermometer to verify accuracy. If the oven is correct, reduce to 170°C and avoid filling pans more than two-thirds full."
+    },
+    {
+      "question": "How do I adjust 180°C for high altitude baking?",
+      "answer": "Above 3,000 feet (915 m), increase oven temperature by 25°F (14°C) and reduce baking time by 10–15%. You may also need to decrease sugar and increase liquid. At 5,000+ feet, further adjustments are needed — consult USDA high-altitude baking guides."
     }
   ]
 }

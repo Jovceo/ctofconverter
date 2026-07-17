@@ -8,11 +8,12 @@ import { TemperaturePage } from '../components/TemperaturePage';
 import pageStyles from '../styles/TemperatureTemplate.module.css';
 import { generateContentStrategy } from '../utils/contentStrategy';
 import { getLatestModifiedDate } from '../utils/dateHelpers';
-import { useTranslation, getLocalizedLink, getSceneKeywords } from '../utils/i18n';
+import { useTranslation, getSceneKeywords } from '../utils/i18n';
 import { getAvailableTemperaturePages } from '../utils/serverHelpers';
 import { generatePageUrl } from '../utils/temperaturePageHelpers';
 
 const CELSIUS = 180;
+const FAN_OVEN_CHART_URL = '/fan-oven-conversion-chart';
 
 interface PageTranslation {
   page: {
@@ -55,6 +56,58 @@ interface PageTranslation {
       notePrefix: string;
       noteLinkText: string;
       noteSuffix: string;
+    };
+    bakingTimes: {
+      title: string;
+      intro: string;
+      headers: {
+        food: string;
+        time: string;
+        doneness: string;
+      };
+      rows: Array<{
+        food: string;
+        time: string;
+        doneness: string;
+      }>;
+      note: string;
+    };
+    foodSafety: {
+      title: string;
+      intro: string;
+      headers: {
+        foodType: string;
+        tempF: string;
+        tempC: string;
+      };
+      rows: Array<{
+        foodType: string;
+        tempF: string;
+        tempC: string;
+      }>;
+      source: string;
+    };
+    whatNotToBake: {
+      title: string;
+      intro: string;
+      items: Array<{
+        food: string;
+        reason: string;
+      }>;
+    };
+    troubleshooting: {
+      title: string;
+      intro: string;
+      headers: {
+        problem: string;
+        cause: string;
+        fix: string;
+      };
+      rows: Array<{
+        problem: string;
+        cause: string;
+        fix: string;
+      }>;
     };
   };
   faq: Array<{
@@ -100,6 +153,38 @@ function mergePageTranslations(
         },
         rows: override.sections?.ovenGuide?.rows || base.sections?.ovenGuide?.rows || [],
       },
+      bakingTimes: {
+        ...(base.sections?.bakingTimes || {}),
+        ...(override.sections?.bakingTimes || {}),
+        headers: {
+          ...(base.sections?.bakingTimes?.headers || {}),
+          ...(override.sections?.bakingTimes?.headers || {}),
+        },
+        rows: override.sections?.bakingTimes?.rows || base.sections?.bakingTimes?.rows || [],
+      },
+      foodSafety: {
+        ...(base.sections?.foodSafety || {}),
+        ...(override.sections?.foodSafety || {}),
+        headers: {
+          ...(base.sections?.foodSafety?.headers || {}),
+          ...(override.sections?.foodSafety?.headers || {}),
+        },
+        rows: override.sections?.foodSafety?.rows || base.sections?.foodSafety?.rows || [],
+      },
+      whatNotToBake: {
+        ...(base.sections?.whatNotToBake || {}),
+        ...(override.sections?.whatNotToBake || {}),
+        items: override.sections?.whatNotToBake?.items || base.sections?.whatNotToBake?.items || [],
+      },
+      troubleshooting: {
+        ...(base.sections?.troubleshooting || {}),
+        ...(override.sections?.troubleshooting || {}),
+        headers: {
+          ...(base.sections?.troubleshooting?.headers || {}),
+          ...(override.sections?.troubleshooting?.headers || {}),
+        },
+        rows: override.sections?.troubleshooting?.rows || base.sections?.troubleshooting?.rows || [],
+      },
     },
     faq: override.faq || base.faq || [],
   } as PageTranslation;
@@ -117,10 +202,7 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
 
   const enTrans = loadJSON('en', '180-c-to-f.json');
   const locTrans = locale !== 'en' ? loadJSON(locale, '180-c-to-f.json') : {};
-  const pageIntro =
-    locale === 'en'
-      ? enTrans.page?.customIntro
-      : locTrans.page?.customIntro || undefined;
+  const pageIntro = enTrans.page?.customIntro;
 
   return {
     props: {
@@ -144,7 +226,6 @@ export default function Temperature180C({
   pageIntro?: string | null;
 }) {
   const { locale, t } = useTranslation('template');
-  const fanOvenChartUrl = useMemo(() => getLocalizedLink('/fan-oven-conversion-chart', locale), [locale]);
   const pageT = useMemo(() => pageTrans, [pageTrans]);
 
   const strategy = useMemo(() => {
@@ -178,7 +259,7 @@ export default function Temperature180C({
         <p className={pageStyles.sectionText}>{pageT.sections.about.paragraph2}</p>
         <p className={pageStyles.sectionText}>
           {pageT.sections.about.paragraph3Prefix}
-          <Link href={fanOvenChartUrl} className={pageStyles.sectionLink}>
+          <Link href={FAN_OVEN_CHART_URL} className={pageStyles.sectionLink}>
             {pageT.sections.about.fanLinkText}
           </Link>
           {pageT.sections.about.paragraph3Suffix}
@@ -225,14 +306,103 @@ export default function Temperature180C({
         </div>
         <div className={pageStyles.noteBox}>
           {pageT.sections.ovenGuide.notePrefix}
-          <Link href={fanOvenChartUrl} className={pageStyles.sectionLink}>
+          <Link href={FAN_OVEN_CHART_URL} className={pageStyles.sectionLink}>
             {pageT.sections.ovenGuide.noteLinkText}
           </Link>
           {pageT.sections.ovenGuide.noteSuffix}
         </div>
       </section>
+
+      <section className={pageStyles.box}>
+        <h2 className={pageStyles.boxTitle}>{pageT.sections.bakingTimes.title}</h2>
+        <p className={pageStyles.sectionText}>{pageT.sections.bakingTimes.intro}</p>
+        <div className={pageStyles.customTableWrap}>
+          <table className={pageStyles.customTable}>
+            <thead>
+              <tr>
+                <th scope="col">{pageT.sections.bakingTimes.headers.food}</th>
+                <th scope="col">{pageT.sections.bakingTimes.headers.time}</th>
+                <th scope="col">{pageT.sections.bakingTimes.headers.doneness}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {pageT.sections.bakingTimes.rows.map((row) => (
+                <tr key={row.food}>
+                  <td>{row.food}</td>
+                  <td>{row.time}</td>
+                  <td>{row.doneness}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className={pageStyles.noteBox}>{pageT.sections.bakingTimes.note}</div>
+      </section>
+
+      <section className={pageStyles.box}>
+        <h2 className={pageStyles.boxTitle}>{pageT.sections.foodSafety.title}</h2>
+        <p className={pageStyles.sectionText}>{pageT.sections.foodSafety.intro}</p>
+        <div className={pageStyles.customTableWrap}>
+          <table className={pageStyles.customTable}>
+            <thead>
+              <tr>
+                <th scope="col">{pageT.sections.foodSafety.headers.foodType}</th>
+                <th scope="col">{pageT.sections.foodSafety.headers.tempF}</th>
+                <th scope="col">{pageT.sections.foodSafety.headers.tempC}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {pageT.sections.foodSafety.rows.map((row) => (
+                <tr key={row.foodType}>
+                  <td>{row.foodType}</td>
+                  <td>{row.tempF}</td>
+                  <td>{row.tempC}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className={pageStyles.noteBox}>{pageT.sections.foodSafety.source}</div>
+      </section>
+
+      <section className={pageStyles.box}>
+        <h2 className={pageStyles.boxTitle}>{pageT.sections.whatNotToBake.title}</h2>
+        <p className={pageStyles.sectionText}>{pageT.sections.whatNotToBake.intro}</p>
+        <ul className={pageStyles.customList}>
+          {pageT.sections.whatNotToBake.items.map((item) => (
+            <li key={item.food}>
+              <strong>{item.food}</strong> — {item.reason}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className={pageStyles.box}>
+        <h2 className={pageStyles.boxTitle}>{pageT.sections.troubleshooting.title}</h2>
+        <p className={pageStyles.sectionText}>{pageT.sections.troubleshooting.intro}</p>
+        <div className={pageStyles.customTableWrap}>
+          <table className={pageStyles.customTable}>
+            <thead>
+              <tr>
+                <th scope="col">{pageT.sections.troubleshooting.headers.problem}</th>
+                <th scope="col">{pageT.sections.troubleshooting.headers.cause}</th>
+                <th scope="col">{pageT.sections.troubleshooting.headers.fix}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {pageT.sections.troubleshooting.rows.map((row) => (
+                <tr key={row.problem}>
+                  <td>{row.problem}</td>
+                  <td>{row.cause}</td>
+                  <td>{row.fix}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
     </>
-  ), [fanOvenChartUrl, pageT]);
+  ), [pageT]);
 
   const canonicalUrl = generatePageUrl(CELSIUS, locale);
 
@@ -252,6 +422,7 @@ export default function Temperature180C({
       customSections={customSections}
       disableSmartFaqs={true}
       showEditorialNote={true}
+      alternateLocales={['en']}
     />
   );
 }

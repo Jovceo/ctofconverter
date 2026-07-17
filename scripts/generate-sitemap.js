@@ -5,24 +5,28 @@ const { execSync } = require('child_process');
 const startTime = Date.now();
 
 const SITE_URL = 'https://ctofconverter.com';
-const LOCALES = ['en', 'zh', 'es', 'hi', 'ar', 'ja', 'fr', 'de', 'id', 'pt-br'];
 const EXCLUDED = ['_app.tsx', '_document.tsx', '_error.tsx', '404.tsx', 'sitemap.xml.tsx', 'api'];
-const NON_EN_EXCLUDED = ['privacy-policy', 'terms-of-service', 'about-us'];
-const SITEMAP_PAGES = ['index', 'oven-temperature-conversion', 'oven-to-air-fryer'];
 
-// 项目上线日期 — 作为 lastmod 的兜底值
+// 项目上线日期 - 作为 lastmod 的兜底值
 const PROJECT_LAUNCH_DATE = '2025-10-19';
 
 // ============================================================
-// SEO 战略 v2：全量收录所有 Next.js 页面，通过 priority 和 changefreq 控制爬取优先级。
-//   整数温度页 (1.0 weekly) > 小数温度页 (0.8 weekly) > 工具页 (0.9 weekly) > 内容页 (0.5 monthly)
-//   60 页全放不影响爬取预算（通常需要 10,000+ 页才需要担心）。
+// 精做页面列表 - 从 config/quality-pages.json 读取
+// 这些页面已手写高质量内容，在 sitemap 中获得最高 priority
 // ============================================================
+const qualityPagesPath = path.join(__dirname, '../config/quality-pages.json');
+let qualityPages = [];
+try {
+    const data = JSON.parse(fs.readFileSync(qualityPagesPath, 'utf-8'));
+    qualityPages = data.qualityPages || [];
+    console.log(`⭐ Loaded ${qualityPages.length} quality pages: ${qualityPages.join(', ')}`);
+} catch (e) {
+    console.warn('⚠️ Could not load quality-pages.json, no quality pages marked:', e.message);
+}
 
 const pagesDir = path.join(__dirname, '../pages');
 const localesDir = path.join(__dirname, '../locales');
 const publicDir = path.join(__dirname, '../public');
-const publicLocalesDir = path.join(publicDir, 'locales');
 const rootDir = path.join(__dirname, '..');
 
 // ============================================================
@@ -77,9 +81,9 @@ function getLastModified(filePath) {
 }
 
 /**
- * 获取页面的 lastmod 日期
+ * 获取页面的 lastmod 日期（仅英语）
  */
-function getPageLastMod(pageSlug, locale) {
+function getPageLastMod(pageSlug) {
     const candidates = [];
 
     const tsxName = pageSlug === '' ? 'index.tsx' : `${pageSlug}.tsx`;
@@ -87,30 +91,12 @@ function getPageLastMod(pageSlug, locale) {
     if (fs.existsSync(tsxPath)) candidates.push(getLastModified(tsxPath));
 
     const jsonName = pageSlug === '' ? 'home.json' : `${pageSlug}.json`;
-    const localePath = path.join(localesDir, locale, jsonName);
+    const localePath = path.join(localesDir, 'en', jsonName);
     if (fs.existsSync(localePath)) candidates.push(getLastModified(localePath));
-
-    const publicLocalePath = path.join(publicLocalesDir, locale, jsonName);
-    if (fs.existsSync(publicLocalePath)) candidates.push(getLastModified(publicLocalePath));
 
     return candidates.length > 0
         ? candidates.sort().reverse()[0]
         : PROJECT_LAUNCH_DATE;
-}
-
-function isTemperaturePage(pageSlug) {
-    return /^\d+(-\d+)?-c-to-f$/.test(pageSlug);
-}
-
-function parseDateOnly(dateString) {
-    const ms = Date.parse(`${dateString}T00:00:00Z`);
-    return Number.isNaN(ms) ? 0 : ms;
-}
-
-function getPageRollupLastMod(pageSlug) {
-    const locales = getAvailableLocales(pageSlug);
-    const lastmods = locales.map((locale) => getPageLastMod(pageSlug, locale));
-    return lastmods.sort().reverse()[0] || PROJECT_LAUNCH_DATE;
 }
 
 // ============================================================
@@ -125,38 +111,20 @@ function escapeXml(str) {
         .replace(/'/g, '&apos;');
 }
 
-function toHreflang(locale) {
-    // 特殊映射：更精准的 BCP 47 标签
-    const HREFLANG_MAP = {
-        'zh': 'zh-Hans',       // 简体中文
-        'pt-br': 'pt-BR',     // 巴西葡语
-    };
-    if (HREFLANG_MAP[locale]) return HREFLANG_MAP[locale];
-    if (locale.includes('-')) {
-        const [lang, region] = locale.split('-');
-        return `${lang}-${region.toUpperCase()}`;
-    }
-    return locale;
-}
-
-function buildUrl(locale, pageSlug) {
-    const parts = [];
-    if (locale !== 'en') parts.push(locale);
-    if (pageSlug) parts.push(pageSlug);
-    return parts.length > 0 ? `${SITE_URL}/${parts.join('/')}` : SITE_URL;
+function buildUrl(pageSlug) {
+    return pageSlug ? `${SITE_URL}/${pageSlug}` : SITE_URL;
 }
 
 /**
- * 构建 URL 条目 — 包含 priority 和 changefreq
+ * 构建 URL 条目 - 包含 priority 和 changefreq
  */
-function createUrlEntry(loc, lastmod, hreflangLinks, priority, changefreq) {
+function createUrlEntry(loc, lastmod, priority, changefreq) {
     const lines = [
         '  <url>',
         `    <loc>${loc}</loc>`,
         `    <lastmod>${lastmod}</lastmod>`,
         `    <priority>${priority}</priority>`,
         `    <changefreq>${changefreq}</changefreq>`,
-        ...hreflangLinks,
         '  </url>'
     ];
     return lines.join('\n');
@@ -168,13 +136,15 @@ function createUrlEntry(loc, lastmod, hreflangLinks, priority, changefreq) {
 function getPriority(pageSlug) {
     // 首页：最高
     if (pageSlug === '' || pageSlug === 'index') return '1.0';
-    // 整数温度页：最高
-    if (/^\d+-c-to-f$/.test(pageSlug)) return '1.0';
-    // 小数温度页：次高
-    if (/^\d+-\d+-c-to-f$/.test(pageSlug)) return '0.8';
+    // 精做页面：次高
+    if (qualityPages.includes(pageSlug)) return '0.9';
     // 工具页（calculator, oven 等）
-    if (pageSlug.includes('calculator') || pageSlug.includes('oven')) return '0.9';
-    // 内容页（about, contact, privacy 等）
+    if (pageSlug.includes('calculator') || pageSlug.includes('oven')) return '0.8';
+    // 整数温度页
+    if (/^\d+-c-to-f$/.test(pageSlug)) return '0.6';
+    // 小数温度页
+    if (/^\d+-\d+-c-to-f$/.test(pageSlug)) return '0.4';
+    // 其他内容页
     return '0.5';
 }
 
@@ -185,6 +155,9 @@ function getChangefreq(pageSlug) {
     return 'monthly';
 }
 
+/**
+ * 获取所有非温度页面（排除以数字开头的温度转换页）
+ */
 function getAllPages() {
     try {
         const files = fs.readdirSync(pagesDir);
@@ -198,73 +171,82 @@ function getAllPages() {
                 && !/^\d/.test(file);
         }).map(file => file.replace('.tsx', ''));
 
-        // 全量收录：所有 .tsx 页面（排除 EXCLUDED 列表）都直接返回，不做温度页过滤
-        const filtered = [...allPages];
-
         // 排序：首页最前，其他页面按自然顺序排序
-        filtered.sort((a, b) => {
+        allPages.sort((a, b) => {
             if (a === 'index') return -1;
             if (b === 'index') return 1;
             return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
         });
 
-        return filtered;
+        return allPages;
     } catch (e) {
         console.error('Error reading pages directory:', e);
         return [];
     }
 }
 
-function getAvailableLocales(pageSlug) {
-    if (pageSlug === '' || NON_EN_EXCLUDED.includes(pageSlug)) return ['en'];
-    const jsonName = pageSlug === '' ? 'home.json' : `${pageSlug}.json`;
-    const detectedLocales = LOCALES.filter((locale) => {
-        const localeFile = path.join(localesDir, locale, jsonName);
-        const publicLocaleFile = path.join(publicLocalesDir, locale, jsonName);
-        return fs.existsSync(localeFile) || fs.existsSync(publicLocaleFile);
-    });
-
-    if (detectedLocales.length === 0) {
-        return ['en'];
+/**
+ * 获取所有温度转换页面（以数字开头的 .tsx 文件）
+ */
+function getTemperaturePages() {
+    try {
+        const files = fs.readdirSync(pagesDir);
+        return files
+            .filter(file => file.endsWith('.tsx')
+                && !EXCLUDED.includes(file)
+                && /^\d/.test(file))
+            .map(file => file.replace('.tsx', ''))
+            .sort((a, b) => {
+                // 按温度数值排序
+                const numA = parseFloat(a.replace(/-c-to-f$/, '').replace('-', '.'));
+                const numB = parseFloat(b.replace(/-c-to-f$/, '').replace('-', '.'));
+                return numA - numB;
+            });
+    } catch (e) {
+        console.error('Error reading temperature pages:', e);
+        return [];
     }
-
-    return detectedLocales.sort((a, b) => LOCALES.indexOf(a) - LOCALES.indexOf(b));
 }
 
+/**
+ * 获取所有要放入 sitemap 的页面
+ * 精做页面排最前，然后是首页和工具页，最后是温度页
+ */
 function getSitemapPages() {
-    return SITEMAP_PAGES;
+    const staticPages = getAllPages();
+    const tempPages = getTemperaturePages();
+    const allPages = [...new Set([...staticPages, ...tempPages])];
+
+    // 排序：首页最前，然后精做页面，然后其余按自然顺序
+    allPages.sort((a, b) => {
+        if (a === 'index') return -1;
+        if (b === 'index') return 1;
+        const aQuality = qualityPages.includes(a);
+        const bQuality = qualityPages.includes(b);
+        if (aQuality && !bQuality) return -1;
+        if (!aQuality && bQuality) return 1;
+        return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+    });
+
+    return allPages;
 }
 
 // ============================================================
-// 4. 生成 sitemap
+// 4. 生成 sitemap（仅英语）
 // ============================================================
 const pages = getSitemapPages();
 const urlEntries = [];
 
-console.log(`Generating sitemap for ${pages.length} pages across ${LOCALES.length} locales...`);
+console.log(`Generating sitemap for ${pages.length} English pages...`);
 
 pages.forEach(page => {
     const pageSlug = page === 'index' ? '' : page;
-    const availableLocales = getAvailableLocales(pageSlug);
+    const loc = escapeXml(buildUrl(pageSlug));
+    const lastmod = getPageLastMod(pageSlug);
+    const priority = getPriority(pageSlug);
+    const changefreq = getChangefreq(pageSlug);
 
-    availableLocales.forEach(locale => {
-        const loc = escapeXml(buildUrl(locale, pageSlug));
-        const lastmod = getPageLastMod(pageSlug, locale);
-
-        // 构建 hreflang 链接
-        const hreflangLinks = [];
-        if (availableLocales.length > 1) {
-            availableLocales.forEach(altLocale => {
-                const altLoc = escapeXml(buildUrl(altLocale, pageSlug));
-                const hreflang = toHreflang(altLocale);
-                hreflangLinks.push(`    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${altLoc}"/>`);
-            });
-            const defaultLoc = escapeXml(buildUrl('en', pageSlug));
-            hreflangLinks.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${defaultLoc}"/>`);
-        }
-
-        urlEntries.push(createUrlEntry(loc, lastmod, hreflangLinks, getPriority(pageSlug), getChangefreq(pageSlug)));
-    });
+    urlEntries.push(createUrlEntry(loc, lastmod, priority, changefreq));
 });
 
 // ============================================================
@@ -274,7 +256,6 @@ const sitemap = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset',
     '  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
-    '  xmlns:xhtml="http://www.w3.org/1999/xhtml"',
     '>',
     urlEntries.join('\n'),
     '</urlset>'
@@ -294,16 +275,14 @@ const elapsed = Date.now() - startTime;
 
 console.log(`\n✅ Sitemap generated in ${elapsed}ms`);
 console.log(`📊 Stats:`);
-console.log(`   URLs:       ${urlEntries.length}`);
-console.log(`   File size:  ${fileSizeKB} KB`);
-console.log(`   Git files:  ${Object.keys(gitDateMap).length} cached`);
-console.log(`   Output:     ${path.join(publicDir, 'sitemap.xml')}`);
+console.log(`   URLs:          ${urlEntries.length}`);
+console.log(`   Quality pages: ${qualityPages.length} (priority 0.9)`);
+console.log(`   File size:     ${fileSizeKB} KB`);
+console.log(`   Git files:     ${Object.keys(gitDateMap).length} cached`);
+console.log(`   Output:        ${path.join(publicDir, 'sitemap.xml')}`);
 
 if (urlEntries.length > 40000) {
     console.warn(`⚠️ URL count (${urlEntries.length}) approaching 50,000 limit.`);
-}
-if (Buffer.byteLength(sitemap, 'utf-8') > 40 * 1024 * 1024) {
-    console.warn(`⚠️ File size (${fileSizeKB} KB) approaching 50MB limit.`);
 }
 
 // ============================================================
@@ -318,7 +297,6 @@ try {
         : 'User-agent: *\nAllow: /\n';
 
     if (!robotsContent.includes(sitemapDeclaration)) {
-        // 替换旧的 Sitemap 行或追加新的
         if (/^Sitemap:.*/m.test(robotsContent)) {
             robotsContent = robotsContent.replace(/^Sitemap:.*$/m, sitemapDeclaration);
         } else {

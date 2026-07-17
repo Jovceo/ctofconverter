@@ -16,7 +16,7 @@ interface ConversionHistoryItem {
     timestamp: number;
 }
 
-import { getLatestModifiedDate, getLatestModifiedDatePreferGit } from '../utils/dateHelpers';
+import { getLatestModifiedDate } from '../utils/dateHelpers';
 import fs from 'fs';
 import path from 'path';
 
@@ -24,12 +24,9 @@ interface HomeProps {
     locale: string;
     commonMessages: TranslationDictionary;
     homeMessages: TranslationDictionary;
-    dynamicRecentUpdates: Array<{ c: number; f: number; date: string; url: string }>;
+    qualityGuides: Array<{ title: string; description: string; url: string; color: string }>;
     lastUpdatedIso: string;
 }
-
-const RECENT_UPDATE_WINDOW_DAYS = 90;
-const MAX_RECENT_UPDATE_LINKS = 12;
 
 function loadLocaleMessages(locale: string, namespace: string) {
     const localePath = path.join(process.cwd(), 'locales', locale, `${namespace}.json`);
@@ -39,7 +36,13 @@ function loadLocaleMessages(locale: string, namespace: string) {
     return JSON.parse(fs.readFileSync(targetPath, 'utf8'));
 }
 
-export default function Home({ locale, commonMessages, homeMessages, dynamicRecentUpdates = [], lastUpdatedIso }: HomeProps) {
+const QUALITY_PAGE_INFO: Record<string, { title: string; description: string; color: string }> = {
+    'oven-temperature-conversion': { title: 'Oven Temperature Conversion', description: '°C to °F, Gas Mark, Fan Oven & Air Fryer', color: '#0284c7' },
+    'oven-to-air-fryer': { title: 'Oven to Air Fryer', description: 'Convert recipes with temperature & time adjustments', color: '#ea580c' },
+    '180-c-to-f': { title: '180°C to Fahrenheit (356°F)', description: 'Baking guide with times, USDA temperatures & troubleshooting', color: '#16a34a' },
+};
+
+export default function Home({ locale, commonMessages, homeMessages, qualityGuides = [], lastUpdatedIso }: HomeProps) {
     const currentLocale = locale || 'en';
     const { t } = useMemo(
         () => createTranslator({ locale: currentLocale, common: commonMessages, page: homeMessages }),
@@ -125,9 +128,7 @@ export default function Home({ locale, commonMessages, homeMessages, dynamicRece
 
 
     // 使用动态获取的数据，如果未获取到则使用空数组 (SSR会填充它)
-    const recentUpdates = dynamicRecentUpdates.length > 0 ? dynamicRecentUpdates : [
-        // Fallback or empty if strictly dynamic
-    ];
+    const recentUpdates = qualityGuides;
 
     return (
         <>
@@ -161,6 +162,22 @@ export default function Home({ locale, commonMessages, homeMessages, dynamicRece
                         "operatingSystem": "All"
                     })
                 }} />
+                {Array.isArray(t('faq.items')) && t('faq.items').length > 0 && (
+                    <script type="application/ld+json" dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "FAQPage",
+                            "mainEntity": (t('faq.items') as Array<{ question: string; answer: string }>).map(item => ({
+                                "@type": "Question",
+                                "name": item.question,
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": item.answer
+                                }
+                            }))
+                        })
+                    }} />
+                )}
             </Head>
 
             <div dir={currentLocale === 'ar' ? 'rtl' : 'ltr'} className={currentLocale === 'ar' ? 'font-ar' : ''}>
@@ -287,19 +304,14 @@ export default function Home({ locale, commonMessages, homeMessages, dynamicRece
 
                     <section className="reference-section">
                         <h2>{t('reference.title')}</h2>
-                        <ul className="temperature-list">
-                            {recentUpdates.map((item, i) => (
-                                <li key={i} className="temperature-list-item">
-                                    <div className="temp-card-content">
-                                        <div className="temp-info">
-                                            <Link href={getLocalizedLink(item.url, currentLocale)} className="temp-title-link" title={t('reference.itemFormat', { c: item.c, f: item.f })}>
-                                                <div className="temp-title">{t('reference.itemFormat', { c: item.c, f: item.f })}</div>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </li>
+                        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
+                            {recentUpdates.map((guide, i) => (
+                                <a key={i} href={guide.url} style={{ flex: '1 1 220px', padding: '14px 18px', background: 'white', border: '1px solid #e2e8f0', borderRadius: '10px', textDecoration: 'none', color: '#0f172a', display: 'block' }}>
+                                    <strong style={{ color: guide.color, display: 'block', marginBottom: '4px' }}>{guide.title}</strong>
+                                    <span style={{ fontSize: '0.85rem', color: '#64748b' }}>{guide.description}</span>
+                                </a>
                             ))}
-                        </ul>
+                        </div>
 
                         <a href="/downloads/celsius-to-fahrenheit-chart.pdf" className="pdf-download-btn">
                             <span className="btn-icon">📄</span>
@@ -313,21 +325,6 @@ export default function Home({ locale, commonMessages, homeMessages, dynamicRece
                                     <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
                                 ))}
                             </div>
-                        </div>
-                    </section>
-
-                    <section style={{ marginTop: '2.5rem', padding: '1.5rem', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-                        <h2 style={{ margin: '0 0 0.75rem', fontSize: '1.3rem' }}>Temperature Guides</h2>
-                        <p style={{ margin: '0 0 1rem', color: '#475569' }}>Comprehensive guides for cooking and baking temperature conversions.</p>
-                        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                            <a href="/oven-temperature-conversion" style={{ flex: '1 1 220px', padding: '14px 18px', background: 'white', border: '1px solid #e2e8f0', borderRadius: '10px', textDecoration: 'none', color: '#0f172a', display: 'block' }}>
-                                <strong style={{ color: '#0284c7', display: 'block', marginBottom: '4px' }}>Oven Temperature Conversion</strong>
-                                <span style={{ fontSize: '0.85rem', color: '#64748b' }}>°C to °F, Gas Mark, Fan Oven &amp; Air Fryer</span>
-                            </a>
-                            <a href="/oven-to-air-fryer" style={{ flex: '1 1 220px', padding: '14px 18px', background: 'white', border: '1px solid #e2e8f0', borderRadius: '10px', textDecoration: 'none', color: '#0f172a', display: 'block' }}>
-                                <strong style={{ color: '#ea580c', display: 'block', marginBottom: '4px' }}>Oven to Air Fryer</strong>
-                                <span style={{ fontSize: '0.85rem', color: '#64748b' }}>Convert recipes with temperature &amp; time adjustments</span>
-                            </a>
                         </div>
                     </section>
 
@@ -479,69 +476,31 @@ export default function Home({ locale, commonMessages, homeMessages, dynamicRece
 
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     const currentLocale = typeof locale === 'string' ? locale : 'en';
-    const cutoffDate = new Date();
-    cutoffDate.setUTCDate(cutoffDate.getUTCDate() - RECENT_UPDATE_WINDOW_DAYS);
-    const cutoffIso = cutoffDate.toISOString().split('T')[0];
 
-    // 动态扫描pages目录下的温度转换页面
-    const pagesDir = path.join(process.cwd(), 'pages');
-    const filenames = fs.readdirSync(pagesDir);
-
-    const allTemperatureUpdates = filenames
-        .filter(name => name.match(/^(-?\d+(?:-\d+)?)-c-to-f\.tsx$/))
-        .map(name => {
-            const match = name.match(/^(-?\d+(?:-\d+)?)-c-to-f\.tsx$/);
-            // Replace hyphen between digits with dot to handle "37-5" -> "37.5"
-            const numStr = match![1].replace(/(\d)-(\d)/, '$1.$2');
-            const c = parseFloat(numStr);
-            const f = celsiusToFahrenheit(c);
-            const filePath = path.join(pagesDir, name);
-
-            // Keep homepage recent-conversion ordering stable across local and CI.
-            const lastUpdatedIso = getLatestModifiedDatePreferGit([
-                filePath,
-                path.join(process.cwd(), `locales/${currentLocale}/${match![1]}-c-to-f.json`)
-            ]);
-
-            return {
-                c,
-                f: parseFloat(formatTemperature(f)),
-                date: lastUpdatedIso,
-                url: `/${name.replace('.tsx', '')}`
-            };
+    // Load quality pages from config
+    const qualityPagesConfig = JSON.parse(
+        fs.readFileSync(path.join(process.cwd(), 'config/quality-pages.json'), 'utf8')
+    );
+    const qualityGuides = (qualityPagesConfig.qualityPages as string[])
+        .map(slug => {
+            const info = QUALITY_PAGE_INFO[slug];
+            if (!info) return null;
+            return { ...info, url: `/${slug}` };
         })
-        .sort((a, b) => {
-            const dateCompare = b.date.localeCompare(a.date);
-            if (dateCompare !== 0) return dateCompare;
-            return a.url.localeCompare(b.url, undefined, { numeric: true, sensitivity: 'base' });
-        })
-        .slice(0, 12); // 只显示最新的 12 个
-    // 核心逻辑：按修改时间倒序排列，取最新的 12 个”
-
-    const recentTemperatureUpdates = allTemperatureUpdates.filter(item => item.date >= cutoffIso);
-    const dynamicRecentUpdates = (recentTemperatureUpdates.length > 0
-        ? recentTemperatureUpdates
-        : allTemperatureUpdates).slice(0, MAX_RECENT_UPDATE_LINKS);
+        .filter((g): g is { title: string; description: string; url: string; color: string } => g !== null);
 
     const pageFileDate = getLatestModifiedDate([
         'pages/index.tsx',
         'locales/en/home.json'
     ]);
 
-    // Homepage's last updated should also reflect if the "Latest Conversions" list changed
-    // So we pick the latest date from: index.tsx itself, home.json, OR the newest item in the recent list
-    const latestContentDate = dynamicRecentUpdates.length > 0 ? dynamicRecentUpdates[0].date : '2025-01-01';
-
-    // Compare and pick the most recent
-    const lastUpdatedIso = pageFileDate > latestContentDate ? pageFileDate : latestContentDate;
-
     return {
         props: {
             locale: currentLocale,
             commonMessages: loadLocaleMessages(currentLocale, 'common'),
             homeMessages: loadLocaleMessages(currentLocale, 'home'),
-            dynamicRecentUpdates,
-            lastUpdatedIso
+            qualityGuides,
+            lastUpdatedIso: pageFileDate
         }
     };
 };

@@ -1,9 +1,10 @@
 User-agent: *
-Allow: /_next/static/
+Disallow: /_next/static/chunks/
 Disallow: /_next/data/
 Disallow: /_next/server/
 Disallow: /_next/cache/
 Disallow: /api/
 Disallow: /_vercel/
+Allow: /
 
 Sitemap: https://ctofconverter.com/sitemap.xml

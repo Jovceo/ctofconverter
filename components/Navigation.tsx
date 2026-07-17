@@ -74,16 +74,6 @@ export default function Navigation() {
               {t('nav.calculator')}
             </Link>
           </li>
-          <li>
-            <Link
-              href={getLocalizedLink('/temperature-conversion-challenge', currentLocale)}
-              className="nav-game-link"
-              aria-label={t('nav.game')}
-              title={t('nav.game')}
-            >
-              {t('nav.game')}
-            </Link>
-          </li>
         </ul>
         <div className="nav-actions">
           <LanguageSwitcher />
