@@ -20,7 +20,7 @@
 7. 写 FAQ（3-5 个真实问题，每个 40-60 词）
 8. 添加内部链接
 9. GEO 检查：段落是否自包含？数据是否带来源？表格标题是否明确？实体名称是否统一？
-10. 将完成的页面 slug 加入 `config/quality-pages.json`
+10. 将完成的页面 slug 加入 `config/quality-pages.json` **和** `pages/index.tsx` 的 `QUALITY_PAGE_INFO`（首页 Featured Guides 需要这两个配置同时存在才能显示链接，缺一个 = 零入站内链）
 11. 运行 `node scripts/generate-sitemap.js` 重新生成 sitemap
 
 ## 内容原则
@@ -55,8 +55,21 @@ AI 搜索引擎（Google AI Overviews、ChatGPT、Perplexity）与传统 SEO 的
 ### 结构化数据
 - FAQ Schema：由组件从 JSON faq 数组自动生成 JSON-LD
 - WebPage Schema：由组件自动生成
+- Breadcrumb Schema：由组件自动生成
+- HowTo Schema：页面有步骤性内容（如急救步骤、烘焙步骤）时**必须**添加，由组件从 JSON steps 数组生成
 - 表格数据：用 HTML `<table>` 标记，AI 可直接解析（已有）
-- HowTo Schema：如页面包含步骤性内容（如烘焙步骤），可考虑添加
+
+### FAQ 渲染规则
+- FAQ 答案必须始终在 DOM 中，用 CSS `display:none` 控制显隐，不能用条件渲染（`{show && <div>}`）
+- 原因：AI 爬虫不执行 JavaScript，条件渲染的答案不可见，GEO 失效
+
+### 数据核实
+- 引用外部数据（NOAA/CDC/USDA 等）时，必须对照官方源逐格核实后再发布
+- 不能凭记忆或估算写数据，差异哪怕 1°F 也会影响可信度
+
+### 医疗内容
+- 涉及体温、发烧、低体温症等健康相关内容的页面，必须加免责声明："This information is not a substitute for professional medical advice. In emergencies, call 911 immediately."
+- 免责声明放在医疗建议段落末尾
 
 ## 技术实现
 
@@ -102,6 +115,7 @@ AI 搜索引擎（Google AI Overviews、ChatGPT、Perplexity）与传统 SEO 的
 - [ ] `npx tsc --noEmit` 类型检查通过（本地不跑 `npm run build`，因 500+ 旧页会超时）
 - [ ] `public/sitemap.xml` 已重新生成（`node scripts/generate-sitemap.js`）
 - [ ] `config/quality-pages.json` 已更新（如有新精做页面）
+- [ ] `pages/index.tsx` 的 `QUALITY_PAGE_INFO` 已更新（如有新精做页面，否则首页不显示链接）
 - [ ] `config/migrated-routes.json` 已更新（如有新页面需要 301 旧 HTML）
 - [ ] 环境变量 `INDEXNOW_SECRET` 已设置（用于部署后自动提交索引）
 - [ ] Vercel production build 成功
@@ -111,8 +125,8 @@ AI 搜索引擎（Google AI Overviews、ChatGPT、Perplexity）与传统 SEO 的
 ### 内容深度
 - Answer Capsule 放在 H1 下方，直接回答"X°C 是多少°F"
 - 正文内容覆盖该温度的核心使用场景（烤箱温度就写烘焙，体温就写医疗）
+- FAQ 只写正文中没有回答的问题，不重复正文已有的内容
 - FAQ 回答用户真实疑问，不凑数；宁可 3 个有深度的，不要 8 个浅的
-- 正文已回答的问题不放进 FAQ（如 H1/Answer Capsule 已写"180°C = 356°F"，FAQ 就不需要再问一遍）
 - 引用权威数据时标注来源（WHO/USDA/NOAA/CDC 等）
 
 ### 内容差异化

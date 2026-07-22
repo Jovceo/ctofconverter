@@ -148,9 +148,11 @@ function getPriority(pageSlug) {
     return '0.5';
 }
 
-function getChangefreq(pageSlug) {
+function getChangefreq(pageSlug, qualityPages = []) {
+    if (qualityPages.includes(pageSlug)) return 'weekly';
     if (pageSlug === '' || pageSlug === 'index') return 'weekly';
     if (/^\d+(-\d+)?-c-to-f$/.test(pageSlug)) return 'weekly';
+    if (/^\d+-f-to-c$/.test(pageSlug)) return 'weekly';
     if (pageSlug.includes('calculator') || pageSlug.includes('oven')) return 'weekly';
     return 'monthly';
 }
@@ -244,7 +246,7 @@ pages.forEach(page => {
     const loc = escapeXml(buildUrl(pageSlug));
     const lastmod = getPageLastMod(pageSlug);
     const priority = getPriority(pageSlug);
-    const changefreq = getChangefreq(pageSlug);
+    const changefreq = getChangefreq(pageSlug, qualityPages);
 
     urlEntries.push(createUrlEntry(loc, lastmod, priority, changefreq));
 });

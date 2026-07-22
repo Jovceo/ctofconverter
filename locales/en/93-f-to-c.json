@@ -1,0 +1,116 @@
+{
+  "page": {
+    "metaTitle": "93°F to Celsius (33.9°C) - Body Temp & Heat Guide",
+    "metaDescription": "93°F equals 33.9°C. As a body temperature, 93°F indicates hypothermia (below 95°F). As weather, 93°F triggers NWS heat advisories with high humidity.",
+    "headerTitle": "93°F to Celsius (33.9°C) - Body Temp & Heat Guide",
+    "tagline": "Convert 93 degrees Fahrenheit to Celsius, understand what 93°F means as a body temperature and as weather, with CDC hypothermia guidance and NOAA heat index data.",
+    "resultHeader": "93 Degrees Fahrenheit to Celsius Conversion",
+    "customIntro": "<strong>93 degrees Fahrenheit equals 33.9 degrees Celsius</strong>, calculated as (93 − 32) × 5/9 = 33.9°C. As a body temperature, 93°F is below normal (98.6°F / 37°C) and crosses the hypothermia threshold of 95°F (35°C) defined by the CDC. As weather, 93°F is a hot summer day that may trigger NWS heat advisories with high humidity."
+  },
+  "sections": {
+    "bodyTemp": {
+      "title": "93°F as a Body Temperature: Hypothermia",
+      "intro": "Normal body temperature is 97°F to 99°F (36.1°C to 37.2°C), according to the Mayo Clinic. A reading of 93°F (33.9°C) is well below normal and falls within the CDC's hypothermia range (below 95°F / 35°C). Hypothermia occurs when the body loses heat faster than it can produce it, causing a dangerously low core temperature.",
+      "stagesTable": {
+        "title": "Hypothermia Stages by Core Temperature",
+        "headers": {
+          "stage": "Stage",
+          "tempF": "Core Temp (°F)",
+          "tempC": "Core Temp (°C)",
+          "symptoms": "Key Symptoms"
+        },
+        "rows": [
+          { "stage": "Mild", "tempF": "95–90°F", "tempC": "35–32°C", "symptoms": "Shivering, cold pale skin, fast breathing, numb hands" },
+          { "stage": "Moderate", "tempF": "90–82°F", "tempC": "32–28°C", "symptoms": "Confusion, slurred speech, drowsiness, shivering stops" },
+          { "stage": "Severe", "tempF": "Below 82°F", "tempC": "Below 28°C", "symptoms": "Unconsciousness, weak pulse, slow breathing, cardiac arrest risk" }
+        ],
+        "note": "93°F (33.9°C) falls in the Mild stage but is already below the CDC hypothermia threshold of 95°F (35°C). Source: CDC and Mayo Clinic."
+      }
+    },
+    "whatToDo": {
+      "title": "What to Do If a Body Temperature Reads 93°F",
+      "intro": "If a thermometer reads 93°F (33.9°C), take immediate action to warm the person and seek medical attention.",
+      "steps": [
+        { "action": "Move to warmth", "detail": "Get the person indoors or to a warm, dry location away from wind and moisture." },
+        { "action": "Remove wet clothing", "detail": "Take off any wet or damp clothes and replace with dry, warm layers." },
+        { "action": "Cover core first", "detail": "Use blankets to cover the head, neck, chest, and groin — these areas lose heat fastest." },
+        { "action": "Offer warm drinks", "detail": "Provide warm (not hot) non-alcoholic, non-caffeinated beverages if the person is conscious." },
+        { "action": "Skin contact for infants", "detail": "For babies, use direct skin-to-skin contact with a caregiver under a blanket." }
+      ],
+      "warnings": [
+        "Do not use alcohol or caffeine — both accelerate heat loss.",
+        "Do not rub extremities vigorously — this can push cold blood back to the heart and organs.",
+        "Do not use hot water or heating pads on the skin — this can cause burns on numb skin."
+      ],
+      "emergency": "Call 911 or seek emergency care immediately if the person is confused, drowsy, unconscious, or if their temperature continues to drop. Infants, older adults, and people with medical conditions are at higher risk.",
+      "disclaimer": "This information is not a substitute for professional medical advice. In emergencies, call 911 immediately."
+    },
+    "weather": {
+      "title": "93°F as Weather: Heat Index and Safety",
+      "intro": "93°F (33.9°C) is a hot summer day, about 7°F above the upper limit of human thermal comfort (approximately 86°F / 30°C). The actual danger depends heavily on humidity — the NOAA Heat Index shows how hot it really feels when moisture in the air is factored in.",
+      "heatIndexTable": {
+        "title": "NOAA Heat Index at 93°F by Humidity",
+        "headers": {
+          "humidity": "Relative Humidity",
+          "feelsLikeF": "Feels Like (°F)",
+          "feelsLikeC": "Feels Like (°C)",
+          "riskLevel": "NOAA Risk Level"
+        },
+        "rows": [
+          { "humidity": "40%", "feelsLikeF": "96°F", "feelsLikeC": "35.6°C", "riskLevel": "Extreme Caution" },
+          { "humidity": "50%", "feelsLikeF": "101°F", "feelsLikeC": "38.3°C", "riskLevel": "Extreme Caution" },
+          { "humidity": "60%", "feelsLikeF": "107°F", "feelsLikeC": "41.7°C", "riskLevel": "Danger" },
+          { "humidity": "70%", "feelsLikeF": "116°F", "feelsLikeC": "46.7°C", "riskLevel": "Danger" }
+        ],
+        "note": "At 60% humidity, 93°F feels like 107°F — entering NOAA's Danger zone where heat exhaustion is likely and heat stroke is possible with prolonged exposure. Source: NOAA National Weather Service Heat Index Chart."
+      },
+      "safetyTips": [
+        "Drink water every 20 minutes during outdoor activity — do not wait until thirsty.",
+        "Avoid strenuous activity between 10 AM and 4 PM when heat peaks.",
+        "The DOE recommends setting AC to 78°F; raising the temperature by 7-10°F can save up to 10% on cooling costs.",
+        "Never leave children or pets in a parked car — interior temperatures can exceed 120°F within 30 minutes."
+      ]
+    },
+    "comparisonTable": {
+      "title": "Body Temperature Comparison Chart",
+      "headers": {
+        "reading": "Reading",
+        "celsius": "°C",
+        "meaning": "Meaning"
+      },
+      "rows": [
+        { "reading": "95°F", "celsius": "35.0°C", "meaning": "Hypothermia threshold (CDC)" },
+        { "reading": "93°F", "celsius": "33.9°C", "meaning": "Mild hypothermia (this page)" },
+        { "reading": "97°F", "celsius": "36.1°C", "meaning": "Normal body temp (low end)" },
+        { "reading": "98.6°F", "celsius": "37.0°C", "meaning": "Normal body temp (average)" },
+        { "reading": "100.4°F", "celsius": "38.0°C", "meaning": "Fever threshold" },
+        { "reading": "104°F", "celsius": "40.0°C", "meaning": "High fever — seek care" }
+      ]
+    },
+    "formula": {
+      "title": "Conversion Formula: 93°F to Celsius",
+      "intro": "The formula to convert Fahrenheit to Celsius is:",
+      "formula": "°C = (°F − 32) × 5/9",
+      "steps": [
+        { "step": "Step 1: Subtract 32", "calculation": "93 − 32 = 61" },
+        { "step": "Step 2: Multiply by 5", "calculation": "61 × 5 = 305" },
+        { "step": "Step 3: Divide by 9", "calculation": "305 ÷ 9 = 33.9°C" }
+      ],
+      "shortcut": "Quick estimate: (93 − 30) ÷ 2 = 31.5°C. This shortcut is off by 2.4°C from the exact 33.9°C, so use it only for rough mental math."
+    }
+  },
+  "faq": [
+    {
+      "question": "Is 93°F the same as 34°C?",
+      "answer": "No. 93°F equals 33.9°C, not exactly 34°C. The 0.1°C difference is small but matters in medical contexts where precision is important. The exact calculation is (93 − 32) × 5/9 = 33.89°C. Always use a calibrated thermometer for body temperature readings rather than rounding."
+    },
+    {
+      "question": "Can 93°F weather cause heat stroke?",
+      "answer": "Yes. At 93°F with 60% humidity, the NOAA Heat Index reaches 107°F, which is in the Danger zone. Heat exhaustion is likely and heat stroke is possible with prolonged exposure or physical activity. Drink water every 20 minutes and seek air conditioning."
+    },
+    {
+      "question": "What should I set my AC to when it's 93°F outside?",
+      "answer": "The U.S. Department of Energy recommends setting your AC to 78°F when home. Raising the temperature by 7-10°F above your normal setting can save up to 10% on cooling costs. Avoid setting the AC below 72°F, as the extreme difference overworks the compressor."
+    }
+  ]
+}
