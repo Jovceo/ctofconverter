@@ -1,0 +1,98 @@
+{
+  "page": {
+    "metaTitle": "375°F to Celsius (190.6°C) - Baking Guide",
+    "metaDescription": "375°F = 190.6°C (Gas Mark 5). Baking times for pies, casseroles, fish and scones, plus fan and air fryer conversions.",
+    "headerTitle": "375°F to Celsius (190.6°C)",
+    "tagline": "Convert 375 degrees Fahrenheit to Celsius, find what to bake at 375°F with times for pies, casseroles, fish and scones, and compare fan oven and air fryer settings.",
+    "resultHeader": "375 Degrees Fahrenheit to Celsius Conversion",
+    "customIntro": "<strong>375 degrees Fahrenheit equals 190.6 degrees Celsius (about 190°C)</strong>, calculated as (375 − 32) × 5/9 = 190.6°C. In recipes this is rounded to <strong>190°C</strong> and corresponds to <strong>Gas Mark 5</strong>. It is a common baking and roasting temperature for fruit pies, casseroles, fish fillets, and scones, because it browns the surface while cooking food through."
+  },
+  "sections": {
+    "why375": {
+      "title": "Why 375°F Is a Common Baking Temperature",
+      "paragraph1": "375°F (190.6°C) sits between the gentle 350°F (177°C) used for cakes and delicate cookies and the high 400°F (204°C) used for pizza and roasted vegetables. At this middle temperature, the Maillard browning reaction colors the surface golden before the interior overcooks, which makes it ideal for foods that need a browned crust but a moist center.",
+      "paragraph2": "American recipes default to 375°F for fruit pies, casseroles, fish fillets, and scones. Above 400°F these foods can burn outside while staying raw inside; below 350°F they brown too slowly and can turn dry. 375°F is the balance point most home ovens reach reliably."
+    },
+    "bakingFoods": {
+      "title": "What to Bake at 375°F (190.6°C)",
+      "intro": "Typical cooking times for a preheated conventional oven at 375°F. Times vary by pan size, so always check doneness with a thermometer or skewer.",
+      "headers": {
+        "food": "Food",
+        "celsius": "°C",
+        "time": "Approximate Time",
+        "note": "Note"
+      },
+      "rows": [
+        { "food": "Fruit pie (apple, cherry)", "celsius": "190°C", "time": "45-55 min", "note": "Start at 425°F for 10-15 min, then drop to 375°F to set the filling without burning the crust." },
+        { "food": "Casserole / lasagna", "celsius": "190°C", "time": "30-45 min", "note": "Bake until edges bubble and top is golden." },
+        { "food": "Chewy cookies", "celsius": "190°C", "time": "10-12 min", "note": "Pull when edges are set; centers continue baking on the tray." },
+        { "food": "Scones / biscuits", "celsius": "190°C", "time": "12-15 min", "note": "Bake until tall and golden brown on top and sides." },
+        { "food": "Fish fillets (salmon, cod)", "celsius": "190°C", "time": "12-15 min", "note": "USDA recommends fish reach an internal temperature of 145°F (63°C)." },
+        { "food": "Breaded chicken / tenders", "celsius": "190°C", "time": "20-25 min", "note": "Internal temperature must reach 165°F (74°C) — Source: USDA." },
+        { "food": "Roasted vegetables (carrots, potatoes)", "celsius": "190°C", "time": "25-35 min", "note": "Slower than 400°F but more even; toss halfway through." },
+        { "food": "Granola", "celsius": "190°C", "time": "25-30 min", "note": "Stir every 10 minutes to brown evenly." }
+      ],
+      "source": "Baking references from King Arthur Baking. Internal temperatures from USDA Food Safety and Inspection Service."
+    },
+    "ovenTypes": {
+      "title": "375°F Across Oven Types",
+      "intro": "The same 375°F recipe translates differently depending on your oven.",
+      "headers": {
+        "ovenType": "Oven Type",
+        "equivalent": "Equivalent",
+        "note": "Note"
+      },
+      "rows": [
+        { "ovenType": "Conventional", "equivalent": "375°F / 190°C", "note": "Standard US oven setting." },
+        { "ovenType": "Fan / Convection", "equivalent": "355°F / 171°C", "note": "Reduce by 20°C and shorten time by 10-15%. Some recipes round this to 350°F." },
+        { "ovenType": "Air Fryer", "equivalent": "355°F / 171°C", "note": "Reduce by 20°C and check doneness about 20% earlier than the recipe states." },
+        { "ovenType": "Gas Mark", "equivalent": "5", "note": "190°C = Gas Mark 5 in UK gas ovens." }
+      ]
+    },
+    "tempCompare": {
+      "title": "375°F vs Nearby Oven Temperatures",
+      "intro": "Where 375°F sits in the baking temperature range.",
+      "headers": {
+        "temp": "Temperature",
+        "celsius": "°C",
+        "gasMark": "Gas Mark",
+        "typical": "Typical Use"
+      },
+      "rows": [
+        { "temp": "350°F", "celsius": "177°C", "gasMark": "4", "typical": "Cookies, cakes, roast chicken" },
+        { "temp": "375°F", "celsius": "190.6°C", "gasMark": "5", "typical": "Pies, casseroles, fish, scones" },
+        { "temp": "400°F", "celsius": "204°C", "gasMark": "6", "typical": "Pizza, roasted vegetables, broiling" },
+        { "temp": "425°F", "celsius": "218°C", "gasMark": "7", "typical": "Initial pie crust shock, high-heat roasting" }
+      ]
+    },
+    "formula": {
+      "title": "Conversion Formula: 375°F to Celsius",
+      "intro": "The formula to convert Fahrenheit to Celsius is:",
+      "formula": "°C = (°F − 32) × 5/9",
+      "steps": [
+        { "step": "Step 1: Subtract 32", "calculation": "375 − 32 = 343" },
+        { "step": "Step 2: Multiply by 5", "calculation": "343 × 5 = 1715" },
+        { "step": "Step 3: Divide by 9", "calculation": "1715 ÷ 9 = 190.6°C" }
+      ],
+      "note": "Quick estimate: (375 − 30) ÷ 2 = 172.5°C — off by about 18°C, so do not use this shortcut for oven temperatures. Oven settings should be precise."
+    }
+  },
+  "faq": [
+    {
+      "question": "Is 375°F the same as 190°C or 191°C?",
+      "answer": "375°F converts to exactly 190.56°C. Most ovens display 190°C, and some recipes round up to 191°C. Either setting will produce the same result, since the 1°C difference is within normal oven fluctuation."
+    },
+    {
+      "question": "Do I need to adjust cooking time in a fan oven at 375°F?",
+      "answer": "Yes. Set a fan or convection oven to about 355°F (171°C) and shorten the cooking time by 10-15%. Fan ovens circulate hot air faster, so food cooks more quickly — check doneness 2-3 minutes before the recipe's stated time."
+    },
+    {
+      "question": "Can I bake bread at 375°F?",
+      "answer": "375°F works for soft sandwich loaves and rolls, which bake in 25-30 minutes. Crusty artisan and sourdough bread needs a hotter oven (425°F and up) to spring and form a hard crust, so save 375°F for tender baked goods."
+    },
+    {
+      "question": "What is the difference between 350°F and 375°F for baking?",
+      "answer": "350°F (177°C) is gentler, giving cakes and cookies time to rise and set without over-browning. 375°F (190°C) browns faster, which suits pies, casseroles, fish, and scones that benefit from a golden crust. Using 375°F for a cake recipe often over-browns the outside before the center sets."
+    }
+  ]
+}

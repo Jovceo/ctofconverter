@@ -41,6 +41,7 @@ const QUALITY_PAGE_INFO: Record<string, { title: string; description: string; co
     'oven-to-air-fryer': { title: 'Oven to Air Fryer', description: 'Convert recipes with temperature & time adjustments', color: '#ea580c' },
     '180-c-to-f': { title: '180°C to Fahrenheit (356°F)', description: 'Baking guide with times, USDA temperatures & troubleshooting', color: '#16a34a' },
     '93-f-to-c': { title: '93°F to Celsius (33.9°C)', description: 'Body temperature hypothermia guide & NOAA heat index', color: '#dc2626' },
+    '375-f-to-c': { title: '375°F to Celsius (190.6°C)', description: 'Baking times for pies, casseroles, fish & scones', color: '#7c3aed' },
 };
 
 export default function Home({ locale, commonMessages, homeMessages, qualityGuides = [], lastUpdatedIso }: HomeProps) {

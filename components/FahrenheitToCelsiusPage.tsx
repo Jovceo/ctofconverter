@@ -23,6 +23,7 @@ export interface FahrenheitToCelsiusPageProps {
   faq: Array<{ question: string; answer: string }>;
   howToSteps?: Array<{ name: string; text: string }>;
   howToName?: string;
+  customDisclaimer?: string;
 }
 
 // F->C Converter Component
@@ -153,6 +154,7 @@ export const FahrenheitToCelsiusPage: React.FC<FahrenheitToCelsiusPageProps> = (
   faq,
   howToSteps,
   howToName,
+  customDisclaimer,
 }) => {
   const celsius = useMemo(() => fahrenheitToCelsius(fahrenheit), [fahrenheit]);
   const formattedCelsius = useMemo(() => formatTemperature(celsius, 1), [celsius]);
@@ -294,7 +296,7 @@ export const FahrenheitToCelsiusPage: React.FC<FahrenheitToCelsiusPageProps> = (
             {/* Editorial note */}
             <section className={pageStyles.box}>
               <p className={pageStyles.sectionText}>
-                <em>Last updated: {new Date(isoDate).toLocaleDateString('en', { year: 'numeric', month: 'long', day: 'numeric' })}. This page is for informational purposes only and is not a substitute for professional medical advice. In emergencies, call 911 immediately.</em>
+                <em>Last updated: {new Date(isoDate).toLocaleDateString('en', { year: 'numeric', month: 'long', day: 'numeric' })}. {customDisclaimer ?? 'This page is for informational purposes only and is not a substitute for professional medical advice. In emergencies, call 911 immediately.'}</em>
               </p>
             </section>
           </div>
