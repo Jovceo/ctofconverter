@@ -43,8 +43,8 @@ const FAQ_SCHEMA = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How do I convert a conventional oven recipe to air fryer?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Reduce the temperature by 20°C (or 36°F). For example, if a recipe says 200°C/400°F in a conventional oven, set your air fryer to 180°C/350°F. Also reduce cooking time by about 20-25%.' }
+      name: 'Can I use aluminum foil or parchment paper in an air fryer?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes, both work if used correctly. Aluminum foil is fine for trapping moisture or easy cleanup — weigh it down so the fan cannot blow it onto the heating element, and never cover the basket holes. Parchment paper liners with holes let air circulate for crispy results. Avoid foil with acidic foods like tomatoes, which can react with the metal.' }
     },
     {
       '@type': 'Question',
@@ -190,7 +190,7 @@ export default function OvenToAirFryer() {
           <h2>Frequently Asked Questions</h2>
 
           {[
-            { q: 'How do I convert a conventional oven recipe to air fryer?', a: 'Reduce the temperature by 20°C (or 36°F) and reduce cooking time by about 20-25%. For example, 200°C/400°F for 30 minutes in a conventional oven becomes 180°C/350°F for 20-22 minutes in an air fryer.' },
+            { q: 'Can I use aluminum foil or parchment paper in an air fryer?', a: 'Yes, both work if used correctly. Aluminum foil is fine for trapping moisture or easy cleanup — weigh it down so the fan cannot blow it onto the heating element, and never cover the basket holes. Parchment paper liners with holes let air circulate for crispy results. Avoid foil with acidic foods like tomatoes, which can react with the metal.' },
             { q: 'Can I bake in an air fryer?', a: 'Yes, air fryers work well for small-batch baking. Muffins, cookies, and small cakes bake well at 160°C (fan equivalent) with about 5 minutes less time than a conventional oven recipe calls for.' },
             { q: 'Do I need to preheat an air fryer?', a: 'Most air fryers reach temperature in 3-5 minutes. Preheating is recommended for best results but is not essential for longer cooks (over 15 minutes).' },
             { q: 'Why does air fryer food cook faster than oven food?', a: 'Air fryers are smaller and circulate hot air more intensely than full-size ovens. The concentrated heat cooks food faster, which is why both temperature and time reductions are needed.' },

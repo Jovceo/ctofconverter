@@ -62,13 +62,13 @@ const FAQ_SCHEMA = {
     },
     {
       '@type': 'Question',
-      name: 'How do I convert oven temperature for an air fryer?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Set your air fryer 20°C lower than a conventional oven recipe calls for. If a recipe says 200°C in a conventional oven, use 180°C in the air fryer.' }
+      name: 'What does "cool", "moderate", or "hot" oven mean in recipes?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Old recipes use words instead of numbers: a cool oven is about 120°C (250°F), slow is 140-150°C (285-300°F), moderate is 160-180°C (325-350°F), hot is 200-220°C (400-425°F), and very hot is 230-260°C (450-500°F). The "moderate oven" most recipes refer to is 180°C, roughly 350°F.' }
     },
     {
       '@type': 'Question',
-      name: 'What is the difference between a fan oven and a conventional oven?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A fan oven (also called convection oven) uses a fan to circulate hot air, cooking food faster and more evenly. Temperatures should be reduced by 20°C compared to conventional oven recipes.' }
+      name: 'How long should I preheat my oven before baking?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Preheat for 15-20 minutes for most baking and roasting. The oven light turning off means it has reached the set temperature. High-heat baking like pizza needs 20-30 minutes so the oven fully stabilizes. A cold oven can cause cakes to sink, so wait until preheating finishes before putting food in.' }
     },
   ],
 };
@@ -260,8 +260,8 @@ export default function OvenTemperatureConversion() {
             { q: 'What is 180°C in Fahrenheit for baking?', a: '180°C (conventional) equals 356°F. This is the most common baking temperature and translates to Gas Mark 4 or 160°C in a fan oven.' },
             { q: 'How do I convert a fan oven temperature to a conventional oven?', a: 'Add 20°C to the fan oven temperature to get the conventional oven equivalent. For example, a fan oven at 160°C is 180°C in a conventional oven.' },
             { q: 'What gas mark is 200°C?', a: '200°C is Gas Mark 6. At 200°C, a fan oven should be set to 180°C and an air fryer to 180°C.' },
-            { q: 'How do I convert oven temperature for an air fryer?', a: 'Set your air fryer 20°C lower than a conventional oven recipe calls for. If a recipe says 200°C in a conventional oven, use 180°C in the air fryer.' },
-            { q: 'What is the difference between a fan oven and a conventional oven?', a: 'A fan oven (convection oven) uses a fan to circulate hot air, cooking food faster and more evenly. Temperatures should be reduced by 20°C compared to conventional oven recipes.' },
+            { q: 'What does "cool", "moderate", or "hot" oven mean in recipes?', a: 'Old recipes use words instead of numbers: a cool oven is about 120°C (250°F), slow is 140-150°C (285-300°F), moderate is 160-180°C (325-350°F), hot is 200-220°C (400-425°F), and very hot is 230-260°C (450-500°F). The "moderate oven" most recipes refer to is 180°C, roughly 350°F.' },
+            { q: 'How long should I preheat my oven before baking?', a: 'Preheat for 15-20 minutes for most baking and roasting. The oven light turning off means it has reached the set temperature. High-heat baking like pizza needs 20-30 minutes so the oven fully stabilizes. A cold oven can cause cakes to sink, so wait until preheating finishes before putting food in.' },
           ].map((faq, i) => (
             <div key={i} className={styles.faqItem}>
               <button

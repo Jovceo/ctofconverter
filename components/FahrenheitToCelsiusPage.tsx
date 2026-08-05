@@ -126,7 +126,6 @@ const FAQAccordion: React.FC<{ faqs: Array<{ question: string; answer: string }>
             <div
               className={`faq-answer${expandedIndex === index ? ' faq-answer-visible' : ''}`}
               role="region"
-              aria-hidden={expandedIndex !== index}
             >
               {faq.answer}
             </div>

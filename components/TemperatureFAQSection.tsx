@@ -75,7 +75,6 @@ export default function TemperatureFAQSection({ faqs = [], className = '' }: Tem
             <div
               id={`faq-answer-${index}`}
               className="faq-answer"
-              aria-hidden={expandedIndex !== index}
             >
               <p>{faq.answer}</p>
             </div>
