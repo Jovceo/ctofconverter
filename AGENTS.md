@@ -159,6 +159,19 @@ AI 搜索引擎（Google AI Overviews、ChatGPT、Perplexity）与传统 SEO 的
 - ❌ 批量创建页面 — 每个页面必须有手写独特内容
 - ❌ 改变已收录页面的 URL 路径 — 会丢失已有排名和反向链接
 
+## 收录打通后待办（触发条件：5 个精做页进 Google 索引）
+
+以下任务在收录确认打通后执行。收录打通前做 = 过早优化，收录没打通可能要换策略，白费。
+
+### FAQ 渲染机制升级（方案 B）
+- **触发条件**：GSC 显示精做页已进索引，且开始有 AI 引擎（Perplexity/ChatGPT）引用站内内容
+- **现状**：两套 FAQ 组件用不同隐藏机制
+  - `FahrenheitToCelsiusPage` + `TemperatureFAQSection`：`.faq-answer { display: none }`（globals.css）— AI 爬虫可能拿不到 HTML 文本
+  - `oven-temperature-conversion` / `oven-to-air-fryer`：`.faqAnswer { max-height: 0 }`（module.css）— AI 爬虫能拿到（文本在 DOM）
+- **改动**：把 `globals.css` 的 `.faq-answer { display: none }` 改成 `max-height: 0` + `overflow: hidden` 方案，让两套组件统一
+- **不改**：`<details>` 原生标签方案（理论上最优但重构量大，ROI 不确定）
+- **为什么现在不做**：JSON-LD schema 已独立输出 FAQ 内容，Google 和 AI 引擎主要从 JSON-LD 拿数据，不依赖 HTML 折叠状态。收录瓶颈解决前优化 HTML 可见性是过早优化
+
 ## 维护
 - 定期检查 Google Search Console 收录状态
 - 根据收录数据调整内容策略

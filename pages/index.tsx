@@ -142,6 +142,8 @@ export default function Home({ locale, commonMessages, homeMessages, qualityGuid
                 <meta name="robots" content="index, follow" />
 
                 <link rel="canonical" href={homepageUrl} />
+                <link rel="alternate" hrefLang="en" href={homepageUrl} />
+                <link rel="alternate" hrefLang="x-default" href={homepageUrl} />
 
                 <meta property="og:title" content={t('meta.ogTitle')} />
                 <meta property="og:description" content={t('meta.ogDescription')} />
