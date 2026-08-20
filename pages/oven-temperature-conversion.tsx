@@ -76,8 +76,8 @@ const FAQ_SCHEMA = {
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Oven Temperature Conversion Guide — °C to °F, Gas Mark, Fan & Air Fryer',
-  description: 'Convert oven temperatures between Celsius, Fahrenheit, Gas Mark, fan oven, and air fryer. Interactive tool with conversion chart and cooking tips.',
+  name: 'Oven Temperature Conversion: °C to °F, Gas Mark & Fan',
+  description: 'Convert oven temperatures: °C, °F, Gas Mark, fan, and air fryer. Interactive calculator with quick-reference chart.',
   url: CANONICAL_URL,
   inLanguage: 'en',
   datePublished: '2026-06-29',
@@ -102,10 +102,10 @@ export default function OvenTemperatureConversion() {
 
   return (
     <Layout seo={{
-      title: 'Oven Temperature Conversion Guide — °C to °F, Gas Mark, Fan & Air Fryer',
-      description: 'Convert oven temperatures between Celsius, Fahrenheit, Gas Mark, fan oven, and air fryer. Interactive calculator with quick-reference chart for 120°C to 260°C.',
+      title: 'Oven Temperature Conversion: °C to °F, Gas Mark & Fan',
+      description: 'Convert oven temperatures: °C, °F, Gas Mark, fan, and air fryer. Interactive calculator with quick-reference chart.',
       canonical: CANONICAL_URL,
-      ogTitle: 'Oven Temperature Conversion Guide — °C to °F, Gas Mark, Fan & Air Fryer',
+      ogTitle: 'Oven Temperature Conversion: °C to °F, Gas Mark & Fan',
       ogDescription: 'Interactive oven temperature converter with quick-reference chart. Convert between conventional °C, °F, Gas Mark, fan oven, and air fryer temperatures.',
       alternates: [{ hreflang: 'en', href: CANONICAL_URL, locale: 'en' }, { hreflang: 'x-default', href: CANONICAL_URL }],
     }}>
@@ -124,7 +124,7 @@ export default function OvenTemperatureConversion() {
           <span>Oven Temperature Conversion Guide</span>
         </nav>
 
-        <h1>Oven Temperature Conversion Guide — °C to °F, Gas Mark, Fan &amp; Air Fryer</h1>
+        <h1>Oven Temperature Conversion: °C to °F, Gas Mark &amp; Fan</h1>
 
         <div className={styles.answerCapsule}>
           <strong>Answer:</strong> Convert oven temperatures between Celsius (°C), Fahrenheit (°F), Gas Mark, fan ovens, and air fryers using the interactive calculator. See the quick-reference chart for common baking and roasting temperatures from 120°C to 260°C.
