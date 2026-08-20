@@ -6,12 +6,11 @@ const INDEXNOW_KEY = 'a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6';
 const SITE_URL = 'https://ctofconverter.com';
 const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
 
-// Files that trigger full sitemap resubmission
-const FULL_RESUBMIT_FILES = [
-  'config/migrated-routes.json',
-  'next.config.js',
-  'scripts/generate-sitemap.js',
-];
+// Full resubmission is DISABLED by policy (2026-08-20): every deploy full-pushing
+// the sitemap triggered Bing sitewide re-crawls, and the 2026-08-08 serving
+// suppression followed one such wave. Config changes map to no URLs; submit the
+// affected pages explicitly instead.
+const FULL_RESUBMIT_FILES = [];
 
 function getChangedFiles() {
   try {
@@ -35,12 +34,13 @@ function getChangedFiles() {
         }).trim();
         return output ? output.split('\n').filter(Boolean) : [];
       } catch (e2) {
-        console.log('⚠️ Could not detect changed files, submitting full sitemap.');
-        return null; // null = submit all
+        // Detection failed: submit NOTHING. Never fall back to full sitemap (2026-08-20 policy).
+        console.log('⚠️ Could not detect changed files, skipping IndexNow (no full fallback).');
+        return [];
       }
     }
-    console.log('⚠️ Could not detect changed files, submitting full sitemap.');
-    return null;
+    console.log('⚠️ Could not detect changed files, skipping IndexNow (no full fallback).');
+    return [];
   }
 }
 
