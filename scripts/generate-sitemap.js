@@ -112,7 +112,7 @@ function escapeXml(str) {
 }
 
 function buildUrl(pageSlug) {
-    return pageSlug ? `${SITE_URL}/${pageSlug}` : SITE_URL;
+    return pageSlug ? `${SITE_URL}/${pageSlug}` : `${SITE_URL}/`;
 }
 
 /**

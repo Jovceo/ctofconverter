@@ -64,7 +64,7 @@ function mapFilesToUrls(files) {
       if (['_app', '_document', '_error', '404'].includes(slug)) continue;
       if (slug.startsWith('api/')) continue;
 
-      const url = slug === 'index' ? SITE_URL : `${SITE_URL}/${slug}`;
+      const url = slug === 'index' ? `${SITE_URL}/` : `${SITE_URL}/${slug}`;
       urls.add(url);
     }
 
@@ -74,7 +74,7 @@ function mapFilesToUrls(files) {
         .replace('locales/en/', '')
         .replace('.json', '');
 
-      const url = slug === 'home' ? SITE_URL : `${SITE_URL}/${slug}`;
+      const url = slug === 'home' ? `${SITE_URL}/` : `${SITE_URL}/${slug}`;
       urls.add(url);
     }
   }

@@ -3,7 +3,7 @@
 - 页面 URL 统一不带尾部斜杠（如 `/180-c-to-f`、`/fan-oven-conversion-chart`）
 - 精做现有页面时保持 URL 不变，不改变已收录页面的路径
 - 新建页面放在 `pages/` 下，与现有页面同级
-- 移动端标题/描述字数限制：metaTitle ≤55 字符，metaDescription ≤120 字符，headerTitle ≤55 字符
+- 移动端标题/描述字数限制：metaTitle ≤55 字符，metaDescription ≤120 字符，headerTitle ≤55 字符（移动端展示与编辑的推荐目标，不是搜索引擎的绝对硬限制；优先保证标题/描述唯一、准确、自然和符合搜索意图，不得为了压缩字符而删掉关键语义。metaDescription 可能被搜索引擎动态改写；headerTitle 以移动端可读性和布局不溢出为准。）
 
 ## 做新页面之前
 1. 先做关键词调研 — 在谷歌 SERP 确认有真实搜索量、且竞争可打
