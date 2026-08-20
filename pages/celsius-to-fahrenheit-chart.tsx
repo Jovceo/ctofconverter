@@ -32,6 +32,10 @@ export default function TemperatureChartPage({ lastUpdatedIso, temperatureData, 
             seo={{
                 title: t.seo_title,
                 description: t.seo_description,
+                alternates: [
+                    { href: 'https://ctofconverter.com/celsius-to-fahrenheit-chart', hreflang: 'x-default' },
+                    { href: 'https://ctofconverter.com/celsius-to-fahrenheit-chart', hreflang: 'en' },
+                ],
             }}
         >
             <script

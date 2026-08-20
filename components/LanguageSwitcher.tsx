@@ -110,7 +110,8 @@ export default function LanguageSwitcher() {
   }, [alternateLinks, asPath, currentLocale]);
 
   // 早返回必须放在所有 hook 之后：alternateLinks 从空变非空时否则 hook 数量会变
-  if (!hasAlternateLanguages) return null;
+  // 英语页面不显示语言切换器（英语优先策略）；/zh/ 等语言版保留切换器可切回英语
+  if (currentLocale === 'en' || !hasAlternateLanguages) return null;
 
   const currentLocaleLabel =
     LOCALES.find((lang) => lang.code === currentLocale)?.label || currentLocale;

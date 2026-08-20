@@ -234,6 +234,7 @@ export default function Temperature200C({
       celsius={CELSIUS}
       strategy={strategy}
       canonicalUrl={canonicalUrl}
+      alternateLocales={['en']}
       lastUpdated={lastUpdatedIso}
       availablePages={availablePages}
       customMetaTitle={pageT.page.metaTitle}

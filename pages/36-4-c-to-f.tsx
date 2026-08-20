@@ -350,8 +350,9 @@ export default function Temperature36_4C({ lastUpdatedIso, pageTrans, availableP
             celsius={celsius}
             strategy={strategy}
             customNamespace="36-4-c-to-f"
-            lastUpdated={lastUpdatedIso}
             canonicalUrl={canonicalUrl}
+            alternateLocales={['en']}
+            lastUpdated={lastUpdatedIso}
             customMetaTitle={customMetaTitle}
             customMetaDescription={customMetaDescription}
             customHeaderTitle={customHeaderTitle}
