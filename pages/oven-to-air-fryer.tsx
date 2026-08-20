@@ -68,7 +68,7 @@ const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'Oven to Air Fryer Conversion (°C, °F & Time Chart)',
-  description: 'Convert oven temperatures to air fryer settings. Interactive converter with cooking chart for chicken, vegetables, fries, and steak.',
+  description: 'Convert oven temperatures to air fryer settings with an interactive chart for chicken, vegetables, fries, and steak.',
   url: CANONICAL_URL,
   inLanguage: 'en',
   datePublished: '2026-06-29',
@@ -94,7 +94,7 @@ export default function OvenToAirFryer() {
   return (
     <Layout seo={{
       title: 'Oven to Air Fryer Conversion (°C, °F & Time Chart)',
-      description: 'Convert oven temperatures to air fryer settings. Interactive converter with cooking chart for chicken, vegetables, fries, and steak.',
+      description: 'Convert oven temperatures to air fryer settings with an interactive chart for chicken, vegetables, fries, and steak.',
       canonical: CANONICAL_URL,
       ogTitle: 'Oven to Air Fryer Conversion (°C, °F & Time Chart)',
       ogDescription: 'Convert oven recipes to air fryer settings. Interactive temperature converter with cooking time chart.',
