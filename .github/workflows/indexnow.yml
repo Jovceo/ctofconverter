@@ -1,15 +1,19 @@
 name: IndexNow Submit
 
+# 2026-08-20 起 push 触发已停用（Bing 8-8 压制的触发机制：每次 push 全量/批量提交
+# 引发整站重评）。仅手动触发（Actions 页面 Run workflow）。恢复期用手动单 URL 提交
+# （scripts/manual-indexnow.js 或 Bing WMT）；站点质量重建完成后再评估恢复 push 触发。
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
 
 jobs:
   indexnow:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout code (full history for incremental diff)
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Wait for Vercel deployment
         run: sleep 120
