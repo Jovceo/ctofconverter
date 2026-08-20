@@ -1,0 +1,159 @@
+source_file,url,page_type,has_next_route,legacy_html,sitemap_repo,production_http,canonical_decision,action,priority
+pages/index.tsx,/,Next.js page,yes,no,yes,not individually tested,review,keep/inspect,P1
+pages/0-c-to-f.tsx,/0-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/1-c-to-f.tsx,/1-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/10-c-to-f.tsx,/10-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/100-c-to-f.tsx,/100-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/12-c-to-f.tsx,/12-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/13-c-to-f.tsx,/13-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/14-c-to-f.tsx,/14-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/15-c-to-f.tsx,/15-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/16-c-to-f.tsx,/16-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/160-c-to-f.tsx,/160-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/17-c-to-f.tsx,/17-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/18-c-to-f.tsx,/18-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/180-c-to-f.tsx,/180-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/19-c-to-f.tsx,/19-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/20-c-to-f.tsx,/20-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/200-c-to-f.tsx,/200-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/21-c-to-f.tsx,/21-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/22-c-to-f.tsx,/22-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/23-c-to-f.tsx,/23-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/24-c-to-f.tsx,/24-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/25-c-to-f.tsx,/25-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/26-c-to-f.tsx,/26-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/27-c-to-f.tsx,/27-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/28-c-to-f.tsx,/28-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/29-c-to-f.tsx,/29-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/30-c-to-f.tsx,/30-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/31-c-to-f.tsx,/31-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/32-c-to-f.tsx,/32-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/33-c-to-f.tsx,/33-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/34-c-to-f.tsx,/34-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/35-c-to-f.tsx,/35-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/36-1-c-to-f.tsx,/36-1-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/36-3-c-to-f.tsx,/36-3-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/36-4-c-to-f.tsx,/36-4-c-to-f,Next.js page,yes,yes,yes,200,keep current Next URL; review content/schema,keep/inspect,P1
+pages/36-5-c-to-f.tsx,/36-5-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/36-6-c-to-f.tsx,/36-6-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/36-c-to-f.tsx,/36-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/37-2-c-to-f.tsx,/37-2-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/37-5-c-to-f.tsx,/37-5-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/37-c-to-f.tsx,/37-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/375-f-to-c.tsx,/375-f-to-c,Next.js page,yes,no,yes,not individually tested,review,keep/inspect,P1
+pages/38-c-to-f.tsx,/38-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/39-c-to-f.tsx,/39-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/4-c-to-f.tsx,/4-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/40-c-to-f.tsx,/40-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/41-c-to-f.tsx,/41-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/47-c-to-f.tsx,/47-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/75-c-to-f.tsx,/75-c-to-f,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/93-f-to-c.tsx,/93-f-to-c,Next.js page,yes,no,yes,not individually tested,review,keep/inspect,P1
+pages/about-us.tsx,/about-us,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/body-temperature-chart-fever-guide.tsx,/body-temperature-chart-fever-guide,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/c-to-f-calculator.tsx,/c-to-f-calculator,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/c-to-f-formula.tsx,/c-to-f-formula,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/celsius-to-fahrenheit-chart.tsx,/celsius-to-fahrenheit-chart,Next.js page,yes,yes,yes,200,keep and strengthen chart/PDF asset,keep/inspect,P1
+pages/fahrenheit-to-celsius.tsx,/fahrenheit-to-celsius,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/fan-oven-conversion-chart.tsx,/fan-oven-conversion-chart,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/fever-temperature-chart.tsx,/fever-temperature-chart,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/oven-temperature-conversion.tsx,/oven-temperature-conversion,Next.js page,yes,no,yes,not individually tested,review,keep/inspect,P1
+pages/oven-to-air-fryer.tsx,/oven-to-air-fryer,Next.js page,yes,no,yes,not individually tested,review,keep/inspect,P1
+pages/privacy-policy.tsx,/privacy-policy,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+public/0-c-to-f.html,/public/0-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/1-c-to-f.html,/public/1-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/10-c-to-f.html,/public/10-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/100-c-to-f.html,/public/100-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/105-c-to-f.html,/public/105-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/12-c-to-f.html,/public/12-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/120-c-to-f.html,/public/120-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/13-c-to-f.html,/public/13-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/14-c-to-f.html,/public/14-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/15-c-to-f.html,/public/15-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/150-c-to-f.html,/public/150-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/16-c-to-f.html,/public/16-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/160-c-to-f.html,/public/160-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/17-c-to-f.html,/public/17-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/170-c-to-f.html,/public/170-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/175-c-to-f.html,/public/175-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/18-c-to-f.html,/public/18-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/180-c-to-f.html,/public/180-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/19-c-to-f.html,/public/19-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/190-c-to-f.html,/public/190-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/200-c-to-f.html,/public/200-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/21-c-to-f.html,/public/21-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/210-c-to-f.html,/public/210-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/22-c-to-f.html,/public/22-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/220-c-to-f.html,/public/220-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/23-c-to-f.html,/public/23-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/230-c-to-f.html,/public/230-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/24-c-to-f.html,/public/24-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/25-c-to-f.html,/public/25-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/250-c-to-f.html,/public/250-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/26-c-to-f.html,/public/26-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/27-c-to-f.html,/public/27-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/28-c-to-f.html,/public/28-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/29-c-to-f.html,/public/29-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/30-c-to-f.html,/public/30-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/31-c-to-f.html,/public/31-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/32-c-to-f.html,/public/32-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/33-c-to-f.html,/public/33-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/35-c-to-f.html,/public/35-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/36-1-c-to-f.html,/public/36-1-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/36-2-c-to-f.html,/public/36-2-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/36-3-c-to-f.html,/public/36-3-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/36-4-c-to-f.html,/public/36-4-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/36-5-c-to-f.html,/public/36-5-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/36-6-c-to-f.html,/public/36-6-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/36-7-c-to-f.html,/public/36-7-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/36-8-c-to-f.html,/public/36-8-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/36-9-c-to-f.html,/public/36-9-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/36-c-to-f.html,/public/36-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/37-1-c-to-f.html,/public/37-1-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/37-3-c-to-f.html,/public/37-3-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/37-4-c-to-f.html,/public/37-4-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/37-6-c-to-f.html,/public/37-6-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/37-7-c-to-f.html,/public/37-7-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/37-c-to-f.html,/public/37-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/38-1-c-to-f.html,/public/38-1-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/38-2-c-to-f.html,/public/38-2-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/38-4-c-to-f.html,/public/38-4-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/38-5-c-to-f.html,/public/38-5-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/38-c-to-f.html,/public/38-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/39-c-to-f.html,/public/39-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/40-c-to-f.html,/public/40-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/404.html,/public/404.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/41-c-to-f.html,/public/41-c-to-f.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/42-c-to-f.html,/public/42-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/43-c-to-f.html,/public/43-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/44-c-to-f.html,/public/44-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/45-c-to-f.html,/public/45-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/46-c-to-f.html,/public/46-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/48-c-to-f.html,/public/48-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/60-c-to-f.html,/public/60-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/73-c-to-f.html,/public/73-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/74-c-to-f.html,/public/74-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/76-c-to-f.html,/public/76-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/90-c-to-f.html,/public/90-c-to-f.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/about-us.html,/public/about-us.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/body-temperature-chart-fever-guide/index.html,/public/body-temperature-chart-fever-guide/index.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/c-to-f-calculator/index.html,/public/c-to-f-calculator/index.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/c-to-f-formula/index.html,/public/c-to-f-formula/index.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/celsius-to-fahrenheit-chart/index.html,/public/celsius-to-fahrenheit-chart/index.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/fahrenheit-to-celsius/100-f-to-c.html,/public/fahrenheit-to-celsius/100-f-to-c.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/fahrenheit-to-celsius/102-f-to-c.html,/public/fahrenheit-to-celsius/102-f-to-c.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/fahrenheit-to-celsius/103-f-to-c.html,/public/fahrenheit-to-celsius/103-f-to-c.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/fahrenheit-to-celsius/105-f-to-c.html,/public/fahrenheit-to-celsius/105-f-to-c.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/fahrenheit-to-celsius/110-f-to-c.html,/public/fahrenheit-to-celsius/110-f-to-c.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/fahrenheit-to-celsius/190-f-to-c.html,/public/fahrenheit-to-celsius/190-f-to-c.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/fahrenheit-to-celsius/36-f-to-c.html,/public/fahrenheit-to-celsius/36-f-to-c.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/fahrenheit-to-celsius/39-f-to-c.html,/public/fahrenheit-to-celsius/39-f-to-c.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/fahrenheit-to-celsius/index.html,/public/fahrenheit-to-celsius/index.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/fan-oven-conversion-chart/index.html,/public/fan-oven-conversion-chart/index.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/fever-temperature-chart/index.html,/public/fever-temperature-chart/index.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/google4cefee41ce49f67b.html,/public/google4cefee41ce49f67b.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/privacy-policy.html,/public/privacy-policy.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/terms-of-service.html,/public/terms-of-service.html,legacy static HTML,yes,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+public/yandex_d90a9227b76db4af.html,/public/yandex_d90a9227b76db4af.html,legacy static HTML,no,yes,no/unknown,not individually tested,review,preserve or migrate after URL decision,P1
+pages/temperature-conversion-challenge.tsx,/temperature-conversion-challenge,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1
+pages/terms-of-service.tsx,/terms-of-service,Next.js page,yes,yes,yes,not individually tested,review,keep/inspect,P1

@@ -1,0 +1,7230 @@
+{
+ "gsc": {
+  "range": "2025-09-03 ~ 2026-08-16",
+  "totalQueries": 14247,
+  "totalPagesWithTraffic": 357,
+  "totalClicks": 7,
+  "totalImpressions": 179532,
+  "avgCtr": 0
+ },
+ "topQueries": [
+  {
+   "key": "180 c to f",
+   "clicks": 1,
+   "imps": 533,
+   "avgPos": 64.54,
+   "ctr": 0.19
+  },
+  {
+   "key": "230c to f oven",
+   "clicks": 1,
+   "imps": 580,
+   "avgPos": 8.28,
+   "ctr": 0.17
+  },
+  {
+   "key": "26° celsius to fahrenheit",
+   "clicks": 1,
+   "imps": 11,
+   "avgPos": 40,
+   "ctr": 9.09
+  },
+  {
+   "key": "37.1",
+   "clicks": 1,
+   "imps": 2,
+   "avgPos": 83,
+   "ctr": 50
+  },
+  {
+   "key": "c to f conversion chart",
+   "clicks": 1,
+   "imps": 65,
+   "avgPos": 72.57,
+   "ctr": 1.54
+  },
+  {
+   "key": "celsius to fahrenheit chart pdf",
+   "clicks": 1,
+   "imps": 94,
+   "avgPos": 58.49,
+   "ctr": 1.06
+  },
+  {
+   "key": "fahrenheit to celsius converter",
+   "clicks": 1,
+   "imps": 12,
+   "avgPos": 83.08,
+   "ctr": 8.33
+  },
+  {
+   "key": "\"-15c\" in f",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 39.5,
+   "ctr": 0
+  },
+  {
+   "key": "\"-20\" celsius",
+   "clicks": 0,
+   "imps": 4,
+   "avgPos": 55.5,
+   "ctr": 0
+  },
+  {
+   "key": "(0°c × 9/5) + 32 = 32°f",
+   "clicks": 0,
+   "imps": 4,
+   "avgPos": 8,
+   "ctr": 0
+  },
+  {
+   "key": "- 20 celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 70,
+   "ctr": 0
+  },
+  {
+   "key": "- 30 c to f",
+   "clicks": 0,
+   "imps": 5,
+   "avgPos": 53.4,
+   "ctr": 0
+  },
+  {
+   "key": "- 30 celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 3,
+   "avgPos": 54,
+   "ctr": 0
+  },
+  {
+   "key": "- 35 celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 52,
+   "ctr": 0
+  },
+  {
+   "key": "- 40 c to f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 64,
+   "ctr": 0
+  },
+  {
+   "key": "- 40 celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 17,
+   "avgPos": 59.35,
+   "ctr": 0
+  },
+  {
+   "key": "- 40 degrees celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 57,
+   "ctr": 0
+  },
+  {
+   "key": "- 60 celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 61,
+   "ctr": 0
+  },
+  {
+   "key": "-10 c to f",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 11,
+   "ctr": 0
+  },
+  {
+   "key": "-12°c to f",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 6,
+   "ctr": 0
+  },
+  {
+   "key": "-14°c to f",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 11,
+   "ctr": 0
+  },
+  {
+   "key": "-16°c to f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 7,
+   "ctr": 0
+  },
+  {
+   "key": "-18.c to f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 7,
+   "ctr": 0
+  },
+  {
+   "key": "-18°c in fahrenheit",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 9,
+   "ctr": 0
+  },
+  {
+   "key": "-18°c to f",
+   "clicks": 0,
+   "imps": 6,
+   "avgPos": 8.67,
+   "ctr": 0
+  },
+  {
+   "key": "-18°c to fahrenheit",
+   "clicks": 0,
+   "imps": 22,
+   "avgPos": 7.64,
+   "ctr": 0
+  },
+  {
+   "key": "-18°c to °f",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 8.5,
+   "ctr": 0
+  },
+  {
+   "key": "-18°c to °f conversion",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 5,
+   "ctr": 0
+  },
+  {
+   "key": "-1°c in f",
+   "clicks": 0,
+   "imps": 4,
+   "avgPos": 6.25,
+   "ctr": 0
+  },
+  {
+   "key": "-1°c to f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 6,
+   "ctr": 0
+  },
+  {
+   "key": "-1°c to fahrenheit",
+   "clicks": 0,
+   "imps": 4,
+   "avgPos": 6.5,
+   "ctr": 0
+  },
+  {
+   "key": "-1°c to farenheit",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 11,
+   "ctr": 0
+  },
+  {
+   "key": "-20.c to f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 13,
+   "ctr": 0
+  },
+  {
+   "key": "-20c to f",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 12,
+   "ctr": 0
+  },
+  {
+   "key": "-20°c to f",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 11.5,
+   "ctr": 0
+  },
+  {
+   "key": "-21°c to fahrenheit",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 8,
+   "ctr": 0
+  },
+  {
+   "key": "-23°c to f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 9,
+   "ctr": 0
+  },
+  {
+   "key": "-24°c in f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 7,
+   "ctr": 0
+  },
+  {
+   "key": "-25°c in f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 10,
+   "ctr": 0
+  },
+  {
+   "key": "-25°c to f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 8,
+   "ctr": 0
+  },
+  {
+   "key": "-26°c to f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 8,
+   "ctr": 0
+  },
+  {
+   "key": "-27 c to f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 78,
+   "ctr": 0
+  },
+  {
+   "key": "-27°c to f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 6,
+   "ctr": 0
+  },
+  {
+   "key": "-3 grad in fahrenheit",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 4,
+   "ctr": 0
+  },
+  {
+   "key": "-30 to f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 52,
+   "ctr": 0
+  },
+  {
+   "key": "-38°c to f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 10,
+   "ctr": 0
+  },
+  {
+   "key": "-39°c to f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 13,
+   "ctr": 0
+  },
+  {
+   "key": "-40.c to f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 11,
+   "ctr": 0
+  },
+  {
+   "key": "-40° celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 61,
+   "ctr": 0
+  },
+  {
+   "key": "-40°c in °f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 9,
+   "ctr": 0
+  },
+  {
+   "key": "-40°c to f",
+   "clicks": 0,
+   "imps": 4,
+   "avgPos": 10,
+   "ctr": 0
+  },
+  {
+   "key": "-42c in f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 9,
+   "ctr": 0
+  },
+  {
+   "key": "-48°c to f",
+   "clicks": 0,
+   "imps": 3,
+   "avgPos": 7.33,
+   "ctr": 0
+  },
+  {
+   "key": "-4°c in f",
+   "clicks": 0,
+   "imps": 5,
+   "avgPos": 9,
+   "ctr": 0
+  },
+  {
+   "key": "-4°c in °f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 11,
+   "ctr": 0
+  },
+  {
+   "key": "-4°c to f",
+   "clicks": 0,
+   "imps": 3,
+   "avgPos": 11,
+   "ctr": 0
+  },
+  {
+   "key": "-60°c in f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 6,
+   "ctr": 0
+  },
+  {
+   "key": "-60°c to f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 11,
+   "ctr": 0
+  },
+  {
+   "key": "-60°c to fahrenheit",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 8,
+   "ctr": 0
+  },
+  {
+   "key": "-60°c to fahrenheit exact conversion",
+   "clicks": 0,
+   "imps": 6,
+   "avgPos": 8.83,
+   "ctr": 0
+  },
+  {
+   "key": "0 c en fahrenheit",
+   "clicks": 0,
+   "imps": 8,
+   "avgPos": 74.13,
+   "ctr": 0
+  },
+  {
+   "key": "0 c fahrenheit",
+   "clicks": 0,
+   "imps": 9,
+   "avgPos": 70.11,
+   "ctr": 0
+  },
+  {
+   "key": "0 c in f",
+   "clicks": 0,
+   "imps": 8,
+   "avgPos": 64.25,
+   "ctr": 0
+  },
+  {
+   "key": "0 c in fahrenheit",
+   "clicks": 0,
+   "imps": 14,
+   "avgPos": 67.57,
+   "ctr": 0
+  },
+  {
+   "key": "0 c to f",
+   "clicks": 0,
+   "imps": 53,
+   "avgPos": 68.09,
+   "ctr": 0
+  },
+  {
+   "key": "0 c to fahrenheit",
+   "clicks": 0,
+   "imps": 34,
+   "avgPos": 69.09,
+   "ctr": 0
+  },
+  {
+   "key": "0 celcius berapa fahrenheit",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 7.5,
+   "ctr": 0
+  },
+  {
+   "key": "0 celcius to f",
+   "clicks": 0,
+   "imps": 5,
+   "avgPos": 75.2,
+   "ctr": 0
+  },
+  {
+   "key": "0 celcius to farenheit",
+   "clicks": 0,
+   "imps": 11,
+   "avgPos": 75.82,
+   "ctr": 0
+  },
+  {
+   "key": "0 celsius en fahrenheit",
+   "clicks": 0,
+   "imps": 4,
+   "avgPos": 72.5,
+   "ctr": 0
+  },
+  {
+   "key": "0 celsius fahrenheit",
+   "clicks": 0,
+   "imps": 7,
+   "avgPos": 66.57,
+   "ctr": 0
+  },
+  {
+   "key": "0 celsius in f",
+   "clicks": 0,
+   "imps": 3,
+   "avgPos": 74,
+   "ctr": 0
+  },
+  {
+   "key": "0 celsius in fahrenheit",
+   "clicks": 0,
+   "imps": 3,
+   "avgPos": 73,
+   "ctr": 0
+  },
+  {
+   "key": "0 celsius is what in fahrenheit",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 77.5,
+   "ctr": 0
+  },
+  {
+   "key": "0 celsius to f",
+   "clicks": 0,
+   "imps": 4,
+   "avgPos": 77,
+   "ctr": 0
+  },
+  {
+   "key": "0 celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 100,
+   "avgPos": 72.24,
+   "ctr": 0
+  },
+  {
+   "key": "0 celsius to fahrenheit chart",
+   "clicks": 0,
+   "imps": 3,
+   "avgPos": 73,
+   "ctr": 0
+  },
+  {
+   "key": "0 centigrade in fahrenheit",
+   "clicks": 0,
+   "imps": 5,
+   "avgPos": 82.6,
+   "ctr": 0
+  },
+  {
+   "key": "0 centigrade to fahrenheit",
+   "clicks": 0,
+   "imps": 19,
+   "avgPos": 74.79,
+   "ctr": 0
+  },
+  {
+   "key": "0 deg c to f",
+   "clicks": 0,
+   "imps": 6,
+   "avgPos": 73,
+   "ctr": 0
+  },
+  {
+   "key": "0 deg celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 71.5,
+   "ctr": 0
+  },
+  {
+   "key": "0 deg f",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 66,
+   "ctr": 0
+  },
+  {
+   "key": "0 deg f in c",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 92,
+   "ctr": 0
+  },
+  {
+   "key": "0 degree c to f",
+   "clicks": 0,
+   "imps": 9,
+   "avgPos": 81.67,
+   "ctr": 0
+  },
+  {
+   "key": "0 degree celsius in fahrenheit",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 68.5,
+   "ctr": 0
+  },
+  {
+   "key": "0 degree celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 11,
+   "avgPos": 72.55,
+   "ctr": 0
+  },
+  {
+   "key": "0 degree in fahrenheit",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 53,
+   "ctr": 0
+  },
+  {
+   "key": "0 degree to fahrenheit",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 67,
+   "ctr": 0
+  },
+  {
+   "key": "0 degrees c in f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 77,
+   "ctr": 0
+  },
+  {
+   "key": "0 degrees c in fahrenheit",
+   "clicks": 0,
+   "imps": 4,
+   "avgPos": 70.5,
+   "ctr": 0
+  },
+  {
+   "key": "0 degrees c to f",
+   "clicks": 0,
+   "imps": 45,
+   "avgPos": 72.96,
+   "ctr": 0
+  },
+  {
+   "key": "0 degrees c to fahrenheit",
+   "clicks": 0,
+   "imps": 6,
+   "avgPos": 72.83,
+   "ctr": 0
+  },
+  {
+   "key": "0 degrees celcius in farenheit",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 89,
+   "ctr": 0
+  },
+  {
+   "key": "0 degrees celcius to farenheit",
+   "clicks": 0,
+   "imps": 8,
+   "avgPos": 79.13,
+   "ctr": 0
+  },
+  {
+   "key": "0 degrees celsius converted to fahrenheit",
+   "clicks": 0,
+   "imps": 6,
+   "avgPos": 57,
+   "ctr": 0
+  },
+  {
+   "key": "0 degrees celsius fahrenheit",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 74.5,
+   "ctr": 0
+  },
+  {
+   "key": "0 degrees celsius in fahrenheit",
+   "clicks": 0,
+   "imps": 19,
+   "avgPos": 71.53,
+   "ctr": 0
+  },
+  {
+   "key": "0 degrees celsius is what in fahrenheit",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 54,
+   "ctr": 0
+  },
+  {
+   "key": "0 degrees celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 105,
+   "avgPos": 71.15,
+   "ctr": 0
+  },
+  {
+   "key": "0 degrees centigrade in fahrenheit",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 68.5,
+   "ctr": 0
+  }
+ ],
+ "topPages": [
+  {
+   "key": "/180-c-to-f.html",
+   "clicks": 1,
+   "imps": 10057,
+   "avgPos": 58.61,
+   "ctr": 0.01
+  },
+  {
+   "key": "/230-c-to-f.html",
+   "clicks": 1,
+   "imps": 2237,
+   "avgPos": 25.18,
+   "ctr": 0.04
+  },
+  {
+   "key": "/26-c-to-f.html",
+   "clicks": 1,
+   "imps": 3163,
+   "avgPos": 44.71,
+   "ctr": 0.03
+  },
+  {
+   "key": "/37-1-c-to-f.html",
+   "clicks": 1,
+   "imps": 159,
+   "avgPos": 40.72,
+   "ctr": 0.63
+  },
+  {
+   "key": "/celsius-to-fahrenheit-chart",
+   "clicks": 1,
+   "imps": 1896,
+   "avgPos": 69.66,
+   "ctr": 0.05
+  },
+  {
+   "key": "/downloads/celsius-to-fahrenheit-chart.pdf",
+   "clicks": 1,
+   "imps": 531,
+   "avgPos": 69.71,
+   "ctr": 0.19
+  },
+  {
+   "key": "/fahrenheit-to-celsius",
+   "clicks": 1,
+   "imps": 1892,
+   "avgPos": 86.21,
+   "ctr": 0.05
+  },
+  {
+   "key": "/15-c-to-f.html",
+   "clicks": 0,
+   "imps": 1347,
+   "avgPos": 62.09,
+   "ctr": 0
+  },
+  {
+   "key": "/20-c-to-f",
+   "clicks": 0,
+   "imps": 2590,
+   "avgPos": 65.11,
+   "ctr": 0
+  },
+  {
+   "key": "/id/0-c-to-f",
+   "clicks": 0,
+   "imps": 6,
+   "avgPos": 7.83,
+   "ctr": 0
+  },
+  {
+   "key": "/30-c-to-f.html",
+   "clicks": 0,
+   "imps": 5659,
+   "avgPos": 59.8,
+   "ctr": 0
+  },
+  {
+   "key": "/35-c-to-f.html",
+   "clicks": 0,
+   "imps": 3599,
+   "avgPos": 57.81,
+   "ctr": 0
+  },
+  {
+   "key": "/40-c-to-f.html",
+   "clicks": 0,
+   "imps": 7067,
+   "avgPos": 59.39,
+   "ctr": 0
+  },
+  {
+   "key": "/60-c-to-f.html",
+   "clicks": 0,
+   "imps": 1789,
+   "avgPos": 52.83,
+   "ctr": 0
+  },
+  {
+   "key": "/",
+   "clicks": 0,
+   "imps": 1658,
+   "avgPos": 76.86,
+   "ctr": 0
+  },
+  {
+   "key": "/12-c-to-f",
+   "clicks": 0,
+   "imps": 6,
+   "avgPos": 53,
+   "ctr": 0
+  },
+  {
+   "key": "/12-c-to-f.html",
+   "clicks": 0,
+   "imps": 53,
+   "avgPos": 50.19,
+   "ctr": 0
+  },
+  {
+   "key": "/14-c-to-f.html",
+   "clicks": 0,
+   "imps": 1594,
+   "avgPos": 47.75,
+   "ctr": 0
+  },
+  {
+   "key": "/16-c-to-f.html",
+   "clicks": 0,
+   "imps": 1305,
+   "avgPos": 45.58,
+   "ctr": 0
+  },
+  {
+   "key": "/18-c-to-f.html",
+   "clicks": 0,
+   "imps": 1004,
+   "avgPos": 49.36,
+   "ctr": 0
+  },
+  {
+   "key": "/18-c-to-f",
+   "clicks": 0,
+   "imps": 97,
+   "avgPos": 55.9,
+   "ctr": 0
+  },
+  {
+   "key": "/1-c-to-f.html",
+   "clicks": 0,
+   "imps": 445,
+   "avgPos": 65.02,
+   "ctr": 0
+  },
+  {
+   "key": "/21-c-to-f",
+   "clicks": 0,
+   "imps": 626,
+   "avgPos": 59.59,
+   "ctr": 0
+  },
+  {
+   "key": "/23-c-to-f",
+   "clicks": 0,
+   "imps": 1086,
+   "avgPos": 39.14,
+   "ctr": 0
+  },
+  {
+   "key": "/24-c-to-f",
+   "clicks": 0,
+   "imps": 448,
+   "avgPos": 61.63,
+   "ctr": 0
+  },
+  {
+   "key": "/25-c-to-f",
+   "clicks": 0,
+   "imps": 421,
+   "avgPos": 63.93,
+   "ctr": 0
+  },
+  {
+   "key": "/26-c-to-f",
+   "clicks": 0,
+   "imps": 398,
+   "avgPos": 53.39,
+   "ctr": 0
+  },
+  {
+   "key": "/terms-of-service.html",
+   "clicks": 0,
+   "imps": 4,
+   "avgPos": 30.25,
+   "ctr": 0
+  },
+  {
+   "key": "/27-c-to-f",
+   "clicks": 0,
+   "imps": 539,
+   "avgPos": 51,
+   "ctr": 0
+  },
+  {
+   "key": "/38-c-to-f",
+   "clicks": 0,
+   "imps": 467,
+   "avgPos": 59.49,
+   "ctr": 0
+  },
+  {
+   "key": "/39-c-to-f",
+   "clicks": 0,
+   "imps": 314,
+   "avgPos": 67.61,
+   "ctr": 0
+  },
+  {
+   "key": "/42-c-to-f.html",
+   "clicks": 0,
+   "imps": 3008,
+   "avgPos": 43.03,
+   "ctr": 0
+  },
+  {
+   "key": "/48-c-to-f.html",
+   "clicks": 0,
+   "imps": 1439,
+   "avgPos": 19.97,
+   "ctr": 0
+  },
+  {
+   "key": "/4-c-to-f",
+   "clicks": 0,
+   "imps": 167,
+   "avgPos": 75.84,
+   "ctr": 0
+  },
+  {
+   "key": "/0-c-to-f",
+   "clicks": 0,
+   "imps": 643,
+   "avgPos": 72.82,
+   "ctr": 0
+  },
+  {
+   "key": "/0-c-to-f.html",
+   "clicks": 0,
+   "imps": 234,
+   "avgPos": 67.43,
+   "ctr": 0
+  },
+  {
+   "key": "/pt-br/0-c-to-f",
+   "clicks": 0,
+   "imps": 10,
+   "avgPos": 60.8,
+   "ctr": 0
+  },
+  {
+   "key": "/celsius-to-fahrenheit-chart/",
+   "clicks": 0,
+   "imps": 4393,
+   "avgPos": 70.37,
+   "ctr": 0
+  },
+  {
+   "key": "/fr",
+   "clicks": 0,
+   "imps": 229,
+   "avgPos": 80.97,
+   "ctr": 0
+  },
+  {
+   "key": "/de/0-c-to-f",
+   "clicks": 0,
+   "imps": 14,
+   "avgPos": 58.5,
+   "ctr": 0
+  },
+  {
+   "key": "/es/0-c-to-f",
+   "clicks": 0,
+   "imps": 14,
+   "avgPos": 61.14,
+   "ctr": 0
+  },
+  {
+   "key": "/fahrenheit-to-celsius/",
+   "clicks": 0,
+   "imps": 498,
+   "avgPos": 86.71,
+   "ctr": 0
+  },
+  {
+   "key": "/es/fahrenheit-to-celsius",
+   "clicks": 0,
+   "imps": 491,
+   "avgPos": 79.03,
+   "ctr": 0
+  },
+  {
+   "key": "/zh/0-c-to-f",
+   "clicks": 0,
+   "imps": 2,
+   "avgPos": 53.5,
+   "ctr": 0
+  },
+  {
+   "key": "/1-c-to-f",
+   "clicks": 0,
+   "imps": 3,
+   "avgPos": 84.33,
+   "ctr": 0
+  },
+  {
+   "key": "/id/fahrenheit-to-celsius",
+   "clicks": 0,
+   "imps": 9,
+   "avgPos": 58.89,
+   "ctr": 0
+  },
+  {
+   "key": "/de/fahrenheit-to-celsius",
+   "clicks": 0,
+   "imps": 209,
+   "avgPos": 72.55,
+   "ctr": 0
+  },
+  {
+   "key": "/10-c-to-f.html",
+   "clicks": 0,
+   "imps": 1165,
+   "avgPos": 63.69,
+   "ctr": 0
+  },
+  {
+   "key": "/10-c-to-f",
+   "clicks": 0,
+   "imps": 27,
+   "avgPos": 78.26,
+   "ctr": 0
+  },
+  {
+   "key": "/es/10-c-to-f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 68,
+   "ctr": 0
+  },
+  {
+   "key": "/zh/10-c-to-f",
+   "clicks": 0,
+   "imps": 1,
+   "avgPos": 47,
+   "ctr": 0
+  },
+  {
+   "key": "/105-c-to-f.html",
+   "clicks": 0,
+   "imps": 3361,
+   "avgPos": 50.47,
+   "ctr": 0
+  },
+  {
+   "key": "/fahrenheit-to-celsius/100-f-to-c.html",
+   "clicks": 0,
+   "imps": 1854,
+   "avgPos": 73.97,
+   "ctr": 0
+  },
+  {
+   "key": "/id",
+   "clicks": 0,
+   "imps": 25,
+   "avgPos": 78.52,
+   "ctr": 0
+  },
+  {
+   "key": "/body-temperature-chart-fever-guide/",
+   "clicks": 0,
+   "imps": 335,
+   "avgPos": 76.37,
+   "ctr": 0
+  },
+  {
+   "key": "/fever-temperature-chart",
+   "clicks": 0,
+   "imps": 1737,
+   "avgPos": 78.65,
+   "ctr": 0
+  },
+  {
+   "key": "/body-temperature-chart-fever-guide",
+   "clicks": 0,
+   "imps": 2730,
+   "avgPos": 81.77,
+   "ctr": 0
+  },
+  {
+   "key": "/de",
+   "clicks": 0,
+   "imps": 57,
+   "avgPos": 76.42,
+   "ctr": 0
+  },
+  {
+   "key": "/fahrenheit-to-celsius/110-f-to-c.html",
+   "clicks": 0,
+   "imps": 2255,
+   "avgPos": 49.7,
+   "ctr": 0
+  },
+  {
+   "key": "/fever-temperature-chart/",
+   "clicks": 0,
+   "imps": 202,
+   "avgPos": 88.35,
+   "ctr": 0
+  }
+ ],
+ "posBuckets": {
+  "top3": {
+   "q": 36,
+   "clicks": 0,
+   "imps": 65
+  },
+  "4-10": {
+   "q": 270,
+   "clicks": 1,
+   "imps": 4395
+  },
+  "11-20": {
+   "q": 727,
+   "clicks": 0,
+   "imps": 27352
+  },
+  "21-50": {
+   "q": 2621,
+   "clicks": 1,
+   "imps": 45319
+  },
+  "51+": {
+   "q": 10593,
+   "clicks": 5,
+   "imps": 102401
+  }
+ },
+ "opportunity": [
+  {
+   "key": "175c to f",
+   "clicks": 0,
+   "imps": 6365,
+   "avgPos": 11.76,
+   "ctr": 0
+  },
+  {
+   "key": "175 celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 3200,
+   "avgPos": 12.32,
+   "ctr": 0
+  },
+  {
+   "key": "175c to f oven",
+   "clicks": 0,
+   "imps": 1479,
+   "avgPos": 5.49,
+   "ctr": 0
+  },
+  {
+   "key": "48 c to f",
+   "clicks": 0,
+   "imps": 913,
+   "avgPos": 10.19,
+   "ctr": 0
+  },
+  {
+   "key": "175c in fahrenheit",
+   "clicks": 0,
+   "imps": 883,
+   "avgPos": 10.49,
+   "ctr": 0
+  },
+  {
+   "key": "170c to f oven",
+   "clicks": 0,
+   "imps": 729,
+   "avgPos": 11.69,
+   "ctr": 0
+  },
+  {
+   "key": "36.7 c to f",
+   "clicks": 0,
+   "imps": 724,
+   "avgPos": 15.01,
+   "ctr": 0
+  },
+  {
+   "key": "36.4 celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 713,
+   "avgPos": 18.21,
+   "ctr": 0
+  },
+  {
+   "key": "36.4",
+   "clicks": 0,
+   "imps": 704,
+   "avgPos": 10.22,
+   "ctr": 0
+  },
+  {
+   "key": "175 celsius to fahrenheit oven",
+   "clicks": 0,
+   "imps": 657,
+   "avgPos": 11.65,
+   "ctr": 0
+  },
+  {
+   "key": "230c to f",
+   "clicks": 0,
+   "imps": 650,
+   "avgPos": 15.88,
+   "ctr": 0
+  },
+  {
+   "key": "175 c to f",
+   "clicks": 0,
+   "imps": 627,
+   "avgPos": 17.68,
+   "ctr": 0
+  },
+  {
+   "key": "210c to f",
+   "clicks": 0,
+   "imps": 584,
+   "avgPos": 12.41,
+   "ctr": 0
+  },
+  {
+   "key": "230c to f oven",
+   "clicks": 1,
+   "imps": 580,
+   "avgPos": 8.28,
+   "ctr": 0.17
+  },
+  {
+   "key": "36.4 c to f",
+   "clicks": 0,
+   "imps": 481,
+   "avgPos": 17.23,
+   "ctr": 0
+  },
+  {
+   "key": "36.9 c to f",
+   "clicks": 0,
+   "imps": 463,
+   "avgPos": 15.18,
+   "ctr": 0
+  },
+  {
+   "key": "105c to f",
+   "clicks": 0,
+   "imps": 461,
+   "avgPos": 18.84,
+   "ctr": 0
+  },
+  {
+   "key": "175c to fahrenheit",
+   "clicks": 0,
+   "imps": 402,
+   "avgPos": 10.78,
+   "ctr": 0
+  },
+  {
+   "key": "200 celsius to fahrenheit air fryer",
+   "clicks": 0,
+   "imps": 350,
+   "avgPos": 10.53,
+   "ctr": 0
+  },
+  {
+   "key": "180 celsius to fahrenheit air fryer",
+   "clicks": 0,
+   "imps": 329,
+   "avgPos": 9.67,
+   "ctr": 0
+  },
+  {
+   "key": "175 degrees celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 324,
+   "avgPos": 15.21,
+   "ctr": 0
+  },
+  {
+   "key": "what is 175 celsius in fahrenheit for baking",
+   "clicks": 0,
+   "imps": 263,
+   "avgPos": 8.63,
+   "ctr": 0
+  },
+  {
+   "key": "23.5 c to f",
+   "clicks": 0,
+   "imps": 257,
+   "avgPos": 10.48,
+   "ctr": 0
+  },
+  {
+   "key": "76c to f",
+   "clicks": 0,
+   "imps": 248,
+   "avgPos": 11.77,
+   "ctr": 0
+  },
+  {
+   "key": "what is 175c in fahrenheit",
+   "clicks": 0,
+   "imps": 234,
+   "avgPos": 9.95,
+   "ctr": 0
+  },
+  {
+   "key": "200c to f air fryer",
+   "clicks": 0,
+   "imps": 233,
+   "avgPos": 10.85,
+   "ctr": 0
+  },
+  {
+   "key": "175c to farenheit",
+   "clicks": 0,
+   "imps": 214,
+   "avgPos": 14.93,
+   "ctr": 0
+  }
+ ],
+ "gapQueries": [
+  {
+   "key": "30 c to f",
+   "clicks": 0,
+   "imps": 786,
+   "avgPos": 60.48,
+   "ctr": 0
+  },
+  {
+   "key": "40 celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 656,
+   "avgPos": 60.93,
+   "ctr": 0
+  },
+  {
+   "key": "39 celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 627,
+   "avgPos": 47.56,
+   "ctr": 0
+  },
+  {
+   "key": "160 degrees celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 586,
+   "avgPos": 47.92,
+   "ctr": 0
+  },
+  {
+   "key": "40 c to f",
+   "clicks": 0,
+   "imps": 568,
+   "avgPos": 62.62,
+   "ctr": 0
+  },
+  {
+   "key": "30 celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 562,
+   "avgPos": 61.23,
+   "ctr": 0
+  },
+  {
+   "key": "celsius to fahrenheit chart",
+   "clicks": 0,
+   "imps": 554,
+   "avgPos": 67.72,
+   "ctr": 0
+  },
+  {
+   "key": "c to f chart",
+   "clicks": 0,
+   "imps": 542,
+   "avgPos": 65.32,
+   "ctr": 0
+  },
+  {
+   "key": "160 celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 535,
+   "avgPos": 44.01,
+   "ctr": 0
+  },
+  {
+   "key": "180 c to f",
+   "clicks": 1,
+   "imps": 533,
+   "avgPos": 64.54,
+   "ctr": 0.19
+  },
+  {
+   "key": "160 c to f",
+   "clicks": 0,
+   "imps": 528,
+   "avgPos": 47.77,
+   "ctr": 0
+  },
+  {
+   "key": "40 degrees celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 523,
+   "avgPos": 56.61,
+   "ctr": 0
+  },
+  {
+   "key": "38.4 celsius to fahrenheit",
+   "clicks": 0,
+   "imps": 510,
+   "avgPos": 46.69,
+   "ctr": 0
+  }
+ ],
+ "lowCtr": [
+  {
+   "key": "175c to f oven",
+   "clicks": 0,
+   "imps": 1479,
+   "avgPos": 5.49,
+   "ctr": 0
+  }
+ ],
+ "monthly": [
+  {
+   "month": "2025-08",
+   "clicks": 0,
+   "imps": 14873,
+   "avgPos": 52.6,
+   "ctr": 0
+  },
+  {
+   "month": "2025-09",
+   "clicks": 1,
+   "imps": 33613,
+   "avgPos": 49.48,
+   "ctr": 0
+  },
+  {
+   "month": "2025-10",
+   "clicks": 0,
+   "imps": 38238,
+   "avgPos": 42.31,
+   "ctr": 0
+  },
+  {
+   "month": "2025-11",
+   "clicks": 2,
+   "imps": 24728,
+   "avgPos": 39.66,
+   "ctr": 0.01
+  },
+  {
+   "month": "2025-12",
+   "clicks": 2,
+   "imps": 20556,
+   "avgPos": 43.92,
+   "ctr": 0.01
+  },
+  {
+   "month": "2026-01",
+   "clicks": 0,
+   "imps": 7020,
+   "avgPos": 74.56,
+   "ctr": 0
+  },
+  {
+   "month": "2026-02",
+   "clicks": 2,
+   "imps": 5528,
+   "avgPos": 70.67,
+   "ctr": 0.04
+  },
+  {
+   "month": "2026-03",
+   "clicks": 0,
+   "imps": 19103,
+   "avgPos": 60.13,
+   "ctr": 0
+  },
+  {
+   "month": "2026-04",
+   "clicks": 0,
+   "imps": 13200,
+   "avgPos": 56.24,
+   "ctr": 0
+  },
+  {
+   "month": "2026-05",
+   "clicks": 0,
+   "imps": 36,
+   "avgPos": 91.31,
+   "ctr": 0
+  },
+  {
+   "month": "2026-06",
+   "clicks": 0,
+   "imps": 18,
+   "avgPos": 86.28,
+   "ctr": 0
+  },
+  {
+   "month": "2026-07",
+   "clicks": 0,
+   "imps": 51,
+   "avgPos": 87.61,
+   "ctr": 0
+  },
+  {
+   "month": "2026-08",
+   "clicks": 0,
+   "imps": 45,
+   "avgPos": 90.87,
+   "ctr": 0
+  }
+ ],
+ "risingQueries": [],
+ "fallingQueries": [],
+ "ga4": {
+  "totalSessions": 7869,
+  "totalUsers": 7094,
+  "totalPageviews": 7595,
+  "avgSessionDuration": 69.18,
+  "avgBounceRate": 66.26,
+  "monthly": [
+   {
+    "key": "2025-09",
+    "sessions": 489,
+    "users": 424,
+    "views": 497
+   },
+   {
+    "key": "2025-10",
+    "sessions": 1881,
+    "users": 1669,
+    "views": 1843
+   },
+   {
+    "key": "2025-11",
+    "sessions": 2191,
+    "users": 1990,
+    "views": 2067
+   },
+   {
+    "key": "2025-12",
+    "sessions": 2505,
+    "users": 2235,
+    "views": 2416
+   },
+   {
+    "key": "2026-01",
+    "sessions": 203,
+    "users": 191,
+    "views": 209
+   },
+   {
+    "key": "2026-02",
+    "sessions": 76,
+    "users": 73,
+    "views": 72
+   },
+   {
+    "key": "2026-03",
+    "sessions": 60,
+    "users": 54,
+    "views": 62
+   },
+   {
+    "key": "2026-04",
+    "sessions": 39,
+    "users": 34,
+    "views": 39
+   },
+   {
+    "key": "2026-05",
+    "sessions": 71,
+    "users": 70,
+    "views": 65
+   },
+   {
+    "key": "2026-06",
+    "sessions": 143,
+    "users": 143,
+    "views": 130
+   },
+   {
+    "key": "2026-07",
+    "sessions": 146,
+    "users": 146,
+    "views": 136
+   },
+   {
+    "key": "2026-08",
+    "sessions": 65,
+    "users": 65,
+    "views": 59
+   }
+  ],
+  "channels": [
+   {
+    "key": "Organic Search",
+    "sessions": 5277,
+    "users": 4562,
+    "views": 5353
+   },
+   {
+    "key": "Direct",
+    "sessions": 2437,
+    "users": 2390,
+    "views": 2144
+   },
+   {
+    "key": "Unassigned",
+    "sessions": 85,
+    "users": 85,
+    "views": 4
+   },
+   {
+    "key": "Referral",
+    "sessions": 70,
+    "users": 57,
+    "views": 94
+   }
+  ],
+  "countries": [
+   {
+    "key": "United Kingdom",
+    "sessions": 2855,
+    "users": 2455,
+    "views": 2831
+   },
+   {
+    "key": "United States",
+    "sessions": 1789,
+    "users": 1591,
+    "views": 1935
+   },
+   {
+    "key": "China",
+    "sessions": 1421,
+    "users": 1420,
+    "views": 1380
+   },
+   {
+    "key": "Singapore",
+    "sessions": 507,
+    "users": 502,
+    "views": 121
+   },
+   {
+    "key": "Australia",
+    "sessions": 473,
+    "users": 405,
+    "views": 503
+   },
+   {
+    "key": "Canada",
+    "sessions": 183,
+    "users": 164,
+    "views": 194
+   },
+   {
+    "key": "Ireland",
+    "sessions": 126,
+    "users": 110,
+    "views": 136
+   },
+   {
+    "key": "New Zealand",
+    "sessions": 53,
+    "users": 41,
+    "views": 49
+   },
+   {
+    "key": "India",
+    "sessions": 43,
+    "users": 32,
+    "views": 52
+   },
+   {
+    "key": "France",
+    "sessions": 41,
+    "users": 35,
+    "views": 40
+   },
+   {
+    "key": "Germany",
+    "sessions": 31,
+    "users": 28,
+    "views": 30
+   },
+   {
+    "key": "Spain",
+    "sessions": 28,
+    "users": 27,
+    "views": 28
+   },
+   {
+    "key": "Philippines",
+    "sessions": 18,
+    "users": 15,
+    "views": 15
+   },
+   {
+    "key": "Netherlands",
+    "sessions": 18,
+    "users": 17,
+    "views": 17
+   },
+   {
+    "key": "Italy",
+    "sessions": 13,
+    "users": 13,
+    "views": 14
+   }
+  ],
+  "devices": [
+   {
+    "key": "desktop",
+    "sessions": 4096,
+    "users": 3811,
+    "views": 3697
+   },
+   {
+    "key": "mobile",
+    "sessions": 3506,
+    "users": 3038,
+    "views": 3609
+   },
+   {
+    "key": "tablet",
+    "sessions": 267,
+    "users": 245,
+    "views": 289
+   }
+  ]
+ },
+ "bing": {
+  "traffic": [
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 14,
+    "Date": "/Date(1755586800000-0700)/",
+    "Impressions": 5332
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 11,
+    "Date": "/Date(1755673200000-0700)/",
+    "Impressions": 5234
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 6,
+    "Date": "/Date(1755759600000-0700)/",
+    "Impressions": 5452
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 4,
+    "Date": "/Date(1755846000000-0700)/",
+    "Impressions": 5844
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 9,
+    "Date": "/Date(1755932400000-0700)/",
+    "Impressions": 5406
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 15,
+    "Date": "/Date(1756018800000-0700)/",
+    "Impressions": 10429
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 51,
+    "Date": "/Date(1756105200000-0700)/",
+    "Impressions": 20359
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 13,
+    "Date": "/Date(1756191600000-0700)/",
+    "Impressions": 12680
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 17,
+    "Date": "/Date(1756278000000-0700)/",
+    "Impressions": 11827
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 8,
+    "Date": "/Date(1756364400000-0700)/",
+    "Impressions": 7674
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 6,
+    "Date": "/Date(1756450800000-0700)/",
+    "Impressions": 6242
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 11,
+    "Date": "/Date(1756537200000-0700)/",
+    "Impressions": 7685
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 12,
+    "Date": "/Date(1756623600000-0700)/",
+    "Impressions": 8994
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 9,
+    "Date": "/Date(1756710000000-0700)/",
+    "Impressions": 5486
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 6,
+    "Date": "/Date(1756796400000-0700)/",
+    "Impressions": 2948
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 13,
+    "Date": "/Date(1756882800000-0700)/",
+    "Impressions": 2686
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 14,
+    "Date": "/Date(1756969200000-0700)/",
+    "Impressions": 2267
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 11,
+    "Date": "/Date(1757055600000-0700)/",
+    "Impressions": 1984
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 6,
+    "Date": "/Date(1757142000000-0700)/",
+    "Impressions": 1371
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 12,
+    "Date": "/Date(1757228400000-0700)/",
+    "Impressions": 1630
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 11,
+    "Date": "/Date(1757314800000-0700)/",
+    "Impressions": 2554
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 6,
+    "Date": "/Date(1757401200000-0700)/",
+    "Impressions": 2757
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 12,
+    "Date": "/Date(1757487600000-0700)/",
+    "Impressions": 2484
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 10,
+    "Date": "/Date(1757574000000-0700)/",
+    "Impressions": 2590
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 13,
+    "Date": "/Date(1757660400000-0700)/",
+    "Impressions": 2163
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 9,
+    "Date": "/Date(1757746800000-0700)/",
+    "Impressions": 1506
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 12,
+    "Date": "/Date(1757833200000-0700)/",
+    "Impressions": 1820
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 7,
+    "Date": "/Date(1757919600000-0700)/",
+    "Impressions": 2726
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 9,
+    "Date": "/Date(1758006000000-0700)/",
+    "Impressions": 2536
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 24,
+    "Date": "/Date(1758092400000-0700)/",
+    "Impressions": 6975
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 17,
+    "Date": "/Date(1758178800000-0700)/",
+    "Impressions": 3467
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 17,
+    "Date": "/Date(1758265200000-0700)/",
+    "Impressions": 2676
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 32,
+    "Date": "/Date(1758351600000-0700)/",
+    "Impressions": 1845
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 20,
+    "Date": "/Date(1758438000000-0700)/",
+    "Impressions": 2381
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 26,
+    "Date": "/Date(1758524400000-0700)/",
+    "Impressions": 3467
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 24,
+    "Date": "/Date(1758610800000-0700)/",
+    "Impressions": 4737
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 16,
+    "Date": "/Date(1758697200000-0700)/",
+    "Impressions": 4223
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 21,
+    "Date": "/Date(1758783600000-0700)/",
+    "Impressions": 3968
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 14,
+    "Date": "/Date(1758870000000-0700)/",
+    "Impressions": 3368
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 21,
+    "Date": "/Date(1758956400000-0700)/",
+    "Impressions": 2543
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 31,
+    "Date": "/Date(1759042800000-0700)/",
+    "Impressions": 2764
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 21,
+    "Date": "/Date(1759129200000-0700)/",
+    "Impressions": 3716
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 20,
+    "Date": "/Date(1759215600000-0700)/",
+    "Impressions": 3767
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 18,
+    "Date": "/Date(1759302000000-0700)/",
+    "Impressions": 4653
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 26,
+    "Date": "/Date(1759388400000-0700)/",
+    "Impressions": 4593
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 20,
+    "Date": "/Date(1759474800000-0700)/",
+    "Impressions": 3869
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 33,
+    "Date": "/Date(1759561200000-0700)/",
+    "Impressions": 2955
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 33,
+    "Date": "/Date(1759647600000-0700)/",
+    "Impressions": 3043
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 26,
+    "Date": "/Date(1759734000000-0700)/",
+    "Impressions": 3874
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 26,
+    "Date": "/Date(1759820400000-0700)/",
+    "Impressions": 3749
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 38,
+    "Date": "/Date(1759906800000-0700)/",
+    "Impressions": 3615
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 33,
+    "Date": "/Date(1759993200000-0700)/",
+    "Impressions": 3216
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 23,
+    "Date": "/Date(1760079600000-0700)/",
+    "Impressions": 3741
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 34,
+    "Date": "/Date(1760166000000-0700)/",
+    "Impressions": 3071
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 33,
+    "Date": "/Date(1760252400000-0700)/",
+    "Impressions": 3448
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 23,
+    "Date": "/Date(1760338800000-0700)/",
+    "Impressions": 4283
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 24,
+    "Date": "/Date(1760425200000-0700)/",
+    "Impressions": 4280
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 29,
+    "Date": "/Date(1760511600000-0700)/",
+    "Impressions": 3857
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 23,
+    "Date": "/Date(1760598000000-0700)/",
+    "Impressions": 3891
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 19,
+    "Date": "/Date(1760684400000-0700)/",
+    "Impressions": 3568
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 27,
+    "Date": "/Date(1760770800000-0700)/",
+    "Impressions": 2714
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 33,
+    "Date": "/Date(1760857200000-0700)/",
+    "Impressions": 3016
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 27,
+    "Date": "/Date(1760943600000-0700)/",
+    "Impressions": 4363
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 25,
+    "Date": "/Date(1761030000000-0700)/",
+    "Impressions": 4559
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 22,
+    "Date": "/Date(1761116400000-0700)/",
+    "Impressions": 4588
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 28,
+    "Date": "/Date(1761202800000-0700)/",
+    "Impressions": 4647
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 30,
+    "Date": "/Date(1761289200000-0700)/",
+    "Impressions": 4457
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 40,
+    "Date": "/Date(1761375600000-0700)/",
+    "Impressions": 2985
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 40,
+    "Date": "/Date(1761462000000-0700)/",
+    "Impressions": 3597
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 23,
+    "Date": "/Date(1761548400000-0700)/",
+    "Impressions": 5010
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 27,
+    "Date": "/Date(1761634800000-0700)/",
+    "Impressions": 4935
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 30,
+    "Date": "/Date(1761721200000-0700)/",
+    "Impressions": 4394
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 26,
+    "Date": "/Date(1761807600000-0700)/",
+    "Impressions": 3997
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 28,
+    "Date": "/Date(1761894000000-0700)/",
+    "Impressions": 3271
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 34,
+    "Date": "/Date(1761980400000-0700)/",
+    "Impressions": 2590
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 44,
+    "Date": "/Date(1762066800000-0700)/",
+    "Impressions": 3180
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 35,
+    "Date": "/Date(1762156800000-0800)/",
+    "Impressions": 4418
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 23,
+    "Date": "/Date(1762243200000-0800)/",
+    "Impressions": 4124
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 44,
+    "Date": "/Date(1762329600000-0800)/",
+    "Impressions": 4325
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 35,
+    "Date": "/Date(1762416000000-0800)/",
+    "Impressions": 4209
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 42,
+    "Date": "/Date(1762502400000-0800)/",
+    "Impressions": 3870
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 30,
+    "Date": "/Date(1762588800000-0800)/",
+    "Impressions": 2958
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 57,
+    "Date": "/Date(1762675200000-0800)/",
+    "Impressions": 3465
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 29,
+    "Date": "/Date(1762761600000-0800)/",
+    "Impressions": 4936
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 39,
+    "Date": "/Date(1762848000000-0800)/",
+    "Impressions": 4443
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 27,
+    "Date": "/Date(1762934400000-0800)/",
+    "Impressions": 4060
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 37,
+    "Date": "/Date(1763020800000-0800)/",
+    "Impressions": 3499
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 32,
+    "Date": "/Date(1763107200000-0800)/",
+    "Impressions": 3326
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 31,
+    "Date": "/Date(1763193600000-0800)/",
+    "Impressions": 2648
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 31,
+    "Date": "/Date(1763280000000-0800)/",
+    "Impressions": 3107
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 32,
+    "Date": "/Date(1763366400000-0800)/",
+    "Impressions": 4901
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 26,
+    "Date": "/Date(1763452800000-0800)/",
+    "Impressions": 4384
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 19,
+    "Date": "/Date(1763539200000-0800)/",
+    "Impressions": 4318
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 28,
+    "Date": "/Date(1763625600000-0800)/",
+    "Impressions": 4686
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 26,
+    "Date": "/Date(1763712000000-0800)/",
+    "Impressions": 4025
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 35,
+    "Date": "/Date(1763798400000-0800)/",
+    "Impressions": 2845
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 36,
+    "Date": "/Date(1763884800000-0800)/",
+    "Impressions": 3024
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 22,
+    "Date": "/Date(1763971200000-0800)/",
+    "Impressions": 3701
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 32,
+    "Date": "/Date(1764057600000-0800)/",
+    "Impressions": 3986
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 38,
+    "Date": "/Date(1764144000000-0800)/",
+    "Impressions": 4596
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 34,
+    "Date": "/Date(1764230400000-0800)/",
+    "Impressions": 3694
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 27,
+    "Date": "/Date(1764316800000-0800)/",
+    "Impressions": 2809
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 40,
+    "Date": "/Date(1764403200000-0800)/",
+    "Impressions": 2824
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 28,
+    "Date": "/Date(1764489600000-0800)/",
+    "Impressions": 3342
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 30,
+    "Date": "/Date(1764576000000-0800)/",
+    "Impressions": 4933
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 23,
+    "Date": "/Date(1764662400000-0800)/",
+    "Impressions": 5164
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 27,
+    "Date": "/Date(1764748800000-0800)/",
+    "Impressions": 4956
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 21,
+    "Date": "/Date(1764835200000-0800)/",
+    "Impressions": 4885
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 26,
+    "Date": "/Date(1764921600000-0800)/",
+    "Impressions": 5004
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 35,
+    "Date": "/Date(1765008000000-0800)/",
+    "Impressions": 3816
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 38,
+    "Date": "/Date(1765094400000-0800)/",
+    "Impressions": 4258
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 24,
+    "Date": "/Date(1765180800000-0800)/",
+    "Impressions": 5539
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 25,
+    "Date": "/Date(1765267200000-0800)/",
+    "Impressions": 5867
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 30,
+    "Date": "/Date(1765353600000-0800)/",
+    "Impressions": 4970
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 28,
+    "Date": "/Date(1765440000000-0800)/",
+    "Impressions": 6850
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 28,
+    "Date": "/Date(1765526400000-0800)/",
+    "Impressions": 8556
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 35,
+    "Date": "/Date(1765612800000-0800)/",
+    "Impressions": 12882
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 54,
+    "Date": "/Date(1765699200000-0800)/",
+    "Impressions": 14811
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 29,
+    "Date": "/Date(1765785600000-0800)/",
+    "Impressions": 18224
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 28,
+    "Date": "/Date(1765872000000-0800)/",
+    "Impressions": 21112
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 31,
+    "Date": "/Date(1765958400000-0800)/",
+    "Impressions": 12164
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 34,
+    "Date": "/Date(1766044800000-0800)/",
+    "Impressions": 5762
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 34,
+    "Date": "/Date(1766131200000-0800)/",
+    "Impressions": 6459
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 47,
+    "Date": "/Date(1766217600000-0800)/",
+    "Impressions": 6740
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 41,
+    "Date": "/Date(1766304000000-0800)/",
+    "Impressions": 10155
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 58,
+    "Date": "/Date(1766390400000-0800)/",
+    "Impressions": 17315
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 84,
+    "Date": "/Date(1766476800000-0800)/",
+    "Impressions": 7925
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 110,
+    "Date": "/Date(1766563200000-0800)/",
+    "Impressions": 21701
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 84,
+    "Date": "/Date(1766649600000-0800)/",
+    "Impressions": 23365
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 28,
+    "Date": "/Date(1766736000000-0800)/",
+    "Impressions": 22748
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 32,
+    "Date": "/Date(1766822400000-0800)/",
+    "Impressions": 20729
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 23,
+    "Date": "/Date(1766908800000-0800)/",
+    "Impressions": 6948
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 22,
+    "Date": "/Date(1766995200000-0800)/",
+    "Impressions": 16699
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1767081600000-0800)/",
+    "Impressions": 858
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1767168000000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1767254400000-0800)/",
+    "Impressions": 2
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1767340800000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1767427200000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1767513600000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1767600000000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1767686400000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1767772800000-0800)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1767859200000-0800)/",
+    "Impressions": 4
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1767945600000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1768032000000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1768118400000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1768204800000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1768291200000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1768377600000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1768464000000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1768550400000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1768636800000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1768723200000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1768809600000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1768896000000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1768982400000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1769068800000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1769155200000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1769241600000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1769328000000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1769414400000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1769500800000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1769587200000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1769673600000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1769760000000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1769846400000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1769932800000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1770019200000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1770105600000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1770192000000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1770278400000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1770364800000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1770451200000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1770537600000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1770624000000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1770710400000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1770796800000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1770883200000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1770969600000-0800)/",
+    "Impressions": 4
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1771056000000-0800)/",
+    "Impressions": 11
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1771142400000-0800)/",
+    "Impressions": 11
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1771228800000-0800)/",
+    "Impressions": 24
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1771315200000-0800)/",
+    "Impressions": 29
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1771401600000-0800)/",
+    "Impressions": 20
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1771488000000-0800)/",
+    "Impressions": 15
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1771574400000-0800)/",
+    "Impressions": 18
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1771660800000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1771747200000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1771833600000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1771920000000-0800)/",
+    "Impressions": 4
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1772006400000-0800)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1772092800000-0800)/",
+    "Impressions": 4
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1772179200000-0800)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1772265600000-0800)/",
+    "Impressions": 2
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1772352000000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1772438400000-0800)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1772524800000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1772611200000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1772697600000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1772784000000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1772870400000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1772956800000-0800)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1773039600000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1773126000000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1773212400000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1773298800000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1773385200000-0700)/",
+    "Impressions": 6
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1773471600000-0700)/",
+    "Impressions": 6
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1773558000000-0700)/",
+    "Impressions": 4
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1773644400000-0700)/",
+    "Impressions": 7
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1773730800000-0700)/",
+    "Impressions": 76
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1773817200000-0700)/",
+    "Impressions": 71
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1773903600000-0700)/",
+    "Impressions": 67
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1773990000000-0700)/",
+    "Impressions": 44
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1774076400000-0700)/",
+    "Impressions": 17
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1774162800000-0700)/",
+    "Impressions": 15
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1774249200000-0700)/",
+    "Impressions": 18
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1774335600000-0700)/",
+    "Impressions": 28
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1774422000000-0700)/",
+    "Impressions": 12
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1774508400000-0700)/",
+    "Impressions": 19
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1774594800000-0700)/",
+    "Impressions": 13
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1774681200000-0700)/",
+    "Impressions": 8
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1774767600000-0700)/",
+    "Impressions": 8
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1774854000000-0700)/",
+    "Impressions": 11
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1774940400000-0700)/",
+    "Impressions": 11
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1775026800000-0700)/",
+    "Impressions": 11
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1775113200000-0700)/",
+    "Impressions": 12
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1775199600000-0700)/",
+    "Impressions": 8
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1775286000000-0700)/",
+    "Impressions": 8
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1775372400000-0700)/",
+    "Impressions": 16
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1775458800000-0700)/",
+    "Impressions": 23
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1775545200000-0700)/",
+    "Impressions": 29
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1775631600000-0700)/",
+    "Impressions": 17
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1775718000000-0700)/",
+    "Impressions": 3
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1775804400000-0700)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1775890800000-0700)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1775977200000-0700)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1776063600000-0700)/",
+    "Impressions": 2
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1776150000000-0700)/",
+    "Impressions": 3
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1776236400000-0700)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1776322800000-0700)/",
+    "Impressions": 8
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1776409200000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1776495600000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1776582000000-0700)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1776668400000-0700)/",
+    "Impressions": 4
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1776754800000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1776841200000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1776927600000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1777014000000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1777100400000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1777186800000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1777273200000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1777359600000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1777446000000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1777532400000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1777618800000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1777705200000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1777791600000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1777878000000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1777964400000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1778050800000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1778137200000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1778223600000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1778310000000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1778396400000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1778482800000-0700)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1778569200000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1778655600000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1778742000000-0700)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1778828400000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1778914800000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1779001200000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1779087600000-0700)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1779174000000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1779260400000-0700)/",
+    "Impressions": 4
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1779346800000-0700)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1779433200000-0700)/",
+    "Impressions": 3
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1779519600000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1779606000000-0700)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1779692400000-0700)/",
+    "Impressions": 4
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1779778800000-0700)/",
+    "Impressions": 9
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1779865200000-0700)/",
+    "Impressions": 5
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1779951600000-0700)/",
+    "Impressions": 5
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1780038000000-0700)/",
+    "Impressions": 6
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1780124400000-0700)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1780210800000-0700)/",
+    "Impressions": 10
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1780297200000-0700)/",
+    "Impressions": 6
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1780383600000-0700)/",
+    "Impressions": 4
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1780470000000-0700)/",
+    "Impressions": 7
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1780556400000-0700)/",
+    "Impressions": 7
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1780642800000-0700)/",
+    "Impressions": 10
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1780729200000-0700)/",
+    "Impressions": 2
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1780815600000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1780902000000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1780988400000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1781074800000-0700)/",
+    "Impressions": 14
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1781161200000-0700)/",
+    "Impressions": 10
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1781247600000-0700)/",
+    "Impressions": 4
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1781334000000-0700)/",
+    "Impressions": 6
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1781420400000-0700)/",
+    "Impressions": 7
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1781506800000-0700)/",
+    "Impressions": 11
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1781593200000-0700)/",
+    "Impressions": 6
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1781679600000-0700)/",
+    "Impressions": 9
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1781766000000-0700)/",
+    "Impressions": 7
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1781852400000-0700)/",
+    "Impressions": 7
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1781938800000-0700)/",
+    "Impressions": 7
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1782025200000-0700)/",
+    "Impressions": 5
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1782111600000-0700)/",
+    "Impressions": 8
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1782198000000-0700)/",
+    "Impressions": 11
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1782284400000-0700)/",
+    "Impressions": 18
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1782370800000-0700)/",
+    "Impressions": 14
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1782457200000-0700)/",
+    "Impressions": 10
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1782543600000-0700)/",
+    "Impressions": 2
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1782630000000-0700)/",
+    "Impressions": 7
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1782716400000-0700)/",
+    "Impressions": 2
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1782802800000-0700)/",
+    "Impressions": 5
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1782889200000-0700)/",
+    "Impressions": 8
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1782975600000-0700)/",
+    "Impressions": 7
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1783062000000-0700)/",
+    "Impressions": 12
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1783148400000-0700)/",
+    "Impressions": 4
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1783234800000-0700)/",
+    "Impressions": 3
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1783321200000-0700)/",
+    "Impressions": 4
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1783407600000-0700)/",
+    "Impressions": 4
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1783494000000-0700)/",
+    "Impressions": 3
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1783580400000-0700)/",
+    "Impressions": 5
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1783666800000-0700)/",
+    "Impressions": 5
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1783753200000-0700)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1783839600000-0700)/",
+    "Impressions": 3
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1783926000000-0700)/",
+    "Impressions": 5
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1784012400000-0700)/",
+    "Impressions": 5
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1784098800000-0700)/",
+    "Impressions": 4
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1784185200000-0700)/",
+    "Impressions": 4
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1784271600000-0700)/",
+    "Impressions": 2
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1784358000000-0700)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1784444400000-0700)/",
+    "Impressions": 2
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1784530800000-0700)/",
+    "Impressions": 3
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 1,
+    "Date": "/Date(1784617200000-0700)/",
+    "Impressions": 858
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 1,
+    "Date": "/Date(1784703600000-0700)/",
+    "Impressions": 2641
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 6,
+    "Date": "/Date(1784790000000-0700)/",
+    "Impressions": 2454
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 5,
+    "Date": "/Date(1784876400000-0700)/",
+    "Impressions": 1987
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 3,
+    "Date": "/Date(1784962800000-0700)/",
+    "Impressions": 1331
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 8,
+    "Date": "/Date(1785049200000-0700)/",
+    "Impressions": 1634
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 7,
+    "Date": "/Date(1785135600000-0700)/",
+    "Impressions": 3648
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 8,
+    "Date": "/Date(1785222000000-0700)/",
+    "Impressions": 2138
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 4,
+    "Date": "/Date(1785308400000-0700)/",
+    "Impressions": 1917
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 9,
+    "Date": "/Date(1785394800000-0700)/",
+    "Impressions": 2158
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 7,
+    "Date": "/Date(1785481200000-0700)/",
+    "Impressions": 1742
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 4,
+    "Date": "/Date(1785567600000-0700)/",
+    "Impressions": 1066
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 3,
+    "Date": "/Date(1785654000000-0700)/",
+    "Impressions": 1126
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 5,
+    "Date": "/Date(1785740400000-0700)/",
+    "Impressions": 1896
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 4,
+    "Date": "/Date(1785826800000-0700)/",
+    "Impressions": 1496
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 4,
+    "Date": "/Date(1785913200000-0700)/",
+    "Impressions": 1469
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 5,
+    "Date": "/Date(1785999600000-0700)/",
+    "Impressions": 1457
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 3,
+    "Date": "/Date(1786086000000-0700)/",
+    "Impressions": 1142
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1786172400000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1786258800000-0700)/",
+    "Impressions": 1
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1786345200000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1786431600000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1786518000000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1786604400000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1786690800000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1786777200000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1786863600000-0700)/",
+    "Impressions": 0
+   },
+   {
+    "__type": "RankAndTrafficStats:#Microsoft.Bing.Webmaster.Api",
+    "Clicks": 0,
+    "Date": "/Date(1786950000000-0700)/",
+    "Impressions": 0
+   }
+  ],
+  "topKeywords": [
+   {
+    "clicks": 2344,
+    "imps": 340567
+   }
+  ],
+  "totalClicks": 2344,
+  "totalImpressions": 340567,
+  "topPages": [
+   {
+    "clicks": 4319,
+    "imps": 975468
+   }
+  ],
+  "crawl": [
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 50,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 351,
+    "Code301": 17,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 16,
+    "Date": "/Date(1771488000000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 118,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 50,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 351,
+    "Code301": 17,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 21,
+    "Date": "/Date(1771574400000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 118,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 50,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 352,
+    "Code301": 17,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 5,
+    "Date": "/Date(1771660800000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 121,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 52,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 352,
+    "Code301": 17,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 13,
+    "Date": "/Date(1771747200000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 123,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 52,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 353,
+    "Code301": 18,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 33,
+    "Date": "/Date(1771833600000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 124,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 52,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 361,
+    "Code301": 18,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 49,
+    "Date": "/Date(1771920000000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 137,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 51,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 361,
+    "Code301": 18,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 20,
+    "Date": "/Date(1772006400000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 148,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 49,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 363,
+    "Code301": 18,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 14,
+    "Date": "/Date(1772092800000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 151,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 49,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 360,
+    "Code301": 20,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 10,
+    "Date": "/Date(1772179200000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 155,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 49,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 361,
+    "Code301": 20,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 12,
+    "Date": "/Date(1772265600000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 161,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 52,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 360,
+    "Code301": 20,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 25,
+    "Date": "/Date(1772352000000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 165,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 53,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 358,
+    "Code301": 20,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 15,
+    "Date": "/Date(1772438400000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 168,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 53,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 356,
+    "Code301": 20,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 22,
+    "Date": "/Date(1772524800000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 174,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 54,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 353,
+    "Code301": 21,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 14,
+    "Date": "/Date(1772611200000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 174,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 53,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 355,
+    "Code301": 21,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 27,
+    "Date": "/Date(1772697600000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 177,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 55,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 350,
+    "Code301": 21,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 29,
+    "Date": "/Date(1772784000000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 182,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 61,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 346,
+    "Code301": 21,
+    "Code302": 0,
+    "Code4xx": 9,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 9,
+    "CrawledPages": 22,
+    "Date": "/Date(1772870400000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 164,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 61,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 346,
+    "Code301": 22,
+    "Code302": 0,
+    "Code4xx": 14,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 14,
+    "CrawledPages": 28,
+    "Date": "/Date(1772956800000-0800)/",
+    "DnsFailures": 0,
+    "InIndex": 145,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 62,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 340,
+    "Code301": 24,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 15,
+    "Date": "/Date(1773039600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 129,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 63,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 340,
+    "Code301": 25,
+    "Code302": 0,
+    "Code4xx": 3,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 4,
+    "CrawledPages": 21,
+    "Date": "/Date(1773126000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 118,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 63,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 340,
+    "Code301": 26,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 18,
+    "Date": "/Date(1773212400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 98,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 62,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 340,
+    "Code301": 26,
+    "Code302": 0,
+    "Code4xx": 2,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 8,
+    "Date": "/Date(1773298800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 98,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 63,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 338,
+    "Code301": 27,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 5,
+    "Date": "/Date(1773385200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 76,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 63,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 335,
+    "Code301": 27,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 4,
+    "Date": "/Date(1773471600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 70,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 63,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 331,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 11,
+    "Date": "/Date(1773558000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 64,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 62,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 328,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 7,
+    "Date": "/Date(1773644400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 61,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 60,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 326,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 14,
+    "Date": "/Date(1773730800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 61,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 56,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 322,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 23,
+    "Date": "/Date(1773817200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 60,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 55,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 320,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 6,
+    "Date": "/Date(1773903600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 59,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 55,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 320,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 2,
+    "Date": "/Date(1773990000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 59,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 56,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 318,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 2,
+    "Date": "/Date(1774076400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 54,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 56,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 317,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 3,
+    "CrawledPages": 6,
+    "Date": "/Date(1774162800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 48,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 56,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 317,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 2,
+    "Date": "/Date(1774249200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 48,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 54,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 318,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 3,
+    "Date": "/Date(1774335600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 48,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 55,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 318,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 11,
+    "Date": "/Date(1774422000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 46,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 54,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 317,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 1,
+    "Date": "/Date(1774508400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 45,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 54,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 317,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 6,
+    "Date": "/Date(1774594800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 45,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 51,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 307,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 9,
+    "Date": "/Date(1774681200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 35,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 50,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 303,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 2,
+    "Date": "/Date(1774767600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 33,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 49,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 297,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 4,
+    "Date": "/Date(1774854000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 30,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 48,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 291,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 4,
+    "Date": "/Date(1774940400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 29,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 48,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 289,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 9,
+    "Date": "/Date(1775026800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 27,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 47,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 286,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 6,
+    "Date": "/Date(1775113200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 26,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 47,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 285,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 2,
+    "Date": "/Date(1775199600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 23,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 46,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 285,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 6,
+    "Date": "/Date(1775286000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 19,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 46,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 281,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 16,
+    "Date": "/Date(1775372400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 16,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 43,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 280,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 2,
+    "Date": "/Date(1775458800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 15,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 42,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 280,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 2,
+    "Date": "/Date(1775545200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 12,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 40,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 280,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 2,
+    "Date": "/Date(1775631600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 12,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 40,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 280,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 11,
+    "Date": "/Date(1775718000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 9,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 40,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 276,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 4,
+    "Date": "/Date(1775804400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 8,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 40,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 276,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 8,
+    "Date": "/Date(1775890800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 8,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 40,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 274,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 6,
+    "Date": "/Date(1775977200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 7,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 40,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 274,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 31,
+    "Date": "/Date(1776063600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 7,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 35,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 275,
+    "Code301": 33,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 3,
+    "Date": "/Date(1776150000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 25,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 31,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 269,
+    "Code301": 34,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 23,
+    "Date": "/Date(1776236400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 29,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 31,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 266,
+    "Code301": 33,
+    "Code302": 0,
+    "Code4xx": 22,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 22,
+    "CrawledPages": 48,
+    "Date": "/Date(1776322800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 32,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 29,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 268,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 9,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 10,
+    "CrawledPages": 17,
+    "Date": "/Date(1776409200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 40,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 28,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 265,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 4,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 4,
+    "CrawledPages": 14,
+    "Date": "/Date(1776495600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 43,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 28,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 265,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 9,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 9,
+    "CrawledPages": 113,
+    "Date": "/Date(1776582000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 43,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 27,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 319,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 35,
+    "Date": "/Date(1776668400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 104,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 27,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 325,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 20,
+    "Date": "/Date(1776754800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 120,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 27,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 325,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 15,
+    "Date": "/Date(1776841200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 122,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 27,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 325,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 31,
+    "Date": "/Date(1776927600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 122,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 30,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 332,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 87,
+    "Date": "/Date(1777014000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 135,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 34,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 351,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 43,
+    "Date": "/Date(1777100400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 169,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 34,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 391,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 103,
+    "Date": "/Date(1777186800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 214,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 34,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 395,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 23,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 23,
+    "CrawledPages": 90,
+    "Date": "/Date(1777273200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 224,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 32,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 399,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 52,
+    "Date": "/Date(1777359600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 235,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 30,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 408,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 6,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 6,
+    "CrawledPages": 39,
+    "Date": "/Date(1777446000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 246,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 31,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 417,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 48,
+    "Date": "/Date(1777532400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 258,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 32,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 425,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 72,
+    "Date": "/Date(1777618800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 269,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 32,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 425,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 68,
+    "Date": "/Date(1777705200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 269,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 35,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 428,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 45,
+    "Date": "/Date(1777791600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 277,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 35,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 428,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 13,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 13,
+    "CrawledPages": 84,
+    "Date": "/Date(1777878000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 277,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 36,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 432,
+    "Code301": 26,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 71,
+    "Date": "/Date(1777964400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 292,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 36,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 433,
+    "Code301": 26,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 63,
+    "Date": "/Date(1778050800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 294,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 36,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 433,
+    "Code301": 26,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 52,
+    "Date": "/Date(1778137200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 294,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 34,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 438,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 54,
+    "Date": "/Date(1778223600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 301,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 34,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 438,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 8,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 8,
+    "CrawledPages": 38,
+    "Date": "/Date(1778310000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 301,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 34,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 438,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 2,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 3,
+    "CrawledPages": 34,
+    "Date": "/Date(1778396400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 301,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 34,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 438,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 33,
+    "Date": "/Date(1778482800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 301,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 35,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 434,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 42,
+    "Date": "/Date(1778569200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 303,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 37,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 432,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 42,
+    "Date": "/Date(1778655600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 313,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 41,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 430,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 26,
+    "Date": "/Date(1778742000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 321,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 41,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 430,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 7,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 9,
+    "CrawledPages": 56,
+    "Date": "/Date(1778828400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 321,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 37,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 437,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 52,
+    "Date": "/Date(1778914800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 328,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 37,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 437,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 6,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 7,
+    "CrawledPages": 49,
+    "Date": "/Date(1779001200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 328,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 37,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 442,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 31,
+    "Date": "/Date(1779087600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 333,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 37,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 443,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 11,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 12,
+    "CrawledPages": 69,
+    "Date": "/Date(1779174000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 333,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 37,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 444,
+    "Code301": 27,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 45,
+    "Date": "/Date(1779260400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 334,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 38,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 450,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 42,
+    "Date": "/Date(1779346800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 340,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 40,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 448,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 25,
+    "Date": "/Date(1779433200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 339,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 41,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 453,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 2,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 3,
+    "CrawledPages": 32,
+    "Date": "/Date(1779519600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 343,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 44,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 451,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 44,
+    "Date": "/Date(1779606000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 345,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 46,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 454,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 12,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 13,
+    "CrawledPages": 48,
+    "Date": "/Date(1779692400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 348,
+    "InLinks": 2
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 45,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 461,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 34,
+    "Date": "/Date(1779778800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 353,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 45,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 465,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 11,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 11,
+    "CrawledPages": 46,
+    "Date": "/Date(1779865200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 358,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 42,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 474,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 37,
+    "Date": "/Date(1779951600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 364,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 42,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 474,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 37,
+    "Date": "/Date(1780038000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 364,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 42,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 473,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 19,
+    "Date": "/Date(1780124400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 364,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 43,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 474,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 34,
+    "Date": "/Date(1780210800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 365,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 46,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 471,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 33,
+    "Date": "/Date(1780297200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 366,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 46,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 471,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 21,
+    "Date": "/Date(1780383600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 367,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 45,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 474,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 21,
+    "Date": "/Date(1780470000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 369,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 47,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 475,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 26,
+    "Date": "/Date(1780556400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 368,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 47,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 475,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 37,
+    "Date": "/Date(1780642800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 368,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 43,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 476,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 20,
+    "Date": "/Date(1780729200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 368,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 43,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 477,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 30,
+    "Date": "/Date(1780815600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 369,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 46,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 479,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 11,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 11,
+    "CrawledPages": 44,
+    "Date": "/Date(1780902000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 353,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 47,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 479,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 25,
+    "Date": "/Date(1780988400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 329,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 47,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 479,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 7,
+    "Date": "/Date(1781074800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 329,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 47,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 480,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 10,
+    "Date": "/Date(1781161200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 320,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 50,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 480,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 12,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 12,
+    "CrawledPages": 24,
+    "Date": "/Date(1781247600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 314,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 58,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 476,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 9,
+    "Date": "/Date(1781334000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 312,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 60,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 470,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 6,
+    "Date": "/Date(1781420400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 306,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 60,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 465,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 12,
+    "Date": "/Date(1781506800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 300,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 60,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 465,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 6,
+    "Date": "/Date(1781593200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 300,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 59,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 454,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 4,
+    "Date": "/Date(1781679600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 289,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 60,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 450,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 31,
+    "Date": "/Date(1781766000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 285,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 61,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 450,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 23,
+    "Date": "/Date(1781852400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 283,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 60,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 453,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 29,
+    "Date": "/Date(1781938800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 288,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 60,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 454,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 24,
+    "Date": "/Date(1782025200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 292,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 59,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 455,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 13,
+    "Date": "/Date(1782111600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 296,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 60,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 455,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 26,
+    "Date": "/Date(1782198000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 297,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 61,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 455,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 26,
+    "Date": "/Date(1782284400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 298,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 61,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 454,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 18,
+    "Date": "/Date(1782370800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 298,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 60,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 455,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 20,
+    "Date": "/Date(1782457200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 299,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 61,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 454,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 14,
+    "Date": "/Date(1782543600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 299,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 61,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 454,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 16,
+    "Date": "/Date(1782630000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 299,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 63,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 452,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 26,
+    "Date": "/Date(1782716400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 300,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 65,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 450,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 20,
+    "Date": "/Date(1782802800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 299,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 68,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 447,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 2,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 4,
+    "CrawledPages": 69,
+    "Date": "/Date(1782889200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 302,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 70,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 448,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 21,
+    "Date": "/Date(1782975600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 303,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 68,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 450,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 28,
+    "Date": "/Date(1783062000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 305,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 68,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 450,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 35,
+    "Date": "/Date(1783148400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 305,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 69,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 451,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 19,
+    "Date": "/Date(1783234800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 306,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 69,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 455,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 11,
+    "Date": "/Date(1783321200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 310,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 71,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 453,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 35,
+    "Date": "/Date(1783407600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 310,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 69,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 453,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 13,
+    "Date": "/Date(1783494000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 312,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 69,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 453,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 14,
+    "Date": "/Date(1783580400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 312,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 69,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 454,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 23,
+    "Date": "/Date(1783666800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 313,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 70,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 452,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 13,
+    "Date": "/Date(1783753200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 313,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 64,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 453,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 12,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 12,
+    "CrawledPages": 81,
+    "Date": "/Date(1783839600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 315,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 62,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 449,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 18,
+    "Date": "/Date(1783926000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 317,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 61,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 440,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 19,
+    "Date": "/Date(1784012400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 320,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 73,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 427,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 2,
+    "CrawledPages": 29,
+    "Date": "/Date(1784098800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 323,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 73,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 424,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 15,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 16,
+    "CrawledPages": 31,
+    "Date": "/Date(1784185200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 325,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 74,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 424,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 6,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 6,
+    "CrawledPages": 23,
+    "Date": "/Date(1784271600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 325,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 73,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 422,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 11,
+    "Date": "/Date(1784358000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 327,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 66,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 429,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 126,
+    "Date": "/Date(1784444400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 329,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 66,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 431,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 11,
+    "Date": "/Date(1784530800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 330,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 65,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 431,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 13,
+    "Date": "/Date(1784617200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 331,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 63,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 433,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 16,
+    "Date": "/Date(1784703600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 332,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 63,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 436,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 9,
+    "Date": "/Date(1784790000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 336,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 63,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 438,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 155,
+    "Date": "/Date(1784876400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 337,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 64,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 439,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 100,
+    "Date": "/Date(1784962800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 337,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 66,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 439,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 9,
+    "Date": "/Date(1785049200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 336,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 66,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 439,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 21,
+    "Date": "/Date(1785135600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 339,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 66,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 440,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 18,
+    "Date": "/Date(1785222000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 338,
+    "InLinks": 6
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 67,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 438,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 27,
+    "Date": "/Date(1785308400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 339,
+    "InLinks": 6
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 70,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 435,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 26,
+    "Date": "/Date(1785394800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 340,
+    "InLinks": 6
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 71,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 436,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 88,
+    "Date": "/Date(1785481200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 339,
+    "InLinks": 6
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 70,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 437,
+    "Code301": 32,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 26,
+    "Date": "/Date(1785567600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 339,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 71,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 437,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 27,
+    "Date": "/Date(1785654000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 341,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 75,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 436,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 19,
+    "Date": "/Date(1785740400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 341,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 74,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 437,
+    "Code301": 31,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 144,
+    "Date": "/Date(1785826800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 342,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 76,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 439,
+    "Code301": 30,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 23,
+    "Date": "/Date(1785913200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 345,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 79,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 441,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 49,
+    "Date": "/Date(1785999600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 324,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 79,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 441,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 40,
+    "Date": "/Date(1786086000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 324,
+    "InLinks": 5
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 79,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 441,
+    "Code301": 29,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 26,
+    "Date": "/Date(1786172400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 299,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 78,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 445,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 55,
+    "Date": "/Date(1786258800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 277,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 77,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 447,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 10,
+    "Date": "/Date(1786345200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 253,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 75,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 450,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 10,
+    "Date": "/Date(1786431600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 235,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 75,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 450,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 8,
+    "Date": "/Date(1786518000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 229,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 72,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 451,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 2,
+    "Date": "/Date(1786604400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 214,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 70,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 443,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 5,
+    "Date": "/Date(1786690800000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 198,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 71,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 441,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 1,
+    "Date": "/Date(1786777200000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 189,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 70,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 442,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 17,
+    "Date": "/Date(1786863600000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 178,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 70,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 436,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 0,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 0,
+    "CrawledPages": 19,
+    "Date": "/Date(1786950000000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 174,
+    "InLinks": 4
+   },
+   {
+    "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+    "AllOtherCodes": 69,
+    "BlockedByRobotsTxt": 0,
+    "Code2xx": 434,
+    "Code301": 28,
+    "Code302": 0,
+    "Code4xx": 1,
+    "Code5xx": 0,
+    "ConnectionTimeout": 0,
+    "ContainsMalware": 0,
+    "CrawlErrors": 1,
+    "CrawledPages": 2,
+    "Date": "/Date(1787036400000-0700)/",
+    "DnsFailures": 0,
+    "InIndex": 172,
+    "InLinks": 4
+   }
+  ]
+ }
+}
