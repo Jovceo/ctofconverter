@@ -26,6 +26,13 @@ export default function Converter() {
   });
   const [copySuccess, setCopySuccess] = useState(false);
 
+  const loadHistory = () => {
+    if (typeof window === 'undefined') return;
+    const historyJSON = localStorage.getItem(HISTORY_KEY);
+    const loadedHistory = historyJSON ? JSON.parse(historyJSON) : [];
+    setHistory(loadedHistory);
+  };
+
   useEffect(() => {
     loadHistory();
   }, []);
@@ -110,13 +117,6 @@ export default function Converter() {
         type: 'success',
       });
     }
-  };
-
-  const loadHistory = () => {
-    if (typeof window === 'undefined') return;
-    const historyJSON = localStorage.getItem(HISTORY_KEY);
-    const loadedHistory = historyJSON ? JSON.parse(historyJSON) : [];
-    setHistory(loadedHistory);
   };
 
   const addToHistory = (c: number, f: number) => {

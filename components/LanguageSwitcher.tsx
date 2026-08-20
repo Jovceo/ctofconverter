@@ -63,7 +63,6 @@ export default function LanguageSwitcher() {
   const hasAlternateLanguages = alternateLinks.some(
     (link) => link.hreflang !== 'en' && link.hreflang !== 'x-default'
   );
-  if (!hasAlternateLanguages) return null;
 
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -94,9 +93,6 @@ export default function LanguageSwitcher() {
     setIsOpen(false);
   }, [asPath]);
 
-  const currentLocaleLabel =
-    LOCALES.find((lang) => lang.code === currentLocale)?.label || currentLocale;
-
   const languageLinks = useMemo(() => {
     const basePath = normalizeBasePath(asPath, currentLocale);
     const alternateMap = new Map(
@@ -112,6 +108,12 @@ export default function LanguageSwitcher() {
       isCurrent: lang.code === currentLocale,
     }));
   }, [alternateLinks, asPath, currentLocale]);
+
+  // 早返回必须放在所有 hook 之后：alternateLinks 从空变非空时否则 hook 数量会变
+  if (!hasAlternateLanguages) return null;
+
+  const currentLocaleLabel =
+    LOCALES.find((lang) => lang.code === currentLocale)?.label || currentLocale;
 
   return (
     <div className="language-switcher" aria-label={t('nav.languageSelector')}>

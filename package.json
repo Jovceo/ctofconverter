@@ -11,7 +11,7 @@
     "postinstall": "echo 'Sitemap auto-generation configured'",
     "postbuild": "node scripts/submit-indexnow.js",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint pages components utils types scripts proxy.ts",
     "export": "next build && next export",
     "generate:sitemap": "node scripts/generate-sitemap.js"
   },
