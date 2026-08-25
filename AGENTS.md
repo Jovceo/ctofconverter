@@ -117,7 +117,7 @@ AI 搜索引擎（Google AI Overviews、ChatGPT、Perplexity）与传统 SEO 的
 - [ ] `config/quality-pages.json` 已更新（如有新精做页面）
 - [ ] `pages/index.tsx` 的 `QUALITY_PAGE_INFO` 已更新（如有新精做页面，否则首页不显示链接）
 - [ ] `config/migrated-routes.json` 已更新（如有新页面需要 301 旧 HTML）
-- [ ] 环境变量 `INDEXNOW_SECRET` 已设置（用于部署后自动提交索引）
+- [ ] 环境变量 `INDEXNOW_SECRET`：**默认不设**。`/api/indexnow` 在没这个变量时直接 503 关闭（fail-closed，2026-08-25 改），保持关着就是安全的。只有确实需要从远端手动触发提交时才设；日常提交走 `scripts/manual-indexnow.js`，它直接打 IndexNow，不需要这个端点。
 - [ ] Vercel production build 成功
 
 ## 精做页面原则

@@ -1,28 +1,52 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+import { createHash, timingSafeEqual } from 'crypto';
 
 const INDEXNOW_KEY = 'a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6';
 const SITE_URL = 'https://ctofconverter.com';
 const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
 
 /**
- * IndexNow API Route
- * 
- * 使用方式：
- *   GET  /api/indexnow          → 返回状态信息
- *   POST /api/indexnow          → 从 sitemap.xml 读取所有 URL 并提交
- *   POST /api/indexnow?urls=... → 提交指定 URL（逗号分隔）
- * 
- * 安全：需要 Authorization header 或 secret query 参数
+ * IndexNow 手动提交端点
+ *
+ * 使用方式（必须带请求头；secret 不再走 query，否则会落进访问日志/代理日志/浏览器历史）：
+ *   curl -X POST -H "x-indexnow-secret: $INDEXNOW_SECRET" https://ctofconverter.com/api/indexnow
+ *   curl -X POST -H "x-indexnow-secret: $INDEXNOW_SECRET" \
+ *        "https://ctofconverter.com/api/indexnow?urls=https://ctofconverter.com/a,https://ctofconverter.com/b"
+ *
+ * 安全语义（2026-08-25 改动）：
+ *   · **fail-closed**：`INDEXNOW_SECRET` 没配就直接 503 关掉端点。
+ *     旧写法是 `secret !== expectedSecret`，env 缺失时两边都是 undefined →
+ *     空请求也能过 —— 这就是 2026-08-25 实测到“无鉴权写入口”的真实机制。
+ *   · 定长比较走 sha256 + timingSafeEqual，不泄露长度时序。
+ *   · 本地提交不需要这个端点：`scripts/manual-indexnow.js` 直接打 IndexNow，
+ *     而且 `package.json` 的 postbuild 已于 2026-08-20 停掉（Bing 2026-08-08 降权）。
  */
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    // 简单安全检查：需要 secret 参数（部署后通过环境变量配置更安全的方式）
-    const secret = req.query.secret || req.headers['x-indexnow-secret'];
     const expectedSecret = process.env.INDEXNOW_SECRET;
 
-    if (secret !== expectedSecret) {
-        return res.status(401).json({ error: 'Unauthorized. Provide ?secret=YOUR_SECRET' });
+    // fail-closed：没配 secret = 端点不存在。绝不因为“两边都空”而放行。
+    if (!expectedSecret) {
+        return res.status(503).json({ error: 'INDEXNOW_SECRET 未配置，该端点已关闭' });
+    }
+
+    const header = req.headers['x-indexnow-secret'];
+    const provided = Array.isArray(header) ? header[0] : header;
+
+    const matches = (value: string): boolean => {
+        try {
+            return timingSafeEqual(
+                createHash('sha256').update(value).digest(),
+                createHash('sha256').update(expectedSecret).digest(),
+            );
+        } catch {
+            return false;
+        }
+    };
+
+    if (typeof provided !== 'string' || provided.length === 0 || !matches(provided)) {
+        return res.status(401).json({ error: 'Unauthorized' });
     }
 
     if (req.method === 'GET') {
