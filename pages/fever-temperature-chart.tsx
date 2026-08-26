@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { track } from '../utils/track';
 import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
@@ -477,7 +478,7 @@ export default function FeverTemperatureChart({ lastUpdatedIso }: FeverTemperatu
                         <h2>{t('download.title')}</h2>
                         <p>{t('download.description')}</p>
 
-                        <a href="/downloads/fever-temperature-chart.pdf" className="btn-download" download="Fever-Temperature-Chart.pdf">
+                        <a href="/downloads/fever-temperature-chart.pdf" className="btn-download" download="Fever-Temperature-Chart.pdf" onClick={() => track('chart_download', { file: 'fever-temperature-chart.pdf', page: 'fever-temperature-chart' })}>
                             <span>📄</span>
                             {t('download.btn')}
                         </a>

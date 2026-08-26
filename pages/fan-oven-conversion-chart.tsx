@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { track } from '../utils/track';
+import Monetization from '../components/Monetization';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -728,7 +730,7 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
           </div>
 
           <div className={styles.downloadSection}>
-            <a href="/downloads/fan-oven-conversion-chart.pdf" className={styles.downloadBtn} download>
+            <a href="/downloads/fan-oven-conversion-chart.pdf" className={styles.downloadBtn} download onClick={() => track('chart_download', { file: 'fan-oven-conversion-chart.pdf', page: 'fan-oven-conversion-chart' })}>
               {t('charts.download.text')}
             </a>
           </div>
@@ -793,7 +795,9 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
           </div>
         </section>
 
-        <section className={styles.faqSection} id="faqs">
+        <Monetization variant="chart" cluster="oven" page="fan-oven-conversion-chart" />
+
+      <section className={styles.faqSection} id="faqs">
           <h2>{t('faqs.title')}</h2>
 
           <div className={styles.faqGrid}>

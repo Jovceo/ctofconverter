@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { track } from '../utils/track';
 import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
@@ -317,7 +318,11 @@ export default function Home({ locale, commonMessages, homeMessages, qualityGuid
                             ))}
                         </div>
 
-                        <a href="/downloads/celsius-to-fahrenheit-chart.pdf" className="pdf-download-btn">
+                        <a
+              href="/downloads/celsius-to-fahrenheit-chart.pdf"
+              className="pdf-download-btn"
+              onClick={() => track('chart_download', { file: 'celsius-to-fahrenheit-chart.pdf', page: 'home' })}
+            >
                             <span className="btn-icon">📄</span>
                             <span className="btn-text">{t('reference.downloadButton.text')}</span>
                         </a>

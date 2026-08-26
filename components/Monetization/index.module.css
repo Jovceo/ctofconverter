@@ -1,0 +1,92 @@
+/* 内容区变现模块：与正文视觉分离，避免「广告混进内容」的判定风险 */
+.wrap {
+  margin: 36px 0;
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.disclosure {
+  margin: 0 0 12px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+.offers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.offer + .offer {
+  margin-top: 0;
+}
+
+.offerLink {
+  display: block;
+  height: 100%;
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #0f766e;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #0f172a;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.offerLink:hover,
+.offerLink:focus-visible {
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+  transform: translateY(-2px);
+}
+
+.offerName {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.offerWhy {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #475569;
+}
+
+.offerPrice {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0f766e;
+}
+
+/* 预留高度：广告填充前不产生布局位移（CLS） */
+.adFrame {
+  min-height: 90px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.wrap .offers + .adFrame {
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 16px;
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    padding: 14px;
+    margin: 28px 0;
+  }
+
+  .offers {
+    grid-template-columns: 1fr;
+  }
+}

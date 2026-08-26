@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { track } from '../utils/track';
+import Monetization from '../components/Monetization';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -419,7 +421,9 @@ export default function BodyTemperatureGuide({ lastUpdatedIso }: BodyTemperature
                     </div>
                 </section>
 
-                <section className="faq-section">
+                <Monetization variant="guide" cluster="body" page="body-temperature-chart-fever-guide" />
+
+        <section className="faq-section">
                     <h2 id="faq-title">{t('faqs.title')}</h2>
                     {(t('faqs.items') as any[] || []).map((faq: any, i: number) => (
                         <div key={i} className={styles.faqItem}>
@@ -462,7 +466,7 @@ export default function BodyTemperatureGuide({ lastUpdatedIso }: BodyTemperature
                 <section className={styles.downloadSection}>
                     <h2 id="download-title">{t('download.title')}</h2>
                     <p>{t('download.content')}</p>
-                    <a href="/downloads/fever-temperature-chart.pdf" className={styles.btnDownload}>{t('download.btn')}</a>
+                    <a href="/downloads/fever-temperature-chart.pdf" className={styles.btnDownload} onClick={() => track('chart_download', { file: 'fever-temperature-chart.pdf', page: 'body-temperature-chart-fever-guide' })}>{t('download.btn')}</a>
                 </section>
 
                 <section className={styles.disclaimer}>

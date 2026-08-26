@@ -6,9 +6,14 @@
 
 /**
  * 根据输入值选择确定的变体下标
+ *
+ * 2026-08-26 拆轮换：AGENTS.md 红线明令禁用同义替换（“Google Helpful Content 能识别伪原创模式”）。
+ * 以前这里用 celsius+偏移 在变体池里挑句子，本质就是按页伪原创；现在一律取第一条，
+ * 全站同一句真实表述。差异靠 locales/en/{slug}.json 里人工写的内容实现。
+ * 保留函数签名是为了不再改各调用点；新页不再应该引入 textSpinner。
  */
-function getVariantIndex(seed: number, length: number): number {
-    return Math.abs(Math.round(seed)) % length;
+function getVariantIndex(_seed: number, _length: number): number {
+    return 0;
 }
 
 import { formatTemperature } from './temperatureCore';
@@ -156,10 +161,6 @@ export const textSpinner = {
 
         const idx = getVariantIndex(celsius + 7, variants.length);
 
-        return {
-            textWithTags: variants[idx],
-            linkUrl: getLocalizedLink(url, locale)
-        };
         return {
             textWithTags: variants[idx],
             linkUrl: getLocalizedLink(url, locale)

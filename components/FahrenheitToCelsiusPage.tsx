@@ -8,6 +8,8 @@ import pageStyles from '../styles/TemperatureTemplate.module.css';
 import conversionToolStyles from './ConversionTool/index.module.css';
 import { fahrenheitToCelsius, formatTemperature } from '../utils/fahrenheitHelpers';
 import { getLatestModifiedDate } from '../utils/dateHelpers';
+import Monetization from './Monetization';
+import { track, trackOnce } from '../utils/track';
 
 export interface FahrenheitToCelsiusPageProps {
   fahrenheit: number;
@@ -41,6 +43,9 @@ const FToCConverter: React.FC<{ initialFahrenheit: number }> = React.memo(({ ini
     if (value && !isNaN(parseFloat(value))) {
       const c = fahrenheitToCelsius(parseFloat(value));
       setCelsius(formatTemperature(c, 1));
+      // 反向换算被真正用起来 = 这批页面值得加 F→C 内容/联盟位的唯一可度量信号
+      trackOnce('reverse_conversion_used', 'f-to-c', { direction: 'f_to_c' });
+      trackOnce('conversion_completed', 'f-to-c', { direction: 'f_to_c', source: 'converter' });
     } else {
       setCelsius(null);
     }
@@ -51,6 +56,7 @@ const FToCConverter: React.FC<{ initialFahrenheit: number }> = React.memo(({ ini
     if (celsius) {
       navigator.clipboard.writeText(`${fahrenheit}°F = ${celsius}°C`);
       setCopySuccess(true);
+      track('copy_result', { direction: 'f_to_c', source: 'converter' });
       setTimeout(() => setCopySuccess(false), 2000);
     }
   }, [fahrenheit, celsius]);
@@ -288,6 +294,8 @@ export const FahrenheitToCelsiusPage: React.FC<FahrenheitToCelsiusPageProps> = (
 
             {/* Custom sections (body temperature, weather, tables, etc.) */}
             {customSections}
+
+        <Monetization variant="temperature" cluster="general" page={canonicalUrl || `/fahrenheit-to-celsius`} />
 
             {/* FAQ */}
             <FAQAccordion faqs={faq} />

@@ -85,6 +85,7 @@ AI 搜索引擎（Google AI Overviews、ChatGPT、Perplexity）与传统 SEO 的
 - 新建页面：创建 `locales/en/{slug}.json` + 薄包装 `.tsx`，走同一套 i18n JSON 路径
 - 统一走 JSON 的目的：未来扩展多语言时只需加 `locales/{locale}/{slug}.json`，不用改代码
 - 所有页面都需要 `disableSmartFaqs={true}` 跳过 textSpinner FAQ
+- `TemperaturePage` 里的 `renderGranularInsight()`（「💡 Analysis: {label}」卡片）自 2026-02-12 起已注释停用，**不得恢复**：它是 `getGranularContext().description` 机器句的唯一渲染出口，与零程序化内容红线冲突。`utils/temperatureContext.ts` 的 `formatLabel` 保留，但只当展示用标签格式化器，不得再把它的输出拼进 description / og / JSON-LD。
 - 精做页面去掉多语言链接和 hreflang 标签，只保留英语版本
 
 ### 本地验证与构建
@@ -118,6 +119,7 @@ AI 搜索引擎（Google AI Overviews、ChatGPT、Perplexity）与传统 SEO 的
 - [ ] `pages/index.tsx` 的 `QUALITY_PAGE_INFO` 已更新（如有新精做页面，否则首页不显示链接）
 - [ ] `config/migrated-routes.json` 已更新（如有新页面需要 301 旧 HTML）
 - [ ] 环境变量 `INDEXNOW_SECRET`：**默认不设**。`/api/indexnow` 在没这个变量时直接 503 关闭（fail-closed，2026-08-25 改），保持关着就是安全的。只有确实需要从远端手动触发提交时才设；日常提交走 `scripts/manual-indexnow.js`，它直接打 IndexNow，不需要这个端点。
+- [ ] 如改动了变现层：`config/monetization.json` 保持 UTF-8 **无 BOM**（带 BOM 会直接 500），并确认 `enabled: false` 时线上页面搜不到 `adsbygoogle`
 - [ ] Vercel production build 成功
 
 ## 精做页面原则
@@ -150,6 +152,25 @@ AI 搜索引擎（Google AI Overviews、ChatGPT、Perplexity）与传统 SEO 的
 - 权威数据是否标注来源（WHO/USDA/NOAA/CDC）
 - 实体名称是否全文统一（不混用"180°C"和"180 degrees C"）
 - FAQ 答案是否能被 AI 直接摘录引用
+
+## 变现与度量（2026-08-26 起）
+
+### 唯一入口
+- 所有广告位与联盟位只能走 `config/monetization.json` + `components/Monetization/`。禁止在页面或组件里手写 `<ins class="adsbygoogle">`、禁止直接引 `adsbygoogle.js`。
+- 默认全关。关着的时候 `Analytics.tsx` 不注入广告脚本、`Monetization` 返回 null（无 DOM、无第三方请求）——这条是「Auto Ads 永久关闭」红线的代码护栏，后台开关被人回摆也不会出广告。
+- 启用 = 在 AdSense 后台建**手动**广告单元，把 `data-ad-slot` 填进 `ads.slots.{temperature|chart|guide}`，再翻 `enabled`。缺 slot 一律不渲染。
+
+### 位置红线（组件已按此固定，改动时需保持）
+- 挂载只允许出现在内容块之后、FAQ 之前；H1 与答案区（Answer Capsule）之间禁放。
+- 单页移动端 ≤2 位：温度页 1 位（variant=temperature）、图表长页 1 位（chart）、指南页 1 位（guide）。
+- 广告容器预留高度，避免 CLS；联盟卡必须带 `rel="sponsored noopener nofollow"` 与披露语（FTC + 亚马逊要求）。
+- 联盟 `offers[].url` 必须是在亚马逊页面亲自核对过的真实链接（同「数据核实」红线）；`affiliate.tag` 为空则不渲染，不做无佣金导流。
+
+### 度量（回答「哪页值得加广告位」的唯一依据）
+`utils/track.ts` 已接：`conversion_completed`、`copy_result`、`chart_download`、`related_page_click`、`reverse_conversion_used`。新增交互型功能时补事件，不要新建平行命名；GA4 后台需将事件登记为 Key event。
+
+### 同义替换（红线重申）
+`utils/textSpinner.ts` 的变体轮换已于 2026-08-26 停用（`getVariantIndex` 恒返回 0）。不得恢复；也不得在新页引入 textSpinner——页面差异靠 `locales/en/{slug}.json` 人工内容实现。
 
 ## 禁止行为
 - ❌ 使用 textSpinner.ts 或任何同义替换工具 — Google Helpful Content 算法能识别伪原创模式，会导致整站降权

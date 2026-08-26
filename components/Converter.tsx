@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { track, trackOnce } from '../utils/track';
 import { useTranslation } from '../utils/i18n';
 
 const ABSOLUTE_ZERO = -273.15;
@@ -86,6 +87,7 @@ export default function Converter() {
 
     const fahrenheitValue = convertCtoF(celsiusValue);
     setFahrenheit(formatTemperature(fahrenheitValue));
+    trackOnce('conversion_completed', 'converter-card', { direction: 'c_to_f', source: 'converter' });
 
     // Update step visualizations
     const step1 = celsiusValue * 9 / 5;
@@ -145,6 +147,7 @@ export default function Converter() {
     try {
       await navigator.clipboard.writeText(fahrenheit);
       setCopySuccess(true);
+      track('copy_result', { direction: 'c_to_f', source: 'converter' });
       setTimeout(() => setCopySuccess(false), 2000);
     } catch (err) {
       console.error('Failed to copy: ', err);

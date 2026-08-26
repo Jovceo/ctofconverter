@@ -476,17 +476,7 @@
         gtag('config', 'G-7KGQPN84Z6');
     };
     
-    // Load Google AdSense (adsbygoogle.js)
-    const adsScript = document.createElement('script');
-    adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1199889942562451";
-    adsScript.async = true;
-    adsScript.crossOrigin = "anonymous";
-    document.head.appendChild(adsScript);
     
-    // Push ad request after script loads
-    adsScript.onload = function() {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-    };
   }
 
   // Load scripts on first user interaction (scroll, click, mousemove, touch)

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { track } from '../utils/track';
 import { useTranslation, getDisplayLocale } from '../utils/i18n';
 import { normalizeMigratedUrl } from '../utils/normalizeMigratedUrl';
 
@@ -75,6 +76,12 @@ export default function ReferenceSection() {
         id="download-pdf-btn"
         className="pdf-download-btn"
         aria-label={reference.downloadButton.aria}
+        onClick={() =>
+          track('chart_download', {
+            file: 'celsius-to-fahrenheit-chart.pdf',
+            block: 'reference_section',
+          })
+        }
       >
         <span className="btn-icon">📄</span>
         <span className="btn-text">{reference.downloadButton.text}</span>

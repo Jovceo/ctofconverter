@@ -209,7 +209,6 @@ export function generatePageUrl(celsius: number, locale: string = 'en', baseUrl:
   return `${baseUrl}${localePath}/${celsiusSlug}-c-to-f`;
 }
 
-import { textSpinner } from './textSpinner';
 
 /**
  * SEO 策略枚举
@@ -348,8 +347,8 @@ export function generateOGDescription(celsius: number, fahrenheit: number, t: (k
   });
 
   if (description === 'meta.ogDescription') {
-    // Fallback to text spinner or general meta description
-    return textSpinner.getMetaDescription(celsius, fahrenheit, t);
+    // 不再回退到 textSpinner 轮换文案（AGENTS.md 同义替换红线）；用一句固定表述。
+    return `${celsius} degrees Celsius equals ${formatTemperature(fahrenheit)} degrees Fahrenheit. Free calculator, formula and conversion chart.`;
   }
 
   return description;

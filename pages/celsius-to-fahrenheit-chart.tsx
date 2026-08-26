@@ -1,4 +1,5 @@
 import React from 'react';
+import { track } from '../utils/track';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -151,7 +152,7 @@ export default function TemperatureChartPage({ lastUpdatedIso, temperatureData, 
                             <h3>{t.download_h3}</h3>
                             <p>{t.download_p}</p>
                         </div>
-                        <a href="/downloads/celsius-to-fahrenheit-chart.pdf" download className="download-btn">
+                        <a href="/downloads/celsius-to-fahrenheit-chart.pdf" download className="download-btn" onClick={() => track('chart_download', { file: 'celsius-to-fahrenheit-chart.pdf', page: 'celsius-to-fahrenheit-chart' })}>
                             {t.download_btn}
                         </a>
                     </div>

@@ -1,0 +1,31 @@
+{
+  "_readme": [
+    "变现层总开关与位点配置。这是全站唯一的变现入口，代码层护栏在这里，不靠 AdSense 后台开关。",
+    "ads.enabled=false 或某个 slot 为空字符串时，AdSlot 不渲染任何 DOM、不加载 adsbygoogle.js —— 零流量期保持这个状态即可。",
+    "启用步骤：1) AdSense 后台建「展示广告 - 手动广告单元」拿到 data-ad-slot；2) 填进 ads.slots 对应位；3) ads.enabled 改 true；4) 部署后肉眼确认页面只有约定数量的广告位。",
+    "affiliate.tag 必须是 Amazon Associates 的 Store ID（形如 ctofconverter-20）；tag 为空时联盟卡片一律不渲染（不做无佣金的外链导出）。",
+    "offers 里的 url 必须是维护者亲自在亚马逊核对过的商品链接，不得凭记忆或估算填写（AGENTS.md 数据核实红线）。",
+    "广告位规则：单页移动端 <=2 位；H1 与答案区之间禁放；本组件固定挂在内容块之后、FAQ 之前。",
+    "注意：本文件必须存成 UTF-8 无 BOM。带 BOM 会让 next dev 直接 500（2026-08-26 实测）。"
+  ],
+  "ads": {
+    "enabled": false,
+    "client": "ca-pub-1199889942562451",
+    "slots": {
+      "temperature": "",
+      "chart": "",
+      "guide": ""
+    }
+  },
+  "affiliate": {
+    "enabled": false,
+    "network": "amazon",
+    "tag": "",
+    "disclosure": "Some links on this page are affiliate links. If you buy through them we may earn a commission at no extra cost to you. We only list tools we can explain why we picked.",
+    "offers": {
+      "oven": [],
+      "body": [],
+      "general": []
+    }
+  }
+}

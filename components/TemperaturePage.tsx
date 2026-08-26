@@ -11,6 +11,8 @@ import insightsStyles from '../components/TemperatureInsights/index.module.css';
 import conversionToolStyles from '../components/ConversionTool/index.module.css';
 import practicalAppsStyles from '../components/PracticalApps/index.module.css';
 import pageStyles from '../styles/TemperatureTemplate.module.css';
+import Monetization from '../components/Monetization';
+import { track, trackOnce } from '../utils/track';
 
 // 瀵煎叆宸ュ叿鍑芥暟
 import {
@@ -35,6 +37,28 @@ import { useTranslation, getLocalizedLink, SUPPORTED_LOCALES, HREFLANG_MAP } fro
  * 缈昏瘧鍑芥暟绫诲瀷
  */
 type TFunction = (key: string, replacements?: Record<string, string | number>) => string;
+
+/**
+ * 把描述截到句子边界，避免搜索引擎在半个单词处断开（实测 /4-c-to-f 出现过
+ * “…this cold temper” 这种断句）。只删不补：绝不为了凑长度编造内容。
+ */
+function clampToSentence(text: string, max: number): string {
+  const clean = text.replace(/\s+/g, ' ').trim();
+  if (clean.length <= max) return clean;
+
+  const window = clean.slice(0, max);
+  const lastBoundary = Math.max(
+    window.lastIndexOf('. '),
+    window.lastIndexOf('! '),
+    window.lastIndexOf('? '),
+    window.lastIndexOf('.'),
+  );
+
+  if (lastBoundary >= Math.floor(max * 0.55)) {
+    return window.slice(0, lastBoundary + 1).trim();
+  }
+  return `${window.slice(0, window.lastIndexOf(' '))}…`;
+}
 
 /**
  * Temperature page props
@@ -377,6 +401,7 @@ const EnhancedConverter: React.FC<{ t: TFunction; initialCelsius?: number }> = R
     if (value && !isNaN(parseFloat(value))) {
       const f = celsiusToFahrenheit(parseFloat(value));
       setFahrenheit(formatTemperature(f));
+      trackOnce('conversion_completed', 'temperature-page', { direction: 'c_to_f', source: 'page_converter' });
     } else {
       setFahrenheit(null);
     }
@@ -387,6 +412,7 @@ const EnhancedConverter: React.FC<{ t: TFunction; initialCelsius?: number }> = R
     if (fahrenheit) {
       navigator.clipboard.writeText(`${celsius}°C = ${fahrenheit}°F`);
       setCopySuccess(true);
+      track('copy_result', { direction: 'c_to_f', source: 'page_converter' });
       setTimeout(() => setCopySuccess(false), 2000);
     }
   }, [celsius, fahrenheit]);
@@ -646,7 +672,18 @@ const RelatedTemperatures: React.FC<{
           );
 
           return isClickable ? (
-            <Link key={idx} href={item.href || ''} className={pageStyles.link}>
+            <Link
+              key={idx}
+              href={item.href || ''}
+              className={pageStyles.link}
+              onClick={() =>
+                track('related_page_click', {
+                  block: 'related_temperatures',
+                  from: `${celsius}-c-to-f`,
+                  target: item.href,
+                })
+              }
+            >
               {CardContent}
             </Link>
           ) : (
@@ -741,7 +778,9 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
   availablePages,
   customIntro,
   customSections,
-  disableSmartFaqs = false,
+  // 安全默认：不传就不给模板 FAQ。AGENTS.md 要求所有页面 disableSmartFaqs={true}，
+  // 默认值给 true 才能接住忘传的新页（实测 /37-5-c-to-f 曾默认拿到轮换 FAQ）。
+  disableSmartFaqs = true,
   showEditorialNote = true,
   customOgImage,
   alternateLocales
@@ -751,6 +790,13 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
 
   // Get granular context
   const granularContext = useMemo(() => getGranularContext(celsius), [celsius]);
+
+  // 联盟位集群：温度场景决定推什么商品（烤箱线 / 体温线），其余不推
+  const offerCluster: 'oven' | 'body' | 'general' = granularContext.key.startsWith('oven')
+    ? 'oven'
+    : granularContext.key.startsWith('body')
+      ? 'body'
+      : 'general';
 
   // Enhanced translation: check page-specific namespace first, then fallback to template
   const t: TFunction = useMemo(() => (key: string, repl?: Record<string, string | number>) => {
@@ -784,29 +830,25 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
     // SEO: Page title logic
     const pageTitle = stripHtml(customMetaTitle || customTitle || strategy?.meta?.title || generatePageTitle(celsius, f, t, context));
 
-    // SEO: Meta description logic with granular context fallback
-    let metaDescription = customMetaDescription || customDescription || strategy?.meta?.description;
-    if (!metaDescription) {
-      // Enhance description with specific context if available
-      if (granularContext.key !== 'general' && granularContext.description) {
-        const baseDesc = generateMetaDescription(celsius, f, t, context);
-        metaDescription = `${baseDesc} ${granularContext.description}`;
-      } else {
-        metaDescription = generateMetaDescription(celsius, f, t, context);
-      }
-    }
-    metaDescription = stripHtml(metaDescription);
+    // SEO: Meta description —— 只用人工写的文案（custom* / 页面 JSON）。
+    // 不再把 getGranularContext() 生成的机器句拼进 description（2026-08-26 移除：
+    // 那是程序化内容，且旧实现会输出 "w e a t h e r" 这种碎字摘要）。
+    let metaDescription =
+      customMetaDescription ||
+      customDescription ||
+      strategy?.meta?.description ||
+      generateMetaDescription(celsius, f, t, context);
+    metaDescription = clampToSentence(stripHtml(metaDescription), 155);
 
     // SEO: OG description logic
-    let ogDescription = strategy?.meta?.ogDescription;
-    if (!ogDescription) {
-      if (granularContext.key !== 'general' && granularContext.description) {
-        ogDescription = granularContext.description;
-      } else {
-        ogDescription = generateOGDescription(celsius, f, t);
-      }
-    }
-    ogDescription = stripHtml(ogDescription);
+    // 优先用本页人工文案：旧实现只看 strategy.meta.ogDescription，缺失时退回全站通用句，
+    // 导致 /37-5-c-to-f 这类页面 description 具体、og/twitter:description 却是站级模板（2026-08-26）。
+    let ogDescription =
+      strategy?.meta?.ogDescription ||
+      customMetaDescription ||
+      customDescription ||
+      generateOGDescription(celsius, f, t);
+    ogDescription = clampToSentence(stripHtml(ogDescription), 200);
 
     return {
       fahrenheit: f,
@@ -815,7 +857,7 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
       ogDescription,
       context
     };
-  }, [celsius, t, customTitle, customDescription, customMetaTitle, customMetaDescription, strategy, granularContext]);
+  }, [celsius, t, customTitle, customDescription, customMetaTitle, customMetaDescription, strategy]);
 
   // 3. Third: Main Data & Structured Data (depends on Date & Title)
   const { formattedFahrenheit, pageUrl, structuredData } = useMemo(() => {
@@ -979,7 +1021,18 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
                           // Odd indices are the matches (the text inside tags)
                           if (i % 2 === 1) {
                             return (
-                              <Link key={i} href={linkUrl} className={pageStyles.introLink}>
+                              <Link
+                                key={i}
+                                href={linkUrl}
+                                className={pageStyles.introLink}
+                                onClick={() =>
+                                  track('related_page_click', {
+                                    block: 'intro_link',
+                                    from: `${celsius}-c-to-f`,
+                                    target: linkUrl,
+                                  })
+                                }
+                              >
                                 {part}
                               </Link>
                             );
@@ -1013,6 +1066,8 @@ export const TemperaturePage: React.FC<TemperaturePageProps> = ({
             {strategy.modules.showPracticalApps !== false && <PracticalApplications celsius={celsius} fahrenheit={fahrenheit} t={t} />}
 
             {strategy.modules.showOvenGuide && <ConversionTable celsius={celsius} t={t} locale={locale} availablePages={availablePages} />}
+
+            <Monetization variant="temperature" cluster={offerCluster} page={canonicalUrl || `/${celsius}-c-to-f`} />
 
             <EnhancedFAQ celsius={celsius} fahrenheit={fahrenheit} customFaqs={strategy.faqs} disableSmartFaqs={disableSmartFaqs} t={t} />
 

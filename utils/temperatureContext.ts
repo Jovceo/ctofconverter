@@ -103,8 +103,16 @@ export const getGranularContext = (celsius: number): TemperatureContext => {
 
 const formatLabel = (key?: string) => {
     if (!key) return 'Standard';
-    // Convert camelCase to Title Case (e.g., normalBodyTemp -> Normal Body Temp)
-    return key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).trim();
+    // 输入有两类：camelCase（normalBodyTemp）与 SCREAMING scene name / 枚举（WEATHER、EXTREME_COLD）。
+    // 旧实现的 else 分支用 /([A-Z])/g 拆词，对连续大写无效 → "W E A T H E R"、"B O D Y"，
+    // 曾渗进 meta description / og / JSON-LD 与 "💡 Analysis" 标题（2026-08-26 修）。
+    // 拆词只按 camelCase 边界 ([a-z])([A-Z])，且必须在大写归一之前做。
+    const spaced = key
+        .replace(/_+/g, ' ')
+        .replace(/([a-z])([A-Z])/g, '$1 $2')
+        .replace(/\s+/g, ' ')
+        .trim();
+    return spaced.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase());
 };
 
 const getColorForScene = (scene: string, celsius: number): string => {
