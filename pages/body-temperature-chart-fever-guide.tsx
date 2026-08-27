@@ -122,8 +122,11 @@ export default function BodyTemperatureGuide({ lastUpdatedIso }: BodyTemperature
             }
         } else if (person === 'child') {
             // Child logic
-            if (temp < 36.0) {
+            if (temp < 35.0) {
                 status = t('assessment.statuses.hypothermia'); severity = t('assessment.severities.danger'); color = "#2c7fb8";
+                advice = t('assessment.advice.child.hypo');
+            } else if (temp < 36.0) {
+                status = t('assessment.statuses.lowTemp', { defaultValue: 'Below Normal' }); severity = t('assessment.severities.warning'); color = "#4a90c0";
                 advice = t('assessment.advice.child.hypo');
             } else if (temp < 37.8) {
                 status = t('assessment.statuses.normal'); severity = t('assessment.severities.normal'); color = "#4CAF50";
@@ -137,8 +140,11 @@ export default function BodyTemperatureGuide({ lastUpdatedIso }: BodyTemperature
             }
         } else {
             // Adult logic
-            if (temp < 36.0) {
+            if (temp < 35.0) {
                 status = t('assessment.statuses.hypothermia'); severity = t('assessment.severities.danger'); color = "#2c7fb8";
+                advice = t('assessment.advice.adult.hypo');
+            } else if (temp < 36.0) {
+                status = t('assessment.statuses.lowTemp', { defaultValue: 'Below Normal' }); severity = t('assessment.severities.warning'); color = "#4a90c0";
                 advice = t('assessment.advice.adult.hypo');
             } else if (temp < 37.6) {
                 status = t('assessment.statuses.normal'); severity = t('assessment.severities.normal'); color = "#4CAF50";

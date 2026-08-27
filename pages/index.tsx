@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import { getLocalizedLink } from '../utils/locale-config';
+import { getLocalizedLink, getRobotsDirective, isIndexableLocale } from '../utils/locale-config';
 import { createTranslator, TranslationDictionary } from '../utils/translation-runtime';
 import { celsiusToFahrenheit, formatTemperature } from '../utils/temperaturePageHelpers';
 import { getLocalizedAbsoluteUrl } from '../utils/seo';
@@ -140,11 +140,15 @@ export default function Home({ locale, commonMessages, homeMessages, qualityGuid
                 <meta name="description" content={t('meta.description')} />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="author" content="Ctofconverter Team" />
-                <meta name="robots" content="index, follow" />
+                <meta name="robots" content={getRobotsDirective(currentLocale)} />
 
                 <link rel="canonical" href={homepageUrl} />
-                <link rel="alternate" hrefLang="en" href={homepageUrl} />
-                <link rel="alternate" hrefLang="x-default" href={homepageUrl} />
+                {isIndexableLocale(currentLocale) && (
+                    <>
+                        <link rel="alternate" hrefLang="en" href={homepageUrl} />
+                        <link rel="alternate" hrefLang="x-default" href={homepageUrl} />
+                    </>
+                )}
 
                 <meta property="og:title" content={t('meta.ogTitle')} />
                 <meta property="og:description" content={t('meta.ogDescription')} />

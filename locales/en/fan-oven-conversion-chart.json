@@ -31,7 +31,7 @@
     "generalRule": "General rule: Reduce conventional oven temperatures by 20°C (or 25-30°F) for fan ovens.",
     "items": [
       {
-        "text": "Gas Mark 4 = 180°C fan oven"
+        "text": "Gas Mark 4 = 180°C conventional → 160°C fan"
       },
       {
         "text": "450°F = 230°C conventional → 210°C fan"
@@ -43,13 +43,13 @@
         "text": "180°C conventional = 160°C fan"
       },
       {
-        "text": "Gas Mark 6 = 200°C fan oven"
+        "text": "Gas Mark 6 = 200°C conventional → 180°C fan"
       },
       {
         "text": "400°F = 200°C conventional → 180°C fan"
       },
       {
-        "text": "Gas Mark 2 = 150°C fan oven"
+        "text": "Gas Mark 2 = 150°C conventional → 130°C fan"
       },
       {
         "text": "425°F = 220°C conventional → 200°C fan"
@@ -109,13 +109,13 @@
   "charts": {
     "title": "Comprehensive Temperature Conversion Charts",
     "gasMark4Title": "What is gas mark 4 in a fan oven?",
-    "gasMark4Text": "Gas mark 4 is equivalent to 180°C in a fan oven. This temperature is perfect for baking cakes, cookies, and roasting vegetables.",
+    "gasMark4Text": "Gas mark 4 is 180°C in a conventional oven. A fan oven needs 160°C for the same result — the standard setting for cakes, cookies and roasting vegetables.",
     "fahrenheit450Title": "450 fahrenheit to celsius fan oven conversion",
     "fahrenheit450Text": "450°F converts to approximately 230°C in a conventional oven. For a fan oven, reduce by 20°C to get 210°C.",
     "conventional180Title": "How to convert 180°C conventional to fan oven",
     "conventional180Text": "To convert 180°C from conventional to fan oven, reduce the temperature by 20°C. The fan oven equivalent is 160°C.",
     "gasMark6Title": "What is gas mark 6 in a fan oven?",
-    "gasMark6Text": "Gas mark 6 is equivalent to 200°C in a fan oven. This temperature is perfect for roasting meats and baking bread.",
+    "gasMark6Text": "Gas mark 6 is 200°C in a conventional oven. In a fan oven, set 180°C. This is a good roasting temperature for meats and for baking bread.",
     "fahrenheit350Title": "350 fahrenheit to celsius fan oven",
     "fahrenheit350Text": "350°F converts to approximately 175°C in a conventional oven. For a fan oven, reduce by 20°C to get 155°C.",
     "tabs": {
@@ -200,40 +200,64 @@
       ],
       "gasMark": [
         {
-          "mark": "9",
-          "fanC": "240°C",
-          "fanF": "465°F",
-          "uses": "Searing meats, pizza"
+          "mark": "1/2",
+          "fanC": "100°C",
+          "fanF": "212°F",
+          "uses": "Very slow baking, drying"
         },
         {
-          "mark": "7",
-          "fanC": "200°C",
-          "fanF": "400°F",
-          "uses": "Roasting vegetables"
-        },
-        {
-          "mark": "5",
-          "fanC": "170°C",
-          "fanF": "340°F",
-          "uses": "Fruit cakes, casseroles"
-        },
-        {
-          "mark": "4",
-          "fanC": "180°C",
-          "fanF": "350°F",
-          "uses": "Cakes, cookies, roasting"
-        },
-        {
-          "mark": "3",
-          "fanC": "140°C",
-          "fanF": "275°F",
+          "mark": "1",
+          "fanC": "120°C",
+          "fanF": "248°F",
           "uses": "Meringues, delicate baking"
         },
         {
           "mark": "2",
-          "fanC": "150°C",
-          "fanF": "300°F",
+          "fanC": "130°C",
+          "fanF": "266°F",
           "uses": "Slow cooking, casseroles"
+        },
+        {
+          "mark": "3",
+          "fanC": "150°C",
+          "fanF": "302°F",
+          "uses": "Fruit cakes, gentle baking"
+        },
+        {
+          "mark": "4",
+          "fanC": "160°C",
+          "fanF": "320°F",
+          "uses": "Cakes, cookies, roasting"
+        },
+        {
+          "mark": "5",
+          "fanC": "170°C",
+          "fanF": "338°F",
+          "uses": "Pies, casseroles, fish, scones"
+        },
+        {
+          "mark": "6",
+          "fanC": "180°C",
+          "fanF": "356°F",
+          "uses": "Roasting meats and vegetables, bread"
+        },
+        {
+          "mark": "7",
+          "fanC": "200°C",
+          "fanF": "392°F",
+          "uses": "Roasting vegetables, puff pastry"
+        },
+        {
+          "mark": "8",
+          "fanC": "210°C",
+          "fanF": "410°F",
+          "uses": "High-heat roasting"
+        },
+        {
+          "mark": "9",
+          "fanC": "220°C",
+          "fanF": "428°F",
+          "uses": "Pizza, searing meats, artisan bread"
         }
       ]
     }
@@ -348,7 +372,7 @@
       },
       {
         "question": "How to convert gas mark to fan oven?",
-        "answer": "Use our conversion chart above. Generally, gas mark 4 = 180°C fan, gas mark 6 = 200°C fan, and gas mark 2 = 150°C fan."
+        "answer": "A gas mark is a conventional gas-oven dial setting, so subtract 20°C for a fan oven: gas mark 4 = 180°C conventional (160°C fan), gas mark 6 = 200°C (180°C fan), gas mark 2 = 150°C (130°C fan)."
       }
     ],
     "accordion": [

@@ -1,0 +1,136 @@
+{
+  "id": "safe-internal-temperatures",
+  "title": "USDA safe minimum internal cooking temperatures",
+  "description": "Minimum internal temperatures by product, with rest times, as published by USDA FSIS, plus the danger zone.",
+  "version": "1.0.0",
+  "updated": "2026-08-27",
+  "license": "CC-BY-4.0",
+  "attribution": "ctofconverter.com",
+  "languages": [
+    "en"
+  ],
+  "page": "/180-c-to-f",
+  "authority": "USDA Food Safety and Inspection Service (FSIS)",
+  "provenance": [
+    {
+      "source": "USDA FSIS — Safe Minimum Internal Temperature Chart",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart",
+      "checkedOn": "2026-08-27",
+      "note": "Page states 'Last Updated: Apr 14, 2025'. Every row below reproduces that table verbatim, including the exact Celsius values FSIS prints (62.8 / 71.1 / 73.9 / 60 °C), which are the Fahrenheit figures converted, not independently rounded."
+    },
+    {
+      "source": "USDA FSIS — Danger Zone 40F - 140F",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/danger-zone-40f-140f",
+      "checkedOn": "2026-08-27",
+      "note": "The 40–140 °F range is taken from the section title as listed in FSIS navigation on 2026-08-27; the page body could not be re-fetched here because fsis.usda.gov returns 403 to non-browser clients. Treat the range as stable (it is long-standing USDA guidance) and re-check the page itself before republishing at scale."
+    }
+  ],
+  "columns": [
+    {
+      "key": "product",
+      "label": "Product",
+      "type": "string"
+    },
+    {
+      "key": "min_fahrenheit",
+      "label": "Minimum internal temperature",
+      "unit": "°F",
+      "type": "number"
+    },
+    {
+      "key": "min_celsius",
+      "label": "Minimum internal temperature",
+      "unit": "°C",
+      "type": "number"
+    },
+    {
+      "key": "rest_minutes",
+      "label": "Rest time",
+      "unit": "min",
+      "type": "number"
+    },
+    {
+      "key": "note",
+      "label": "Note",
+      "type": "string"
+    }
+  ],
+  "rows": [
+    {
+      "product": "Beef, pork, veal and lamb — steaks, chops and roasts",
+      "min_fahrenheit": 145,
+      "min_celsius": 62.8,
+      "rest_minutes": 3,
+      "note": "Remove from heat, then allow to rest for at least 3 minutes before carving or consuming."
+    },
+    {
+      "product": "Ham, fresh or smoked (uncooked)",
+      "min_fahrenheit": 145,
+      "min_celsius": 62.8,
+      "rest_minutes": 3,
+      "note": "Cook, then rest at least 3 minutes."
+    },
+    {
+      "product": "Fish and shellfish",
+      "min_fahrenheit": 145,
+      "min_celsius": 62.8,
+      "rest_minutes": 0,
+      "note": "Cook until opaque and flaking."
+    },
+    {
+      "product": "Ground meats (beef, pork, veal, lamb)",
+      "min_fahrenheit": 160,
+      "min_celsius": 71.1,
+      "rest_minutes": 0,
+      "note": "Ground product is not covered by the rest-time rule."
+    },
+    {
+      "product": "Eggs",
+      "min_fahrenheit": 160,
+      "min_celsius": 71.1,
+      "rest_minutes": 0,
+      "note": "USDA lists 160 °F for eggs; cook until yolk and white are firm."
+    },
+    {
+      "product": "Fully cooked ham (to reheat)",
+      "min_fahrenheit": 140,
+      "min_celsius": 60,
+      "rest_minutes": 0,
+      "note": "140 °F (60 °C) for hams packaged in USDA-inspected plants; 165 °F (73.9 °C) for all others."
+    },
+    {
+      "product": "All poultry — breasts, whole bird, legs, thighs, wings, ground poultry, giblets and stuffing",
+      "min_fahrenheit": 165,
+      "min_celsius": 73.9,
+      "rest_minutes": 0,
+      "note": "One row in USDA's table; covers ground poultry and stuffing as well."
+    },
+    {
+      "product": "Casseroles",
+      "min_fahrenheit": 165,
+      "min_celsius": 73.9,
+      "rest_minutes": 0,
+      "note": ""
+    },
+    {
+      "product": "Leftovers",
+      "min_fahrenheit": 165,
+      "min_celsius": 73.9,
+      "rest_minutes": 0,
+      "note": "Reheat to 165 °F (73.9 °C) as measured with a food thermometer."
+    }
+  ],
+  "dangerZone": {
+    "min_fahrenheit": 40,
+    "max_fahrenheit": 140,
+    "min_celsius": 4.4,
+    "max_celsius": 60,
+    "rule": "Keep food out of this range: refrigerate promptly, and do not leave perishable food at room temperature for more than 2 hours (1 hour above 90 °F / 32 °C)."
+  },
+  "notes": [
+    "These are minimum internal temperatures measured with a food thermometer in the thickest part, not oven settings. Oven temperature and doneness are different things.",
+    "Consumers may cook to higher temperatures for personal preference; USDA states the values above are the minimums.",
+    "Celsius values are exactly what USDA prints. Where a recipe rounds 145 °F to 63 °C or 165 °F to 74 °C, that is the same rule rounded — do not treat the rounding as a different threshold.",
+    "This dataset covers USDA-regulated meat, poultry, egg and fish products. Produce and other categories are outside FSIS's table and are deliberately not included."
+  ]
+}

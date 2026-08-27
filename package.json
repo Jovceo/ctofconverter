@@ -6,14 +6,15 @@
   "packageManager": "npm@10.9.2",
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/generate-sitemap.js",
+    "prebuild": "node scripts/generate-sitemap.js && node scripts/publish-dataset.js",
     "build": "next build",
     "postinstall": "echo 'Sitemap auto-generation configured'",
     "postbuild": "echo 'IndexNow auto-submit PAUSED (Bing 2026-08-08 suppression, v2.2). Submit manually via scripts/manual-indexnow.js or Bing WMT only.'",
     "start": "next start",
     "lint": "eslint pages components utils types scripts proxy.ts",
     "export": "next build && next export",
-    "generate:sitemap": "node scripts/generate-sitemap.js"
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "generate:datasets": "node scripts/publish-dataset.js"
   },
   "dependencies": {
     "@vercel/og": "^0.8.6",

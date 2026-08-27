@@ -62,6 +62,7 @@
         },
         "statuses": {
             "hypothermia": "Hypothermia",
+            "lowTemp": "Below Normal",
             "normal": "Normal",
             "elevated": "Slightly Elevated",
             "lowGrade": "Low-Grade Fever",
@@ -121,10 +122,17 @@
         "rows": {
             "hypothermia": {
                 "status": "Hypothermia",
-                "c": "<36.0°C",
-                "f": "<96.8°F",
-                "adult": "Warm up, monitor",
-                "child": "Immediate warming, consult doctor"
+                "c": "<35.0°C",
+                "f": "<95.0°F",
+                "adult": "Medical emergency — call for help",
+                "child": "Medical emergency — call for help"
+            },
+            "lowTemp": {
+                "status": "Below Normal",
+                "c": "35.0–36.4°C",
+                "f": "95.0–97.5°F",
+                "adult": "Warm up, recheck in 10 min",
+                "child": "Warm up, consult a doctor if it persists"
             },
             "normal": {
                 "status": "Normal Range",
@@ -216,7 +224,7 @@
         "title": "How to Measure Body Temperature Accurately",
         "headers": {
             "method": "Method",
-            "range": "Normal Range",
+            "range": "Typical reading",
             "bestFor": "Best For",
             "notes": "Notes"
         },
@@ -229,24 +237,24 @@
             },
             "axillary": {
                 "method": "Axillary (armpit)",
-                "range": "35.9–36.7°C",
+                "range": "about 0.3–0.6°C lower than oral",
                 "best": "All ages",
-                "note": "Usually 0.5–1.0°C lower than core temperature"
+                "note": "Least accurate method; do not apply the oral fever line to an armpit reading"
             },
             "ear": {
                 "method": "Ear (tympanic)",
-                "range": "35.8–38.0°C",
+                "range": "about 0.6°C above oral",
                 "best": "6 months+",
                 "note": "Earwax may affect accuracy"
             },
             "forehead": {
                 "method": "Forehead (temporal)",
-                "range": "35.8–37.8°C",
+                "range": "about 0.6°C below oral",
                 "best": "Quick screening",
                 "note": "May be influenced by environment"
             }
         },
-        "note": "<strong>Note on Measurement Differences:</strong> Rectal temperatures are generally 0.5°C (0.9°F) higher than oral readings, while armpit (axillary) measurements are usually lower and considered less accurate for core temperature."
+        "note": "<strong>Note on Measurement Differences:</strong> Rectal and ear temperatures are about 0.6°C (1.0°F) higher than oral readings, while skin temperatures (forehead) are about 0.6°C lower. Armpit (axillary) readings are the least accurate for core temperature, so use the armpit-specific fever line (37.2°C / 99°F) instead of subtracting a guess."
     },
     "download": {
         "title": "Printable Fever Temperature Chart (PDF)",

@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { ReactNode, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import { useCommonTranslation } from '../utils/common-i18n';
-import { DEFAULT_LOCALE, SUPPORTED_LOCALES, HREFLANG_MAP } from '../utils/locale-config';
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES, HREFLANG_MAP, getRobotsDirective, isIndexableLocale } from '../utils/locale-config';
 import { AlternateLanguageLinksContext } from './AlternateLanguageLinksContext';
 
 export interface SEOProps {
@@ -94,10 +94,6 @@ export default function Layout({ children, seo }: LayoutProps) {
     return { locale: supportedLocale, href, hreflang: HREFLANG_MAP[supportedLocale] || supportedLocale };
   });
 
-  const defaultAlternate = alternateLinks.find((link) => link.locale === DEFAULT_LOCALE) || {
-    locale: DEFAULT_LOCALE,
-    href: canonicalUrl,
-  };
   const visibleAlternateLinks = useMemo(() => {
     const sourceLinks = seo?.alternates && seo.alternates.length > 0 ? seo.alternates : alternateLinks;
     const deduped = new Map<string, { href: string; hreflang: string; locale?: string }>();
@@ -127,7 +123,8 @@ export default function Layout({ children, seo }: LayoutProps) {
   const description = seo?.description || meta.defaultDescription || 'Convert Celsius to Fahrenheit quickly with the C to F Converter.';
 
   const author = seo?.author || meta.author || 'Temperature Conversion Experts';
-  const robots = seo?.robots || 'index, follow';
+  // 非英语 locale 强制 noindex，不受 seo?.robots 覆盖（理由见 utils/locale-config.ts 的注释）。
+  const robots = isIndexableLocale(locale) ? (seo?.robots || getRobotsDirective(locale)) : getRobotsDirective(locale);
 
   // OG / Social
   const ogImageRaw = seo?.ogImage || 'https://ctofconverter.com/converter.png';
@@ -157,17 +154,13 @@ export default function Layout({ children, seo }: LayoutProps) {
         <link rel="apple-touch-icon" href="https://ctofconverter.com/apple-touch-icon.png" />
         <link key="canonical" rel="canonical" href={canonicalUrl} />
 
-        {/* Priority: Explicit alternates from props, otherwise verify auto-generated ones */}
-        {seo?.alternates ? (
-          seo.alternates.map((link) => (
-            <link key={`alternate-${link.hreflang}`} rel="alternate" hrefLang={link.hreflang} href={link.href} />
-          ))
-        ) : (
+        {/* hreflang 收敛（2026-08-27）：只由英语页声明，且只声明自身 en + x-default。
+            非英语页已 noindex，把 noindex 页当 hreflang 目标会被搜索引擎判无效。
+            语言切换器的 UI 链接走 visibleAlternateLinks（context），不受本块影响。 */}
+        {isIndexableLocale(locale) && (
           <>
-            {alternateLinks.map((link) => (
-              <link key={`alternate-${link.locale}`} rel="alternate" hrefLang={link.hreflang} href={link.href} />
-            ))}
-            <link key="alternate-default" rel="alternate" hrefLang="x-default" href={defaultAlternate.href} />
+            <link key="alternate-en" rel="alternate" hrefLang="en" href={canonicalUrl} />
+            <link key="alternate-x-default" rel="alternate" hrefLang="x-default" href={canonicalUrl} />
           </>
         )}
 

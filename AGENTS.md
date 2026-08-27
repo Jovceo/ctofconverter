@@ -66,10 +66,15 @@ AI 搜索引擎（Google AI Overviews、ChatGPT、Perplexity）与传统 SEO 的
 ### 数据核实
 - 引用外部数据（NOAA/CDC/USDA 等）时，必须对照官方源逐格核实后再发布
 - 不能凭记忆或估算写数据，差异哪怕 1°F 也会影响可信度
+- **数据集级**：`config/datasets/*.json` 的每一行必须有 `source` + `source_url` + `quote`（来源原句片段）+ `checked_on`，并且同一天在 [docs/数据来源核查-2026-08-27.md](./docs/数据来源核查-2026-08-27.md)（或当日新增的核查文件）里留下一条「我确实打开过这个 URL、确实看到这个数字」的记录。抓取失败（如 403 bot 拦截）要写明失败原因，并且该数值只在**与已机验来源一致**时才保留
+- 来源之间分歧不平均、不取中间值：两派都发布并各自标注来源（例：Gas Mark 3 = 160 °C 或 170 °C；hyperpyrexia = 41.0 °C 或 41.5 °C）
+- 权威来源没有发布过的分档/分级，就不要当成事实写（例：NHS/Mayo/CDC 都不发「低热-中热-高热-危险」四档，站内页面若要保留这种分档，只能作为本站编辑性提示，数据集里只放有出处的分档并注明区别）
 
 ### 医疗内容
 - 涉及体温、发烧、低体温症等健康相关内容的页面，必须加免责声明："This information is not a substitute for professional medical advice. In emergencies, call 911 immediately."
 - 免责声明放在医疗建议段落末尾
+- 阈值口径（2026-08-27 逐源核实后的唯一定义）：发烧 = ≥38.0 °C（NHS/CDC；Mayo 口温口径 37.8 °C）；**低体温症 = <35.0 °C**（NHS/Mayo/CDC/StatPearls 一致），<36.0 °C 只是「偏低需复测」——36.0 °C 那条线来自 NICE 围手术期与儿科住院质控，不是定义（健康成人腋温均值本身就是 35.97 °C）
+- 部位偏移用 Merck 的单值 ±0.6 °C（≈1.0 °F）；「腋下低 0.5–1.0 °C」是把 °F 区间误标成 °C，不得再写
 
 ## 技术实现
 
@@ -101,6 +106,13 @@ AI 搜索引擎（Google AI Overviews、ChatGPT、Perplexity）与传统 SEO 的
 - `config/quality-pages.json` 记录已精做的页面，精做完成后需手动添加 slug 到此文件
 - lastmod 来自 Git 最后修改日期，修改页面内容后自动更新
 
+### 语言版本索引策略（2026-08-27 起，红线）
+- **只有 `en` 允许被索引**；非英语 locale 页面一律 `noindex, follow`，由 `utils/locale-config.ts` 的 `getRobotsDirective()` 统一控制
+- 已接线的位置（缺一不可，新增页面时沿用）：`components/Layout.tsx`、`pages/index.tsx`、`pages/fahrenheit-to-celsius.tsx`（后两者自带 `<Head>`，会覆盖 Layout）
+- hreflang 同步收敛：**只有英语页声明 hreflang，且只声明自身 `en` + `x-default`**；非英语页不输出任何 `rel="alternate"`（noindex 页作为 hreflang 目标会被判无效）
+- 语言页**不删除、不 301、不改状态码**，保持 200 可访问；语言切换器 UI 走 `visibleAlternateLinks` context，与 Head 里的 hreflang 已解耦，不要误删
+- 理由（勿在代码注释外重复讨论）：2026-04-22 批量多语言上线后 Google 于 4-26/27 整站降级，sitemap `submitted 62 / indexed 0`，640 个构建产物中 576 个（90%）是机器翻译副本；8-20 的「保留不删、被动衰减」执行 4 个月未换来重新收录。详见 `docs/收录诊断-2026-08-27.md`
+
 ### robots.txt
 - 禁止 `/_next/static/chunks/`（JS chunk 文件，浪费抓取预算）
 - 允许 `/_next/static/css/` 和 `/_next/static/media/`
@@ -113,6 +125,7 @@ AI 搜索引擎（Google AI Overviews、ChatGPT、Perplexity）与传统 SEO 的
 - 新建 Next.js 页面后，将 slug 加入 `migrated-routes.json` 的 `htmlRoutes` 数组，旧 HTML 自动 301
 
 ### 部署检查清单
+- [ ] 非英语 locale 页 `robots` 为 `noindex, follow` 且无 `rel="alternate"`（抽查 `/es`、`/ja/0-c-to-f`）
 - [ ] `npx tsc --noEmit` 类型检查通过（本地不跑 `npm run build`，因 500+ 旧页会超时）
 - [ ] `public/sitemap.xml` 已重新生成（`node scripts/generate-sitemap.js`）
 - [ ] `config/quality-pages.json` 已更新（如有新精做页面）
@@ -120,6 +133,8 @@ AI 搜索引擎（Google AI Overviews、ChatGPT、Perplexity）与传统 SEO 的
 - [ ] `config/migrated-routes.json` 已更新（如有新页面需要 301 旧 HTML）
 - [ ] 环境变量 `INDEXNOW_SECRET`：**默认不设**。`/api/indexnow` 在没这个变量时直接 503 关闭（fail-closed，2026-08-25 改），保持关着就是安全的。只有确实需要从远端手动触发提交时才设；日常提交走 `scripts/manual-indexnow.js`，它直接打 IndexNow，不需要这个端点。
 - [ ] 如改动了变现层：`config/monetization.json` 保持 UTF-8 **无 BOM**（带 BOM 会直接 500），并确认 `enabled: false` 时线上页面搜不到 `adsbygoogle`
+- [ ] 如改动了数据层：`public/data/` 已重新生成（`npm run generate:datasets`）、`/api/ref` 与 `/data/manifest.json` 行数一致、`/data-api` 抽查 1 条 curl 可用；新建 JSON 一律无 BOM（`Set-Content -Encoding UTF8` 会加 BOM，用 node 或编辑器写）
+- [ ] 嵌入组件改动必须在浏览器里开一次 `/embed/demo.html`：三张表都要出现、console 无 error（只看 `node --check` 通过不算，`document.currentScript` 类问题只有真渲染能发现）
 - [ ] Vercel production build 成功
 
 ## 精做页面原则
@@ -172,6 +187,25 @@ AI 搜索引擎（Google AI Overviews、ChatGPT、Perplexity）与传统 SEO 的
 ### 同义替换（红线重申）
 `utils/textSpinner.ts` 的变体轮换已于 2026-08-26 停用（`getVariantIndex` 恒返回 0）。不得恢复；也不得在新页引入 textSpinner——页面差异靠 `locales/en/{slug}.json` 人工内容实现。
 
+## 数据资产与可嵌入组件（2026-08-27 起）
+
+站点当前的主线不是 SEO，而是「别人能直接拿走用」的公开数据资产。链路只有一条：
+
+```
+config/datasets/<id>.json          ← 唯一数据源（人工写，禁止程序化生成）
+  ├─ npm run generate:datasets → public/data/*.{json,csv} + manifest.json + index.html（prebuild 自动跑）
+  ├─ utils/refDatasets.ts → 页面 / API 共同读取（同一份数据）
+  ├─ /api/ref, /api/ref/[dataset], /api/ref/lookup（只读、无 key、CORS *）
+  └─ public/embed/ref-chart.js（零依赖嵌入组件）+ public/embed/demo.html（实盘演示，noindex）
+```
+
+- **不得**在页面、API、README 里另写一份数值——改了 `config/datasets/` 就必须跑 `npm run generate:datasets` 并重新 build，否则 `public/data/` 与源不一致
+- 新数据集：写 JSON（含 `provenance`，否则发布脚本报错拒发）→ 在 `utils/refDatasets.ts` 的 `DATASET_REGISTRY` 注册一行 → `/data-api` 页面会自动列出它
+- 暂不发布的数据集写进 `WITHHELD_DATASETS`（API 返回 503 + 理由，而不是静默 404）
+- 对外可见的字符串（API 响应、CSV 表头、`public/embed/*`、README）**只能英文**；页面 `description` 受移动端 120 字符上限约束
+- `public/embed/ref-chart.js` 必须在脚本执行时就把 `document.currentScript` 存进闭包（DOMContentLoaded 里读它是 `null`，会导致整张表静默不渲染），`ORIGIN` 由脚本自身 URL 推导，这样在 staging / 本地同样能测
+- 许可：数据 CC-BY-4.0、代码 MIT；署名行由组件自己写在表格下方，不要去掉
+
 ## 禁止行为
 - ❌ 使用 textSpinner.ts 或任何同义替换工具 — Google Helpful Content 算法能识别伪原创模式，会导致整站降权
 - ❌ 只改温度值其余文案完全相同的批量页面 — 无信息增益
@@ -179,6 +213,8 @@ AI 搜索引擎（Google AI Overviews、ChatGPT、Perplexity）与传统 SEO 的
 - ❌ 广告嵌入内容流 — 广告放在内容区域之外
 - ❌ 批量创建页面 — 每个页面必须有手写独特内容
 - ❌ 改变已收录页面的 URL 路径 — 会丢失已有排名和反向链接
+- ❌ 把没进核查台账（docs/数据来源核查-*.md）的数值发布成数据集，或在数据集里编造来源小节名 — 宁可少一个数据集
+- ❌ 在 `config/datasets/` 之外复制一份数值（页面/API/README 各写一套）— 这是 2026-04 质控失效的根因
 
 ## 收录打通后待办（触发条件：5 个精做页进 Google 索引）
 

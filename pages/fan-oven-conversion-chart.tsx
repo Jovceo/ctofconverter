@@ -228,7 +228,7 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
       }
     } else if (fromUnit === 'conventional' && toUnit === 'gas') {
       const gasMarks: Record<number, number> = {
-        120: 0.5, 140: 1, 150: 2, 160: 3, 180: 4,
+        120: 0.5, 140: 1, 150: 2, 170: 3, 180: 4,
         190: 5, 200: 6, 220: 7, 230: 8, 240: 9
       };
       const closest = Object.keys(gasMarks).reduce((prev, curr) =>
@@ -242,7 +242,7 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
     } else if (fromUnit === 'fan' && toUnit === 'gas') {
       const conventionalC = temp + 20;
       const gasMarks: Record<number, number> = {
-        120: 0.5, 140: 1, 150: 2, 160: 3, 180: 4,
+        120: 0.5, 140: 1, 150: 2, 170: 3, 180: 4,
         190: 5, 200: 6, 220: 7, 230: 8, 240: 9
       };
       const closest = Object.keys(gasMarks).reduce((prev, curr) =>

@@ -1,0 +1,10 @@
+Product,Minimum internal temperature (°F),Minimum internal temperature (°C),Rest time (min),Note
+"Beef, pork, veal and lamb — steaks, chops and roasts",145,62.8,3,"Remove from heat, then allow to rest for at least 3 minutes before carving or consuming."
+"Ham, fresh or smoked (uncooked)",145,62.8,3,"Cook, then rest at least 3 minutes."
+Fish and shellfish,145,62.8,0,Cook until opaque and flaking.
+"Ground meats (beef, pork, veal, lamb)",160,71.1,0,Ground product is not covered by the rest-time rule.
+Eggs,160,71.1,0,USDA lists 160 °F for eggs; cook until yolk and white are firm.
+Fully cooked ham (to reheat),140,60,0,140 °F (60 °C) for hams packaged in USDA-inspected plants; 165 °F (73.9 °C) for all others.
+"All poultry — breasts, whole bird, legs, thighs, wings, ground poultry, giblets and stuffing",165,73.9,0,One row in USDA's table; covers ground poultry and stuffing as well.
+Casseroles,165,73.9,0,
+Leftovers,165,73.9,0,Reheat to 165 °F (73.9 °C) as measured with a food thermometer.

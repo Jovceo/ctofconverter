@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Embed demo — ctofconverter reference charts</title>
+<meta name="robots" content="noindex, follow" />
+<meta name="description" content="The ctofconverter embeddable temperature charts, rendered live from the public JSON API with no build step." />
+<style>
+  :root { color-scheme: light dark }
+  body { font: 16px/1.65 system-ui, -apple-system, Segoe UI, sans-serif; max-width: 46rem; margin: 2.5rem auto; padding: 0 1rem; color: #1f2933 }
+  h1 { font-size: 1.5rem; margin-bottom: .3rem }
+  p.lede { color: #52606d; margin-top: 0 }
+  pre { background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: .8rem; overflow-x: auto; font-size: .82rem }
+  code { font-family: ui-monospace, Menlo, Consolas, monospace }
+  .card { border: 1px solid #e2e8f0; border-radius: 10px; padding: 1rem; margin: 1.4rem 0 }
+  a { color: #2b6cb0 }
+  .meta { font-size: .85rem; color: #718096 }
+</style>
+</head>
+<body>
+<h1>Embed demo</h1>
+<p class="lede">
+  Everything below is produced by one <code>&lt;script&gt;</code> tag per table. No build step, no package,
+  no tracking, no cookies — the widget fetches the same public JSON this site publishes and styles itself
+  after the page it lands on, including dark mode.
+</p>
+<p class="meta">These charts are here to prove the snippet works. The canonical documentation is
+<a href="/data-api">/data-api</a>.</p>
+
+<div class="card">
+  <pre><code>&lt;script src="https://ctofconverter.com/embed/ref-chart.js"
+        data-set="oven-conversions"
+        data-cols="gas_mark,conventional_c,fan_c,conventional_f,descriptor"&gt;&lt;/script&gt;</code></pre>
+</div>
+
+<script src="/embed/ref-chart.js"
+        data-set="oven-conversions"
+        data-cols="gas_mark,conventional_c,fan_c,conventional_f,descriptor"
+        data-title="UK gas mark vs conventional and fan oven"></script>
+
+<div class="card">
+  <pre><code>&lt;script src="https://ctofconverter.com/embed/ref-chart.js"
+        data-set="safe-internal-temperatures"
+        data-cols="product,min_fahrenheit,min_celsius,rest_minutes"&gt;&lt;/script&gt;</code></pre>
+</div>
+
+<script src="/embed/ref-chart.js"
+        data-set="safe-internal-temperatures"
+        data-cols="product,min_fahrenheit,min_celsius,rest_minutes"
+        data-title="USDA minimum safe internal temperatures"></script>
+
+<div class="card">
+  <pre><code>&lt;script src="https://ctofconverter.com/embed/ref-chart.js"
+        data-set="human-body-temperature"
+        data-cols="label,c_min,c_max,source"
+        data-max="9"&gt;&lt;/script&gt;</code></pre>
+</div>
+
+<script src="/embed/ref-chart.js"
+        data-set="human-body-temperature"
+        data-cols="label,c_min,c_max,source"
+        data-max="9"
+        data-title="Published body-temperature thresholds"></script>
+
+<p class="meta">
+  Data: <a href="/data-api">ctofconverter.com</a> · CC-BY-4.0 for the numbers, MIT for the widget code.
+  Each row states the source it was checked against, and the file states the date.
+</p>
+</body>
+</html>

@@ -59,6 +59,14 @@ export default function Footer({ lastUpdated }: FooterProps) {
                     {t('footer.links.fahrenheitToCelsius')}
                   </Link>
                 </li>
+                {/* 英语站专属：开放数据入口。语言页已在衰退期，不再为其补翻译（2026-08-27）。 */}
+                {currentLocale === 'en' && (
+                  <li>
+                    <Link href="/data-api" className="footer-link">
+                      Open data &amp; API
+                    </Link>
+                  </li>
+                )}
               </ul>
             </div>
             <div className="footer-links-group">

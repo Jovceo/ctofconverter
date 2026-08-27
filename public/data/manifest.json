@@ -1,0 +1,179 @@
+{
+  "name": "ctofconverter reference datasets",
+  "homepage": "https://ctofconverter.com/data-api",
+  "license": "CC-BY-4.0",
+  "updated": "2026-08-27",
+  "api": {
+    "index": "https://ctofconverter.com/api/ref",
+    "dataset": "https://ctofconverter.com/api/ref/{id}",
+    "csv": "https://ctofconverter.com/api/ref/{id}?format=csv",
+    "lookup": "https://ctofconverter.com/api/ref/lookup?value=180&unit=c&context=oven"
+  },
+  "embed": "<script src=\"https://ctofconverter.com/embed/ref-chart.js\" data-set=\"oven-conversions\"></script>",
+  "datasets": [
+    {
+      "id": "human-body-temperature",
+      "title": "Human body temperature reference — fever thresholds, per-site averages, care-seeking lines, hypothermia staging",
+      "description": "Every row is one number that a named public-health or clinical source actually publishes, with the URL it was read from and a verbatim fragment. Deliberately excludes any band that no source publishes.",
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "license": "CC-BY-4.0",
+      "attribution": "ctofconverter.com",
+      "rows": 34,
+      "columns": [
+        "id",
+        "topic",
+        "applies_to",
+        "audience",
+        "site",
+        "setting",
+        "rule",
+        "c_min",
+        "c_max",
+        "f_min",
+        "f_max",
+        "offset_c",
+        "duration_days",
+        "label",
+        "action",
+        "source",
+        "source_url",
+        "quote",
+        "note",
+        "checked_on"
+      ],
+      "files": {
+        "json": "https://ctofconverter.com/data/human-body-temperature.json",
+        "csv": "https://ctofconverter.com/data/human-body-temperature.csv"
+      },
+      "page": "https://ctofconverter.com/body-temperature-chart-fever-guide",
+      "provenance": [
+        {
+          "source": "NHS — Fever in adults / Fever in children / Hypothermia / How to take your baby's temperature",
+          "url": "https://www.nhs.uk/symptoms/fever-in-adults/",
+          "checkedOn": "2026-08-27",
+          "note": "All four NHS pages re-fetched from this machine on 2026-08-27 and returned HTTP 200 with the quoted strings present. Other NHS URLs used: /symptoms/fever-in-children/, /conditions/hypothermia/, /baby/health/how-to-take-your-babys-temperature/."
+        },
+        {
+          "source": "StatPearls (NCBI Bookshelf) — Hypothermia (NBK545239) and Physiology, Fever (NBK562334)",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK545239/",
+          "checkedOn": "2026-08-27",
+          "note": "Both chapters re-fetched 2026-08-27 (HTTP 200). NBK545239 is the source for the 35 °C hypothermia definition, the 36.5–37.5 °C normal range and the mild/moderate/severe staging. NBK562334 is the source for the low/moderate/high/hyperthermia fever bands and the per-site average readings."
+        },
+        {
+          "source": "Merck Manual, Professional Version — Fever",
+          "url": "https://www.merckmanuals.com/professional/infectious-diseases/biology-of-infectious-disease/fever",
+          "checkedOn": "2026-08-27",
+          "note": "Re-fetched 2026-08-27 (HTTP 200). Source for the 40 °C / 35 °C red flags and the 0.6 °C site offsets."
+        },
+        {
+          "source": "NICE CG65 — Hypothermia in the perioperative period (via NCBI Bookshelf NBK554181)",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK554181/",
+          "checkedOn": "2026-08-27",
+          "note": "Re-fetched 2026-08-27 (HTTP 200). Source for the separate perioperative 'low core temperature' cut-off of 36.0 °C, which is NOT a definition of hypothermia."
+        },
+        {
+          "source": "Royal Children's Hospital Melbourne — Temperature management (paediatric guideline)",
+          "url": "https://www.rch.org.au/rchcpg/hospital_clinical_guideline_index/Temperature_management/",
+          "checkedOn": "2026-08-27",
+          "note": "Re-fetched 2026-08-27 (HTTP 200). Source for the paediatric / neonatal low-temperature thresholds used in hospital care."
+        },
+        {
+          "source": "Mayo Clinic and CDC pages",
+          "url": "https://www.mayoclinic.org/first-aid/first-aid-fever/basics/art-20056685",
+          "checkedOn": "2026-08-27",
+          "note": "Quotes were captured by a manual read of these pages on 2026-08-27 and recorded in docs/数据来源核查-2026-08-27.md. Automated re-fetch of mayoclinic.org and cdc.gov from this build machine returns HTTP 403 (bot protection), so the numbers could not be re-verified by script — they are kept here only where they agree with a machine-verified source above."
+        },
+        {
+          "source": "PMC6456186 — systematic review of normal body temperature values (9,227 measurements)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6456186/",
+          "checkedOn": "2026-08-27",
+          "note": "Re-fetched 2026-08-27 (HTTP 200). Used to cross-check the per-site averages published in StatPearls NBK562334; the two agree."
+        },
+        {
+          "source": "Field notes on scope",
+          "url": "https://ctofconverter.com/data-api",
+          "checkedOn": "2026-08-27",
+          "note": "Rows carry a \"setting\" value (home | hospital | reference | device) and an \"audience\" value (any | adult | child | infant | neonate). The lookup endpoint applies only home rows unless you pass ?setting=all, and ?person= narrows by age group, so a home reader is never shown an inpatient escalation threshold or another age group's cut-off."
+        }
+      ],
+      "disclaimer": "Reference data transcribed from published sources on 2026-08-27. Not medical advice and not a diagnosis. Care-seeking rules differ by country, by age and by the person's underlying health; when in doubt, contact a clinician or emergency services. If any number here matters to a decision, open the source URL and read it yourself."
+    },
+    {
+      "id": "oven-conversions",
+      "title": "Oven temperature conversions — UK gas mark, conventional, fan-assisted, Fahrenheit",
+      "description": "Gas mark ↔ conventional °C/°F ↔ fan-assisted °C/°F, with the published fan reduction convention stated separately from the measured values.",
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "license": "CC-BY-4.0",
+      "attribution": "ctofconverter.com",
+      "rows": 12,
+      "columns": [
+        "gas_mark",
+        "conventional_c",
+        "conventional_f",
+        "fan_c",
+        "fan_f",
+        "descriptor",
+        "typical_uses"
+      ],
+      "files": {
+        "json": "https://ctofconverter.com/data/oven-conversions.json",
+        "csv": "https://ctofconverter.com/data/oven-conversions.csv"
+      },
+      "page": "https://ctofconverter.com/fan-oven-conversion-chart",
+      "provenance": [
+        {
+          "source": "Wikipedia — Gas mark, 'Conversion table' (its own references: BBC Good Food 'Conversion Guides'; The Guardian, 'Cooking conversion charts', 24 Nov 2007)",
+          "url": "https://en.wikipedia.org/wiki/Gas_mark",
+          "checkedOn": "2026-08-27",
+          "note": "Secondary source, used because it reproduces the two published conversion guides in one table. Conventional-oven values in this dataset are taken verbatim from that table (110/120/140/150/170/180/190/200/220/230/240/260 °C at 25 °F steps)."
+        },
+        {
+          "source": "ctofconverter.com — Fan oven conversion chart",
+          "url": "https://ctofconverter.com/fan-oven-conversion-chart",
+          "checkedOn": "2026-08-27",
+          "note": "The site's own gas-mark rows were corrected to match the table above on 2026-08-27. The previous revision labelled conventional values as fan values and had Gas Mark 3, 5 and 7 wrong; do not copy the pre-2026-08-27 revision."
+        }
+      ],
+      "disclaimer": null
+    },
+    {
+      "id": "safe-internal-temperatures",
+      "title": "USDA safe minimum internal cooking temperatures",
+      "description": "Minimum internal temperatures by product, with rest times, as published by USDA FSIS, plus the danger zone.",
+      "version": "1.0.0",
+      "updated": "2026-08-27",
+      "license": "CC-BY-4.0",
+      "attribution": "ctofconverter.com",
+      "rows": 9,
+      "columns": [
+        "product",
+        "min_fahrenheit",
+        "min_celsius",
+        "rest_minutes",
+        "note"
+      ],
+      "files": {
+        "json": "https://ctofconverter.com/data/safe-internal-temperatures.json",
+        "csv": "https://ctofconverter.com/data/safe-internal-temperatures.csv"
+      },
+      "page": "https://ctofconverter.com/180-c-to-f",
+      "provenance": [
+        {
+          "source": "USDA FSIS — Safe Minimum Internal Temperature Chart",
+          "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart",
+          "checkedOn": "2026-08-27",
+          "note": "Page states 'Last Updated: Apr 14, 2025'. Every row below reproduces that table verbatim, including the exact Celsius values FSIS prints (62.8 / 71.1 / 73.9 / 60 °C), which are the Fahrenheit figures converted, not independently rounded."
+        },
+        {
+          "source": "USDA FSIS — Danger Zone 40F - 140F",
+          "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/danger-zone-40f-140f",
+          "checkedOn": "2026-08-27",
+          "note": "The 40–140 °F range is taken from the section title as listed in FSIS navigation on 2026-08-27; the page body could not be re-fetched here because fsis.usda.gov returns 403 to non-browser clients. Treat the range as stable (it is long-standing USDA guidance) and re-check the page itself before republishing at scale."
+        }
+      ],
+      "disclaimer": null
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "oven-conversions",
+  "title": "Oven temperature conversions — UK gas mark, conventional, fan-assisted, Fahrenheit",
+  "description": "Gas mark ↔ conventional °C/°F ↔ fan-assisted °C/°F, with the published fan reduction convention stated separately from the measured values.",
+  "version": "1.0.0",
+  "updated": "2026-08-27",
+  "license": "CC-BY-4.0",
+  "attribution": "ctofconverter.com",
+  "languages": ["en"],
+  "page": "/fan-oven-conversion-chart",
+  "provenance": [
+    {
+      "source": "Wikipedia — Gas mark, 'Conversion table' (its own references: BBC Good Food 'Conversion Guides'; The Guardian, 'Cooking conversion charts', 24 Nov 2007)",
+      "url": "https://en.wikipedia.org/wiki/Gas_mark",
+      "checkedOn": "2026-08-27",
+      "note": "Secondary source, used because it reproduces the two published conversion guides in one table. Conventional-oven values in this dataset are taken verbatim from that table (110/120/140/150/170/180/190/200/220/230/240/260 °C at 25 °F steps)."
+    },
+    {
+      "source": "ctofconverter.com — Fan oven conversion chart",
+      "url": "https://ctofconverter.com/fan-oven-conversion-chart",
+      "checkedOn": "2026-08-27",
+      "note": "The site's own gas-mark rows were corrected to match the table above on 2026-08-27. The previous revision labelled conventional values as fan values and had Gas Mark 3, 5 and 7 wrong; do not copy the pre-2026-08-27 revision."
+    }
+  ],
+  "columns": [
+    { "key": "gas_mark", "label": "UK Gas Mark", "type": "string" },
+    { "key": "conventional_c", "label": "Conventional oven", "unit": "°C", "type": "number" },
+    { "key": "conventional_f", "label": "Conventional oven", "unit": "°F", "type": "number" },
+    { "key": "fan_c", "label": "Fan / convection oven", "unit": "°C", "type": "number" },
+    { "key": "fan_f", "label": "Fan / convection oven", "unit": "°F", "type": "number" },
+    { "key": "descriptor", "label": "Heat level", "type": "string" },
+    { "key": "typical_uses", "label": "Typical uses", "type": "string" }
+  ],
+  "rows": [
+    { "gas_mark": "1/4", "conventional_c": 110, "conventional_f": 225, "fan_c": 90, "fan_f": 194, "descriptor": "Very slow / very low", "typical_uses": "" },
+    { "gas_mark": "1/2", "conventional_c": 120, "conventional_f": 250, "fan_c": 100, "fan_f": 212, "descriptor": "Very slow / very low", "typical_uses": "" },
+    { "gas_mark": "1", "conventional_c": 140, "conventional_f": 275, "fan_c": 120, "fan_f": 248, "descriptor": "Slow / low", "typical_uses": "Meringues, delicate baking" },
+    { "gas_mark": "2", "conventional_c": 150, "conventional_f": 300, "fan_c": 130, "fan_f": 266, "descriptor": "Slow / low", "typical_uses": "Slow cooking, casseroles" },
+    { "gas_mark": "3", "conventional_c": 170, "conventional_f": 325, "fan_c": 150, "fan_f": 302, "descriptor": "Moderately slow / warm", "typical_uses": "Fruit cakes, casseroles" },
+    { "gas_mark": "4", "conventional_c": 180, "conventional_f": 350, "fan_c": 160, "fan_f": 320, "descriptor": "Moderate / medium", "typical_uses": "Sponge cakes, muffins, cookies, everyday baking" },
+    { "gas_mark": "5", "conventional_c": 190, "conventional_f": 375, "fan_c": 170, "fan_f": 338, "descriptor": "Moderate / moderately hot", "typical_uses": "Fruit pies, casseroles, fish, scones" },
+    { "gas_mark": "6", "conventional_c": 200, "conventional_f": 400, "fan_c": 180, "fan_f": 356, "descriptor": "Moderately hot", "typical_uses": "Roasting meats and vegetables, baking bread" },
+    { "gas_mark": "7", "conventional_c": 220, "conventional_f": 425, "fan_c": 200, "fan_f": 392, "descriptor": "Hot", "typical_uses": "Roasting meats, puff pastry" },
+    { "gas_mark": "8", "conventional_c": 230, "conventional_f": 450, "fan_c": 210, "fan_f": 410, "descriptor": "Hot / very hot", "typical_uses": "" },
+    { "gas_mark": "9", "conventional_c": 240, "conventional_f": 475, "fan_c": 220, "fan_f": 428, "descriptor": "Very hot", "typical_uses": "Pizza, artisan bread, searing" },
+    { "gas_mark": "10", "conventional_c": 260, "conventional_f": 500, "fan_c": 240, "fan_f": 464, "descriptor": "Extremely hot (less common marking)", "typical_uses": "" }
+  ],
+  "notes": [
+    "conventional_c / conventional_f are the published table values. fan_c / fan_f are derived, not published: they apply the common UK convention 'set a fan/convection oven 20 °C lower than a conventional oven' and then convert exactly (°F = °C × 9/5 + 32).",
+    "The fan reduction is a convention, not a physical constant. Published advice ranges from 15 °C to 20 °C (some manufacturers say up to 25 °C); oven fans differ. Use an oven thermometer for anything temperature-sensitive.",
+    "Gas marks are a gas-oven dial scale. Most fan-assisted ovens are electric and are set in degrees, so a 'gas mark in a fan oven' is always a derived figure, never a dial reading.",
+    "Celsius values in published tables are rounded to the nearest 10 °C; exact conversions of the Fahrenheit column will therefore differ by a few degrees. The Fahrenheit column is the finer-grained one."
+  ]
+}

@@ -16,7 +16,8 @@ import {
 // 导入现有工具函数
 // 导入现有工具函数
 import { useTranslation, getLocalizedLink } from '../utils/i18n';
-import { getAlternateUrls, getLocalizedAbsoluteUrl, getXDefaultAbsoluteUrl } from '../utils/seo';
+import { getLocalizedAbsoluteUrl, getXDefaultAbsoluteUrl } from '../utils/seo';
+import { getRobotsDirective, isIndexableLocale } from '../utils/locale-config';
 
 /**
  * 华氏度转换器组件
@@ -188,7 +189,6 @@ interface FahrenheitToCelsiusPageProps {
 
 export default function FahrenheitToCelsiusPage({ canonicalUrl, lastUpdated }: FahrenheitToCelsiusPageProps) {
     const { t, locale } = useTranslation('f-to-c');
-    const alternateLinks = getAlternateUrls('/fahrenheit-to-celsius');
     const defaultAlternateUrl = getXDefaultAbsoluteUrl('/fahrenheit-to-celsius');
     const homeUrl = getLocalizedAbsoluteUrl('/', locale);
 
@@ -250,19 +250,16 @@ export default function FahrenheitToCelsiusPage({ canonicalUrl, lastUpdated }: F
                 <meta name="description" content={t('meta.description')} />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="author" content="Ctofconverter Team" />
-                <meta name="robots" content="index, follow" />
+                <meta name="robots" content={getRobotsDirective(locale)} />
                 <link rel="canonical" href={canonicalUrl} />
 
-                {/* hreflang 标签 */}
-                <link rel="alternate" hrefLang="x-default" href={defaultAlternateUrl} />
-                {alternateLinks.map((alternate) => (
-                    <link
-                        key={alternate.locale}
-                        rel="alternate"
-                        hrefLang={alternate.hreflang}
-                        href={alternate.href}
-                    />
-                ))}
+                {/* hreflang 收敛（2026-08-27）：非英语页已 noindex，不再声明语言副本 */}
+                {isIndexableLocale(locale) && (
+                    <>
+                        <link rel="alternate" hrefLang="x-default" href={defaultAlternateUrl} />
+                        <link rel="alternate" hrefLang="en" href={canonicalUrl} />
+                    </>
+                )}
 
                 {/* Open Graph */}
                 <meta property="og:title" content={t('meta.ogTitle')} />
