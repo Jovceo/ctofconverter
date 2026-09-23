@@ -39,3 +39,7 @@ next-env.d.ts
 
 # generated files (regenerated on each build)
 public/sitemap.xml
+
+# 战略文档与构建产物：不进公开仓
+/docs/
+/dist/
