@@ -500,10 +500,12 @@ const ConversionTable: React.FC<{
               // SEO: Use proper <a> tags so crawlers can discover internal links
               // ⚠️ href 必须走 cToFHref：孤儿旧 HTML 页的真实 URL 带 .html 后缀，
               // 若在此处用 getLocalizedLink 拼裸 slug 会生成 404 链接（2026-09-23 修复）
-              const rowHref = isOrphanCelsius(row.celsius)
+              // ⚠️ 孤儿页只有英语版本，非英语 locale 页保持纯文本（见 createItem 内同款判断）
+              const rowIsOrphan = isOrphanCelsius(row.celsius);
+              const rowHref = rowIsOrphan
                 ? cToFHref(row.celsius)
                 : getLocalizedLink(`/${row.celsius}-c-to-f`, locale);
-              const rowExists = availablePages.includes(row.celsius);
+              const rowExists = availablePages.includes(row.celsius) && (!rowIsOrphan || locale === 'en');
               return (
                 <tr key={index} className="linkable-row">
                   <td>
@@ -562,7 +564,12 @@ const RelatedTemperatures: React.FC<{
       if (Math.abs(targetC - val) < 0.01) return null;
       if (targetC === 0) targetC = 0;
 
-      const exists = isPageAvailable(targetC);
+      const isOrphan = isOrphanCelsius(targetC);
+      // 孤儿旧 HTML 页只有英语版本：
+      // · 英语页 → 链接到 /xxx-c-to-f.html（真实 URL，带后缀）
+      // · 非英语页 → 保持纯文本（与改造前一致），避免把西语/日语用户送到英语页
+      // 这样也让"孤儿边表"的口径恒等于英语图（docs/data/orphan-link-edges.json）
+      const exists = isPageAvailable(targetC) && (!isOrphan || locale === 'en');
       const f = celsiusToFahrenheit(targetC);
 
       // Localized Title Generation
@@ -578,10 +585,8 @@ const RelatedTemperatures: React.FC<{
         title: title,
         equation: `${targetC}°C = ${formatTemperature(f)}°F`,
         url: cToFHref(targetC),
-        // 孤儿旧 HTML 页只有英语版本，href 带 .html 后缀、不加多语言前缀；
-        // 其余温度页交给 getLocalizedLink 处理。
         href: exists
-          ? isOrphanCelsius(targetC)
+          ? isOrphan
             ? cToFHref(targetC)
             : getLocalizedLink(`/${String(targetC).replace('.', '-')}-c-to-f`, locale)
           : undefined,

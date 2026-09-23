@@ -33,19 +33,36 @@ const { ORPHAN_CELSIUS, ORPHAN_C_TO_F_SLUGS } = require(path.join(ROOT, '.tmp-au
 function buildAvailablePages() {
   const pagesDir = path.join(ROOT, 'pages');
   const regex = /^(\d+(?:-\d+)?)-c-to-f\.tsx$/;
-  const temps = [];
+  const nextTemps = [];
   for (const file of fs.readdirSync(pagesDir)) {
     const m = file.match(regex);
     if (m) {
       const num = parseFloat(m[1].replace(/-/g, '.'));
-      if (!isNaN(num)) temps.push(num);
+      if (!isNaN(num)) nextTemps.push(num);
     }
   }
-  const before = temps.length;
+  const all = [...nextTemps];
   ORPHAN_CELSIUS.forEach((num) => {
-    if (!temps.includes(num)) temps.push(num);
+    if (!all.includes(num)) all.push(num);
   });
-  return { temps, before, after: temps.length };
+  return { nextTemps, all };
+}
+
+/**
+ * 孤儿页是静态 HTML，**不走 React 组件逻辑** —— 必须直接解析 public/*.html 里的真实 href。
+ * （早期版本把孤儿当 React 页建模，算出的边是错的；2026-09-23 修正）
+ */
+function orphanHtmlTargets(slug) {
+  const file = path.join(ROOT, 'public', `${slug}.html`);
+  if (!fs.existsSync(file)) return [];
+  const html = fs.readFileSync(file, 'utf8');
+  const re = /href="\/?([0-9]+(?:-[0-9]+)?-c-to-f)(\.html)?"/g;
+  const out = new Set();
+  let m;
+  while ((m = re.exec(html))) {
+    if (m[1] !== slug) out.add(m[1]);
+  }
+  return [...out];
 }
 
 // ---------- 2. 复刻两处目标选择 ----------
@@ -122,20 +139,28 @@ function preexistingHtmlRefs() {
 }
 
 // ---------- 5. 汇总出边 ----------
-const { temps: availablePages, before, after } = buildAvailablePages();
+// 口径说明（2026-09-23 修正）：
+//   · 源 = Next 温度页（47 个）→ 走组件逻辑（表格行 + 相关推荐），**仅英语页**（非英语 locale 已加闸门）
+//   · 源 = 孤儿旧 HTML（34 个）→ **直接解析 public/*.html 的真实 href**，不套组件逻辑
+//   · 源 = 烤箱专题页 → CONVERSION_ROWS
+//   · 源 = 改造前既有硬引用（i18n JSON / ReferenceSection）
+const { nextTemps, all: availablePages } = buildAvailablePages();
 const availSet = new Set(availablePages);
-
-const sourcePages = [...availablePages];
 
 const inbound = new Map(); // orphan celsius -> [{ from, kind }]
 ORPHAN_CELSIUS.forEach((c) => inbound.set(c, []));
 
+// 改造前的入边（用于 before 基线）：孤儿→孤儿（静态 HTML）+ 既有硬引用
+const beforeInbound = new Map();
+ORPHAN_CELSIUS.forEach((c) => beforeInbound.set(c, []));
+
 let tableEdges = 0;
 let relatedEdges = 0;
 let chartEdges = 0;
+let orphanHtmlEdges = 0;
 const outboundOrphanEdges = new Map(); // source celsius -> 出边数（指向孤儿）
 
-for (const src of sourcePages) {
+for (const src of nextTemps) {
   let count = 0;
 
   // 表格行（注意：源页自身所在行会被高亮，不算链接）
@@ -164,6 +189,17 @@ for (const src of sourcePages) {
   if (count > 0) outboundOrphanEdges.set(src, count);
 }
 
+// 第二类：孤儿 → 孤儿（解析真实 HTML，改造前就存在）
+for (const slug of ORPHAN_C_TO_F_SLUGS) {
+  for (const target of orphanHtmlTargets(slug)) {
+    const c = parseFloat(target.replace(/-c-to-f$/, '').replace('-', '.'));
+    if (!inbound.has(c)) continue;
+    inbound.get(c).push({ from: slug, kind: 'orphan-html' });
+    beforeInbound.get(c).push({ from: slug, kind: 'orphan-html' });
+    orphanHtmlEdges++;
+  }
+}
+
 // 第三类：oven-temperature-conversion 主表（源页是专题页，不是温度页）
 for (const t of ovenChartTargets()) {
   if (!availSet.has(t) || !ORPHAN_CELSIUS.has(t)) continue;
@@ -176,43 +212,74 @@ const preRefs = preexistingHtmlRefs();
 for (const [slug, srcs] of preRefs) {
   const c = parseFloat(slug.replace(/-c-to-f$/, '').replace('-', '.'));
   if (!inbound.has(c)) continue;
-  for (const s of srcs) inbound.get(c).push({ from: s, kind: 'preexisting' });
+  for (const s of srcs) {
+    inbound.get(c).push({ from: s, kind: 'preexisting' });
+    beforeInbound.get(c).push({ from: s, kind: 'preexisting' });
+  }
 }
 
 // ---------- 6. 输出 ----------
 const slugOf = (c) => `${String(c).replace('.', '-')}-c-to-f`;
 const orphans = [...ORPHAN_CELSIUS];
 
+/**
+ * 边的价值分两级 —— 这是最容易搞混的一点（2026-09-23 修正后新增）：
+ *   · indexable = 来源是**可索引的 Next 页**（温度页 / 专题页 / ReferenceSection 所在页）→ 真正传递权重
+ *   · orphan    = 来源是另一张孤儿旧 HTML（自身没收录、无权重）→ 只有爬取可达性价值，几乎不传权重
+ * 早期把两者混成一个"入链数"，导致"孤儿零入链"的结论严重夸大。
+ */
+const isIndexableSource = (from) =>
+  typeof from === 'number' || from === 'oven-temperature-conversion' || /\.(tsx|json)$/.test(String(from));
+
 const rows = orphans
-  .map((c) => ({
-    slug: slugOf(c),
-    inbound: inbound.get(c).length,
-    // from 可能是温度值（number，来自温度页）或文件路径/页面名（string，来自专题表与既有引用）
-    fromPages: [...new Set(inbound.get(c).map((e) => (typeof e.from === 'number' ? slugOf(e.from) : e.from)))],
-  }))
-  .sort((a, b) => a.inbound - b.inbound);
+  .map((c) => {
+    const edges = inbound.get(c);
+    return {
+      slug: slugOf(c),
+      inbound: edges.length,
+      indexable: edges.filter((e) => isIndexableSource(e.from)).length,
+      orphanOnly: edges.filter((e) => !isIndexableSource(e.from)).length,
+      // from 可能是温度值（number，来自温度页）或文件路径/页面名（string，来自专题表与既有引用）
+      fromPages: [...new Set(edges.map((e) => (typeof e.from === 'number' ? slugOf(e.from) : e.from)))],
+    };
+  })
+  .sort((a, b) => a.indexable - b.indexable || a.inbound - b.inbound);
 
 const zero = rows.filter((r) => r.inbound === 0);
+const zeroIndexable = rows.filter((r) => r.indexable === 0);
 const totalInbound = rows.reduce((a, r) => a + r.inbound, 0);
-const beforeCount = [...preRefs.keys()].length;
+const totalIndexable = rows.reduce((a, r) => a + r.indexable, 0);
+const beforeCount = orphans.filter((c) => beforeInbound.get(c).length > 0).length;
+const beforeTotal = [...beforeInbound.values()].reduce((a, v) => a + v.length, 0);
+const beforeIndexableCount = orphans.filter((c) =>
+  beforeInbound.get(c).some((e) => isIndexableSource(e.from))
+).length;
+const preRefCount = [...preRefs.values()].reduce((a, s) => a + s.size, 0);
 
 console.log('='.repeat(72));
 console.log('孤儿旧 HTML 内链审计 — 2026-09-23');
 console.log('='.repeat(72));
-console.log(`availablePages: ${before} (pages/*.tsx) + ${after - before} (孤儿) = ${after}`);
-console.log(`孤儿总数: ${orphans.length}`);
+console.log(`Next 温度页（组件逻辑源）: ${nextTemps.length}   孤儿（HTML 解析源）: ${orphans.length}   合计可链接目标: ${availablePages.length}`);
 console.log('');
-console.log(`【改造前】有入链的孤儿: ${beforeCount} / ${orphans.length}  零入链: ${orphans.length - beforeCount}`);
-console.log(`【改造后】有入链的孤儿: ${orphans.length - zero.length} / ${orphans.length}  零入链: ${zero.length}`);
-console.log(`总入边: ${totalInbound}  (温度页表格 ${tableEdges} + Related ${relatedEdges} + 烤箱专题表 ${chartEdges} + 改造前既有 ${[...preRefs.values()].reduce((a, s) => a + s.size, 0)})`);
-console.log(`有孤儿出边的源页: ${outboundOrphanEdges.size}`);
-console.log(`改造后仍零入链: ${zero.length ? zero.map((z) => z.slug).join(', ') : '无'}`);
+console.log(`【改造前】有入链 ${beforeCount}/${orphans.length}（入边 ${beforeTotal}）  其中来自**可索引 Next 页**的: ${beforeIndexableCount}/${orphans.length}`);
+console.log(`【改造后】有入链 ${orphans.length - zero.length}/${orphans.length}（入边 ${totalInbound}）  其中来自**可索引 Next 页**的: ${orphans.length - zeroIndexable.length}/${orphans.length}（${totalIndexable} 条）`);
 console.log('');
-console.log('每孤儿入链数（升序）:');
+console.log('边来源拆解（改造后）:');
+console.log(`  ★ 温度页对照表（ConversionTable）     ${String(tableEdges).padStart(3)}   1a 新增 · 可索引`);
+console.log(`  ★ 温度页相关推荐（RelatedTemperatures）${String(relatedEdges).padStart(3)}   1a 新增 · 可索引`);
+console.log(`  ★ 烤箱专题表（oven-temperature-conv）  ${String(chartEdges).padStart(3)}   1a 新增 · 可索引`);
+console.log(`  ★ 既有硬引用（i18n JSON / 组件）       ${String(preRefCount).padStart(3)}   改造前既有 · 可索引`);
+console.log(`    孤儿 → 孤儿（静态 HTML 真实 href）   ${String(orphanHtmlEdges).padStart(3)}   改造前既有 · **不可索引来源，权重价值≈0**`);
+console.log('');
+console.log(`有孤儿出边的 Next 温度页: ${outboundOrphanEdges.size}`);
+console.log(`改造后仍【完全】零入链: ${zero.length ? zero.map((z) => z.slug).join(', ') : '无'}`);
+console.log(`改造后仍【无 Next 页入链】: ${zeroIndexable.length ? zeroIndexable.map((z) => z.slug).join(', ') : '无'}`);
+console.log('');
+console.log('每孤儿（按"可索引入链"升序）:');
 for (const r of rows) {
-  const src = r.fromPages.slice(0, 6).join(', ');
-  const more = r.fromPages.length > 6 ? ` …(+${r.fromPages.length - 6})` : '';
-  console.log(`  ${String(r.inbound).padStart(3)}  ${r.slug.padEnd(16)} ← ${src}${more}`);
+  const src = r.fromPages.slice(0, 5).join(', ');
+  const more = r.fromPages.length > 5 ? ` …(+${r.fromPages.length - 5})` : '';
+  console.log(`  可索引 ${String(r.indexable).padStart(2)} / 合计 ${String(r.inbound).padStart(2)}  ${r.slug.padEnd(16)} ← ${src}${more}`);
 }
 
 // 机器可读输出，供归档 / 4 周后对照
@@ -224,18 +291,34 @@ fs.writeFileSync(
   JSON.stringify(
     {
       generated_at: new Date().toISOString(),
-      available_pages: { from_pages_dir: before, from_orphans: after - before, total: after },
-      before: { orphans_with_inbound: beforeCount, orphans_with_zero_inbound: orphans.length - beforeCount },
-      after: { orphans_with_inbound: orphans.length - zero.length, orphans_with_zero_inbound: zero.length },
+      scope: 'English graph only（非英语 locale 页已加闸门，不输出孤儿链接）',
+      available_pages: { next_temperature_pages: nextTemps.length, orphans: orphans.length, total_targets: availablePages.length },
+      before: {
+        orphans_with_inbound: beforeCount,
+        orphans_with_zero_inbound: orphans.length - beforeCount,
+        total_edges: beforeTotal,
+      },
+      after: {
+        orphans_with_inbound: orphans.length - zero.length,
+        orphans_with_zero_inbound: zero.length,
+        total_edges: totalInbound,
+      },
       edges: {
         temperature_table: tableEdges,
         temperature_related: relatedEdges,
         oven_chart: chartEdges,
-        preexisting_refs: [...preRefs.values()].reduce((a, s) => a + s.size, 0),
+        orphan_to_orphan_html: orphanHtmlEdges,
+        preexisting_refs: preRefCount,
         total: totalInbound,
       },
       zero_inbound: zero.map((z) => z.slug),
-      per_orphan: rows.map((r) => ({ slug: r.slug, inbound: r.inbound, from: r.fromPages })),
+      before_zero_inbound: orphans.filter((c) => beforeInbound.get(c).length === 0).map((c) => slugOf(c)),
+      before_per_orphan: orphans
+        .map((c) => ({ slug: slugOf(c), inbound: beforeInbound.get(c).length }))
+        .sort((a, b) => a.inbound - b.inbound),
+      per_orphan: rows.map((r) => ({ slug: r.slug, inbound: r.inbound, indexable_inbound: r.indexable, orphan_only_inbound: r.orphanOnly, from: r.fromPages })),
+      zero_indexable_inbound: zeroIndexable.map((z) => z.slug),
+      before_zero_indexable_inbound: orphans.filter((c) => !beforeInbound.get(c).some((e) => isIndexableSource(e.from))).map((c) => slugOf(c)),
       per_source: [...outboundOrphanEdges.entries()].map(([c, n]) => ({ slug: slugOf(c), outbound_to_orphans: n })),
       preexisting_refs_by_orphan: Object.fromEntries([...preRefs.entries()].map(([k, v]) => [k, [...v]])),
     },
