@@ -7,6 +7,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import OvenTemperatureConverter from '../components/OvenTemperatureConverter';
 import styles from '../styles/oven-temperature-conversion.module.css';
+import { getAvailableTemperaturePages } from '../utils/serverHelpers';
+import { isOrphanCelsius, cToFHref } from '../utils/orphanTemperaturePages';
 
 const SITE_ORIGIN = 'https://ctofconverter.com';
 const CANONICAL_URL = `${SITE_ORIGIN}/oven-temperature-conversion`;
@@ -86,7 +88,21 @@ const WEBPAGE_SCHEMA = {
   about: { '@type': 'Thing', name: 'Oven Temperature Conversion' },
 };
 
-export default function OvenTemperatureConversion() {
+/**
+ * 2026-09-23：主表里凡是"确实存在独立温度页"的行改成内链。
+ * 这张表是烤箱温度簇（175/170/190/210/220/230/250 等孤儿页）唯一的上游权威入口，
+ * 此前 34 个孤儿页在 Next 站内零入链，其中 120°C 是全站最后一个零入链页面。
+ * 孤儿旧 HTML 的真实 URL 带 .html 后缀，必须走 cToFHref，否则生成 404 链接。
+ */
+export async function getStaticProps() {
+  return {
+    props: {
+      availablePages: getAvailableTemperaturePages(),
+    },
+  };
+}
+
+export default function OvenTemperatureConversion({ availablePages = [] }: { availablePages?: number[] }) {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   const toggleFaq = useCallback((index: number) => {
@@ -151,15 +167,19 @@ export default function OvenTemperatureConversion() {
                 </tr>
               </thead>
               <tbody>
-                {CONVERSION_ROWS.map((row, i) => (
-                  <tr key={i}>
-                    <td>{row.c}°C</td>
-                    <td>{row.f}°F</td>
-                    <td>{row.fan}°C</td>
-                    <td>{row.gas}</td>
-                    <td>{row.use}</td>
-                  </tr>
-                ))}
+                {CONVERSION_ROWS.map((row, i) => {
+                  const hasPage = availablePages.includes(row.c);
+                  const href = isOrphanCelsius(row.c) ? cToFHref(row.c) : `/${row.c}-c-to-f`;
+                  return (
+                    <tr key={i}>
+                      <td>{hasPage ? <Link href={href}>{row.c}°C</Link> : `${row.c}°C`}</td>
+                      <td>{row.f}°F</td>
+                      <td>{row.fan}°C</td>
+                      <td>{row.gas}</td>
+                      <td>{row.use}</td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>

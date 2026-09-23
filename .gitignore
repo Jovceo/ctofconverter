@@ -37,6 +37,9 @@ google-oauth-token.json
 *.tsbuildinfo
 next-env.d.ts
 
+# 审计脚本的临时编译产物（scripts/orphan-link-audit.mjs 用）
+/.tmp-audit/
+
 # generated files (regenerated on each build)
 public/sitemap.xml
 

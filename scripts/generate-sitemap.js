@@ -30,6 +30,25 @@ const publicDir = path.join(__dirname, '../public');
 const rootDir = path.join(__dirname, '..');
 
 // ============================================================
+// 已迁移的旧 HTML 路由 - 这些 URL 已被 301，不能进 sitemap
+// 把 301 的 URL 放进 sitemap = 浪费抓取预算 + 向搜索引擎发错误信号
+// ============================================================
+const migratedRoutesPath = path.join(__dirname, '../config/migrated-routes.json');
+const migratedHtmlFiles = new Set();
+try {
+    const data = JSON.parse(fs.readFileSync(migratedRoutesPath, 'utf-8'));
+    for (const slug of [...(data.htmlRoutes || []), ...(data.indexHtmlRoutes || [])]) {
+        migratedHtmlFiles.add(`${slug}.html`);
+    }
+    console.log(`📦 Loaded ${migratedHtmlFiles.size} migrated routes (excluded from sitemap)`);
+} catch (e) {
+    console.warn('⚠️ Could not load migrated-routes.json, orphan filter may be incomplete:', e.message);
+}
+
+// 孤儿旧 HTML 的非内容文件（不进 sitemap）
+const ORPHAN_HTML_EXCLUDED = new Set(['404.html', 'demo.html']);
+
+// ============================================================
 // 1. 性能优化：批量获取所有文件的 Git 最后修改时间
 // ============================================================
 const gitDateMap = {};
@@ -86,6 +105,16 @@ function getLastModified(filePath) {
 function getPageLastMod(pageSlug) {
     const candidates = [];
 
+    // 孤儿旧 HTML：源码在 public/ 下，lastmod 走 Git（不能用 mtime——
+    // 72 个 html 的 mtime 是同一天，会让 sitemap 里整批页显示同一日期）
+    if (pageSlug.endsWith('.html')) {
+        const htmlPath = path.join(publicDir, pageSlug);
+        if (fs.existsSync(htmlPath)) candidates.push(getLastModified(htmlPath));
+        return candidates.length > 0
+            ? candidates.sort().reverse()[0]
+            : PROJECT_LAUNCH_DATE;
+    }
+
     const tsxName = pageSlug === '' ? 'index.tsx' : `${pageSlug}.tsx`;
     const tsxPath = path.join(pagesDir, tsxName);
     if (fs.existsSync(tsxPath)) candidates.push(getLastModified(tsxPath));
@@ -136,6 +165,8 @@ function createUrlEntry(loc, lastmod, priority, changefreq) {
 function getPriority(pageSlug) {
     // 首页：最高
     if (pageSlug === '' || pageSlug === 'index') return '1.0';
+    // 孤儿旧 HTML 页（保留 .html 后缀）：历史遗留资产，低于精做页与工具页，高于小数温度页
+    if (pageSlug.endsWith('.html')) return '0.5';
     // 精做页面：次高
     if (qualityPages.includes(pageSlug)) return '0.9';
     // 工具页（calculator, oven 等）
@@ -211,13 +242,79 @@ function getTemperaturePages() {
 }
 
 /**
+ * 获取孤儿旧 HTML 页面
+ *
+ * "孤儿"定义（四条全中）：200 在线 + 不在 sitemap + 无内链 + 无 Next 版本且不在 migrated-routes.json
+ * 三道过滤：
+ *   1. 排除 404.html / demo.html
+ *   2. 排除搜索引擎验证文件（google*.html / yandex_*.html）
+ *   3. 排除已在 migrated-routes.json 的（已 301）
+ * 保留 .html 后缀：这批页的历史信号全在 .html 这个 URL 上，改 URL 等于丢信号。
+ * 实测（2026-09-23）：这批页是"被漏迁的精做页"（表格 + FAQ + JSON-LD + 场景化 title），
+ * 不是低质旧页；崩前池周均展示 3,128，占全站展示 32.1%。
+ */
+function getOrphanHtmlPages() {
+    try {
+        const files = fs.readdirSync(publicDir);
+        const orphans = files
+            .filter(file => file.endsWith('.html'))
+            .filter(file => !ORPHAN_HTML_EXCLUDED.has(file))
+            .filter(file => !/^(google|yandex)/i.test(file))
+            .filter(file => !migratedHtmlFiles.has(file))
+            .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+
+        console.log(`🔍 Found ${orphans.length} orphan HTML pages (never in sitemap before)`);
+        verifyOrphanRegistry(orphans);
+        return orphans;
+    } catch (e) {
+        console.error('Error reading public directory:', e);
+        return [];
+    }
+}
+
+/**
+ * 一致性校验：utils/orphanTemperaturePages.ts 的静态列表必须与 public/*.html 实际孤儿一致。
+ * 内链用的是静态列表；一旦漂移 ——
+ *   注册表缺少 → 孤儿拿不到内链（漏）；
+ *   注册表多余 → 页面已不存在，会生成指向 404 的链接。
+ */
+function verifyOrphanRegistry(actualOrphans) {
+    const registryPath = path.join(__dirname, '../utils/orphanTemperaturePages.ts');
+    try {
+        const src = fs.readFileSync(registryPath, 'utf-8');
+        const registered = new Set(
+            [...src.matchAll(/'(\d+(?:-\d+)?-c-to-f)'/g)].map((m) => `${m[1]}.html`)
+        );
+        const actual = new Set(actualOrphans);
+
+        const missing = [...actual].filter((f) => !registered.has(f));
+        const stale = [...registered].filter((f) => !actual.has(f));
+
+        if (missing.length || stale.length) {
+            console.warn('⚠️  orphanTemperaturePages.ts 与 public/*.html 不一致：');
+            if (missing.length) {
+                console.warn(`    注册表缺少 ${missing.length} 个（这些页拿不到内链）: ${missing.join(', ')}`);
+            }
+            if (stale.length) {
+                console.warn(`    注册表多余 ${stale.length} 个（会生成 404 链接）: ${stale.join(', ')}`);
+            }
+        } else {
+            console.log(`✅ Orphan registry matches public/*.html (${registered.size} entries)`);
+        }
+    } catch (e) {
+        console.warn('⚠️  Could not verify orphan registry:', e.message);
+    }
+}
+
+/**
  * 获取所有要放入 sitemap 的页面
  * 精做页面排最前，然后是首页和工具页，最后是温度页
  */
 function getSitemapPages() {
     const staticPages = getAllPages();
     const tempPages = getTemperaturePages();
-    const allPages = [...new Set([...staticPages, ...tempPages])];
+    const orphanPages = getOrphanHtmlPages();
+    const allPages = [...new Set([...staticPages, ...tempPages, ...orphanPages])];
 
     // 排序：首页最前，然后精做页面，然后其余按自然顺序
     allPages.sort((a, b) => {

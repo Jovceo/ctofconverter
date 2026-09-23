@@ -32,6 +32,7 @@ import { getGranularContext } from '../utils/temperatureContext';
 import { ContentStrategy } from '../utils/contentStrategy';
 import { textSpinner } from '../utils/textSpinner';
 import { useTranslation, getLocalizedLink, SUPPORTED_LOCALES, HREFLANG_MAP } from '../utils/i18n';
+import { isOrphanCelsius, cToFHref } from '../utils/orphanTemperaturePages';
 
 /**
  * 缈昏瘧鍑芥暟绫诲瀷
@@ -497,7 +498,11 @@ const ConversionTable: React.FC<{
               }
 
               // SEO: Use proper <a> tags so crawlers can discover internal links
-              const rowHref = getLocalizedLink(`/${row.celsius}-c-to-f`, locale);
+              // ⚠️ href 必须走 cToFHref：孤儿旧 HTML 页的真实 URL 带 .html 后缀，
+              // 若在此处用 getLocalizedLink 拼裸 slug 会生成 404 链接（2026-09-23 修复）
+              const rowHref = isOrphanCelsius(row.celsius)
+                ? cToFHref(row.celsius)
+                : getLocalizedLink(`/${row.celsius}-c-to-f`, locale);
               const rowExists = availablePages.includes(row.celsius);
               return (
                 <tr key={index} className="linkable-row">
@@ -572,8 +577,14 @@ const RelatedTemperatures: React.FC<{
       return {
         title: title,
         equation: `${targetC}°C = ${formatTemperature(f)}°F`,
-        url: `/${String(targetC).replace('.', '-')}-c-to-f`,
-        href: exists ? getLocalizedLink(`/${String(targetC).replace('.', '-')}-c-to-f`, locale) : undefined,
+        url: cToFHref(targetC),
+        // 孤儿旧 HTML 页只有英语版本，href 带 .html 后缀、不加多语言前缀；
+        // 其余温度页交给 getLocalizedLink 处理。
+        href: exists
+          ? isOrphanCelsius(targetC)
+            ? cToFHref(targetC)
+            : getLocalizedLink(`/${String(targetC).replace('.', '-')}-c-to-f`, locale)
+          : undefined,
         isContextual: true
       };
     };
