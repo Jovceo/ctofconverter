@@ -28,6 +28,7 @@ Put your domain in the title. **Your issue is public** — check that you're fin
 - First 5 reviews free. After that, **¥300–800** (≈ $40–110).
 - Scope: same line as ctofconverter.com — temperature / unit-conversion tool sites.
 - "Within 24 hours" means you get a **reply**, not a finished fix.
+- **Privacy split:** reviews 1–5 (free) default to a **public** issue. From review 6 on (paid), you may choose a private channel instead — your domain does not have to be public.
 
 ---
 
@@ -53,6 +54,7 @@ Put your domain in the title. **Your issue is public** — check that you're fin
 - 前 5 单免费，之后 **¥300–800**
 - 只接与 ctofconverter.com 同线的站（温度换算 / 单位换算工具站）
 - "24 小时内回"指**回信**，不是修完
+- **公开性分流**：前 5 单（免费）默认走**公开** issue；**第 6 单起（付费）客户可选私密渠道**，域名不必公开
 
 ---
 
@@ -63,3 +65,4 @@ _Last updated: 2026-09-24_
 - [ ] 复盘正文链接（English 段 `[TODO: link]` + 中文段 `【待填】`）—— 正文发布后两处一起回填
 - [ ] 确认 GitHub Issues 在复盘发布时仍为开放状态
 - [ ] 确认是否需要额外留一个邮件入口（当前设计**不依赖邮箱**，见 §5.1）
+- [ ] **付费单的"私密渠道"具体是什么**（第 6 单起启用）—— 分流规则已进正文 Terms，但私密渠道本身未定（邮件？私信？），**启用前须定一个**，否则第 6 单来时会卡住
