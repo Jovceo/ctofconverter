@@ -9,8 +9,9 @@
  *   C = 改造前没有、改造后仍然没有（**1b-only 组**）    n=5
  *
  * 依赖：
- *   · docs/data/orphan-link-edges.json      ← scripts/orphan-link-audit.mjs 生成
- *   · docs/事实基线-2026-09-23.md §一d      ← 逐页崩前基线 / 当期展示
+ *   · docs/data/orphan-link-edges.json              ← scripts/orphan-link-audit.mjs 生成
+ *   · docs/data/precrash-baseline-verified.json     ← scripts/baseline-upgrade.mjs（优先，derived-verified）
+ *   · docs/事实基线-2026-09-23.md §一d              ← 回退：逐页崩前基线 / 覆盖率 meta
  *
  * 运行：node scripts/orphan-groups.mjs
  *
@@ -18,7 +19,7 @@
  *   1. 恢复率 = 当期4周 / (崩前周均 × 4)，**只对崩前周均 ≥ 5 的页计算**（小分母会爆表：37-7 的 1 次展示 = 125%）
  *   2. 组间比**中位数**，不比绝对值
  *   3. C 组（有效 n=4）**只作方向性参考，不进通过/失败判定** —— 通过/失败只看 §2.2 的 Top10 ≥8/10
- *   4. B 组必须同时报"含 175 / 不含 175"（175 占 B 组崩前 60%）
+ *   4. B 组必须同时报"含 175 / 不含 175"（175 占 B 组崩前 ~60%，直读后按实际值打印）
  *   5. **必须做双重差分（DiD）** —— 见下方 CONFOUND 说明
  *
  * ⚠️ CONFOUND（2026-09-23 18:05 自查发现 → **18:20 已被证伪，C9**）：
@@ -48,8 +49,41 @@ const NOW_WEEKS = 4; // 当期窗口 = 4 周（2026-08-25 ~ 2026-09-21）
  */
 const NOW_IS_FALSIFIED_USE_ZERO = true;
 
-// ---------- 1. 解析事实基线 §一d 的逐页表 ----------
+// 基线口径（由 parseBaselines 按实际数据源设定）
+let BASELINE_CALIBER = 'provisional';
+let BASELINE_POOL_EXPECTED = 3128.1;
+
+// ---------- 1. 基线：优先直读 verified（2026-09-24），回退解析事实基线 §一d ----------
 function parseBaselines() {
+  const verifiedPath = path.join(ROOT, 'docs/data/precrash-baseline-verified.json');
+  if (fs.existsSync(verifiedPath)) {
+    const v = JSON.parse(fs.readFileSync(verifiedPath, 'utf8'));
+    if (v && Array.isArray(v.rows) && v.rows.length === 34) {
+      const edgeMeta = new Map();
+      const md = fs.readFileSync(path.join(ROOT, 'docs/事实基线-2026-09-23.md'), 'utf8');
+      for (const line of md.split(/\r?\n/)) {
+        const m = line.match(
+          /^\|\s*([0-9]+(?:-[0-9]+)?-c-to-f)\s*\|\s*(整数|体温)\s*\|\s*([\d,]+)\s*\|\s*\*\*([\d,.]+)\*\*\s*\|\s*(\d+)\s*\|\s*(\d+)%/
+        );
+        if (m) edgeMeta.set(m[1], { total12m: +m[3].replace(/,/g, ''), coverage: +m[6] });
+      }
+      BASELINE_CALIBER = v.caliber || 'derived-verified';
+      BASELINE_POOL_EXPECTED = v.pool_weekly_pre || 3714.6;
+      return v.rows.map((r) => {
+        const meta = edgeMeta.get(r.slug) || {};
+        return {
+          slug: r.slug,
+          cls: r.kind,
+          total12m: meta.total12m ?? r.y12m ?? 0,
+          preWeekly: r.preWeekly,
+          now4wApprox: 0,
+          now4w: NOW_IS_FALSIFIED_USE_ZERO ? 0 : (r.now4w ?? 0),
+          coverage: meta.coverage ?? 0,
+          threshold: r.threshold,
+        };
+      });
+    }
+  }
   const md = fs.readFileSync(path.join(ROOT, 'docs/事实基线-2026-09-23.md'), 'utf8');
   const rows = [];
   for (const line of md.split(/\r?\n/)) {
@@ -62,12 +96,13 @@ function parseBaselines() {
       cls: m[2],
       total12m: +m[3].replace(/,/g, ''),
       preWeekly: +m[4].replace(/,/g, ''),
-      // 已证伪的近似值（仅留档对照）；真实当期展示见 NOW_IS_FALSIFIED_USE_ZERO
       now4wApprox: +m[5],
       now4w: NOW_IS_FALSIFIED_USE_ZERO ? 0 : +m[5],
       coverage: +m[6],
     });
   }
+  BASELINE_CALIBER = 'provisional-fallback';
+  BASELINE_POOL_EXPECTED = 3128.1;
   return rows;
 }
 
@@ -131,6 +166,7 @@ const out = {
     MIN_BASELINE_FOR_RATIO +
     ' 的页计算；C 组仅作方向性参考，不进通过/失败判定。',
   baseline_window: '2025-10-01 ~ 2025-12-15 (76d)',
+  baseline_caliber: BASELINE_CALIBER,
   current_window: '2026-08-25 ~ 2026-09-21 (28d)',
   // 干预前快照（1a 部署于 2026-09-23）。4 周后把新窗口填进 post_intervention 再重跑，即可算 DiD。
   pre_intervention: {
@@ -155,7 +191,7 @@ const out = {
 console.log('='.repeat(74));
 console.log('孤儿页 A/B/C 三组对照 — ' + new Date().toISOString().slice(0, 10));
 console.log('='.repeat(74));
-console.log(`解析到 ${rows.length} 页，崩前周均合计 ${rows.reduce((a, r) => a + r.preWeekly, 0).toFixed(1)}（应 = 3128.1）`);
+console.log(`解析到 ${rows.length} 页，崩前周均合计 ${rows.reduce((a, r) => a + r.preWeekly, 0).toFixed(1)}（口径=${BASELINE_CALIBER}，应 ≈ ${BASELINE_POOL_EXPECTED}）`);
 console.log('');
 
 for (const k of ['A', 'B', 'C']) {
@@ -194,8 +230,9 @@ const B = G.B;
 const bNo175 = B.filter((r) => r.slug !== '175-c-to-f');
 out.groups.B_excluding_175 = summarize(bNo175);
 out.members.B_excluding_175 = bNo175.map((r) => r.slug);
+const r175 = B.find((r) => r.slug === '175-c-to-f');
 console.log('【B 组 · 不含 175】（175 占 B 组崩前 ' +
-  ((1513.8 / out.groups.B.pre_weekly_sum) * 100).toFixed(1) + '%）');
+  (((r175 ? r175.preWeekly : 0) / out.groups.B.pre_weekly_sum) * 100).toFixed(1) + '%）');
 console.log(`     崩前周均 合计 ${out.groups.B_excluding_175.pre_weekly_sum} / 中位 ${out.groups.B_excluding_175.pre_weekly_median}   当期4周 ${out.groups.B_excluding_175.now_4w_sum}`);
 console.log(`     恢复率中位数 ${out.groups.B_excluding_175.recovery_rate_median === null ? 'n/a' : (out.groups.B_excluding_175.recovery_rate_median * 100).toFixed(2) + '%'}`);
 console.log('');
@@ -212,7 +249,7 @@ if (sum !== rows.length) {
   console.error(`❌ 分组覆盖不全：${sum} ≠ ${rows.length}`);
   process.exitCode = 1;
 }
-if (Math.abs(rows.reduce((a, r) => a + r.preWeekly, 0) - 3128.1) > 0.5) {
-  console.error('❌ 崩前周均合计偏离 3128.1，基线表可能被改动过');
+if (Math.abs(rows.reduce((a, r) => a + r.preWeekly, 0) - BASELINE_POOL_EXPECTED) > 1) {
+  console.error(`❌ 崩前周均合计偏离 ${BASELINE_POOL_EXPECTED}，基线数据可能被改动过`);
   process.exitCode = 1;
 }
