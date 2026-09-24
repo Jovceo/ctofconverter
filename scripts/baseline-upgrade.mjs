@@ -9,6 +9,11 @@
  *
  * 运行：node scripts/baseline-upgrade.mjs
  * 输出：docs/data/precrash-baseline-verified.json + 终端报告
+ *
+ * ⚠️ 操作惯例（2026-09-24，双方约定，不进规格正文）：
+ *   每次重跑覆盖输出前，先把旧 JSON 复制为同目录 *.prev.json 再写新值
+ *   —— docs/data/ 不进 git，无版本历史；不落 prev 则 +18.8% 这类偏差无法复算（§7.1）。
+ *   同理适用于 orphan-groups.json / 任何会被原地覆盖的判据输入。
  */
 
 import fs from 'node:fs';
