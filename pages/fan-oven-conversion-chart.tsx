@@ -15,6 +15,7 @@ import { normalizeMigratedUrl } from '../utils/normalizeMigratedUrl';
 import fs from 'fs';
 import path from 'path';
 import { useRouter } from 'next/router';
+import OvenSettingsTranslator, { type OvenRow } from '../components/OvenSettingsTranslator';
 
 type StructuredHowToStep = {
   name: string;
@@ -133,15 +134,27 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 
   // So the ONLY way to fix this "Reduce unused JS" properly is to fix 'utils/i18n.ts' itself.
 
+  // Oven Settings Translator data — single source: config/datasets/oven-conversions.json
+  let ovenRows: OvenRow[] = [];
+  try {
+    const ds = JSON.parse(
+      fs.readFileSync(path.join(process.cwd(), 'config', 'datasets', 'oven-conversions.json'), 'utf8')
+    );
+    ovenRows = ds.rows;
+  } catch {
+    ovenRows = [];
+  }
+
   return {
     props: {
       lastUpdatedIso,
-      pageTrans
+      pageTrans,
+      ovenRows
     }
   };
 };
 
-export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { lastUpdatedIso: string, pageTrans: Record<string, unknown> }) {
+export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans, ovenRows }: { lastUpdatedIso: string, pageTrans: Record<string, unknown>, ovenRows: OvenRow[] }) {
   const router = useRouter(); // Use router for locale
   const locale = router.locale || 'en';
   // Use lightweight translation for this page's content
@@ -436,6 +449,19 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </Head>
+      <style jsx global>{`
+        @media print {
+          header,
+          footer,
+          nav,
+          [role='tablist'] {
+            display: none !important;
+          }
+          [role='tabpanel'] {
+            display: block !important;
+          }
+        }
+      `}</style>
       <Header />
       <Navigation />
       <main className="container" id="main-content">
@@ -468,6 +494,8 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
             <em>{t('quickConversions.generalRule')}</em>
           </p>
         </section>
+
+        {locale === 'en' && <OvenSettingsTranslator rows={ovenRows} />}
 
         <section className={styles.conversionTool}>
           <h2>{t('calculator.title')}</h2>
@@ -614,6 +642,16 @@ export default function FanOvenConversionChart({ lastUpdatedIso, pageTrans }: { 
                 tabIndex={activeTab === 'gas-mark' ? 0 : -1}
               >
                 {t('charts.tabs.gasMark')}
+              </button>
+              <button
+                className={styles.printBtn}
+                type="button"
+                onClick={() => {
+                  track('chart_download', { method: 'window_print', chart: 'fan-oven' });
+                  if (typeof window !== 'undefined') window.print();
+                }}
+              >
+                🖨 Print all charts
               </button>
             </div>
 

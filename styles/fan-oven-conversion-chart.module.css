@@ -636,3 +636,33 @@
     }
 }
 
+
+/* Print: the chart as a fridge cheat sheet */
+.printBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-left: auto;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid #94a3b8;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #0f172a;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.printBtn:hover {
+    background: #f1f5f9;
+}
+
+@media print {
+    .printBtn,
+    .conversionTool,
+    .quickConversions,
+    .proTips,
+    .foodGuide,
+    .faqSection {
+        display: none !important;
+    }
+}

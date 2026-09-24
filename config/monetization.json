@@ -26,6 +26,30 @@
       "oven": [],
       "body": [],
       "general": []
+    },
+    "_w1_candidates_pending_manual_verification": {
+      "_comment": "v3 W1 候选位（2026-09-25）。这些条目不会被渲染（loader 只读 affiliate.offers）。启用流程：1) 维护者在亚马逊英国站逐个打开 candidate_url 核对商品在售、价格合理、评论健康，把 url 替换为核对后的最终链接；2) 把条目移入 affiliate.offers.oven；3) 填 affiliate.tag（Amazon Store ID）；4) affiliate.enabled 改 true；5) 部署后肉眼确认卡片渲染且带 rel=sponsored。未经核对的 url 移入 offers 即违反 AGENTS.md 数据核实红线。",
+      "slot_note": "cluster=oven 已挂在 /fan-oven-conversion-chart 内容区之后、FAQ 之前，无需新增挂载点",
+      "candidates": [
+        {
+          "id": "oven-thermometer",
+          "reason": "Reddit 高赞第一回复: 你的旋钮在骗你, 需要烤箱温度计",
+          "candidate_url": "https://www.amazon.co.uk/dp/B01GEQ3LPK",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "probe-thermometer",
+          "reason": "USDA 安全温度页的天然伴侣, 肉类探针",
+          "candidate_url": "https://www.amazon.co.uk/dp/B01H1S0ZFE",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "digital-timer",
+          "reason": "空气炸锅时间折算场景的时间管理",
+          "candidate_url": "PENDING_RESEARCH",
+          "status": "UNVERIFIED"
+        }
+      ]
     }
   }
 }
