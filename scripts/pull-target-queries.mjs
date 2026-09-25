@@ -5,6 +5,10 @@
  * 独占 = 该 query 的页面集合 ⊆ 34 个孤儿 URL（且至少 1 页在集合内）。
  * 禁泛化词：长度 < 12 字符或匹配 /^(c to f|celsius to fahrenheit|...)$/ 的头部词直接丢弃。
  *
+ * ⚠️ 操作惯例（2026-09-24，见 scripts/README.md）：
+ *   本脚本会覆盖 docs/data/target-queries.json —— 覆盖前先把旧文件复制为 *.prev.json。
+ *   docs/data/ 不进 git、无版本历史；不落 prev 则旧清单无法复算（§7.1）。
+ *
  * 用法：node scripts/pull-target-queries.mjs
  * 依赖：同 pull-gsc-page-date.mjs（同一 service account）
  */

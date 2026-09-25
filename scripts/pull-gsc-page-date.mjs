@@ -5,6 +5,10 @@
  * 用途：为孤儿 HTML 资产池的"崩前基线 / 当期展示"提供精确数据。
  * 现有快照只有 query+page 和 query+date，缺 page+date，无法精确重建每页时间序列。
  *
+ * ⚠️ 操作惯例（2026-09-24，见 scripts/README.md）：
+ *   本脚本会写入 docs/data/<END>__gsc_page_date.json —— 若同名文件已存在，覆盖前先复制为 *.prev.json。
+ *   docs/data/ 不进 git、无版本历史；不落 prev 则旧快照无法复算（§7.1）。
+ *
  * 用法：node scripts/pull-gsc-page-date.mjs
  *       GSC_END=2026-10-20 node scripts/pull-gsc-page-date.mjs   # 手动指定结束日
  *

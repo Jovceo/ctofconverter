@@ -6,6 +6,10 @@
  *   1. 验证 1a 生效（0 入链 → N 入链）
  *   2. 记录每页边数 —— 4 周后做「边数 vs 恢复幅度」异质性对照的基线
  *
+ * ⚠️ 操作惯例（2026-09-24，见 scripts/README.md）：
+ *   本脚本会覆盖 docs/data/orphan-link-edges.json —— 覆盖前先把旧文件复制为 *.prev.json。
+ *   docs/data/ 不进 git、无版本历史；不落 prev 则旧边表无法复算（§7.1）。
+ *
  * 依赖：先把工具模块编译到 .tmp-audit/（CommonJS）：
  *   npx tsc utils/temperaturePageHelpers.ts utils/temperatureCore.ts utils/orphanTemperaturePages.ts \
  *     --outDir .tmp-audit --module commonjs --target es2019 --skipLibCheck
