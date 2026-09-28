@@ -1,0 +1,22 @@
+# ctofconverter.com
+
+> Free, source-cited temperature reference data and oven-setting tools for humans and machines.
+> All data below is CC-BY-4.0, versioned, and open without API keys.
+
+## Oven temperature data (primary)
+
+- [Oven temperature conversions](https://ctofconverter.com/data/oven-conversions.json): Gas Mark ↔ conventional °C/°F ↔ fan-assisted °C/°F. Conventional values from the published BBC Good Food / Guardian conversion guides; fan values follow the stated UK 20 °C-lower convention and are labelled as derived.
+- [Human body temperature reference](https://ctofconverter.com/data/human-body-temperature.json): body-temperature ranges and fever thresholds with per-value medical sources (NHS/CDC/Mayo), including the 2026-08-27 source-verified threshold definitions.
+- [Safe internal food temperatures](https://ctofconverter.com/data/safe-internal-temperatures.json): USDA target internal temperatures for common meats.
+
+## Browsable pages
+
+- [Oven settings translator](https://ctofconverter.com/fan-oven-conversion-chart): what to actually set your oven to (conventional / fan / gas mark / air fryer) from what the recipe says, with dial-realistic rounding.
+- [Data portal (human-readable)](https://ctofconverter.com/data-api): lists every dataset with columns, row counts, provenance, and CSV/JSON download links.
+- [Raw data index](https://ctofconverter.com/data/index.html): dataset index with license notice.
+
+## Usage
+
+- Datasets are stable-URL JSON (and CSV), key-free, CORS-enabled, updated with dated provenance per value.
+- Citation line: "Source: ctofconverter.com (CC-BY-4.0)" plus the dataset URL.
+- The matching API endpoint is `/api/ref` (read-only); see the data portal for parameters.
