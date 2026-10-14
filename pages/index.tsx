@@ -40,6 +40,7 @@ function loadLocaleMessages(locale: string, namespace: string) {
 const QUALITY_PAGE_INFO: Record<string, { title: string; description: string; color: string }> = {
     'oven-temperature-conversion': { title: 'Oven Temperature Conversion', description: '°C to °F, Gas Mark, Fan Oven & Air Fryer', color: '#0284c7' },
     'oven-to-air-fryer': { title: 'Oven to Air Fryer', description: 'Convert recipes with temperature & time adjustments', color: '#ea580c' },
+    '175-c-to-f': { title: '175°C to Fahrenheit (347°F)', description: 'Gentle baking guide: fan oven, air fryer & Gas Mark equivalents', color: '#16a34a' },
     '180-c-to-f': { title: '180°C to Fahrenheit (356°F)', description: 'Baking guide with times, USDA temperatures & troubleshooting', color: '#16a34a' },
     '93-f-to-c': { title: '93°F to Celsius (33.9°C)', description: 'Body temperature hypothermia guide & NOAA heat index', color: '#dc2626' },
     '375-f-to-c': { title: '375°F to Celsius (190.6°C)', description: 'Baking times for pies, casseroles, fish & scones', color: '#7c3aed' },

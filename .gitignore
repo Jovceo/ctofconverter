@@ -24,11 +24,18 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env*.local
+# 公开仓：.env 全系列都可能被 git add -A 带进去（含 INDEXNOW_SECRET）。
+# 只放行 example 模板（.env.local.example 是已跟踪文件，必须保留）。
+.env*
+!.env*.example
 
 # Google OAuth secrets (NEVER commit these)
 client_secret_*.json
 google-oauth-token.json
+# GSC service account keys（2026-10-14 放进项目根的 ctofconverter-com-analytics-*.json，含私钥，必防误提交）
+ctofconverter-com-analytics-*.json
+*service-account*.json
+*service_account*.json
 
 # vercel
 .vercel
@@ -39,6 +46,10 @@ next-env.d.ts
 
 # 审计脚本的临时编译产物（scripts/orphan-link-audit.mjs 用）
 /.tmp-audit/
+
+# 本地 agent 工作目录（不入公开仓）
+/.codex-tmp/
+/.workbuddy-ai/
 
 # generated files (regenerated on each build)
 public/sitemap.xml

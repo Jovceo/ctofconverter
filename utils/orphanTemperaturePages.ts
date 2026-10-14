@@ -5,8 +5,11 @@
  * 它们 200 在线、canonical 自指、robots 为 index,follow，有表格 / FAQ / JSON-LD / 场景化 title，
  * 但不在 pages/（无 Next 版本）、不在 sitemap、无任何入链，构成一个与主站隔离的自闭合子图。
  *
+ * 2026-10-14：175-c-to-f 已迁移（pages/175-c-to-f.tsx + locales/en/175-c-to-f.json，
+ * 301 见 config/migrated-routes.json），剩余 33 个孤儿见下方列表。
+ *
  * 实测（2026-09-23）：崩前池周均展示 3,128，占全站展示 32.1%（仅 2 次点击）；
- * 单页王 175-c-to-f.html = 17,811 展示（全站 12.8%）、pos 12.6、0 点击。
+ * 单页王 175-c-to-f.html = 17,811 展示（全站 12.8%）、pos 12.6、0 点击（已迁移，不再孤儿）。
  * 崩后（2026-05 起）全部归零。
  *
  * 本文件的作用：让这些页面进入 related 内链体系（原逻辑只扫 pages/，所以它们永远拿不到入链）。
@@ -31,7 +34,6 @@ export const ORPHAN_C_TO_F_SLUGS: readonly string[] = [
   '120-c-to-f',
   '150-c-to-f',
   '170-c-to-f',
-  '175-c-to-f',
   '190-c-to-f',
   '210-c-to-f',
   '220-c-to-f',

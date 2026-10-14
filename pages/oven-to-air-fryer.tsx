@@ -225,6 +225,7 @@ export default function OvenToAirFryer() {
             <li><Link href="/oven-temperature-conversion">Oven Temperature Conversion Guide — °C to °F, Gas Mark &amp; Fan</Link></li>
             <li><Link href="/fan-oven-conversion-chart">Fan Oven Temperature Conversion Chart</Link></li>
             <li><Link href="/celsius-to-fahrenheit-chart">Celsius to Fahrenheit Conversion Chart</Link></li>
+            <li><Link href="/175-c-to-f">175°C to Fahrenheit (347°F) — Fan Oven &amp; Air Fryer Guide</Link></li>
           </ul>
         </div>
 

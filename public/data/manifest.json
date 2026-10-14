@@ -2,7 +2,7 @@
   "name": "ctofconverter reference datasets",
   "homepage": "https://ctofconverter.com/data-api",
   "license": "CC-BY-4.0",
-  "updated": "2026-09-24",
+  "updated": "2026-10-14",
   "api": {
     "index": "https://ctofconverter.com/api/ref",
     "dataset": "https://ctofconverter.com/api/ref/{id}",

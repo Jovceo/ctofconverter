@@ -198,6 +198,13 @@ export default function TemperatureChartPage({ lastUpdatedIso, temperatureData, 
                             <li>{t.section3_use4}</li>
                         </ul>
 
+                        <h3>Popular oven temperature: 175°C</h3>
+                        <p>
+                            175°C equals <strong>347°F</strong> — not the 350°F printed in American recipes (350°F = 177°C).
+                            The full <Link href={getLocalizedLink('/175-c-to-f', locale)}>175°C to Fahrenheit oven guide</Link> covers
+                            fan oven (155°C) and air fryer equivalents, Gas Mark conversion, UK baking times and troubleshooting.
+                        </p>
+
                         <p style={{ marginTop: '2rem', fontStyle: 'italic', color: '#4a5568' }}>
                             {t.trust_signal}
                         </p>

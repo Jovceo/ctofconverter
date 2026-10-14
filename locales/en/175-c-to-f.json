@@ -1,0 +1,173 @@
+{
+  "page": {
+    "metaTitle": "175°C to F (347°F) - Oven Temperature Guide",
+    "metaDescription": "175°C equals 347°F. Oven guide with fan, air fryer and Gas Mark equivalents, UK baking times and USDA safe temperatures.",
+    "ogDescription": "175°C equals 347°F. Fan oven, air fryer and Gas Mark equivalents, plus UK baking times and USDA safe temperatures.",
+    "headerTitle": "175°C to Fahrenheit (347°F)",
+    "tagline": "Convert 175°C to Fahrenheit, find fan oven and air fryer equivalents, British baking times at 175°C, and USDA safe internal temperatures.",
+    "resultHeader": "175 Degrees Celsius to Fahrenheit Conversion",
+    "customIntro": "<strong>175 degrees Celsius equals 347 degrees Fahrenheit</strong>, calculated as (175 × 9/5) + 32 = 347°F. It is a moderate oven temperature loved for gentle, even baking: Victoria sponge, Bakewell tart and slow-roast chicken all turn out beautifully at 175°C. For fan ovens or air fryers, reduce to <strong>155°C (311°F)</strong>. Note that 175°C is <em>not</em> the same as the American 350°F — see the comparison below."
+  },
+  "sections": {
+    "about": {
+      "title": "About 175°C / 347°F: Why Bakers Choose a Gentler Heat",
+      "paragraph1": "175°C (347°F) sits 20°C below the standard 180°C baking temperature, and that margin changes how bakes behave. It is still well above the 140°C (285°F) threshold where the Maillard reaction begins, so crusts colour and flavours develop — but the gentler heat gives thick sponges and dense batters time to set their structure before the outside finishes. That is why many bakers drop a Victoria sponge or Bakewell tart to 175°C: the top rises evenly instead of doming and cracking, and the centre cooks through without the edges drying out.",
+      "paragraph2": "Home ovens are often inaccurate: real-world testing shows many run 25–50°F (14–28°C) hotter or cooler than the dial says. An oven set to 175°C might actually be running at 150°C or 200°C, which matters far more at this temperature than the 3°F gap between 175°C and 350°F. A $10–20 oven thermometer is the single most effective tool for consistent results — place it on the middle rack while preheating and cook to the measured temperature, not the dial.",
+      "paragraph3Prefix": "If you are switching between conventional, convection, fan, or air fryer settings, compare them on the ",
+      "fanLinkText": "fan oven conversion chart",
+      "paragraph3Suffix": ". In most cases, 175°C in a conventional oven equals 155°C in a fan oven or air fryer, with cooking time reduced by 10–15%."
+    },
+    "applications": {
+      "title": "Practical Applications of 175°C (347°F)",
+      "cards": [
+        {
+          "title": "British Bakes at 175°C",
+          "items": [
+            "Victoria sponge: a gentle 175°C gives an even rise and flat top, ideal for stacking and filling.",
+            "Bakewell tart and millionaire's shortbread: the lower heat sets the filling and caramel without over-browning the base.",
+            "Gingerbread, flapjacks and traybakes: slow, even caramelisation of sugar and syrup without burnt edges."
+          ]
+        },
+        {
+          "title": "Slow Roasting and Savoury Cooking",
+          "items": [
+            "Slow-roast chicken: 175°C for 20 minutes per 450g plus 20 minutes keeps the breast juicy while the legs turn tender.",
+            "Root vegetables and roast potatoes: 45–60 minutes renders the fat slowly for a crispy outside and fluffy inside.",
+            "Casseroles, braises and baked pasta: thorough, even heating for dishes that cook for an hour or more."
+          ]
+        },
+        {
+          "title": "Delicate and Precision Tasks",
+          "items": [
+            "Toasting nuts and seeds: 10–15 minutes at 175°C develops flavour without scorching — check every 5 minutes.",
+            "Drying herbs and fleur de sel: a low fan setting at 150–175°C removes moisture while preserving colour.",
+            "Reheating roast dinners and pies: restores crispness at 175°C without drying the filling."
+          ]
+        }
+      ]
+    },
+    "ovenGuide": {
+      "title": "Oven Temperature Guide: Conventional, Fan, Air Fryer & Gas Mark",
+      "headers": {
+        "ovenType": "Oven Type",
+        "adjustedTemperature": "Adjusted Temperature",
+        "bestUse": "Best Use"
+      },
+      "rows": [
+        {
+          "type": "Conventional oven",
+          "temperature": "175°C / 347°F",
+          "bestUse": "Moderate baking and roasting: sponges, tarts, slow-roasted meats and casseroles."
+        },
+        {
+          "type": "Fan oven (convection)",
+          "temperature": "155°C / 311°F",
+          "bestUse": "Lower by 20°C because fan circulation cooks faster and more evenly; reduce time by 10–15%."
+        },
+        {
+          "type": "Air fryer",
+          "temperature": "155°C / 311°F",
+          "bestUse": "Preheat fully, use a single layer, and shake the basket halfway — great for reheating and small bakes."
+        },
+        {
+          "type": "Gas Mark",
+          "temperature": "Between 3 and 4 — use 4",
+          "bestUse": "Gas Mark 4 officially equals 180°C (350°F), but 175°C is close enough that recipes round to it."
+        }
+      ],
+      "notePrefix": "For a side-by-side reference of conventional, fan and air fryer settings, see the ",
+      "noteLinkText": "fan oven conversion chart",
+      "noteSuffix": ". Remember that 350°F in American recipes converts to 177°C, not 175°C."
+    },
+    "bakingTimes": {
+      "title": "Baking Times at 175°C (347°F)",
+      "intro": "Typical times for popular British bakes at 175°C in a conventional oven. Always check doneness with a skewer or thermometer rather than relying on time alone, and rotate the tin once halfway through for even colour.",
+      "headers": {
+        "food": "Food",
+        "time": "Time at 175°C",
+        "doneness": "Doneness Cue"
+      },
+      "rows": [
+        { "food": "Victoria sponge (two 20cm tins)", "time": "25–30 min", "doneness": "Skewer clean, top springs back, edges just leaving the tin" },
+        { "food": "Bakewell tart", "time": "30–35 min", "doneness": "Pastry golden, filling set with a slight wobble" },
+        { "food": "Millionaire's shortbread", "time": "35–45 min", "doneness": "Base firm, caramel bubbly, chocolate glossy and set" },
+        { "food": "Gingerbread slab", "time": "40–50 min", "doneness": "Springy to the touch, cracked surface, skewer with few crumbs" },
+        { "food": "Flapjacks / traybake", "time": "25–30 min", "doneness": "Golden edges, centre still slightly soft — firms on cooling" },
+        { "food": "Slow-roast chicken (1.5 kg)", "time": "80–90 min", "doneness": "Internal temp 74°C / 165°F (USDA) in the thickest part" },
+        { "food": "Roast potatoes", "time": "45–60 min", "doneness": "Deep golden, crisp outside, fluffy inside" },
+        { "food": "Toasted nuts or seeds", "time": "10–15 min", "doneness": "Even golden colour, nutty smell — check every 5 minutes" }
+      ],
+      "note": "Times assume a conventional oven. For fan ovens or air fryers, reduce the time by 10–15% and check doneness early."
+    },
+    "foodSafety": {
+      "title": "USDA Safe Internal Temperatures",
+      "intro": "Oven temperature is not the same as food internal temperature. A slow roast at 175°C is gentle on meat, which makes a thermometer essential — the USDA recommends these minimum internal temperatures, measured in the thickest part of the food.",
+      "headers": {
+        "foodType": "Food Type",
+        "tempF": "Safe Internal Temp (°F)",
+        "tempC": "Safe Internal Temp (°C)"
+      },
+      "rows": [
+        { "foodType": "Poultry (whole, ground, stuffing)", "tempF": "165°F", "tempC": "74°C" },
+        { "foodType": "Ground meats (beef, pork, lamb)", "tempF": "160°F", "tempC": "71°C" },
+        { "foodType": "Whole cuts (steaks, roasts, chops)", "tempF": "145°F + 3 min rest", "tempC": "63°C + 3 min rest" },
+        { "foodType": "Fish and shellfish", "tempF": "145°F", "tempC": "63°C" },
+        { "foodType": "Egg dishes", "tempF": "160°F", "tempC": "71°C" },
+        { "foodType": "Casseroles and leftovers", "tempF": "165°F", "tempC": "74°C" }
+      ],
+      "source": "Source: USDA FoodSafety.gov (last reviewed November 2024). Rest meat for 3 minutes after cooking; always verify with a food thermometer."
+    },
+    "whatNotToBake": {
+      "title": "What NOT to Bake at 175°C",
+      "intro": "175°C is a gentle all-rounder, but several foods need either higher heat for structure or lower heat for delicate textures. Using 175°C for these leads to soggy bases, pale crusts or cracked custards.",
+      "items": [
+        { "food": "Meringues, pavlova and macarons", "reason": "Use 100–150°C — 175°C browns and cracks the delicate structure before it dries out." },
+        { "food": "Puff pastry and rough puff", "reason": "Use 190–200°C — needs high heat for steam to separate the layers." },
+        { "food": "Crusty bread and sourdough", "reason": "Use 200–220°C — needs high heat for oven spring and a blistered crust." },
+        { "food": "Pizza", "reason": "Use 220°C or above — a 175°C base stays pale and doughy." },
+        { "food": "Crème brûlée and custards", "reason": "Use 150–160°C in a water bath — 175°C scrambles the eggs and curdles the custard." },
+        { "food": "Scones", "reason": "Use 220°C — scones need a hot oven for the fast rise that creates their signature layers." }
+      ]
+    },
+    "troubleshooting": {
+      "title": "Baking Troubleshooting at 175°C",
+      "intro": "If your bakes at 175°C are not turning out right, the problem is usually oven accuracy, rack position or tin choice. These are the most common issues at this temperature and how to fix them.",
+      "headers": {
+        "problem": "Problem",
+        "cause": "Likely Cause",
+        "fix": "Fix"
+      },
+      "rows": [
+        { "problem": "Cake domes and cracks", "cause": "Oven runs hotter than the dial, or batter overfilled", "fix": "Verify with an oven thermometer; if the oven is accurate, drop to 165°C and fill tins no more than two-thirds full." },
+        { "problem": "Burnt outside, raw centre", "cause": "Oven runs hot, or tin too close to the element", "fix": "Move the rack to the centre, lower to 165°C, and extend the time rather than raising the heat." },
+        { "problem": "Pale, dense bake", "cause": "Oven runs cool, or the door was opened too early", "fix": "Raise to 180°C and keep the door shut for the first 20 minutes — 175°C is unforgiving of cool ovens." },
+        { "problem": "Soggy shortbread or pastry base", "cause": "Filling too wet, or base under-baked before filling was added", "fix": "Blind bake the base for 10–12 minutes first, and use a thick jam layer rather than a thin, runny one." },
+        { "problem": "Slow-roast chicken is dry", "cause": "Cooked too long at too high a temperature for the size of the bird", "fix": "Cover the breast with foil for the first hour and pull the bird at 74°C internal — it will rise 2–3°C while resting." },
+        { "problem": "Roast potatoes are pale and soft", "cause": "Fat not hot enough, or the oven is crowded", "fix": "Use one tray per batch, render at 175°C for 45 minutes, then blast at 220°C for 10 minutes to crisp." },
+        { "problem": "Gingerbread or flapjacks feel doughy", "cause": "Underbaked in the middle, or too much syrup for the dry ingredients", "fix": "Give it another 8–10 minutes and test the centre with a skewer — a few moist crumbs mean done; wet batter means more time." }
+      ]
+    }
+  },
+  "faq": [
+    {
+      "question": "What is 175 degrees Celsius in Fahrenheit?",
+      "answer": "175 degrees Celsius equals 347 degrees Fahrenheit. The conversion formula is °F = (°C × 9/5) + 32, so multiply 175 by 1.8 to get 315, then add 32 for 347°F. This is a moderate oven temperature that suits gentle baking, slow roasting and anything that needs even, thorough heat."
+    },
+    {
+      "question": "Is 175°C the same as 350°F?",
+      "answer": "No. 175°C equals 347°F, while 350°F converts to 176.7°C — a difference of about 3°F (2°C). For most bakes the gap does not matter, but for delicate sponges it is worth using the exact Celsius figure rather than rounding up to 350°F, because the slightly hotter oven can dome and crack a thick batter."
+    },
+    {
+      "question": "What is 175°C in a fan oven or air fryer?",
+      "answer": "Reduce by 20°C to 155°C (311°F). Fan circulation cooks roughly 20% faster, so also cut the cooking time by 10–15%. In an air fryer, preheat fully, cook in a single layer, and shake the basket halfway through so food browns evenly without the edges drying out."
+    },
+    {
+      "question": "What Gas Mark is 175°C?",
+      "answer": "175°C falls between Gas Mark 3 (170°C) and Gas Mark 4 (180°C). In practice, recipes round 175°C up to Gas Mark 4, which officially equals 180°C (350°F) — close enough for cakes, tarts and roasts. On older gas ovens without precise markings, Gas Mark 4 checked with an oven thermometer is the safest setting."
+    },
+    {
+      "question": "What can I bake at 175°C?",
+      "answer": "175°C is ideal for Victoria sponge, Bakewell tart, millionaire's shortbread, gingerbread and flapjacks, plus slow-roast chicken and root vegetables. It suits any bake that benefits from gentle, even heat rather than a fast rise — thick batters set through without doming, and slow roasts stay juicy while their edges caramelise."
+    }
+  ]
+}
