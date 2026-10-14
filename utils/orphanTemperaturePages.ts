@@ -20,16 +20,13 @@
 export const ORPHAN_C_TO_F_SLUGS: readonly string[] = [
   // 整数温度
   '42-c-to-f',
-  '44-c-to-f',
   '45-c-to-f',
   '46-c-to-f',
   '48-c-to-f',
   '60-c-to-f',
   '73-c-to-f',
   '76-c-to-f',
-  '105-c-to-f',
   '120-c-to-f',
-  '170-c-to-f',
   '190-c-to-f',
   '210-c-to-f',
   '230-c-to-f',

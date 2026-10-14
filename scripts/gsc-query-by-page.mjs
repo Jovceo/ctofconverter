@@ -36,7 +36,10 @@ const auth = new google.auth.GoogleAuth({
 const sc = google.searchconsole({ version: 'v1', auth });
 
 // 场景意图关键词（烤箱/烘焙场景，非纯换算）
-const SCENE = /(oven|bake|baking|baked|gas\s?mark|recipe|roast|fan|air\s?fryer|airfryer|convection|temperature|preheat|degree|cook|cooking|scone|sponge|cake|bread|chicken|potato)/i;
+// ⚠️ 不要放 degree / degrees / temperature / convert —— 这些是换算的常见修饰词，
+// 把 "170 degrees celsius to fahrenheit" 判成场景会系统性虚高占比（2026-10-14 踩过：
+// 170 虚报 52.6% vs 实际 34.9%、105 虚报 22.8% vs 实际 0%）。
+const SCENE = /(oven|bake|baking|baked|gas\s?mark|recipe|roast|fan|air\s?fryer|airfryer|convection|preheat|cook|cooking|scone|sponge|cake|bread|chicken|potato|pizza|pastry)/i;
 
 for (const t of targets) {
   const url = `${SITE}${t.replace(/\.html$/, '')}${t.endsWith('.html') ? '.html' : ''}`;

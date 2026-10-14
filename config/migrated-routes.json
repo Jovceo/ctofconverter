@@ -79,9 +79,12 @@
         "37-7-c-to-f": "/body-temperature-chart-fever-guide",
         "38-1-c-to-f": "/body-temperature-chart-fever-guide",
         "43-c-to-f": "/body-temperature-chart-fever-guide",
+        "44-c-to-f": "/body-temperature-chart-fever-guide",
         "74-c-to-f": "/celsius-to-fahrenheit-chart",
         "90-c-to-f": "/celsius-to-fahrenheit-chart",
+        "105-c-to-f": "/celsius-to-fahrenheit-chart",
         "150-c-to-f": "/celsius-to-fahrenheit-chart",
+        "170-c-to-f": "/fan-oven-conversion-chart",
         "220-c-to-f": "/fan-oven-conversion-chart",
         "250-c-to-f": "/fan-oven-conversion-chart"
     }
