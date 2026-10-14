@@ -37,7 +37,7 @@ const migratedRoutesPath = path.join(__dirname, '../config/migrated-routes.json'
 const migratedHtmlFiles = new Set();
 try {
     const data = JSON.parse(fs.readFileSync(migratedRoutesPath, 'utf-8'));
-    for (const slug of [...(data.htmlRoutes || []), ...(data.indexHtmlRoutes || [])]) {
+    for (const slug of [...(data.htmlRoutes || []), ...(data.indexHtmlRoutes || []), ...Object.keys(data.htmlRedirects || {})]) {
         migratedHtmlFiles.add(`${slug}.html`);
     }
     console.log(`📦 Loaded ${migratedHtmlFiles.size} migrated routes (excluded from sitemap)`);

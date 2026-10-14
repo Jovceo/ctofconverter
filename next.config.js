@@ -71,6 +71,15 @@ const migratedIndexHtmlRedirects = expandLocalizedRedirect({
   destination: '/:path',
 });
 
+// 0.5 C 档（2026-10-14）：目标不是同名干净 URL 的旧 HTML → hub 的 301。
+// 这 13 页没有同温度的 Next 版，所以不能进 htmlRoutes（那条会 301 到不存在的干净 URL）。
+// 归属依据：43°C 是体温值（发烧高温）；celsius-to-fahrenheit-chart 逐度覆盖 -50~150°C；
+// fan-oven-conversion-chart 含 220°C / 250°C conventional。
+const migratedCustomHtmlRedirects = Object.entries(migratedRoutes.htmlRedirects || {})
+  .flatMap(([slug, destination]) =>
+    expandLocalizedRedirect({ source: `/${slug}.html`, destination })
+  );
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // 基础配置
@@ -124,6 +133,7 @@ const nextConfig = {
       ...legacyAliasRedirects,
       ...migratedHtmlRedirects,
       ...migratedIndexHtmlRedirects,
+      ...migratedCustomHtmlRedirects,
       // Do not add a generic `/en/:path* -> /:path*` redirect here.
       // Keep default-locale deduplication in request-level proxy logic, otherwise
       // Next's default-locale routing turns bare English URLs into self-redirect loops.

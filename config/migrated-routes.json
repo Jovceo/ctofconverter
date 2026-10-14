@@ -69,5 +69,20 @@
         "body-temperature-chart-fever-guide",
         "fever-temperature-chart",
         "temperature-conversion-challenge"
-    ]
+    ],
+    "htmlRedirects": {
+        "36-2-c-to-f": "/body-temperature-chart-fever-guide",
+        "36-8-c-to-f": "/body-temperature-chart-fever-guide",
+        "37-3-c-to-f": "/body-temperature-chart-fever-guide",
+        "37-4-c-to-f": "/body-temperature-chart-fever-guide",
+        "37-6-c-to-f": "/body-temperature-chart-fever-guide",
+        "37-7-c-to-f": "/body-temperature-chart-fever-guide",
+        "38-1-c-to-f": "/body-temperature-chart-fever-guide",
+        "43-c-to-f": "/body-temperature-chart-fever-guide",
+        "74-c-to-f": "/celsius-to-fahrenheit-chart",
+        "90-c-to-f": "/celsius-to-fahrenheit-chart",
+        "150-c-to-f": "/celsius-to-fahrenheit-chart",
+        "220-c-to-f": "/fan-oven-conversion-chart",
+        "250-c-to-f": "/fan-oven-conversion-chart"
+    }
 }
