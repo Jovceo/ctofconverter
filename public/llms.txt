@@ -17,6 +17,6 @@
 
 ## Usage
 
-- Datasets are stable-URL JSON (and CSV), key-free, CORS-enabled, updated with dated provenance per value.
+- Datasets are stable-URL JSON (and CSV), key-free, CORS-enabled, with dated provenance (per-row sources on the body-temperature dataset; dataset-level sources on the others).
 - Citation line: "Source: ctofconverter.com (CC-BY-4.0)" plus the dataset URL.
 - The matching API endpoint is `/api/ref` (read-only); see the data portal for parameters.
