@@ -41,8 +41,9 @@ export default function DataApi({ locale, lastUpdatedIso, manifest }: DataApiPro
                             <p>
                                 These are the same temperature tables this site publishes, in machine-readable form:
                                 open JSON and CSV files, a read-only API with no key and no signup, and a one-line
-                                embeddable chart. Every number carries the source it was checked against and the date it
-                                was checked. You may use them commercially if you keep the attribution line.
+                                embeddable chart. Every dataset lists its provenance — the authority, the URL, and the
+                                date we checked it; the body-temperature dataset additionally cites a source on every
+                                row. You may use them commercially if you keep the attribution line.
                             </p>
                         </section>
 
@@ -146,9 +147,11 @@ curl "${SITE}/api/ref/lookup?value=39.6&unit=c&context=body&person=infant"`}</co
                             <h2>Where the numbers come from</h2>
                             <p>
                                 Each dataset file lists its own <code>provenance</code>: the authority, the URL, the date
-                                we checked it, and a note where sources disagree. Nothing is published that has not been
-                                checked against a primary source; when a value cannot be confirmed it is left out rather
-                                than averaged. Corrections are shipped as a new <code>version</code> with the date in{' '}
+                                we checked it, and a note where sources disagree. Nothing is published without a stated
+                                source, and where that source is secondary — the Gas Mark table reproduces two published
+                                conversion guides rather than an oven manufacturer's manual — the provenance note says
+                                so. When a value cannot be confirmed it is left out rather than averaged.
+                                Corrections are shipped as a new <code>version</code> with the date in{' '}
                                 <code>updated</code>, and the old files stay reachable, so a table in your app never
                                 silently changes underneath you.
                             </p>
