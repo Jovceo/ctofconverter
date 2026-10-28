@@ -86,6 +86,23 @@
         "150-c-to-f": "/celsius-to-fahrenheit-chart",
         "170-c-to-f": "/fan-oven-conversion-chart",
         "220-c-to-f": "/fan-oven-conversion-chart",
-        "250-c-to-f": "/fan-oven-conversion-chart"
+        "250-c-to-f": "/fan-oven-conversion-chart",
+        "36-7-c-to-f": "/body-temperature-chart-fever-guide",
+        "36-9-c-to-f": "/body-temperature-chart-fever-guide",
+        "37-1-c-to-f": "/body-temperature-chart-fever-guide",
+        "38-2-c-to-f": "/body-temperature-chart-fever-guide",
+        "38-4-c-to-f": "/body-temperature-chart-fever-guide",
+        "38-5-c-to-f": "/body-temperature-chart-fever-guide",
+        "45-c-to-f": "/body-temperature-chart-fever-guide",
+        "46-c-to-f": "/body-temperature-chart-fever-guide",
+        "48-c-to-f": "/body-temperature-chart-fever-guide",
+        "42-c-to-f": "/oven-temperature-conversion",
+        "60-c-to-f": "/oven-temperature-conversion",
+        "73-c-to-f": "/oven-temperature-conversion",
+        "76-c-to-f": "/oven-temperature-conversion",
+        "120-c-to-f": "/oven-temperature-conversion",
+        "190-c-to-f": "/oven-temperature-conversion",
+        "210-c-to-f": "/oven-temperature-conversion",
+        "230-c-to-f": "/oven-temperature-conversion"
     }
 }

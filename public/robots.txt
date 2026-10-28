@@ -5,6 +5,21 @@ Disallow: /_next/server/
 Disallow: /_next/cache/
 Disallow: /api/
 Disallow: /_vercel/
+
+# 语言前缀：全部是同一内容的重复副本（/en/180-c-to-f 与 /180-c-to-f 字节完全相同），
+# 非英语页已统一 noindex。2026-10-28 起不再让爬虫抓取，避免抓取预算与
+# 「站点有 576 个机翻副本」的画像被持续刷新。canonical 与 hreflang 均只指向无前缀 URL。
+Disallow: /en/
+Disallow: /zh/
+Disallow: /es/
+Disallow: /hi/
+Disallow: /ar/
+Disallow: /ja/
+Disallow: /fr/
+Disallow: /de/
+Disallow: /id/
+Disallow: /pt-br/
+
 Allow: /
 
 Sitemap: https://ctofconverter.com/sitemap.xml
