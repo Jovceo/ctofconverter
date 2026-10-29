@@ -210,7 +210,7 @@
       "fan_c": 210,
       "fan_f": 410,
       "descriptor": "Hot / very hot",
-      "typical_uses": "",
+      "typical_uses": "Roast potatoes, Yorkshire puddings, browning",
       "source": "Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",
       "source_url": "https://en.wikipedia.org/wiki/Gas_mark",
       "quote": "8 | 450 | 230 | Hot/Very hot",
@@ -247,6 +247,7 @@
     "conventional_c / conventional_f are the published table values. fan_c / fan_f are derived, not published: they apply the common UK convention 'set a fan/convection oven 20 °C lower than a conventional oven' and then convert exactly (°F = °C × 9/5 + 32).",
     "The fan reduction is a convention, not a physical constant. Published advice ranges from 15 °C to 20 °C (some manufacturers say up to 25 °C); oven fans differ. Use an oven thermometer for anything temperature-sensitive.",
     "Gas marks are a gas-oven dial scale. Most fan-assisted ovens are electric and are set in degrees, so a 'gas mark in a fan oven' is always a derived figure, never a dial reading.",
-    "Celsius values in published tables are rounded to the nearest 10 °C; exact conversions of the Fahrenheit column will therefore differ by a few degrees. The Fahrenheit column is the finer-grained one."
+    "Celsius values in published tables are rounded to the nearest 10 °C; exact conversions of the Fahrenheit column will therefore differ by a few degrees. The Fahrenheit column is the finer-grained one.",
+    "typical_uses is editorial guidance compiled from common UK recipe usage. It is NOT part of the cited conversion tables and has no per-row source; rows left empty are marks with no widely agreed use. Treat it as a hint, not a sourced value."
   ]
 }
