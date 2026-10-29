@@ -63,6 +63,26 @@
       "key": "typical_uses",
       "label": "Typical uses",
       "type": "string"
+    },
+    {
+      "key": "source",
+      "label": "Source",
+      "type": "string"
+    },
+    {
+      "key": "source_url",
+      "label": "Source URL",
+      "type": "string"
+    },
+    {
+      "key": "quote",
+      "label": "Verbatim source fragment",
+      "type": "string"
+    },
+    {
+      "key": "checked_on",
+      "label": "Checked on",
+      "type": "string"
     }
   ],
   "rows": [
@@ -73,7 +93,11 @@
       "fan_c": 90,
       "fan_f": 194,
       "descriptor": "Very slow / very low",
-      "typical_uses": ""
+      "typical_uses": "",
+      "source": "Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",
+      "source_url": "https://en.wikipedia.org/wiki/Gas_mark",
+      "quote": "1/4 | 225 | 110 | Very slow/Very low/Very cool",
+      "checked_on": "2026-10-29"
     },
     {
       "gas_mark": "1/2",
@@ -82,7 +106,11 @@
       "fan_c": 100,
       "fan_f": 212,
       "descriptor": "Very slow / very low",
-      "typical_uses": ""
+      "typical_uses": "",
+      "source": "Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",
+      "source_url": "https://en.wikipedia.org/wiki/Gas_mark",
+      "quote": "1/2 | 250 | 120 | Very slow/Very low/Very cool",
+      "checked_on": "2026-10-29"
     },
     {
       "gas_mark": "1",
@@ -91,7 +119,11 @@
       "fan_c": 120,
       "fan_f": 248,
       "descriptor": "Slow / low",
-      "typical_uses": "Meringues, delicate baking"
+      "typical_uses": "Meringues, delicate baking",
+      "source": "Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",
+      "source_url": "https://en.wikipedia.org/wiki/Gas_mark",
+      "quote": "1 | 275 | 140 | Slow/Low/Cool",
+      "checked_on": "2026-10-29"
     },
     {
       "gas_mark": "2",
@@ -100,7 +132,11 @@
       "fan_c": 130,
       "fan_f": 266,
       "descriptor": "Slow / low",
-      "typical_uses": "Slow cooking, casseroles"
+      "typical_uses": "Slow cooking, casseroles",
+      "source": "Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",
+      "source_url": "https://en.wikipedia.org/wiki/Gas_mark",
+      "quote": "2 | 300 | 150 | Slow/Low/Cool",
+      "checked_on": "2026-10-29"
     },
     {
       "gas_mark": "3",
@@ -109,7 +145,11 @@
       "fan_c": 150,
       "fan_f": 302,
       "descriptor": "Moderately slow / warm",
-      "typical_uses": "Fruit cakes, casseroles"
+      "typical_uses": "Fruit cakes, casseroles",
+      "source": "Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",
+      "source_url": "https://en.wikipedia.org/wiki/Gas_mark",
+      "quote": "3 | 325 | 170 | Moderately slow/Warm/Moderate",
+      "checked_on": "2026-10-29"
     },
     {
       "gas_mark": "4",
@@ -118,7 +158,11 @@
       "fan_c": 160,
       "fan_f": 320,
       "descriptor": "Moderate / medium",
-      "typical_uses": "Sponge cakes, muffins, cookies, everyday baking"
+      "typical_uses": "Sponge cakes, muffins, cookies, everyday baking",
+      "source": "Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",
+      "source_url": "https://en.wikipedia.org/wiki/Gas_mark",
+      "quote": "4 | 350 | 180 | Moderate/Medium",
+      "checked_on": "2026-10-29"
     },
     {
       "gas_mark": "5",
@@ -127,7 +171,11 @@
       "fan_c": 170,
       "fan_f": 338,
       "descriptor": "Moderate / moderately hot",
-      "typical_uses": "Fruit pies, casseroles, fish, scones"
+      "typical_uses": "Fruit pies, casseroles, fish, scones",
+      "source": "Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",
+      "source_url": "https://en.wikipedia.org/wiki/Gas_mark",
+      "quote": "5 | 375 | 190 | Moderate/Moderately hot",
+      "checked_on": "2026-10-29"
     },
     {
       "gas_mark": "6",
@@ -136,7 +184,11 @@
       "fan_c": 180,
       "fan_f": 356,
       "descriptor": "Moderately hot",
-      "typical_uses": "Roasting meats and vegetables, baking bread"
+      "typical_uses": "Roasting meats and vegetables, baking bread",
+      "source": "Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",
+      "source_url": "https://en.wikipedia.org/wiki/Gas_mark",
+      "quote": "6 | 400 | 200 | Moderately hot",
+      "checked_on": "2026-10-29"
     },
     {
       "gas_mark": "7",
@@ -145,7 +197,11 @@
       "fan_c": 200,
       "fan_f": 392,
       "descriptor": "Hot",
-      "typical_uses": "Roasting meats, puff pastry"
+      "typical_uses": "Roasting meats, puff pastry",
+      "source": "Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",
+      "source_url": "https://en.wikipedia.org/wiki/Gas_mark",
+      "quote": "7 | 425 | 220 | Hot",
+      "checked_on": "2026-10-29"
     },
     {
       "gas_mark": "8",
@@ -154,7 +210,11 @@
       "fan_c": 210,
       "fan_f": 410,
       "descriptor": "Hot / very hot",
-      "typical_uses": ""
+      "typical_uses": "",
+      "source": "Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",
+      "source_url": "https://en.wikipedia.org/wiki/Gas_mark",
+      "quote": "8 | 450 | 230 | Hot/Very hot",
+      "checked_on": "2026-10-29"
     },
     {
       "gas_mark": "9",
@@ -163,7 +223,11 @@
       "fan_c": 220,
       "fan_f": 428,
       "descriptor": "Very hot",
-      "typical_uses": "Pizza, artisan bread, searing"
+      "typical_uses": "Pizza, artisan bread, searing",
+      "source": "Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",
+      "source_url": "https://en.wikipedia.org/wiki/Gas_mark",
+      "quote": "9 | 475 | 240 | Very hot",
+      "checked_on": "2026-10-29"
     },
     {
       "gas_mark": "10",
@@ -172,7 +236,11 @@
       "fan_c": 240,
       "fan_f": 464,
       "descriptor": "Extremely hot (less common marking)",
-      "typical_uses": ""
+      "typical_uses": "",
+      "source": "Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",
+      "source_url": "https://en.wikipedia.org/wiki/Gas_mark",
+      "quote": "10 (less common) | 500 | 260 | Extremely hot",
+      "checked_on": "2026-10-29"
     }
   ],
   "notes": [

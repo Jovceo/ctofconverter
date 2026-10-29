@@ -2,7 +2,7 @@
   "name": "ctofconverter reference datasets",
   "homepage": "https://ctofconverter.com/data-api",
   "license": "CC-BY-4.0",
-  "updated": "2026-10-14",
+  "updated": "2026-10-29",
   "api": {
     "index": "https://ctofconverter.com/api/ref",
     "dataset": "https://ctofconverter.com/api/ref/{id}",
@@ -115,7 +115,11 @@
         "fan_c",
         "fan_f",
         "descriptor",
-        "typical_uses"
+        "typical_uses",
+        "source",
+        "source_url",
+        "quote",
+        "checked_on"
       ],
       "files": {
         "json": "https://ctofconverter.com/data/oven-conversions.json",

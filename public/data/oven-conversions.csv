@@ -1,13 +1,13 @@
-UK Gas Mark,Conventional oven (°C),Conventional oven (°F),Fan / convection oven (°C),Fan / convection oven (°F),Heat level,Typical uses
-1/4,110,225,90,194,Very slow / very low,
-1/2,120,250,100,212,Very slow / very low,
-1,140,275,120,248,Slow / low,"Meringues, delicate baking"
-2,150,300,130,266,Slow / low,"Slow cooking, casseroles"
-3,170,325,150,302,Moderately slow / warm,"Fruit cakes, casseroles"
-4,180,350,160,320,Moderate / medium,"Sponge cakes, muffins, cookies, everyday baking"
-5,190,375,170,338,Moderate / moderately hot,"Fruit pies, casseroles, fish, scones"
-6,200,400,180,356,Moderately hot,"Roasting meats and vegetables, baking bread"
-7,220,425,200,392,Hot,"Roasting meats, puff pastry"
-8,230,450,210,410,Hot / very hot,
-9,240,475,220,428,Very hot,"Pizza, artisan bread, searing"
-10,260,500,240,464,Extremely hot (less common marking),
+UK Gas Mark,Conventional oven (°C),Conventional oven (°F),Fan / convection oven (°C),Fan / convection oven (°F),Heat level,Typical uses,Source,Source URL,Verbatim source fragment,Checked on
+1/4,110,225,90,194,Very slow / very low,,"Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",https://en.wikipedia.org/wiki/Gas_mark,1/4 | 225 | 110 | Very slow/Very low/Very cool,2026-10-29
+1/2,120,250,100,212,Very slow / very low,,"Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",https://en.wikipedia.org/wiki/Gas_mark,1/2 | 250 | 120 | Very slow/Very low/Very cool,2026-10-29
+1,140,275,120,248,Slow / low,"Meringues, delicate baking","Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",https://en.wikipedia.org/wiki/Gas_mark,1 | 275 | 140 | Slow/Low/Cool,2026-10-29
+2,150,300,130,266,Slow / low,"Slow cooking, casseroles","Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",https://en.wikipedia.org/wiki/Gas_mark,2 | 300 | 150 | Slow/Low/Cool,2026-10-29
+3,170,325,150,302,Moderately slow / warm,"Fruit cakes, casseroles","Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",https://en.wikipedia.org/wiki/Gas_mark,3 | 325 | 170 | Moderately slow/Warm/Moderate,2026-10-29
+4,180,350,160,320,Moderate / medium,"Sponge cakes, muffins, cookies, everyday baking","Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",https://en.wikipedia.org/wiki/Gas_mark,4 | 350 | 180 | Moderate/Medium,2026-10-29
+5,190,375,170,338,Moderate / moderately hot,"Fruit pies, casseroles, fish, scones","Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",https://en.wikipedia.org/wiki/Gas_mark,5 | 375 | 190 | Moderate/Moderately hot,2026-10-29
+6,200,400,180,356,Moderately hot,"Roasting meats and vegetables, baking bread","Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",https://en.wikipedia.org/wiki/Gas_mark,6 | 400 | 200 | Moderately hot,2026-10-29
+7,220,425,200,392,Hot,"Roasting meats, puff pastry","Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",https://en.wikipedia.org/wiki/Gas_mark,7 | 425 | 220 | Hot,2026-10-29
+8,230,450,210,410,Hot / very hot,,"Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",https://en.wikipedia.org/wiki/Gas_mark,8 | 450 | 230 | Hot/Very hot,2026-10-29
+9,240,475,220,428,Very hot,"Pizza, artisan bread, searing","Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",https://en.wikipedia.org/wiki/Gas_mark,9 | 475 | 240 | Very hot,2026-10-29
+10,260,500,240,464,Extremely hot (less common marking),,"Wikipedia — Gas mark, 'Conversion table' (citing BBC Good Food 'Conversion Guides' and The Guardian, 'Cooking conversion charts', 24 Nov 2007)",https://en.wikipedia.org/wiki/Gas_mark,10 (less common) | 500 | 260 | Extremely hot,2026-10-29
