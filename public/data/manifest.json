@@ -156,7 +156,11 @@
         "min_fahrenheit",
         "min_celsius",
         "rest_minutes",
-        "note"
+        "note",
+        "source",
+        "source_url",
+        "quote",
+        "checked_on"
       ],
       "files": {
         "json": "https://ctofconverter.com/data/safe-internal-temperatures.json",
