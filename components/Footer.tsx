@@ -84,6 +84,14 @@ export default function Footer({ lastUpdated }: FooterProps) {
                 </li>
                 <li>
                   <Link
+                    href={getLocalizedLink('/c-to-f-formula', currentLocale)}
+                    className="footer-link"
+                  >
+                    {t('footer.links.celsiusToFahrenheitFormula')}
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href={getLocalizedLink('/fan-oven-conversion-chart', currentLocale)}
                     className="footer-link"
                   >

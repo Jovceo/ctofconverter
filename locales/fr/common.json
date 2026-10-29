@@ -38,6 +38,7 @@
             "celsiusToFahrenheit": "Celsius en Fahrenheit",
             "fahrenheitToCelsius": "Fahrenheit en Celsius",
             "celsiusToFahrenheitChart": "Tableau de conversion Celsius en Fahrenheit",
+            "celsiusToFahrenheitFormula": "Formule Celsius-Fahrenheit",
             "fanOvenChart": "Tableau de conversion four à convection",
             "bodyTemperatureGuide": "Tableau de température corporelle et guide de fièvre",
             "feverChart": "Tableau de température de fièvre",

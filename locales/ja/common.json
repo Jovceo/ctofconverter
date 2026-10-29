@@ -38,6 +38,7 @@
             "celsiusToFahrenheit": "摂氏から華氏",
             "fahrenheitToCelsius": "華氏から摂氏",
             "celsiusToFahrenheitChart": "摂氏から華氏への変換チャート",
+            "celsiusToFahrenheitFormula": "摂氏から華氏への変換式",
             "fanOvenChart": "ファンオーブン温度変換チャート",
             "bodyTemperatureGuide": "体温チャートと発熱ガイド",
             "feverChart": "発熱温度チャート",

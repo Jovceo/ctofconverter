@@ -38,6 +38,7 @@
             "celsiusToFahrenheit": "من مئوية إلى فهرنهايت",
             "fahrenheitToCelsius": "من فهرنهايت إلى مئوية",
             "celsiusToFahrenheitChart": "جدول تحويل مئوية إلى فهرنهايت",
+            "celsiusToFahrenheitFormula": "صيغة التحويل من مئوية إلى فهرنهايت",
             "fanOvenChart": "جدول تحويل درجة حرارة الفرن المروحي",
             "bodyTemperatureGuide": "جدول درجة حرارة الجسم ودليل الحمى",
             "feverChart": "جدول درجة حرارة الحمى",
