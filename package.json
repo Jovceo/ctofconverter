@@ -15,7 +15,8 @@
     "export": "next build && next export",
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "generate:datasets": "node scripts/publish-dataset.js",
-    "verify:datasets": "node scripts/verify-dataset-quotes.mjs"
+    "verify:datasets": "node scripts/verify-dataset-quotes.mjs",
+    "readout:gate": "node scripts/readout-gate.mjs"
   },
   "dependencies": {
     "@vercel/og": "^0.8.6",
