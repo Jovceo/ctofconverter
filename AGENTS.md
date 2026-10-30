@@ -120,7 +120,8 @@ AI 搜索引擎（Google AI Overviews、ChatGPT、Perplexity）与传统 SEO 的
 - 理由（勿在代码注释外重复讨论）：2026-04-22 批量多语言上线后 Google 于 4-26/27 整站降级，sitemap `submitted 62 / indexed 0`，640 个构建产物中 576 个（90%）是机器翻译副本；8-20 的「保留不删、被动衰减」执行 4 个月未换来重新收录。详见 `docs/收录诊断-2026-08-27.md`
 
 ### robots.txt
-- 禁止 `/_next/static/chunks/`（JS chunk 文件，浪费抓取预算）
+- ⚠️ `Disallow: /_next/static/chunks/` 是**空规则**（2026-10-30 实测）：当前构建（Next 16 + Turbopack）发出的路径是 `/_next/static/immutable/chunks/*` 与 `/_next/static/<buildId>/*`；`/_next/static/chunks/` 在首页 HTML 里出现 **0 次**、直接访问返回 308。robots 按前缀匹配，`/_next/static/chunks/` 不匹配 `/_next/static/immutable/chunks/` → **这条从未拦住任何请求**。
+  **2026-12-03 前不要改**（T-3 冻结；且抓取预算已被判定为非瓶颈——改它属于优化非瓶颈）。要改时注意：屏蔽 JS 前必须确认页面正文仍在 SSR 输出的 HTML 里（本站在，`/175-c-to-f` 1,929 词）。
 - 允许 `/_next/static/css/` 和 `/_next/static/media/`
 - sitemap 声明由 `generate-sitemap.js` 自动维护
 
