@@ -294,17 +294,29 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
         `locales/${locale}/celsius-to-fahrenheit-chart.json`
     ]);
 
-    // Load translations
-    let t = {};
-    try {
-        const filePath = path.join(process.cwd(), 'locales', locale, 'celsius-to-fahrenheit-chart.json');
-        if (fs.existsSync(filePath)) {
-            t = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-        } else {
-            // Fallback to English
-            const englishPath = path.join(process.cwd(), 'locales', 'en', 'celsius-to-fahrenheit-chart.json');
-            t = JSON.parse(fs.readFileSync(englishPath, 'utf8'));
+    // Load translations: English base first, then deep-merge locale overlay.
+    // 2026-11-06 fix (方案 A，与 fan-oven-conversion-chart.tsx 同模式)：本页原逻辑
+    // 「有本地文件就整份替换」——新增 terms_* 键只写入 en 后，9 个 locale 版渲染出
+    // 空 h2 与空表头。英语兜底让未来任何新增键自动有底稿，不再依赖逐 locale 补齐。
+    const deepMerge = (target: Record<string, unknown>, source: Record<string, unknown>): Record<string, unknown> => {
+        for (const key of Object.keys(source)) {
+            if (source[key] instanceof Object && target[key] instanceof Object) {
+                deepMerge(target[key] as Record<string, unknown>, source[key] as Record<string, unknown>);
+            } else {
+                target[key] = source[key];
+            }
         }
+        return target;
+    };
+
+    let t: Record<string, unknown> = {};
+    try {
+        const readJSON = (loc: string) => {
+            const filePath = path.join(process.cwd(), 'locales', loc, 'celsius-to-fahrenheit-chart.json');
+            return fs.existsSync(filePath) ? JSON.parse(fs.readFileSync(filePath, 'utf8')) : {};
+        };
+        const enBase = readJSON('en');
+        t = locale === 'en' ? enBase : deepMerge(JSON.parse(JSON.stringify(enBase)), readJSON(locale));
     } catch (error) {
         console.error('Error loading translations:', error);
     }
