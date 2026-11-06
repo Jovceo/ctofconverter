@@ -194,13 +194,22 @@ export default function OvenSettingsTranslator({ rows }: { rows: OvenRow[] }) {
             {tile(
               'Air fryer',
               `Start at ${result.best.fan_c} °C`,
-              <>Same as fan; check ~20% early — <Link href="/oven-to-air-fryer">air-fryer guide</Link></>
+              'Same as fan setting'
             )}
           </div>
 
           {result.exactNote ? <p className="ost-note">{result.exactNote}</p> : null}
           {result.roundingNote ? <p className="ost-note">{result.roundingNote}</p> : null}
           {result.ambiguityNote ? <p className="ost-note">{result.ambiguityNote}</p> : null}
+
+          <p className="ost-note">
+            <strong>Air-fryer timing has no single rule.</strong> A common shortcut for oven
+            conversions is 20/20 — drop the temperature about 20 °F and check at ~80% of the oven
+            time. For frozen supermarket snacks, manufacturers often say keep the oven temperature
+            and halve the time instead. Both are starting points, not settings: judge by the food,
+            not the clock.{' '}
+            <Link href="/oven-to-air-fryer">Full air-fryer guide</Link>
+          </p>
 
           <p className="ost-source">
             Source: gas-mark and conventional values from the{' '}

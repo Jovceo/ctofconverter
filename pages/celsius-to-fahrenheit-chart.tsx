@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 import SearchableChart from '../components/SearchableChart';
 import { getLocalizedLink } from '../utils/i18n';
 import { getLatestModifiedDate } from '../utils/dateHelpers';
+import type { OvenRow } from '../components/OvenSettingsTranslator';
 
 interface TemperatureItem {
     c: number;
@@ -22,9 +23,10 @@ interface ChartPageProps {
     lastUpdatedIso: string;
     temperatureData: TemperatureItem[];
     t: any;
+    ovenRows: OvenRow[];
 }
 
-export default function TemperatureChartPage({ lastUpdatedIso, temperatureData, t }: ChartPageProps) {
+export default function TemperatureChartPage({ lastUpdatedIso, temperatureData, t, ovenRows }: ChartPageProps) {
     const router = useRouter();
     const { locale = 'en' } = router;
 
@@ -205,6 +207,38 @@ export default function TemperatureChartPage({ lastUpdatedIso, temperatureData, 
                             fan oven (155°C) and air fryer equivalents, Gas Mark conversion, UK baking times and troubleshooting.
                         </p>
 
+                        <h2>{t.terms_h2}</h2>
+                        <p>{t.terms_p}</p>
+                        <div className="terms-table-wrap">
+                            <table className="terms-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">{t.terms_th_term}</th>
+                                        <th scope="col">{t.terms_th_gm}</th>
+                                        <th scope="col">{t.terms_th_c}</th>
+                                        <th scope="col">{t.terms_th_f}</th>
+                                        <th scope="col">{t.terms_th_fan}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {ovenRows.map((row) => (
+                                        <tr key={row.gas_mark}>
+                                            <td>{row.descriptor}</td>
+                                            <td>{row.gas_mark}</td>
+                                            <td>{row.conventional_c} °C</td>
+                                            <td>{row.conventional_f} °F</td>
+                                            <td>{row.fan_c} °C</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                        <p className="terms-note">{t.terms_note_fan}</p>
+                        <p className="terms-note">
+                            {t.terms_source}{' '}
+                            <a href="/data/oven-conversions.json">oven-conversions.json</a>
+                        </p>
+
                         <p style={{ marginTop: '2rem', fontStyle: 'italic', color: '#4a5568' }}>
                             {t.trust_signal}
                         </p>
@@ -235,6 +269,14 @@ export default function TemperatureChartPage({ lastUpdatedIso, temperatureData, 
                     p { font-size: 1.1rem; line-height: 1.75; color: #4a5568; margin-bottom: 1.5rem; }
                     .info-list { margin-bottom: 2rem; padding-left: 1.5rem; }
                     .info-list li { margin-bottom: 0.75rem; color: #4a5568; font-size: 1.05rem; }
+
+                    /* Old recipe terms table */
+                    .terms-table-wrap { overflow-x: auto; margin-bottom: 1rem; }
+                    .terms-table { width: 100%; border-collapse: collapse; background: #ffffff; }
+                    .terms-table th, .terms-table td { border: 1px solid #e2e8f0; padding: 0.55rem 0.75rem; text-align: left; font-size: 1rem; color: #2d3748; }
+                    .terms-table th { background: #f7fafc; font-weight: 700; color: #1a202c; }
+                    .terms-table tbody tr:nth-child(even) { background: #f8fafc; }
+                    .terms-note { font-size: 0.9rem; color: #718096; margin-bottom: 0.5rem; }
 
                     @media (max-width: 768px) {
                         .download-cta { flex-direction: column; text-align: center; gap: 1rem; }
@@ -277,11 +319,23 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
         });
     }
 
+    // Oven terms table data — single source: config/datasets/oven-conversions.json (同翻译器，零硬编码温度)
+    let ovenRows: OvenRow[] = [];
+    try {
+        const ds = JSON.parse(
+            fs.readFileSync(path.join(process.cwd(), 'config', 'datasets', 'oven-conversions.json'), 'utf8')
+        );
+        ovenRows = ds.rows;
+    } catch {
+        ovenRows = [];
+    }
+
     return {
         props: {
             lastUpdatedIso,
             temperatureData,
             t,
+            ovenRows,
         },
     };
 };

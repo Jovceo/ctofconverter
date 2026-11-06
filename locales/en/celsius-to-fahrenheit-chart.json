@@ -49,5 +49,14 @@
     "status_below_freezing": "Below Freezing",
     "status_industrial": "Industrial/Cooking",
     "status_warm": "Warm",
-    "no_results": "No temperatures found matching your search."
+    "no_results": "No temperatures found matching your search.",
+    "terms_h2": "Old recipe terms: from \"slow\" to \"very hot\" ovens",
+    "terms_p": "Old British and European cookbooks describe oven heat in words, not numbers — and the words were ranges that varied between publishers. The table below maps each term to its Gas Mark and modern settings. When an old recipe says \"a moderate oven\", the Gas Mark 3–5 band (170–190 °C / 325–375 °F) is the neighbourhood it means.",
+    "terms_th_term": "Old recipe term",
+    "terms_th_gm": "Gas Mark",
+    "terms_th_c": "Conventional °C",
+    "terms_th_f": "Conventional °F",
+    "terms_th_fan": "Fan °C",
+    "terms_note_fan": "Fan settings apply the UK convention of setting a fan oven 20 °C lower — derived from the conventional column, not a separately published value.",
+    "terms_source": "Term descriptors and Gas Mark values from the published conversion guides cited in our open dataset (CC-BY-4.0)."
 }
