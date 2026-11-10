@@ -54,6 +54,9 @@ next-env.d.ts
 # generated files (regenerated on each build)
 public/sitemap.xml
 
+# 对外发布快照（Zenodo / GitHub Release 用），由 scripts/package-datasets.mjs 生成
+/release/
+
 # 战略文档与构建产物：不进公开仓
 /docs/
 /dist/
