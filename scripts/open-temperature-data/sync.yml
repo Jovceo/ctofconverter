@@ -1,0 +1,48 @@
+name: Sync snapshots from ctofconverter.com
+
+# This workflow lives in the open-temperature-data repository, not in the site repository.
+# It is COPIED VERBATIM by scripts/build-dataset-repo.mjs from
+# scripts/open-temperature-data/sync.yml — edit it there, never in the staging folder.
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Mondays 04:17 UTC — off-peak, and weekly is enough for data that changes rarely.
+    - cron: "17 4 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-snapshots
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Pull the published layer and validate provenance
+        run: node scripts/sync-from-site.mjs
+
+      # Independent of the script's own reporting: re-hash the files on disk against the manifest.
+      - name: Verify every file against MANIFEST.sha256
+        run: sha256sum --check --strict MANIFEST.sha256
+
+      - name: Commit if anything changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "nothing changed"
+            exit 0
+          fi
+          status=$(node -e "const s=require('./SYNC-STATE.json');console.log(s.result+' ('+s.lastChecked.slice(0,10)+')')")
+          git config user.name "dataset-sync-bot"
+          git config user.email "dataset-sync-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "sync: ${status} with ctofconverter.com"
+          git push
