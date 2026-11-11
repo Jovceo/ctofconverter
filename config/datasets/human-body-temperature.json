@@ -45,7 +45,7 @@
       "source": "Mayo Clinic and CDC pages",
       "url": "https://www.mayoclinic.org/first-aid/first-aid-fever/basics/art-20056685",
       "checkedOn": "2026-08-27",
-      "note": "Quotes were captured by a manual read of these pages on 2026-08-27 and recorded in docs/数据来源核查-2026-08-27.md. Automated re-fetch of mayoclinic.org and cdc.gov from this build machine returns HTTP 403 (bot protection), so the numbers could not be re-verified by script — they are kept here only where they agree with a machine-verified source above."
+      "note": "Quotes were captured by a manual read of these pages in a browser session on 2026-08-27. Automated re-fetch of mayoclinic.org and cdc.gov from this build machine returns HTTP 403 (bot protection), so the numbers could not be re-verified by script — they are kept here only where they agree with a machine-verified source above."
     },
     {
       "source": "PMC6456186 — systematic review of normal body temperature values (9,227 measurements)",
