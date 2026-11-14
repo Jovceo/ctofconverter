@@ -19,6 +19,12 @@ baking app, a fever tracker, a kitchen converter, a spreadsheet, a lesson plan.
 | `human-body-temperature.json` / `.csv` | Fever bands, age-group escalation thresholds, measurement-site normal ranges |
 | `index.html` | The same index as a readable page |
 
+**Two different `updated` fields, and they mean different things.** `manifest.json` → `updated`
+is when the publish layer was regenerated: a build timestamp that changes on every build even when
+no number changed. Each dataset's own `updated` (in `oven-conversions.json` etc.) is the date its
+numbers were last checked against the cited sources — that is the one to read when you care how
+fresh the data is.
+
 ## Read it
 
 ```bash

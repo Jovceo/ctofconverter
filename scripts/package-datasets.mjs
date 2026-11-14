@@ -269,6 +269,106 @@ what the site serves?" — run it again after any dataset change, before minting
 `;
 }
 
+/**
+ * 生成「照着这张表往 Zenodo 表单里贴」的清单。
+ * 放在包外面（release/），因为它不是数据集的一部分，不该被上传。
+ * 所有值都从 zenodoPayload() 来，不手抄，避免清单与 .zenodo.json 说法不一致。
+ */
+function pasteSheet(manifest, datasets, version, files) {
+    const z = zenodoPayload(manifest, datasets, version);
+    const rel = {
+        isDocumentedBy: 'Is documented by',
+        isSupplementTo: 'Is supplement to',
+        isDerivedFrom: 'Is derived from',
+        isIdenticalTo: 'Is identical to',
+    };
+    const related = z.related_identifiers
+        .map((r) => `| ${rel[r.relation] || r.relation} | \`${r.identifier}\` | URL |`)
+        .join('\n');
+    return `# Zenodo 表单粘贴清单 — ${version}
+
+打开 <https://zenodo.org/uploads/new>，按下面顺序填。**左列是表单字段，右列原样复制**。
+这张表由 \`scripts/package-datasets.mjs\` 从 \`.zenodo.json\` 生成，两边说法必然一致。
+
+## 1. 文件
+
+把 \`release/datasets-${version}/\` 里的 **${files.length} 个文件**全部拖进上传区（不要打包成 zip）：
+
+\`\`\`
+${files.join('\n')}
+\`\`\`
+
+## 2. DOI（表单顶部第一个问题，先答这个）
+
+**Does this upload already have a DOI?** → 选 **No**。
+
+**不要点 "Get a DOI now!" 预留。** 预留只对「必须把 DOI 印进 PDF 里」的场景有用；我们的顺序是发布后立刻把 DOI 写回网站，预留只会让网站短暂出现一个解析不了的 DOI（就是上一轮刚修掉的那类死链）。
+
+## 3. Basic information
+
+| 表单字段 | 填入 |
+|---|---|
+| Resource type | **Dataset** |
+| Title | \`${z.title}\` |
+| Publication date | \`${z.publication_date}\`（默认取草稿创建日；今天上传就正好是这一天） |
+| Creators | 见第 4 节 |
+| Description | 见第 5 节 |
+| License | **Creative Commons Attribution 4.0 International (CC BY 4.0)** — 必须与文件里声明的 cc-by-4.0 一致 |
+| Languages | **English** |
+| Version | \`${z.version}\` |
+| Publisher | 留空 |
+| Keywords | 见第 6 节 |
+
+## 4. Creators（唯一必须你亲自决定的字段）
+
+Zenodo 会先让你选 **Person** 还是 **Organization**：
+
+- **Person** — 分 family name / given names，可挂 ORCID 与 ROR 机构（会进入引用字符串）。
+- **Organization** — 只有一个名字字段。不想公开真名时，填 \`ctofconverter.com\` 是合规做法：维护主体确实是这个站点。
+- **保留占位 \`Jovceo\`** 也能发，只是引用里会印这个占位名。
+
+**不要编造 ORCID、机构或真名。** 没有就留空。
+
+## 5. Description（整段 HTML，直接粘）
+
+\`\`\`html
+${z.description}
+\`\`\`
+
+粘完看预览：应出现三个数据集条目（各带 JSON / CSV 链接）与 6 段说明。若编辑器把标签吃掉，就改成纯文本重贴（内容一样，只是没有加粗和链接）。
+
+## 6. Keywords and subjects
+
+**Keywords**（自由词，一条一行，粘进去按回车变成标签）：
+
+\`\`\`
+${z.keywords.join('\n')}
+\`\`\`
+
+**Subjects**（受控词表，可选）：想加就在里面搜 \`Body Temperature\` 或 \`Cooking\`，选中即可。不加不影响发布，加了某些学术目录抓取时更准。
+
+## 7. Related works（三条，逐条 Add）
+
+| 关系 | 标识符 | 类型 |
+|---|---|---|
+${related}
+
+## 8. 发布前最后一眼
+
+- 文件数 = **${files.length}**，且没有打包成 zip；
+- License = **CC BY 4.0**，Version = \`${z.version}\`；
+- 先点 **Save draft** 让它校一遍，再点 **Publish**。
+
+**45 天规则**：发布后 45 天内你还能自己增删改文件，过期要联系 Zenodo 支持。所以宁可现在多看一眼。
+
+## 9. 发布后
+
+1. 记录页会给出两个 DOI：**概念 DOI**（\`10.5281/zenodo.NNNNNNN\`，不带版本号，永远指向最新版）和 **版本 DOI**（带版本后缀）。**两个都发我** —— 站点引用用概念 DOI，复现/论文引用用版本 DOI。
+2. 我把 DOI 写回 \`public/data/README.md\`、\`/data-api\`、数据仓 README 与 \`CITATION.cff\`，跟同一批推送一起上线。
+3. 以后改数据：在**同一个 record** 上点 **New version**，不要新建一条 record（否则引用会分裂成两个 DOI）。
+`;
+}
+
 function snapshotJson(manifest, datasets, version, packageFiles, head) {
     return {
         packageVersion: version,
@@ -372,7 +472,25 @@ function main() {
     const dir = path.resolve(ROOT, args.out);
 
     if (args.check) {
-        if (!fs.existsSync(dir)) fail(`package not found: ${args.out} (run without --check to build it)`);
+        if (!fs.existsSync(dir)) {
+            // 常见坑：包目录名带日期，跨天再跑 --check 会指向一个不存在的新日期目录
+            const parent = path.dirname(dir);
+            const existing = fs.existsSync(parent)
+                ? fs
+                      .readdirSync(parent, { withFileTypes: true })
+                      .filter((e) => e.isDirectory() && e.name.startsWith('datasets-'))
+                      .map((e) => e.name)
+                      .sort()
+                : [];
+            console.error(`✗ package not found: ${args.out}`);
+            if (existing.length) {
+                console.error(`  existing snapshot(s): ${existing.join(', ')}`);
+                console.error(`  retry with: node scripts/package-datasets.mjs --check --out=${path.join(path.relative(ROOT, parent), existing[existing.length - 1]).split(path.sep).join('/')}`);
+            } else {
+                console.error('  no snapshot yet — run without --check to build one');
+            }
+            process.exit(1);
+        }
         const problems = verify(dir, datasets);
         if (problems.length) {
             console.error(`✗ ${problems.length} problem(s):`);
@@ -425,6 +543,10 @@ function main() {
         process.exit(1);
     }
 
+    // （5）粘贴清单写在包外面（它不该被上传进 Zenodo）
+    const pastePath = path.join(path.dirname(dir), `ZENODO-PASTE-${args.version}.md`);
+    writeUtf8(pastePath, pasteSheet(manifest, datasets, args.version, fs.readdirSync(dir).sort()));
+
     const rows = datasets.reduce((n, d) => n + d.actualRows, 0);
     const files = fs.readdirSync(dir).length;
     console.log(`✓ snapshot built: ${path.relative(ROOT, dir).split(path.sep).join('/')}`);
@@ -433,7 +555,8 @@ function main() {
     console.log(`  rows         ${rows}`);
     console.log(`  files        ${files}`);
     console.log(`  source       public/data/ — byte-identical (sha256 verified)`);
-    console.log(`  next         read ${path.relative(ROOT, path.join(dir, 'DEPOSIT.md')).split(path.sep).join('/')} for the 10-minute upload steps`);
+    console.log(`  upload steps ${path.relative(ROOT, path.join(dir, 'DEPOSIT.md')).split(path.sep).join('/')}`);
+    console.log(`  paste sheet  ${path.relative(ROOT, pastePath).split(path.sep).join('/')}  ← fill the Zenodo form from this`);
 }
 
 main();
