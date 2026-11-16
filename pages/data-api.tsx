@@ -176,6 +176,11 @@ https://ctofconverter.com/data-api`}</code></pre>
                                 the whole condition — the point of publishing this is that people can use it, not that we
                                 collect traffic.
                             </p>
+                            <p>
+                                The same three datasets are archived on Zenodo with a citable DOI (concept DOI, always
+                                resolves to the latest version):{' '}
+                                <a href="https://doi.org/10.5281/zenodo.24269203">10.5281/zenodo.24269203</a>
+                            </p>
                         </section>
 
                         <section className="block" id="medical">

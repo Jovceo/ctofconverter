@@ -8,6 +8,8 @@ baking app, a fever tracker, a kitchen converter, a spreadsheet, a lesson plan.
 - **Every number states its source and the date it was checked**, inside the file (`provenance`).
 - **Two formats, same data**: `.json` (with column metadata) and `.csv` (RFC 4180, CRLF, UTF-8 without BOM).
 - **Versioned.** A correction is a new `version` + `updated` date; old files keep working.
+- **Citable.** Archived on Zenodo — concept DOI [10.5281/zenodo.24269203](https://doi.org/10.5281/zenodo.24269203)
+  always resolves to the latest version; per-version DOIs are minted for each snapshot.
 
 ## The files
 
