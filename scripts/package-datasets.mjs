@@ -38,6 +38,12 @@ const HOMEPAGE = 'https://ctofconverter.com/data-api';
 // 这些文件逐字节拷贝：数据本体 + 对外许可/说明，保证「包内 = 线上」
 const COPIES = ['manifest.json', 'README.md', 'LICENSE-NOTICE.md'];
 
+// .zenodo.json 是给 GitHub Release 自动投递用的元数据（也是 zenodo-deposit.mjs 的输入），
+// 但 Zenodo 的网页与 API 都不收点开头的文件。它必须留在包里，却不能进 MANIFEST.sha256、
+// 也不能出现在「上传这些文件」清单里——否则下载者 `sha256sum -c` 会看到一条永远对不上的记录
+// （2026-11-16 首次发布就是这么错的：13 条校验里 12 OK + 1 missing = 整体失败）。
+const isUploadable = (name) => !name.startsWith('.');
+
 function fail(msg) {
     console.error(`\n✗ ${msg}`);
     process.exit(1);
@@ -226,9 +232,9 @@ byte-identical copy of \`public/data/\` from ${source}, which is itself generate
 | \`manifest.json\` | Published index: row counts, columns, versions, API endpoints. |
 | \`README.md\`, \`LICENSE-NOTICE.md\` | Usage notes and the CC-BY-4.0 notice. |
 | \`CITATION.cff\` | Citation metadata (Citation File Format 1.2.0). |
-| \`.zenodo.json\` | Deposit metadata in Zenodo's schema — used automatically by GitHub releases. |
+| \`.zenodo.json\` | Deposit metadata in Zenodo's schema. **Not uploaded** — Zenodo rejects dot-prefixed files; GitHub releases read it automatically. |
 | \`SNAPSHOT.json\` | What was packaged, from which commit, with per-file hashes. |
-| \`MANIFEST.sha256\` | \`sha256sum\`-format checksums for every file above. |
+| \`MANIFEST.sha256\` | \`sha256sum\`-format checksums for every uploaded file **except itself** (so it verifies after download). |
 
 ## Datasets in this snapshot
 
@@ -240,7 +246,8 @@ ${rows}
 
 1. Sign in at <https://zenodo.org> (GitHub or ORCID login both work).
 2. **New upload** → **Upload type: Dataset**. Community: leave empty unless you want a curated one.
-3. Drag **every file in this folder** into the upload area (do not zip — Zenodo serves individual files better).
+3. Drag every file in this folder **except \`.zenodo.json\`** into the upload area (do not zip — Zenodo
+   serves individual files better, and it rejects dot-prefixed names).
 4. Paste the metadata from \`.zenodo.json\` into the form. Fields that need a human decision:
    - **Creators**: currently \`Jovceo\`. Add a family name, an ORCID, and an affiliation if you have them —
      a real name materially increases citation trust. Do not invent an affiliation.
@@ -259,6 +266,13 @@ node scripts/package-datasets.mjs --check --out=release/datasets-${version}
 This re-hashes every file in this folder against \`public/data/\` and against \`MANIFEST.sha256\`
 and exits non-zero on any difference. It is the check that answers "does the deposit still match
 what the site serves?" — run it again after any dataset change, before minting a new version.
+
+A snapshot is a point-in-time copy, so once \`public/data/\` changes after packaging this check is
+**expected** to fail. That failure is the signal to pick one of two paths: correct the published
+record in place (Zenodo allows file edits within 30 days of publication, DOI unchanged) or mint a
+new version. To check a record that is already on Zenodo, use
+\`node scripts/zenodo-deposit.mjs --out=release/datasets-${version} --verify=<record-id>\`, which
+compares the live record against its own \`MANIFEST.sha256\` and required metadata.
 
 ## After publishing
 
@@ -297,6 +311,9 @@ function pasteSheet(manifest, datasets, version, files) {
 \`\`\`
 ${files.join('\n')}
 \`\`\`
+
+包里还有一个 \`.zenodo.json\`：**不要上传它**。Zenodo 拒收点开头的文件名，它只服务于 GitHub Release 的自动投递；
+\`MANIFEST.sha256\` 也因此只列上面这些文件（列了点文件会让下载者 \`sha256sum -c\` 永远失败一条）。
 
 ## 2. DOI（表单顶部第一个问题，先答这个）
 
@@ -366,10 +383,19 @@ ${related}
 1. 记录页会给出两个 DOI：**概念 DOI**（\`10.5281/zenodo.NNNNNNN\`，不带版本号，永远指向最新版）和 **版本 DOI**（带版本后缀）。**两个都发我** —— 站点引用用概念 DOI，复现/论文引用用版本 DOI。
 2. 我把 DOI 写回 \`public/data/README.md\`、\`/data-api\`、数据仓 README 与 \`CITATION.cff\`，跟同一批推送一起上线。
 3. 以后改数据：在**同一个 record** 上点 **New version**，不要新建一条 record（否则引用会分裂成两个 DOI）。
+4. **发布后不要只信「发布成功」**——Zenodo 会静默丢弃它不认识的元数据字段（首次发布就丢了 license 和 keywords）。
+   用只读复核把记录和自己对一遍：
+
+   \`\`\`bash
+   node scripts/zenodo-deposit.mjs --out=release/datasets-${version} --verify=<record-id>
+   \`\`\`
+
+   它逐文件下载比对 md5、按 \`MANIFEST.sha256\` 逐条核对、并检查 license / keywords / related 是否真的存进了记录。
+   不通过时，元数据用记录页的 **Edit**（DOI 不变）改，文件用 **Edit files → Edit published files** 改（发布后 30 天内，DOI 不变）。
 `;
 }
 
-function snapshotJson(manifest, datasets, version, packageFiles, head) {
+function snapshotJson(manifest, datasets, version, head, uploadedFiles, localOnlyFiles) {
     return {
         packageVersion: version,
         generatedAt: new Date().toISOString(),
@@ -384,6 +410,10 @@ function snapshotJson(manifest, datasets, version, packageFiles, head) {
             method: 'sha256 compare of every packaged file against its public/data/ counterpart',
             status: 'identical',
         },
+        // 真正上传到 Zenodo/Release 的文件（点文件除外）
+        files: uploadedFiles,
+        // 留在包里但不是发布物（Zenodo 不收点开头的文件名），因此不进 MANIFEST.sha256
+        localOnly: localOnlyFiles,
         datasets: datasets.map((d) => ({
             id: d.id,
             version: d.version,
@@ -394,13 +424,13 @@ function snapshotJson(manifest, datasets, version, packageFiles, head) {
                 csv: sha256(d.csvFile),
             },
         })),
-        files: packageFiles,
     };
 }
 
 function writeManifestSha(dir, files) {
+    // MANIFEST.sha256 不能列自己（无法自指哈希），其余每个上传文件都必须在册
     const lines = files
-        .slice()
+        .filter((name) => name !== 'MANIFEST.sha256')
         .sort()
         .map((name) => `${sha256(path.join(dir, name))}  ${name}`);
     writeUtf8(path.join(dir, 'MANIFEST.sha256'), `${lines.join('\n')}\n`);
@@ -430,7 +460,8 @@ function verify(dir, datasets) {
         }
     }
 
-    // 2) MANIFEST.sha256 覆盖包内每一个文件，且校验通过
+    // 2) MANIFEST.sha256 覆盖包内每一个【可上传】文件，且校验通过
+    //    点文件（.zenodo.json）不参与：Zenodo 不收它，列进去就会让下载者的 sha256sum -c 失败
     const manifestFile = path.join(dir, 'MANIFEST.sha256');
     if (!fs.existsSync(manifestFile)) {
         problems.push('MANIFEST.sha256 missing');
@@ -443,14 +474,15 @@ function verify(dir, datasets) {
         }
         const present = fs
             .readdirSync(dir)
-            .filter((f) => f !== 'MANIFEST.sha256')
+            .filter((f) => f !== 'MANIFEST.sha256' && isUploadable(f))
             .filter((f) => fs.statSync(path.join(dir, f)).isFile());
         for (const name of present) {
             if (!listed.has(name)) problems.push(`not listed in MANIFEST.sha256: ${name}`);
             else if (listed.get(name) !== sha256(path.join(dir, name))) problems.push(`checksum mismatch: ${name}`);
         }
         for (const name of listed.keys()) {
-            if (!present.includes(name)) problems.push(`listed but absent: ${name}`);
+            if (!isUploadable(name)) problems.push(`MANIFEST.sha256 列了本地保留文件（不随包上传）: ${name}`);
+            else if (!present.includes(name)) problems.push(`listed but absent: ${name}`);
         }
     }
 
@@ -495,6 +527,10 @@ function main() {
         if (problems.length) {
             console.error(`✗ ${problems.length} problem(s):`);
             problems.forEach((p) => console.error(`  - ${p}`));
+            console.error('\nNote: a snapshot is a point-in-time copy of public/data/. If the site\'s files changed after');
+            console.error('packaging, drift is expected — fix the published record in place (Zenodo allows file edits');
+            console.error('within 30 days, DOI unchanged), or mint a new version. Check a live record with:');
+            console.error(`  node scripts/zenodo-deposit.mjs --out=${args.out} --verify=<record-id>`);
             process.exit(1);
         }
         console.log(`✓ package verified: ${args.out}`);
@@ -522,17 +558,22 @@ function main() {
 
     // （2）生成元数据
     const head = gitHead();
+    const generated = ['CITATION.cff', '.zenodo.json', 'DEPOSIT.md', 'SNAPSHOT.json'];
+    // 上传集先定下来（含 SNAPSHOT.json 与 MANIFEST.sha256 自身），SNAPSHOT 与 MANIFEST 才能说法一致
+    const allFiles = [...copied, ...generated, 'MANIFEST.sha256'].sort();
+    const uploadable = allFiles.filter(isUploadable);
+    const localOnly = allFiles.filter((f) => !isUploadable(f));
+
     writeUtf8(path.join(dir, 'CITATION.cff'), citationCff(manifest, datasets, args.version));
     writeUtf8(path.join(dir, '.zenodo.json'), `${JSON.stringify(zenodoPayload(manifest, datasets, args.version), null, 2)}\n`);
     writeUtf8(path.join(dir, 'DEPOSIT.md'), depositChecklist(manifest, datasets, args.version, head));
+    writeUtf8(
+        path.join(dir, 'SNAPSHOT.json'),
+        `${JSON.stringify(snapshotJson(manifest, datasets, args.version, head, uploadable, localOnly), null, 2)}\n`
+    );
 
-    const generated = ['CITATION.cff', '.zenodo.json', 'DEPOSIT.md'];
-    const snapshot = snapshotJson(manifest, datasets, args.version, [...copied, ...generated].sort(), head);
-    writeUtf8(path.join(dir, 'SNAPSHOT.json'), `${JSON.stringify(snapshot, null, 2)}\n`);
-    generated.push('SNAPSHOT.json');
-
-    // （3）校验和（最后写，覆盖其余所有文件）
-    writeManifestSha(dir, [...copied, ...generated]);
+    // （3）校验和（最后写，只覆盖会被上传的文件）
+    writeManifestSha(dir, uploadable);
 
     // （4）自检：不通过就删掉半成品
     const problems = verify(dir, datasets);
@@ -545,15 +586,15 @@ function main() {
 
     // （5）粘贴清单写在包外面（它不该被上传进 Zenodo）
     const pastePath = path.join(path.dirname(dir), `ZENODO-PASTE-${args.version}.md`);
-    writeUtf8(pastePath, pasteSheet(manifest, datasets, args.version, fs.readdirSync(dir).sort()));
+    writeUtf8(pastePath, pasteSheet(manifest, datasets, args.version, uploadable));
 
     const rows = datasets.reduce((n, d) => n + d.actualRows, 0);
-    const files = fs.readdirSync(dir).length;
+    const files = uploadable.length;
     console.log(`✓ snapshot built: ${path.relative(ROOT, dir).split(path.sep).join('/')}`);
     console.log(`  version      ${args.version}`);
     console.log(`  datasets     ${datasets.length} (${datasets.map((d) => d.id).join(', ')})`);
     console.log(`  rows         ${rows}`);
-    console.log(`  files        ${files}`);
+    console.log(`  files        ${files} uploadable${localOnly.length ? ` + ${localOnly.join(', ')} (local only, not uploaded)` : ''}`);
     console.log(`  source       public/data/ — byte-identical (sha256 verified)`);
     console.log(`  upload steps ${path.relative(ROOT, path.join(dir, 'DEPOSIT.md')).split(path.sep).join('/')}`);
     console.log(`  paste sheet  ${path.relative(ROOT, pastePath).split(path.sep).join('/')}  ← fill the Zenodo form from this`);
