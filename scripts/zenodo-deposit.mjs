@@ -8,9 +8,11 @@
  * node 经代理发 chunked body 会被当成空请求体 → 必须显式 Content-Length。
  *
  * v3（2026-11-18）：首次发布留下了四个「HTTP 全绿但记录是裸的」缺陷，全部针对根因修：
- *   1. relation 词表 id 是【驼峰】（isDocumentedBy / isSupplementTo / isDerivedFrom），
- *      kebab（is-documented-by）会被校验器拒。实证：抽样 100 条近期数据集记录，存储值
- *      只有驼峰形态（isDerivedFrom 21 / isSupplementTo 12 / isDocumentedBy 10 / references 54）。
+ *   1. relation 的写入 id 是【全小写无分隔符】：isdocumentedby / issupplementto / isderivedfrom。
+ *      kebab（is-documented-by）与驼峰（isDocumentedBy）都不在词表里 → 校验器 400。
+ *      这条不再靠猜：词表本身有公开只读端点，--vocabulary 直接拉下来对（实测 34 条）。
+ *      注意读回不一致是正常的——记录里的 related_identifiers[].relation 是【输出序列化】，
+ *      用 DataCite 驼峰形态，跟写入 id 不是一回事。所以比对一律先归一化。
  *   2. license 的 RDM 字段名是 metadata.rights[]（不是 license）；
  *      keywords 是【字符串数组】（不是 [{keyword}] 对象数组，那是旧 API 的形状）；
  *      languages 是 [{id:'eng'}]。旧形状被静默丢弃 → 记录没有 license、没有 keywords。
@@ -29,6 +31,13 @@
  *   node scripts/zenodo-deposit.mjs --out=release/datasets-2026.11.13 --publish   # 一条龙：建+传+发
  *   node scripts/zenodo-deposit.mjs --out=release/datasets-2026.11.13 --verify=24269204
  *                                                                                 # 只读复核已发布记录
+ *   node scripts/zenodo-deposit.mjs --vocabulary                                  # 词表漂移自检（只读）
+ *   node scripts/zenodo-deposit.mjs --out=release/datasets-2026.11.13 --edit-published=24269204 \
+ *        --files-from=release/ZENODO-FIX-2026.11.13 --publish
+ *                                                                                 # 改已发布记录：建编辑草稿
+ *                                                                                 # → 改元数据 → 只替换
+ *                                                                                 # files-from 里的文件 → 发布
+ *                                                                                 # （DOI 不变）
  *
  * 数据红线：文件与元数据全部来自 --out 快照包（package-datasets.mjs 产物），本脚本零手抄。
  * API 文档：https://inveniordm.docs.cern.ch/reference/records_api/
@@ -53,8 +62,11 @@ const flag = (n) => process.argv.includes('--' + n);
 const OUT = arg('out', null);
 const DRAFT_ID = arg('draft-id', null);
 const VERIFY_ID = arg('verify', null);
+const EDIT_ID = arg('edit-published', null);
+const FILES_FROM = arg('files-from', null);
+const VOCAB = flag('vocabulary');
 const PUBLISH = flag('publish');
-const RUN = flag('run') || PUBLISH || !!DRAFT_ID;
+const RUN = flag('run') || PUBLISH || !!DRAFT_ID || !!EDIT_ID;
 const DRY = flag('dry-run') || !RUN;
 const TOKEN_FILE = arg('token-file', path.join('release', '.zenodo-token'));
 const API = 'https://zenodo.org/api';
@@ -63,60 +75,58 @@ const UA =
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36';
 
 /**
- * RDM 关系词表 id（DataCite 的驼峰写法）。
- * 来源：invenio-rdm-records/fixtures/data/vocabularies/relation_types.yaml（39 条，与上面实测一致）
+ * Zenodo 关系词表的【写入 id】：全小写、无分隔符。
+ * 来源：GET https://zenodo.org/api/vocabularies/relationtypes（公开只读，2026-11-18 实测 34 条）。
+ * 不要再猜形态：kebab（is-documented-by）和驼峰（isDocumentedBy）都不在词表里，PUT 会 400。
+ * 词表若变（升级/deprecate），`--vocabulary` 会打出来。
  */
-const RELATION_ALLOWED = [
-    'isCitedBy',
+const RELATION_VOCAB = [
     'cites',
-    'isSupplementTo',
-    'isSupplementedBy',
-    'isContinuedBy',
-    'continues',
-    'isDescribedBy',
-    'describes',
-    'hasMetadata',
-    'isMetadataFor',
-    'hasVersion',
-    'isVersionOf',
-    'isNewVersionOf',
-    'isPreviousVersionOf',
-    'isPartOf',
-    'hasPart',
-    'isPublishedIn',
-    'isReferencedBy',
-    'references',
-    'isDocumentedBy',
-    'documents',
-    'isCompiledBy',
     'compiles',
-    'isVariantFormOf',
-    'isOriginalFormOf',
-    'isIdenticalTo',
-    'isReviewedBy',
-    'reviews',
-    'isDerivedFrom',
-    'isSourceOf',
-    'isRequiredBy',
-    'requires',
-    'isObsoletedBy',
+    'continues',
+    'describes',
+    'documents',
+    'hasmetadata',
+    'haspart',
+    'hasversion',
+    'iscitedby',
+    'iscompiledby',
+    'iscontinuedby',
+    'isderivedfrom',
+    'isdescribedby',
+    'isdocumentedby',
+    'isidenticalto',
+    'ismetadatafor',
+    'isnewversionof',
+    'isobsoletedby',
+    'isoriginalformof',
+    'ispartof',
+    'ispreviousversionof',
+    'ispublishedin',
+    'isreferencedby',
+    'isrequiredby',
+    'isreviewedby',
+    'issourceof',
+    'issupplementto',
+    'issupplementedby',
+    'isvariantformof',
+    'isversionof',
     'obsoletes',
-    'isTranslationOf',
-    'hasTranslation',
-    'isCollectedBy',
-    'collects',
-    'other',
+    'references',
+    'requires',
+    'reviews',
 ];
-// 容错：大小写/连字符不影响语义，统一归一后再查。真正不认识的 id 一律提前失败，
-// 而不是等上传完 13 个文件才被校验器拒绝。
-const RELATION_BY_NORM = new Map(RELATION_ALLOWED.map((id) => [id.replace(/[^a-z]/gi, '').toLowerCase(), id]));
+const RELATION_SET = new Set(RELATION_VOCAB);
 
-function mapRelation(id) {
-    const hit = RELATION_BY_NORM.get(String(id).replace(/[^a-z]/gi, '').toLowerCase());
-    if (!hit) {
-        fail(`unknown relation id "${id}" — allowed: ${RELATION_ALLOWED.join(', ')}`);
+/** 任意写法 → 词表 id。大小写/连字符都不影响语义，真正不认识的一律提前失败。 */
+const normRel = (s) => String(s ?? '').toLowerCase().replace(/[^a-z]/g, '');
+
+function vocabRelation(id) {
+    const n = normRel(id);
+    if (!RELATION_SET.has(n)) {
+        fail(`unknown relation "${id}" — 不在 Zenodo 词表里（跑 --vocabulary 看当前 ${RELATION_VOCAB.length} 条）`);
     }
-    return hit;
+    return n;
 }
 
 function fail(msg) {
@@ -124,48 +134,84 @@ function fail(msg) {
     process.exit(1);
 }
 
-if (!OUT) {
+if (!OUT && !VOCAB) {
     fail(
         '用法: node scripts/zenodo-deposit.mjs --out=release/datasets-2026.11.13 ' +
-            '[--dry-run|--run|--publish|--verify=<recid>]'
+            '[--dry-run|--run|--publish|--verify=<recid>|--edit-published=<recid>] / --vocabulary'
     );
 }
-const dir = path.resolve(OUT);
-if (!fs.existsSync(dir)) fail(`package not found: ${OUT}`);
+const dir = OUT ? path.resolve(OUT) : null;
+const hasPackage = !!dir && fs.existsSync(dir);
+if (OUT && !hasPackage) fail(`package not found: ${OUT}`);
 
 // 点开头的文件（.zenodo.json）是给 GitHub Release 用的元数据，Zenodo 的网页与 API 都不收；
 // 它也不该出现在 MANIFEST.sha256 里（否则下载者 `sha256sum -c` 会有一条永远对不上）。
-const files = fs
-    .readdirSync(dir)
-    .filter((f) => fs.statSync(path.join(dir, f)).isFile() && !f.startsWith('.'))
-    .sort();
-const localOnly = fs.readdirSync(dir).filter((f) => f.startsWith('.') && fs.statSync(path.join(dir, f)).isFile());
-if (!fs.existsSync(path.join(dir, '.zenodo.json'))) fail(`${OUT} 缺少 .zenodo.json —— 先跑 node scripts/package-datasets.mjs`);
-if (!files.length) fail(`${OUT} 里没有可上传的文件`);
+const files = hasPackage
+    ? fs.readdirSync(dir).filter((f) => fs.statSync(path.join(dir, f)).isFile() && !f.startsWith('.'))
+    : [];
+files.sort();
+const localOnly = hasPackage
+    ? fs.readdirSync(dir).filter((f) => f.startsWith('.') && fs.statSync(path.join(dir, f)).isFile())
+    : [];
 
-const zenodoJson = JSON.parse(fs.readFileSync(path.join(dir, '.zenodo.json'), 'utf8'));
+// --files-from：本轮要替换进记录的文件（如 release/ZENODO-FIX-2026.11.13）。
+// 同一文件名两边都有时以它为准——修的是这两个文件，包里的是上一版快照。
+const FIX_DIR = FILES_FROM ? path.resolve(FILES_FROM) : null;
+if (FILES_FROM && !fs.existsSync(FIX_DIR)) fail(`--files-from 目录不存在: ${FILES_FROM}`);
+const fixFiles = FIX_DIR
+    ? fs.readdirSync(FIX_DIR).filter((f) => fs.statSync(path.join(FIX_DIR, f)).isFile() && !f.startsWith('.')).sort()
+    : [];
+if (FILES_FROM && !fixFiles.length) fail(`${FILES_FROM} 里没有可用的文件`);
+
+/** 某个 key 的本地真值文件：--files-from 优先，其次发布包；都没有则 null */
+function localFileFor(key) {
+    if (FIX_DIR) {
+        const p = path.join(FIX_DIR, key);
+        if (fs.existsSync(p)) return p;
+    }
+    if (dir) {
+        const p = path.join(dir, key);
+        if (fs.existsSync(p)) return p;
+    }
+    return null;
+}
+
+const zenodoJsonPath = hasPackage ? path.join(dir, '.zenodo.json') : null;
+const zenodoJson = zenodoJsonPath && fs.existsSync(zenodoJsonPath) ? JSON.parse(fs.readFileSync(zenodoJsonPath, 'utf8')) : null;
+if (!VOCAB) {
+    if (!zenodoJson) fail(`${OUT} 缺少 .zenodo.json —— 先跑 node scripts/package-datasets.mjs`);
+    if (!files.length) fail(`${OUT} 里没有可上传的文件`);
+}
 
 // ---- RDM metadata：从 .zenodo.json 映射，零手抄；形状按 InvenioRDM 元数据规范 ----
-const rdmMetadata = {
-    title: zenodoJson.title,
-    resource_type: { id: zenodoJson.upload_type || 'dataset' },
-    creators: (zenodoJson.creators || []).map(toRdmCreator),
-    publication_date: zenodoJson.publication_date,
-    publisher: zenodoJson.publisher || 'ctofconverter.com',
-    description: zenodoJson.description,
-    // RDM 的字段名是 rights（许可证），不是 license；旧名会被静默丢弃
-    rights: [{ id: zenodoJson.license || 'cc-by-4.0' }],
-    languages: [{ id: zenodoJson.language || 'eng' }],
-    version: zenodoJson.version,
-    // keywords 是字符串数组，不是 [{keyword}] 对象数组
-    keywords: (zenodoJson.keywords || []).map(String),
-    related_identifiers: (zenodoJson.related_identifiers || []).map((r) => ({
-        identifier: r.identifier,
-        scheme: r.scheme || 'url',
-        relation_type: { id: mapRelation(r.relation) },
-        ...(r.resource_type ? { resource_type: { id: r.resource_type } } : {}),
-    })),
-};
+// 惰性构建：--vocabulary / --verify 这类只读模式不读发布包，也不该因为缺包而崩。
+let _rdmMetadata = null;
+function rdmMeta() {
+    if (_rdmMetadata) return _rdmMetadata;
+    if (!zenodoJson) fail('这个模式需要 --out=<发布包>（元数据从包里的 .zenodo.json 映射）');
+    _rdmMetadata = {
+        title: zenodoJson.title,
+        resource_type: { id: zenodoJson.upload_type || 'dataset' },
+        creators: (zenodoJson.creators || []).map(toRdmCreator),
+        publication_date: zenodoJson.publication_date,
+        publisher: zenodoJson.publisher || 'ctofconverter.com',
+        description: zenodoJson.description,
+        // RDM 的字段名是 rights（许可证），不是 license；旧名会被静默丢弃
+        rights: [{ id: zenodoJson.license || 'cc-by-4.0' }],
+        languages: [{ id: zenodoJson.language || 'eng' }],
+        version: zenodoJson.version,
+        // keywords 是字符串数组，不是 [{keyword}] 对象数组
+        keywords: (zenodoJson.keywords || []).map(String),
+        related_identifiers: (zenodoJson.related_identifiers || []).map((r) => ({
+            identifier: r.identifier,
+            scheme: r.scheme || 'url',
+            // 写入用词表 id（全小写无分隔符）；读回是 DataCite 驼峰形态，比对时归一化
+            relation_type: { id: vocabRelation(r.relation) },
+            ...(r.resource_type ? { resource_type: { id: r.resource_type } } : {}),
+        })),
+    };
+    return _rdmMetadata;
+}
 
 function toRdmCreator(c) {
     if (c.person_or_org) return c;
@@ -219,7 +265,9 @@ function request(method, url, { body, headers = {}, raw = false } = {}, attemptB
                         )
                     );
                 }
-                resolve(raw ? buf : JSON.parse(buf.toString('utf8') || '{}'));
+                if (raw) return resolve(buf);
+                try { resolve(JSON.parse(buf.toString('utf8') || '{}')); }
+                catch { resolve(buf.toString('utf8')); } // 某些 2xx 响应体不是 JSON（实测出现过字面量 [object Object]）——返回原文让上层判断
             });
         });
         req.on('timeout', () => req.destroy(new Error('request timeout')));
@@ -255,7 +303,7 @@ const storedKeywords = (m) =>
         .map((x) => (typeof x === 'string' ? x : (x.keyword ?? x.subject)))
         .filter(Boolean);
 const storedRelated = (m) =>
-    (m.related_identifiers || []).map((r) => `${r.relation_type?.id ?? r.relation} ${r.identifier}`);
+    (m.related_identifiers || []).map((r) => `${normRel(r.relation_type?.id ?? r.relation)} ${r.identifier}`);
 const storedCreators = (m) =>
     (m.creators || []).map((c) => c.person_or_org?.name ?? c.name ?? [c.given_name, c.family_name].filter(Boolean).join(' '));
 const storedResourceType = (m) => m.resource_type?.id ?? m.resource_type?.type ?? null;
@@ -264,7 +312,7 @@ const flat = (s) => String(s ?? '').replace(/\s+/g, ' ').trim();
 function metadataChecks(stored) {
     const problems = [];
     const warnings = [];
-    const want = rdmMetadata;
+    const want = rdmMeta();
 
     if (flat(stored.title) !== flat(want.title)) problems.push('title');
     if (flat(stored.version) !== flat(want.version)) {
@@ -288,7 +336,8 @@ function metadataChecks(stored) {
     }
 
     const rel = storedRelated(stored);
-    const wantRel = want.related_identifiers.map((r) => `${r.relation_type.id} ${r.identifier}`);
+    // 记录里存的是输出序列化（DataCite 驼峰），发送的是词表 id（小写）→ 两边都归一化再比
+    const wantRel = want.related_identifiers.map((r) => `${normRel(r.relation_type.id)} ${r.identifier}`);
     const missingRel = wantRel.filter((x) => !rel.includes(x));
     if (missingRel.length) {
         problems.push(
@@ -331,14 +380,14 @@ async function main() {
     console.log(`package : ${OUT}`);
     console.log(`files   : ${files.length}${localOnly.length ? ` (+ 本地保留 ${localOnly.join(', ')} 不上传)` : ''}`);
     console.log(`mode    : ${PUBLISH ? 'CREATE/REUSE+UPLOAD+PUBLISH' : RUN ? 'CREATE/REUSE+UPLOAD (draft only)' : 'DRY-RUN'}`);
-    console.log(`metadata: "${String(rdmMetadata.title).slice(0, 60)}..." v${rdmMetadata.version}`);
+    console.log(`metadata: "${String(rdmMeta().title).slice(0, 60)}..." v${rdmMeta().version}`);
 
     if (DRY) {
         console.log('\n--dry-run: RDM payload 就绪。');
-        console.log('metadata keys:', Object.keys(rdmMetadata).join(', '));
-        console.log('rights:', JSON.stringify(rdmMetadata.rights), '| languages:', JSON.stringify(rdmMetadata.languages));
-        console.log('keywords:', rdmMetadata.keywords.length, '| related:', JSON.stringify(rdmMetadata.related_identifiers));
-        console.log('creators:', JSON.stringify(rdmMetadata.creators));
+        console.log('metadata keys:', Object.keys(rdmMeta()).join(', '));
+        console.log('rights:', JSON.stringify(rdmMeta().rights), '| languages:', JSON.stringify(rdmMeta().languages));
+        console.log('keywords:', rdmMeta().keywords.length, '| related:', JSON.stringify(rdmMeta().related_identifiers));
+        console.log('creators:', JSON.stringify(rdmMeta().creators));
         process.exit(0);
     }
 
@@ -356,7 +405,7 @@ async function main() {
         // 新建草稿时元数据校验就在这一步发生：字段形状不对会 400，不会等到上传完才发现
         draft = await request('POST', `${API}/records`, {
             body: JSON.stringify({
-                metadata: rdmMetadata,
+                metadata: rdmMeta(),
                 access: { record: 'public', files: 'public' },
                 files: { enabled: true },
             }),
@@ -460,8 +509,8 @@ function checkFiles(entries, expectedCount) {
     if (entries.length !== expectedCount) problems.push(`file count ${entries.length} != ${expectedCount}`);
     for (const ef of entries) {
         const key = ef.key || ef.filename;
-        const local = path.join(dir, key);
-        if (!fs.existsSync(local)) {
+        const local = localFileFor(key);
+        if (!local) {
             problems.push(`${key}: 服务端有、本地包没有（这份包与记录不是同一版）`);
             continue;
         }
@@ -485,7 +534,7 @@ async function verifyPublished(recId) {
     console.log(`files   : ${entries.length} 已发布\n`);
 
     // 1. 逐文件下载，比对服务端 md5 与本地包 sha256
-    const local = new Map(files.map((f) => [f, path.join(dir, f)]));
+    const local = new Map(entries.map((e) => [e.key || e.filename, localFileFor(e.key || e.filename)]));
     const remote = new Map();
     console.log('key                                bytes      md5  vs-local-package');
     for (const ef of entries) {
@@ -497,7 +546,7 @@ async function verifyPublished(recId) {
         const lp = local.get(key);
         const s256 = crypto.createHash('sha256').update(buf).digest('hex');
         const vs = lp
-            ? fs.existsSync(lp) && crypto.createHash('sha256').update(fs.readFileSync(lp)).digest('hex') === s256
+            ? crypto.createHash('sha256').update(fs.readFileSync(lp)).digest('hex') === s256
                 ? 'same'
                 : 'DIFF'
             : '—';
@@ -561,13 +610,159 @@ async function verifyPublished(recId) {
     console.log('\n✓ 记录自洽：文件哈希、MANIFEST.sha256、必填元数据全部对得上');
 }
 
+// ---- 词表漂移自检（只读）：写入 id 的唯一真值来源 ----
+async function checkVocabulary() {
+    console.log('源: GET https://zenodo.org/api/vocabularies/relationtypes?size=100\n');
+    const res = await request('GET', `${API}/vocabularies/relationtypes?size=100`, {});
+    const live = (res.hits?.hits || []).map((h) => h.id).filter(Boolean);
+    if (!live.length) fail('词表端点是空的 —— 接口可能改版了，先手工确认再发版');
+    const liveSet = new Set(live);
+    const missing = RELATION_VOCAB.filter((id) => !liveSet.has(id)); // 脚本会发、服务端不认 → 发布必 400
+    const added = live.filter((id) => !RELATION_SET.has(id)); // 服务端有、脚本没收录 → 只是没得用
+    console.log(`服务端 ${live.length} 条 / 脚本内置 ${RELATION_VOCAB.length} 条`);
+    console.log(`\n本页要用的三个：`);
+    for (const id of ['isdocumentedby', 'issupplementto', 'isderivedfrom']) {
+        console.log(`  ${id.padEnd(16)} ${liveSet.has(id) ? '✓ 在词表里' : '✗ 不在词表里'}`);
+    }
+    if (added.length) console.log(`\n服务端新增（可选补进 RELATION_VOCAB）: ${added.join(', ')}`);
+    if (missing.length) {
+        console.error(`\n✗ 脚本里有 ${missing.length} 条服务端已不认——现在发布会被 400 拒: ${missing.join(', ')}`);
+        console.error('  修法：把 RELATION_VOCAB 换成上面服务端返回的 id 列表（全小写无分隔符）。');
+        process.exit(1);
+    }
+    console.log('\n✓ 脚本内置词表与线上一致');
+}
+
+// ---- 修改已发布记录：Edit → 改元数据 → 只替换 --files-from 里的文件 → Publish（DOI 不变）----
+// 与 main() 的区别：main() 是「新草稿 → 发布新记录」；这里是「已发布记录开编辑草稿 → 发布」。
+// 硬约束（Zenodo 规则）：文件改动只能在发布后 30 天内；DOI 不变；不要用 New version。
+async function editPublished(recId) {
+    if (!zenodoJson) fail('--edit-published 需要 --out=<发布包>（元数据以它为准）');
+    if (!FIX_DIR) fail('--edit-published 需要 --files-from=<要替换的文件目录>');
+
+    const before = await request('GET', `${API}/records/${recId}?t=${Date.now()}`, {});
+    if (before.status !== 'published') fail(`记录 ${recId} 状态是 ${before.status}，不是 published`);
+    // 只替换「记录里本来就有」的文件：修复目录里的流程文件（清单、脚本）不属于记录内容
+    const recordKeys = new Set(fileEntries(before).map((e) => e.key || e.filename));
+    const replaceKeys = fixFiles.filter((f) => recordKeys.has(f));
+    const skipped = fixFiles.filter((f) => !recordKeys.has(f));
+    if (!replaceKeys.length) fail(`${FILES_FROM} 里的文件在记录中一个都不存在 —— 检查目录是否选错`);
+    console.log(`record  : ${recId} | DOI ${before.doi} | files ${recordKeys.size}`);
+    console.log(`metadata: ${OUT}（.zenodo.json）`);
+    console.log(`replace : ${replaceKeys.join(', ')}`);
+    if (skipped.length) console.log(`skip    : ${skipped.join(', ')}（记录里没有，按流程文件跳过）`);
+
+    // 1. 开编辑草稿（已存在就复用，不因并发冲突直接放弃）
+    console.log('\n[1/5] opening edit draft...');
+    let draft;
+    try {
+        draft = await request('POST', `${API}/records/${recId}/draft`, { headers: authHeaders() });
+    } catch (e) {
+        if (e.statusCode !== 400) throw e;
+        console.log('  （已存在编辑草稿，复用）');
+        draft = await request('GET', `${API}/records/${recId}/draft`, authHeaders());
+    }
+    const draftApi = draft.links?.self || `${API}/records/${recId}/draft`;
+    console.log(`  draft id: ${draft.id}`);
+
+    // 2. PUT 元数据 + 读回断言（Zenodo 会静默丢字段，200 不算数）
+    // 作者沿用记录里现有的：包里 .zenodo.json 还是占位名 Jovceo，整包重发会把引用口径
+    // 从 ctofconverter.com 改回去——作者口径的变更走下一个数据版本，不夹带在补正里。
+    console.log('[2/5] PUT metadata → read back...');
+    const meta = { ...rdmMeta(), creators: before.metadata?.creators || rdmMeta().creators };
+    console.log(`  creators 保持记录现值: ${(meta.creators || []).map((c) => c.person_or_org?.name).join(' | ')}`);
+    await request('PUT', draftApi, {
+        body: JSON.stringify({
+            metadata: meta,
+            access: { record: 'public', files: 'public' },
+            files: { enabled: true },
+        }),
+        headers: { 'Content-Type': 'application/json', ...authHeaders() },
+    });
+    const mdBack = await request('GET', `${draftApi}?t=${Date.now()}`, authHeaders());
+    if (!reportMetadata(mdBack.metadata || {}, 'edit draft（PUT 之后）')) {
+        console.error('\n✗ 元数据没有被完整存储 —— 现在发布只会得到一条同样残缺的记录，已停在发布前。');
+        console.error('  元数据这条路在 API 上不通时，用网页编辑: https://zenodo.org/records/' + recId + '/edit');
+        console.error(`  丢弃这个草稿: curl -X DELETE -H "Authorization: Bearer $ZENODO_TOKEN" ${API}/records/${recId}/draft`);
+        process.exit(1);
+    }
+
+    // 3. 只替换 replaceKeys（删旧 → 声明 → 传内容 → commit）
+    console.log('[3/5] replacing files...');
+    const fileHeaders = { 'Content-Type': 'application/json', ...authHeaders() };
+    const present = new Set(fileEntries(mdBack).map((e) => e.key || e.filename));
+    for (const f of replaceKeys) {
+        if (present.has(f)) {
+            await request('DELETE', `${draftApi}/files/${encodeURIComponent(f)}`, { headers: fileHeaders });
+        }
+        await request('POST', `${draftApi}/files`, {
+            body: JSON.stringify([{ key: f }]),
+            headers: fileHeaders,
+        });
+        const local = path.join(FIX_DIR, f);
+        const body = fs.readFileSync(local);
+        await request('PUT', `${draftApi}/files/${encodeURIComponent(f)}/content`, {
+            body,
+            headers: { 'Content-Type': 'application/octet-stream', ...authHeaders() },
+            raw: true,
+        });
+        await request('POST', `${draftApi}/files/${encodeURIComponent(f)}/commit`, { headers: fileHeaders });
+        console.log(`  ✓ ${f} (${body.length}B, md5 ${md5(local)})`);
+    }
+
+    // 4. 草稿文件全量对账（数量不变；每个文件都要在本地能对上）
+    console.log('[4/5] verifying draft files...');
+    const draftFiles = fileEntries(await request('GET', `${draftApi}?t=${Date.now()}`, authHeaders()));
+    const fileProblems = checkFiles(draftFiles, draftFiles.length);
+    if (fileProblems.length) fail(`草稿文件校验失败：\n  - ${fileProblems.join('\n  - ')}`);
+    console.log(`  ✓ ${draftFiles.length} 个文件与本地一致`);
+
+    if (!PUBLISH) {
+        console.log('\n[publish 跳过] 草稿就绪。发布: 同上命令加 --publish');
+        console.log(`或网页过目: https://zenodo.org/uploads/${draft.id}`);
+        process.exit(0);
+    }
+
+    // 5. 发布 + 全量复核
+    console.log('[5/5] publishing...');
+    const pub = await request('POST', `${draftApi}/actions/publish`, { headers: fileHeaders });
+    const finalId = pub.id || recId;
+    const after = await request('GET', `${API}/records/${finalId}?t=${Date.now()}`, {});
+    const afterProblems = checkFiles(fileEntries(after), draftFiles.length);
+    const mdOk = reportMetadata(after.metadata || {}, 'published（发布后读回）');
+
+    console.log('\n✅ REPUBLISHED');
+    console.log(`record id    : ${finalId}`);
+    console.log(`DOI          : ${after.doi}${after.doi === before.doi ? '（未变 ✓）' : '  ← 变了，异常！'}`);
+    console.log(`concept DOI  : ${after.conceptdoi || '-'}`);
+    console.log(`files        : ${fileEntries(after).length}`);
+    if (!mdOk || afterProblems.length || after.doi !== before.doi) {
+        console.error('\n⚠ 已发布但读回没全过：');
+        afterProblems.forEach((p) => console.error(`  - ${p}`));
+        console.error(`  复核: node scripts/zenodo-deposit.mjs --out=${OUT} --files-from=${FILES_FROM} --verify=${finalId}`);
+        process.exit(1);
+    }
+    console.log('\n复核: node scripts/zenodo-deposit.mjs --out=' + OUT + ' --files-from=' + FILES_FROM + ' --verify=' + finalId);
+}
+
 function authHeaders() {
-    const token = process.env.ZENODO_TOKEN || fs.readFileSync(TOKEN_FILE, 'utf8').trim();
+    let token = process.env.ZENODO_TOKEN;
+    if (!token) {
+        if (!fs.existsSync(TOKEN_FILE)) {
+            fail(`没有令牌：${TOKEN_FILE} 不存在，ZENODO_TOKEN 也没设（写操作需要 deposit:write + deposit:actions）`);
+        }
+        token = fs.readFileSync(TOKEN_FILE, 'utf8').trim();
+    }
+    if (!token) fail(`令牌是空的：${TOKEN_FILE}`);
     return { Authorization: `Bearer ${token}` };
 }
 
-if (VERIFY_ID) {
+if (VOCAB) {
+    checkVocabulary().catch((e) => fail(String(e.message || e).slice(0, 400)));
+} else if (VERIFY_ID) {
     verifyPublished(VERIFY_ID).catch((e) => fail(String(e.message || e).slice(0, 400)));
+} else if (EDIT_ID) {
+    editPublished(EDIT_ID).catch((e) => fail(String(e.message || e).slice(0, 400)));
 } else {
     main().catch((e) => fail(String(e.message || e).slice(0, 400)));
 }
