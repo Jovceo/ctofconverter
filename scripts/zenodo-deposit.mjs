@@ -11,15 +11,19 @@
  *   1. relation 的写入 id 是【全小写无分隔符】：isdocumentedby / issupplementto / isderivedfrom。
  *      kebab（is-documented-by）与驼峰（isDocumentedBy）都不在词表里 → 校验器 400。
  *      这条不再靠猜：词表本身有公开只读端点，--vocabulary 直接拉下来对（实测 34 条）。
- *      注意读回不一致是正常的——记录里的 related_identifiers[].relation 是【输出序列化】，
- *      用 DataCite 驼峰形态，跟写入 id 不是一回事。所以比对一律先归一化。
- *   2. license 的 RDM 字段名是 metadata.rights[]（不是 license）；
- *      keywords 是【字符串数组】（不是 [{keyword}] 对象数组，那是旧 API 的形状）；
- *      languages 是 [{id:'eng'}]。旧形状被静默丢弃 → 记录没有 license、没有 keywords。
- *   3. 新增读回校验（POST/PUT/发布之后都重新 GET 一遍比对）。Zenodo 对不认识的字段
- *      不报错、直接丢：只信 HTTP 200 就会发布一条没有许可的记录。
- *   4. 新增 --verify=<recid>：只读复核一条已发布记录（文件 md5 / MANIFEST.sha256 自洽
+ *   2. 新增读回校验（POST/PUT/发布之后都重新 GET 一遍比对）。
+ *   3. 新增 --verify=<recid>：只读复核一条已发布记录（文件 md5 / MANIFEST.sha256 自洽
  *      / 元数据字段齐全），不需要令牌、不发任何写请求。
+ *
+ * v4（2026-11-19）：令牌通道实测出 v3 没找对的两个真根因——不是「Zenodo shim 剥字段」，
+ * 而是【同一 URL 的两套序列化】和【关键词的字段名】：
+ *   1. /api/records 按 Accept 头返回两套形状。Accept: application/json 是旧版形状
+ *      （access_right / language / resource_type.type），它没有 license 与关键词的映射位，
+ *      写进去 HTTP 200 然后静默丢掉；Accept: application/vnd.inveniordm.v1+json 才落库。
+ *      → 所有请求（含读回）统一带 RDM_ACCEPT。
+ *   2. 关键词在这个实例存 metadata.subjects[{subject}]，不是 metadata.keywords
+ *      （实测：发 keywords（无论字符串还是对象数组）都被静默丢弃，发 subjects 立即可读回）。
+ *   3. 已发布记录的作者是旧形状 {name, affiliation}，PUT 前必须转成 RDM 形状，否则会丢作者。
  *
  * 用法：
  *   令牌：release/.zenodo-token（或 ZENODO_TOKEN 环境变量；scope 需含 deposit:write + deposit:actions）
@@ -70,6 +74,13 @@ const RUN = flag('run') || PUBLISH || !!DRAFT_ID || !!EDIT_ID;
 const DRY = flag('dry-run') || !RUN;
 const TOKEN_FILE = arg('token-file', path.join('release', '.zenodo-token'));
 const API = 'https://zenodo.org/api';
+// 这一行是「四项缺陷」的真正根因之一：Zenodo 的 /api/records 同时提供两套序列化。
+// Accept: application/json → 【旧版】形状（access_right / language / resource_type.type），
+//   license 与 keywords 没有映射位，写进去会被静默丢弃（HTTP 200，读回是 null）。
+// Accept: application/vnd.inveniordm.v1+json → RDM 原生形状，license 存 metadata.rights[]、
+//   关键词存 metadata.subjects[{subject}]（不是 keywords），全都落库。
+// 所以：读写一律用 RDM Accept，比对也按 RDM 形状比。
+const RDM_ACCEPT = 'application/vnd.inveniordm.v1+json';
 // WAF 实测（2026-11-16）：短 UA（"Mozilla/5.0"）在部分方法上被 403 HTML 拦截，必须完整 Chrome UA
 const UA =
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36';
@@ -200,8 +211,8 @@ function rdmMeta() {
         rights: [{ id: zenodoJson.license || 'cc-by-4.0' }],
         languages: [{ id: zenodoJson.language || 'eng' }],
         version: zenodoJson.version,
-        // keywords 是字符串数组，不是 [{keyword}] 对象数组
-        keywords: (zenodoJson.keywords || []).map(String),
+        // 关键词在这个实例里是 metadata.subjects[{subject}]（实测 2026-11-19：发 keywords 会被静默丢弃）
+        subjects: (zenodoJson.keywords || []).map((k) => ({ subject: String(k) })),
         related_identifiers: (zenodoJson.related_identifiers || []).map((r) => ({
             identifier: r.identifier,
             scheme: r.scheme || 'url',
@@ -236,6 +247,27 @@ function md5(file) {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+/** 读回/发布后 GET 偶发 404（实测 PUT 200 → 紧接着 GET 404 → 换一个时间戳的同一 URL 立刻 200）：
+ *  写入后副本延迟 + 中间层把 404 按 URL 缓存。每次重试都换新的 ?t=，否则会一直吃同一个缓存。 */
+async function getRetry(url, headers, attempts = 4) {
+    let last;
+    for (let i = 1; i <= attempts; i++) {
+        const u = url.includes('?t=') ? url.replace(/(\?t=)\d+/, `$1${Date.now()}${i}`) : url;
+        try {
+            return await request('GET', u, { headers });
+        } catch (e) {
+            last = e;
+            const retriable = e.statusCode === 404 || e.statusCode >= 500 || !e.statusCode;
+            if (!retriable) throw e;
+            if (i < attempts) {
+                console.log(`  (read-back retry ${i}/${attempts - 1}: ${String(e.message).slice(0, 40)})`);
+                await sleep(2500 * i);
+            }
+        }
+    }
+    throw last;
+}
+
 function request(method, url, { body, headers = {}, raw = false } = {}, attemptBudget = 3) {
     return new Promise((resolve, reject) => {
         const proxy = process.env.HTTPS_PROXY || process.env.https_proxy;
@@ -245,14 +277,18 @@ function request(method, url, { body, headers = {}, raw = false } = {}, attemptB
             method,
             headers: {
                 'User-Agent': UA,
-                Accept: 'application/json',
+                Accept: RDM_ACCEPT,
+                'Cache-Control': 'no-cache',
+                Pragma: 'no-cache',
                 ...(length ? { 'Content-Length': length } : {}), // 显式长度：经代理时 chunked body 会被当空体
                 ...headers,
             },
             timeout: 60000,
         };
         if (proxy) opts.agent = new HttpsProxyAgent(proxy);
+        if (process.env.ZENODO_DEBUG) console.log(`  → ${method} ${url} (${length ?? 0}B)`);
         const req = https.request(url, opts, (res) => {
+            if (process.env.ZENODO_DEBUG) console.log(`  ← ${res.statusCode} ${res.headers['content-type'] || ''}`);
             const chunks = [];
             res.on('data', (c) => chunks.push(c));
             res.on('end', () => {
@@ -297,6 +333,9 @@ function fileEntries(doc) {
 }
 
 const firstId = (v) => (Array.isArray(v) ? v[0] : v)?.id ?? null;
+// RDM 形状的 DOI 在 pids.doi.identifier，旧版形状在顶层 doi
+const recordDoi = (r) => r?.doi || r?.pids?.doi?.identifier || r?.metadata?.doi || null;
+const recordConceptDoi = (r) => r?.conceptdoi || r?.parent?.pids?.doi?.identifier || null;
 const storedLicense = (m) => firstId(m.rights) ?? firstId(m.license);
 const storedKeywords = (m) =>
     (m.keywords ?? m.subjects ?? [])
@@ -330,9 +369,10 @@ function metadataChecks(stored) {
     else if (lic !== want.rights[0].id) problems.push(`license（记录 ${lic} / 应为 ${want.rights[0].id}）`);
 
     const kw = storedKeywords(stored);
-    if (!kw.length) problems.push('keywords 缺失（RDM 里是字符串数组，不是 [{keyword}] 对象数组）');
-    else if ([...kw].sort().join('|') !== [...want.keywords].sort().join('|')) {
-        problems.push(`keywords（记录 ${kw.length} 条 / 应为 ${want.keywords.length} 条）`);
+    const wantKw = (want.subjects || []).map((s) => s.subject);
+    if (!kw.length) problems.push('关键词（subjects）缺失 —— 这个实例存 metadata.subjects[{subject}]，发 keywords 会被静默丢弃');
+    else if ([...kw].sort().join('|') !== [...wantKw].sort().join('|')) {
+        problems.push(`subjects（记录 ${kw.length} 条 / 应为 ${wantKw.length} 条）`);
     }
 
     const rel = storedRelated(stored);
@@ -369,10 +409,10 @@ function reportMetadata(stored, phase) {
     if (problems.length) {
         console.error(`\n✗ ${phase}：读回值与发送值不一致（${problems.length} 处）——Zenodo 会静默丢弃不认识的字段`);
         problems.forEach((p) => console.error(`  - ${p}`));
-        console.error('  对照：license→metadata.rights[].id；keywords→字符串数组；related→relation_type.id（驼峰）。');
+        console.error('  对照：Accept 必须是 vnd.inveniordm.v1+json；license→metadata.rights[].id；关键词→metadata.subjects[{subject}]；related→relation_type.id。');
         return false;
     }
-    console.log(`  ✓ ${phase}：元数据读回一致（title / version / license / keywords / related）`);
+    console.log(`  ✓ ${phase}：元数据读回一致（title / version / license / subjects / related）`);
     return true;
 }
 
@@ -386,7 +426,7 @@ async function main() {
         console.log('\n--dry-run: RDM payload 就绪。');
         console.log('metadata keys:', Object.keys(rdmMeta()).join(', '));
         console.log('rights:', JSON.stringify(rdmMeta().rights), '| languages:', JSON.stringify(rdmMeta().languages));
-        console.log('keywords:', rdmMeta().keywords.length, '| related:', JSON.stringify(rdmMeta().related_identifiers));
+        console.log('subjects:', rdmMeta().subjects.length, '| related:', JSON.stringify(rdmMeta().related_identifiers));
         console.log('creators:', JSON.stringify(rdmMeta().creators));
         process.exit(0);
     }
@@ -398,7 +438,7 @@ async function main() {
     let draft;
     if (DRAFT_ID) {
         console.log(`\n[1/4] reusing existing draft ${DRAFT_ID}...`);
-        draft = await request('GET', `${API}/records/${DRAFT_ID}/draft`, authHeaders());
+        draft = await request('GET', `${API}/records/${DRAFT_ID}/draft`, { headers: authHeaders() });
         if (draft?.metadata) reportMetadata(draft.metadata, 'draft（复用前）');
     } else {
         console.log('\n[1/4] creating RDM draft...');
@@ -427,7 +467,7 @@ async function main() {
     const fileHeaders = { 'Content-Type': 'application/json', ...authHeaders() };
     const existing = new Set();
     try {
-        const cur = await request('GET', draftApi, authHeaders());
+        const cur = await request('GET', draftApi, { headers: authHeaders() });
         for (const e of fileEntries(cur)) existing.add(e.key || e.filename);
     } catch {
         // GET 失败不阻塞——按全新上传处理
@@ -458,7 +498,7 @@ async function main() {
     console.log('[3/4] verifying server-side...');
     let verify = null;
     for (let attempt = 1; attempt <= 5; attempt++) {
-        verify = await request('GET', draftApi, authHeaders());
+        verify = await request('GET', draftApi, { headers: authHeaders() });
         if (fileEntries(verify).length >= files.length) break;
         console.log('  waiting for server file list...');
         await sleep(5000);
@@ -481,13 +521,13 @@ async function main() {
     const recId = pub.id || id;
 
     // 发布之后再读一遍：状态码是 200 不等于记录里真有 license/keywords
-    const published = await request('GET', `${API}/records/${recId}?t=${Date.now()}`, {});
+    const published = await getRetry(`${API}/records/${recId}?t=${Date.now()}`, {});
     const postProblems = checkFiles(fileEntries(published), files.length);
 
     console.log('\n✅ PUBLISHED');
     console.log(`record id        : ${recId}`);
     console.log(`concept recid    : ${published.conceptrecid || pub.conceptrecid || '-'}`);
-    console.log(`DOI              : ${published.doi || pub.doi || '(见下方链接页)'}`);
+    console.log(`DOI              : ${recordDoi(published) || recordDoi(pub) || '(见下方链接页)'}`);
     console.log(`concept DOI      : ${published.conceptdoi || '(同上)'}`);
     console.log(`record HTML      : ${published.links?.record_html || published.links?.self_html || ''}`);
     console.log(`access           : ${published.access?.record || published.metadata?.access_right || '?'}`);
@@ -528,8 +568,8 @@ async function verifyPublished(recId) {
     const warnings = [];
 
     console.log(`\nrecord  : ${rec.id} (${rec.status || 'status?'})`);
-    console.log(`DOI     : ${rec.doi || '-'}`);
-    console.log(`concept : ${rec.conceptdoi || '-'}`);
+    console.log(`DOI     : ${recordDoi(rec) || '-'}`);
+    console.log(`concept : ${recordConceptDoi(rec) || '-'}`);
     console.log(`access  : ${rec.access?.record || rec.metadata?.access_right || '?'}`);
     console.log(`files   : ${entries.length} 已发布\n`);
 
@@ -588,7 +628,7 @@ async function verifyPublished(recId) {
     const md = rec.metadata || {};
     console.log('\nmetadata:');
     console.log(`  license     : ${storedLicense(md) ?? '❌ 缺失'}`);
-    console.log(`  keywords    : ${storedKeywords(md).length} 条 ${storedKeywords(md).length ? '' : '❌'}`);
+    console.log(`  subjects    : ${storedKeywords(md).length} 条 ${storedKeywords(md).length ? '' : '❌'}`);
     console.log(`  languages   : ${(md.languages || []).map((l) => l.id).join(', ') || '（未设）'}`);
     console.log(`  resource    : ${storedResourceType(md)}`);
     console.log(`  creators    : ${storedCreators(md).join(' | ') || '❌ 缺失'}`);
@@ -647,7 +687,7 @@ async function editPublished(recId) {
     const replaceKeys = fixFiles.filter((f) => recordKeys.has(f));
     const skipped = fixFiles.filter((f) => !recordKeys.has(f));
     if (!replaceKeys.length) fail(`${FILES_FROM} 里的文件在记录中一个都不存在 —— 检查目录是否选错`);
-    console.log(`record  : ${recId} | DOI ${before.doi} | files ${recordKeys.size}`);
+    console.log(`record  : ${recId} | DOI ${recordDoi(before)} | files ${recordKeys.size}`);
     console.log(`metadata: ${OUT}（.zenodo.json）`);
     console.log(`replace : ${replaceKeys.join(', ')}`);
     if (skipped.length) console.log(`skip    : ${skipped.join(', ')}（记录里没有，按流程文件跳过）`);
@@ -660,18 +700,25 @@ async function editPublished(recId) {
     } catch (e) {
         if (e.statusCode !== 400) throw e;
         console.log('  （已存在编辑草稿，复用）');
-        draft = await request('GET', `${API}/records/${recId}/draft`, authHeaders());
+        draft = await request('GET', `${API}/records/${recId}/draft`, { headers: authHeaders() });
     }
     const draftApi = draft.links?.self || `${API}/records/${recId}/draft`;
-    console.log(`  draft id: ${draft.id}`);
+    console.log(`  draft id: ${draft.id} | api: ${draftApi}`);
 
     // 2. PUT 元数据 + 读回断言（Zenodo 会静默丢字段，200 不算数）
     // 作者沿用记录里现有的：包里 .zenodo.json 还是占位名 Jovceo，整包重发会把引用口径
     // 从 ctofconverter.com 改回去——作者口径的变更走下一个数据版本，不夹带在补正里。
+    // 注意：已发布记录读回的作者是旧形状 {name, affiliation}，PUT 要 RDM 形状，必须转换。
     console.log('[2/5] PUT metadata → read back...');
-    const meta = { ...rdmMeta(), creators: before.metadata?.creators || rdmMeta().creators };
-    console.log(`  creators 保持记录现值: ${(meta.creators || []).map((c) => c.person_or_org?.name).join(' | ')}`);
-    await request('PUT', draftApi, {
+    const currentCreators = before.metadata?.creators || [];
+    const meta = {
+        ...rdmMeta(),
+        creators: currentCreators.length ? currentCreators.map(toRdmCreator) : rdmMeta().creators,
+    };
+    console.log(`  creators 保持记录现值: ${meta.creators.map((c) => c.person_or_org?.name).join(' | ')}`);
+    // 缓存炸弹：同一个 PUT URL 被观测到会重放上一次的 404（本机代理/中间层缓存）。
+    // 加时间戳能让它每次都是新请求——实测加参数后同一个 PUT 立刻 200。
+    await request('PUT', `${draftApi}?t=${Date.now()}`, {
         body: JSON.stringify({
             metadata: meta,
             access: { record: 'public', files: 'public' },
@@ -679,7 +726,7 @@ async function editPublished(recId) {
         }),
         headers: { 'Content-Type': 'application/json', ...authHeaders() },
     });
-    const mdBack = await request('GET', `${draftApi}?t=${Date.now()}`, authHeaders());
+    const mdBack = await getRetry(`${draftApi}?t=${Date.now()}`, authHeaders());
     if (!reportMetadata(mdBack.metadata || {}, 'edit draft（PUT 之后）')) {
         console.error('\n✗ 元数据没有被完整存储 —— 现在发布只会得到一条同样残缺的记录，已停在发布前。');
         console.error('  元数据这条路在 API 上不通时，用网页编辑: https://zenodo.org/records/' + recId + '/edit');
@@ -690,6 +737,19 @@ async function editPublished(recId) {
     // 3. 只替换 replaceKeys（删旧 → 声明 → 传内容 → commit）
     console.log('[3/5] replacing files...');
     const fileHeaders = { 'Content-Type': 'application/json', ...authHeaders() };
+    // 已发布记录的文件桶默认上锁：DELETE/PUT 会 403 "Bucket is locked for modifications"。
+    // 先发一次 file-modification 请求（等价于网页 "Edit files → Edit published files" 的确认框），
+    // 它返回 is_locked:false，之后文件操作才放行。重复请求会是 400/409，忽略即可。
+    try {
+        const fm = await request('POST', `${API}/records/${recId}/file-modification?t=${Date.now()}`, {
+            headers: fileHeaders,
+        });
+        console.log(`  file bucket: ${fm?.is_locked === false ? 'unlocked ✓' : JSON.stringify(fm).slice(0, 80)}`);
+    } catch (e) {
+        // 已经开过一次时服务端会报 400/409/500（错误包装不统一）——不致命：
+        // 桶是否真的解锁，由下一步的 DELETE 直接给出答案（403 = 仍锁）。
+        console.log(`  file bucket: modification request 未新建（${String(e.message).slice(0, 40)}），继续试文件操作`);
+    }
     const present = new Set(fileEntries(mdBack).map((e) => e.key || e.filename));
     for (const f of replaceKeys) {
         if (present.has(f)) {
@@ -701,7 +761,7 @@ async function editPublished(recId) {
         });
         const local = path.join(FIX_DIR, f);
         const body = fs.readFileSync(local);
-        await request('PUT', `${draftApi}/files/${encodeURIComponent(f)}/content`, {
+        await request('PUT', `${draftApi}/files/${encodeURIComponent(f)}/content?t=${Date.now()}`, {
             body,
             headers: { 'Content-Type': 'application/octet-stream', ...authHeaders() },
             raw: true,
@@ -712,7 +772,7 @@ async function editPublished(recId) {
 
     // 4. 草稿文件全量对账（数量不变；每个文件都要在本地能对上）
     console.log('[4/5] verifying draft files...');
-    const draftFiles = fileEntries(await request('GET', `${draftApi}?t=${Date.now()}`, authHeaders()));
+    const draftFiles = fileEntries(await getRetry(`${draftApi}?t=${Date.now()}`, authHeaders()));
     const fileProblems = checkFiles(draftFiles, draftFiles.length);
     if (fileProblems.length) fail(`草稿文件校验失败：\n  - ${fileProblems.join('\n  - ')}`);
     console.log(`  ✓ ${draftFiles.length} 个文件与本地一致`);
@@ -727,16 +787,16 @@ async function editPublished(recId) {
     console.log('[5/5] publishing...');
     const pub = await request('POST', `${draftApi}/actions/publish`, { headers: fileHeaders });
     const finalId = pub.id || recId;
-    const after = await request('GET', `${API}/records/${finalId}?t=${Date.now()}`, {});
+    const after = await getRetry(`${API}/records/${finalId}?t=${Date.now()}`, {});
     const afterProblems = checkFiles(fileEntries(after), draftFiles.length);
     const mdOk = reportMetadata(after.metadata || {}, 'published（发布后读回）');
 
     console.log('\n✅ REPUBLISHED');
     console.log(`record id    : ${finalId}`);
-    console.log(`DOI          : ${after.doi}${after.doi === before.doi ? '（未变 ✓）' : '  ← 变了，异常！'}`);
-    console.log(`concept DOI  : ${after.conceptdoi || '-'}`);
+    console.log(`DOI          : ${recordDoi(after)}${recordDoi(after) === recordDoi(before) ? '（未变 ✓）' : '  ← 变了，异常！'}`);
+    console.log(`concept DOI  : ${recordConceptDoi(after) || '-'}`);
     console.log(`files        : ${fileEntries(after).length}`);
-    if (!mdOk || afterProblems.length || after.doi !== before.doi) {
+    if (!mdOk || afterProblems.length || recordDoi(after) !== recordDoi(before)) {
         console.error('\n⚠ 已发布但读回没全过：');
         afterProblems.forEach((p) => console.error(`  - ${p}`));
         console.error(`  复核: node scripts/zenodo-deposit.mjs --out=${OUT} --files-from=${FILES_FROM} --verify=${finalId}`);
